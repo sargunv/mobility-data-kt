@@ -1,0 +1,12 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "formatter": {
+        "ktlint": {
+            "disabled": true
+        },
+        "pre-commit-formatter": {
+            "command": ["pre-commit", "run", "--files", "$FILE"],
+            "extensions": [".kt", ".kts", ".md", ".yml", ".yaml", ".json"]
+        }
+    }
+}
