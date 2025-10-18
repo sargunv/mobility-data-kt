@@ -15,11 +15,10 @@ group = "dev.sargunv.mobility-data"
 kotlin {
   explicitApi()
   compilerOptions {
-    freeCompilerArgs =
-      listOf(
-        // Will be the default soon: https://youtrack.jetbrains.com/issue/KT-11914
-        "-Xconsistent-data-class-copy-visibility"
-      )
+    freeCompilerArgs.add(
+      // Will be the default soon: https://youtrack.jetbrains.com/issue/KT-11914
+      "-Xconsistent-data-class-copy-visibility"
+    )
   }
   abiValidation {
     @OptIn(ExperimentalAbiValidation::class)
@@ -28,7 +27,7 @@ kotlin {
 }
 
 detekt {
-  source.setFrom("src/commonMain/kotlin")
+  source.setFrom("src/commonMain/kotlin", "src/ktorMain/kotlin")
   config.setFrom(rootProject.file("detekt.yml"))
   failOnSeverity = FailOnSeverity.Warning
   basePath.set(rootProject.rootDir)
@@ -44,7 +43,7 @@ dokka {
       }
       externalDocumentationLinks {
         create("kotlinx-serialization") { url("https://kotlinlang.org/api/kotlinx.serialization/") }
-        create("kotlinx-io") { url("https://kotlinlang.org/api/kotlinx-io/") }
+        create("ktor") { url("https://api.ktor.io") }
       }
     }
   }

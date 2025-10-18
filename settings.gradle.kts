@@ -7,6 +7,6 @@ pluginManagement {
 
 dependencyResolutionManagement { @Suppress("UnstableApiUsage") repositories { mavenCentral() } }
 
-rootProject.name = "root"
+rootProject.name = "mobility-data"
 
-include(":gbfs", ":gtfs", ":gtfs-rt")
+include(":gbfs-v2", ":gtfs-schedule", ":gtfs-realtime")
