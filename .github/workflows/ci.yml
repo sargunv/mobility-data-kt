@@ -57,7 +57,7 @@ jobs:
               with:
                   distribution: temurin
                   java-version: 21
-            - uses: pre-commit/action@v3
+            - uses: pre-commit/action@v3.0.1
               with:
                   extra_args: --all-files --hook-stage manual
             - if: ${{ github.event_name == 'pull_request' && always() }}

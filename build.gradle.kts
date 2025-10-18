@@ -39,6 +39,6 @@ kover {
 }
 
 dependencies {
-  dokka(project(":gbfs"))
-  kover(project(":gbfs"))
+  dokka(project(":gbfs-v2"))
+  kover(project(":gbfs-v2"))
 }

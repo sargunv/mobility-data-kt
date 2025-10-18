@@ -1,15 +1,35 @@
 [versions]
 kotlin = "2.2.20"
+kotlinx-io = "0.8.0"
 kotlinx-kover = "0.9.2"
+kotlinx-datetime = "0.7.1"
+kotlinx-datetime-zoneinfo = "2025b-spi.0.7.1"
+kotlinx-coroutines = "1.10.2"
 kotlinx-serialization = "1.9.0"
 vanniktech-publish = "0.34.0"
 dokka = "2.1.0-Beta"
 semver = "0.8.0"
 mkdocs-build = "4.0.1"
 detekt = "2.0.0-alpha.0"
+spatialk = "0.4.0"
+ktor = "3.3.1"
+joda-timezone = "2.22.0"
 
 [libraries]
+kotlinx-io-core = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+kotlinx-datetime-zoneinfo = { module = "org.jetbrains.kotlinx:kotlinx-datetime-zoneinfo", version.ref = "kotlinx-datetime-zoneinfo" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-curl = { module = "io.ktor:ktor-client-curl", version.ref = "ktor" }
+ktor-client-winhttp = { module = "io.ktor:ktor-client-winhttp", version.ref = "ktor" }
+ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
+spatialk-geojson = { module = "org.maplibre.spatialk:geojson", version.ref = "spatialk" }
 gradle-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 gradle-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 gradle-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
