@@ -5,7 +5,28 @@ Kotlin Multiplatform.
 
 ## Modules
 
-- `./gbfs-v2` - General Bikeshare Feed Specification v2 client
+- `./utils` - Common utilities for all modules
+- `./gtfs-schedule` - (TODO) General Transit Feed Specification (GTFS) -
+  Schedule client
+    - Reference:
+      https://raw.githubusercontent.com/google/transit/refs/heads/master/gtfs/spec/en/reference.md
+- `./gtfs-realtime` - (TODO) GTFS - Realtime client
+    - Reference:
+      https://raw.githubusercontent.com/google/transit/refs/heads/master/gtfs-realtime/spec/en/reference.md
+    - Protocol:
+      https://raw.githubusercontent.com/google/transit/refs/heads/master/gtfs-realtime/proto/gtfs-realtime.proto
+- `./gbfs-v1` - (TODO) General Bikeshare Feed Specification (GBFS) v1 client
+    - Reference:
+      https://raw.githubusercontent.com/MobilityData/gbfs/refs/tags/v1.1/gbfs.md
+- `./gbfs-v2` - GBFS v2 client
+    - Reference:
+      https://raw.githubusercontent.com/MobilityData/gbfs/refs/tags/v2.3/gbfs.md
+- `./gbfs-v3` - (TODO) GBFS v3 client
+    - Reference:
+      https://raw.githubusercontent.com/MobilityData/gbfs/refs/tags/v3.0/gbfs.md
+- `./gofs-v1` - General On-Demand Feed Specification (GOFS) v1 client
+    - Reference:
+      https://raw.githubusercontent.com/MobilityData/GOFS/refs/heads/main/reference.md
 
 ## Commands
 

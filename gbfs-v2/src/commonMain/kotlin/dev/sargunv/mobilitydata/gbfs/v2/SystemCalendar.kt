@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
-import dev.sargunv.mobilitydata.utils.serialization.MonthNumberSerializer
-import kotlinx.datetime.Month
+import dev.sargunv.mobilitydata.utils.MonthNumber
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -34,8 +33,7 @@ public data class SystemCalendarEntry(
   @SerialName("start_year") public val startYear: Int? = null,
 
   /** Starting month for the system operations (1-12). */
-  @SerialName("start_month")
-  public val startMonth: @Serializable(with = MonthNumberSerializer::class) Month,
+  @SerialName("start_month") public val startMonth: MonthNumber,
 
   /** Starting date for the system operations (1-31). */
   @SerialName("start_day") public val startDay: Int,
@@ -48,8 +46,7 @@ public data class SystemCalendarEntry(
   @SerialName("end_year") public val endYear: Int? = null,
 
   /** Ending month for the system operations (1-12). */
-  @SerialName("end_month")
-  public val endMonth: @Serializable(with = MonthNumberSerializer::class) Month,
+  @SerialName("end_month") public val endMonth: MonthNumber,
 
   /** Ending date for the system operations (1-31). */
   @SerialName("end_day") public val endDay: Int,

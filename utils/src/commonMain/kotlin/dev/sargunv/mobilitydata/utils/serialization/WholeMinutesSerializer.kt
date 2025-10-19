@@ -9,7 +9,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
 /** Serializer for [Duration] that uses whole minutes. Fractional minutes are rounded down. */
-public class WholeMinutesSerializer : KSerializer<Duration> {
+public object WholeMinutesSerializer : KSerializer<Duration> {
   private val delegate = Long.serializer()
   override val descriptor: SerialDescriptor = delegate.descriptor
 

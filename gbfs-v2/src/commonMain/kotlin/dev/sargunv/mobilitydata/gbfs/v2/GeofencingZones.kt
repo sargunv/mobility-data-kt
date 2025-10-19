@@ -1,8 +1,8 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
-import dev.sargunv.mobilitydata.utils.serialization.EpochSecondsSerializer
+import dev.sargunv.mobilitydata.utils.EpochSeconds
+import dev.sargunv.mobilitydata.utils.Id
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import org.maplibre.spatialk.geojson.FeatureCollection
@@ -38,14 +38,14 @@ public data class GeofencingZone(
    *
    * If the geofencing zone is always active, this can be omitted.
    */
-  @Serializable(with = EpochSecondsSerializer::class) public val start: Instant? = null,
+  public val start: EpochSeconds? = null,
 
   /**
    * End time of the geofencing zone.
    *
    * If the geofencing zone is always active, this can be omitted.
    */
-  @Serializable(with = EpochSecondsSerializer::class) public val end: Instant? = null,
+  public val end: EpochSeconds? = null,
 
   /**
    * Array that contains one object per rule.

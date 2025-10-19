@@ -1,10 +1,10 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.utils.CountryCode
+import dev.sargunv.mobilitydata.utils.ExtendedLocalDate
+import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Url
-import dev.sargunv.mobilitydata.utils.serialization.WholeMinutesSerializer
-import kotlin.time.Duration
-import kotlinx.datetime.LocalDate
+import dev.sargunv.mobilitydata.utils.WholeMinutes
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -109,9 +109,7 @@ public data class VehicleType(
    * the value of default_reserve_time elapses without a rental beginning, the vehicle status MUST
    * change to is_reserved = false. If set to 0, the vehicle type cannot be reserved.
    */
-  @Serializable(with = WholeMinutesSerializer::class)
-  @SerialName("default_reserve_time")
-  public val defaultReserveTime: Duration? = null,
+  @SerialName("default_reserve_time") public val defaultReserveTime: WholeMinutes? = null,
 
   /** The conditions for returning the vehicle at the end of the rental. */
   @SerialName("return_constraint") public val returnConstraint: VehicleReturnConstraint? = null,
@@ -296,5 +294,5 @@ public data class VehicleAssets(
    *
    * REQUIRED if vehicle_assets is defined.
    */
-  @SerialName("icon_last_modified") public val iconLastModified: LocalDate,
+  @SerialName("icon_last_modified") public val iconLastModified: ExtendedLocalDate,
 )

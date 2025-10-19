@@ -1,9 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
-import dev.sargunv.mobilitydata.utils.serialization.AbbreviatedWeekdaySerializer
-import kotlinx.datetime.DayOfWeek
-import kotlinx.datetime.LocalTime
-import kotlinx.datetime.serializers.LocalTimeIso8601Serializer
+import dev.sargunv.mobilitydata.utils.AbbreviatedWeekday
+import dev.sargunv.mobilitydata.utils.ExtendedLocalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -40,23 +38,19 @@ public data class SystemHoursEntry(
    *
    * Rental hours MUST NOT be defined more than once for each day and user type.
    */
-  public val days: List<@Serializable(with = AbbreviatedWeekdaySerializer::class) DayOfWeek>,
+  public val days: List<AbbreviatedWeekday>,
 
   /**
    * Start time for the hours of operation of the system in the time zone indicated in
    * system_information.json.
    */
-  @Serializable(with = LocalTimeIso8601Serializer::class)
-  @SerialName("start_time")
-  public val startTime: LocalTime,
+  @SerialName("start_time") public val startTime: ExtendedLocalTime,
 
   /**
    * End time for the hours of operation of the system in the time zone indicated in
    * system_information.json.
    */
-  @Serializable(with = LocalTimeIso8601Serializer::class)
-  @SerialName("end_time")
-  public val endTime: LocalTime,
+  @SerialName("end_time") public val endTime: ExtendedLocalTime,
 )
 
 /** Type of user (member or non-member). */
