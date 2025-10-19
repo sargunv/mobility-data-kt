@@ -1,6 +1,8 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
-import dev.sargunv.mobilitydata.gbfs.v2.serialization.WholeMinutesSerializer
+import dev.sargunv.mobilitydata.utils.CountryCode
+import dev.sargunv.mobilitydata.utils.Url
+import dev.sargunv.mobilitydata.utils.serialization.WholeMinutesSerializer
 import kotlin.time.Duration
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.SerialName

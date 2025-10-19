@@ -1,10 +1,10 @@
-package dev.sargunv.mobilitydata.gbfs.v2.serialization
+package dev.sargunv.mobilitydata.utils.serialization
 
-import dev.sargunv.mobilitydata.gbfs.v2.GbfsJson
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlinx.datetime.Month
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -13,12 +13,14 @@ class MonthNumberSerializerTest {
   @Serializable
   private data class TestData(@Serializable(with = MonthNumberSerializer::class) val month: Month)
 
+  private val json = Json
+
   @Test
   fun testSerializeJanuary() {
     val testData = TestData(Month.JANUARY)
 
-    val json = GbfsJson.encodeToJsonElement(TestData.serializer(), testData)
-    val monthValue = json.jsonObject["month"]!!.jsonPrimitive
+    val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+    val monthValue = jsonElement.jsonObject["month"]!!.jsonPrimitive
 
     assertEquals(1, monthValue.int)
   }
@@ -27,8 +29,8 @@ class MonthNumberSerializerTest {
   fun testSerializeDecember() {
     val testData = TestData(Month.DECEMBER)
 
-    val json = GbfsJson.encodeToJsonElement(TestData.serializer(), testData)
-    val monthValue = json.jsonObject["month"]!!.jsonPrimitive
+    val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+    val monthValue = jsonElement.jsonObject["month"]!!.jsonPrimitive
 
     assertEquals(12, monthValue.int)
   }
@@ -37,7 +39,7 @@ class MonthNumberSerializerTest {
   fun testDeserializeApril() {
     val jsonString = """{"month":4}"""
 
-    val result = GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+    val result = json.decodeFromString(TestData.serializer(), jsonString)
 
     assertEquals(Month.APRIL, result.month)
   }
@@ -46,8 +48,8 @@ class MonthNumberSerializerTest {
   fun testRoundTrip() {
     val original = TestData(Month.JULY)
 
-    val jsonString = GbfsJson.encodeToString(TestData.serializer(), original)
-    val decoded = GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+    val jsonString = json.encodeToString(TestData.serializer(), original)
+    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
     assertEquals(original, decoded)
   }

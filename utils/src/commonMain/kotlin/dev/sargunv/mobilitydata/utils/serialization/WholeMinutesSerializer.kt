@@ -1,4 +1,4 @@
-package dev.sargunv.mobilitydata.gbfs.v2.serialization
+package dev.sargunv.mobilitydata.utils.serialization
 
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.minutes
@@ -8,7 +8,8 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-internal class WholeMinutesSerializer : KSerializer<Duration> {
+/** Serializer for [Duration] that uses whole minutes. Fractional minutes are rounded down. */
+public class WholeMinutesSerializer : KSerializer<Duration> {
   private val delegate = Long.serializer()
   override val descriptor: SerialDescriptor = delegate.descriptor
 

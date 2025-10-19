@@ -1,0 +1,57 @@
+// Klib ABI Dump
+// Targets: [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, macosX64, mingwX64, tvosArm64, tvosSimulatorArm64, tvosX64, wasmJs, wasmWasi, watchosArm32, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64, watchosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <dev.sargunv.mobility-data:utils>
+final class dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer : kotlinx.serialization/KSerializer<kotlinx.datetime/DayOfWeek> { // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer|null[0]
+    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.<init>|<init>(){}[0]
+
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlinx.datetime/DayOfWeek // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, kotlinx.datetime/DayOfWeek) // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlinx.datetime.DayOfWeek){}[0]
+}
+
+final class dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer : kotlinx.serialization/KSerializer<kotlin.time/Instant> { // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer|null[0]
+    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.<init>|<init>(){}[0]
+
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlin.time/Instant // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Instant) // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Instant){}[0]
+}
+
+final class dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer : kotlinx.serialization/KSerializer<kotlinx.datetime/Month> { // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer|null[0]
+    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.<init>|<init>(){}[0]
+
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlinx.datetime/Month // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, kotlinx.datetime/Month) // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlinx.datetime.Month){}[0]
+}
+
+final class dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer : kotlinx.serialization/KSerializer<kotlin.time/Duration> { // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer|null[0]
+    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer.<init>|<init>(){}[0]
+
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlin.time/Duration // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Duration) // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Duration){}[0]
+}
+
+final class dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer : kotlinx.serialization/KSerializer<kotlin.time/Duration> { // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer|null[0]
+    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.<init>|<init>(){}[0]
+
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlin.time/Duration // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Duration) // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Duration){}[0]
+}
