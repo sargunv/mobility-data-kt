@@ -1,7 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v2.serialization
 
-import dev.sargunv.mobilitydata.gbfs.v2.model.FeedType
-import dev.sargunv.mobilitydata.gbfs.v2.model.Url
+import dev.sargunv.mobilitydata.gbfs.v2.FeedType
+import dev.sargunv.mobilitydata.gbfs.v2.Url
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.builtins.ListSerializer
