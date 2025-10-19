@@ -9,7 +9,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
 /** Serializer for [Month] that uses month numbers (1-12). */
-public class MonthNumberSerializer : KSerializer<Month> {
+public object MonthNumberSerializer : KSerializer<Month> {
   private val delegate = Int.serializer()
   override val descriptor: SerialDescriptor = delegate.descriptor
 

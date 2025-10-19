@@ -1,9 +1,10 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
+import dev.sargunv.mobilitydata.utils.ExtendedLocalDate
+import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LanguageCode
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
-import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -45,7 +46,7 @@ public data class SystemInformation(
   @SerialName("purchase_url") public val purchaseUrl: Url? = null,
 
   /** Date that the system began operations. */
-  @SerialName("start_date") public val startDate: LocalDate? = null,
+  @SerialName("start_date") public val startDate: ExtendedLocalDate? = null,
 
   /**
    * A single voice telephone number for the system's customer service department.
@@ -90,7 +91,7 @@ public data class SystemInformation(
    *
    * REQUIRED if terms_url is defined.
    */
-  @SerialName("terms_last_updated") public val termsLastUpdated: LocalDate? = null,
+  @SerialName("terms_last_updated") public val termsLastUpdated: ExtendedLocalDate? = null,
 
   /** A fully qualified URL pointing to the privacy policy for the service. */
   @SerialName("privacy_url") public val privacyUrl: Url? = null,
@@ -100,7 +101,7 @@ public data class SystemInformation(
    *
    * REQUIRED if privacy_url is defined.
    */
-  @SerialName("privacy_last_updated") public val privacyLastUpdated: LocalDate? = null,
+  @SerialName("privacy_last_updated") public val privacyLastUpdated: ExtendedLocalDate? = null,
 
   /** Contains rental app information for Android and iOS platforms. */
   @SerialName("rental_apps") public val rentalApps: RentalAppUris? = null,
@@ -114,7 +115,7 @@ public data class BrandAssets(
    *
    * REQUIRED if brand_assets object is defined.
    */
-  @SerialName("brand_last_modified") public val brandLastModified: LocalDate,
+  @SerialName("brand_last_modified") public val brandLastModified: ExtendedLocalDate,
 
   /**
    * A fully qualified URL pointing to the location of a page that defines the license terms of

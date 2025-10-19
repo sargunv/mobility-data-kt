@@ -16,7 +16,7 @@ public data class Versions(
    * The array MUST be sorted by increasing MAJOR and MINOR version number.
    */
   public val versions: List<VersionInfo>
-) : GbfsFeedData
+) : GbfsFeedData, List<VersionInfo> by versions
 
 /** Information about a specific version of a GBFS feed. */
 @Serializable

@@ -15,8 +15,9 @@ import kotlinx.serialization.Serializable
  */
 @JvmInline
 @Serializable
-public value class Manifest(@SerialName("feeds") private val services: Map<LanguageCode, Service>) :
-  GbfsFeedData, Map<LanguageCode, Service> by services {
+public value class GbfsManifest(
+  @SerialName("feeds") private val services: Map<LanguageCode, Service>
+) : GbfsFeedData, Map<LanguageCode, Service> by services {
   public constructor(vararg entries: Pair<LanguageCode, Service>) : this(mapOf(*entries))
 
   /**
@@ -51,10 +52,10 @@ public data class Service(
 @Serializable
 public enum class FeedType {
   /** The gbfs.json auto-discovery file. */
-  @SerialName("gbfs") Manifest,
+  @SerialName("gbfs") GbfsManifest,
 
   /** The gbfs_versions.json file listing available GBFS versions. */
-  @SerialName("gbfs_versions") Versions,
+  @SerialName("gbfs_versions") GbfsVersions,
 
   /** The system_information.json file with system details. */
   @SerialName("system_information") SystemInformation,

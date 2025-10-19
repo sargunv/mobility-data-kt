@@ -52,7 +52,7 @@ private val expectedResponse =
     ttl = 0.seconds,
     version = "2.3",
     data =
-      Manifest(
+      GbfsManifest(
         "en" to
           Service(
             FeedType.SystemInformation to "https://www.example.com/gbfs/1/en/system_information",
@@ -76,7 +76,7 @@ class ManifestTest {
 
   @Test
   fun decode() {
-    val decodedResponse = GbfsJson.decodeFromString<GbfsFeedResponse<Manifest>>(jsonContent)
+    val decodedResponse = GbfsJson.decodeFromString<GbfsFeedResponse<GbfsManifest>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
   }
 }

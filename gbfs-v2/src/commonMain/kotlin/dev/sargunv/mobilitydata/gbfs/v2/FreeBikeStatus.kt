@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
-import dev.sargunv.mobilitydata.utils.serialization.EpochSecondsSerializer
+import dev.sargunv.mobilitydata.utils.EpochSeconds
+import dev.sargunv.mobilitydata.utils.Id
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.serialization.SerialName
@@ -80,9 +81,7 @@ public data class Bike(
   @SerialName("vehicle_type_id") public val vehicleTypeId: Id<VehicleType>? = null,
 
   /** The last time this vehicle reported its status to the operator's backend. */
-  @SerialName("last_reported")
-  @Serializable(with = EpochSecondsSerializer::class)
-  public val lastReported: Instant,
+  @SerialName("last_reported") public val lastReported: EpochSeconds,
 
   /**
    * The furthest distance in meters that the vehicle can travel with the vehicle's current charge

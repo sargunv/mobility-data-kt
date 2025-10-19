@@ -1,5 +1,50 @@
+public final class dev/sargunv/mobilitydata/utils/FieldTypesKt {
+	public static final fun toServiceTime (Lkotlinx/datetime/LocalTime;I)Ldev/sargunv/mobilitydata/utils/ServiceTime;
+	public static synthetic fun toServiceTime$default (Lkotlinx/datetime/LocalTime;IILjava/lang/Object;)Ldev/sargunv/mobilitydata/utils/ServiceTime;
+}
+
+public final class dev/sargunv/mobilitydata/utils/RgbColor {
+	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/utils/RgbColor;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public static final fun getBlue-impl (I)B
+	public static final fun getGreen-impl (I)B
+	public static final fun getRed-impl (I)B
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final class dev/sargunv/mobilitydata/utils/ServiceTime : java/lang/Comparable {
+	public static final field Companion Ldev/sargunv/mobilitydata/utils/ServiceTime$Companion;
+	public fun <init> (III)V
+	public fun compareTo (Ldev/sargunv/mobilitydata/utils/ServiceTime;)I
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun copy (III)Ldev/sargunv/mobilitydata/utils/ServiceTime;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/utils/ServiceTime;IIIILjava/lang/Object;)Ldev/sargunv/mobilitydata/utils/ServiceTime;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHours ()I
+	public final fun getMinutes ()I
+	public final fun getSeconds ()I
+	public fun hashCode ()I
+	public final fun toLocalTime ()Lkotlinx/datetime/LocalTime;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/sargunv/mobilitydata/utils/ServiceTime$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/utils/serialization/AbbreviatedWeekdaySerializer : kotlinx/serialization/KSerializer {
-	public fun <init> ()V
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/AbbreviatedWeekdaySerializer;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lkotlinx/datetime/DayOfWeek;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -8,7 +53,7 @@ public final class dev/sargunv/mobilitydata/utils/serialization/AbbreviatedWeekd
 }
 
 public final class dev/sargunv/mobilitydata/utils/serialization/EpochSecondsSerializer : kotlinx/serialization/KSerializer {
-	public fun <init> ()V
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/EpochSecondsSerializer;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lkotlin/time/Instant;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -16,8 +61,12 @@ public final class dev/sargunv/mobilitydata/utils/serialization/EpochSecondsSeri
 	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lkotlin/time/Instant;)V
 }
 
+public final class dev/sargunv/mobilitydata/utils/serialization/IsoBasicLocalDateSerializer : kotlinx/datetime/serializers/FormattedLocalDateSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/IsoBasicLocalDateSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/utils/serialization/MonthNumberSerializer : kotlinx/serialization/KSerializer {
-	public fun <init> ()V
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/MonthNumberSerializer;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lkotlinx/datetime/Month;
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -25,8 +74,35 @@ public final class dev/sargunv/mobilitydata/utils/serialization/MonthNumberSeria
 	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lkotlinx/datetime/Month;)V
 }
 
+public final class dev/sargunv/mobilitydata/utils/serialization/RgbColorCodeSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/RgbColorCodeSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize-1eFrhTE (Lkotlinx/serialization/encoding/Decoder;)I
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun serialize-qFY5WMg (Lkotlinx/serialization/encoding/Encoder;I)V
+}
+
+public final class dev/sargunv/mobilitydata/utils/serialization/RgbColorTripletSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/RgbColorTripletSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize-1eFrhTE (Lkotlinx/serialization/encoding/Decoder;)I
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun serialize-qFY5WMg (Lkotlinx/serialization/encoding/Encoder;I)V
+}
+
+public final class dev/sargunv/mobilitydata/utils/serialization/ServiceTimeSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/ServiceTimeSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/utils/ServiceTime;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/utils/ServiceTime;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
 public final class dev/sargunv/mobilitydata/utils/serialization/WholeMinutesSerializer : kotlinx/serialization/KSerializer {
-	public fun <init> ()V
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/WholeMinutesSerializer;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun deserialize-5sfh64U (Lkotlinx/serialization/encoding/Decoder;)J
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -35,7 +111,7 @@ public final class dev/sargunv/mobilitydata/utils/serialization/WholeMinutesSeri
 }
 
 public final class dev/sargunv/mobilitydata/utils/serialization/WholeSecondsSerializer : kotlinx/serialization/KSerializer {
-	public fun <init> ()V
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/WholeSecondsSerializer;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
 	public fun deserialize-5sfh64U (Lkotlinx/serialization/encoding/Decoder;)J
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;

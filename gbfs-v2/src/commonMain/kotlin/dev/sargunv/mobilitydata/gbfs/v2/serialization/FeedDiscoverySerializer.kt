@@ -8,7 +8,7 @@ import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-internal class FeedDiscoverySerializer : KSerializer<Map<FeedType, Url>> {
+internal object FeedDiscoverySerializer : KSerializer<Map<FeedType, Url>> {
   private val delegate = ListSerializer(Delegate.serializer())
   override val descriptor = delegate.descriptor
 

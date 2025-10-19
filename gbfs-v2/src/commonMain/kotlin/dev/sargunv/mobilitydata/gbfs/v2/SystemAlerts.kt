@@ -1,9 +1,9 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
+import dev.sargunv.mobilitydata.utils.EpochSeconds
+import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Url
-import dev.sargunv.mobilitydata.utils.serialization.EpochSecondsSerializer
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -64,9 +64,7 @@ public data class Alert(
   public val description: String? = null,
 
   /** Indicates the last time the info for the alert was updated. */
-  @Serializable(with = EpochSecondsSerializer::class)
-  @SerialName("last_updated")
-  public val lastUpdated: Instant? = null,
+  @SerialName("last_updated") public val lastUpdated: EpochSeconds? = null,
 )
 
 /** Type of system alert. */
@@ -90,12 +88,12 @@ public enum class AlertType {
 @Serializable
 public data class AlertTime(
   /** Start time of the alert. REQUIRED if times array is defined. */
-  @Serializable(with = EpochSecondsSerializer::class) public val start: Instant,
+  public val start: EpochSeconds,
 
   /**
    * End time of the alert.
    *
    * If there is currently no end time planned for the alert, this can be omitted.
    */
-  @Serializable(with = EpochSecondsSerializer::class) public val end: Instant? = null,
+  public val end: EpochSeconds? = null,
 )

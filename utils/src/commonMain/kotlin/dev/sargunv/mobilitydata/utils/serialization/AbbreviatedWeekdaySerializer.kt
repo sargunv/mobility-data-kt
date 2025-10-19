@@ -8,7 +8,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
 /** Serializer for [DayOfWeek] that uses abbreviated weekday names (mon, tue, wed, etc.). */
-public class AbbreviatedWeekdaySerializer : KSerializer<DayOfWeek> {
+public object AbbreviatedWeekdaySerializer : KSerializer<DayOfWeek> {
   private val delegate = String.serializer()
   override val descriptor: SerialDescriptor = delegate.descriptor
 

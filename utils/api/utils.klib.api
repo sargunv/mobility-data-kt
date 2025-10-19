@@ -6,9 +6,49 @@
 // - Show declarations: true
 
 // Library unique name: <dev.sargunv.mobility-data:utils>
-final class dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer : kotlinx.serialization/KSerializer<kotlinx.datetime/DayOfWeek> { // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer|null[0]
-    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.<init>|<init>(){}[0]
+final class dev.sargunv.mobilitydata.utils/ServiceTime : kotlin/Comparable<dev.sargunv.mobilitydata.utils/ServiceTime> { // dev.sargunv.mobilitydata.utils/ServiceTime|null[0]
+    constructor <init>(kotlin/Int, kotlin/Int, kotlin/Int) // dev.sargunv.mobilitydata.utils/ServiceTime.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.Int){}[0]
 
+    final val hours // dev.sargunv.mobilitydata.utils/ServiceTime.hours|{}hours[0]
+        final fun <get-hours>(): kotlin/Int // dev.sargunv.mobilitydata.utils/ServiceTime.hours.<get-hours>|<get-hours>(){}[0]
+    final val minutes // dev.sargunv.mobilitydata.utils/ServiceTime.minutes|{}minutes[0]
+        final fun <get-minutes>(): kotlin/Int // dev.sargunv.mobilitydata.utils/ServiceTime.minutes.<get-minutes>|<get-minutes>(){}[0]
+    final val seconds // dev.sargunv.mobilitydata.utils/ServiceTime.seconds|{}seconds[0]
+        final fun <get-seconds>(): kotlin/Int // dev.sargunv.mobilitydata.utils/ServiceTime.seconds.<get-seconds>|<get-seconds>(){}[0]
+
+    final fun compareTo(dev.sargunv.mobilitydata.utils/ServiceTime): kotlin/Int // dev.sargunv.mobilitydata.utils/ServiceTime.compareTo|compareTo(dev.sargunv.mobilitydata.utils.ServiceTime){}[0]
+    final fun component1(): kotlin/Int // dev.sargunv.mobilitydata.utils/ServiceTime.component1|component1(){}[0]
+    final fun component2(): kotlin/Int // dev.sargunv.mobilitydata.utils/ServiceTime.component2|component2(){}[0]
+    final fun component3(): kotlin/Int // dev.sargunv.mobilitydata.utils/ServiceTime.component3|component3(){}[0]
+    final fun copy(kotlin/Int = ..., kotlin/Int = ..., kotlin/Int = ...): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.utils/ServiceTime.copy|copy(kotlin.Int;kotlin.Int;kotlin.Int){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.utils/ServiceTime.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.utils/ServiceTime.hashCode|hashCode(){}[0]
+    final fun toLocalTime(): kotlinx.datetime/LocalTime // dev.sargunv.mobilitydata.utils/ServiceTime.toLocalTime|toLocalTime(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.utils/ServiceTime.toString|toString(){}[0]
+
+    final object Companion { // dev.sargunv.mobilitydata.utils/ServiceTime.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/ServiceTime> // dev.sargunv.mobilitydata.utils/ServiceTime.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final value class dev.sargunv.mobilitydata.utils/RgbColor { // dev.sargunv.mobilitydata.utils/RgbColor|null[0]
+    constructor <init>(kotlin/Int) // dev.sargunv.mobilitydata.utils/RgbColor.<init>|<init>(kotlin.Int){}[0]
+
+    final val blue // dev.sargunv.mobilitydata.utils/RgbColor.blue|{}blue[0]
+        final fun <get-blue>(): kotlin/Byte // dev.sargunv.mobilitydata.utils/RgbColor.blue.<get-blue>|<get-blue>(){}[0]
+    final val green // dev.sargunv.mobilitydata.utils/RgbColor.green|{}green[0]
+        final fun <get-green>(): kotlin/Byte // dev.sargunv.mobilitydata.utils/RgbColor.green.<get-green>|<get-green>(){}[0]
+    final val red // dev.sargunv.mobilitydata.utils/RgbColor.red|{}red[0]
+        final fun <get-red>(): kotlin/Byte // dev.sargunv.mobilitydata.utils/RgbColor.red.<get-red>|<get-red>(){}[0]
+    final val value // dev.sargunv.mobilitydata.utils/RgbColor.value|{}value[0]
+        final fun <get-value>(): kotlin/Int // dev.sargunv.mobilitydata.utils/RgbColor.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.utils/RgbColor.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.utils/RgbColor.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.utils/RgbColor.toString|toString(){}[0]
+}
+
+final object dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer : kotlinx.serialization/KSerializer<kotlinx.datetime/DayOfWeek> { // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer|null[0]
     final val descriptor // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.descriptor|{}descriptor[0]
         final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
 
@@ -16,9 +56,7 @@ final class dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySeria
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlinx.datetime/DayOfWeek) // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlinx.datetime.DayOfWeek){}[0]
 }
 
-final class dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer : kotlinx.serialization/KSerializer<kotlin.time/Instant> { // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer|null[0]
-    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.<init>|<init>(){}[0]
-
+final object dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer : kotlinx.serialization/KSerializer<kotlin.time/Instant> { // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer|null[0]
     final val descriptor // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.descriptor|{}descriptor[0]
         final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
 
@@ -26,9 +64,9 @@ final class dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer 
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Instant) // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Instant){}[0]
 }
 
-final class dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer : kotlinx.serialization/KSerializer<kotlinx.datetime/Month> { // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer|null[0]
-    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.<init>|<init>(){}[0]
+final object dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer : kotlinx.datetime.serializers/FormattedLocalDateSerializer // dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer|null[0]
 
+final object dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer : kotlinx.serialization/KSerializer<kotlinx.datetime/Month> { // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer|null[0]
     final val descriptor // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.descriptor|{}descriptor[0]
         final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
 
@@ -36,9 +74,31 @@ final class dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer :
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlinx.datetime/Month) // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlinx.datetime.Month){}[0]
 }
 
-final class dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer : kotlinx.serialization/KSerializer<kotlin.time/Duration> { // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer|null[0]
-    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer.<init>|<init>(){}[0]
+final object dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/RgbColor> { // dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer|null[0]
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
 
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.utils/RgbColor // dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.utils/RgbColor) // dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.utils.RgbColor){}[0]
+}
+
+final object dev.sargunv.mobilitydata.utils.serialization/RgbColorTripletSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/RgbColor> { // dev.sargunv.mobilitydata.utils.serialization/RgbColorTripletSerializer|null[0]
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/RgbColorTripletSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/RgbColorTripletSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.utils/RgbColor // dev.sargunv.mobilitydata.utils.serialization/RgbColorTripletSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.utils/RgbColor) // dev.sargunv.mobilitydata.utils.serialization/RgbColorTripletSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.utils.RgbColor){}[0]
+}
+
+final object dev.sargunv.mobilitydata.utils.serialization/ServiceTimeSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/ServiceTime> { // dev.sargunv.mobilitydata.utils.serialization/ServiceTimeSerializer|null[0]
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/ServiceTimeSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/ServiceTimeSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.utils.serialization/ServiceTimeSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.utils/ServiceTime) // dev.sargunv.mobilitydata.utils.serialization/ServiceTimeSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.utils.ServiceTime){}[0]
+}
+
+final object dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer : kotlinx.serialization/KSerializer<kotlin.time/Duration> { // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer|null[0]
     final val descriptor // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer.descriptor|{}descriptor[0]
         final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
 
@@ -46,12 +106,12 @@ final class dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer 
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Duration) // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Duration){}[0]
 }
 
-final class dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer : kotlinx.serialization/KSerializer<kotlin.time/Duration> { // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer|null[0]
-    constructor <init>() // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.<init>|<init>(){}[0]
-
+final object dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer : kotlinx.serialization/KSerializer<kotlin.time/Duration> { // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer|null[0]
     final val descriptor // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.descriptor|{}descriptor[0]
         final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
 
     final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlin.time/Duration // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Duration) // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Duration){}[0]
 }
+
+final fun (kotlinx.datetime/LocalTime).dev.sargunv.mobilitydata.utils/toServiceTime(kotlin/Int = ...): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.utils/toServiceTime|toServiceTime@kotlinx.datetime.LocalTime(kotlin.Int){}[0]
