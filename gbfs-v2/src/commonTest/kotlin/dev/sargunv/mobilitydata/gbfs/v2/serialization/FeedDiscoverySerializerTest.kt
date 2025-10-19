@@ -1,8 +1,8 @@
 package dev.sargunv.mobilitydata.gbfs.v2.serialization
 
-import dev.sargunv.mobilitydata.gbfs.v2.model.FeedType
-import dev.sargunv.mobilitydata.gbfs.v2.model.GbfsJson
-import dev.sargunv.mobilitydata.gbfs.v2.model.Url
+import dev.sargunv.mobilitydata.gbfs.v2.FeedType
+import dev.sargunv.mobilitydata.gbfs.v2.GbfsJson
+import dev.sargunv.mobilitydata.gbfs.v2.Url
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue

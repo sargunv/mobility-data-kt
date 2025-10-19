@@ -1,6 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2.serialization
 
-import dev.sargunv.mobilitydata.gbfs.v2.model.GbfsJson
+import dev.sargunv.mobilitydata.gbfs.v2.GbfsJson
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
