@@ -17,6 +17,7 @@ nav:
     - GTFS Realtime: gtfs-realtime.md
     - GBFS: gbfs.md
     - GOFS: gofs.md
+    - API Reference: ./api/index.html
 
 theme:
     name: "material"
