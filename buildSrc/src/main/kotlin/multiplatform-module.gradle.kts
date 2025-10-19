@@ -16,7 +16,10 @@ kotlin {
   wasmJs {
     browser()
     nodejs()
-    d8()
+    d8 {
+      // https://github.com/sargunv/mobility-data-kt/issues/5
+      testTask { enabled = false }
+    }
   }
 
   wasmWasi { nodejs() }

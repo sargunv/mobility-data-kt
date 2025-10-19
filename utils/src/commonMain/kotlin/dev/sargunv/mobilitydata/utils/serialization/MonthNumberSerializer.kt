@@ -1,4 +1,4 @@
-package dev.sargunv.mobilitydata.gbfs.v2.serialization
+package dev.sargunv.mobilitydata.utils.serialization
 
 import kotlinx.datetime.Month
 import kotlinx.datetime.number
@@ -8,7 +8,8 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-internal class MonthNumberSerializer : KSerializer<Month> {
+/** Serializer for [Month] that uses month numbers (1-12). */
+public class MonthNumberSerializer : KSerializer<Month> {
   private val delegate = Int.serializer()
   override val descriptor: SerialDescriptor = delegate.descriptor
 

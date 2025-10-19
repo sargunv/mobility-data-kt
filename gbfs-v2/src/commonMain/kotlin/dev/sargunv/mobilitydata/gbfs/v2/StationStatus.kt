@@ -1,6 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
-import dev.sargunv.mobilitydata.gbfs.v2.serialization.EpochSecondsSerializer
+import dev.sargunv.mobilitydata.utils.serialization.EpochSecondsSerializer
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.serialization.SerialName

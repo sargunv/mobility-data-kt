@@ -1,6 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
-import dev.sargunv.mobilitydata.gbfs.v2.serialization.AbbreviatedWeekdaySerializer
+import dev.sargunv.mobilitydata.utils.serialization.AbbreviatedWeekdaySerializer
 import kotlinx.datetime.DayOfWeek
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.serializers.LocalTimeIso8601Serializer

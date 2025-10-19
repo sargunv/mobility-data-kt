@@ -9,4 +9,6 @@ dependencyResolutionManagement { @Suppress("UnstableApiUsage") repositories { ma
 
 rootProject.name = "mobility-data"
 
+include(":utils")
+
 include(":gbfs-v2")

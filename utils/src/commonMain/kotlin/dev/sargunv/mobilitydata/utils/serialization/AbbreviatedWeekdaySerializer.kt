@@ -1,4 +1,4 @@
-package dev.sargunv.mobilitydata.gbfs.v2.serialization
+package dev.sargunv.mobilitydata.utils.serialization
 
 import kotlinx.datetime.DayOfWeek
 import kotlinx.serialization.KSerializer
@@ -7,7 +7,8 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
-internal class AbbreviatedWeekdaySerializer : KSerializer<DayOfWeek> {
+/** Serializer for [DayOfWeek] that uses abbreviated weekday names (mon, tue, wed, etc.). */
+public class AbbreviatedWeekdaySerializer : KSerializer<DayOfWeek> {
   private val delegate = String.serializer()
   override val descriptor: SerialDescriptor = delegate.descriptor
 

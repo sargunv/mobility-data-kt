@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
+import dev.sargunv.mobilitydata.utils.Url
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.call.body

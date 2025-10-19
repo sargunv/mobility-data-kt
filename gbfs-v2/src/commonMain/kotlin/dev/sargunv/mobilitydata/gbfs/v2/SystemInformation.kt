@@ -1,5 +1,8 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
+import dev.sargunv.mobilitydata.utils.LanguageCode
+import dev.sargunv.mobilitydata.utils.Uri
+import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
 import kotlinx.serialization.SerialName

@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
+import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.serialization.Serializable
 
 /**

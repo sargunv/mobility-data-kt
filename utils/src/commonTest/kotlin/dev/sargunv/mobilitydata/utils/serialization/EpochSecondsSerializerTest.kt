@@ -1,11 +1,11 @@
-package dev.sargunv.mobilitydata.gbfs.v2.serialization
+package dev.sargunv.mobilitydata.utils.serialization
 
-import dev.sargunv.mobilitydata.gbfs.v2.GbfsJson
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.long
@@ -17,13 +17,15 @@ class EpochSecondsSerializerTest {
     @Serializable(with = EpochSecondsSerializer::class) val timestamp: Instant
   )
 
+  private val json = Json
+
   @Test
   fun testSerializeInstant() {
     val instant = Instant.fromEpochSeconds(1640887163)
     val testData = TestData(instant)
 
-    val json = GbfsJson.encodeToJsonElement(TestData.serializer(), testData)
-    val timestamp = json.jsonObject["timestamp"]!!.jsonPrimitive
+    val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+    val timestamp = jsonElement.jsonObject["timestamp"]!!.jsonPrimitive
 
     assertEquals(1640887163L, timestamp.long)
   }
@@ -32,7 +34,7 @@ class EpochSecondsSerializerTest {
   fun testDeserializeInstant() {
     val jsonString = """{"timestamp":1640887163}"""
 
-    val result = GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+    val result = json.decodeFromString(TestData.serializer(), jsonString)
 
     assertEquals(Instant.fromEpochSeconds(1640887163), result.timestamp)
   }
@@ -41,8 +43,8 @@ class EpochSecondsSerializerTest {
   fun testRoundTrip() {
     val original = TestData(Instant.fromEpochSeconds(1609459200)) // 2021-01-01 00:00:00 UTC
 
-    val jsonString = GbfsJson.encodeToString(TestData.serializer(), original)
-    val decoded = GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+    val jsonString = json.encodeToString(TestData.serializer(), original)
+    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
     assertEquals(original, decoded)
   }
@@ -52,8 +54,8 @@ class EpochSecondsSerializerTest {
     val instant = Instant.fromEpochSeconds(-86400) // 1969-12-31
     val testData = TestData(instant)
 
-    val jsonString = GbfsJson.encodeToString(TestData.serializer(), testData)
-    val decoded = GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+    val jsonString = json.encodeToString(TestData.serializer(), testData)
+    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
     assertEquals(testData, decoded)
   }

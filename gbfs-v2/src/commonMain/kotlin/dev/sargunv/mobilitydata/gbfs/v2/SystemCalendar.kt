@@ -1,6 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
-import dev.sargunv.mobilitydata.gbfs.v2.serialization.MonthNumberSerializer
+import dev.sargunv.mobilitydata.utils.serialization.MonthNumberSerializer
 import kotlinx.datetime.Month
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

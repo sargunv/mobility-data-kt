@@ -1,11 +1,11 @@
-package dev.sargunv.mobilitydata.gbfs.v2.serialization
+package dev.sargunv.mobilitydata.utils.serialization
 
-import dev.sargunv.mobilitydata.gbfs.v2.GbfsJson
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
 import kotlinx.datetime.DayOfWeek
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 
@@ -15,12 +15,14 @@ class AbbreviatedWeekdaySerializerTest {
     @Serializable(with = AbbreviatedWeekdaySerializer::class) val day: DayOfWeek
   )
 
+  private val json = Json
+
   @Test
   fun testSerializeMonday() {
     val testData = TestData(DayOfWeek.MONDAY)
 
-    val json = GbfsJson.encodeToJsonElement(TestData.serializer(), testData)
-    val dayValue = json.jsonObject["day"]!!.jsonPrimitive
+    val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+    val dayValue = jsonElement.jsonObject["day"]!!.jsonPrimitive
 
     assertEquals("mon", dayValue.content)
   }
@@ -29,8 +31,8 @@ class AbbreviatedWeekdaySerializerTest {
   fun testSerializeSaturday() {
     val testData = TestData(DayOfWeek.SATURDAY)
 
-    val json = GbfsJson.encodeToJsonElement(TestData.serializer(), testData)
-    val dayValue = json.jsonObject["day"]!!.jsonPrimitive
+    val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+    val dayValue = jsonElement.jsonObject["day"]!!.jsonPrimitive
 
     assertEquals("sat", dayValue.content)
   }
@@ -39,7 +41,7 @@ class AbbreviatedWeekdaySerializerTest {
   fun testDeserializeWednesday() {
     val jsonString = """{"day":"wed"}"""
 
-    val result = GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+    val result = json.decodeFromString(TestData.serializer(), jsonString)
 
     assertEquals(DayOfWeek.WEDNESDAY, result.day)
   }
@@ -48,8 +50,8 @@ class AbbreviatedWeekdaySerializerTest {
   fun testRoundTrip() {
     val original = TestData(DayOfWeek.FRIDAY)
 
-    val jsonString = GbfsJson.encodeToString(TestData.serializer(), original)
-    val decoded = GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+    val jsonString = json.encodeToString(TestData.serializer(), original)
+    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
     assertEquals(original, decoded)
   }
@@ -69,13 +71,13 @@ class AbbreviatedWeekdaySerializerTest {
 
     for ((day, abbreviation) in days) {
       val testData = TestData(day)
-      val json = GbfsJson.encodeToJsonElement(TestData.serializer(), testData)
-      val dayValue = json.jsonObject["day"]!!.jsonPrimitive
+      val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+      val dayValue = jsonElement.jsonObject["day"]!!.jsonPrimitive
 
       assertEquals(abbreviation, dayValue.content, "$day should serialize to '$abbreviation'")
 
       val jsonString = """{"day":"$abbreviation"}"""
-      val result = GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+      val result = json.decodeFromString(TestData.serializer(), jsonString)
       assertEquals(day, result.day, "'$abbreviation' should deserialize to $day")
     }
   }
@@ -85,7 +87,7 @@ class AbbreviatedWeekdaySerializerTest {
     val jsonString = """{"day":"invalid"}"""
 
     assertFailsWith<IllegalArgumentException> {
-      GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+      json.decodeFromString(TestData.serializer(), jsonString)
     }
   }
 
@@ -94,7 +96,7 @@ class AbbreviatedWeekdaySerializerTest {
     val jsonString = """{"day":"monday"}"""
 
     assertFailsWith<IllegalArgumentException> {
-      GbfsJson.decodeFromString(TestData.serializer(), jsonString)
+      json.decodeFromString(TestData.serializer(), jsonString)
     }
   }
 }

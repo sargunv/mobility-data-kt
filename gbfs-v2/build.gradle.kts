@@ -1,27 +1,17 @@
-import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-
 plugins { id("published-library") }
 
 kotlin {
   compilerOptions { freeCompilerArgs.add("-Xcontext-parameters") }
 
-  // Failing with no clear reason
-  @OptIn(ExperimentalWasmDsl::class) wasmJs { d8 { testTask { enabled = false } } }
-
   sourceSets {
     commonMain {
       dependencies {
+        api(project(":utils"))
         api(libs.kotlinx.serialization.json)
         api(libs.kotlinx.datetime)
         api(libs.spatialk.geojson)
       }
     }
-
-    // https://github.com/Kotlin/kotlinx-datetime/blob/master/README.md#note-about-time-zones-in-js
-    webMain {
-      dependencies { implementation(npm("@js-joda/timezone", libs.versions.joda.timezone.get())) }
-    }
-    wasmWasiMain { dependencies { implementation(libs.kotlinx.datetime.zoneinfo) } }
 
     create("ktorMain").apply {
       dependencies {
