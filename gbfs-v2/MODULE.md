@@ -5,8 +5,8 @@ implementation for Kotlin Multiplatform.
 
 # Package dev.sargunv.mobilitydata.gbfs.v2.client
 
-TODO
+HTTP client for fetching GBFS v2 feeds using Ktor.
 
 # Package dev.sargunv.mobilitydata.gbfs.v2.model
 
-TODO
+Data models representing all GBFS v2 feed types with JSON serialization support.

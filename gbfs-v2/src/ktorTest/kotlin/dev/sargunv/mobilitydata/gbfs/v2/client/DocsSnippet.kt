@@ -2,33 +2,32 @@
 
 package dev.sargunv.mobilitydata.gbfs.v2.client
 
-import kotlin.test.Test
 import kotlinx.coroutines.test.runTest
 
-class DocsTest {
-  @Test
+class DocsSnippet {
   fun example() = runTest {
-    GbfsV2Client().use { gbfs ->
+    // --8<-- [start:example]
+    GbfsV2Client().use { gbfs -> // (1)!
       val manifest =
         gbfs
-          .getManifest(
+          .getManifest( // (2)!
             discoveryUrl = "https://mds.bird.co/gbfs/v2/public/seattle-washington/gbfs.json"
           )
           .data
 
-      context(manifest.getService("en")) {
-        val systemInfo = gbfs.getSystemInformation().data
+      context(manifest.getService("en")) { // (3)!
+        val systemInfo = gbfs.getSystemInformation().data // (4)!
 
         println("System: ${systemInfo.name}")
         println("Operator: ${systemInfo.operator}")
         println("Timezone: ${systemInfo.timezone}")
 
-        val vehicleTypes = gbfs.getVehicleTypes().data.vehicleTypes
+        val vehicleTypes = gbfs.getVehicleTypes().data.vehicleTypes // (5)!
 
         println("\nVehicle Types:")
         vehicleTypes.forEach { type -> println("  - ${type.formFactor}: (${type.propulsionType})") }
 
-        val freeBikes = gbfs.getFreeBikeStatus().data.bikes
+        val freeBikes = gbfs.getFreeBikeStatus().data.bikes // (6)!
 
         println("\nAvailable bikes: ${freeBikes.size}")
         freeBikes.take(3).forEach { bike ->
@@ -36,5 +35,6 @@ class DocsTest {
         }
       }
     }
+    // --8<-- [end:example]
   }
 }

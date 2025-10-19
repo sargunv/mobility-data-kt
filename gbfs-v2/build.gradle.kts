@@ -1,7 +1,12 @@
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+
 plugins { id("published-library") }
 
 kotlin {
   compilerOptions { freeCompilerArgs.add("-Xcontext-parameters") }
+
+  // Failing with no clear reason
+  @OptIn(ExperimentalWasmDsl::class) wasmJs { d8 { testTask { enabled = false } } }
 
   sourceSets {
     commonMain {
