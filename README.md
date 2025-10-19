@@ -8,4 +8,15 @@
 
 ## Introduction
 
-TODO
+Mobility Data for Kotlin is a set of libraries for working with open
+transportation data formats in Kotlin. It supports all Kotlin Multiplatform
+targets, including JVM, Native, JS, and WASM.
+
+It supports:
+
+- General Bikeshare Feed Specification (GBFS)
+- TODO: General Transit Feed Specification (GTFS)
+- TODO: General On-Demand Feed Specification (GOFS)
+
+See the [project site](https://code.sargunv.dev/mobility-data-kt/) for more
+info.
