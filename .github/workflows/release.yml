@@ -17,31 +17,31 @@ permissions:
     contents: read
 
 jobs:
-    publish-maven:
-        runs-on: ubuntu-latest
-        environment:
-            name: maven-central
-            url: https://central.sonatype.com/namespace/dev.sargunv.mobility-data
-        steps:
-            - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-              with:
-                  fetch-depth: 0
-                  fetch-tags: true
-            - uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165 # v5.0.0
-              with:
-                  distribution: temurin
-                  java-version: 21
-            - run: |
-                  ./gradlew publishAndReleaseToMavenCentral -Psemver.stage=final -Psemver.scope=${{ github.event.inputs.scope }}
-              env:
-                  ORG_GRADLE_PROJECT_mavenCentralUsername:
-                      ${{ secrets.MAVEN_CENTRAL_USERNAME }}
-                  ORG_GRADLE_PROJECT_mavenCentralPassword:
-                      ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
-                  ORG_GRADLE_PROJECT_signingInMemoryKey:
-                      ${{ secrets.GPG_PRIVATE_KEY }}
-                  ORG_GRADLE_PROJECT_signingInMemoryKeyPassword:
-                      ${{ secrets.GPG_PASSPHRASE }}
+    #    publish-maven:
+    #        runs-on: ubuntu-latest
+    #        environment:
+    #            name: maven-central
+    #            url: https://central.sonatype.com/namespace/dev.sargunv.mobility-data
+    #        steps:
+    #            - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+    #              with:
+    #                  fetch-depth: 0
+    #                  fetch-tags: true
+    #            - uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165 # v5.0.0
+    #              with:
+    #                  distribution: temurin
+    #                  java-version: 21
+    #            - run: |
+    #                  ./gradlew publishAndReleaseToMavenCentral -Psemver.stage=final -Psemver.scope=${{ github.event.inputs.scope }}
+    #              env:
+    #                  ORG_GRADLE_PROJECT_mavenCentralUsername:
+    #                      ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+    #                  ORG_GRADLE_PROJECT_mavenCentralPassword:
+    #                      ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+    #                  ORG_GRADLE_PROJECT_signingInMemoryKey:
+    #                      ${{ secrets.GPG_PRIVATE_KEY }}
+    #                  ORG_GRADLE_PROJECT_signingInMemoryKeyPassword:
+    #                      ${{ secrets.GPG_PASSPHRASE }}
 
     publish-pages:
         runs-on: ubuntu-latest
@@ -70,7 +70,7 @@ jobs:
 
     tag:
         runs-on: ubuntu-latest
-        needs: [publish-maven, publish-pages]
+        needs: [publish-pages]
         permissions:
             contents: write
         steps:
