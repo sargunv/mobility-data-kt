@@ -37,7 +37,6 @@ public data class PricingPlan(
    * the base price that is charged only once per trip (typically the price for unlocking) in
    * addition to per_km_pricing and/or per_min_pricing.
    */
-  // TODO: GBFS v2 allows float | string in JSON; test that it's coerced to Float properly
   public val price: Double,
 
   /**

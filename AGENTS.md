@@ -3,17 +3,9 @@
 This is a library containing utilities for working with mobility data formats in
 Kotlin Multiplatform.
 
-## Tech Stack
-
-- Kotlin Multiplatform
-- kotlinx-serialization
-- ktor
-
 ## Modules
 
-- `./gbfs` - (WIP) General Bikeshare Feed Specification client
-- `./gtfs-schedule` - (TODO) General Transit Feed Specification client
-- `./gtfs-realtime` - (TODO) GTFS Realtime client
+- `./gbfs-v2` - General Bikeshare Feed Specification v2 client
 
 ## Commands
 

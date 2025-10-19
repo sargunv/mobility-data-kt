@@ -24,7 +24,14 @@ mkdocs {
 
 tasks.withType<MkdocsTask>().configureEach {
   dependsOn("dokkaGenerateHtml")
-  extras.assign(provider { mapOf("project_version" to project.version.toString()) })
+  extras.assign(
+    provider {
+      mapOf(
+        "project_version" to project.version.toString(),
+        "ktor_version" to libs.versions.ktor.get(),
+      )
+    }
+  )
 }
 
 kover {

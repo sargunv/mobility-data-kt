@@ -13,7 +13,10 @@ copyright: "Copyright &copy; 2025 Sargun Vohra"
 
 nav:
     - Introduction: index.md
+    - GTFS Schedule: gtfs-schedule.md
+    - GTFS Realtime: gtfs-realtime.md
     - GBFS: gbfs.md
+    - GOFS: gofs.md
 
 theme:
     name: "material"

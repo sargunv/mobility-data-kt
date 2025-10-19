@@ -47,25 +47,7 @@ public fun <T : HttpClientEngineConfig> GbfsV2Client(
     }
   )
 
-/**
- * HTTP client for fetching GBFS v2 feeds.
- *
- * This client provides convenient methods to fetch all GBFS v2 feed types with automatic JSON
- * deserialization. The client is configured to use the GBFS v2 JSON configuration and expects
- * successful HTTP responses.
- *
- * Example usage:
- * ```kotlin
- * val client = GbfsV2Client()
- * val manifest = client.getManifest("https://example.com/gbfs.json")
- * val service = manifest.data.getForLanguage("en")
- * with(service) {
- *   val systemInfo = client.getSystemInformation()
- *   val stations = client.getStationInformation()
- * }
- * client.close()
- * ```
- */
+/** HTTP client for fetching GBFS v2 feeds. */
 public class GbfsV2Client internal constructor(private val httpClient: HttpClient) : AutoCloseable {
 
   /**
@@ -100,8 +82,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches the list of GBFS versions supported by this system.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing supported GBFS versions
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getVersions(): GbfsFeedResponse<Versions> =
@@ -110,8 +92,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches system information including name, operator, timezone, and contact details.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing system information
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getSystemInformation(): GbfsFeedResponse<SystemInformation> =
@@ -120,8 +102,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches information about vehicle types available in the system.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing vehicle type definitions
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getVehicleTypes(): GbfsFeedResponse<VehicleTypes> =
@@ -130,8 +112,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches static information about stations in the system.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing station information
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getStationInformation(): GbfsFeedResponse<StationInformation> =
@@ -140,8 +122,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches real-time status of stations including available bikes and docks.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing current station status
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getStationStatus(): GbfsFeedResponse<StationStatus> =
@@ -150,8 +132,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches real-time status of free-floating vehicles not currently docked.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing available vehicle locations and status
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getFreeBikeStatus(): GbfsFeedResponse<FreeBikeStatus> =
@@ -160,8 +142,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches hours of operation for the system.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing system operating hours
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getSystemHours(): GbfsFeedResponse<SystemHours> =
@@ -170,8 +152,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches the operating calendar for seasonal systems.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing system operating calendar
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getSystemCalendar(): GbfsFeedResponse<SystemCalendar> =
@@ -180,8 +162,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches information about geographic regions in the system.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing system regions
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getSystemRegions(): GbfsFeedResponse<SystemRegions> =
@@ -190,8 +172,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches pricing plans for the system.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing pricing plan information
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getSystemPricingPlans(): GbfsFeedResponse<SystemPricingPlans> =
@@ -200,8 +182,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches current system alerts about service disruptions or changes.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing active system alerts
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getSystemAlerts(): GbfsFeedResponse<SystemAlerts> =
@@ -210,8 +192,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
   /**
    * Fetches geofencing zones that define geographic restrictions.
    *
+   * @param [service] The GBFS service containing feed URLs
    * @return Response containing geofencing zone definitions
-   * @receiver The GBFS service containing feed URLs
    */
   context(service: Service)
   public suspend fun getGeofencingZones(): GbfsFeedResponse<GeofencingZones> =

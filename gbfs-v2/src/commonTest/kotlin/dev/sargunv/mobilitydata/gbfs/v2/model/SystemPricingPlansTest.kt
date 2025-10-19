@@ -167,4 +167,34 @@ class SystemPricingPlansTest {
       GbfsJson.decodeFromString<GbfsFeedResponse<SystemPricingPlans>>(jsonContent2)
     assertEquals(expectedResponse2, decodedResponse)
   }
+
+  @Test
+  fun decodeStringPrice() {
+    // In GBFS v1, price can be a string or a number
+
+    val json = // language=json
+      """
+      {
+        "plan_id": "",
+        "name": "",
+        "currency": "",
+        "price": "3.1",
+        "is_taxable": false,
+        "description": ""
+      }
+      """
+        .trimIndent()
+
+    assertEquals(
+      PricingPlan(
+        planId = "",
+        name = "",
+        currency = "",
+        price = 3.1,
+        isTaxable = false,
+        description = "",
+      ),
+      GbfsJson.decodeFromString<PricingPlan>(json),
+    )
+  }
 }
