@@ -69,17 +69,23 @@ public typealias EpochSeconds = @Serializable(with = EpochSecondsSerializer::cla
  * @see RgbColorTriplet
  */
 @JvmInline
-public value class RgbColor(public val value: Int) {
+public value class RgbColor(
+  /** The 24-bit integer representation of this color (0x000000 to 0xFFFFFF). */
+  public val value: Int
+) {
   init {
     require(value in 0x000000..0xFFFFFF) { "Color value must be a 6-digit hexadecimal number." }
   }
 
+  /** The red component of this color (0-255). */
   public val red: Byte
     get() = (value shr 16).toByte()
 
+  /** The green component of this color (0-255). */
   public val green: Byte
     get() = (value shr 8).toByte()
 
+  /** The blue component of this color (0-255). */
   public val blue: Byte
     get() = value.toByte()
 
@@ -128,8 +134,11 @@ public typealias ExtendedLocalTime =
  */
 @Serializable(with = ServiceTimeSerializer::class)
 public data class ServiceTime(
+  /** The hour component (0 or greater, may exceed 23 for times after midnight). */
   public val hours: Int,
+  /** The minute component (0-59). */
   public val minutes: Int,
+  /** The second component (0-59). */
   public val seconds: Int,
 ) : Comparable<ServiceTime> {
   init {
@@ -138,6 +147,9 @@ public data class ServiceTime(
     require(seconds in 0..59) { "Seconds must be in the range 0..59, but was $seconds." }
   }
 
+  /**
+   * Converts this service time to a [LocalTime], wrapping hours greater than 23 using modulo 24.
+   */
   public fun toLocalTime(): LocalTime = LocalTime(hours % 24, minutes, seconds)
 
   override fun compareTo(other: ServiceTime): Int =
@@ -148,6 +160,11 @@ public data class ServiceTime(
     }
 }
 
+/**
+ * Converts this [LocalTime] to a [ServiceTime], optionally adding a day offset.
+ *
+ * @param dayOffset Number of days to add (0 for same day, 1 for next day, etc.).
+ */
 public fun LocalTime.toServiceTime(dayOffset: Int = 0): ServiceTime {
   val totalHours = hour + dayOffset * 24
   return ServiceTime(totalHours, minute, second)

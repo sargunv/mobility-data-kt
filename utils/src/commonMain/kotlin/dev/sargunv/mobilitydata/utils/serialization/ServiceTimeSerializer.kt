@@ -7,6 +7,11 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
+/**
+ * Serializer for [ServiceTime] in HH:MM:SS format.
+ *
+ * Example: 14:30:00 for 2:30PM or 25:35:00 for 1:35AM on the next day.
+ */
 public object ServiceTimeSerializer : KSerializer<ServiceTime> {
   private val delegate = String.serializer()
 
