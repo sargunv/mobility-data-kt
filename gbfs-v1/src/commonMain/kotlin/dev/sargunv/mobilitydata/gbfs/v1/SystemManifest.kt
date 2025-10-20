@@ -1,6 +1,6 @@
-package dev.sargunv.mobilitydata.gbfs.v2
+package dev.sargunv.mobilitydata.gbfs.v1
 
-import dev.sargunv.mobilitydata.gbfs.v2.serialization.FeedDiscoverySerializer
+import dev.sargunv.mobilitydata.gbfs.v1.serialization.FeedDiscoverySerializer
 import dev.sargunv.mobilitydata.utils.LanguageCode
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
@@ -15,7 +15,7 @@ import kotlinx.serialization.Serializable
  */
 @JvmInline
 @Serializable
-public value class GbfsManifest(
+public value class SystemManifest(
   @SerialName("feeds") private val services: Map<LanguageCode, Service>
 ) : GbfsFeedData, Map<LanguageCode, Service> by services {
   public constructor(vararg entries: Pair<LanguageCode, Service>) : this(mapOf(*entries))
@@ -52,16 +52,13 @@ public data class Service(
 @Serializable
 public enum class FeedType {
   /** The gbfs.json auto-discovery file. */
-  @SerialName("gbfs") GbfsManifest,
+  @SerialName("gbfs") SystemManifest,
 
   /** The gbfs_versions.json file listing available GBFS versions. */
-  @SerialName("gbfs_versions") GbfsVersions,
+  @SerialName("gbfs_versions") VersionManifest,
 
   /** The system_information.json file with system details. */
   @SerialName("system_information") SystemInformation,
-
-  /** The vehicle_types.json file describing available vehicle types. */
-  @SerialName("vehicle_types") VehicleTypes,
 
   /** The station_information.json file with station details. */
   @SerialName("station_information") StationInformation,
@@ -86,7 +83,4 @@ public enum class FeedType {
 
   /** The system_alerts.json file with system alerts. */
   @SerialName("system_alerts") SystemAlerts,
-
-  /** The geofencing_zones.json file with geofencing zones. */
-  @SerialName("geofencing_zones") GeofencingZones,
 }

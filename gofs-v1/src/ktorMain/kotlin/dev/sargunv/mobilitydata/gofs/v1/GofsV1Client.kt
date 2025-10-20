@@ -64,7 +64,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @param discoveryUrl The URL of the gofs.json auto-discovery file
    * @return The manifest response containing available feeds
    */
-  public suspend fun getManifest(discoveryUrl: Url): GofsFeedResponse<GofsManifest> =
+  public suspend fun getSystemManifest(discoveryUrl: Url): GofsFeedResponse<SystemManifest> =
     getFeedResponse(discoveryUrl)
 
   /**
@@ -74,8 +74,8 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Response containing supported GOFS versions
    */
   context(service: Service)
-  public suspend fun getVersions(): GofsFeedResponse<GofsVersions> =
-    getFeedResponse(service.feeds.getValue(FeedType.GofsVersions))
+  public suspend fun getVersionManifest(): GofsFeedResponse<VersionManifest> =
+    getFeedResponse(service.feeds.getValue(FeedType.VersionManifest))
 
   /**
    * Fetches system information including name, operator, timezone, and contact details.

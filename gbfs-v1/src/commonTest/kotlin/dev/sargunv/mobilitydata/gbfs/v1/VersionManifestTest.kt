@@ -38,7 +38,7 @@ private val expectedResponse =
     ttl = 0.seconds,
     version = "2.3",
     data =
-      Versions(
+      VersionManifest(
         versions =
           listOf(
             VersionInfo(version = "2.0", url = "https://www.example.com/gbfs/2/gbfs"),
@@ -47,7 +47,7 @@ private val expectedResponse =
       ),
   )
 
-class VersionsTest {
+class VersionManifestTest {
   @Test
   fun encode() {
     val expectedJson = Json.decodeFromString<JsonElement>(jsonContent)
@@ -57,7 +57,7 @@ class VersionsTest {
 
   @Test
   fun decode() {
-    val decodedResponse = GbfsJson.decodeFromString<GbfsFeedResponse<Versions>>(jsonContent)
+    val decodedResponse = GbfsJson.decodeFromString<GbfsFeedResponse<VersionManifest>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
   }
 }

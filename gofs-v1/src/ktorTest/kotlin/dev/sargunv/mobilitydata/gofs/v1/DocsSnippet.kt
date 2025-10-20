@@ -10,7 +10,7 @@ class DocsSnippet {
     GofsV1Client().use { gbfs -> // (1)!
       val manifest =
         gbfs
-          .getManifest( // (2)!
+          .getSystemManifest( // (2)!
             discoveryUrl = "<discovery url>"
           )
           .data

@@ -35,7 +35,7 @@ class FeedDiscoverySerializerTest {
   fun testSerializeMultipleFeeds() {
     val feeds =
       mapOf(
-        FeedType.GbfsManifest to "https://example.com/gbfs.json",
+        FeedType.SystemManifest to "https://example.com/gbfs.json",
         FeedType.SystemInformation to "https://example.com/system_information.json",
         FeedType.StationInformation to "https://example.com/station_information.json",
       )
@@ -78,7 +78,7 @@ class FeedDiscoverySerializerTest {
     val result = GbfsJson.decodeFromString(TestData.serializer(), jsonString)
 
     assertEquals(3, result.feeds.size)
-    assertEquals("https://example.com/gbfs.json", result.feeds[FeedType.GbfsManifest])
+    assertEquals("https://example.com/gbfs.json", result.feeds[FeedType.SystemManifest])
     assertEquals(
       "https://example.com/station_information.json",
       result.feeds[FeedType.StationInformation],
@@ -91,8 +91,8 @@ class FeedDiscoverySerializerTest {
     val original =
       TestData(
         mapOf(
-          FeedType.GbfsManifest to "https://example.com/gbfs.json",
-          FeedType.GbfsVersions to "https://example.com/gbfs_versions.json",
+          FeedType.SystemManifest to "https://example.com/gbfs.json",
+          FeedType.VersionManifest to "https://example.com/gbfs_versions.json",
           FeedType.SystemInformation to "https://example.com/system_information.json",
         )
       )

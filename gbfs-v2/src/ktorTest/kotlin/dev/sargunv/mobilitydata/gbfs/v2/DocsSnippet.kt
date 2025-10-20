@@ -10,7 +10,7 @@ class DocsSnippet {
     GbfsV2Client().use { gbfs -> // (1)!
       val manifest =
         gbfs
-          .getManifest( // (2)!
+          .getSystemManifest( // (2)!
             discoveryUrl = "https://mds.bird.co/gbfs/v2/public/seattle-washington/gbfs.json"
           )
           .data

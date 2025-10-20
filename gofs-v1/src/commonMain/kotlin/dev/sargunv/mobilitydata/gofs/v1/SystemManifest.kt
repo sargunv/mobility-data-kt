@@ -16,7 +16,7 @@ import kotlinx.serialization.Serializable
  */
 @JvmInline
 @Serializable
-public value class GofsManifest(
+public value class SystemManifest(
   @SerialName("feeds") private val services: Map<LanguageCode, Service>
 ) : GofsFeedData, Map<LanguageCode, Service> by services {
   public constructor(vararg entries: Pair<LanguageCode, Service>) : this(mapOf(*entries))
@@ -64,9 +64,9 @@ public data class Service(
 @Serializable
 public enum class FeedType {
   /** Auto-discovery file linking to all other feeds. */
-  @SerialName("gofs") GofsManifest,
+  @SerialName("gofs") SystemManifest,
   /** Shows different versions available for the same GOFS feed. */
-  @SerialName("gofs_versions") GofsVersions,
+  @SerialName("gofs_versions") VersionManifest,
   /** Defines attributes of the on-demand service system. */
   @SerialName("system_information") SystemInformation,
   /** Details the different on-demand service brands available. */

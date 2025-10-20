@@ -52,7 +52,7 @@ private val expectedResponse =
     ttl = 0.seconds,
     version = "1.0",
     data =
-      GofsManifest(
+      SystemManifest(
         "en" to
           Service(
             FeedType.SystemInformation to "https://www.example.com/gofs/1/en/system_information",
@@ -66,7 +66,7 @@ private val expectedResponse =
       ),
   )
 
-class GofsManifestTest {
+class SystemManifestTest {
   @Test
   fun encode() {
     val expectedJson = Json.decodeFromString<JsonElement>(jsonContent)
@@ -76,7 +76,7 @@ class GofsManifestTest {
 
   @Test
   fun decode() {
-    val decodedResponse = GofsJson.decodeFromString<GofsFeedResponse<GofsManifest>>(jsonContent)
+    val decodedResponse = GofsJson.decodeFromString<GofsFeedResponse<SystemManifest>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
   }
 }
