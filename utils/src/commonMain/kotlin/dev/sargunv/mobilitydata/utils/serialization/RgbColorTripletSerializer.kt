@@ -7,6 +7,11 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
+/**
+ * Serializer for [RgbColor] as a six-digit hexadecimal color code without a leading "#".
+ *
+ * Example: FFFFFF for white or 000000 for black.
+ */
 public object RgbColorTripletSerializer : KSerializer<RgbColor> {
   private val delegate = String.serializer()
   override val descriptor: SerialDescriptor = delegate.descriptor
