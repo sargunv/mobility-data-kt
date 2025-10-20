@@ -58,7 +58,7 @@ public data class OperatingRule(
    */
   @SerialName("brand_id") public val brandId: Id<Brand>? = null,
   /** Array of vehicle types used for delivering the on-demand service. */
-  @SerialName("vehicle_type_id") public val vehicleTypeIds: List<Id<VehicleType>>? = null,
+  @SerialName("vehicle_type_id") public val vehicleTypeIds: List<Id<VehicleType>>,
   /** Unique identifier of a fare. Used to determine the price of the on-demand service. */
   @SerialName("fare_id") public val fareId: Id<Fare>? = null,
 )

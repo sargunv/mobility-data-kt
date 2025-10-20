@@ -22,7 +22,7 @@ public data class Fare(
   /** Unique identifier of the fare. */
   @SerialName("fare_id") public val fareId: Id<Fare>,
   /** The currency of the fare. */
-  public val currency: CurrencyCode? = null,
+  public val currency: CurrencyCode,
   /**
    * Array of fare objects defining the price of the service per kilometer. Total cost per rider is
    * the base cost defined in rider, plus the addition of all segments in kilometer, minute,

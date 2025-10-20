@@ -64,6 +64,15 @@ public data class Station(
   /** Identifier of the region where station is located. See system_regions.json. */
   @SerialName("region_id") public val regionId: Id<Region>? = null,
 
+  /** Postal code where the station is located. */
+  @SerialName("post_code") public val postalCode: String? = null,
+
+  /**
+   * Hours of operation for the station in
+   * [OSM opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours) format.
+   */
+  @SerialName("station_opening_hours") public val stationOpeningHours: String? = null,
+
   /** Payment methods accepted at this station. */
   @SerialName("rental_methods") public val rentalMethods: List<RentalMethod>? = null,
 
@@ -129,7 +138,7 @@ public data class Station(
    * number of vehicles from each of these objects SHOULD add up to match the value specified in the
    * capacity field.
    */
-  @SerialName("vehicle_type_capacity")
+  @SerialName("vehicle_types_capacity")
   public val vehicleTypeCapacity: List<CountByMultipleVehicleTypes>? = null,
 
   /**

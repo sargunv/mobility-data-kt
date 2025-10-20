@@ -29,7 +29,7 @@ public fun <T : HttpClientEngineConfig> GbfsV3Client(
     }
   )
 
-/** HTTP client for fetching GBFS v2 feeds. */
+/** HTTP client for fetching GBFS v3 feeds. */
 public class GbfsV3Client internal constructor(private val httpClient: HttpClient) : AutoCloseable {
 
   /**

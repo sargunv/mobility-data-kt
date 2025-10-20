@@ -108,7 +108,7 @@ private val virtualJsonContent = // language=json
             ]
           },
           "capacity": 16,
-          "vehicle_type_capacity": [
+          "vehicle_types_capacity": [
             {
               "vehicle_type_ids": ["abc123", "def456"],
               "count": 15
