@@ -2,8 +2,8 @@ package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LocalizedText
+import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import org.maplibre.spatialk.geojson.FeatureCollection
@@ -45,14 +45,14 @@ public data class GeofencingZone(
    *
    * If the geofencing zone is always active, this can be omitted.
    */
-  public val start: Instant? = null,
+  public val start: Timestamp? = null,
 
   /**
    * End time of the geofencing zone.
    *
    * If the geofencing zone is always active, this can be omitted.
    */
-  public val end: Instant? = null,
+  public val end: Timestamp? = null,
 
   /**
    * Array that contains one object per rule.
@@ -76,13 +76,22 @@ public data class GeofencingZoneRule(
   @SerialName("vehicle_type_ids") public val vehicleTypeIds: List<Id<VehicleType>>? = null,
 
   /**
-   * Is the undocked ("free floating") ride allowed to start and end in this zone?
+   * Is the undocked ("free floating") ride allowed to start in this zone?
    *
    * REQUIRED if rules array is defined.
-   * - `true` - Undocked ("free floating") ride can start and end in this zone.
+   * - `true` - Undocked ("free floating") ride can start in this zone.
    * - `false` - Undocked ("free floating") ride cannot start or end in this zone.
    */
-  @SerialName("ride_allowed") public val rideAllowed: Boolean,
+  @SerialName("ride_start_allowed") public val rideStartAllowed: Boolean,
+
+  /**
+   * Is the undocked ("free floating") ride allowed to end in this zone?
+   *
+   * REQUIRED if rules array is defined.
+   * - `true` - Undocked ("free floating") ride can end in this zone.
+   * - `false` - Undocked ("free floating") ride cannot end in this zone.
+   */
+  @SerialName("ride_end_allowed") public val rideEndAllowed: Boolean,
 
   /**
    * Is the ride allowed to travel through this zone?

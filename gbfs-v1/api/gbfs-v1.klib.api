@@ -33,7 +33,6 @@ final enum class dev.sargunv.mobilitydata.gbfs.v1/FeedType : kotlin/Enum<dev.sar
     enum entry SystemCalendar // dev.sargunv.mobilitydata.gbfs.v1/FeedType.SystemCalendar|null[0]
     enum entry SystemHours // dev.sargunv.mobilitydata.gbfs.v1/FeedType.SystemHours|null[0]
     enum entry SystemInformation // dev.sargunv.mobilitydata.gbfs.v1/FeedType.SystemInformation|null[0]
-    enum entry SystemManifest // dev.sargunv.mobilitydata.gbfs.v1/FeedType.SystemManifest|null[0]
     enum entry SystemPricingPlans // dev.sargunv.mobilitydata.gbfs.v1/FeedType.SystemPricingPlans|null[0]
     enum entry SystemRegions // dev.sargunv.mobilitydata.gbfs.v1/FeedType.SystemRegions|null[0]
     enum entry VersionManifest // dev.sargunv.mobilitydata.gbfs.v1/FeedType.VersionManifest|null[0]

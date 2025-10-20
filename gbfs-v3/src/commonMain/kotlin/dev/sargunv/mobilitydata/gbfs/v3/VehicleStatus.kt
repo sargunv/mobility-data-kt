@@ -1,8 +1,8 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.Id
+import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -80,7 +80,7 @@ public data class Vehicle(
   @SerialName("vehicle_type_id") public val vehicleTypeId: Id<VehicleType>? = null,
 
   /** The last time this vehicle reported its status to the operator's backend. */
-  @SerialName("last_reported") public val lastReported: Instant,
+  @SerialName("last_reported") public val lastReported: Timestamp? = null,
 
   /**
    * The furthest distance in meters that the vehicle can travel with the vehicle's current charge
@@ -137,7 +137,7 @@ public data class Vehicle(
    * published by carsharing or other mobility systems where vehicles can be booked in advance for
    * future travel.
    */
-  @SerialName("available_until") public val availableUntil: Instant? = null,
+  @SerialName("available_until") public val availableUntil: Timestamp? = null,
 )
 
 /**
