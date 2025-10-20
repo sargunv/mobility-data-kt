@@ -14,9 +14,9 @@ targets, including JVM, Native, JS, and WASM.
 
 It supports:
 
-- General Bikeshare Feed Specification (GBFS)
 - TODO: General Transit Feed Specification (GTFS)
-- TODO: General On-Demand Feed Specification (GOFS)
+- General Bikeshare Feed Specification (GBFS)
+- General On-Demand Feed Specification (GOFS)
 
 See the [project site](https://code.sargunv.dev/mobility-data-kt/) for more
 info.
