@@ -141,28 +141,28 @@ private val expectedResponse2 =
 
 class SystemPricingPlansTest {
   @Test
-  fun encodePhysical() {
+  fun encode1() {
     val expectedJson = Json.decodeFromString<JsonElement>(jsonContent1)
     val encodedJson = GbfsJson.encodeToJsonElement(expectedResponse1)
     assertEquals(expectedJson, encodedJson)
   }
 
   @Test
-  fun decodePhysical() {
+  fun decode1() {
     val decodedResponse =
       GbfsJson.decodeFromString<GbfsFeedResponse<SystemPricingPlans>>(jsonContent1)
     assertEquals(expectedResponse1, decodedResponse)
   }
 
   @Test
-  fun encodeVirtual() {
+  fun encode2() {
     val expectedJson = Json.decodeFromString<JsonElement>(jsonContent2)
     val encodedJson = GbfsJson.encodeToJsonElement(expectedResponse2)
     assertEquals(expectedJson, encodedJson)
   }
 
   @Test
-  fun decodeVirtual() {
+  fun decode2() {
     val decodedResponse =
       GbfsJson.decodeFromString<GbfsFeedResponse<SystemPricingPlans>>(jsonContent2)
     assertEquals(expectedResponse2, decodedResponse)
@@ -170,8 +170,7 @@ class SystemPricingPlansTest {
 
   @Test
   fun decodeStringPrice() {
-    // In GBFS v1, price can be a string or a number
-
+    // In GBFS v2, price can be a string or a number
     val json = // language=json
       """
       {

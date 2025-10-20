@@ -52,7 +52,7 @@ public data class Station(
   /** Identifier of the region where station is located. See system_regions.json. */
   @SerialName("region_id") public val regionId: Id<Region>? = null,
 
-  /** Postal code where the station is located */
+  /** Postal code where the station is located. */
   @SerialName("post_code") public val postalCode: String? = null,
 
   /** Payment methods accepted at this station. */

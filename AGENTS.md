@@ -15,7 +15,7 @@ Kotlin Multiplatform.
       https://raw.githubusercontent.com/google/transit/refs/heads/master/gtfs-realtime/spec/en/reference.md
     - Protocol:
       https://raw.githubusercontent.com/google/transit/refs/heads/master/gtfs-realtime/proto/gtfs-realtime.proto
-- `./gbfs-v1` - (TODO) General Bikeshare Feed Specification (GBFS) v1 client
+- `./gbfs-v1` - General Bikeshare Feed Specification (GBFS) v1 client
     - Reference:
       https://raw.githubusercontent.com/MobilityData/gbfs/refs/tags/v1.1/gbfs.md
 - `./gbfs-v2` - GBFS v2 client

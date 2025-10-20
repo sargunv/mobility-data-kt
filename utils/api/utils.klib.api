@@ -64,6 +64,14 @@ final object dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Instant) // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Instant){}[0]
 }
 
+final object dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer : kotlinx.serialization/KSerializer<kotlin/Boolean> { // dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer|null[0]
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlin/Boolean // dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin/Boolean) // dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.Boolean){}[0]
+}
+
 final object dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer : kotlinx.datetime.serializers/FormattedLocalDateSerializer // dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer|null[0]
 
 final object dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer : kotlinx.serialization/KSerializer<kotlinx.datetime/Month> { // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer|null[0]

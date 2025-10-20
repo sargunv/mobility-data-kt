@@ -94,7 +94,6 @@ class FeedDiscoverySerializerTest {
           FeedType.GbfsManifest to "https://example.com/gbfs.json",
           FeedType.GbfsVersions to "https://example.com/gbfs_versions.json",
           FeedType.SystemInformation to "https://example.com/system_information.json",
-          FeedType.VehicleTypes to "https://example.com/vehicle_types.json",
         )
       )
 

@@ -19,7 +19,7 @@ private val jsonContent = // language=JSON
           "alerts": [
               {
                   "alert_id": "21",
-                  "type": "station_closure",
+                  "type": "STATION_CLOSURE",
                   "station_ids": ["123", "456", "789"],
                   "times": [
                       {
