@@ -269,22 +269,22 @@ final class dev.sargunv.mobilitydata.gofs.v1/BookingRules : dev.sargunv.mobility
 }
 
 final class dev.sargunv.mobilitydata.gofs.v1/Brand { // dev.sargunv.mobilitydata.gofs.v1/Brand|null[0]
-    constructor <init>(kotlin/String, kotlin/String, dev.sargunv.mobilitydata.utils/RgbColor, dev.sargunv.mobilitydata.utils/RgbColor) // dev.sargunv.mobilitydata.gofs.v1/Brand.<init>|<init>(kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.RgbColor;dev.sargunv.mobilitydata.utils.RgbColor){}[0]
+    constructor <init>(kotlin/String, kotlin/String, dev.sargunv.mobilitydata.utils/RgbColor? = ..., dev.sargunv.mobilitydata.utils/RgbColor? = ...) // dev.sargunv.mobilitydata.gofs.v1/Brand.<init>|<init>(kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.RgbColor?;dev.sargunv.mobilitydata.utils.RgbColor?){}[0]
 
     final val brandColor // dev.sargunv.mobilitydata.gofs.v1/Brand.brandColor|{}brandColor[0]
-        final fun <get-brandColor>(): dev.sargunv.mobilitydata.utils/RgbColor // dev.sargunv.mobilitydata.gofs.v1/Brand.brandColor.<get-brandColor>|<get-brandColor>(){}[0]
+        final fun <get-brandColor>(): dev.sargunv.mobilitydata.utils/RgbColor? // dev.sargunv.mobilitydata.gofs.v1/Brand.brandColor.<get-brandColor>|<get-brandColor>(){}[0]
     final val brandId // dev.sargunv.mobilitydata.gofs.v1/Brand.brandId|{}brandId[0]
         final fun <get-brandId>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Brand.brandId.<get-brandId>|<get-brandId>(){}[0]
     final val brandName // dev.sargunv.mobilitydata.gofs.v1/Brand.brandName|{}brandName[0]
         final fun <get-brandName>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Brand.brandName.<get-brandName>|<get-brandName>(){}[0]
     final val brandTextColor // dev.sargunv.mobilitydata.gofs.v1/Brand.brandTextColor|{}brandTextColor[0]
-        final fun <get-brandTextColor>(): dev.sargunv.mobilitydata.utils/RgbColor // dev.sargunv.mobilitydata.gofs.v1/Brand.brandTextColor.<get-brandTextColor>|<get-brandTextColor>(){}[0]
+        final fun <get-brandTextColor>(): dev.sargunv.mobilitydata.utils/RgbColor? // dev.sargunv.mobilitydata.gofs.v1/Brand.brandTextColor.<get-brandTextColor>|<get-brandTextColor>(){}[0]
 
     final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Brand.component1|component1(){}[0]
     final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Brand.component2|component2(){}[0]
-    final fun component3(): dev.sargunv.mobilitydata.utils/RgbColor // dev.sargunv.mobilitydata.gofs.v1/Brand.component3|component3(){}[0]
-    final fun component4(): dev.sargunv.mobilitydata.utils/RgbColor // dev.sargunv.mobilitydata.gofs.v1/Brand.component4|component4(){}[0]
-    final fun copy(kotlin/String = ..., kotlin/String = ..., dev.sargunv.mobilitydata.utils/RgbColor = ..., dev.sargunv.mobilitydata.utils/RgbColor = ...): dev.sargunv.mobilitydata.gofs.v1/Brand // dev.sargunv.mobilitydata.gofs.v1/Brand.copy|copy(kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.RgbColor;dev.sargunv.mobilitydata.utils.RgbColor){}[0]
+    final fun component3(): dev.sargunv.mobilitydata.utils/RgbColor? // dev.sargunv.mobilitydata.gofs.v1/Brand.component3|component3(){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.utils/RgbColor? // dev.sargunv.mobilitydata.gofs.v1/Brand.component4|component4(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ..., dev.sargunv.mobilitydata.utils/RgbColor? = ..., dev.sargunv.mobilitydata.utils/RgbColor? = ...): dev.sargunv.mobilitydata.gofs.v1/Brand // dev.sargunv.mobilitydata.gofs.v1/Brand.copy|copy(kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.RgbColor?;dev.sargunv.mobilitydata.utils.RgbColor?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/Brand.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/Brand.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Brand.toString|toString(){}[0]
@@ -387,12 +387,12 @@ final class dev.sargunv.mobilitydata.gofs.v1/Calendars : dev.sargunv.mobilitydat
 }
 
 final class dev.sargunv.mobilitydata.gofs.v1/Fare { // dev.sargunv.mobilitydata.gofs.v1/Fare|null[0]
-    constructor <init>(kotlin/String, kotlin/String? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ...) // dev.sargunv.mobilitydata.gofs.v1/Fare.<init>|<init>(kotlin.String;kotlin.String?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?){}[0]
+    constructor <init>(kotlin/String, kotlin/String, kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ...) // dev.sargunv.mobilitydata.gofs.v1/Fare.<init>|<init>(kotlin.String;kotlin.String;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?){}[0]
 
     final val activeMinute // dev.sargunv.mobilitydata.gofs.v1/Fare.activeMinute|{}activeMinute[0]
         final fun <get-activeMinute>(): kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? // dev.sargunv.mobilitydata.gofs.v1/Fare.activeMinute.<get-activeMinute>|<get-activeMinute>(){}[0]
     final val currency // dev.sargunv.mobilitydata.gofs.v1/Fare.currency|{}currency[0]
-        final fun <get-currency>(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/Fare.currency.<get-currency>|<get-currency>(){}[0]
+        final fun <get-currency>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Fare.currency.<get-currency>|<get-currency>(){}[0]
     final val fareId // dev.sargunv.mobilitydata.gofs.v1/Fare.fareId|{}fareId[0]
         final fun <get-fareId>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Fare.fareId.<get-fareId>|<get-fareId>(){}[0]
     final val idleMinute // dev.sargunv.mobilitydata.gofs.v1/Fare.idleMinute|{}idleMinute[0]
@@ -407,14 +407,14 @@ final class dev.sargunv.mobilitydata.gofs.v1/Fare { // dev.sargunv.mobilitydata.
         final fun <get-rider>(): kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? // dev.sargunv.mobilitydata.gofs.v1/Fare.rider.<get-rider>|<get-rider>(){}[0]
 
     final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Fare.component1|component1(){}[0]
-    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/Fare.component2|component2(){}[0]
+    final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Fare.component2|component2(){}[0]
     final fun component3(): kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? // dev.sargunv.mobilitydata.gofs.v1/Fare.component3|component3(){}[0]
     final fun component4(): kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? // dev.sargunv.mobilitydata.gofs.v1/Fare.component4|component4(){}[0]
     final fun component5(): kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? // dev.sargunv.mobilitydata.gofs.v1/Fare.component5|component5(){}[0]
     final fun component6(): kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? // dev.sargunv.mobilitydata.gofs.v1/Fare.component6|component6(){}[0]
     final fun component7(): kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? // dev.sargunv.mobilitydata.gofs.v1/Fare.component7|component7(){}[0]
     final fun component8(): kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? // dev.sargunv.mobilitydata.gofs.v1/Fare.component8|component8(){}[0]
-    final fun copy(kotlin/String = ..., kotlin/String? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ...): dev.sargunv.mobilitydata.gofs.v1/Fare // dev.sargunv.mobilitydata.gofs.v1/Fare.copy|copy(kotlin.String;kotlin.String?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gofs.v1/FareEntry>? = ...): dev.sargunv.mobilitydata.gofs.v1/Fare // dev.sargunv.mobilitydata.gofs.v1/Fare.copy|copy(kotlin.String;kotlin.String;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?;kotlin.collections.List<dev.sargunv.mobilitydata.gofs.v1.FareEntry>?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/Fare.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/Fare.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/Fare.toString|toString(){}[0]
@@ -514,7 +514,7 @@ final class dev.sargunv.mobilitydata.gofs.v1/Fares : dev.sargunv.mobilitydata.go
 }
 
 final class dev.sargunv.mobilitydata.gofs.v1/OperatingRule { // dev.sargunv.mobilitydata.gofs.v1/OperatingRule|null[0]
-    constructor <init>(kotlin/String, kotlin/String, dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin.collections/List<kotlin/String>, kotlin/String? = ..., kotlin.collections/List<kotlin/String>? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.<init>|<init>(kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.collections.List<kotlin.String>;kotlin.String?;kotlin.collections.List<kotlin.String>?;kotlin.String?){}[0]
+    constructor <init>(kotlin/String, kotlin/String, dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin.collections/List<kotlin/String>, kotlin/String? = ..., kotlin.collections/List<kotlin/String>, kotlin/String? = ...) // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.<init>|<init>(kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.collections.List<kotlin.String>;kotlin.String?;kotlin.collections.List<kotlin.String>;kotlin.String?){}[0]
 
     final val brandId // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.brandId|{}brandId[0]
         final fun <get-brandId>(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.brandId.<get-brandId>|<get-brandId>(){}[0]
@@ -533,7 +533,7 @@ final class dev.sargunv.mobilitydata.gofs.v1/OperatingRule { // dev.sargunv.mobi
     final val toZoneId // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.toZoneId|{}toZoneId[0]
         final fun <get-toZoneId>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.toZoneId.<get-toZoneId>|<get-toZoneId>(){}[0]
     final val vehicleTypeIds // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.vehicleTypeIds|{}vehicleTypeIds[0]
-        final fun <get-vehicleTypeIds>(): kotlin.collections/List<kotlin/String>? // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.vehicleTypeIds.<get-vehicleTypeIds>|<get-vehicleTypeIds>(){}[0]
+        final fun <get-vehicleTypeIds>(): kotlin.collections/List<kotlin/String> // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.vehicleTypeIds.<get-vehicleTypeIds>|<get-vehicleTypeIds>(){}[0]
 
     final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.component1|component1(){}[0]
     final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.component2|component2(){}[0]
@@ -542,9 +542,9 @@ final class dev.sargunv.mobilitydata.gofs.v1/OperatingRule { // dev.sargunv.mobi
     final fun component5(): dev.sargunv.mobilitydata.utils/ServiceTime? // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.component5|component5(){}[0]
     final fun component6(): kotlin.collections/List<kotlin/String> // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.component6|component6(){}[0]
     final fun component7(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.component7|component7(){}[0]
-    final fun component8(): kotlin.collections/List<kotlin/String>? // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.component8|component8(){}[0]
+    final fun component8(): kotlin.collections/List<kotlin/String> // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.component8|component8(){}[0]
     final fun component9(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.component9|component9(){}[0]
-    final fun copy(kotlin/String = ..., kotlin/String = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin.collections/List<kotlin/String> = ..., kotlin/String? = ..., kotlin.collections/List<kotlin/String>? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gofs.v1/OperatingRule // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.copy|copy(kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.collections.List<kotlin.String>;kotlin.String?;kotlin.collections.List<kotlin.String>?;kotlin.String?){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin.collections/List<kotlin/String> = ..., kotlin/String? = ..., kotlin.collections/List<kotlin/String> = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gofs.v1/OperatingRule // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.copy|copy(kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.collections.List<kotlin.String>;kotlin.String?;kotlin.collections.List<kotlin.String>;kotlin.String?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/OperatingRule.toString|toString(){}[0]

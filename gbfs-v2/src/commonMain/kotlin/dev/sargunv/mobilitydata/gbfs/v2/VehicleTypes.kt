@@ -79,7 +79,7 @@ public data class VehicleType(
    *
    * Allowed formats: JPEG, PNG.
    */
-  @SerialName("vehicle_image") public val vehicleImage: String? = null,
+  @SerialName("vehicle_image") public val vehicleImage: Url? = null,
 
   /** The name of the vehicle manufacturer. */
   public val make: String? = null,

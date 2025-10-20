@@ -179,18 +179,19 @@ public final class dev/sargunv/mobilitydata/gofs/v1/BookingType$Companion {
 
 public final class dev/sargunv/mobilitydata/gofs/v1/Brand {
 	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/Brand$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
-	public final fun component3-lKPcxAU ()I
-	public final fun component4-lKPcxAU ()I
-	public final fun copy-Ble7uiU (Ljava/lang/String;Ljava/lang/String;II)Ldev/sargunv/mobilitydata/gofs/v1/Brand;
-	public static synthetic fun copy-Ble7uiU$default (Ldev/sargunv/mobilitydata/gofs/v1/Brand;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/Brand;
+	public final fun component3-NhXREWg ()Ldev/sargunv/mobilitydata/utils/RgbColor;
+	public final fun component4-NhXREWg ()Ldev/sargunv/mobilitydata/utils/RgbColor;
+	public final fun copy-fXioMP8 (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;)Ldev/sargunv/mobilitydata/gofs/v1/Brand;
+	public static synthetic fun copy-fXioMP8$default (Ldev/sargunv/mobilitydata/gofs/v1/Brand;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/Brand;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getBrandColor-lKPcxAU ()I
+	public final fun getBrandColor-NhXREWg ()Ldev/sargunv/mobilitydata/utils/RgbColor;
 	public final fun getBrandId ()Ljava/lang/String;
 	public final fun getBrandName ()Ljava/lang/String;
-	public final fun getBrandTextColor-lKPcxAU ()I
+	public final fun getBrandTextColor-NhXREWg ()Ldev/sargunv/mobilitydata/utils/RgbColor;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
