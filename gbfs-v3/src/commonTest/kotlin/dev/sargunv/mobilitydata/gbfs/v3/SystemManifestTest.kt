@@ -1,10 +1,10 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -12,35 +12,21 @@ import kotlinx.serialization.json.encodeToJsonElement
 private val jsonContent = // language=JSON
   """
   {
-      "last_updated": 1640887163,
-      "ttl": 0,
-      "version": "2.3",
-      "data": {
-          "en": {
-              "feeds": [
-                  {
-                      "name": "system_information",
-                      "url": "https://www.example.com/gbfs/1/en/system_information"
-                  },
-                  {
-                      "name": "station_information",
-                      "url": "https://www.example.com/gbfs/1/en/station_information"
-                  }
-              ]
-          },
-          "fr": {
-              "feeds": [
-                  {
-                      "name": "system_information",
-                      "url": "https://www.example.com/gbfs/1/fr/system_information"
-                  },
-                  {
-                      "name": "station_information",
-                      "url": "https://www.example.com/gbfs/1/fr/station_information"
-                  }
-              ]
-          }
-      }
+    "last_updated": "2023-07-17T13:34:13+02:00",
+    "ttl": 0,
+    "version": "3.0",
+    "data": {
+      "feeds": [
+        {
+          "name": "system_information",
+          "url": "https://www.example.com/gbfs/1/system_information"
+        },
+        {
+          "name": "station_information",
+          "url": "https://www.example.com/gbfs/1/station_information"
+        }
+      ]
+    }
   }
   """
     .trimIndent()
@@ -48,21 +34,13 @@ private val jsonContent = // language=JSON
 @OptIn(ExperimentalTime::class)
 private val expectedResponse =
   GbfsFeedResponse(
-    lastUpdated = Instant.fromEpochSeconds(1640887163),
+    lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
     ttl = 0.seconds,
-    version = "2.3",
+    version = "3.0",
     data =
       ServiceManifest(
-        "en" to
-          ServiceManifest(
-            FeedType.SystemInformation to "https://www.example.com/gbfs/1/en/system_information",
-            FeedType.StationInformation to "https://www.example.com/gbfs/1/en/station_information",
-          ),
-        "fr" to
-          ServiceManifest(
-            FeedType.SystemInformation to "https://www.example.com/gbfs/1/fr/system_information",
-            FeedType.StationInformation to "https://www.example.com/gbfs/1/fr/station_information",
-          ),
+        FeedType.SystemInformation to "https://www.example.com/gbfs/1/system_information",
+        FeedType.StationInformation to "https://www.example.com/gbfs/1/station_information",
       ),
   )
 

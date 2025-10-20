@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
+import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
@@ -68,7 +69,7 @@ private val carshareExpectedResponse =
               isDisabled = false,
               vehicleTypeId = "abc123",
               currentRangeMeters = 400000.1,
-              availableUntil = Instant.parse("2021-05-17T15:00:00Z"),
+              availableUntil = Timestamp.parse("2021-05-17T15:00:00Z"),
               homeStationId = "station1",
               vehicleEquipment = listOf(VehicleEquipment.ChildSeatA, VehicleEquipment.WinterTires),
             ),

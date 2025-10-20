@@ -9,6 +9,7 @@ import dev.sargunv.mobilitydata.utils.serialization.MonthNumberSerializer
 import dev.sargunv.mobilitydata.utils.serialization.RgbColorCodeSerializer
 import dev.sargunv.mobilitydata.utils.serialization.RgbColorTripletSerializer
 import dev.sargunv.mobilitydata.utils.serialization.ServiceTimeSerializer
+import dev.sargunv.mobilitydata.utils.serialization.TimestampSerializer
 import dev.sargunv.mobilitydata.utils.serialization.WholeMinutesSerializer
 import dev.sargunv.mobilitydata.utils.serialization.WholeSecondsSerializer
 import kotlin.jvm.JvmInline
@@ -19,8 +20,14 @@ import kotlinx.datetime.DayOfWeek
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.Month
+import kotlinx.datetime.UtcOffset
+import kotlinx.datetime.format.DateTimeComponents
+import kotlinx.datetime.format.DateTimeComponents.Formats.ISO_DATE_TIME_OFFSET
+import kotlinx.datetime.format.DateTimeFormat
+import kotlinx.datetime.format.parse
 import kotlinx.datetime.serializers.LocalDateIso8601Serializer
 import kotlinx.datetime.serializers.LocalTimeIso8601Serializer
+import kotlinx.datetime.toInstant
 import kotlinx.serialization.Serializable
 
 /** A string that identifies that particular entity of type [T]. */
@@ -191,3 +198,22 @@ public typealias LocalizedUrl =
 
 /** Opening hours in the [OSM format](https://wiki.openstreetmap.org/wiki/Key:opening_hours). */
 public typealias OsmOpeningHours = String
+
+@ExperimentalTime
+@Serializable(with = TimestampSerializer::class)
+public data class Timestamp
+internal constructor(public val instant: Instant, public val offset: UtcOffset) :
+  Comparable<Timestamp> {
+  override fun compareTo(other: Timestamp): Int = this.instant.compareTo(other.instant)
+
+  public companion object {
+    public fun parse(
+      input: String,
+      format: DateTimeFormat<DateTimeComponents> = ISO_DATE_TIME_OFFSET,
+    ): Timestamp {
+      val components = DateTimeComponents.parse(input, format)
+      val offset = components.toUtcOffset()
+      return Timestamp(components.toLocalDateTime().toInstant(offset), offset)
+    }
+  }
+}

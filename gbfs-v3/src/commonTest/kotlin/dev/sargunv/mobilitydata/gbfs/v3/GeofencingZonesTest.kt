@@ -1,10 +1,10 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -17,9 +17,9 @@ import org.maplibre.spatialk.geojson.dsl.buildMultiPolygon
 private val jsonContent = // language=JSON
   """
   {
-      "last_updated": 1640887163,
+      "last_updated": "2023-07-17T13:34:13+02:00",
       "ttl": 60,
-      "version": "2.3",
+      "version": "3.0",
       "data": {
           "geofencing_zones": {
               "type": "FeatureCollection",
@@ -50,13 +50,19 @@ private val jsonContent = // language=JSON
                           ]
                       },
                       "properties": {
-                          "name": "NE 24th/NE Knott",
-                          "start": 1593878400,
-                          "end": 1593907260,
+                          "name": [
+                            {
+                              "text": "NE 24th/NE Knott",
+                              "language": "en"
+                            }
+                          ],
+                          "start": "2020-07-04T12:00:00+02:00",
+                          "end": "2020-07-04T20:00:00+02:00",
                           "rules": [
                               {
-                                  "vehicle_type_id": ["moped1", "car1"],
-                                  "ride_allowed": false,
+                                  "vehicle_type_ids": ["moped1", "car1"],
+                                  "ride_start_allowed": false,
+                                  "ride_end_allowed": false,
                                   "ride_through_allowed": true,
                                   "maximum_speed_kph": 10,
                                   "station_parking": true
@@ -65,7 +71,14 @@ private val jsonContent = // language=JSON
                       }
                   }
               ]
-          }
+          },
+          "global_rules": [
+            {
+              "ride_start_allowed": false,
+              "ride_end_allowed": false,
+              "ride_through_allowed": true
+            }
+          ]
       }
   }
   """
@@ -74,9 +87,9 @@ private val jsonContent = // language=JSON
 @OptIn(ExperimentalTime::class)
 private val expectedResponse =
   GbfsFeedResponse(
-    lastUpdated = Instant.fromEpochSeconds(1640887163),
+    lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
     ttl = 60.seconds,
-    version = "2.3",
+    version = "3.0",
     data =
       GeofencingZones(
         geofencingZones =
@@ -105,14 +118,15 @@ private val expectedResponse =
                 },
               properties =
                 GeofencingZone(
-                  name = "NE 24th/NE Knott",
-                  start = Instant.fromEpochSeconds(1593878400),
-                  end = Instant.fromEpochSeconds(1593907260),
+                  name = mapOf("en" to "NE 24th/NE Knott"),
+                  start = Timestamp.parse("2020-07-04T12:00:00+02:00"),
+                  end = Timestamp.parse("2020-07-04T20:00:00+02:00"),
                   rules =
                     listOf(
                       GeofencingZoneRule(
                         vehicleTypeIds = listOf("moped1", "car1"),
-                        rideAllowed = false,
+                        rideStartAllowed = false,
+                        rideEndAllowed = false,
                         rideThroughAllowed = true,
                         maximumSpeedKph = 10,
                         stationParking = true,
@@ -120,7 +134,15 @@ private val expectedResponse =
                     ),
                 ),
             )
-          }
+          },
+        globalRules =
+          listOf(
+            GeofencingZoneRule(
+              rideStartAllowed = false,
+              rideEndAllowed = false,
+              rideThroughAllowed = true,
+            )
+          ),
       ),
   )
 

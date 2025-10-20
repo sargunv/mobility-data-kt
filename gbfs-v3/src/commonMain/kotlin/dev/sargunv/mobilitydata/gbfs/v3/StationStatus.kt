@@ -1,8 +1,8 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.Id
+import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -108,7 +108,7 @@ public data class StationStatusEntry(
   @SerialName("is_returning") public val isReturning: Boolean,
 
   /** The last time this station reported its status to the operator's backend. */
-  @SerialName("last_reported") public val lastReported: Instant,
+  @SerialName("last_reported") public val lastReported: Timestamp,
 )
 
 /** The total number of available vehicles of a specific type at a station. */

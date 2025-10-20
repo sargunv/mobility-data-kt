@@ -1,10 +1,10 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -12,21 +12,21 @@ import kotlinx.serialization.json.encodeToJsonElement
 private val jsonContent = // language=JSON
   """
   {
-      "last_updated": 1640887163,
-      "ttl": 0,
-      "version": "2.3",
-      "data": {
-          "versions": [
-              {
-                  "version": "2.0",
-                  "url": "https://www.example.com/gbfs/2/gbfs"
-              },
-              {
-                  "version": "2.3",
-                  "url": "https://www.example.com/gbfs/3/gbfs"
-              }
-          ]
-      }
+    "last_updated": "2023-07-17T13:34:13+02:00",
+    "ttl": 0,
+    "version": "3.0",
+    "data": {
+      "versions": [
+        {
+          "version": "2.0",
+          "url": "https://www.example.com/gbfs/2/gbfs"
+        },
+        {
+          "version": "3.0",
+          "url": "https://www.example.com/gbfs/3/gbfs"
+        }
+      ]
+    }
   }
   """
     .trimIndent()
@@ -34,15 +34,15 @@ private val jsonContent = // language=JSON
 @OptIn(ExperimentalTime::class)
 private val expectedResponse =
   GbfsFeedResponse(
-    lastUpdated = Instant.fromEpochSeconds(1640887163),
+    lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
     ttl = 0.seconds,
-    version = "2.3",
+    version = "3.0",
     data =
       VersionManifest(
         versions =
           listOf(
             VersionInfo(version = "2.0", url = "https://www.example.com/gbfs/2/gbfs"),
-            VersionInfo(version = "2.3", url = "https://www.example.com/gbfs/3/gbfs"),
+            VersionInfo(version = "3.0", url = "https://www.example.com/gbfs/3/gbfs"),
           )
       ),
   )

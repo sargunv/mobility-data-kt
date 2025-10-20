@@ -5,6 +5,7 @@ package dev.sargunv.mobilitydata.gbfs.v3
 import kotlinx.coroutines.test.runTest
 
 class DocsSnippet {
+
   fun example() = runTest {
     // --8<-- [start:example]
     GbfsV3Client().use { gbfs -> // (1)!

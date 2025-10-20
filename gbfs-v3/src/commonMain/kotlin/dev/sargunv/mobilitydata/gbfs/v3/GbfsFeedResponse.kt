@@ -1,8 +1,8 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import dev.sargunv.mobilitydata.utils.Timestamp
 import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -15,7 +15,7 @@ import kotlinx.serialization.Serializable
 @OptIn(ExperimentalTime::class)
 public data class GbfsFeedResponse<T : GbfsFeedData>(
   /** Timestamp indicating the last time the data in this feed was updated. */
-  @SerialName("last_updated") public val lastUpdated: Instant,
+  @SerialName("last_updated") public val lastUpdated: Timestamp,
 
   /**
    * Number of seconds representing how long before the data in this feed will be updated again.

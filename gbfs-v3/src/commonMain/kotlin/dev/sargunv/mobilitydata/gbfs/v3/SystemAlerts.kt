@@ -3,8 +3,8 @@ package dev.sargunv.mobilitydata.gbfs.v3
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.LocalizedUrl
+import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -65,7 +65,7 @@ public data class Alert(
   public val description: LocalizedText? = null,
 
   /** Indicates the last time the info for the alert was updated. */
-  @SerialName("last_updated") public val lastUpdated: Instant? = null,
+  @SerialName("last_updated") public val lastUpdated: Timestamp? = null,
 )
 
 /** Type of system alert. */
@@ -89,12 +89,12 @@ public enum class AlertType {
 @Serializable
 public data class AlertTime(
   /** Start time of the alert. REQUIRED if times array is defined. */
-  public val start: Instant,
+  public val start: Timestamp,
 
   /**
    * End time of the alert.
    *
    * If there is currently no end time planned for the alert, this can be omitted.
    */
-  public val end: Instant? = null,
+  public val end: Timestamp? = null,
 )

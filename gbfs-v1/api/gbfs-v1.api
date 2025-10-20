@@ -134,7 +134,6 @@ public final class dev/sargunv/mobilitydata/gbfs/v1/FeedType : java/lang/Enum {
 	public static final field SystemCalendar Ldev/sargunv/mobilitydata/gbfs/v1/FeedType;
 	public static final field SystemHours Ldev/sargunv/mobilitydata/gbfs/v1/FeedType;
 	public static final field SystemInformation Ldev/sargunv/mobilitydata/gbfs/v1/FeedType;
-	public static final field SystemManifest Ldev/sargunv/mobilitydata/gbfs/v1/FeedType;
 	public static final field SystemPricingPlans Ldev/sargunv/mobilitydata/gbfs/v1/FeedType;
 	public static final field SystemRegions Ldev/sargunv/mobilitydata/gbfs/v1/FeedType;
 	public static final field VersionManifest Ldev/sargunv/mobilitydata/gbfs/v1/FeedType;

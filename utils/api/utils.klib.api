@@ -6,6 +6,17 @@
 // - Show declarations: true
 
 // Library unique name: <dev.sargunv.mobility-data:utils>
+abstract class <#A: kotlin.collections/Map.Entry<#B, #C>, #B: kotlin/Any?, #C: kotlin/Any?> dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer : kotlinx.serialization/KSerializer<kotlin.collections/Map<#B, #C>> { // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer|null[0]
+    constructor <init>(kotlinx.serialization/KSerializer<#A>) // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer.<init>|<init>(kotlinx.serialization.KSerializer<1:0>){}[0]
+
+    open val descriptor // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer.descriptor|{}descriptor[0]
+        open fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    abstract fun (kotlin.collections/Map.Entry<#B, #C>).toDelegate(): #A // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer.toDelegate|toDelegate@kotlin.collections.Map.Entry<1:1,1:2>(){}[0]
+    open fun deserialize(kotlinx.serialization.encoding/Decoder): kotlin.collections/Map<#B, #C> // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    open fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.collections/Map<#B, #C>) // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.collections.Map<1:1,1:2>){}[0]
+}
+
 final class dev.sargunv.mobilitydata.utils/ServiceTime : kotlin/Comparable<dev.sargunv.mobilitydata.utils/ServiceTime> { // dev.sargunv.mobilitydata.utils/ServiceTime|null[0]
     constructor <init>(kotlin/Int, kotlin/Int, kotlin/Int) // dev.sargunv.mobilitydata.utils/ServiceTime.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.Int){}[0]
 
@@ -28,6 +39,25 @@ final class dev.sargunv.mobilitydata.utils/ServiceTime : kotlin/Comparable<dev.s
 
     final object Companion { // dev.sargunv.mobilitydata.utils/ServiceTime.Companion|null[0]
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/ServiceTime> // dev.sargunv.mobilitydata.utils/ServiceTime.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.utils/Timestamp : kotlin/Comparable<dev.sargunv.mobilitydata.utils/Timestamp> { // dev.sargunv.mobilitydata.utils/Timestamp|null[0]
+    final val instant // dev.sargunv.mobilitydata.utils/Timestamp.instant|{}instant[0]
+        final fun <get-instant>(): kotlin.time/Instant // dev.sargunv.mobilitydata.utils/Timestamp.instant.<get-instant>|<get-instant>(){}[0]
+    final val offset // dev.sargunv.mobilitydata.utils/Timestamp.offset|{}offset[0]
+        final fun <get-offset>(): kotlinx.datetime/UtcOffset // dev.sargunv.mobilitydata.utils/Timestamp.offset.<get-offset>|<get-offset>(){}[0]
+
+    final fun compareTo(dev.sargunv.mobilitydata.utils/Timestamp): kotlin/Int // dev.sargunv.mobilitydata.utils/Timestamp.compareTo|compareTo(dev.sargunv.mobilitydata.utils.Timestamp){}[0]
+    final fun component1(): kotlin.time/Instant // dev.sargunv.mobilitydata.utils/Timestamp.component1|component1(){}[0]
+    final fun component2(): kotlinx.datetime/UtcOffset // dev.sargunv.mobilitydata.utils/Timestamp.component2|component2(){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.utils/Timestamp.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.utils/Timestamp.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.utils/Timestamp.toString|toString(){}[0]
+
+    final object Companion { // dev.sargunv.mobilitydata.utils/Timestamp.Companion|null[0]
+        final fun parse(kotlin/String, kotlinx.datetime.format/DateTimeFormat<kotlinx.datetime.format/DateTimeComponents> = ...): dev.sargunv.mobilitydata.utils/Timestamp // dev.sargunv.mobilitydata.utils/Timestamp.Companion.parse|parse(kotlin.String;kotlinx.datetime.format.DateTimeFormat<kotlinx.datetime.format.DateTimeComponents>){}[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/Timestamp> // dev.sargunv.mobilitydata.utils/Timestamp.Companion.serializer|serializer(){}[0]
     }
 }
 
@@ -74,6 +104,41 @@ final object dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer :
 
 final object dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer : kotlinx.datetime.serializers/FormattedLocalDateSerializer // dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer|null[0]
 
+final object dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer : dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer<dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry, kotlin/String, kotlin/String> { // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer|null[0]
+    final class LocalizedTextEntry : kotlin.collections/Map.Entry<kotlin/String, kotlin/String> { // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry|null[0]
+        constructor <init>(kotlin/String, kotlin/String) // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.<init>|<init>(kotlin.String;kotlin.String){}[0]
+
+        final val key // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.key|{}key[0]
+            final fun <get-key>(): kotlin/String // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.key.<get-key>|<get-key>(){}[0]
+        final val language // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.language|{}language[0]
+            final fun <get-language>(): kotlin/String // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.language.<get-language>|<get-language>(){}[0]
+        final val text // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.text|{}text[0]
+            final fun <get-text>(): kotlin/String // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.text.<get-text>|<get-text>(){}[0]
+        final val value // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.value|{}value[0]
+            final fun <get-value>(): kotlin/String // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.value.<get-value>|<get-value>(){}[0]
+
+        final fun component1(): kotlin/String // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.component1|component1(){}[0]
+        final fun component2(): kotlin/String // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.component2|component2(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ...): dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.copy|copy(kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry> { // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry) // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.utils.serialization.LocalizedTextSerializer.LocalizedTextEntry){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry> // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry.Companion.serializer|serializer(){}[0]
+        }
+    }
+}
+
 final object dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer : kotlinx.serialization/KSerializer<kotlinx.datetime/Month> { // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer|null[0]
     final val descriptor // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.descriptor|{}descriptor[0]
         final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
@@ -104,6 +169,14 @@ final object dev.sargunv.mobilitydata.utils.serialization/ServiceTimeSerializer 
 
     final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.utils.serialization/ServiceTimeSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
     final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.utils/ServiceTime) // dev.sargunv.mobilitydata.utils.serialization/ServiceTimeSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.utils.ServiceTime){}[0]
+}
+
+final object dev.sargunv.mobilitydata.utils.serialization/TimestampSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/Timestamp> { // dev.sargunv.mobilitydata.utils.serialization/TimestampSerializer|null[0]
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/TimestampSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/TimestampSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.utils/Timestamp // dev.sargunv.mobilitydata.utils.serialization/TimestampSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.utils/Timestamp) // dev.sargunv.mobilitydata.utils.serialization/TimestampSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.utils.Timestamp){}[0]
 }
 
 final object dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer : kotlinx.serialization/KSerializer<kotlin.time/Duration> { // dev.sargunv.mobilitydata.utils.serialization/WholeMinutesSerializer|null[0]
