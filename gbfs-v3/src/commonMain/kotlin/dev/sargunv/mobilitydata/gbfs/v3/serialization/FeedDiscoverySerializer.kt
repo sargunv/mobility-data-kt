@@ -1,6 +1,6 @@
-package dev.sargunv.mobilitydata.gbfs.v2.serialization
+package dev.sargunv.mobilitydata.gbfs.v3.serialization
 
-import dev.sargunv.mobilitydata.gbfs.v2.FeedType
+import dev.sargunv.mobilitydata.gbfs.v3.FeedType
 import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.serialization.MapAsListSerializer
 import kotlinx.serialization.Serializable

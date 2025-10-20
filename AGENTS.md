@@ -21,7 +21,7 @@ Kotlin Multiplatform.
 - `./gbfs-v2` - GBFS v2 client
     - Reference:
       https://raw.githubusercontent.com/MobilityData/gbfs/refs/tags/v2.3/gbfs.md
-- `./gbfs-v3` - (TODO) GBFS v3 client
+- `./gbfs-v3` - GBFS v3 client
     - Reference:
       https://raw.githubusercontent.com/MobilityData/gbfs/refs/tags/v3.0/gbfs.md
 - `./gofs-v1` - General On-Demand Feed Specification (GOFS) v1 client

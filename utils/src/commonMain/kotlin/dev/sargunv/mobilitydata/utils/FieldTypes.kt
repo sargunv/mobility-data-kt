@@ -4,6 +4,7 @@ import dev.sargunv.mobilitydata.utils.serialization.AbbreviatedWeekdaySerializer
 import dev.sargunv.mobilitydata.utils.serialization.EpochSecondsSerializer
 import dev.sargunv.mobilitydata.utils.serialization.IntBooleanSerializer
 import dev.sargunv.mobilitydata.utils.serialization.IsoBasicLocalDateSerializer
+import dev.sargunv.mobilitydata.utils.serialization.LocalizedTextSerializer
 import dev.sargunv.mobilitydata.utils.serialization.MonthNumberSerializer
 import dev.sargunv.mobilitydata.utils.serialization.RgbColorCodeSerializer
 import dev.sargunv.mobilitydata.utils.serialization.RgbColorTripletSerializer
@@ -22,14 +23,7 @@ import kotlinx.datetime.serializers.LocalDateIso8601Serializer
 import kotlinx.datetime.serializers.LocalTimeIso8601Serializer
 import kotlinx.serialization.Serializable
 
-/**
- * A string that identifies that particular entity of type [T]. An ID:
- * - MUST be unique within like fields (for example, `Id<Zone>` MUST be unique among zones).
- * - Does not have to be globally unique, unless otherwise specified.
- * - MUST NOT contain spaces.
- * - MUST be persistent for a given entity (zone, station, etc) unless specified otherwise for that
- *   entity.
- */
+/** A string that identifies that particular entity of type [T]. */
 public typealias Id<@Suppress("unused") T> = String
 
 /** Currency code following the [ISO 4217 standard](https://en.wikipedia.org/wiki/ISO_4217). */
@@ -184,4 +178,16 @@ public typealias MonthNumber = @Serializable(with = MonthNumberSerializer::class
 public typealias AbbreviatedWeekday =
   @Serializable(with = AbbreviatedWeekdaySerializer::class) DayOfWeek
 
+/** Boolean value represented as an integer (1 for true, 0 for false). */
 public typealias IntBoolean = @Serializable(with = IntBooleanSerializer::class) Boolean
+
+/** Text localized to multiple languages. */
+public typealias LocalizedText =
+  @Serializable(with = LocalizedTextSerializer::class) Map<LanguageCode, String>
+
+/** [Url] localized to multiple languages. */
+public typealias LocalizedUrl =
+  @Serializable(with = LocalizedTextSerializer::class) Map<LanguageCode, Url>
+
+/** Opening hours in the [OSM format](https://wiki.openstreetmap.org/wiki/Key:opening_hours). */
+public typealias OsmOpeningHours = String

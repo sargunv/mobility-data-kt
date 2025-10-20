@@ -9,4 +9,4 @@ dependencyResolutionManagement { @Suppress("UnstableApiUsage") repositories { ma
 
 rootProject.name = "mobility-data"
 
-include(":utils", ":gbfs-v1", ":gbfs-v2", ":gofs-v1")
+include(":utils", ":gbfs-v1", ":gbfs-v2", ":gbfs-v3", ":gofs-v1")
