@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LocalizedText
+import dev.sargunv.mobilitydata.utils.OsmOpeningHours
 import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -71,7 +72,7 @@ public data class Station(
    * Hours of operation for the station in
    * [OSM opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours) format.
    */
-  @SerialName("station_opening_hours") public val stationOpeningHours: String? = null,
+  @SerialName("station_opening_hours") public val stationOpeningHours: OsmOpeningHours? = null,
 
   /** Payment methods accepted at this station. */
   @SerialName("rental_methods") public val rentalMethods: List<RentalMethod>? = null,
