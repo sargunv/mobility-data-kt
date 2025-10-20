@@ -51,14 +51,15 @@ Ktor, so also add a Ktor engine:
     dependencies {
         implementation("dev.sargunv.mobility-data:gbfs-v1:{{ gradle.project_version }}")
         implementation("io.ktor:ktor-client-cio:{{ gradle.ktor_version }}") // or another engine
-    }    ```
+    }
+    ```
 
 ## Example
 
 === "GBFS v3.0"
 
     ```kotlin
-    --8<-- "gbfs-v2/src/ktorTest/kotlin/dev/sargunv/mobilitydata/gbfs/v3/DocsSnippet.kt:example"
+    --8<-- "gbfs-v3/src/ktorTest/kotlin/dev/sargunv/mobilitydata/gbfs/v3/DocsSnippet.kt:example"
     ```
 
     1. Create a GBFS client instance. The client implements `AutoCloseable` so it
@@ -94,7 +95,7 @@ Ktor, so also add a Ktor engine:
 === "GBFS v1.1"
 
     ```kotlin
-    --8<-- "gbfs-v2/src/ktorTest/kotlin/dev/sargunv/mobilitydata/gbfs/v1/DocsSnippet.kt:example"
+    --8<-- "gbfs-v1/src/ktorTest/kotlin/dev/sargunv/mobilitydata/gbfs/v1/DocsSnippet.kt:example"
     ```
 
     1. Create a GBFS client instance. The client implements `AutoCloseable` so it

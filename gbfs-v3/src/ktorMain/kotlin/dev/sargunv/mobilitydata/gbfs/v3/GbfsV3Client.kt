@@ -50,13 +50,22 @@ public class GbfsV3Client internal constructor(private val httpClient: HttpClien
   internal suspend inline fun <reified T : GbfsFeedData> getFeedResponse(url: Url) =
     httpClient.get(url).body<GbfsFeedResponse<T>>()
 
+  /**
+   * Fetches the dataset manifest from the given URL.
+   *
+   * The manifest contains information about all GBFS datasets published by a provider, including
+   * their system IDs and available versions.
+   *
+   * @param manifestUrl The URL of the manifest.json file
+   * @return The manifest response containing dataset information
+   */
   public suspend fun getDatasetManifest(manifestUrl: Url): GbfsFeedResponse<DatasetManifest> =
     getFeedResponse(manifestUrl)
 
   /**
    * Fetches the GBFS manifest (auto-discovery file) from the given URL.
    *
-   * The manifest contains URLs for all available feeds in all supported languages.
+   * The manifest contains URLs for all available feeds.
    *
    * @param discoveryUrl The URL of the gbfs.json auto-discovery file
    * @return The manifest response containing available feeds

@@ -14,6 +14,12 @@ public data class DatasetManifest(
   public val datasets: List<Dataset>
 ) : GbfsFeedData, List<Dataset> by datasets
 
+/**
+ * Represents a GBFS dataset published by a provider.
+ *
+ * Each dataset corresponds to a distinct system or geographic area in which vehicles are operated,
+ * identified by its system ID and available in multiple GBFS versions.
+ */
 @Serializable
 public data class Dataset(
   /** The system_id from system_information.json for the corresponding data set(s). */

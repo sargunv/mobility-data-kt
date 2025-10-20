@@ -32,7 +32,7 @@ public data class SystemInformation(
   /** Name of the system to be displayed to customers. */
   public val name: LocalizedText,
 
-  /** Hours and dates of operation for the system */
+  /** Hours and dates of operation for the system. */
   @SerialName("opening_hours") public val openingHours: OsmOpeningHours,
 
   /** Abbreviation for the system. */

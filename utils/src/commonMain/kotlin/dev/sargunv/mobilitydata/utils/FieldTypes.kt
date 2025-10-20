@@ -199,14 +199,34 @@ public typealias LocalizedUrl =
 /** Opening hours in the [OSM format](https://wiki.openstreetmap.org/wiki/Key:opening_hours). */
 public typealias OsmOpeningHours = String
 
+/**
+ * Timestamp fields represented as strings in
+ * [RFC3339 format](https://www.rfc-editor.org/rfc/rfc3339).
+ *
+ * This type combines an instant in time with its UTC offset, allowing for proper serialization and
+ * deserialization of timestamp values that include timezone information.
+ */
 @ExperimentalTime
 @Serializable(with = TimestampSerializer::class)
 public data class Timestamp
-internal constructor(public val instant: Instant, public val offset: UtcOffset) :
-  Comparable<Timestamp> {
+internal constructor(
+  /** The instant in time represented by this timestamp. */
+  public val instant: Instant,
+  /** The UTC offset from UTC for this timestamp. */
+  public val offset: UtcOffset,
+) : Comparable<Timestamp> {
   override fun compareTo(other: Timestamp): Int = this.instant.compareTo(other.instant)
 
+  /** Companion object providing factory methods for [Timestamp]. */
   public companion object {
+    /**
+     * Parses a timestamp string into a [Timestamp] instance.
+     *
+     * @param input The timestamp string to parse
+     * @param format The datetime format to use for parsing (defaults to ISO date-time offset
+     *   format)
+     * @return A [Timestamp] instance representing the parsed input
+     */
     public fun parse(
       input: String,
       format: DateTimeFormat<DateTimeComponents> = ISO_DATE_TIME_OFFSET,
