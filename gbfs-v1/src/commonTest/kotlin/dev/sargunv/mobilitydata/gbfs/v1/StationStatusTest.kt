@@ -19,65 +19,25 @@ private val jsonContent = // language=JSON
           "stations": [
               {
                   "station_id": "station1",
-                  "is_installed": true,
-                  "is_renting": true,
-                  "is_returning": true,
+                  "is_installed": 1,
+                  "is_renting": 1,
+                  "is_returning": 1,
                   "last_reported": 1609866125,
                   "num_docks_available": 3,
                   "num_docks_disabled": 1,
-                  "vehicle_docks_available": [
-                      {
-                          "vehicle_type_ids": ["abc123", "def456"],
-                          "count": 2
-                      },
-                      {
-                          "vehicle_type_ids": ["def456"],
-                          "count": 1
-                      }
-                  ],
                   "num_bikes_available": 1,
-                  "num_bikes_disabled": 2,
-                  "vehicle_types_available": [
-                      {
-                          "vehicle_type_id": "abc123",
-                          "count": 1
-                      },
-                      {
-                          "vehicle_type_id": "def456",
-                          "count": 0
-                      }
-                  ]
+                  "num_bikes_disabled": 2
               },
               {
                   "station_id": "station2",
-                  "is_installed": true,
-                  "is_renting": true,
-                  "is_returning": true,
+                  "is_installed": 1,
+                  "is_renting": 1,
+                  "is_returning": 1,
                   "last_reported": 1609866106,
                   "num_docks_available": 8,
                   "num_docks_disabled": 1,
-                  "vehicle_docks_available": [
-                      {
-                          "vehicle_type_ids": ["abc123"],
-                          "count": 6
-                      },
-                      {
-                          "vehicle_type_ids": ["def456"],
-                          "count": 2
-                      }
-                  ],
                   "num_bikes_available": 6,
-                  "num_bikes_disabled": 1,
-                  "vehicle_types_available": [
-                      {
-                          "vehicle_type_id": "abc123",
-                          "count": 2
-                      },
-                      {
-                          "vehicle_type_id": "def456",
-                          "count": 4
-                      }
-                  ]
+                  "num_bikes_disabled": 1
               }
           ]
       }
@@ -103,18 +63,8 @@ private val expectedResponse =
               lastReported = Instant.fromEpochSeconds(1609866125),
               numDocksAvailable = 3,
               numDocksDisabled = 1,
-              vehicleDocksAvailable =
-                listOf(
-                  VehicleDockAvailability(vehicleTypeIds = listOf("abc123", "def456"), count = 2),
-                  VehicleDockAvailability(vehicleTypeIds = listOf("def456"), count = 1),
-                ),
               numBikesAvailable = 1,
               numBikesDisabled = 2,
-              vehicleTypesAvailable =
-                listOf(
-                  VehicleTypeAvailability(vehicleTypeId = "abc123", count = 1),
-                  VehicleTypeAvailability(vehicleTypeId = "def456", count = 0),
-                ),
             ),
             StationStatusEntry(
               stationId = "station2",
@@ -124,18 +74,8 @@ private val expectedResponse =
               lastReported = Instant.fromEpochSeconds(1609866106),
               numDocksAvailable = 8,
               numDocksDisabled = 1,
-              vehicleDocksAvailable =
-                listOf(
-                  VehicleDockAvailability(vehicleTypeIds = listOf("abc123"), count = 6),
-                  VehicleDockAvailability(vehicleTypeIds = listOf("def456"), count = 2),
-                ),
               numBikesAvailable = 6,
               numBikesDisabled = 1,
-              vehicleTypesAvailable =
-                listOf(
-                  VehicleTypeAvailability(vehicleTypeId = "abc123", count = 2),
-                  VehicleTypeAvailability(vehicleTypeId = "def456", count = 4),
-                ),
             ),
           )
       ),

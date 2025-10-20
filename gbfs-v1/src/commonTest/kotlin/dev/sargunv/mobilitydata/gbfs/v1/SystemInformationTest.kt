@@ -31,10 +31,6 @@ private val jsonContent = // language=JSON
           "feed_contact_email": "datafeed@example.com",
           "timezone": "America/Chicago",
           "license_url": "https://www.example.com/data-license.html",
-          "terms_url": "https://www.example.com/terms",
-          "terms_last_updated": "2021-06-21",
-          "privacy_url": "https://www.example.com/privacy-policy",
-          "privacy_last_updated": "2019-01-13",
           "rental_apps": {
               "android": {
                   "discovery_uri": "com.example.android://",
@@ -44,13 +40,6 @@ private val jsonContent = // language=JSON
                   "store_uri": "https://apps.apple.com/app/apple-store/id123456789",
                   "discovery_uri": "com.example.ios://"
               }
-          },
-          "brand_assets": {
-              "brand_last_modified": "2021-06-15",
-              "brand_image_url": "https://www.example.com/assets/brand_image.svg",
-              "brand_image_url_dark": "https://www.example.com/assets/brand_image_dark.svg",
-              "color": "#C2D32C",
-              "brand_terms_url": "https://www.example.com/assets/brand.pdf"
           }
       }
   }
@@ -78,10 +67,6 @@ private val expectedResponse =
         feedContactEmail = "datafeed@example.com",
         timezone = TimeZone.of("America/Chicago"),
         licenseUrl = "https://www.example.com/data-license.html",
-        termsUrl = "https://www.example.com/terms",
-        termsLastUpdated = LocalDate(2021, 6, 21),
-        privacyUrl = "https://www.example.com/privacy-policy",
-        privacyLastUpdated = LocalDate(2019, 1, 13),
         rentalApps =
           RentalAppUris(
             android =
@@ -94,14 +79,6 @@ private val expectedResponse =
                 storeUri = "https://apps.apple.com/app/apple-store/id123456789",
                 discoveryUri = "com.example.ios://",
               ),
-          ),
-        brandAssets =
-          BrandAssets(
-            brandLastModified = LocalDate(2021, 6, 15),
-            brandImageUrl = "https://www.example.com/assets/brand_image.svg",
-            brandImageUrlDark = "https://www.example.com/assets/brand_image_dark.svg",
-            color = "#C2D32C",
-            brandTermsUrl = "https://www.example.com/assets/brand.pdf",
           ),
       ),
   )

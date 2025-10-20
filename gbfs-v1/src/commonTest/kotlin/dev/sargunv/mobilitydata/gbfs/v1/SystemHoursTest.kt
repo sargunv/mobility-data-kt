@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v1
 
+import dev.sargunv.mobilitydata.utils.toServiceTime
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
@@ -56,14 +57,14 @@ private val expectedResponse =
             SystemHoursEntry(
               userTypes = listOf(UserType.Member),
               days = listOf(DayOfWeek.SATURDAY, DayOfWeek.SUNDAY),
-              startTime = LocalTime(0, 0, 0),
-              endTime = LocalTime(23, 59, 59),
+              startTime = LocalTime(0, 0, 0).toServiceTime(),
+              endTime = LocalTime(23, 59, 59).toServiceTime(),
             ),
             SystemHoursEntry(
               userTypes = listOf(UserType.NonMember),
               days = listOf(DayOfWeek.SATURDAY, DayOfWeek.SUNDAY),
-              startTime = LocalTime(5, 0, 0),
-              endTime = LocalTime(23, 59, 59),
+              startTime = LocalTime(5, 0, 0).toServiceTime(),
+              endTime = LocalTime(23, 59, 59).toServiceTime(),
             ),
             SystemHoursEntry(
               userTypes = listOf(UserType.Member, UserType.NonMember),
@@ -75,8 +76,8 @@ private val expectedResponse =
                   DayOfWeek.THURSDAY,
                   DayOfWeek.FRIDAY,
                 ),
-              startTime = LocalTime(0, 0, 0),
-              endTime = LocalTime(23, 59, 59),
+              startTime = LocalTime(0, 0, 0).toServiceTime(),
+              endTime = LocalTime(23, 59, 59).toServiceTime(),
             ),
           )
       ),

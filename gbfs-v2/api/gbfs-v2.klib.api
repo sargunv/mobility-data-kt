@@ -961,16 +961,28 @@ final class dev.sargunv.mobilitydata.gbfs.v2/Station { // dev.sargunv.mobilityda
     }
 }
 
-final class dev.sargunv.mobilitydata.gbfs.v2/StationInformation : dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedData { // dev.sargunv.mobilitydata.gbfs.v2/StationInformation|null[0]
+final class dev.sargunv.mobilitydata.gbfs.v2/StationInformation : dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedData, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/Station> { // dev.sargunv.mobilitydata.gbfs.v2/StationInformation|null[0]
     constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/Station>) // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v2.Station>){}[0]
 
+    final val size // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.size|{}size[0]
+        final fun <get-size>(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.size.<get-size>|<get-size>(){}[0]
     final val stations // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.stations|{}stations[0]
         final fun <get-stations>(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/Station> // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.stations.<get-stations>|<get-stations>(){}[0]
 
     final fun component1(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/Station> // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.component1|component1(){}[0]
+    final fun contains(dev.sargunv.mobilitydata.gbfs.v2/Station): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.contains|contains(dev.sargunv.mobilitydata.gbfs.v2.Station){}[0]
+    final fun containsAll(kotlin.collections/Collection<dev.sargunv.mobilitydata.gbfs.v2/Station>): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.containsAll|containsAll(kotlin.collections.Collection<dev.sargunv.mobilitydata.gbfs.v2.Station>){}[0]
     final fun copy(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/Station> = ...): dev.sargunv.mobilitydata.gbfs.v2/StationInformation // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.copy|copy(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v2.Station>){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.equals|equals(kotlin.Any?){}[0]
+    final fun get(kotlin/Int): dev.sargunv.mobilitydata.gbfs.v2/Station // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.get|get(kotlin.Int){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.hashCode|hashCode(){}[0]
+    final fun indexOf(dev.sargunv.mobilitydata.gbfs.v2/Station): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.indexOf|indexOf(dev.sargunv.mobilitydata.gbfs.v2.Station){}[0]
+    final fun isEmpty(): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.isEmpty|isEmpty(){}[0]
+    final fun iterator(): kotlin.collections/Iterator<dev.sargunv.mobilitydata.gbfs.v2/Station> // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.iterator|iterator(){}[0]
+    final fun lastIndexOf(dev.sargunv.mobilitydata.gbfs.v2/Station): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.lastIndexOf|lastIndexOf(dev.sargunv.mobilitydata.gbfs.v2.Station){}[0]
+    final fun listIterator(): kotlin.collections/ListIterator<dev.sargunv.mobilitydata.gbfs.v2/Station> // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.listIterator|listIterator(){}[0]
+    final fun listIterator(kotlin/Int): kotlin.collections/ListIterator<dev.sargunv.mobilitydata.gbfs.v2/Station> // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.listIterator|listIterator(kotlin.Int){}[0]
+    final fun subList(kotlin/Int, kotlin/Int): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/Station> // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.subList|subList(kotlin.Int;kotlin.Int){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.toString|toString(){}[0]
 
     final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v2/StationInformation> { // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.$serializer|null[0]
@@ -987,6 +999,9 @@ final class dev.sargunv.mobilitydata.gbfs.v2/StationInformation : dev.sargunv.mo
 
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v2/StationInformation> // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.Companion.serializer|serializer(){}[0]
     }
+
+    // Targets: [js]
+    final fun asJsReadonlyArrayView(): kotlin.js.collections/JsReadonlyArray<dev.sargunv.mobilitydata.gbfs.v2/Station> // dev.sargunv.mobilitydata.gbfs.v2/StationInformation.asJsReadonlyArrayView|asJsReadonlyArrayView(){}[0]
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v2/StationStatus : dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedData, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/StationStatusEntry> { // dev.sargunv.mobilitydata.gbfs.v2/StationStatus|null[0]
@@ -1246,22 +1261,22 @@ final class dev.sargunv.mobilitydata.gbfs.v2/SystemHours : dev.sargunv.mobilityd
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry { // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry|null[0]
-    constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/UserType>, kotlin.collections/List<kotlinx.datetime/DayOfWeek>, kotlinx.datetime/LocalTime, kotlinx.datetime/LocalTime) // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v2.UserType>;kotlin.collections.List<kotlinx.datetime.DayOfWeek>;kotlinx.datetime.LocalTime;kotlinx.datetime.LocalTime){}[0]
+    constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/UserType>, kotlin.collections/List<kotlinx.datetime/DayOfWeek>, dev.sargunv.mobilitydata.utils/ServiceTime, dev.sargunv.mobilitydata.utils/ServiceTime) // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v2.UserType>;kotlin.collections.List<kotlinx.datetime.DayOfWeek>;dev.sargunv.mobilitydata.utils.ServiceTime;dev.sargunv.mobilitydata.utils.ServiceTime){}[0]
 
     final val days // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.days|{}days[0]
         final fun <get-days>(): kotlin.collections/List<kotlinx.datetime/DayOfWeek> // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.days.<get-days>|<get-days>(){}[0]
     final val endTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.endTime|{}endTime[0]
-        final fun <get-endTime>(): kotlinx.datetime/LocalTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.endTime.<get-endTime>|<get-endTime>(){}[0]
+        final fun <get-endTime>(): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.endTime.<get-endTime>|<get-endTime>(){}[0]
     final val startTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.startTime|{}startTime[0]
-        final fun <get-startTime>(): kotlinx.datetime/LocalTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.startTime.<get-startTime>|<get-startTime>(){}[0]
+        final fun <get-startTime>(): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.startTime.<get-startTime>|<get-startTime>(){}[0]
     final val userTypes // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.userTypes|{}userTypes[0]
         final fun <get-userTypes>(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/UserType> // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.userTypes.<get-userTypes>|<get-userTypes>(){}[0]
 
     final fun component1(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/UserType> // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.component1|component1(){}[0]
     final fun component2(): kotlin.collections/List<kotlinx.datetime/DayOfWeek> // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.component2|component2(){}[0]
-    final fun component3(): kotlinx.datetime/LocalTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.component3|component3(){}[0]
-    final fun component4(): kotlinx.datetime/LocalTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.component4|component4(){}[0]
-    final fun copy(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/UserType> = ..., kotlin.collections/List<kotlinx.datetime/DayOfWeek> = ..., kotlinx.datetime/LocalTime = ..., kotlinx.datetime/LocalTime = ...): dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.copy|copy(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v2.UserType>;kotlin.collections.List<kotlinx.datetime.DayOfWeek>;kotlinx.datetime.LocalTime;kotlinx.datetime.LocalTime){}[0]
+    final fun component3(): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.component3|component3(){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.component4|component4(){}[0]
+    final fun copy(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v2/UserType> = ..., kotlin.collections/List<kotlinx.datetime/DayOfWeek> = ..., dev.sargunv.mobilitydata.utils/ServiceTime = ..., dev.sargunv.mobilitydata.utils/ServiceTime = ...): dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.copy|copy(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v2.UserType>;kotlin.collections.List<kotlinx.datetime.DayOfWeek>;dev.sargunv.mobilitydata.utils.ServiceTime;dev.sargunv.mobilitydata.utils.ServiceTime){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v2/SystemHoursEntry.toString|toString(){}[0]

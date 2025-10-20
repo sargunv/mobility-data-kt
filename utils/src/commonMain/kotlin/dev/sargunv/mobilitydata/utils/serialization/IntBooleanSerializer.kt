@@ -6,6 +6,7 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
+/** Serializer that encodes Booleans as integers (1 for true, 0 for false). */
 public object IntBooleanSerializer : KSerializer<Boolean> {
   private val delegate = Int.serializer()
   override val descriptor: SerialDescriptor = delegate.descriptor
