@@ -51,9 +51,6 @@ public data class Service(
  */
 @Serializable
 public enum class FeedType {
-  /** The gbfs.json auto-discovery file. */
-  @SerialName("gbfs") SystemManifest,
-
   /** The gbfs_versions.json file listing available GBFS versions. */
   @SerialName("gbfs_versions") VersionManifest,
 

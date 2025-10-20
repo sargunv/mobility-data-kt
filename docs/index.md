@@ -11,7 +11,7 @@ targets, including JVM, Native, JS, and WASM.
 - (TODO) [GTFS Realtime](./gtfs-realtime.md): A client library for the GTFS
   Realtime format
 - [GBFS](./gbfs.md): A client library for the General Bikeshare Feed
-  Specification (GBFS) v2.3
+  Specification (GBFS)
 - [GOFS](./gofs.md): A client library for the General On-Demand Feed
   Specification (GOFS)
 
