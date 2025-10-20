@@ -19,7 +19,7 @@ bikeshare, scooter-share, and other shared mobility services.
 - Strong type safety, with appropriate standard library or kotlinx-datetime
   types
 - Kotlin Multiplatform support (JVM, Native, JS, WASM)
-- GeoJSON supports using [Spatial-K](https://maplibre.org/spatial-k/geojson/)
+- GeoJSON support using [Spatial-K](https://maplibre.org/spatial-k/geojson/)
 
 ## Installation
 
