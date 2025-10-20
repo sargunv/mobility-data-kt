@@ -16,7 +16,14 @@ kotlin {
   wasmJs {
     browser()
     nodejs()
-    d8()
+    d8 {
+      // D8 tests are disabled because D8 cannot resolve npm dependencies.
+      // kotlinx-datetime requires @js-joda/core and @js-joda/timezone which
+      // are npm packages. D8 is a minimal V8 shell without Node.js module
+      // resolution capabilities. Tests run successfully on wasmJsNode and
+      // wasmJsBrowser targets. See: https://github.com/sargunv/mobility-data-kt/issues/5
+      testTask { enabled = false }
+    }
   }
 
   wasmWasi { nodejs() }
