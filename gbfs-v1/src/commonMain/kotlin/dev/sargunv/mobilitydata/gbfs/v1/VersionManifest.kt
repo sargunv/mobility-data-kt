@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
  * Each expression of a GBFS feed describes all of the versions that are available.
  */
 @Serializable
-public data class Versions(
+public data class VersionManifest(
   /**
    * Contains one object for each of the available versions of a feed.
    *

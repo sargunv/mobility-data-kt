@@ -1,4 +1,4 @@
-package dev.sargunv.mobilitydata.gbfs.v1
+package dev.sargunv.mobilitydata.gbfs.v2
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -52,7 +52,7 @@ private val expectedResponse =
     ttl = 0.seconds,
     version = "2.3",
     data =
-      GbfsManifest(
+      SystemManifest(
         "en" to
           Service(
             FeedType.SystemInformation to "https://www.example.com/gbfs/1/en/system_information",
@@ -66,7 +66,7 @@ private val expectedResponse =
       ),
   )
 
-class ManifestTest {
+class SystemManifestTest {
   @Test
   fun encode() {
     val expectedJson = Json.decodeFromString<JsonElement>(jsonContent)
@@ -76,7 +76,7 @@ class ManifestTest {
 
   @Test
   fun decode() {
-    val decodedResponse = GbfsJson.decodeFromString<GbfsFeedResponse<GbfsManifest>>(jsonContent)
+    val decodedResponse = GbfsJson.decodeFromString<GbfsFeedResponse<SystemManifest>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
   }
 }

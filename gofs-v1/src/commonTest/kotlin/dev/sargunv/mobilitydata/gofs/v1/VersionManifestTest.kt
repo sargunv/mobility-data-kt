@@ -38,7 +38,7 @@ private val expectedResponse =
     ttl = 0.seconds,
     version = "1.0",
     data =
-      GofsVersions(
+      VersionManifest(
         versions =
           listOf(
             VersionInfo(version = "1.0", url = "https://www.example.com/gofs/2/gofs"),
@@ -47,7 +47,7 @@ private val expectedResponse =
       ),
   )
 
-class GofsVersionsTest {
+class VersionManifestTest {
   @Test
   fun encode() {
     val expectedJson = Json.decodeFromString<JsonElement>(jsonContent)
@@ -57,7 +57,7 @@ class GofsVersionsTest {
 
   @Test
   fun decode() {
-    val decodedResponse = GofsJson.decodeFromString<GofsFeedResponse<GofsVersions>>(jsonContent)
+    val decodedResponse = GofsJson.decodeFromString<GofsFeedResponse<VersionManifest>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
   }
 }

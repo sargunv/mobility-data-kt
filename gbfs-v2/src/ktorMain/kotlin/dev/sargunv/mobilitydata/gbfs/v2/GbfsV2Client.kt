@@ -58,7 +58,7 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
    * @param discoveryUrl The URL of the gbfs.json auto-discovery file
    * @return The manifest response containing available feeds
    */
-  public suspend fun getManifest(discoveryUrl: Url): GbfsFeedResponse<GbfsManifest> =
+  public suspend fun getSystemManifest(discoveryUrl: Url): GbfsFeedResponse<SystemManifest> =
     getFeedResponse(discoveryUrl)
 
   /**
@@ -68,8 +68,8 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
    * @return Response containing supported GBFS versions
    */
   context(service: Service)
-  public suspend fun getVersions(): GbfsFeedResponse<Versions> =
-    getFeedResponse(service.feeds.getValue(FeedType.GbfsVersions))
+  public suspend fun getVersionManifest(): GbfsFeedResponse<VersionManifest> =
+    getFeedResponse(service.feeds.getValue(FeedType.VersionManifest))
 
   /**
    * Fetches system information including name, operator, timezone, and contact details.

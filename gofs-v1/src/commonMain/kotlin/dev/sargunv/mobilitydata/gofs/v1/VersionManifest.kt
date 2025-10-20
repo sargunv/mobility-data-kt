@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
  * on-demand service system.
  */
 @Serializable
-public data class GofsVersions(
+public data class VersionManifest(
   /**
    * Contains one object for each of the available versions of a feed. The array must be sorted by
    * increasing version numbers.
