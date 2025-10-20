@@ -46,6 +46,12 @@ kover {
 }
 
 dependencies {
+  dokka(project(":utils"))
+  kover(project(":utils"))
+
+  dokka(project(":gbfs-v1"))
+  kover(project(":gbfs-v1"))
+
   dokka(project(":gbfs-v2"))
   kover(project(":gbfs-v2"))
 

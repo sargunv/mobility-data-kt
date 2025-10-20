@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.utils
 
 import dev.sargunv.mobilitydata.utils.serialization.AbbreviatedWeekdaySerializer
 import dev.sargunv.mobilitydata.utils.serialization.EpochSecondsSerializer
+import dev.sargunv.mobilitydata.utils.serialization.IntBooleanSerializer
 import dev.sargunv.mobilitydata.utils.serialization.IsoBasicLocalDateSerializer
 import dev.sargunv.mobilitydata.utils.serialization.MonthNumberSerializer
 import dev.sargunv.mobilitydata.utils.serialization.RgbColorCodeSerializer
@@ -182,3 +183,5 @@ public typealias MonthNumber = @Serializable(with = MonthNumberSerializer::class
 /** Abbreviated (first 3 letters) English name of a day of the week. */
 public typealias AbbreviatedWeekday =
   @Serializable(with = AbbreviatedWeekdaySerializer::class) DayOfWeek
+
+public typealias IntBoolean = @Serializable(with = IntBooleanSerializer::class) Boolean

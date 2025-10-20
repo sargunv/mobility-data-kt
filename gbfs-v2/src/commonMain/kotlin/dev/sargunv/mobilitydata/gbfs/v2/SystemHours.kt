@@ -1,7 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.utils.AbbreviatedWeekday
-import dev.sargunv.mobilitydata.utils.ExtendedLocalTime
+import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -44,13 +44,13 @@ public data class SystemHoursEntry(
    * Start time for the hours of operation of the system in the time zone indicated in
    * system_information.json.
    */
-  @SerialName("start_time") public val startTime: ExtendedLocalTime,
+  @SerialName("start_time") public val startTime: ServiceTime,
 
   /**
    * End time for the hours of operation of the system in the time zone indicated in
    * system_information.json.
    */
-  @SerialName("end_time") public val endTime: ExtendedLocalTime,
+  @SerialName("end_time") public val endTime: ServiceTime,
 )
 
 /** Type of user (member or non-member). */

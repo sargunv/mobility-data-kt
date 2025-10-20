@@ -9,6 +9,7 @@ bikeshare, scooter-share, and other shared mobility services.
 
 ## Modules
 
+- `gbfs-v1`: Implementation of the GBFS v1.1 specification.
 - `gbfs-v2`: Implementation of the GBFS v2.3 specification.
 - (TODO) `gbfs-v3`: Implementation of the GBFS v3.0 specification.
 
@@ -35,18 +36,20 @@ Ktor, so also add a Ktor engine:
     }
     ```
 
-=== "GBFS v3.0"
+=== "GBFS v1.1"
 
     ```kotlin
-    TODO()
-    ```
+    dependencies {
+        implementation("dev.sargunv.mobility-data:gbfs-v1:{{ gradle.project_version }}")
+        implementation("io.ktor:ktor-client-cio:{{ gradle.ktor_version }}") // or another engine
+    }    ```
 
 ## Example
 
 === "GBFS v2.3"
 
     ```kotlin
-    --8<-- "gbfs-v2/src/ktorTest/kotlin/dev/sargunv/mobilitydata/gbfs/v2/client/DocsSnippet.kt:example"
+    --8<-- "gbfs-v2/src/ktorTest/kotlin/dev/sargunv/mobilitydata/gbfs/v2/DocsSnippet.kt:example"
     ```
 
     1. Create a GBFS client instance. The client implements `AutoCloseable` so it
@@ -61,10 +64,10 @@ Ktor, so also add a Ktor engine:
        propulsion types.
     6. Fetch real-time status of free-floating vehicles including their locations.
 
-=== "GBFS v3.0"
+=== "GBFS v1.1"
 
     ```kotlin
-    TODO()
+    --8<-- "gbfs-v2/src/ktorTest/kotlin/dev/sargunv/mobilitydata/gbfs/v1/DocsSnippet.kt:example"
     ```
 
     1. Create a GBFS client instance. The client implements `AutoCloseable` so it
@@ -75,10 +78,12 @@ Ktor, so also add a Ktor engine:
        [context parameter](https://kotlinlang.org/docs/context-parameters.html) to
        specify which language service to use for subsequent feed requests.
     4. Fetch system information including the system name, operator, and timezone.
-    5. Fetch the list of available vehicle types with their form factors and
-       propulsion types.
+    5. Fetch the list of available stations with their names and capacities.
     6. Fetch real-time status of free-floating vehicles including their locations.
 
 ## API Reference
 
-For detailed API documentation, see the [API Reference](api/gbfs-v2/index.html).
+For detailed API documentation, see the API Reference:
+
+- [GBFS v2.3 API Reference](./api/gbfs-v2/index.html)
+- [GBFS v1.1 API Reference](./api/gbfs-v1/index.html)

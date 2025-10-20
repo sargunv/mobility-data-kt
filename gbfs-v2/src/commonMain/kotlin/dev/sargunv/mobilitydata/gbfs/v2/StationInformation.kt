@@ -16,7 +16,7 @@ import org.maplibre.spatialk.geojson.MultiPolygon
 public data class StationInformation(
   /** Array that contains one object per station. */
   public val stations: List<Station>
-) : GbfsFeedData
+) : GbfsFeedData, List<Station> by stations
 
 /** Information about a single station. */
 @Serializable
