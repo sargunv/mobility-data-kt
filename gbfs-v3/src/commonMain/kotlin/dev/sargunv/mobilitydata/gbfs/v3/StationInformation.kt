@@ -4,6 +4,7 @@ import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.OsmOpeningHours
 import dev.sargunv.mobilitydata.utils.Url
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import org.maplibre.spatialk.geojson.MultiPolygon
@@ -165,49 +166,63 @@ public data class Station(
 
 /** Payment methods accepted at a station. */
 @Serializable
-public enum class RentalMethod {
-  /** Operator issued vehicle key / fob / card. */
-  @SerialName("key") Key,
+@JvmInline
+public value class RentalMethod(
+  /** The string value representing the rental method. */
+  public val value: String
+) {
+  /** Companion object containing predefined rental method constants. */
+  public companion object {
+    /** Operator issued vehicle key / fob / card. */
+    public val Key: RentalMethod = RentalMethod("key")
 
-  /** Credit card payment. */
-  @SerialName("creditcard") CreditCard,
+    /** Credit card payment. */
+    public val CreditCard: RentalMethod = RentalMethod("creditcard")
 
-  /** PayPass payment. */
-  @SerialName("paypass") PayPass,
+    /** PayPass payment. */
+    public val PayPass: RentalMethod = RentalMethod("paypass")
 
-  /** Apple Pay payment. */
-  @SerialName("applepay") ApplePay,
+    /** Apple Pay payment. */
+    public val ApplePay: RentalMethod = RentalMethod("applepay")
 
-  /** Android Pay payment. */
-  @SerialName("androidpay") AndroidPay,
+    /** Android Pay payment. */
+    public val AndroidPay: RentalMethod = RentalMethod("androidpay")
 
-  /** Transit card payment. */
-  @SerialName("transitcard") TransitCard,
+    /** Transit card payment. */
+    public val TransitCard: RentalMethod = RentalMethod("transitcard")
 
-  /** Account number payment. */
-  @SerialName("accountnumber") AccountNumber,
+    /** Account number payment. */
+    public val AccountNumber: RentalMethod = RentalMethod("accountnumber")
 
-  /** Phone payment. */
-  @SerialName("phone") Phone,
+    /** Phone payment. */
+    public val Phone: RentalMethod = RentalMethod("phone")
+  }
 }
 
 /** Type of parking station. */
 @Serializable
-public enum class ParkingType {
-  /** Off-street parking lot. */
-  @SerialName("parking_lot") ParkingLot,
+@JvmInline
+public value class ParkingType(
+  /** The string value representing the parking type. */
+  public val value: String
+) {
+  /** Companion object containing predefined parking type constants. */
+  public companion object {
+    /** Off-street parking lot. */
+    public val ParkingLot: ParkingType = ParkingType("parking_lot")
 
-  /** Curbside parking. */
-  @SerialName("street_parking") StreetParking,
+    /** Curbside parking. */
+    public val StreetParking: ParkingType = ParkingType("street_parking")
 
-  /** Parking that is below street level, station may be non-communicating. */
-  @SerialName("underground_parking") UndergroundParking,
+    /** Parking that is below street level, station may be non-communicating. */
+    public val UndergroundParking: ParkingType = ParkingType("underground_parking")
 
-  /** Park vehicle on sidewalk, out of the pedestrian right of way. */
-  @SerialName("sidewalk_parking") SidewalkParking,
+    /** Park vehicle on sidewalk, out of the pedestrian right of way. */
+    public val SidewalkParking: ParkingType = ParkingType("sidewalk_parking")
 
-  /** Other type of parking. */
-  @SerialName("other") Other,
+    /** Other type of parking. */
+    public val Other: ParkingType = ParkingType("other")
+  }
 }
 
 /** Contains rental URIs for different platforms to support deep linking. */

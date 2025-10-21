@@ -5,6 +5,7 @@ import dev.sargunv.mobilitydata.utils.ExtendedLocalDate
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.WholeMinutes
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -137,60 +138,74 @@ public data class VehicleType(
 
 /** The vehicle's general form factor. */
 @Serializable
-public enum class VehicleFormFactor {
-  /** Standard bicycle. */
-  @SerialName("bicycle") Bicycle,
+@JvmInline
+public value class VehicleFormFactor(
+  /** The string value representing the vehicle form factor. */
+  public val value: String
+) {
+  /** Companion object containing predefined vehicle form factor constants. */
+  public companion object {
+    /** Standard bicycle. */
+    public val Bicycle: VehicleFormFactor = VehicleFormFactor("bicycle")
 
-  /** Cargo bicycle. */
-  @SerialName("cargo_bicycle") CargoBicycle,
+    /** Cargo bicycle. */
+    public val CargoBicycle: VehicleFormFactor = VehicleFormFactor("cargo_bicycle")
 
-  /** Car. */
-  @SerialName("car") Car,
+    /** Car. */
+    public val Car: VehicleFormFactor = VehicleFormFactor("car")
 
-  /** Moped. */
-  @SerialName("moped") Moped,
+    /** Moped. */
+    public val Moped: VehicleFormFactor = VehicleFormFactor("moped")
 
-  /** Scooter (will be deprecated in v3.0). */
-  @SerialName("scooter") Scooter,
+    /** Scooter (will be deprecated in v3.0). */
+    public val Scooter: VehicleFormFactor = VehicleFormFactor("scooter")
 
-  /** Standing kick scooter. */
-  @SerialName("scooter_standing") ScooterStanding,
+    /** Standing kick scooter. */
+    public val ScooterStanding: VehicleFormFactor = VehicleFormFactor("scooter_standing")
 
-  /** Kick scooter with a seat (not to be confused with moped). */
-  @SerialName("scooter_seated") ScooterSeated,
+    /** Kick scooter with a seat (not to be confused with moped). */
+    public val ScooterSeated: VehicleFormFactor = VehicleFormFactor("scooter_seated")
 
-  /** Other type of vehicle. */
-  @SerialName("other") Other,
+    /** Other type of vehicle. */
+    public val Other: VehicleFormFactor = VehicleFormFactor("other")
+  }
 }
 
 /** The primary propulsion type of the vehicle. */
 @Serializable
-public enum class VehiclePropulsionType {
-  /** Pedal or foot propulsion. */
-  @SerialName("human") Human,
+@JvmInline
+public value class VehiclePropulsionType(
+  /** The string value representing the vehicle propulsion type. */
+  public val value: String
+) {
+  /** Companion object containing predefined vehicle propulsion type constants. */
+  public companion object {
+    /** Pedal or foot propulsion. */
+    public val Human: VehiclePropulsionType = VehiclePropulsionType("human")
 
-  /**
-   * Provides electric motor assist only in combination with human propulsion - no throttle mode.
-   */
-  @SerialName("electric_assist") ElectricAssist,
+    /**
+     * Provides electric motor assist only in combination with human propulsion - no throttle mode.
+     */
+    public val ElectricAssist: VehiclePropulsionType = VehiclePropulsionType("electric_assist")
 
-  /** Powered by battery-powered electric motor with throttle mode. */
-  @SerialName("electric") Electric,
+    /** Powered by battery-powered electric motor with throttle mode. */
+    public val Electric: VehiclePropulsionType = VehiclePropulsionType("electric")
 
-  /** Powered by gasoline combustion engine. */
-  @SerialName("combustion") Combustion,
+    /** Powered by gasoline combustion engine. */
+    public val Combustion: VehiclePropulsionType = VehiclePropulsionType("combustion")
 
-  /** Powered by diesel combustion engine. */
-  @SerialName("combustion_diesel") CombustionDiesel,
+    /** Powered by diesel combustion engine. */
+    public val CombustionDiesel: VehiclePropulsionType = VehiclePropulsionType("combustion_diesel")
 
-  /** Powered by combined combustion engine and battery-powered motor. */
-  @SerialName("hybrid") Hybrid,
+    /** Powered by combined combustion engine and battery-powered motor. */
+    public val Hybrid: VehiclePropulsionType = VehiclePropulsionType("hybrid")
 
-  /** Powered by combined combustion engine and battery-powered motor with plug-in charging. */
-  @SerialName("plug_in_hybrid") PlugInHybrid,
+    /** Powered by combined combustion engine and battery-powered motor with plug-in charging. */
+    public val PlugInHybrid: VehiclePropulsionType = VehiclePropulsionType("plug_in_hybrid")
 
-  /** Powered by hydrogen fuel cell powered electric motor. */
-  @SerialName("hydrogen_fuel_cell") HydrogenFuelCell,
+    /** Powered by hydrogen fuel cell powered electric motor. */
+    public val HydrogenFuelCell: VehiclePropulsionType = VehiclePropulsionType("hydrogen_fuel_cell")
+  }
 }
 
 /** Vehicle air quality certificate for a specific country. */
@@ -210,65 +225,81 @@ public data class EcoLabel(
 
 /** Accessories available in the vehicle. */
 @Serializable
-public enum class VehicleAccessory {
-  /** Vehicle has air conditioning. */
-  @SerialName("air_conditioning") AirConditioning,
+@JvmInline
+public value class VehicleAccessory(
+  /** The string value representing the vehicle accessory. */
+  public val value: String
+) {
+  /** Companion object containing predefined vehicle accessory constants. */
+  public companion object {
+    /** Vehicle has air conditioning. */
+    public val AirConditioning: VehicleAccessory = VehicleAccessory("air_conditioning")
 
-  /** Automatic gear switch. */
-  @SerialName("automatic") Automatic,
+    /** Automatic gear switch. */
+    public val Automatic: VehicleAccessory = VehicleAccessory("automatic")
 
-  /** Manual gear switch. */
-  @SerialName("manual") Manual,
+    /** Manual gear switch. */
+    public val Manual: VehicleAccessory = VehicleAccessory("manual")
 
-  /** Vehicle is convertible. */
-  @SerialName("convertible") Convertible,
+    /** Vehicle is convertible. */
+    public val Convertible: VehicleAccessory = VehicleAccessory("convertible")
 
-  /** Vehicle has a cruise control system ("Tempomat"). */
-  @SerialName("cruise_control") CruiseControl,
+    /** Vehicle has a cruise control system ("Tempomat"). */
+    public val CruiseControl: VehicleAccessory = VehicleAccessory("cruise_control")
 
-  /** Vehicle has 2 doors. */
-  @SerialName("doors_2") Doors2,
+    /** Vehicle has 2 doors. */
+    public val Doors2: VehicleAccessory = VehicleAccessory("doors_2")
 
-  /** Vehicle has 3 doors. */
-  @SerialName("doors_3") Doors3,
+    /** Vehicle has 3 doors. */
+    public val Doors3: VehicleAccessory = VehicleAccessory("doors_3")
 
-  /** Vehicle has 4 doors. */
-  @SerialName("doors_4") Doors4,
+    /** Vehicle has 4 doors. */
+    public val Doors4: VehicleAccessory = VehicleAccessory("doors_4")
 
-  /** Vehicle has 5 doors. */
-  @SerialName("doors_5") Doors5,
+    /** Vehicle has 5 doors. */
+    public val Doors5: VehicleAccessory = VehicleAccessory("doors_5")
 
-  /** Vehicle has a built-in navigation system. */
-  @SerialName("navigation") Navigation,
+    /** Vehicle has a built-in navigation system. */
+    public val Navigation: VehicleAccessory = VehicleAccessory("navigation")
+  }
 }
 
 /** The conditions for returning the vehicle at the end of the rental. */
 @Serializable
-public enum class VehicleReturnConstraint {
-  /**
-   * The vehicle can be returned anywhere permitted within the service area.
-   *
-   * Note that this field is subject to rules in geofencing_zones.json if defined.
-   */
-  @SerialName("free_floating") FreeFloating,
+@JvmInline
+public value class VehicleReturnConstraint(
+  /** The string value representing the vehicle return constraint. */
+  public val value: String
+) {
+  /** Companion object containing predefined vehicle return constraint constants. */
+  public companion object {
+    /**
+     * The vehicle can be returned anywhere permitted within the service area.
+     *
+     * Note that this field is subject to rules in geofencing_zones.json if defined.
+     */
+    public val FreeFloating: VehicleReturnConstraint = VehicleReturnConstraint("free_floating")
 
-  /**
-   * The vehicle has to be returned to the same station from which it was initially rented.
-   *
-   * Note that a specific station can be assigned to the vehicle in free_bike_status.json using
-   * home_station.
-   */
-  @SerialName("roundtrip_station") RoundtripStation,
+    /**
+     * The vehicle has to be returned to the same station from which it was initially rented.
+     *
+     * Note that a specific station can be assigned to the vehicle in free_bike_status.json using
+     * home_station.
+     */
+    public val RoundtripStation: VehicleReturnConstraint =
+      VehicleReturnConstraint("roundtrip_station")
 
-  /** The vehicle has to be returned to any station within the service area. */
-  @SerialName("any_station") AnyStation,
+    /** The vehicle has to be returned to any station within the service area. */
+    public val AnyStation: VehicleReturnConstraint = VehicleReturnConstraint("any_station")
 
-  /**
-   * The vehicle can be returned to any station, or anywhere else permitted within the service area.
-   *
-   * Note that the vehicle is subject to rules in geofencing_zones.json if defined.
-   */
-  @SerialName("hybrid") Hybrid,
+    /**
+     * The vehicle can be returned to any station, or anywhere else permitted within the service
+     * area.
+     *
+     * Note that the vehicle is subject to rules in geofencing_zones.json if defined.
+     */
+    public val Hybrid: VehicleReturnConstraint = VehicleReturnConstraint("hybrid")
+  }
 }
 
 /** Icon images and metadata for representing a vehicle type. */

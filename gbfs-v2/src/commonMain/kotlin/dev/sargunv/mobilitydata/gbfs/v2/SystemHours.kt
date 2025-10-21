@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.utils.AbbreviatedWeekday
 import dev.sargunv.mobilitydata.utils.ServiceTime
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -55,10 +56,17 @@ public data class SystemHoursEntry(
 
 /** Type of user (member or non-member). */
 @Serializable
-public enum class UserType {
-  /** Member user type. */
-  @SerialName("member") Member,
+@JvmInline
+public value class UserType(
+  /** The string value representing the user type. */
+  public val value: String
+) {
+  /** Companion object containing predefined user type constants. */
+  public companion object {
+    /** Member user type. */
+    public val Member: UserType = UserType("member")
 
-  /** Non-member user type. */
-  @SerialName("nonmember") NonMember,
+    /** Non-member user type. */
+    public val NonMember: UserType = UserType("nonmember")
+  }
 }

@@ -7,62 +7,6 @@
 // - Show declarations: true
 
 // Library unique name: <dev.sargunv.mobility-data:gbfs-v1>
-final enum class dev.sargunv.mobilitydata.gbfs.v1/AlertType : kotlin/Enum<dev.sargunv.mobilitydata.gbfs.v1/AlertType> { // dev.sargunv.mobilitydata.gbfs.v1/AlertType|null[0]
-    enum entry Other // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Other|null[0]
-    enum entry StationClosure // dev.sargunv.mobilitydata.gbfs.v1/AlertType.StationClosure|null[0]
-    enum entry StationMove // dev.sargunv.mobilitydata.gbfs.v1/AlertType.StationMove|null[0]
-    enum entry SystemClosure // dev.sargunv.mobilitydata.gbfs.v1/AlertType.SystemClosure|null[0]
-
-    final val entries // dev.sargunv.mobilitydata.gbfs.v1/AlertType.entries|#static{}entries[0]
-        final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gbfs.v1/AlertType> // dev.sargunv.mobilitydata.gbfs.v1/AlertType.entries.<get-entries>|<get-entries>#static(){}[0]
-
-    final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gbfs.v1/AlertType // dev.sargunv.mobilitydata.gbfs.v1/AlertType.valueOf|valueOf#static(kotlin.String){}[0]
-    final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gbfs.v1/AlertType> // dev.sargunv.mobilitydata.gbfs.v1/AlertType.values|values#static(){}[0]
-
-    final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion|null[0]
-        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v1/AlertType> // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.serializer|serializer(){}[0]
-        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
-    }
-}
-
-final enum class dev.sargunv.mobilitydata.gbfs.v1/RentalMethod : kotlin/Enum<dev.sargunv.mobilitydata.gbfs.v1/RentalMethod> { // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod|null[0]
-    enum entry AccountNumber // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.AccountNumber|null[0]
-    enum entry AndroidPay // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.AndroidPay|null[0]
-    enum entry ApplePay // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.ApplePay|null[0]
-    enum entry CreditCard // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.CreditCard|null[0]
-    enum entry Key // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Key|null[0]
-    enum entry PayPass // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.PayPass|null[0]
-    enum entry Phone // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Phone|null[0]
-    enum entry TransitCard // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.TransitCard|null[0]
-
-    final val entries // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.entries|#static{}entries[0]
-        final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gbfs.v1/RentalMethod> // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.entries.<get-entries>|<get-entries>#static(){}[0]
-
-    final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.valueOf|valueOf#static(kotlin.String){}[0]
-    final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gbfs.v1/RentalMethod> // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.values|values#static(){}[0]
-
-    final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion|null[0]
-        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v1/RentalMethod> // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.serializer|serializer(){}[0]
-        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
-    }
-}
-
-final enum class dev.sargunv.mobilitydata.gbfs.v1/UserType : kotlin/Enum<dev.sargunv.mobilitydata.gbfs.v1/UserType> { // dev.sargunv.mobilitydata.gbfs.v1/UserType|null[0]
-    enum entry Member // dev.sargunv.mobilitydata.gbfs.v1/UserType.Member|null[0]
-    enum entry NonMember // dev.sargunv.mobilitydata.gbfs.v1/UserType.NonMember|null[0]
-
-    final val entries // dev.sargunv.mobilitydata.gbfs.v1/UserType.entries|#static{}entries[0]
-        final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gbfs.v1/UserType> // dev.sargunv.mobilitydata.gbfs.v1/UserType.entries.<get-entries>|<get-entries>#static(){}[0]
-
-    final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gbfs.v1/UserType // dev.sargunv.mobilitydata.gbfs.v1/UserType.valueOf|valueOf#static(kotlin.String){}[0]
-    final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gbfs.v1/UserType> // dev.sargunv.mobilitydata.gbfs.v1/UserType.values|values#static(){}[0]
-
-    final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gbfs.v1/UserType.Companion|null[0]
-        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v1/UserType> // dev.sargunv.mobilitydata.gbfs.v1/UserType.Companion.serializer|serializer(){}[0]
-        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gbfs.v1/UserType.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
-    }
-}
-
 sealed interface dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData|null[0]
 
 final class <#A: dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData> dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse { // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse|null[0]
@@ -1090,6 +1034,39 @@ final class dev.sargunv.mobilitydata.gbfs.v1/VersionManifest : dev.sargunv.mobil
     final fun asJsReadonlyArrayView(): kotlin.js.collections/JsReadonlyArray<dev.sargunv.mobilitydata.gbfs.v1/VersionInfo> // dev.sargunv.mobilitydata.gbfs.v1/VersionManifest.asJsReadonlyArrayView|asJsReadonlyArrayView(){}[0]
 }
 
+final value class dev.sargunv.mobilitydata.gbfs.v1/AlertType { // dev.sargunv.mobilitydata.gbfs.v1/AlertType|null[0]
+    constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.gbfs.v1/AlertType.<init>|<init>(kotlin.String){}[0]
+
+    final val value // dev.sargunv.mobilitydata.gbfs.v1/AlertType.value|{}value[0]
+        final fun <get-value>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/AlertType.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/AlertType.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/AlertType.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/AlertType.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v1/AlertType> { // dev.sargunv.mobilitydata.gbfs.v1/AlertType.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gbfs.v1/AlertType.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gbfs.v1/AlertType.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gbfs.v1/AlertType.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gbfs.v1/AlertType // dev.sargunv.mobilitydata.gbfs.v1/AlertType.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gbfs.v1/AlertType) // dev.sargunv.mobilitydata.gbfs.v1/AlertType.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gbfs.v1.AlertType){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion|null[0]
+        final val Other // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.Other|{}Other[0]
+            final fun <get-Other>(): dev.sargunv.mobilitydata.gbfs.v1/AlertType // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.Other.<get-Other>|<get-Other>(){}[0]
+        final val StationClosure // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.StationClosure|{}StationClosure[0]
+            final fun <get-StationClosure>(): dev.sargunv.mobilitydata.gbfs.v1/AlertType // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.StationClosure.<get-StationClosure>|<get-StationClosure>(){}[0]
+        final val StationMove // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.StationMove|{}StationMove[0]
+            final fun <get-StationMove>(): dev.sargunv.mobilitydata.gbfs.v1/AlertType // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.StationMove.<get-StationMove>|<get-StationMove>(){}[0]
+        final val SystemClosure // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.SystemClosure|{}SystemClosure[0]
+            final fun <get-SystemClosure>(): dev.sargunv.mobilitydata.gbfs.v1/AlertType // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.SystemClosure.<get-SystemClosure>|<get-SystemClosure>(){}[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v1/AlertType> // dev.sargunv.mobilitydata.gbfs.v1/AlertType.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final value class dev.sargunv.mobilitydata.gbfs.v1/FeedType { // dev.sargunv.mobilitydata.gbfs.v1/FeedType|null[0]
     constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.gbfs.v1/FeedType.<init>|<init>(kotlin.String){}[0]
 
@@ -1135,6 +1112,47 @@ final value class dev.sargunv.mobilitydata.gbfs.v1/FeedType { // dev.sargunv.mob
     }
 }
 
+final value class dev.sargunv.mobilitydata.gbfs.v1/RentalMethod { // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod|null[0]
+    constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.<init>|<init>(kotlin.String){}[0]
+
+    final val value // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.value|{}value[0]
+        final fun <get-value>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v1/RentalMethod> { // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gbfs.v1/RentalMethod) // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gbfs.v1.RentalMethod){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion|null[0]
+        final val AccountNumber // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.AccountNumber|{}AccountNumber[0]
+            final fun <get-AccountNumber>(): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.AccountNumber.<get-AccountNumber>|<get-AccountNumber>(){}[0]
+        final val AndroidPay // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.AndroidPay|{}AndroidPay[0]
+            final fun <get-AndroidPay>(): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.AndroidPay.<get-AndroidPay>|<get-AndroidPay>(){}[0]
+        final val ApplePay // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.ApplePay|{}ApplePay[0]
+            final fun <get-ApplePay>(): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.ApplePay.<get-ApplePay>|<get-ApplePay>(){}[0]
+        final val CreditCard // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.CreditCard|{}CreditCard[0]
+            final fun <get-CreditCard>(): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.CreditCard.<get-CreditCard>|<get-CreditCard>(){}[0]
+        final val Key // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.Key|{}Key[0]
+            final fun <get-Key>(): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.Key.<get-Key>|<get-Key>(){}[0]
+        final val PayPass // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.PayPass|{}PayPass[0]
+            final fun <get-PayPass>(): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.PayPass.<get-PayPass>|<get-PayPass>(){}[0]
+        final val Phone // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.Phone|{}Phone[0]
+            final fun <get-Phone>(): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.Phone.<get-Phone>|<get-Phone>(){}[0]
+        final val TransitCard // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.TransitCard|{}TransitCard[0]
+            final fun <get-TransitCard>(): dev.sargunv.mobilitydata.gbfs.v1/RentalMethod // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.TransitCard.<get-TransitCard>|<get-TransitCard>(){}[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v1/RentalMethod> // dev.sargunv.mobilitydata.gbfs.v1/RentalMethod.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final value class dev.sargunv.mobilitydata.gbfs.v1/SystemManifest : dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData, kotlin.collections/Map<kotlin/String, dev.sargunv.mobilitydata.gbfs.v1/Service> { // dev.sargunv.mobilitydata.gbfs.v1/SystemManifest|null[0]
     constructor <init>(kotlin.collections/Map<kotlin/String, dev.sargunv.mobilitydata.gbfs.v1/Service>) // dev.sargunv.mobilitydata.gbfs.v1/SystemManifest.<init>|<init>(kotlin.collections.Map<kotlin.String,dev.sargunv.mobilitydata.gbfs.v1.Service>){}[0]
     constructor <init>(kotlin/Array<out kotlin/Pair<kotlin/String, dev.sargunv.mobilitydata.gbfs.v1/Service>>...) // dev.sargunv.mobilitydata.gbfs.v1/SystemManifest.<init>|<init>(kotlin.Array<out|kotlin.Pair<kotlin.String,dev.sargunv.mobilitydata.gbfs.v1.Service>>...){}[0]
@@ -1175,6 +1193,35 @@ final value class dev.sargunv.mobilitydata.gbfs.v1/SystemManifest : dev.sargunv.
 
     // Targets: [js]
     final fun asJsReadonlyMapView(): kotlin.js.collections/JsReadonlyMap<kotlin/String, dev.sargunv.mobilitydata.gbfs.v1/Service> // dev.sargunv.mobilitydata.gbfs.v1/SystemManifest.asJsReadonlyMapView|asJsReadonlyMapView(){}[0]
+}
+
+final value class dev.sargunv.mobilitydata.gbfs.v1/UserType { // dev.sargunv.mobilitydata.gbfs.v1/UserType|null[0]
+    constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.gbfs.v1/UserType.<init>|<init>(kotlin.String){}[0]
+
+    final val value // dev.sargunv.mobilitydata.gbfs.v1/UserType.value|{}value[0]
+        final fun <get-value>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/UserType.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/UserType.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/UserType.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/UserType.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v1/UserType> { // dev.sargunv.mobilitydata.gbfs.v1/UserType.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gbfs.v1/UserType.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gbfs.v1/UserType.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gbfs.v1/UserType.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gbfs.v1/UserType // dev.sargunv.mobilitydata.gbfs.v1/UserType.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gbfs.v1/UserType) // dev.sargunv.mobilitydata.gbfs.v1/UserType.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gbfs.v1.UserType){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gbfs.v1/UserType.Companion|null[0]
+        final val Member // dev.sargunv.mobilitydata.gbfs.v1/UserType.Companion.Member|{}Member[0]
+            final fun <get-Member>(): dev.sargunv.mobilitydata.gbfs.v1/UserType // dev.sargunv.mobilitydata.gbfs.v1/UserType.Companion.Member.<get-Member>|<get-Member>(){}[0]
+        final val NonMember // dev.sargunv.mobilitydata.gbfs.v1/UserType.Companion.NonMember|{}NonMember[0]
+            final fun <get-NonMember>(): dev.sargunv.mobilitydata.gbfs.v1/UserType // dev.sargunv.mobilitydata.gbfs.v1/UserType.Companion.NonMember.<get-NonMember>|<get-NonMember>(){}[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v1/UserType> // dev.sargunv.mobilitydata.gbfs.v1/UserType.Companion.serializer|serializer(){}[0]
+    }
 }
 
 final val dev.sargunv.mobilitydata.gbfs.v1/GbfsJson // dev.sargunv.mobilitydata.gbfs.v1/GbfsJson|{}GbfsJson[0]

@@ -7,42 +7,6 @@
 // - Show declarations: true
 
 // Library unique name: <dev.sargunv.mobility-data:gofs-v1>
-final enum class dev.sargunv.mobilitydata.gofs.v1/BookingType : kotlin/Enum<dev.sargunv.mobilitydata.gofs.v1/BookingType> { // dev.sargunv.mobilitydata.gofs.v1/BookingType|null[0]
-    enum entry AdvancePriorDay // dev.sargunv.mobilitydata.gofs.v1/BookingType.AdvancePriorDay|null[0]
-    enum entry AdvanceSameDay // dev.sargunv.mobilitydata.gofs.v1/BookingType.AdvanceSameDay|null[0]
-    enum entry RealTime // dev.sargunv.mobilitydata.gofs.v1/BookingType.RealTime|null[0]
-
-    final val entries // dev.sargunv.mobilitydata.gofs.v1/BookingType.entries|#static{}entries[0]
-        final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gofs.v1/BookingType> // dev.sargunv.mobilitydata.gofs.v1/BookingType.entries.<get-entries>|<get-entries>#static(){}[0]
-    final val value // dev.sargunv.mobilitydata.gofs.v1/BookingType.value|{}value[0]
-        final fun <get-value>(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/BookingType.value.<get-value>|<get-value>(){}[0]
-
-    final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gofs.v1/BookingType // dev.sargunv.mobilitydata.gofs.v1/BookingType.valueOf|valueOf#static(kotlin.String){}[0]
-    final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gofs.v1/BookingType> // dev.sargunv.mobilitydata.gofs.v1/BookingType.values|values#static(){}[0]
-
-    final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion|null[0]
-        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gofs.v1/BookingType> // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion.serializer|serializer(){}[0]
-        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
-    }
-}
-
-final enum class dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding : kotlin/Enum<dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding> { // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding|null[0]
-    enum entry Accessible // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Accessible|null[0]
-    enum entry AccessibleWithAssistance // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.AccessibleWithAssistance|null[0]
-    enum entry Inaccessible // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Inaccessible|null[0]
-
-    final val entries // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.entries|#static{}entries[0]
-        final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding> // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.entries.<get-entries>|<get-entries>#static(){}[0]
-
-    final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.valueOf|valueOf#static(kotlin.String){}[0]
-    final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding> // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.values|values#static(){}[0]
-
-    final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion|null[0]
-        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding> // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion.serializer|serializer(){}[0]
-        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
-    }
-}
-
 sealed interface dev.sargunv.mobilitydata.gofs.v1/GofsFeedData // dev.sargunv.mobilitydata.gofs.v1/GofsFeedData|null[0]
 
 final class <#A: dev.sargunv.mobilitydata.gofs.v1/GofsFeedData> dev.sargunv.mobilitydata.gofs.v1/GofsFeedResponse { // dev.sargunv.mobilitydata.gofs.v1/GofsFeedResponse|null[0]
@@ -835,8 +799,6 @@ final class dev.sargunv.mobilitydata.gofs.v1/VehicleType { // dev.sargunv.mobili
     }
 
     final object Companion { // dev.sargunv.mobilitydata.gofs.v1/VehicleType.Companion|null[0]
-        final val $childSerializers // dev.sargunv.mobilitydata.gofs.v1/VehicleType.Companion.$childSerializers|{}$childSerializers[0]
-
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gofs.v1/VehicleType> // dev.sargunv.mobilitydata.gofs.v1/VehicleType.Companion.serializer|serializer(){}[0]
     }
 }
@@ -1082,6 +1044,37 @@ final class dev.sargunv.mobilitydata.gofs.v1/Zones : dev.sargunv.mobilitydata.go
     }
 }
 
+final value class dev.sargunv.mobilitydata.gofs.v1/BookingType { // dev.sargunv.mobilitydata.gofs.v1/BookingType|null[0]
+    constructor <init>(kotlin/Int) // dev.sargunv.mobilitydata.gofs.v1/BookingType.<init>|<init>(kotlin.Int){}[0]
+
+    final val value // dev.sargunv.mobilitydata.gofs.v1/BookingType.value|{}value[0]
+        final fun <get-value>(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/BookingType.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/BookingType.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/BookingType.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/BookingType.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gofs.v1/BookingType> { // dev.sargunv.mobilitydata.gofs.v1/BookingType.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gofs.v1/BookingType.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gofs.v1/BookingType.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gofs.v1/BookingType.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gofs.v1/BookingType // dev.sargunv.mobilitydata.gofs.v1/BookingType.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gofs.v1/BookingType) // dev.sargunv.mobilitydata.gofs.v1/BookingType.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gofs.v1.BookingType){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion|null[0]
+        final val AdvancePriorDay // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion.AdvancePriorDay|{}AdvancePriorDay[0]
+            final fun <get-AdvancePriorDay>(): dev.sargunv.mobilitydata.gofs.v1/BookingType // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion.AdvancePriorDay.<get-AdvancePriorDay>|<get-AdvancePriorDay>(){}[0]
+        final val AdvanceSameDay // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion.AdvanceSameDay|{}AdvanceSameDay[0]
+            final fun <get-AdvanceSameDay>(): dev.sargunv.mobilitydata.gofs.v1/BookingType // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion.AdvanceSameDay.<get-AdvanceSameDay>|<get-AdvanceSameDay>(){}[0]
+        final val RealTime // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion.RealTime|{}RealTime[0]
+            final fun <get-RealTime>(): dev.sargunv.mobilitydata.gofs.v1/BookingType // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion.RealTime.<get-RealTime>|<get-RealTime>(){}[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gofs.v1/BookingType> // dev.sargunv.mobilitydata.gofs.v1/BookingType.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final value class dev.sargunv.mobilitydata.gofs.v1/FeedType { // dev.sargunv.mobilitydata.gofs.v1/FeedType|null[0]
     constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.gofs.v1/FeedType.<init>|<init>(kotlin.String){}[0]
 
@@ -1171,6 +1164,37 @@ final value class dev.sargunv.mobilitydata.gofs.v1/SystemManifest : dev.sargunv.
 
     // Targets: [js]
     final fun asJsReadonlyMapView(): kotlin.js.collections/JsReadonlyMap<kotlin/String, dev.sargunv.mobilitydata.gofs.v1/Service> // dev.sargunv.mobilitydata.gofs.v1/SystemManifest.asJsReadonlyMapView|asJsReadonlyMapView(){}[0]
+}
+
+final value class dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding { // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding|null[0]
+    constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.<init>|<init>(kotlin.String){}[0]
+
+    final val value // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.value|{}value[0]
+        final fun <get-value>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding> { // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding) // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gofs.v1.WheelchairBoarding){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion|null[0]
+        final val Accessible // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion.Accessible|{}Accessible[0]
+            final fun <get-Accessible>(): dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion.Accessible.<get-Accessible>|<get-Accessible>(){}[0]
+        final val AccessibleWithAssistance // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion.AccessibleWithAssistance|{}AccessibleWithAssistance[0]
+            final fun <get-AccessibleWithAssistance>(): dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion.AccessibleWithAssistance.<get-AccessibleWithAssistance>|<get-AccessibleWithAssistance>(){}[0]
+        final val Inaccessible // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion.Inaccessible|{}Inaccessible[0]
+            final fun <get-Inaccessible>(): dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion.Inaccessible.<get-Inaccessible>|<get-Inaccessible>(){}[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding> // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Companion.serializer|serializer(){}[0]
+    }
 }
 
 final val dev.sargunv.mobilitydata.gofs.v1/GofsJson // dev.sargunv.mobilitydata.gofs.v1/GofsJson|{}GofsJson[0]

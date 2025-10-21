@@ -37,8 +37,8 @@ public final class dev/sargunv/mobilitydata/gofs/v1/BookingDetail$Companion {
 
 public final class dev/sargunv/mobilitydata/gofs/v1/BookingRule {
 	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/BookingRule$Companion;
-	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/gofs/v1/BookingType;Lkotlin/time/Duration;Lkotlin/time/Duration;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/gofs/v1/BookingType;Lkotlin/time/Duration;Lkotlin/time/Duration;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;ILkotlin/time/Duration;Lkotlin/time/Duration;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;ILkotlin/time/Duration;Lkotlin/time/Duration;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/util/List;
 	public final fun component10 ()Ljava/lang/String;
 	public final fun component11 ()Ljava/lang/String;
@@ -48,17 +48,17 @@ public final class dev/sargunv/mobilitydata/gofs/v1/BookingRule {
 	public final fun component15 ()Ljava/lang/String;
 	public final fun component16 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/util/List;
-	public final fun component3 ()Ldev/sargunv/mobilitydata/gofs/v1/BookingType;
+	public final fun component3-_3qOWPc ()I
 	public final fun component4-FghU774 ()Lkotlin/time/Duration;
 	public final fun component5-FghU774 ()Lkotlin/time/Duration;
 	public final fun component6 ()Ljava/lang/Integer;
 	public final fun component7 ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
 	public final fun component8 ()Ljava/lang/Integer;
 	public final fun component9 ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
-	public final fun copy-aPNA5UY (Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/gofs/v1/BookingType;Lkotlin/time/Duration;Lkotlin/time/Duration;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gofs/v1/BookingRule;
-	public static synthetic fun copy-aPNA5UY$default (Ldev/sargunv/mobilitydata/gofs/v1/BookingRule;Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/gofs/v1/BookingType;Lkotlin/time/Duration;Lkotlin/time/Duration;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/BookingRule;
+	public final fun copy-gaJviGk (Ljava/util/List;Ljava/util/List;ILkotlin/time/Duration;Lkotlin/time/Duration;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gofs/v1/BookingRule;
+	public static synthetic fun copy-gaJviGk$default (Ldev/sargunv/mobilitydata/gofs/v1/BookingRule;Ljava/util/List;Ljava/util/List;ILkotlin/time/Duration;Lkotlin/time/Duration;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/BookingRule;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getBookingType ()Ldev/sargunv/mobilitydata/gofs/v1/BookingType;
+	public final fun getBookingType-_3qOWPc ()I
 	public final fun getBookingUrl ()Ljava/lang/String;
 	public final fun getDropOffMessage ()Ljava/lang/String;
 	public final fun getFromZoneIds ()Ljava/util/List;
@@ -162,18 +162,36 @@ public final class dev/sargunv/mobilitydata/gofs/v1/BookingRules$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gofs/v1/BookingType : java/lang/Enum {
-	public static final field AdvancePriorDay Ldev/sargunv/mobilitydata/gofs/v1/BookingType;
-	public static final field AdvanceSameDay Ldev/sargunv/mobilitydata/gofs/v1/BookingType;
+public final class dev/sargunv/mobilitydata/gofs/v1/BookingType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/BookingType$Companion;
-	public static final field RealTime Ldev/sargunv/mobilitydata/gofs/v1/BookingType;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gofs/v1/BookingType;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
 	public final fun getValue ()I
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gofs/v1/BookingType;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gofs/v1/BookingType;
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gofs/v1/BookingType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gofs/v1/BookingType$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-VqZqdd4 (Lkotlinx/serialization/encoding/Decoder;)I
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-TSrqV1U (Lkotlinx/serialization/encoding/Encoder;I)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gofs/v1/BookingType$Companion {
+	public final fun getAdvancePriorDay-_3qOWPc ()I
+	public final fun getAdvanceSameDay-_3qOWPc ()I
+	public final fun getRealTime-_3qOWPc ()I
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -1049,17 +1067,17 @@ public final class dev/sargunv/mobilitydata/gofs/v1/SystemManifest$Companion {
 
 public final class dev/sargunv/mobilitydata/gofs/v1/VehicleType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/VehicleType$Companion;
-	public fun <init> (Ljava/lang/String;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/Integer;
-	public final fun component3 ()Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;
-	public final fun copy (Ljava/lang/String;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;)Ldev/sargunv/mobilitydata/gofs/v1/VehicleType;
-	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gofs/v1/VehicleType;Ljava/lang/String;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/VehicleType;
+	public final fun component3-kkzjxe0 ()Ljava/lang/String;
+	public final fun copy-pBGMic0 (Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gofs/v1/VehicleType;
+	public static synthetic fun copy-pBGMic0$default (Ldev/sargunv/mobilitydata/gofs/v1/VehicleType;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/VehicleType;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getMaxCapacity ()Ljava/lang/Integer;
 	public final fun getVehicleTypeId ()Ljava/lang/String;
-	public final fun getWheelchairBoarding ()Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;
+	public final fun getWheelchairBoarding-kkzjxe0 ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
@@ -1344,17 +1362,36 @@ public final class dev/sargunv/mobilitydata/gofs/v1/WaitTimes$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding : java/lang/Enum {
-	public static final field Accessible Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;
-	public static final field AccessibleWithAssistance Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;
+public final class dev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding {
 	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding$Companion;
-	public static final field Inaccessible Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-OPBs_mI (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-AWaMazs (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gofs/v1/WheelchairBoarding$Companion {
+	public final fun getAccessible-HOSQ5vI ()Ljava/lang/String;
+	public final fun getAccessibleWithAssistance-HOSQ5vI ()Ljava/lang/String;
+	public final fun getInaccessible-HOSQ5vI ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 

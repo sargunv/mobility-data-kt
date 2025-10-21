@@ -3,6 +3,7 @@ package dev.sargunv.mobilitydata.gbfs.v2
 import dev.sargunv.mobilitydata.utils.EpochSeconds
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Url
+import kotlin.jvm.JvmInline
 import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -69,18 +70,25 @@ public data class Alert(
 
 /** Type of system alert. */
 @Serializable
-public enum class AlertType {
-  /** System closure alert. */
-  @SerialName("system_closure") SystemClosure,
+@JvmInline
+public value class AlertType(
+  /** The string value representing the alert type. */
+  public val value: String
+) {
+  /** Companion object containing predefined alert type constants. */
+  public companion object {
+    /** System closure alert. */
+    public val SystemClosure: AlertType = AlertType("system_closure")
 
-  /** Station closure alert. */
-  @SerialName("station_closure") StationClosure,
+    /** Station closure alert. */
+    public val StationClosure: AlertType = AlertType("station_closure")
 
-  /** Station move alert. */
-  @SerialName("station_move") StationMove,
+    /** Station move alert. */
+    public val StationMove: AlertType = AlertType("station_move")
 
-  /** Other type of alert. */
-  @SerialName("other") Other,
+    /** Other type of alert. */
+    public val Other: AlertType = AlertType("other")
+  }
 }
 
 /** Time period when an alert is in effect. */

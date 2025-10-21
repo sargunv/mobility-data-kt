@@ -116,9 +116,7 @@ class ProducerTest {
       client.getStationInformation()
       client.getStationStatus()
       client.getVehicleStatus()
-
-      // INVALID: "scooter" enum entry is no longer valid
-      // client.getVehicleTypes()
+      client.getVehicleTypes()
     }
   }
 

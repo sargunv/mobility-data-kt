@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.Id
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -28,11 +29,21 @@ public data class VehicleType(
 
 /** Wheelchair boarding accessibility options for a vehicle. */
 @Serializable
-public enum class WheelchairBoarding {
-  /** The vehicle is accessible to riders with wheelchairs. */
-  @SerialName("boarding_accessible") Accessible,
-  /** The vehicle is not accessible to riders with wheelchairs. */
-  @SerialName("boarding_inaccessible") Inaccessible,
-  /** The vehicle is accessible to riders with wheelchairs with assistance. */
-  @SerialName("boarding_accessible_with_assistance") AccessibleWithAssistance,
+@JvmInline
+public value class WheelchairBoarding(
+  /** The string value representing the wheelchair boarding option. */
+  public val value: String
+) {
+  /** Companion object containing predefined wheelchair boarding constants. */
+  public companion object {
+    /** The vehicle is accessible to riders with wheelchairs. */
+    public val Accessible: WheelchairBoarding = WheelchairBoarding("boarding_accessible")
+
+    /** The vehicle is not accessible to riders with wheelchairs. */
+    public val Inaccessible: WheelchairBoarding = WheelchairBoarding("boarding_inaccessible")
+
+    /** The vehicle is accessible to riders with wheelchairs with assistance. */
+    public val AccessibleWithAssistance: WheelchairBoarding =
+      WheelchairBoarding("boarding_accessible_with_assistance")
+  }
 }
