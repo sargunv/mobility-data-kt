@@ -13,7 +13,14 @@ kotlin {
       // our mock http tests rely on the filesystem
       testTask { enabled = false }
     }
-    nodejs()
+    nodejs {
+      testTask {
+        useMocha {
+          // Increase timeout to prevent intermittent failures
+          timeout = "10000"
+        }
+      }
+    }
   }
 
   wasmJs {
@@ -21,14 +28,30 @@ kotlin {
       // our mock http tests rely on the filesystem
       testTask { enabled = false }
     }
-    nodejs()
+    nodejs {
+      testTask {
+        useMocha {
+          // Increase timeout to prevent intermittent failures
+          timeout = "10000"
+        }
+      }
+    }
     d8 {
       // https://github.com/sargunv/mobility-data-kt/issues/5
       testTask { enabled = false }
     }
   }
 
-  wasmWasi { nodejs() }
+  wasmWasi {
+    nodejs {
+      testTask {
+        useMocha {
+          // Increase timeout to prevent intermittent failures
+          timeout = "10000"
+        }
+      }
+    }
+  }
 
   // native tier 1
   macosArm64()
