@@ -10,4 +10,5 @@ public val GbfsJson: Json = Json {
   ignoreUnknownKeys = true
   @OptIn(ExperimentalSerializationApi::class)
   decodeEnumsCaseInsensitive = true
+  coerceInputValues = true
 }
