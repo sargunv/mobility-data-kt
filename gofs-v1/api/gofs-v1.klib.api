@@ -1155,6 +1155,7 @@ final val dev.sargunv.mobilitydata.gofs.v1/GofsJson // dev.sargunv.mobilitydata.
 
 // Targets: [js, native, wasmJs]
 final class dev.sargunv.mobilitydata.gofs.v1/GofsV1Client : kotlin/AutoCloseable { // dev.sargunv.mobilitydata.gofs.v1/GofsV1Client|null[0]
+    constructor <init>(io.ktor.client.engine/HttpClientEngine, kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.gofs.v1/GofsV1Client.<init>|<init>(io.ktor.client.engine.HttpClientEngine;kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
     constructor <init>(kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.gofs.v1/GofsV1Client.<init>|<init>(kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
 
     final fun close() // dev.sargunv.mobilitydata.gofs.v1/GofsV1Client.close|close(){}[0]
@@ -1171,6 +1172,3 @@ final class dev.sargunv.mobilitydata.gofs.v1/GofsV1Client : kotlin/AutoCloseable
     final suspend fun (context(dev.sargunv.mobilitydata.gofs.v1/Service)).getZones(): dev.sargunv.mobilitydata.gofs.v1/GofsFeedResponse<dev.sargunv.mobilitydata.gofs.v1/Zones> // dev.sargunv.mobilitydata.gofs.v1/GofsV1Client.getZones|getZones(dev.sargunv.mobilitydata.gofs.v1.Service)(){}[0]
     final suspend fun getSystemManifest(kotlin/String): dev.sargunv.mobilitydata.gofs.v1/GofsFeedResponse<dev.sargunv.mobilitydata.gofs.v1/SystemManifest> // dev.sargunv.mobilitydata.gofs.v1/GofsV1Client.getSystemManifest|getSystemManifest(kotlin.String){}[0]
 }
-
-// Targets: [js, native, wasmJs]
-final fun <#A: io.ktor.client.engine/HttpClientEngineConfig> dev.sargunv.mobilitydata.gofs.v1/GofsV1Client(io.ktor.client.engine/HttpClientEngineFactory<#A>, kotlin/Function1<io.ktor.client/HttpClientConfig<#A>, kotlin/Unit> = ...): dev.sargunv.mobilitydata.gofs.v1/GofsV1Client // dev.sargunv.mobilitydata.gofs.v1/GofsV1Client|GofsV1Client(io.ktor.client.engine.HttpClientEngineFactory<0:0>;kotlin.Function1<io.ktor.client.HttpClientConfig<0:0>,kotlin.Unit>){0§<io.ktor.client.engine.HttpClientEngineConfig>}[0]

@@ -38,6 +38,10 @@ kotlin {
     wasmJsTest { dependencies { implementation(libs.ktor.client.js) } }
 
     create("ktorTest").apply {
+      dependencies {
+        implementation(libs.ktor.client.mock)
+        implementation(libs.kotlinx.io.core)
+      }
       dependsOn(commonTest.get())
       listOf(jvmTest, macosTest, linuxTest, mingwTest, jsTest, wasmJsTest).forEach {
         it.get().dependsOn(this)
