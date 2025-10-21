@@ -30,7 +30,10 @@ public object TimestampSerializer : KSerializer<Timestamp> {
 
   override fun deserialize(decoder: Decoder): Timestamp {
     val str = delegate.deserialize(decoder)
-    val components = DateTimeComponents.parse(str, ISO_DATE_TIME_OFFSET)
+    // Normalize the input by replacing space with 'T' to accept both formats
+    // RFC3339 uses 'T' but some feeds use space instead
+    val normalizedStr = str.replace(Regex("""^(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2})"""), "$1T$2")
+    val components = DateTimeComponents.parse(normalizedStr, ISO_DATE_TIME_OFFSET)
     val offset = components.toUtcOffset()
     return Timestamp(components.toLocalDateTime().toInstant(offset), offset)
   }
