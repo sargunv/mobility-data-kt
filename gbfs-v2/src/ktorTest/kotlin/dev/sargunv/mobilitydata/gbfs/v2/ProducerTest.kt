@@ -6,6 +6,7 @@ import io.ktor.client.engine.mock.respondError
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.fullPath
 import io.ktor.http.headersOf
+import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlinx.coroutines.test.runTest
 import kotlinx.io.buffered
@@ -58,47 +59,173 @@ class ProducerTest {
   }
 
   @Test
-  fun bird() {
-    // TODO
+  fun bird() = runTest {
+    val client = GbfsV2Client(createMockEngine("bird"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVersionManifest()
+      client.getSystemRegions()
+      client.getSystemPricingPlans()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getFreeBikeStatus()
+    }
   }
 
   @Test
-  fun donkey() {
-    // TODO
+  fun donkey() = runTest {
+    val client = GbfsV2Client(createMockEngine("donkey"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVersionManifest()
+      client.getSystemRegions()
+      client.getSystemPricingPlans()
+      client.getSystemHours()
+      client.getVehicleTypes()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getFreeBikeStatus()
+    }
   }
 
   @Test
-  fun entur() {
-    // TODO
+  @Ignore // entur uses "no" language code instead of "en"
+  fun entur() = runTest {
+    val client = GbfsV2Client(createMockEngine("entur"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("no")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getSystemPricingPlans()
+      client.getSystemHours()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getFreeBikeStatus()
+    }
   }
 
   @Test
-  fun lime() {
-    // TODO
+  @Ignore // lime's station_status.json is missing required fields (num_bikes_available)
+  fun lime() = runTest {
+    val client = GbfsV2Client(createMockEngine("lime"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVehicleTypes()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getFreeBikeStatus()
+    }
   }
 
   @Test
-  fun mobidata() {
-    // TODO
+  @Ignore // mobidata uses "de" language code instead of "en"
+  fun mobidata() = runTest {
+    val client = GbfsV2Client(createMockEngine("mobidata"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("de")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getSystemPricingPlans()
+      client.getSystemAlerts()
+      client.getVehicleTypes()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getFreeBikeStatus()
+    }
   }
 
   @Test
-  fun neuron() {
-    // TODO
+  @Ignore // neuron's system_regions.json has region_id as integer instead of string
+  fun neuron() = runTest {
+    val client = GbfsV2Client(createMockEngine("neuron"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getSystemRegions()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getFreeBikeStatus()
+    }
   }
 
   @Test
-  fun nextbike() {
-    // TODO
+  @Ignore // nextbike uses "de" language code instead of "en"
+  fun nextbike() = runTest {
+    val client = GbfsV2Client(createMockEngine("nextbike"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("de")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getSystemRegions()
+      client.getSystemPricingPlans()
+      client.getSystemHours()
+      client.getVehicleTypes()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getFreeBikeStatus()
+    }
   }
 
   @Test
-  fun ridedott() {
-    // TODO
+  fun ridedott() = runTest {
+    val client = GbfsV2Client(createMockEngine("ridedott"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVersionManifest()
+      client.getSystemPricingPlans()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getFreeBikeStatus()
+    }
   }
 
   @Test
-  fun zeuss() {
-    // TODO
+  fun zeuss() = runTest {
+    val client = GbfsV2Client(createMockEngine("zeus"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVersionManifest()
+      client.getSystemPricingPlans()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getFreeBikeStatus()
+    }
   }
 }

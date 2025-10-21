@@ -6,6 +6,7 @@ import io.ktor.client.engine.mock.respondError
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.fullPath
 import io.ktor.http.headersOf
+import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlinx.coroutines.test.runTest
 import kotlinx.io.buffered
@@ -56,32 +57,101 @@ class ProducerTest {
   }
 
   @Test
-  fun citiz() {
-    // TODO
+  @Ignore // citiz's gbfs.json contains a feed named 'gbfs' which is not recognized by FeedType enum
+  fun citiz() = runTest {
+    val client = GbfsV3Client(createMockEngine("citiz"))
+    val service = client.getServiceManifest("gbfs.json").data
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVersionManifest()
+      client.getSystemPricingPlans()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getVehicleStatus()
+    }
   }
 
   @Test
-  fun cooltra() {
-    // TODO
+  fun cooltra() = runTest {
+    val client = GbfsV3Client(createMockEngine("cooltra"))
+    val service = client.getServiceManifest("gbfs.json").data
+
+    context(service) {
+      client.getSystemInformation()
+      client.getSystemPricingPlans()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getVehicleStatus()
+    }
   }
 
   @Test
-  fun cyclocity() {
-    // TODO
+  fun cyclocity() = runTest {
+    val client = GbfsV3Client(createMockEngine("cyclocity"))
+    val service = client.getServiceManifest("gbfs.json").data
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVersionManifest()
+      client.getVehicleTypes()
+      client.getStationInformation()
+      client.getStationStatus()
+    }
   }
 
   @Test
-  fun ecovelo() {
-    // TODO
+  @Ignore // ecovelo's vehicle_types.json contains 'scooter' form_factor which is not in
+  // VehicleFormFactor enum
+  fun ecovelo() = runTest {
+    val client = GbfsV3Client(createMockEngine("ecovelo"))
+    val service = client.getServiceManifest("gbfs.json").data
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVersionManifest()
+      client.getSystemRegions()
+      client.getSystemPricingPlans()
+      client.getSystemAlerts()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getVehicleStatus()
+    }
   }
 
   @Test
-  fun flamingo() {
-    // TODO
+  fun flamingo() = runTest {
+    val client = GbfsV3Client(createMockEngine("flamingo"))
+    val service = client.getServiceManifest("gbfs.json").data
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVersionManifest()
+      client.getSystemPricingPlans()
+      client.getSystemAlerts()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getVehicleStatus()
+    }
   }
 
   @Test
-  fun ridecheck() {
-    // TODO
+  @Ignore // ridecheck's gbfs.json has invalid timestamp format with space instead of 'T'
+  fun ridecheck() = runTest {
+    val client = GbfsV3Client(createMockEngine("ridecheck"))
+    val service = client.getServiceManifest("gbfs.json").data
+
+    context(service) {
+      client.getSystemInformation()
+      client.getVehicleTypes()
+      client.getGeofencingZones()
+      client.getVehicleStatus()
+    }
   }
 }
