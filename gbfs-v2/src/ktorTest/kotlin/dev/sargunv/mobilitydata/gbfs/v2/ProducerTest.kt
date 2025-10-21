@@ -99,7 +99,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // last_reported required on bike
   fun entur() = runTest {
     val client = GbfsV2Client(createMockEngine("entur"))
 
@@ -136,7 +135,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // last_reported required on bike
   fun mobidata() = runTest {
     val client = GbfsV2Client(createMockEngine("mobidata"))
 
@@ -174,7 +172,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // last_reported required on bike
   fun nextbike() = runTest {
     val client = GbfsV2Client(createMockEngine("nextbike"))
 

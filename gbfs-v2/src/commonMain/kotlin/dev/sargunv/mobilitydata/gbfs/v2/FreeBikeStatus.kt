@@ -81,7 +81,7 @@ public data class Bike(
   @SerialName("vehicle_type_id") public val vehicleTypeId: Id<VehicleType>? = null,
 
   /** The last time this vehicle reported its status to the operator's backend. */
-  @SerialName("last_reported") public val lastReported: EpochSeconds,
+  @SerialName("last_reported") public val lastReported: EpochSeconds? = null,
 
   /**
    * The furthest distance in meters that the vehicle can travel with the vehicle's current charge
