@@ -16,9 +16,9 @@ private val expectedTrip =
     routeId = "R1",
     serviceId = "WD",
     tripHeadsign = "Downtown",
-    directionId = DirectionId.OUTBOUND,
-    wheelchairAccessible = WheelchairAccessibility.ACCESSIBLE,
-    bikesAllowed = BikesAllowed.NOT_ALLOWED,
+    directionId = DirectionId.Outbound,
+    wheelchairAccessible = WheelchairAccessibility.Accessible,
+    bikesAllowed = BikesAllowed.NotAllowed,
   )
 
 class TripTest {

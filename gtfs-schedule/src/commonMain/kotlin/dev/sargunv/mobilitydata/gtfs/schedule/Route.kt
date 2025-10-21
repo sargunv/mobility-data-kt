@@ -3,6 +3,7 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.RgbColorTriplet
 import dev.sargunv.mobilitydata.utils.Url
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -61,36 +62,43 @@ public data class Route(
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#routestxt)
  */
 @Serializable
-public enum class RouteType {
-  /** Tram, Streetcar, Light rail. */
-  @SerialName("0") TRAM,
+@JvmInline
+public value class RouteType(
+  /** The integer value representing the route type. */
+  public val value: Int
+) {
+  /** Companion object containing predefined route type constants. */
+  public companion object {
+    /** Tram, Streetcar, Light rail. */
+    public val Tram: RouteType = RouteType(0)
 
-  /** Subway, Metro. */
-  @SerialName("1") SUBWAY,
+    /** Subway, Metro. */
+    public val Subway: RouteType = RouteType(1)
 
-  /** Rail. */
-  @SerialName("2") RAIL,
+    /** Rail. */
+    public val Rail: RouteType = RouteType(2)
 
-  /** Bus. */
-  @SerialName("3") BUS,
+    /** Bus. */
+    public val Bus: RouteType = RouteType(3)
 
-  /** Ferry. */
-  @SerialName("4") FERRY,
+    /** Ferry. */
+    public val Ferry: RouteType = RouteType(4)
 
-  /** Cable tram. */
-  @SerialName("5") CABLE_TRAM,
+    /** Cable tram. */
+    public val CableTram: RouteType = RouteType(5)
 
-  /** Aerial lift, suspended cable car. */
-  @SerialName("6") AERIAL_LIFT,
+    /** Aerial lift, suspended cable car. */
+    public val AerialLift: RouteType = RouteType(6)
 
-  /** Funicular. */
-  @SerialName("7") FUNICULAR,
+    /** Funicular. */
+    public val Funicular: RouteType = RouteType(7)
 
-  /** Trolleybus. */
-  @SerialName("11") TROLLEYBUS,
+    /** Trolleybus. */
+    public val Trolleybus: RouteType = RouteType(11)
 
-  /** Monorail. */
-  @SerialName("12") MONORAIL,
+    /** Monorail. */
+    public val Monorail: RouteType = RouteType(12)
+  }
 }
 
 /**
@@ -99,18 +107,25 @@ public enum class RouteType {
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#routestxt)
  */
 @Serializable
-public enum class ContinuousPickupDropOff {
-  /** Continuous stopping pickup/drop off. */
-  @SerialName("0") CONTINUOUS,
+@JvmInline
+public value class ContinuousPickupDropOff(
+  /** The integer value representing the continuous pickup/drop off type. */
+  public val value: Int
+) {
+  /** Companion object containing predefined continuous pickup/drop off constants. */
+  public companion object {
+    /** Continuous stopping pickup/drop off. */
+    public val Continuous: ContinuousPickupDropOff = ContinuousPickupDropOff(0)
 
-  /** No continuous stopping pickup/drop off. */
-  @SerialName("1") NO_CONTINUOUS,
+    /** No continuous stopping pickup/drop off. */
+    public val NoContinuous: ContinuousPickupDropOff = ContinuousPickupDropOff(1)
 
-  /** Must phone agency to arrange continuous stopping pickup/drop off. */
-  @SerialName("2") PHONE_AGENCY,
+    /** Must phone agency to arrange continuous stopping pickup/drop off. */
+    public val PhoneAgency: ContinuousPickupDropOff = ContinuousPickupDropOff(2)
 
-  /** Must coordinate with driver to arrange continuous stopping pickup/drop off. */
-  @SerialName("3") COORDINATE_WITH_DRIVER,
+    /** Must coordinate with driver to arrange continuous stopping pickup/drop off. */
+    public val CoordinateWithDriver: ContinuousPickupDropOff = ContinuousPickupDropOff(3)
+  }
 }
 
 /** Placeholder for Network entity. */

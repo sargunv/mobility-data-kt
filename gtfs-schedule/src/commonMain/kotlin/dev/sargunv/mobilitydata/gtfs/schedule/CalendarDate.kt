@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.BasicLocalDate
 import dev.sargunv.mobilitydata.utils.Id
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -28,10 +29,17 @@ public data class CalendarDate(
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#calendar_datestxt)
  */
 @Serializable
-public enum class ExceptionType {
-  /** Service has been added for the specified date. */
-  @SerialName("1") SERVICE_ADDED,
+@JvmInline
+public value class ExceptionType(
+  /** The integer value representing the exception type. */
+  public val value: Int
+) {
+  /** Companion object containing predefined exception type constants. */
+  public companion object {
+    /** Service has been added for the specified date. */
+    public val ServiceAdded: ExceptionType = ExceptionType(1)
 
-  /** Service has been removed for the specified date. */
-  @SerialName("2") SERVICE_REMOVED,
+    /** Service has been removed for the specified date. */
+    public val ServiceRemoved: ExceptionType = ExceptionType(2)
+  }
 }

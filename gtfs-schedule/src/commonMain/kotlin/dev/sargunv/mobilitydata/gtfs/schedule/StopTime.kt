@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.ServiceTime
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -55,18 +56,25 @@ public data class StopTime(
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stop_timestxt)
  */
 @Serializable
-public enum class PickupDropOffType {
-  /** Regularly scheduled pickup/drop off. */
-  @SerialName("0") REGULAR,
+@JvmInline
+public value class PickupDropOffType(
+  /** The integer value representing the pickup/drop off type. */
+  public val value: Int
+) {
+  /** Companion object containing predefined pickup/drop off type constants. */
+  public companion object {
+    /** Regularly scheduled pickup/drop off. */
+    public val Regular: PickupDropOffType = PickupDropOffType(0)
 
-  /** No pickup/drop off available. */
-  @SerialName("1") NONE,
+    /** No pickup/drop off available. */
+    public val None: PickupDropOffType = PickupDropOffType(1)
 
-  /** Must phone agency to arrange pickup/drop off. */
-  @SerialName("2") PHONE_AGENCY,
+    /** Must phone agency to arrange pickup/drop off. */
+    public val PhoneAgency: PickupDropOffType = PickupDropOffType(2)
 
-  /** Must coordinate with driver to arrange pickup/drop off. */
-  @SerialName("3") COORDINATE_WITH_DRIVER,
+    /** Must coordinate with driver to arrange pickup/drop off. */
+    public val CoordinateWithDriver: PickupDropOffType = PickupDropOffType(3)
+  }
 }
 
 /**
@@ -75,10 +83,17 @@ public enum class PickupDropOffType {
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stop_timestxt)
  */
 @Serializable
-public enum class Timepoint {
-  /** Times are considered approximate. */
-  @SerialName("0") APPROXIMATE,
+@JvmInline
+public value class Timepoint(
+  /** The integer value representing the timepoint status. */
+  public val value: Int
+) {
+  /** Companion object containing predefined timepoint constants. */
+  public companion object {
+    /** Times are considered approximate. */
+    public val Approximate: Timepoint = Timepoint(0)
 
-  /** Times are considered exact. */
-  @SerialName("1") EXACT,
+    /** Times are considered exact. */
+    public val Exact: Timepoint = Timepoint(1)
+  }
 }

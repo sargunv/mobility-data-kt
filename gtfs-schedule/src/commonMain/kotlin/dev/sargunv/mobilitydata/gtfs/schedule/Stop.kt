@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Url
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -64,21 +65,30 @@ public data class Stop(
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stopstxt)
  */
 @Serializable
-public enum class LocationType {
-  /** Stop (or Platform). A location where passengers board or disembark from a transit vehicle. */
-  @SerialName("0") STOP,
+@JvmInline
+public value class LocationType(
+  /** The integer value representing the location type. */
+  public val value: Int
+) {
+  /** Companion object containing predefined location type constants. */
+  public companion object {
+    /**
+     * Stop (or Platform). A location where passengers board or disembark from a transit vehicle.
+     */
+    public val Stop: LocationType = LocationType(0)
 
-  /** Station. A physical structure or area that contains one or more platforms. */
-  @SerialName("1") STATION,
+    /** Station. A physical structure or area that contains one or more platforms. */
+    public val Station: LocationType = LocationType(1)
 
-  /** Entrance/Exit. A location where passengers can enter or exit a station. */
-  @SerialName("2") ENTRANCE_EXIT,
+    /** Entrance/Exit. A location where passengers can enter or exit a station. */
+    public val EntranceExit: LocationType = LocationType(2)
 
-  /** Generic Node. A location within a station, not matching any other location_type. */
-  @SerialName("3") GENERIC_NODE,
+    /** Generic Node. A location within a station, not matching any other location_type. */
+    public val GenericNode: LocationType = LocationType(3)
 
-  /** Boarding Area. A specific location on a platform. */
-  @SerialName("4") BOARDING_AREA,
+    /** Boarding Area. A specific location on a platform. */
+    public val BoardingArea: LocationType = LocationType(4)
+  }
 }
 
 /**
@@ -87,15 +97,22 @@ public enum class LocationType {
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stopstxt)
  */
 @Serializable
-public enum class WheelchairBoarding {
-  /** No accessibility information for the stop. */
-  @SerialName("0") NO_INFO,
+@JvmInline
+public value class WheelchairBoarding(
+  /** The integer value representing wheelchair boarding status. */
+  public val value: Int
+) {
+  /** Companion object containing predefined wheelchair boarding constants. */
+  public companion object {
+    /** No accessibility information for the stop. */
+    public val NoInfo: WheelchairBoarding = WheelchairBoarding(0)
 
-  /** Some vehicles at this stop can be boarded by a rider in a wheelchair. */
-  @SerialName("1") ACCESSIBLE,
+    /** Some vehicles at this stop can be boarded by a rider in a wheelchair. */
+    public val Accessible: WheelchairBoarding = WheelchairBoarding(1)
 
-  /** Wheelchair boarding is not possible at this stop. */
-  @SerialName("2") NOT_ACCESSIBLE,
+    /** Wheelchair boarding is not possible at this stop. */
+    public val NotAccessible: WheelchairBoarding = WheelchairBoarding(2)
+  }
 }
 
 /** Placeholder for Zone entity. */

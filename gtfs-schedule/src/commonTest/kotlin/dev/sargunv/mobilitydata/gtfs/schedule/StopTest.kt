@@ -16,8 +16,8 @@ private val expectedStop =
     stopName = "Main St Station",
     stopLat = 37.7749,
     stopLon = -122.4194,
-    locationType = LocationType.STOP,
-    wheelchairBoarding = WheelchairBoarding.ACCESSIBLE,
+    locationType = LocationType.Stop,
+    wheelchairBoarding = WheelchairBoarding.Accessible,
   )
 
 class StopTest {

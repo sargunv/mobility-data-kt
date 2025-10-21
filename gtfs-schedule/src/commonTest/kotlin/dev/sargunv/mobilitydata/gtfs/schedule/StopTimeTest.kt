@@ -18,8 +18,8 @@ private val expectedStopTime =
     departureTime = ServiceTime(8, 0, 0),
     stopId = "S1",
     stopSequence = 1,
-    pickupType = PickupDropOffType.REGULAR,
-    dropOffType = PickupDropOffType.REGULAR,
+    pickupType = PickupDropOffType.Regular,
+    dropOffType = PickupDropOffType.Regular,
   )
 
 class StopTimeTest {

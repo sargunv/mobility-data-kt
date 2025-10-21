@@ -84,6 +84,6 @@ class ProducerTest {
     val calendarDates = GtfsCsv.decodeFromString<CalendarDate>(content)
     assertEquals(2, calendarDates.size)
     assertEquals("WD", calendarDates[0].serviceId)
-    assertEquals(ExceptionType.SERVICE_REMOVED, calendarDates[0].exceptionType)
+    assertEquals(ExceptionType.ServiceRemoved, calendarDates[0].exceptionType)
   }
 }

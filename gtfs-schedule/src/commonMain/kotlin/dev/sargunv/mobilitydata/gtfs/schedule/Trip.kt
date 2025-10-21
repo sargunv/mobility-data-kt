@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.Id
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -50,12 +51,19 @@ public data class Trip(
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#tripstxt)
  */
 @Serializable
-public enum class DirectionId {
-  /** Travel in one direction (e.g., outbound travel). */
-  @SerialName("0") OUTBOUND,
+@JvmInline
+public value class DirectionId(
+  /** The integer value representing the direction. */
+  public val value: Int
+) {
+  /** Companion object containing predefined direction constants. */
+  public companion object {
+    /** Travel in one direction (e.g., outbound travel). */
+    public val Outbound: DirectionId = DirectionId(0)
 
-  /** Travel in the opposite direction (e.g., inbound travel). */
-  @SerialName("1") INBOUND,
+    /** Travel in the opposite direction (e.g., inbound travel). */
+    public val Inbound: DirectionId = DirectionId(1)
+  }
 }
 
 /**
@@ -64,15 +72,22 @@ public enum class DirectionId {
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#tripstxt)
  */
 @Serializable
-public enum class WheelchairAccessibility {
-  /** No accessibility information for the trip. */
-  @SerialName("0") NO_INFO,
+@JvmInline
+public value class WheelchairAccessibility(
+  /** The integer value representing wheelchair accessibility. */
+  public val value: Int
+) {
+  /** Companion object containing predefined wheelchair accessibility constants. */
+  public companion object {
+    /** No accessibility information for the trip. */
+    public val NoInfo: WheelchairAccessibility = WheelchairAccessibility(0)
 
-  /** Vehicle being used on this trip can accommodate at least one rider in a wheelchair. */
-  @SerialName("1") ACCESSIBLE,
+    /** Vehicle being used on this trip can accommodate at least one rider in a wheelchair. */
+    public val Accessible: WheelchairAccessibility = WheelchairAccessibility(1)
 
-  /** No riders in wheelchairs can be accommodated on this trip. */
-  @SerialName("2") NOT_ACCESSIBLE,
+    /** No riders in wheelchairs can be accommodated on this trip. */
+    public val NotAccessible: WheelchairAccessibility = WheelchairAccessibility(2)
+  }
 }
 
 /**
@@ -81,15 +96,22 @@ public enum class WheelchairAccessibility {
  * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#tripstxt)
  */
 @Serializable
-public enum class BikesAllowed {
-  /** No bike information for the trip. */
-  @SerialName("0") NO_INFO,
+@JvmInline
+public value class BikesAllowed(
+  /** The integer value representing bikes allowed status. */
+  public val value: Int
+) {
+  /** Companion object containing predefined bikes allowed constants. */
+  public companion object {
+    /** No bike information for the trip. */
+    public val NoInfo: BikesAllowed = BikesAllowed(0)
 
-  /** Vehicle being used on this trip can accommodate at least one bicycle. */
-  @SerialName("1") ALLOWED,
+    /** Vehicle being used on this trip can accommodate at least one bicycle. */
+    public val Allowed: BikesAllowed = BikesAllowed(1)
 
-  /** No bicycles are allowed on this trip. */
-  @SerialName("2") NOT_ALLOWED,
+    /** No bicycles are allowed on this trip. */
+    public val NotAllowed: BikesAllowed = BikesAllowed(2)
+  }
 }
 
 /** Placeholder for Block entity. */

@@ -17,7 +17,7 @@ private val expectedRoute =
     agencyId = "DTA",
     routeShortName = "17",
     routeLongName = "Mission",
-    routeType = RouteType.BUS,
+    routeType = RouteType.Bus,
     routeColor = RgbColor(0xFF0000),
     routeTextColor = RgbColor(0xFFFFFF),
   )
