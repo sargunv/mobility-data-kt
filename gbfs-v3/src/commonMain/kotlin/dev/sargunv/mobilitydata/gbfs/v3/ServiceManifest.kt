@@ -2,7 +2,7 @@ package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.gbfs.v3.serialization.FeedDiscoverySerializer
 import dev.sargunv.mobilitydata.utils.Url
-import kotlinx.serialization.SerialName
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.Serializable
 
 /**
@@ -25,35 +25,38 @@ public data class ServiceManifest(
  * Each feed type corresponds to a specific JSON file defined in the GBFS specification.
  */
 @Serializable
-public enum class FeedType {
+@JvmInline
+public value class FeedType(public val value: String) {
+  public companion object {
 
-  /** The gbfs_versions.json file listing available GBFS versions for this system. */
-  @SerialName("gbfs_versions") VersionManifest,
+    /** The gbfs_versions.json file listing available GBFS versions for this system. */
+    public val VersionManifest: FeedType = FeedType("gbfs_versions")
 
-  /** The system_information.json file with system details. */
-  @SerialName("system_information") SystemInformation,
+    /** The system_information.json file with system details. */
+    public val SystemInformation: FeedType = FeedType("system_information")
 
-  /** The vehicle_types.json file describing available vehicle types. */
-  @SerialName("vehicle_types") VehicleTypes,
+    /** The vehicle_types.json file describing available vehicle types. */
+    public val VehicleTypes: FeedType = FeedType("vehicle_types")
 
-  /** The station_information.json file with station details. */
-  @SerialName("station_information") StationInformation,
+    /** The station_information.json file with station details. */
+    public val StationInformation: FeedType = FeedType("station_information")
 
-  /** The station_status.json file with real-time station status. */
-  @SerialName("station_status") StationStatus,
+    /** The station_status.json file with real-time station status. */
+    public val StationStatus: FeedType = FeedType("station_status")
 
-  /** The vehicle_status.json file with available vehicles. */
-  @SerialName("vehicle_status") VehicleStatus,
+    /** The vehicle_status.json file with available vehicles. */
+    public val VehicleStatus: FeedType = FeedType("vehicle_status")
 
-  /** The system_regions.json file with geographic regions. */
-  @SerialName("system_regions") SystemRegions,
+    /** The system_regions.json file with geographic regions. */
+    public val SystemRegions: FeedType = FeedType("system_regions")
 
-  /** The system_pricing_plans.json file with pricing information. */
-  @SerialName("system_pricing_plans") SystemPricingPlans,
+    /** The system_pricing_plans.json file with pricing information. */
+    public val SystemPricingPlans: FeedType = FeedType("system_pricing_plans")
 
-  /** The system_alerts.json file with system alerts. */
-  @SerialName("system_alerts") SystemAlerts,
+    /** The system_alerts.json file with system alerts. */
+    public val SystemAlerts: FeedType = FeedType("system_alerts")
 
-  /** The geofencing_zones.json file with geofencing zones. */
-  @SerialName("geofencing_zones") GeofencingZones,
+    /** The geofencing_zones.json file with geofencing zones. */
+    public val GeofencingZones: FeedType = FeedType("geofencing_zones")
+  }
 }

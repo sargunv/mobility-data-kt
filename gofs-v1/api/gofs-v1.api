@@ -462,26 +462,45 @@ public final class dev/sargunv/mobilitydata/gofs/v1/Fares$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gofs/v1/FeedType : java/lang/Enum {
-	public static final field BookingRules Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field Calendars Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
+public final class dev/sargunv/mobilitydata/gofs/v1/FeedType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/FeedType$Companion;
-	public static final field Fares Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field OperatingRules Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field RealtimeBookings Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field ServiceBrands Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field SystemInformation Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field SystemManifest Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field VehicleTypes Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field VersionManifest Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field WaitTimes Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static final field Zones Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gofs/v1/FeedType;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gofs/v1/FeedType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gofs/v1/FeedType$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-2-COv10 (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-gW_9_M0 (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gofs/v1/FeedType$Companion {
+	public final fun getBookingRules-4DrMvNo ()Ljava/lang/String;
+	public final fun getCalendars-4DrMvNo ()Ljava/lang/String;
+	public final fun getFares-4DrMvNo ()Ljava/lang/String;
+	public final fun getOperatingRules-4DrMvNo ()Ljava/lang/String;
+	public final fun getRealtimeBookings-4DrMvNo ()Ljava/lang/String;
+	public final fun getServiceBrands-4DrMvNo ()Ljava/lang/String;
+	public final fun getSystemInformation-4DrMvNo ()Ljava/lang/String;
+	public final fun getSystemManifest-4DrMvNo ()Ljava/lang/String;
+	public final fun getVehicleTypes-4DrMvNo ()Ljava/lang/String;
+	public final fun getVersionManifest-4DrMvNo ()Ljava/lang/String;
+	public final fun getWaitTimes-4DrMvNo ()Ljava/lang/String;
+	public final fun getZones-4DrMvNo ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -773,23 +792,23 @@ public final class dev/sargunv/mobilitydata/gofs/v1/Service : java/util/Map, kot
 	public fun <init> ([Lkotlin/Pair;)V
 	public fun clear ()V
 	public final fun component1 ()Ljava/util/Map;
-	public fun compute (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;Ljava/util/function/BiFunction;)Ljava/lang/String;
 	public synthetic fun compute (Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-	public fun computeIfAbsent (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;Ljava/util/function/Function;)Ljava/lang/String;
+	public fun compute-NkZg1-I (Ljava/lang/String;Ljava/util/function/BiFunction;)Ljava/lang/String;
 	public synthetic fun computeIfAbsent (Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-	public fun computeIfPresent (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;Ljava/util/function/BiFunction;)Ljava/lang/String;
+	public fun computeIfAbsent-NkZg1-I (Ljava/lang/String;Ljava/util/function/Function;)Ljava/lang/String;
 	public synthetic fun computeIfPresent (Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-	public fun containsKey (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;)Z
+	public fun computeIfPresent-NkZg1-I (Ljava/lang/String;Ljava/util/function/BiFunction;)Ljava/lang/String;
 	public final fun containsKey (Ljava/lang/Object;)Z
+	public fun containsKey-oC_8zV4 (Ljava/lang/String;)Z
 	public final fun containsValue (Ljava/lang/Object;)Z
 	public fun containsValue (Ljava/lang/String;)Z
 	public final fun copy (Ljava/util/Map;)Ldev/sargunv/mobilitydata/gofs/v1/Service;
 	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gofs/v1/Service;Ljava/util/Map;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/Service;
 	public final fun entrySet ()Ljava/util/Set;
 	public fun equals (Ljava/lang/Object;)Z
-	public fun get (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;)Ljava/lang/String;
 	public final synthetic fun get (Ljava/lang/Object;)Ljava/lang/Object;
 	public final fun get (Ljava/lang/Object;)Ljava/lang/String;
+	public fun get-oC_8zV4 (Ljava/lang/String;)Ljava/lang/String;
 	public fun getEntries ()Ljava/util/Set;
 	public final fun getFeeds ()Ljava/util/Map;
 	public fun getKeys ()Ljava/util/Set;
@@ -798,20 +817,20 @@ public final class dev/sargunv/mobilitydata/gofs/v1/Service : java/util/Map, kot
 	public fun hashCode ()I
 	public fun isEmpty ()Z
 	public final fun keySet ()Ljava/util/Set;
-	public fun merge (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;Ljava/lang/String;Ljava/util/function/BiFunction;)Ljava/lang/String;
 	public synthetic fun merge (Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-	public fun put (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;Ljava/lang/String;)Ljava/lang/String;
+	public fun merge-fry-5eY (Ljava/lang/String;Ljava/lang/String;Ljava/util/function/BiFunction;)Ljava/lang/String;
 	public synthetic fun put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+	public fun put-NkZg1-I (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 	public fun putAll (Ljava/util/Map;)V
-	public fun putIfAbsent (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;Ljava/lang/String;)Ljava/lang/String;
 	public synthetic fun putIfAbsent (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+	public fun putIfAbsent-NkZg1-I (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 	public synthetic fun remove (Ljava/lang/Object;)Ljava/lang/Object;
 	public fun remove (Ljava/lang/Object;)Ljava/lang/String;
 	public fun remove (Ljava/lang/Object;Ljava/lang/Object;)Z
-	public fun replace (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;Ljava/lang/String;)Ljava/lang/String;
-	public fun replace (Ldev/sargunv/mobilitydata/gofs/v1/FeedType;Ljava/lang/String;Ljava/lang/String;)Z
 	public synthetic fun replace (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 	public synthetic fun replace (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+	public fun replace-NkZg1-I (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+	public fun replace-fry-5eY (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 	public fun replaceAll (Ljava/util/function/BiFunction;)V
 	public final fun size ()I
 	public fun toString ()Ljava/lang/String;

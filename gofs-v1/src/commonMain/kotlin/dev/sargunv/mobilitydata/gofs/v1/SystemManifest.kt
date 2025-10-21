@@ -62,29 +62,43 @@ public data class Service(
  * corresponding feed type.
  */
 @Serializable
-public enum class FeedType {
-  /** Auto-discovery file linking to all other feeds. */
-  @SerialName("gofs") SystemManifest,
-  /** Shows different versions available for the same GOFS feed. */
-  @SerialName("gofs_versions") VersionManifest,
-  /** Defines attributes of the on-demand service system. */
-  @SerialName("system_information") SystemInformation,
-  /** Details the different on-demand service brands available. */
-  @SerialName("service_brands") ServiceBrands,
-  /** Describes vehicle types used for operating the on-demand services. */
-  @SerialName("vehicle_types") VehicleTypes,
-  /** Geographically defines zones where on-demand services are available. */
-  @SerialName("zones") Zones,
-  /** Defines rules for intra-zone and inter-zone trips. */
-  @SerialName("operating_rules") OperatingRules,
-  /** Defines dates and days when on-demand services are available. */
-  @SerialName("calendars") Calendars,
-  /** Defines static fare rules for a system. */
-  @SerialName("fares") Fares,
-  /** Returns wait time for queried areas. */
-  @SerialName("wait_time") WaitTimes,
-  /** Returns rules for booking in queried areas. */
-  @SerialName("booking_rules") BookingRules,
-  /** Returns details for available booking when static booking details can't be provided. */
-  @SerialName("realtime_booking") RealtimeBookings,
+@JvmInline
+public value class FeedType(public val value: String) {
+  public companion object {
+    /** Auto-discovery file linking to all other feeds. */
+    public val SystemManifest: FeedType = FeedType("gofs")
+
+    /** Shows different versions available for the same GOFS feed. */
+    public val VersionManifest: FeedType = FeedType("gofs_versions")
+
+    /** Defines attributes of the on-demand service system. */
+    public val SystemInformation: FeedType = FeedType("system_information")
+
+    /** Details the different on-demand service brands available. */
+    public val ServiceBrands: FeedType = FeedType("service_brands")
+
+    /** Describes vehicle types used for operating the on-demand services. */
+    public val VehicleTypes: FeedType = FeedType("vehicle_types")
+
+    /** Geographically defines zones where on-demand services are available. */
+    public val Zones: FeedType = FeedType("zones")
+
+    /** Defines rules for intra-zone and inter-zone trips. */
+    public val OperatingRules: FeedType = FeedType("operating_rules")
+
+    /** Defines dates and days when on-demand services are available. */
+    public val Calendars: FeedType = FeedType("calendars")
+
+    /** Defines static fare rules for a system. */
+    public val Fares: FeedType = FeedType("fares")
+
+    /** Returns wait time for queried areas. */
+    public val WaitTimes: FeedType = FeedType("wait_time")
+
+    /** Returns rules for booking in queried areas. */
+    public val BookingRules: FeedType = FeedType("booking_rules")
+
+    /** Returns details for available booking when static booking details can't be provided. */
+    public val RealtimeBookings: FeedType = FeedType("realtime_booking")
+  }
 }
