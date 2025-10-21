@@ -62,34 +62,34 @@ public data class Route(
  */
 @Serializable
 public enum class RouteType {
-  /** Tram, Streetcar, Light rail */
+  /** Tram, Streetcar, Light rail. */
   @SerialName("0") TRAM,
 
-  /** Subway, Metro */
+  /** Subway, Metro. */
   @SerialName("1") SUBWAY,
 
-  /** Rail */
+  /** Rail. */
   @SerialName("2") RAIL,
 
-  /** Bus */
+  /** Bus. */
   @SerialName("3") BUS,
 
-  /** Ferry */
+  /** Ferry. */
   @SerialName("4") FERRY,
 
-  /** Cable tram */
+  /** Cable tram. */
   @SerialName("5") CABLE_TRAM,
 
-  /** Aerial lift, suspended cable car */
+  /** Aerial lift, suspended cable car. */
   @SerialName("6") AERIAL_LIFT,
 
-  /** Funicular */
+  /** Funicular. */
   @SerialName("7") FUNICULAR,
 
-  /** Trolleybus */
+  /** Trolleybus. */
   @SerialName("11") TROLLEYBUS,
 
-  /** Monorail */
+  /** Monorail. */
   @SerialName("12") MONORAIL,
 }
 
