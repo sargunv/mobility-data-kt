@@ -3,6 +3,7 @@ package dev.sargunv.mobilitydata.gbfs.v1
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -67,30 +68,37 @@ public data class Station(
 
 /** Payment methods accepted at a station. */
 @Serializable
-public enum class RentalMethod {
-  /** Operator issued vehicle key / fob / card. */
-  @SerialName("KEY") Key,
+@JvmInline
+public value class RentalMethod(
+  /** The string value representing the rental method. */
+  public val value: String
+) {
+  /** Companion object containing predefined rental method constants. */
+  public companion object {
+    /** Operator issued vehicle key / fob / card. */
+    public val Key: RentalMethod = RentalMethod("KEY")
 
-  /** Credit card payment. */
-  @SerialName("CREDITCARD") CreditCard,
+    /** Credit card payment. */
+    public val CreditCard: RentalMethod = RentalMethod("CREDITCARD")
 
-  /** PayPass payment. */
-  @SerialName("PAYPASS") PayPass,
+    /** PayPass payment. */
+    public val PayPass: RentalMethod = RentalMethod("PAYPASS")
 
-  /** Apple Pay payment. */
-  @SerialName("APPLEPAY") ApplePay,
+    /** Apple Pay payment. */
+    public val ApplePay: RentalMethod = RentalMethod("APPLEPAY")
 
-  /** Android Pay payment. */
-  @SerialName("ANDROIDPAY") AndroidPay,
+    /** Android Pay payment. */
+    public val AndroidPay: RentalMethod = RentalMethod("ANDROIDPAY")
 
-  /** Transit card payment. */
-  @SerialName("TRANSITCARD") TransitCard,
+    /** Transit card payment. */
+    public val TransitCard: RentalMethod = RentalMethod("TRANSITCARD")
 
-  /** Account number payment. */
-  @SerialName("ACCOUNTNUMBER") AccountNumber,
+    /** Account number payment. */
+    public val AccountNumber: RentalMethod = RentalMethod("ACCOUNTNUMBER")
 
-  /** Phone payment. */
-  @SerialName("PHONE") Phone,
+    /** Phone payment. */
+    public val Phone: RentalMethod = RentalMethod("PHONE")
+  }
 }
 
 /** Contains rental URIs for different platforms to support deep linking. */

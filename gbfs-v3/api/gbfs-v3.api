@@ -1,9 +1,9 @@
 public final class dev/sargunv/mobilitydata/gbfs/v3/Alert {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/Alert$Companion;
-	public fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ldev/sargunv/mobilitydata/utils/Timestamp;)V
-	public synthetic fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ldev/sargunv/mobilitydata/utils/Timestamp;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ldev/sargunv/mobilitydata/utils/Timestamp;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ldev/sargunv/mobilitydata/utils/Timestamp;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
-	public final fun component2 ()Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;
+	public final fun component2-O-xHc5Q ()Ljava/lang/String;
 	public final fun component3 ()Ljava/util/List;
 	public final fun component4 ()Ljava/util/List;
 	public final fun component5 ()Ljava/util/List;
@@ -11,8 +11,8 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/Alert {
 	public final fun component7 ()Ljava/util/Map;
 	public final fun component8 ()Ljava/util/Map;
 	public final fun component9 ()Ldev/sargunv/mobilitydata/utils/Timestamp;
-	public final fun copy (Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ldev/sargunv/mobilitydata/utils/Timestamp;)Ldev/sargunv/mobilitydata/gbfs/v3/Alert;
-	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gbfs/v3/Alert;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ldev/sargunv/mobilitydata/utils/Timestamp;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gbfs/v3/Alert;
+	public final fun copy-XaXCT5Q (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ldev/sargunv/mobilitydata/utils/Timestamp;)Ldev/sargunv/mobilitydata/gbfs/v3/Alert;
+	public static synthetic fun copy-XaXCT5Q$default (Ldev/sargunv/mobilitydata/gbfs/v3/Alert;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ldev/sargunv/mobilitydata/utils/Timestamp;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gbfs/v3/Alert;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAlertId ()Ljava/lang/String;
 	public final fun getDescription ()Ljava/util/Map;
@@ -21,7 +21,7 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/Alert {
 	public final fun getStationIds ()Ljava/util/List;
 	public final fun getSummary ()Ljava/util/Map;
 	public final fun getTimes ()Ljava/util/List;
-	public final fun getType ()Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;
+	public final fun getType-O-xHc5Q ()Ljava/lang/String;
 	public final fun getUrl ()Ljava/util/Map;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
@@ -72,18 +72,37 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/AlertTime$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gbfs/v3/AlertType : java/lang/Enum {
+public final class dev/sargunv/mobilitydata/gbfs/v3/AlertType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/AlertType$Companion;
-	public static final field Other Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;
-	public static final field StationClosure Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;
-	public static final field StationMove Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;
-	public static final field SystemClosure Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/AlertType;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gbfs/v3/AlertType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gbfs/v3/AlertType$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-i0jNoC0 (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-6JEZ380 (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/AlertType$Companion {
+	public final fun getOther-O-xHc5Q ()Ljava/lang/String;
+	public final fun getStationClosure-O-xHc5Q ()Ljava/lang/String;
+	public final fun getStationMove-O-xHc5Q ()Ljava/lang/String;
+	public final fun getSystemClosure-O-xHc5Q ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -510,19 +529,38 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/GeofencingZones$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gbfs/v3/ParkingType : java/lang/Enum {
+public final class dev/sargunv/mobilitydata/gbfs/v3/ParkingType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType$Companion;
-	public static final field Other Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
-	public static final field ParkingLot Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
-	public static final field SidewalkParking Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
-	public static final field StreetParking Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
-	public static final field UndergroundParking Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gbfs/v3/ParkingType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-Gbv8NzA (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-0J9KjoU (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/ParkingType$Companion {
+	public final fun getOther-mqEDfDI ()Ljava/lang/String;
+	public final fun getParkingLot-mqEDfDI ()Ljava/lang/String;
+	public final fun getSidewalkParking-mqEDfDI ()Ljava/lang/String;
+	public final fun getStreetParking-mqEDfDI ()Ljava/lang/String;
+	public final fun getUndergroundParking-mqEDfDI ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -695,22 +733,41 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/RentalAppUris$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gbfs/v3/RentalMethod : java/lang/Enum {
-	public static final field AccountNumber Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
-	public static final field AndroidPay Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
-	public static final field ApplePay Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
+public final class dev/sargunv/mobilitydata/gbfs/v3/RentalMethod {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod$Companion;
-	public static final field CreditCard Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
-	public static final field Key Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
-	public static final field PayPass Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
-	public static final field Phone Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
-	public static final field TransitCard Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gbfs/v3/RentalMethod$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gbfs/v3/RentalMethod$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-DfxJNYw (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-huR5lhs (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/RentalMethod$Companion {
+	public final fun getAccountNumber-RoxeKuo ()Ljava/lang/String;
+	public final fun getAndroidPay-RoxeKuo ()Ljava/lang/String;
+	public final fun getApplePay-RoxeKuo ()Ljava/lang/String;
+	public final fun getCreditCard-RoxeKuo ()Ljava/lang/String;
+	public final fun getKey-RoxeKuo ()Ljava/lang/String;
+	public final fun getPayPass-RoxeKuo ()Ljava/lang/String;
+	public final fun getPhone-RoxeKuo ()Ljava/lang/String;
+	public final fun getTransitCard-RoxeKuo ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -815,14 +872,14 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/ServiceManifest$Companion {
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/Station {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/Station$Companion;
-	public fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Boolean;Lorg/maplibre/spatialk/geojson/MultiPolygon;Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;Ldev/sargunv/mobilitydata/gbfs/v3/RentalUris;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Boolean;Lorg/maplibre/spatialk/geojson/MultiPolygon;Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;Ldev/sargunv/mobilitydata/gbfs/v3/RentalUris;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Boolean;Lorg/maplibre/spatialk/geojson/MultiPolygon;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;Ldev/sargunv/mobilitydata/gbfs/v3/RentalUris;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Boolean;Lorg/maplibre/spatialk/geojson/MultiPolygon;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;Ldev/sargunv/mobilitydata/gbfs/v3/RentalUris;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component10 ()Ljava/lang/String;
 	public final fun component11 ()Ljava/util/List;
 	public final fun component12 ()Ljava/lang/Boolean;
 	public final fun component13 ()Lorg/maplibre/spatialk/geojson/MultiPolygon;
-	public final fun component14 ()Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
+	public final fun component14-AJoHfF4 ()Ljava/lang/String;
 	public final fun component15 ()Ljava/lang/Boolean;
 	public final fun component16 ()Ljava/lang/String;
 	public final fun component17 ()Ljava/lang/Integer;
@@ -839,8 +896,8 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/Station {
 	public final fun component7 ()Ljava/lang/String;
 	public final fun component8 ()Ljava/lang/String;
 	public final fun component9 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Boolean;Lorg/maplibre/spatialk/geojson/MultiPolygon;Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;Ldev/sargunv/mobilitydata/gbfs/v3/RentalUris;)Ldev/sargunv/mobilitydata/gbfs/v3/Station;
-	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gbfs/v3/Station;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Boolean;Lorg/maplibre/spatialk/geojson/MultiPolygon;Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;Ldev/sargunv/mobilitydata/gbfs/v3/RentalUris;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gbfs/v3/Station;
+	public final fun copy-r1zcDoI (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Boolean;Lorg/maplibre/spatialk/geojson/MultiPolygon;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;Ldev/sargunv/mobilitydata/gbfs/v3/RentalUris;)Ldev/sargunv/mobilitydata/gbfs/v3/Station;
+	public static synthetic fun copy-r1zcDoI$default (Ldev/sargunv/mobilitydata/gbfs/v3/Station;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Boolean;Lorg/maplibre/spatialk/geojson/MultiPolygon;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;Ldev/sargunv/mobilitydata/gbfs/v3/RentalUris;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gbfs/v3/Station;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAddress ()Ljava/lang/String;
 	public final fun getCapacity ()Ljava/lang/Integer;
@@ -850,7 +907,7 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/Station {
 	public final fun getLon ()D
 	public final fun getName ()Ljava/util/Map;
 	public final fun getParkingHoop ()Ljava/lang/Boolean;
-	public final fun getParkingType ()Ldev/sargunv/mobilitydata/gbfs/v3/ParkingType;
+	public final fun getParkingType-AJoHfF4 ()Ljava/lang/String;
 	public final fun getPostalCode ()Ljava/lang/String;
 	public final fun getRegionId ()Ljava/lang/String;
 	public final fun getRentalMethods ()Ljava/util/List;
@@ -1366,24 +1423,43 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/Vehicle$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory : java/lang/Enum {
-	public static final field AirConditioning Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static final field Automatic Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
+public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory$Companion;
-	public static final field Convertible Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static final field CruiseControl Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static final field Doors2 Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static final field Doors3 Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static final field Doors4 Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static final field Doors5 Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static final field Manual Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static final field Navigation Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-yHCbXNQ (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-51EYm_s (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleAccessory$Companion {
+	public final fun getAirConditioning-osTLe58 ()Ljava/lang/String;
+	public final fun getAutomatic-osTLe58 ()Ljava/lang/String;
+	public final fun getConvertible-osTLe58 ()Ljava/lang/String;
+	public final fun getCruiseControl-osTLe58 ()Ljava/lang/String;
+	public final fun getDoors2-osTLe58 ()Ljava/lang/String;
+	public final fun getDoors3-osTLe58 ()Ljava/lang/String;
+	public final fun getDoors4-osTLe58 ()Ljava/lang/String;
+	public final fun getDoors5-osTLe58 ()Ljava/lang/String;
+	public final fun getManual-osTLe58 ()Ljava/lang/String;
+	public final fun getNavigation-osTLe58 ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -1419,71 +1495,147 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleAssets$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment : java/lang/Enum {
-	public static final field ChildSeatA Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment;
-	public static final field ChildSeatB Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment;
-	public static final field ChildSeatC Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment;
+public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment$Companion;
-	public static final field SnowChains Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment;
-	public static final field WinterTires Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-nPmu6l0 (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-OVUOQ0Y (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleEquipment$Companion {
+	public final fun getChildSeatA-H7uO9Lc ()Ljava/lang/String;
+	public final fun getChildSeatB-H7uO9Lc ()Ljava/lang/String;
+	public final fun getChildSeatC-H7uO9Lc ()Ljava/lang/String;
+	public final fun getSnowChains-H7uO9Lc ()Ljava/lang/String;
+	public final fun getWinterTires-H7uO9Lc ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor : java/lang/Enum {
-	public static final field Bicycle Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
-	public static final field Car Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
-	public static final field CargoBicycle Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
+public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor$Companion;
-	public static final field Moped Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
-	public static final field Other Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
-	public static final field ScooterSeated Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
-	public static final field ScooterStanding Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-d8GDb6U (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-ZU_V3co (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor$Companion {
+	public final fun getBicycle-eMuMvFs ()Ljava/lang/String;
+	public final fun getCar-eMuMvFs ()Ljava/lang/String;
+	public final fun getCargoBicycle-eMuMvFs ()Ljava/lang/String;
+	public final fun getMoped-eMuMvFs ()Ljava/lang/String;
+	public final fun getOther-eMuMvFs ()Ljava/lang/String;
+	public final fun getScooterSeated-eMuMvFs ()Ljava/lang/String;
+	public final fun getScooterStanding-eMuMvFs ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType : java/lang/Enum {
-	public static final field Combustion Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
-	public static final field CombustionDiesel Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
+public final class dev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType$Companion;
-	public static final field Electric Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
-	public static final field ElectricAssist Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
-	public static final field Human Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
-	public static final field Hybrid Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
-	public static final field HydrogenFuelCell Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
-	public static final field PlugInHybrid Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-00wMCkw (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-fhE_SLU (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType$Companion {
+	public final fun getCombustion-QRWRdTY ()Ljava/lang/String;
+	public final fun getCombustionDiesel-QRWRdTY ()Ljava/lang/String;
+	public final fun getElectric-QRWRdTY ()Ljava/lang/String;
+	public final fun getElectricAssist-QRWRdTY ()Ljava/lang/String;
+	public final fun getHuman-QRWRdTY ()Ljava/lang/String;
+	public final fun getHybrid-QRWRdTY ()Ljava/lang/String;
+	public final fun getHydrogenFuelCell-QRWRdTY ()Ljava/lang/String;
+	public final fun getPlugInHybrid-QRWRdTY ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint : java/lang/Enum {
-	public static final field AnyStation Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;
+public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint$Companion;
-	public static final field FreeFloating Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;
-	public static final field Hybrid Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;
-	public static final field RoundtripStation Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;
-	public static fun values ()[Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-3cBb8dE (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-HzXCiPg (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint$Companion {
+	public final fun getAnyStation-riIJoz4 ()Ljava/lang/String;
+	public final fun getFreeFloating-riIJoz4 ()Ljava/lang/String;
+	public final fun getHybrid-riIJoz4 ()Ljava/lang/String;
+	public final fun getRoundtripStation-riIJoz4 ()Ljava/lang/String;
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -1558,8 +1710,8 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleStatus$Companion {
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/VehicleType$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;Ljava/util/List;Ljava/lang/Double;Ljava/util/Map;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/time/Duration;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;Ljava/util/List;Ljava/lang/Double;Ljava/util/Map;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/time/Duration;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/lang/Double;Ljava/util/Map;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/time/Duration;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/lang/Double;Ljava/util/Map;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/time/Duration;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component10 ()Ljava/util/List;
 	public final fun component11 ()Ljava/lang/Integer;
@@ -1571,21 +1723,21 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleType {
 	public final fun component17 ()Ljava/lang/Integer;
 	public final fun component18 ()Ljava/lang/Integer;
 	public final fun component19 ()Ljava/lang/Integer;
-	public final fun component2 ()Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
+	public final fun component2-eMuMvFs ()Ljava/lang/String;
 	public final fun component20-FghU774 ()Lkotlin/time/Duration;
-	public final fun component21 ()Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;
+	public final fun component21-daD76uk ()Ljava/lang/String;
 	public final fun component22 ()Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;
 	public final fun component23 ()Ljava/lang/String;
 	public final fun component24 ()Ljava/util/List;
 	public final fun component3 ()Ljava/lang/Integer;
 	public final fun component4 ()Ljava/lang/Integer;
 	public final fun component5 ()Ljava/lang/Integer;
-	public final fun component6 ()Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
+	public final fun component6-QRWRdTY ()Ljava/lang/String;
 	public final fun component7 ()Ljava/util/List;
 	public final fun component8 ()Ljava/lang/Double;
 	public final fun component9 ()Ljava/util/Map;
-	public final fun copy-WiwOxqs (Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;Ljava/util/List;Ljava/lang/Double;Ljava/util/Map;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/time/Duration;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;Ljava/lang/String;Ljava/util/List;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleType;
-	public static synthetic fun copy-WiwOxqs$default (Ldev/sargunv/mobilitydata/gbfs/v3/VehicleType;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;Ljava/util/List;Ljava/lang/Double;Ljava/util/Map;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/time/Duration;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleType;
+	public final fun copy-QIYxMbY (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/lang/Double;Ljava/util/Map;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/time/Duration;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;Ljava/lang/String;Ljava/util/List;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleType;
+	public static synthetic fun copy-QIYxMbY$default (Ldev/sargunv/mobilitydata/gbfs/v3/VehicleType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/lang/Double;Ljava/util/Map;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/time/Duration;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gbfs/v3/VehicleType;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCargoLoadCapacity ()Ljava/lang/Integer;
 	public final fun getCargoVolumeCapacity ()Ljava/lang/Integer;
@@ -1594,7 +1746,7 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleType {
 	public final fun getDefaultReserveTime-FghU774 ()Lkotlin/time/Duration;
 	public final fun getDescription ()Ljava/util/Map;
 	public final fun getEcoLabels ()Ljava/util/List;
-	public final fun getFormFactor ()Ldev/sargunv/mobilitydata/gbfs/v3/VehicleFormFactor;
+	public final fun getFormFactor-eMuMvFs ()Ljava/lang/String;
 	public final fun getGCO2km ()Ljava/lang/Integer;
 	public final fun getMake ()Ljava/util/Map;
 	public final fun getMaxPermittedSpeed ()Ljava/lang/Integer;
@@ -1602,9 +1754,9 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/VehicleType {
 	public final fun getModel ()Ljava/util/Map;
 	public final fun getName ()Ljava/util/Map;
 	public final fun getPricingPlanIds ()Ljava/util/List;
-	public final fun getPropulsionType ()Ldev/sargunv/mobilitydata/gbfs/v3/VehiclePropulsionType;
+	public final fun getPropulsionType-QRWRdTY ()Ljava/lang/String;
 	public final fun getRatedPower ()Ljava/lang/Integer;
-	public final fun getReturnConstraint ()Ldev/sargunv/mobilitydata/gbfs/v3/VehicleReturnConstraint;
+	public final fun getReturnConstraint-daD76uk ()Ljava/lang/String;
 	public final fun getRiderCapacity ()Ljava/lang/Integer;
 	public final fun getVehicleAccessories ()Ljava/util/List;
 	public final fun getVehicleAssets ()Ldev/sargunv/mobilitydata/gbfs/v3/VehicleAssets;

@@ -1,9 +1,9 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.gofs.v1.serialization.BookingTypeSerializer
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import dev.sargunv.mobilitydata.utils.WholeMinutes
+import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -104,15 +104,19 @@ public data class BookingRule(
  * - Up to same-day booking with advance notice
  * - Up to prior day(s) booking
  */
-@Serializable(with = BookingTypeSerializer::class)
-public enum class BookingType(
+@Serializable
+@JvmInline
+public value class BookingType(
   /** The numeric value used in the GOFS feed for this booking type. */
   public val value: Int
 ) {
-  /** Real-time booking. To be used with wait_time. */
-  RealTime(0),
-  /** Up to same-day booking with advance notice. */
-  AdvanceSameDay(1),
-  /** Up to prior day(s) booking. */
-  AdvancePriorDay(2),
+  /** Companion object containing predefined booking type constants. */
+  public companion object {
+    /** Real-time booking. To be used with wait_time. */
+    public val RealTime: BookingType = BookingType(0)
+    /** Up to same-day booking with advance notice. */
+    public val AdvanceSameDay: BookingType = BookingType(1)
+    /** Up to prior day(s) booking. */
+    public val AdvancePriorDay: BookingType = BookingType(2)
+  }
 }

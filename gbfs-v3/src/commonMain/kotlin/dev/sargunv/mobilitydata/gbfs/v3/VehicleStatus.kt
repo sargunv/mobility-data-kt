@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Timestamp
+import kotlin.jvm.JvmInline
 import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -145,20 +146,26 @@ public data class Vehicle(
  * vehicle.
  */
 @Serializable
-public enum class VehicleEquipment {
+@JvmInline
+public value class VehicleEquipment(
+  /** The string value representing the vehicle equipment. */
+  public val value: String
+) {
+  /** Companion object containing predefined vehicle equipment constants. */
+  public companion object {
+    /** Baby seat (0-10kg). */
+    public val ChildSeatA: VehicleEquipment = VehicleEquipment("child_seat_a")
 
-  /** Baby seat (0-10kg). */
-  @SerialName("child_seat_a") ChildSeatA,
+    /** Seat or seat extension for small children (9-18 kg). */
+    public val ChildSeatB: VehicleEquipment = VehicleEquipment("child_seat_b")
 
-  /** Seat or seat extension for small children (9-18 kg). */
-  @SerialName("child_seat_b") ChildSeatB,
+    /** Seat or seat extension for older children (15-36 kg). */
+    public val ChildSeatC: VehicleEquipment = VehicleEquipment("child_seat_c")
 
-  /** Seat or seat extension for older children (15-36 kg). */
-  @SerialName("child_seat_c") ChildSeatC,
+    /** Vehicle has tires for winter weather. */
+    public val WinterTires: VehicleEquipment = VehicleEquipment("winter_tires")
 
-  /** Vehicle has tires for winter weather. */
-  @SerialName("winter_tires") WinterTires,
-
-  /** Snow chains. */
-  @SerialName("snow_chains") SnowChains,
+    /** Snow chains. */
+    public val SnowChains: VehicleEquipment = VehicleEquipment("snow_chains")
+  }
 }
