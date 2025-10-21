@@ -14,8 +14,10 @@ detekt = "2.0.0-alpha.0"
 spatialk = "0.4.0"
 ktor = "3.3.1"
 joda-timezone = "2.22.0"
+kotlin-dsv = "0.4.0"
 
 [libraries]
+kotlin-dsv = { module = "dev.sargunv.kotlin-dsv:kotlin-dsv", version.ref = "kotlin-dsv" }
 kotlinx-io-core = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }

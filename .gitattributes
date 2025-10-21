@@ -2,9 +2,8 @@
 *.md linguist-documentation
 docs/** linguist-documentation
 
-# Test resources - mark as vendored to exclude from language statistics
-**/resources/**/*.csv linguist-vendored
-**/resources/**/*.json linguist-vendored
+# Sample datasets - mark as vendored and use LFS
+sample-data/**/* linguist-vendored filter=lfs diff=lfs merge=lfs -text
 # Dependency lock files - mark as vendored
 yarn.lock linguist-vendored
 # Gradle wrapper - mark as vendored
