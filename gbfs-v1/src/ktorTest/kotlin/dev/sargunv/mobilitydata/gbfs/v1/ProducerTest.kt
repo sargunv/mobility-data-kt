@@ -21,17 +21,24 @@ class ProducerTest {
   private fun createMockEngine(
     removePrefix: String,
     resourcesSubdirectory: String,
-    addSuffix: String = "",
+    extension: String = "",
   ): MockEngine {
+    val cwd = SystemFileSystem.resolve(Path("."))
+    val projectDir =
+      when (cwd.name) {
+        "mobility-data-gbfs-v1-test" -> cwd.parent!!.parent!!.parent!!.parent!!
+        "gbfs-v1" -> cwd.parent!!
+        else -> error("unexpected: $cwd")
+      }
     return MockEngine { request ->
       val urlPath = request.url.fullPath.removePrefix(removePrefix)
-      val localPath = "./src/ktorTest/resources/$resourcesSubdirectory/$urlPath$addSuffix"
+      val localPath =
+        Path("$projectDir", "sample-data", "gbfs-v1", resourcesSubdirectory, urlPath + extension)
       try {
-        val source = SystemFileSystem.source(Path(localPath))
+        val source = SystemFileSystem.source(localPath)
         val content = source.buffered().readString()
         respond(content, HttpStatusCode.OK, headersOf("Content-Type" to listOf("application/json")))
       } catch (_: FileNotFoundException) {
-        println("Requested path: $localPath")
         respondError(HttpStatusCode.NotFound)
       }
     }
@@ -46,7 +53,7 @@ class ProducerTest {
         createMockEngine(
           removePrefix = "/customer/ube/gbfs/v1/en/",
           resourcesSubdirectory = "publicbikesystem",
-          addSuffix = ".json",
+          extension = ".json",
         )
       )
 
@@ -107,5 +114,11 @@ class ProducerTest {
   @Test
   fun bolt() = runTest {
     // TODO: get https://mds.bolt.eu/gbfs/1/720/gbfs
+  }
+
+  @Test
+  fun lime() = runTest {
+    // TODO: get https://data.lime.bike/api/partners/v1/gbfs/seattle/gbfs.json
+    // and watch out; the station status feed is non conformant
   }
 }
