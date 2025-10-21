@@ -86,4 +86,16 @@ class TimestampSerializerTest {
 
     assertEquals(testData, decoded)
   }
+
+  @Test
+  fun testDeserializeTimestampWithSpaceSeparator() {
+    // Test that timestamps with space instead of 'T' are accepted (common in some feeds)
+    val jsonString = """{"timestamp":"2025-10-21 04:14:56.870533+00:00"}"""
+
+    val result = json.decodeFromString(TestData.serializer(), jsonString)
+
+    val expectedInstant = Instant.parse("2025-10-21T04:14:56.870533Z")
+    val expectedOffset = UtcOffset.ZERO
+    assertEquals(Timestamp(expectedInstant, expectedOffset), result.timestamp)
+  }
 }

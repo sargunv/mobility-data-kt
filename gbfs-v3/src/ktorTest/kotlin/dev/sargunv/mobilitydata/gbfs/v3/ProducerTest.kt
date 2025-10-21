@@ -6,7 +6,6 @@ import io.ktor.client.engine.mock.respondError
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.fullPath
 import io.ktor.http.headersOf
-import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlinx.coroutines.test.runTest
 import kotlinx.io.buffered
@@ -139,7 +138,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // INVALID: time format (space instead of T)
   fun ridecheck() = runTest {
     val client = GbfsV3Client(createMockEngine("ridecheck"))
     val service = client.getServiceManifest("gbfs.json").data
