@@ -57,7 +57,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // unknown feed type
   fun citiz() = runTest {
     val client = GbfsV3Client(createMockEngine("citiz"))
     val service = client.getServiceManifest("gbfs.json").data
@@ -103,7 +102,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // unknown vehicle type
   fun ecovelo() = runTest {
     val client = GbfsV3Client(createMockEngine("ecovelo"))
     val service = client.getServiceManifest("gbfs.json").data
@@ -114,11 +112,13 @@ class ProducerTest {
       client.getSystemRegions()
       client.getSystemPricingPlans()
       client.getSystemAlerts()
-      client.getVehicleTypes()
       client.getGeofencingZones()
       client.getStationInformation()
       client.getStationStatus()
       client.getVehicleStatus()
+
+      // INVALID: "scooter" enum entry is no longer valid
+      // client.getVehicleTypes()
     }
   }
 
@@ -141,7 +141,7 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // invalid timestamp format
+  @Ignore // INVALID: time format (space instead of T)
   fun ridecheck() = runTest {
     val client = GbfsV3Client(createMockEngine("ridecheck"))
     val service = client.getServiceManifest("gbfs.json").data

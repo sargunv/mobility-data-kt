@@ -26,32 +26,6 @@ final enum class dev.sargunv.mobilitydata.gofs.v1/BookingType : kotlin/Enum<dev.
     }
 }
 
-final enum class dev.sargunv.mobilitydata.gofs.v1/FeedType : kotlin/Enum<dev.sargunv.mobilitydata.gofs.v1/FeedType> { // dev.sargunv.mobilitydata.gofs.v1/FeedType|null[0]
-    enum entry BookingRules // dev.sargunv.mobilitydata.gofs.v1/FeedType.BookingRules|null[0]
-    enum entry Calendars // dev.sargunv.mobilitydata.gofs.v1/FeedType.Calendars|null[0]
-    enum entry Fares // dev.sargunv.mobilitydata.gofs.v1/FeedType.Fares|null[0]
-    enum entry OperatingRules // dev.sargunv.mobilitydata.gofs.v1/FeedType.OperatingRules|null[0]
-    enum entry RealtimeBookings // dev.sargunv.mobilitydata.gofs.v1/FeedType.RealtimeBookings|null[0]
-    enum entry ServiceBrands // dev.sargunv.mobilitydata.gofs.v1/FeedType.ServiceBrands|null[0]
-    enum entry SystemInformation // dev.sargunv.mobilitydata.gofs.v1/FeedType.SystemInformation|null[0]
-    enum entry SystemManifest // dev.sargunv.mobilitydata.gofs.v1/FeedType.SystemManifest|null[0]
-    enum entry VehicleTypes // dev.sargunv.mobilitydata.gofs.v1/FeedType.VehicleTypes|null[0]
-    enum entry VersionManifest // dev.sargunv.mobilitydata.gofs.v1/FeedType.VersionManifest|null[0]
-    enum entry WaitTimes // dev.sargunv.mobilitydata.gofs.v1/FeedType.WaitTimes|null[0]
-    enum entry Zones // dev.sargunv.mobilitydata.gofs.v1/FeedType.Zones|null[0]
-
-    final val entries // dev.sargunv.mobilitydata.gofs.v1/FeedType.entries|#static{}entries[0]
-        final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gofs.v1/FeedType> // dev.sargunv.mobilitydata.gofs.v1/FeedType.entries.<get-entries>|<get-entries>#static(){}[0]
-
-    final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.valueOf|valueOf#static(kotlin.String){}[0]
-    final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gofs.v1/FeedType> // dev.sargunv.mobilitydata.gofs.v1/FeedType.values|values#static(){}[0]
-
-    final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion|null[0]
-        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gofs.v1/FeedType> // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.serializer|serializer(){}[0]
-        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
-    }
-}
-
 final enum class dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding : kotlin/Enum<dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding> { // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding|null[0]
     enum entry Accessible // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.Accessible|null[0]
     enum entry AccessibleWithAssistance // dev.sargunv.mobilitydata.gofs.v1/WheelchairBoarding.AccessibleWithAssistance|null[0]
@@ -1105,6 +1079,55 @@ final class dev.sargunv.mobilitydata.gofs.v1/Zones : dev.sargunv.mobilitydata.go
         final val $childSerializers // dev.sargunv.mobilitydata.gofs.v1/Zones.Companion.$childSerializers|{}$childSerializers[0]
 
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gofs.v1/Zones> // dev.sargunv.mobilitydata.gofs.v1/Zones.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final value class dev.sargunv.mobilitydata.gofs.v1/FeedType { // dev.sargunv.mobilitydata.gofs.v1/FeedType|null[0]
+    constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.gofs.v1/FeedType.<init>|<init>(kotlin.String){}[0]
+
+    final val value // dev.sargunv.mobilitydata.gofs.v1/FeedType.value|{}value[0]
+        final fun <get-value>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/FeedType.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/FeedType.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/FeedType.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/FeedType.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gofs.v1/FeedType> { // dev.sargunv.mobilitydata.gofs.v1/FeedType.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gofs.v1/FeedType.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gofs.v1/FeedType.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gofs.v1/FeedType.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gofs.v1/FeedType) // dev.sargunv.mobilitydata.gofs.v1/FeedType.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gofs.v1.FeedType){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion|null[0]
+        final val BookingRules // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.BookingRules|{}BookingRules[0]
+            final fun <get-BookingRules>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.BookingRules.<get-BookingRules>|<get-BookingRules>(){}[0]
+        final val Calendars // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.Calendars|{}Calendars[0]
+            final fun <get-Calendars>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.Calendars.<get-Calendars>|<get-Calendars>(){}[0]
+        final val Fares // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.Fares|{}Fares[0]
+            final fun <get-Fares>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.Fares.<get-Fares>|<get-Fares>(){}[0]
+        final val OperatingRules // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.OperatingRules|{}OperatingRules[0]
+            final fun <get-OperatingRules>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.OperatingRules.<get-OperatingRules>|<get-OperatingRules>(){}[0]
+        final val RealtimeBookings // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.RealtimeBookings|{}RealtimeBookings[0]
+            final fun <get-RealtimeBookings>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.RealtimeBookings.<get-RealtimeBookings>|<get-RealtimeBookings>(){}[0]
+        final val ServiceBrands // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.ServiceBrands|{}ServiceBrands[0]
+            final fun <get-ServiceBrands>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.ServiceBrands.<get-ServiceBrands>|<get-ServiceBrands>(){}[0]
+        final val SystemInformation // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.SystemInformation|{}SystemInformation[0]
+            final fun <get-SystemInformation>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.SystemInformation.<get-SystemInformation>|<get-SystemInformation>(){}[0]
+        final val SystemManifest // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.SystemManifest|{}SystemManifest[0]
+            final fun <get-SystemManifest>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.SystemManifest.<get-SystemManifest>|<get-SystemManifest>(){}[0]
+        final val VehicleTypes // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.VehicleTypes|{}VehicleTypes[0]
+            final fun <get-VehicleTypes>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.VehicleTypes.<get-VehicleTypes>|<get-VehicleTypes>(){}[0]
+        final val VersionManifest // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.VersionManifest|{}VersionManifest[0]
+            final fun <get-VersionManifest>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.VersionManifest.<get-VersionManifest>|<get-VersionManifest>(){}[0]
+        final val WaitTimes // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.WaitTimes|{}WaitTimes[0]
+            final fun <get-WaitTimes>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.WaitTimes.<get-WaitTimes>|<get-WaitTimes>(){}[0]
+        final val Zones // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.Zones|{}Zones[0]
+            final fun <get-Zones>(): dev.sargunv.mobilitydata.gofs.v1/FeedType // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.Zones.<get-Zones>|<get-Zones>(){}[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gofs.v1/FeedType> // dev.sargunv.mobilitydata.gofs.v1/FeedType.Companion.serializer|serializer(){}[0]
     }
 }
 

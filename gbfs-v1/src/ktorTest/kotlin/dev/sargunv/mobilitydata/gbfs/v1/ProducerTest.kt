@@ -6,7 +6,6 @@ import io.ktor.client.engine.mock.respondError
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.fullPath
 import io.ktor.http.headersOf
-import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlinx.coroutines.test.runTest
 import kotlinx.io.buffered
@@ -40,7 +39,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // unknown feed type
   fun publicbikesystem() = runTest {
     val client = GbfsV1Client(createMockEngine("publicbikesystem"))
 
@@ -71,7 +69,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // unknown feed type
   fun bcycle() = runTest {
     val client = GbfsV1Client(createMockEngine("bcycle"))
 
@@ -79,12 +76,16 @@ class ProducerTest {
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getVersionManifest()
       client.getSystemInformation()
       client.getStationInformation()
       client.getStationStatus()
-      client.getSystemPricingPlans()
       client.getSystemRegions()
+
+      // INVALID: data is empty {}
+      // client.getVersionManifest()
+
+      // INVALID: description is missing
+      // client.getSystemPricingPlans()
     }
   }
 
