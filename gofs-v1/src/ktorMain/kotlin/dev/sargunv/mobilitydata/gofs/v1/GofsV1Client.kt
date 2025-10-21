@@ -5,45 +5,31 @@ import dev.sargunv.mobilitydata.utils.Url
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.call.body
-import io.ktor.client.engine.HttpClientEngineConfig
-import io.ktor.client.engine.HttpClientEngineFactory
+import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.get
 import io.ktor.http.URLBuilder
 import io.ktor.http.Url as KtorUrl
 import io.ktor.serialization.kotlinx.json.json
 
-/**
- * Creates a [GofsV1Client] with a specific HTTP client engine.
- *
- * @param engineFactory The Ktor HTTP client engine factory to use
- * @param block Configuration block for the HTTP client
- * @return A configured GOFS v1 client instance
- */
-public fun <T : HttpClientEngineConfig> GofsV1Client(
-  engineFactory: HttpClientEngineFactory<T>,
-  block: HttpClientConfig<T>.() -> Unit = {},
-): GofsV1Client =
-  GofsV1Client(
-    HttpClient(engineFactory) {
+/** HTTP client for fetching GOFS v1 feeds. */
+public class GofsV1Client internal constructor(private val httpClient: HttpClient) : AutoCloseable {
+
+  public constructor(
+    block: HttpClientConfig<*>.() -> Unit = {}
+  ) : this(
+    HttpClient {
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GofsJson) }
     }
   )
 
-/** HTTP client for fetching GOFS v1 feeds. */
-public class GofsV1Client internal constructor(private val httpClient: HttpClient) : AutoCloseable {
-
-  /**
-   * Creates a [GofsV1Client] with the default HTTP client engine.
-   *
-   * @param block Configuration block for the HTTP client
-   */
   public constructor(
-    block: HttpClientConfig<*>.() -> Unit = {}
+    engine: HttpClientEngine,
+    block: HttpClientConfig<*>.() -> Unit = {},
   ) : this(
-    HttpClient {
+    HttpClient(engine) {
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GofsJson) }

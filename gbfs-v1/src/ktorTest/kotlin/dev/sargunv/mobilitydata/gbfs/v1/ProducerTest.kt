@@ -16,11 +16,7 @@ import kotlinx.io.files.SystemFileSystem
 import kotlinx.io.readString
 
 class ProducerTest {
-  private fun createMockEngine(
-    removePrefix: String,
-    resourcesSubdirectory: String,
-    extension: String = "",
-  ): MockEngine {
+  private fun createMockEngine(resourcesSubdirectory: String): MockEngine {
     val cwd = SystemFileSystem.resolve(Path("."))
     val projectDir =
       when (cwd.name) {
@@ -29,9 +25,10 @@ class ProducerTest {
         else -> error("unexpected: $cwd")
       }
     return MockEngine { request ->
-      val urlPath = request.url.fullPath.removePrefix(removePrefix)
+      val fileName = Path(request.url.fullPath).name
+      val suffix = if (fileName.endsWith(".json")) "" else ".json"
       val localPath =
-        Path("$projectDir", "sample-data", "gbfs-v1", resourcesSubdirectory, urlPath + extension)
+        Path("$projectDir", "sample-data", "gbfs-v1", resourcesSubdirectory, fileName + suffix)
       try {
         val source = SystemFileSystem.source(localPath)
         val content = source.buffered().readString()
@@ -45,14 +42,7 @@ class ProducerTest {
   @Test
   @Ignore // https://github.com/sargunv/mobility-data-kt/issues/16
   fun publicbikesystem() = runTest {
-    val client =
-      GbfsV1Client(
-        createMockEngine(
-          removePrefix = "/customer/ube/gbfs/v1/en/",
-          resourcesSubdirectory = "publicbikesystem",
-          extension = ".json",
-        )
-      )
+    val client = GbfsV1Client(createMockEngine("publicbikesystem"))
 
     val manifest = client.getSystemManifest("gbfs")
     val service = manifest.data.getService("en")
@@ -68,7 +58,7 @@ class ProducerTest {
 
   @Test
   fun bird() = runTest {
-    val client = GbfsV1Client(createMockEngine("/gbfs/seattle-washington/", "bird"))
+    val client = GbfsV1Client(createMockEngine("bird"))
     val manifest = client.getSystemManifest("gbfs.json")
     val service = manifest.data.getService("en")
 
@@ -84,7 +74,7 @@ class ProducerTest {
   @Ignore // bcycle's gbfs.json contains a feed named "gbfs" which is not recognized by FeedType
   // enum
   fun bcycle() = runTest {
-    val client = GbfsV1Client(createMockEngine("/bcycle_rtcbikeshare/", "bcycle"))
+    val client = GbfsV1Client(createMockEngine("bcycle"))
 
     val manifest = client.getSystemManifest("gbfs.json")
     val service = manifest.data.getService("en")
@@ -101,7 +91,7 @@ class ProducerTest {
 
   @Test
   fun donkey() = runTest {
-    val client = GbfsV1Client(createMockEngine("/api/public/gbfs/donkey_barcelona/en/", "donkey"))
+    val client = GbfsV1Client(createMockEngine("donkey"))
 
     val manifest = client.getSystemManifest("gbfs.json")
     val service = manifest.data.getService("en")
@@ -118,14 +108,7 @@ class ProducerTest {
 
   @Test
   fun bolt() = runTest {
-    val client =
-      GbfsV1Client(
-        createMockEngine(
-          removePrefix = "/gbfs/1/720/",
-          resourcesSubdirectory = "bolt",
-          extension = ".json",
-        )
-      )
+    val client = GbfsV1Client(createMockEngine("bolt"))
 
     val manifest = client.getSystemManifest("gbfs")
     val service = manifest.data.getService("en")
@@ -139,14 +122,7 @@ class ProducerTest {
 
   @Test
   fun lime() = runTest {
-    val client =
-      GbfsV1Client(
-        createMockEngine(
-          removePrefix = "/api/partners/v1/gbfs/seattle/",
-          resourcesSubdirectory = "lime",
-          extension = ".json",
-        )
-      )
+    val client = GbfsV1Client(createMockEngine("lime"))
 
     val manifest = client.getSystemManifest("gbfs")
     val service = manifest.data.getService("en")

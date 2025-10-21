@@ -4,43 +4,29 @@ import dev.sargunv.mobilitydata.utils.Url
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.call.body
-import io.ktor.client.engine.HttpClientEngineConfig
-import io.ktor.client.engine.HttpClientEngineFactory
+import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.get
 import io.ktor.serialization.kotlinx.json.json
 
-/**
- * Creates a [GbfsV2Client] with a specific HTTP client engine.
- *
- * @param engineFactory The Ktor HTTP client engine factory to use
- * @param block Configuration block for the HTTP client
- * @return A configured GBFS v2 client instance
- */
-public fun <T : HttpClientEngineConfig> GbfsV2Client(
-  engineFactory: HttpClientEngineFactory<T>,
-  block: HttpClientConfig<T>.() -> Unit = {},
-): GbfsV2Client =
-  GbfsV2Client(
-    HttpClient(engineFactory) {
+/** HTTP client for fetching GBFS v2 feeds. */
+public class GbfsV2Client internal constructor(private val httpClient: HttpClient) : AutoCloseable {
+
+  public constructor(
+    block: HttpClientConfig<*>.() -> Unit = {}
+  ) : this(
+    HttpClient {
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GbfsJson) }
     }
   )
 
-/** HTTP client for fetching GBFS v2 feeds. */
-public class GbfsV2Client internal constructor(private val httpClient: HttpClient) : AutoCloseable {
-
-  /**
-   * Creates a [GbfsV2Client] with the default HTTP client engine.
-   *
-   * @param block Configuration block for the HTTP client
-   */
   public constructor(
-    block: HttpClientConfig<*>.() -> Unit = {}
+    engine: HttpClientEngine,
+    block: HttpClientConfig<*>.() -> Unit = {},
   ) : this(
-    HttpClient {
+    HttpClient(engine) {
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GbfsJson) }

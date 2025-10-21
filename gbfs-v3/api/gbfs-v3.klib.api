@@ -1694,6 +1694,7 @@ final val dev.sargunv.mobilitydata.gbfs.v3/GbfsJson // dev.sargunv.mobilitydata.
 
 // Targets: [js, native, wasmJs]
 final class dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client : kotlin/AutoCloseable { // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client|null[0]
+    constructor <init>(io.ktor.client.engine/HttpClientEngine, kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.<init>|<init>(io.ktor.client.engine.HttpClientEngine;kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
     constructor <init>(kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.<init>|<init>(kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
 
     final fun close() // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.close|close(){}[0]
@@ -1710,6 +1711,3 @@ final class dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client : kotlin/AutoCloseable
     final suspend fun getDatasetManifest(kotlin/String): dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v3/DatasetManifest> // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.getDatasetManifest|getDatasetManifest(kotlin.String){}[0]
     final suspend fun getServiceManifest(kotlin/String): dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v3/ServiceManifest> // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.getServiceManifest|getServiceManifest(kotlin.String){}[0]
 }
-
-// Targets: [js, native, wasmJs]
-final fun <#A: io.ktor.client.engine/HttpClientEngineConfig> dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client(io.ktor.client.engine/HttpClientEngineFactory<#A>, kotlin/Function1<io.ktor.client/HttpClientConfig<#A>, kotlin/Unit> = ...): dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client|GbfsV3Client(io.ktor.client.engine.HttpClientEngineFactory<0:0>;kotlin.Function1<io.ktor.client.HttpClientConfig<0:0>,kotlin.Unit>){0§<io.ktor.client.engine.HttpClientEngineConfig>}[0]
