@@ -60,4 +60,7 @@ dependencies {
 
   dokka(project(":gofs-v1"))
   kover(project(":gofs-v1"))
+
+  dokka(project(":gtfs-schedule"))
+  kover(project(":gtfs-schedule"))
 }
