@@ -1,0 +1,27 @@
+{
+    "version": "1.1",
+    "data": {
+        "en": {
+            "feeds": [
+                {
+                    "name": "free_bike_status",
+                    "url": "https://mds.bird.co/gbfs/seattle-washington/free_bike_status.json"
+                },
+                {
+                    "name": "gbfs_versions",
+                    "url": "https://mds.bird.co/gbfs/seattle-washington/gbfs_versions.json"
+                },
+                {
+                    "name": "system_information",
+                    "url": "https://mds.bird.co/gbfs/seattle-washington/system_information.json"
+                },
+                {
+                    "name": "system_regions",
+                    "url": "https://mds.bird.co/gbfs/seattle-washington/system_regions.json"
+                }
+            ]
+        }
+    },
+    "last_updated": 1761012374,
+    "ttl": 60
+}

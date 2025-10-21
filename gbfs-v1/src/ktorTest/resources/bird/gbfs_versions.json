@@ -1,0 +1,17 @@
+{
+    "version": "1.1",
+    "data": {
+        "versions": [
+            {
+                "version": "1.1",
+                "url": "https://mds.bird.co/gbfs/seattle-washington/gbfs.json"
+            },
+            {
+                "version": "2.3",
+                "url": "https://mds.bird.co/gbfs/v2/public/seattle-washington/gbfs.json"
+            }
+        ]
+    },
+    "last_updated": 1761012374,
+    "ttl": 60
+}

@@ -90,7 +90,7 @@ final enum class dev.sargunv.mobilitydata.gbfs.v1/UserType : kotlin/Enum<dev.sar
 sealed interface dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData|null[0]
 
 final class <#A: dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData> dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse { // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse|null[0]
-    constructor <init>(kotlin.time/Instant, kotlin.time/Duration, kotlin/String, #A) // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.<init>|<init>(kotlin.time.Instant;kotlin.time.Duration;kotlin.String;1:0){}[0]
+    constructor <init>(kotlin.time/Instant, kotlin.time/Duration, kotlin/String? = ..., #A) // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.<init>|<init>(kotlin.time.Instant;kotlin.time.Duration;kotlin.String?;1:0){}[0]
 
     final val data // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.data|{}data[0]
         final fun <get-data>(): #A // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.data.<get-data>|<get-data>(){}[0]
@@ -99,13 +99,13 @@ final class <#A: dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData> dev.sargunv.mobi
     final val ttl // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.ttl|{}ttl[0]
         final fun <get-ttl>(): kotlin.time/Duration // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.ttl.<get-ttl>|<get-ttl>(){}[0]
     final val version // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.version|{}version[0]
-        final fun <get-version>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.version.<get-version>|<get-version>(){}[0]
+        final fun <get-version>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.version.<get-version>|<get-version>(){}[0]
 
     final fun component1(): kotlin.time/Instant // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.component1|component1(){}[0]
     final fun component2(): kotlin.time/Duration // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.component2|component2(){}[0]
-    final fun component3(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.component3|component3(){}[0]
+    final fun component3(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.component3|component3(){}[0]
     final fun component4(): #A // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.component4|component4(){}[0]
-    final fun copy(kotlin.time/Instant = ..., kotlin.time/Duration = ..., kotlin/String = ..., #A = ...): dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse<#A> // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.copy|copy(kotlin.time.Instant;kotlin.time.Duration;kotlin.String;1:0){}[0]
+    final fun copy(kotlin.time/Instant = ..., kotlin.time/Duration = ..., kotlin/String? = ..., #A = ...): dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse<#A> // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.copy|copy(kotlin.time.Instant;kotlin.time.Duration;kotlin.String?;1:0){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse.toString|toString(){}[0]
@@ -999,16 +999,28 @@ final class dev.sargunv.mobilitydata.gbfs.v1/SystemPricingPlans : dev.sargunv.mo
     final fun asJsReadonlyArrayView(): kotlin.js.collections/JsReadonlyArray<dev.sargunv.mobilitydata.gbfs.v1/PricingPlan> // dev.sargunv.mobilitydata.gbfs.v1/SystemPricingPlans.asJsReadonlyArrayView|asJsReadonlyArrayView(){}[0]
 }
 
-final class dev.sargunv.mobilitydata.gbfs.v1/SystemRegions : dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData { // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions|null[0]
+final class dev.sargunv.mobilitydata.gbfs.v1/SystemRegions : dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedData, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v1/Region> { // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions|null[0]
     constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v1/Region>) // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v1.Region>){}[0]
 
     final val regions // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.regions|{}regions[0]
         final fun <get-regions>(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v1/Region> // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.regions.<get-regions>|<get-regions>(){}[0]
+    final val size // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.size|{}size[0]
+        final fun <get-size>(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.size.<get-size>|<get-size>(){}[0]
 
     final fun component1(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v1/Region> // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.component1|component1(){}[0]
+    final fun contains(dev.sargunv.mobilitydata.gbfs.v1/Region): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.contains|contains(dev.sargunv.mobilitydata.gbfs.v1.Region){}[0]
+    final fun containsAll(kotlin.collections/Collection<dev.sargunv.mobilitydata.gbfs.v1/Region>): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.containsAll|containsAll(kotlin.collections.Collection<dev.sargunv.mobilitydata.gbfs.v1.Region>){}[0]
     final fun copy(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v1/Region> = ...): dev.sargunv.mobilitydata.gbfs.v1/SystemRegions // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.copy|copy(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v1.Region>){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.equals|equals(kotlin.Any?){}[0]
+    final fun get(kotlin/Int): dev.sargunv.mobilitydata.gbfs.v1/Region // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.get|get(kotlin.Int){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.hashCode|hashCode(){}[0]
+    final fun indexOf(dev.sargunv.mobilitydata.gbfs.v1/Region): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.indexOf|indexOf(dev.sargunv.mobilitydata.gbfs.v1.Region){}[0]
+    final fun isEmpty(): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.isEmpty|isEmpty(){}[0]
+    final fun iterator(): kotlin.collections/Iterator<dev.sargunv.mobilitydata.gbfs.v1/Region> // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.iterator|iterator(){}[0]
+    final fun lastIndexOf(dev.sargunv.mobilitydata.gbfs.v1/Region): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.lastIndexOf|lastIndexOf(dev.sargunv.mobilitydata.gbfs.v1.Region){}[0]
+    final fun listIterator(): kotlin.collections/ListIterator<dev.sargunv.mobilitydata.gbfs.v1/Region> // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.listIterator|listIterator(){}[0]
+    final fun listIterator(kotlin/Int): kotlin.collections/ListIterator<dev.sargunv.mobilitydata.gbfs.v1/Region> // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.listIterator|listIterator(kotlin.Int){}[0]
+    final fun subList(kotlin/Int, kotlin/Int): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v1/Region> // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.subList|subList(kotlin.Int;kotlin.Int){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.toString|toString(){}[0]
 
     final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v1/SystemRegions> { // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.$serializer|null[0]
@@ -1025,6 +1037,9 @@ final class dev.sargunv.mobilitydata.gbfs.v1/SystemRegions : dev.sargunv.mobilit
 
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v1/SystemRegions> // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.Companion.serializer|serializer(){}[0]
     }
+
+    // Targets: [js]
+    final fun asJsReadonlyArrayView(): kotlin.js.collections/JsReadonlyArray<dev.sargunv.mobilitydata.gbfs.v1/Region> // dev.sargunv.mobilitydata.gbfs.v1/SystemRegions.asJsReadonlyArrayView|asJsReadonlyArrayView(){}[0]
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v1/VersionInfo { // dev.sargunv.mobilitydata.gbfs.v1/VersionInfo|null[0]
@@ -1146,6 +1161,7 @@ final val dev.sargunv.mobilitydata.gbfs.v1/GbfsJson // dev.sargunv.mobilitydata.
 
 // Targets: [js, native, wasmJs]
 final class dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client : kotlin/AutoCloseable { // dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client|null[0]
+    constructor <init>(io.ktor.client.engine/HttpClientEngine, kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client.<init>|<init>(io.ktor.client.engine.HttpClientEngine;kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
     constructor <init>(kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client.<init>|<init>(kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
 
     final fun close() // dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client.close|close(){}[0]
@@ -1161,6 +1177,3 @@ final class dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client : kotlin/AutoCloseable
     final suspend fun (context(dev.sargunv.mobilitydata.gbfs.v1/Service)).getVersionManifest(): dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v1/VersionManifest> // dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client.getVersionManifest|getVersionManifest(dev.sargunv.mobilitydata.gbfs.v1.Service)(){}[0]
     final suspend fun getSystemManifest(kotlin/String): dev.sargunv.mobilitydata.gbfs.v1/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v1/SystemManifest> // dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client.getSystemManifest|getSystemManifest(kotlin.String){}[0]
 }
-
-// Targets: [js, native, wasmJs]
-final fun <#A: io.ktor.client.engine/HttpClientEngineConfig> dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client(io.ktor.client.engine/HttpClientEngineFactory<#A>, kotlin/Function1<io.ktor.client/HttpClientConfig<#A>, kotlin/Unit> = ...): dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client // dev.sargunv.mobilitydata.gbfs.v1/GbfsV1Client|GbfsV1Client(io.ktor.client.engine.HttpClientEngineFactory<0:0>;kotlin.Function1<io.ktor.client.HttpClientConfig<0:0>,kotlin.Unit>){0§<io.ktor.client.engine.HttpClientEngineConfig>}[0]

@@ -9,12 +9,18 @@ plugins { id("base-module") }
 
 kotlin {
   js(KotlinJsCompilerType.IR) {
-    browser()
+    browser {
+      // our mock http tests rely on the filesystem
+      testTask { enabled = false }
+    }
     nodejs()
   }
 
   wasmJs {
-    browser()
+    browser {
+      // our mock http tests rely on the filesystem
+      testTask { enabled = false }
+    }
     nodejs()
     d8 {
       // https://github.com/sargunv/mobility-data-kt/issues/5

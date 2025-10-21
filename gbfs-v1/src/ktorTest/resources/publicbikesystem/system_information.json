@@ -1,0 +1,21 @@
+{
+    "last_updated": 1761012459,
+    "ttl": 10,
+    "data": {
+        "system_id": "pittsburgh",
+        "language": "en",
+        "name": "pittsburgh",
+        "timezone": "America/New_York",
+        "build_version": "2025.2",
+        "build_label": "2025-09-23",
+        "build_hash": "323634d",
+        "build_number": "56",
+        "mobile_head_version": "2",
+        "mobile_minimum_supported_version": "1",
+        "_vehicle_count": {
+            "_mechanical_count": 250,
+            "_ebike_count": 336
+        },
+        "_station_count": 60
+    }
+}

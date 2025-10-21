@@ -1,0 +1,453 @@
+{
+    "ttl": 60,
+    "data": {
+        "stations": [
+            {
+                "lon": -115.15682,
+                "lat": 36.14383,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3546&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3546&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "100 E Sahara Ave",
+                "name": "Sahara & Las Vegas Blvd",
+                "station_id": "bcycle_rtcbikeshare_3546"
+            },
+            {
+                "lon": -115.15387,
+                "lat": 36.15288,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3547&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3547&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "1501 South Main Street",
+                "name": "Main & Utah",
+                "station_id": "bcycle_rtcbikeshare_3547"
+            },
+            {
+                "lon": -115.15256,
+                "lat": 36.16107,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3548&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3548&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "912 S Main Street",
+                "name": "The English Hotel - Main & Coolidge ",
+                "station_id": "bcycle_rtcbikeshare_3548"
+            },
+            {
+                "lon": -115.14896,
+                "lat": 36.16085,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3551&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3551&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "300 Hoover Ave",
+                "name": "3rd & Hoover",
+                "station_id": "bcycle_rtcbikeshare_3551"
+            },
+            {
+                "lon": -115.14483,
+                "lat": 36.16202,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3552&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3552&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "521 Garces",
+                "name": "PAWN STARS-Garces & Las Vegas Blvd",
+                "station_id": "bcycle_rtcbikeshare_3552"
+            },
+            {
+                "lon": -115.15549,
+                "lat": 36.16636,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3553&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3553&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "509 S. Grand Central Parkway",
+                "name": "Premium Outlets",
+                "station_id": "bcycle_rtcbikeshare_3553"
+            },
+            {
+                "lon": -115.14885,
+                "lat": 36.16501,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3554&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3554&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "101 Bonneville",
+                "name": "Bonneville Transit Center",
+                "station_id": "bcycle_rtcbikeshare_3554"
+            },
+            {
+                "lon": -115.14679,
+                "lat": 36.16418,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3555&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3555&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "115 E Bonneville",
+                "name": "3rd & Bonneville",
+                "station_id": "bcycle_rtcbikeshare_3555"
+            },
+            {
+                "lon": -115.13488,
+                "lat": 36.16684,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3558&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3558&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "10th & Fremont 10th Street Garage",
+                "name": "10th & Fremont",
+                "station_id": "bcycle_rtcbikeshare_3558"
+            },
+            {
+                "lon": -115.14817,
+                "lat": 36.16688,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3559&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3559&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "428 S. 1st",
+                "name": "City Hall",
+                "station_id": "bcycle_rtcbikeshare_3559"
+            },
+            {
+                "lon": -115.14379,
+                "lat": 36.16685,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3560&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3560&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "300 S. 4th",
+                "name": "BANK OF AMERICA    4th & Bridger",
+                "station_id": "bcycle_rtcbikeshare_3560"
+            },
+            {
+                "lon": -115.13853,
+                "lat": 36.16557,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3561&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3561&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "201 S 8th",
+                "name": "CITY CENTER APTS 8th & Bridger",
+                "station_id": "bcycle_rtcbikeshare_3561"
+            },
+            {
+                "lon": -115.13303,
+                "lat": 36.1655,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3563&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3563&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "100 S Maryland ",
+                "name": "PublicUs   Maryland & Fremont",
+                "station_id": "bcycle_rtcbikeshare_3563"
+            },
+            {
+                "lon": -115.14146,
+                "lat": 36.17236,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3566&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3566&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "206 N Stewart",
+                "name": "Downtown Grand 3rd & Stewart",
+                "station_id": "bcycle_rtcbikeshare_3566"
+            },
+            {
+                "lon": -115.13838,
+                "lat": 36.15939,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3835&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3835&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "605 South 11th",
+                "name": "11th & Garces",
+                "station_id": "bcycle_rtcbikeshare_3835"
+            },
+            {
+                "lon": -115.15546,
+                "lat": 36.14631,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3922&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3922&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "2205 South Las Vegas Blvd",
+                "name": "The Strat",
+                "station_id": "bcycle_rtcbikeshare_3922"
+            },
+            {
+                "lon": -115.1386,
+                "lat": 36.1684,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3923&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_3923&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "698 Fremont",
+                "name": "El Cortez 7th & Fremont",
+                "station_id": "bcycle_rtcbikeshare_3923"
+            },
+            {
+                "lon": -115.15226,
+                "lat": 36.1579,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_4182&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_4182&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "1118 S Casino Center Blvd",
+                "name": "Arts District - Casino Center",
+                "station_id": "bcycle_rtcbikeshare_4182"
+            },
+            {
+                "lon": -115.14424,
+                "lat": 36.17266,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_4315&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_4315&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "212 N 1st Street",
+                "name": "1st & Ogden",
+                "station_id": "bcycle_rtcbikeshare_4315"
+            },
+            {
+                "lon": -115.15272,
+                "lat": 36.15598,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_4329&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_4329&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "1 E. Colorado",
+                "name": "shareDowntown-Casino Center & Colorado",
+                "station_id": "bcycle_rtcbikeshare_4329"
+            },
+            {
+                "lon": -115.13233,
+                "lat": 36.16845,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_4613&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_4613&platform=android"
+                },
+                "_bcycle_station_type": "Kiosk and Station",
+                "address": "231 N 11th St, Las Vegas",
+                "name": "11th & Stewart",
+                "station_id": "bcycle_rtcbikeshare_4613"
+            },
+            {
+                "lon": -115.16141,
+                "lat": 36.16558,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7177&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7177&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "518 S M.L.K. Blvd",
+                "name": "MLK & Alta",
+                "station_id": "bcycle_rtcbikeshare_7177"
+            },
+            {
+                "lon": -115.17053,
+                "lat": 36.16244,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7413&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7413&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "2020 Palomino Lane",
+                "name": "Palomino & Tonopah",
+                "station_id": "bcycle_rtcbikeshare_7413"
+            },
+            {
+                "lon": -115.17086,
+                "lat": 36.15905,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7532&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7532&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "2100 West Charleston Blvd",
+                "name": "Charleston & Tonopah ",
+                "station_id": "bcycle_rtcbikeshare_7532"
+            },
+            {
+                "lon": -115.16487,
+                "lat": 36.16363,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7632&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7632&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "625 Shadow Lane",
+                "name": "Kirk Kerkorian School of Medicine at UNLV",
+                "station_id": "bcycle_rtcbikeshare_7632"
+            },
+            {
+                "lon": -115.13543,
+                "lat": 36.16154,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7754&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7754&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "401 South Maryland Parkway",
+                "name": "The Center ",
+                "station_id": "bcycle_rtcbikeshare_7754"
+            },
+            {
+                "lon": -115.12496,
+                "lat": 36.1645,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7756&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7756&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "1776 East Ogden Avenue",
+                "name": "Bruce & Ogden",
+                "station_id": "bcycle_rtcbikeshare_7756"
+            },
+            {
+                "lon": -115.12544,
+                "lat": 36.16259,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7760&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7760&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "1732 E. Fremont Street",
+                "name": "Fremont & Bruce",
+                "station_id": "bcycle_rtcbikeshare_7760"
+            },
+            {
+                "lon": -115.13545,
+                "lat": 36.16828,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7761&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7761&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "170 North 9th Street ",
+                "name": "9th & Ogden",
+                "station_id": "bcycle_rtcbikeshare_7761"
+            },
+            {
+                "lon": -115.12339,
+                "lat": 36.15875,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7762&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7762&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "1900 East Charleston Blvd",
+                "name": "Charleston & Burnham",
+                "station_id": "bcycle_rtcbikeshare_7762"
+            },
+            {
+                "lon": -115.1147,
+                "lat": 36.16551,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7787&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_7787&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "2610 Stewart Ave",
+                "name": "East Las Vegas Community Center",
+                "station_id": "bcycle_rtcbikeshare_7787"
+            },
+            {
+                "lon": -115.16418,
+                "lat": 36.15902,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8878&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8878&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "1707 Charleston Blvd",
+                "name": "Charleston & Shadow Ln",
+                "station_id": "bcycle_rtcbikeshare_8878"
+            },
+            {
+                "lon": -115.16555,
+                "lat": 36.16523,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8879&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8879&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "563 Shadow Lane",
+                "name": "Shadow & Kenyon ",
+                "station_id": "bcycle_rtcbikeshare_8879"
+            },
+            {
+                "lon": -115.16215,
+                "lat": 36.1619,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8880&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8880&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "MLK & Wellness Way",
+                "name": "Bearden Park",
+                "station_id": "bcycle_rtcbikeshare_8880"
+            },
+            {
+                "lon": -115.16433,
+                "lat": 36.16611,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8894&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8894&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "1755 Alta Drive",
+                "name": "Alta & Shadow",
+                "station_id": "bcycle_rtcbikeshare_8894"
+            },
+            {
+                "lon": -115.16808,
+                "lat": 36.16157,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8895&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8895&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "1974 Wellness Way",
+                "name": "Wellness Way",
+                "station_id": "bcycle_rtcbikeshare_8895"
+            },
+            {
+                "lon": -115.11735,
+                "lat": 36.15902,
+                "rental_uris": {
+                    "ios": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8896&platform=iOS",
+                    "android": "https://www.bcycle.com/applink?system_id=bcycle_rtcbikeshare&station_id=bcycle_rtcbikeshare_8896&platform=android"
+                },
+                "_bcycle_station_type": "3.0 Dock Station",
+                "address": "2320 East Fremont Street",
+                "name": "Fremont & Charleston",
+                "station_id": "bcycle_rtcbikeshare_8896"
+            }
+        ]
+    },
+    "version": "1.1",
+    "last_updated": 1761014016
+}

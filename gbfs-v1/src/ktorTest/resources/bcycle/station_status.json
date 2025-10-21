@@ -1,0 +1,527 @@
+{
+    "ttl": 60,
+    "last_updated": 1761013961,
+    "data": {
+        "stations": [
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 6,
+                "num_bikes_available": 8,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 7
+                },
+                "station_id": "bcycle_rtcbikeshare_3546"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 5,
+                "num_bikes_available": 9,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 2,
+                    "smart": 0,
+                    "classic": 7
+                },
+                "station_id": "bcycle_rtcbikeshare_3547"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 6,
+                "num_bikes_available": 4,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 4
+                },
+                "station_id": "bcycle_rtcbikeshare_3548"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 8,
+                "num_bikes_available": 6,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 6
+                },
+                "station_id": "bcycle_rtcbikeshare_3551"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 3,
+                "num_bikes_available": 9,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 9
+                },
+                "station_id": "bcycle_rtcbikeshare_3552"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 8,
+                "num_bikes_available": 6,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 5
+                },
+                "station_id": "bcycle_rtcbikeshare_3553"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 8,
+                "num_bikes_available": 5,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 2,
+                    "smart": 0,
+                    "classic": 3
+                },
+                "station_id": "bcycle_rtcbikeshare_3554"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 9,
+                "num_bikes_available": 5,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 5
+                },
+                "station_id": "bcycle_rtcbikeshare_3555"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 8,
+                "num_bikes_available": 4,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 4
+                },
+                "station_id": "bcycle_rtcbikeshare_3558"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 3,
+                "num_bikes_available": 5,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 4
+                },
+                "station_id": "bcycle_rtcbikeshare_3559"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 13,
+                "num_bikes_available": 3,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 3
+                },
+                "station_id": "bcycle_rtcbikeshare_3560"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 11,
+                "num_bikes_available": 4,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 3
+                },
+                "station_id": "bcycle_rtcbikeshare_3561"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 7,
+                "num_bikes_available": 4,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 4
+                },
+                "station_id": "bcycle_rtcbikeshare_3563"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 16,
+                "num_bikes_available": 1,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 1
+                },
+                "station_id": "bcycle_rtcbikeshare_3566"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 7,
+                "num_bikes_available": 3,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 3
+                },
+                "station_id": "bcycle_rtcbikeshare_3835"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 15,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_3922"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 19,
+                "num_bikes_available": 1,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 1
+                },
+                "station_id": "bcycle_rtcbikeshare_3923"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 6,
+                "num_bikes_available": 6,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 6
+                },
+                "station_id": "bcycle_rtcbikeshare_4182"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 8,
+                "num_bikes_available": 4,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 4
+                },
+                "station_id": "bcycle_rtcbikeshare_4315"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 11,
+                "num_bikes_available": 1,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 1
+                },
+                "station_id": "bcycle_rtcbikeshare_4329"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 6,
+                "num_bikes_available": 5,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 4
+                },
+                "station_id": "bcycle_rtcbikeshare_4613"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 3,
+                "num_bikes_available": 3,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 3
+                },
+                "station_id": "bcycle_rtcbikeshare_7177"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 3,
+                "num_bikes_available": 3,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 3
+                },
+                "station_id": "bcycle_rtcbikeshare_7413"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 2,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 1
+                },
+                "station_id": "bcycle_rtcbikeshare_7532"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 4,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_7632"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 1,
+                "num_bikes_available": 3,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_7754"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 3,
+                "num_bikes_available": 1,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 1
+                },
+                "station_id": "bcycle_rtcbikeshare_7756"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 1,
+                "num_bikes_available": 3,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_7760"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 2,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 1
+                },
+                "station_id": "bcycle_rtcbikeshare_7761"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 3,
+                "num_bikes_available": 1,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 1
+                },
+                "station_id": "bcycle_rtcbikeshare_7762"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 1,
+                "num_bikes_available": 3,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_7787"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 2,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 1,
+                    "smart": 0,
+                    "classic": 1
+                },
+                "station_id": "bcycle_rtcbikeshare_8878"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 2,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_8879"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 2,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_8880"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 2,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_8894"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 2,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_8895"
+            },
+            {
+                "is_returning": 1,
+                "is_renting": 1,
+                "is_installed": 1,
+                "num_docks_available": 2,
+                "num_bikes_available": 2,
+                "last_reported": 1761013961,
+                "num_bikes_available_types": {
+                    "electric": 0,
+                    "smart": 0,
+                    "classic": 2
+                },
+                "station_id": "bcycle_rtcbikeshare_8896"
+            }
+        ]
+    },
+    "version": "1.1"
+}

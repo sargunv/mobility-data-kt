@@ -1,0 +1,39 @@
+{
+    "ttl": 60,
+    "data": {
+        "en": {
+            "feeds": [
+                {
+                    "url": "https://gbfs.bcycle.com/bcycle_rtcbikeshare/gbfs.json",
+                    "name": "gbfs"
+                },
+                {
+                    "url": "https://gbfs.bcycle.com/bcycle_rtcbikeshare/gbfs_versions.json",
+                    "name": "gbfs_versions"
+                },
+                {
+                    "url": "https://gbfs.bcycle.com/bcycle_rtcbikeshare/system_information.json",
+                    "name": "system_information"
+                },
+                {
+                    "url": "https://gbfs.bcycle.com/bcycle_rtcbikeshare/station_information.json",
+                    "name": "station_information"
+                },
+                {
+                    "url": "https://gbfs.bcycle.com/bcycle_rtcbikeshare/station_status.json",
+                    "name": "station_status"
+                },
+                {
+                    "url": "https://gbfs.bcycle.com/bcycle_rtcbikeshare/system_pricing_plans.json",
+                    "name": "system_pricing_plans"
+                },
+                {
+                    "url": "https://gbfs.bcycle.com/bcycle_rtcbikeshare/system_regions.json",
+                    "name": "system_regions"
+                }
+            ]
+        }
+    },
+    "version": "1.1",
+    "last_updated": 1761014016
+}
