@@ -81,22 +81,80 @@ class ProducerTest {
   }
 
   @Test
+  @Ignore // bcycle's gbfs.json contains a feed named "gbfs" which is not recognized by FeedType
+  // enum
   fun bcycle() = runTest {
-    // TODO
+    val client = GbfsV1Client(createMockEngine("/bcycle_rtcbikeshare/", "bcycle"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getVersionManifest()
+      client.getSystemInformation()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getSystemPricingPlans()
+      client.getSystemRegions()
+    }
   }
 
   @Test
   fun donkey() = runTest {
-    // TODO
+    val client = GbfsV1Client(createMockEngine("/api/public/gbfs/donkey_barcelona/en/", "donkey"))
+
+    val manifest = client.getSystemManifest("gbfs.json")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getSystemHours()
+      client.getSystemRegions()
+      client.getSystemPricingPlans()
+    }
   }
 
   @Test
   fun bolt() = runTest {
-    // TODO
+    val client =
+      GbfsV1Client(
+        createMockEngine(
+          removePrefix = "/gbfs/1/720/",
+          resourcesSubdirectory = "bolt",
+          extension = ".json",
+        )
+      )
+
+    val manifest = client.getSystemManifest("gbfs")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getFreeBikeStatus()
+      client.getSystemPricingPlans()
+    }
   }
 
   @Test
   fun lime() = runTest {
-    // TODO Watch out; the station status feed is non conformant. Skip it.
+    val client =
+      GbfsV1Client(
+        createMockEngine(
+          removePrefix = "/api/partners/v1/gbfs/seattle/",
+          resourcesSubdirectory = "lime",
+          extension = ".json",
+        )
+      )
+
+    val manifest = client.getSystemManifest("gbfs")
+    val service = manifest.data.getService("en")
+
+    context(service) {
+      client.getSystemInformation()
+      client.getFreeBikeStatus()
+      // Note: station_information and station_status feeds are non-conformant, skipping them
+    }
   }
 }
