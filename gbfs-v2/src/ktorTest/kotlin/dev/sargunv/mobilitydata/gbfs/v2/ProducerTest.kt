@@ -165,11 +165,11 @@ class ProducerTest {
       client.getFreeBikeStatus()
 
       // INVALID: station_id is int instead of string
-      // client.getStationInformation()
-      // client.getStationStatus()
+      client.getStationInformation()
+      client.getStationStatus()
 
       // INVALID: region_id is int instead of string
-      // client.getSystemRegions()
+      client.getSystemRegions()
 
       // INVALID: rules should be array
       // client.getGeofencingZones()
