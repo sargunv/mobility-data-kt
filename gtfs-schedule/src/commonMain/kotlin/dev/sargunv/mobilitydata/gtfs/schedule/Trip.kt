@@ -43,6 +43,18 @@ public data class Trip(
 
   /** Indicates whether bikes are allowed. */
   @SerialName("bikes_allowed") public val bikesAllowed: BikesAllowed? = null,
+
+  /** Minimum advance booking time for demand-responsive transit (in minutes). */
+  @SerialName("drt_advance_book_min") public val drtAdvanceBookMin: Double? = null,
+
+  /** Identifies the fare that applies for this trip. */
+  @SerialName("fare_id") public val fareId: String? = null,
+
+  /** Indicates whether this trip runs during peak or off-peak periods. */
+  @SerialName("peak_offpeak") public val peakOffpeak: String? = null,
+
+  /** Indicates how passengers can board the vehicle. */
+  @SerialName("boarding_type") public val boardingType: String? = null,
 )
 
 /**

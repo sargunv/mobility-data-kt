@@ -4,7 +4,6 @@ import kotlin.test.Test
 import kotlinx.io.buffered
 import kotlinx.io.files.Path
 import kotlinx.io.files.SystemFileSystem
-import kotlinx.io.readString
 
 class ProducerTest {
   private fun getProjectDir(): Path {
@@ -16,40 +15,66 @@ class ProducerTest {
     }
   }
 
-  private fun readCsvFile(fileName: String): String {
-    val projectDir = getProjectDir()
-    val localPath = Path("$projectDir", "sample-data", "gtfs-schedule", "sound-transit", fileName)
-    val source = SystemFileSystem.source(localPath)
-    return source.buffered().use { it.readString() }
-  }
+  private fun openCsvFile(fileName: String) =
+    SystemFileSystem.source(
+        Path("${getProjectDir()}", "sample-data", "gtfs-schedule", "sound-transit", fileName)
+      )
+      .buffered()
 
   @Test
   fun testAgency() {
-    val content = readCsvFile("agency.txt")
-    GtfsCsv.decodeFromString<Agency>(content)
+    openCsvFile("agency.txt").use { source ->
+      val agencies = GtfsCsv.decodeFromSource<Agency>(source)
+      // Consume the sequence to verify decoding works
+      agencies.forEach {}
+    }
   }
 
   @Test
   fun testRoutes() {
-    val content = readCsvFile("routes.txt")
-    GtfsCsv.decodeFromString<Route>(content)
+    openCsvFile("routes.txt").use { source ->
+      val routes = GtfsCsv.decodeFromSource<Route>(source)
+      routes.forEach {}
+    }
+  }
+
+  @Test
+  fun testTrips() {
+    openCsvFile("trips.txt").use { source ->
+      val trips = GtfsCsv.decodeFromSource<Trip>(source)
+      trips.forEach {}
+    }
   }
 
   @Test
   fun testStops() {
-    val content = readCsvFile("stops.txt")
-    GtfsCsv.decodeFromString<Stop>(content)
+    openCsvFile("stops.txt").use { source ->
+      val stops = GtfsCsv.decodeFromSource<Stop>(source)
+      stops.forEach {}
+    }
+  }
+
+  @Test
+  fun testStopTimes() {
+    openCsvFile("stop_times.txt").use { source ->
+      val stopTimes = GtfsCsv.decodeFromSource<StopTime>(source)
+      stopTimes.forEach {}
+    }
   }
 
   @Test
   fun testCalendar() {
-    val content = readCsvFile("calendar.txt")
-    GtfsCsv.decodeFromString<ServiceCalendar>(content)
+    openCsvFile("calendar.txt").use { source ->
+      val calendars = GtfsCsv.decodeFromSource<ServiceCalendar>(source)
+      calendars.forEach {}
+    }
   }
 
   @Test
   fun testCalendarDates() {
-    val content = readCsvFile("calendar_dates.txt")
-    GtfsCsv.decodeFromString<CalendarDate>(content)
+    openCsvFile("calendar_dates.txt").use { source ->
+      val calendarDates = GtfsCsv.decodeFromSource<CalendarDate>(source)
+      calendarDates.forEach {}
+    }
   }
 }

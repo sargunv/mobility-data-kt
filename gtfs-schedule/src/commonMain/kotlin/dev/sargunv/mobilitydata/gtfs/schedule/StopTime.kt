@@ -48,6 +48,9 @@ public data class StopTime(
 
   /** Indicates whether a rider can board or alight at this stop. */
   @SerialName("timepoint") public val timepoint: Timepoint? = null,
+
+  /** Buffer time in seconds before scheduled departure. */
+  @SerialName("departure_buffer") public val departureBuffer: Int? = null,
 )
 
 /**
