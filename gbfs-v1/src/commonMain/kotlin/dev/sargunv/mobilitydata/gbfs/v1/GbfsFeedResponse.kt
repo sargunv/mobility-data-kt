@@ -25,7 +25,7 @@ public data class GbfsFeedResponse<T : GbfsFeedData>(
   public val ttl: WholeSeconds,
 
   /** GBFS version number to which the feed conforms, according to the versioning framework. */
-  public val version: String,
+  public val version: String? = null,
 
   /** Response data in the form of the specific feed type being accessed. */
   public val data: T,
