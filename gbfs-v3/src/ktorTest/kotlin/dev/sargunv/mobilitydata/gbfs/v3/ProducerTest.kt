@@ -57,7 +57,7 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // citiz's gbfs.json contains a feed named 'gbfs' which is not recognized by FeedType enum
+  @Ignore // unknown feed type
   fun citiz() = runTest {
     val client = GbfsV3Client(createMockEngine("citiz"))
     val service = client.getServiceManifest("gbfs.json").data
@@ -103,8 +103,7 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // ecovelo's vehicle_types.json contains 'scooter' form_factor which is not in
-  // VehicleFormFactor enum
+  @Ignore // unknown vehicle type
   fun ecovelo() = runTest {
     val client = GbfsV3Client(createMockEngine("ecovelo"))
     val service = client.getServiceManifest("gbfs.json").data
@@ -142,7 +141,7 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // ridecheck's gbfs.json has invalid timestamp format with space instead of 'T'
+  @Ignore // invalid timestamp format
   fun ridecheck() = runTest {
     val client = GbfsV3Client(createMockEngine("ridecheck"))
     val service = client.getServiceManifest("gbfs.json").data

@@ -7,4 +7,5 @@ public val GbfsJson: Json = Json {
   explicitNulls = true
   encodeDefaults = false
   ignoreUnknownKeys = true
+  coerceInputValues = true
 }

@@ -40,7 +40,7 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // https://github.com/sargunv/mobility-data-kt/issues/16
+  @Ignore // unknown feed type
   fun publicbikesystem() = runTest {
     val client = GbfsV1Client(createMockEngine("publicbikesystem"))
 
@@ -71,8 +71,7 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // bcycle's gbfs.json contains a feed named "gbfs" which is not recognized by FeedType
-  // enum
+  @Ignore // unknown feed type
   fun bcycle() = runTest {
     val client = GbfsV1Client(createMockEngine("bcycle"))
 
@@ -121,7 +120,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // station status feed is non-conformant
   fun lime() = runTest {
     val client = GbfsV1Client(createMockEngine("lime"))
 
@@ -132,7 +130,9 @@ class ProducerTest {
       client.getSystemInformation()
       client.getFreeBikeStatus()
       client.getStationInformation()
-      client.getStationStatus()
+
+      // INVALID: num_bikes_available is named num_vehicles_available
+      // client.getStationStatus()
     }
   }
 }

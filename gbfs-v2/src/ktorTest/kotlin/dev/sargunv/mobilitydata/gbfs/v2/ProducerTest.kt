@@ -6,7 +6,6 @@ import io.ktor.client.engine.mock.respondError
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.fullPath
 import io.ktor.http.headersOf
-import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlinx.coroutines.test.runTest
 import kotlinx.io.buffered
@@ -118,7 +117,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // lime's station_status.json is missing required fields (num_bikes_available)
   fun lime() = runTest {
     val client = GbfsV2Client(createMockEngine("lime"))
 
@@ -129,8 +127,10 @@ class ProducerTest {
       client.getSystemInformation()
       client.getVehicleTypes()
       client.getStationInformation()
-      client.getStationStatus()
       client.getFreeBikeStatus()
+
+      // INVALID: num_bikes_available is named num_vehicles_available
+      // client.getStationStatus()
     }
   }
 
@@ -153,7 +153,6 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // neuron's system_regions.json has region_id as integer instead of string
   fun neuron() = runTest {
     val client = GbfsV2Client(createMockEngine("neuron"))
 
@@ -162,12 +161,18 @@ class ProducerTest {
 
     context(service) {
       client.getSystemInformation()
-      client.getSystemRegions()
       client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getStationInformation()
-      client.getStationStatus()
       client.getFreeBikeStatus()
+
+      // INVALID: station_id is int instead of string
+      // client.getStationInformation()
+      // client.getStationStatus()
+
+      // INVALID: region_id is int instead of string
+      // client.getSystemRegions()
+
+      // INVALID: rules should be array
+      // client.getGeofencingZones()
     }
   }
 
