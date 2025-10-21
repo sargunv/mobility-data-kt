@@ -1,0 +1,22 @@
+{
+    "version": "2.0",
+    "data": {
+        "url": "https://www.rideneuron.com",
+        "rental_apps": {
+            "android": {
+                "store_uri": "https://play.google.com/store/apps/details?id=com.hhyu.neuron",
+                "discovery_uri": "nss://home"
+            },
+            "ios": {
+                "store_uri": "https://apps.apple.com/us/app/neuron-escooter-sharing/id1240649186",
+                "discovery_uri": "nss://home"
+            }
+        },
+        "system_id": "neuron_yow",
+        "language": "en",
+        "name": "Neuron Mobility",
+        "timezone": "America/Toronto"
+    },
+    "ttl": 0,
+    "last_updated": 1761019013
+}

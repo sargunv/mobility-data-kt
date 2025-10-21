@@ -1,0 +1,15 @@
+{
+    "ttl": 60,
+    "last_updated": 1761018382,
+    "data": {
+        "rental_hours": [
+            {
+                "user_types": ["member", "nonmember"],
+                "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+                "start_time": "00:00:00",
+                "end_time": "23:59:59"
+            }
+        ]
+    },
+    "version": "1.1"
+}

@@ -1,0 +1,3897 @@
+{
+    "version": "2.0",
+    "data": {
+        "stations": [
+            {
+                "station_id": 135,
+                "name": "Sorrell Driveway",
+                "lat": 45.4056955,
+                "lon": -75.7351255
+            },
+            {
+                "station_id": 1911,
+                "name": "Sussex b/w Boteler & King Edward. Canada External Affairs",
+                "lat": 45.4369554,
+                "lon": -75.6972706
+            },
+            {
+                "station_id": 1912,
+                "name": "Boteler & Sussex",
+                "lat": 45.4337384,
+                "lon": -75.6994753
+            },
+            {
+                "station_id": 1913,
+                "name": "Boteler & King Edward",
+                "lat": 45.4361645,
+                "lon": -75.6926116
+            },
+            {
+                "station_id": 1914,
+                "name": "Bruyere & Sussex",
+                "lat": 45.4309311,
+                "lon": -75.6981554
+            },
+            {
+                "station_id": 1915,
+                "name": "St. Andrew & Parent",
+                "lat": 45.4314337,
+                "lon": -75.6954396
+            },
+            {
+                "station_id": 1916,
+                "name": "St. Andrew & Dalhousie",
+                "lat": 45.4320372,
+                "lon": -75.6940223
+            },
+            {
+                "station_id": 1917,
+                "name": "St. Andrew & Cumberland",
+                "lat": 45.4330858,
+                "lon": -75.6918932
+            },
+            {
+                "station_id": 1918,
+                "name": "St. Andrew & King Edward",
+                "lat": 45.4339336,
+                "lon": -75.6899645
+            },
+            {
+                "station_id": 1919,
+                "name": "St. Andrew & St. Patrick",
+                "lat": 45.4347873,
+                "lon": -75.6869929
+            },
+            {
+                "station_id": 1920,
+                "name": "Guigues & Sussex",
+                "lat": 45.4299964,
+                "lon": -75.6969749
+            },
+            {
+                "station_id": 1921,
+                "name": "Guigues & Dalhousie",
+                "lat": 45.4315044,
+                "lon": -75.6936108
+            },
+            {
+                "station_id": 1922,
+                "name": "Guiges & King Edward",
+                "lat": 45.4332643,
+                "lon": -75.6893649
+            },
+            {
+                "station_id": 1923,
+                "name": "St. Patrick & Mackenzie. National Art Gallery",
+                "lat": 45.4290712,
+                "lon": -75.6972697
+            },
+            {
+                "station_id": 1924,
+                "name": "St. Patrick & Sussex",
+                "lat": 45.4294532,
+                "lon": -75.6966223
+            },
+            {
+                "station_id": 1925,
+                "name": "St. Patrick & Dalhousie",
+                "lat": 45.4308462,
+                "lon": -75.6930659
+            },
+            {
+                "station_id": 1926,
+                "name": "St. Patrick & King Edward (SE). Holiday Inn Express",
+                "lat": 45.4324016,
+                "lon": -75.6885469
+            },
+            {
+                "station_id": 1927,
+                "name": "St. Patrick & King Edward (NE)",
+                "lat": 45.4328591,
+                "lon": -75.6884284
+            },
+            {
+                "station_id": 1928,
+                "name": "St. Patrick & Cobourg",
+                "lat": 45.436044,
+                "lon": -75.6813256
+            },
+            {
+                "station_id": 1929,
+                "name": "Murray & Mackenzie",
+                "lat": 45.4283666,
+                "lon": -75.6966736
+            },
+            {
+                "station_id": 1930,
+                "name": "Murray & Sussex (NW)",
+                "lat": 45.4287237,
+                "lon": -75.6962876
+            },
+            {
+                "station_id": 1931,
+                "name": "Murray & Sussex (NE)",
+                "lat": 45.4288132,
+                "lon": -75.6960798
+            },
+            {
+                "station_id": 1932,
+                "name": "Murray & Dalhousie",
+                "lat": 45.4302263,
+                "lon": -75.6925309
+            },
+            {
+                "station_id": 1933,
+                "name": "Murray & Beausoleil",
+                "lat": 45.4333458,
+                "lon": -75.6848402
+            },
+            {
+                "station_id": 1934,
+                "name": "Clarence & Sussex",
+                "lat": 45.4281753,
+                "lon": -75.6952751
+            },
+            {
+                "station_id": 1935,
+                "name": "Mackenzie b/w Murray & Rideau. Major's Hill Park",
+                "lat": 45.4271038,
+                "lon": -75.6958923
+            },
+            {
+                "station_id": 1936,
+                "name": "York & Sussex (SW)",
+                "lat": 45.4270031,
+                "lon": -75.6947699
+            },
+            {
+                "station_id": 1937,
+                "name": "York & Sussex. Ottawa Sign #1",
+                "lat": 45.4274846,
+                "lon": -75.6947008
+            },
+            {
+                "station_id": 1939,
+                "name": "York & Byward Market Square",
+                "lat": 45.4282077,
+                "lon": -75.6931142
+            },
+            {
+                "station_id": 1940,
+                "name": "York & Dalhousie (NW)",
+                "lat": 45.4288791,
+                "lon": -75.6913359
+            },
+            {
+                "station_id": 1942,
+                "name": "York & Cumberland",
+                "lat": 45.4298937,
+                "lon": -75.6888687
+            },
+            {
+                "station_id": 1943,
+                "name": "York & King Edward",
+                "lat": 45.4304292,
+                "lon": -75.6875585
+            },
+            {
+                "station_id": 1944,
+                "name": "York & Beausoleil",
+                "lat": 45.4321675,
+                "lon": -75.6838081
+            },
+            {
+                "station_id": 1945,
+                "name": "York east dead end",
+                "lat": 45.4325425,
+                "lon": -75.6824137
+            },
+            {
+                "station_id": 1946,
+                "name": "George & Sussex (NW)",
+                "lat": 45.4264445,
+                "lon": -75.6942984
+            },
+            {
+                "station_id": 1947,
+                "name": "George & Dalhousie",
+                "lat": 45.4276895,
+                "lon": -75.6904783
+            },
+            {
+                "station_id": 1948,
+                "name": "Sussex b/w George & Rideau",
+                "lat": 45.4258502,
+                "lon": -75.6937792
+            },
+            {
+                "station_id": 1949,
+                "name": "Rideau & Mackenzie. Chateau Laurier Hotel",
+                "lat": 45.4251385,
+                "lon": -75.6945374
+            },
+            {
+                "station_id": 1950,
+                "name": "Rideau b/w Mackenzie & Sussex",
+                "lat": 45.4254181,
+                "lon": -75.693806
+            },
+            {
+                "station_id": 1951,
+                "name": "Rideau & Sussex",
+                "lat": 45.4256895,
+                "lon": -75.6931753
+            },
+            {
+                "station_id": 1952,
+                "name": "Rideau b/w Sussex & William",
+                "lat": 45.426036,
+                "lon": -75.6922837
+            },
+            {
+                "station_id": 1953,
+                "name": "Rideau & William",
+                "lat": 45.4265859,
+                "lon": -75.6910199
+            },
+            {
+                "station_id": 1954,
+                "name": "Rideau & Dalhousie",
+                "lat": 45.4270831,
+                "lon": -75.6899659
+            },
+            {
+                "station_id": 1955,
+                "name": "Rideau & Waller",
+                "lat": 45.4274375,
+                "lon": -75.6891712
+            },
+            {
+                "station_id": 1956,
+                "name": "Rideau & Cumberland",
+                "lat": 45.4280054,
+                "lon": -75.6872689
+            },
+            {
+                "station_id": 1957,
+                "name": "Rideau & King Edward",
+                "lat": 45.4289919,
+                "lon": -75.6861806
+            },
+            {
+                "station_id": 1958,
+                "name": "Rideau & Nelson",
+                "lat": 45.4297523,
+                "lon": -75.6840534
+            },
+            {
+                "station_id": 1959,
+                "name": "Rideau & Chapel",
+                "lat": 45.4306629,
+                "lon": -75.6806941
+            },
+            {
+                "station_id": 1960,
+                "name": "Rideau & Charlotte",
+                "lat": 45.4326166,
+                "lon": -75.6767513
+            },
+            {
+                "station_id": 1961,
+                "name": "Rideau & Wurtemburg",
+                "lat": 45.4331789,
+                "lon": -75.6748396
+            },
+            {
+                "station_id": 1963,
+                "name": "Besserer & Dalhousie. Les Suites Hotel",
+                "lat": 45.4264201,
+                "lon": -75.6890454
+            },
+            {
+                "station_id": 1964,
+                "name": "Besserer & Cumberland",
+                "lat": 45.4272235,
+                "lon": -75.6871797
+            },
+            {
+                "station_id": 1965,
+                "name": "Besserer & King Edward",
+                "lat": 45.4280661,
+                "lon": -75.6854495
+            },
+            {
+                "station_id": 1966,
+                "name": "Daly & Nicholas. Novotel Hotel",
+                "lat": 45.42569,
+                "lon": -75.6895029
+            },
+            {
+                "station_id": 1967,
+                "name": "Daly & Cumberland",
+                "lat": 45.4266823,
+                "lon": -75.6864211
+            },
+            {
+                "station_id": 1968,
+                "name": "Stewart & Cumberland",
+                "lat": 45.4261426,
+                "lon": -75.6858775
+            },
+            {
+                "station_id": 1969,
+                "name": "Stewart & King Edward",
+                "lat": 45.4269231,
+                "lon": -75.6840341
+            },
+            {
+                "station_id": 1970,
+                "name": "Stewart & Chapel",
+                "lat": 45.4288526,
+                "lon": -75.6794629
+            },
+            {
+                "station_id": 1971,
+                "name": "Laurier E & Cumberland",
+                "lat": 45.4243213,
+                "lon": -75.6847112
+            },
+            {
+                "station_id": 1972,
+                "name": "Laurier E & Copernicus",
+                "lat": 45.424783,
+                "lon": -75.6837524
+            },
+            {
+                "station_id": 1973,
+                "name": "Laurier E & Nelson",
+                "lat": 45.4259706,
+                "lon": -75.6812172
+            },
+            {
+                "station_id": 1974,
+                "name": "Laurier E & Blackburn",
+                "lat": 45.4276286,
+                "lon": -75.6770105
+            },
+            {
+                "station_id": 1975,
+                "name": "Chapel b/w Laurier E & Osgoode",
+                "lat": 45.4263089,
+                "lon": -75.6771901
+            },
+            {
+                "station_id": 1976,
+                "name": "Osgoode & Henderson",
+                "lat": 45.4239767,
+                "lon": -75.6807567
+            },
+            {
+                "station_id": 1977,
+                "name": "Osgoode & Chapel",
+                "lat": 45.4256526,
+                "lon": -75.6765165
+            },
+            {
+                "station_id": 1978,
+                "name": "Somerset E & King Edward",
+                "lat": 45.4220779,
+                "lon": -75.6799613
+            },
+            {
+                "station_id": 1979,
+                "name": "Somerset E & Range. Strathcona Park",
+                "lat": 45.4257182,
+                "lon": -75.6717141
+            },
+            {
+                "station_id": 1980,
+                "name": "uOttawa Station",
+                "lat": 45.4207698,
+                "lon": -75.6822776
+            },
+            {
+                "station_id": 1981,
+                "name": "Templeton & King Edward",
+                "lat": 45.4205381,
+                "lon": -75.6786123
+            },
+            {
+                "station_id": 1982,
+                "name": "Templeton & Chapel",
+                "lat": 45.4224917,
+                "lon": -75.6739466
+            },
+            {
+                "station_id": 1983,
+                "name": "King Edward b/w Templeton & Mann",
+                "lat": 45.4200407,
+                "lon": -75.6785992
+            },
+            {
+                "station_id": 1984,
+                "name": "Mann & Russell",
+                "lat": 45.4205573,
+                "lon": -75.6733386
+            },
+            {
+                "station_id": 1985,
+                "name": "Wellington & Bay",
+                "lat": 45.4191168,
+                "lon": -75.7077649
+            },
+            {
+                "station_id": 1986,
+                "name": "Wellington & Kent",
+                "lat": 45.4209524,
+                "lon": -75.7041931
+            },
+            {
+                "station_id": 1987,
+                "name": "Wellington & Bank",
+                "lat": 45.4215957,
+                "lon": -75.7018459
+            },
+            {
+                "station_id": 1988,
+                "name": "Wellington & O'Connor",
+                "lat": 45.4225469,
+                "lon": -75.7003579
+            },
+            {
+                "station_id": 1989,
+                "name": "Wellington b/w O'Connor & Metcalfe. Parliament Hill",
+                "lat": 45.4232555,
+                "lon": -75.6986329
+            },
+            {
+                "station_id": 1991,
+                "name": "Wellington & Elgin (N)",
+                "lat": 45.4244328,
+                "lon": -75.6960052
+            },
+            {
+                "station_id": 1992,
+                "name": "Wellington & Elgin (SW)",
+                "lat": 45.4238483,
+                "lon": -75.69656
+            },
+            {
+                "station_id": 1993,
+                "name": "Wellington & Elgin (SE)",
+                "lat": 45.4245228,
+                "lon": -75.694717
+            },
+            {
+                "station_id": 1994,
+                "name": "Sparks & Bay",
+                "lat": 45.4186281,
+                "lon": -75.7073456
+            },
+            {
+                "station_id": 1995,
+                "name": "Sparks & Bank",
+                "lat": 45.4210241,
+                "lon": -75.7013217
+            },
+            {
+                "station_id": 1996,
+                "name": "Sparks & O'Connor",
+                "lat": 45.422134,
+                "lon": -75.6993963
+            },
+            {
+                "station_id": 1997,
+                "name": "Sparks & Metcalfe",
+                "lat": 45.4227914,
+                "lon": -75.6972613
+            },
+            {
+                "station_id": 1998,
+                "name": "Queen & Bronson",
+                "lat": 45.4171917,
+                "lon": -75.709028
+            },
+            {
+                "station_id": 1999,
+                "name": "Queen & Bay",
+                "lat": 45.4182383,
+                "lon": -75.7063761
+            },
+            {
+                "station_id": 2000,
+                "name": "Queen & Lyon N (NW). Hilton Garden Inn",
+                "lat": 45.4186776,
+                "lon": -75.7053334
+            },
+            {
+                "station_id": 2001,
+                "name": "Queen & Lyon N (SE). Delta Hotel",
+                "lat": 45.4188419,
+                "lon": -75.7046266
+            },
+            {
+                "station_id": 2002,
+                "name": "Queen & Kent. Marriott Hotel",
+                "lat": 45.4196406,
+                "lon": -75.7031056
+            },
+            {
+                "station_id": 2003,
+                "name": "Queen b/w Bank & O'Connor. Parliament Station",
+                "lat": 45.4214504,
+                "lon": -75.6986259
+            },
+            {
+                "station_id": 2004,
+                "name": "Queen & Metcalfe",
+                "lat": 45.4221292,
+                "lon": -75.6966524
+            },
+            {
+                "station_id": 2005,
+                "name": "Queen & Elgin (NW)",
+                "lat": 45.4232237,
+                "lon": -75.6950782
+            },
+            {
+                "station_id": 2006,
+                "name": "Queen & Elgin (NE)",
+                "lat": 45.4235119,
+                "lon": -75.6947433
+            },
+            {
+                "station_id": 2007,
+                "name": "Elgin b/w Queen & Albert",
+                "lat": 45.4227468,
+                "lon": -75.6946454
+            },
+            {
+                "station_id": 2008,
+                "name": "Albert & Bay",
+                "lat": 45.4174011,
+                "lon": -75.7058134
+            },
+            {
+                "station_id": 2009,
+                "name": "Albert & Lyon N. Delta Hotel",
+                "lat": 45.4183683,
+                "lon": -75.7041814
+            },
+            {
+                "station_id": 2010,
+                "name": "Albert & Kent",
+                "lat": 45.4189751,
+                "lon": -75.7026869
+            },
+            {
+                "station_id": 2011,
+                "name": "Albert & Bank",
+                "lat": 45.4200595,
+                "lon": -75.7004509
+            },
+            {
+                "station_id": 2012,
+                "name": "Albert & O'Connor",
+                "lat": 45.4207426,
+                "lon": -75.6986717
+            },
+            {
+                "station_id": 2013,
+                "name": "Albert & Elgin",
+                "lat": 45.4227362,
+                "lon": -75.6941541
+            },
+            {
+                "station_id": 2014,
+                "name": "Slater & Bronson",
+                "lat": 45.4158634,
+                "lon": -75.7076583
+            },
+            {
+                "station_id": 2015,
+                "name": "Slater & Bay",
+                "lat": 45.4169297,
+                "lon": -75.7052725
+            },
+            {
+                "station_id": 2016,
+                "name": "Slater & Lyon N",
+                "lat": 45.417746,
+                "lon": -75.7039547
+            },
+            {
+                "station_id": 2017,
+                "name": "Slater & Kent",
+                "lat": 45.418391,
+                "lon": -75.7021834
+            },
+            {
+                "station_id": 2018,
+                "name": "Slater & Bank",
+                "lat": 45.4194865,
+                "lon": -75.6998005
+            },
+            {
+                "station_id": 2020,
+                "name": "Slater & Metcalfe",
+                "lat": 45.4211712,
+                "lon": -75.6956963
+            },
+            {
+                "station_id": 2021,
+                "name": "Slater & Elgin",
+                "lat": 45.4220264,
+                "lon": -75.6940349
+            },
+            {
+                "station_id": 2022,
+                "name": "Laurier W & Bronson",
+                "lat": 45.4148175,
+                "lon": -75.7078519
+            },
+            {
+                "station_id": 2023,
+                "name": "Laurier W & Bay",
+                "lat": 45.41609,
+                "lon": -75.704595
+            },
+            {
+                "station_id": 2024,
+                "name": "Laurier W & Lyon N",
+                "lat": 45.4169614,
+                "lon": -75.7033247
+            },
+            {
+                "station_id": 2027,
+                "name": "Laurier W & Bank",
+                "lat": 45.4187173,
+                "lon": -75.699131
+            },
+            {
+                "station_id": 2028,
+                "name": "Laurier W & O'Connor",
+                "lat": 45.4193822,
+                "lon": -75.6968273
+            },
+            {
+                "station_id": 2029,
+                "name": "Laurier W & Metcalfe. Ottawa Public Library - Main Branch",
+                "lat": 45.4202615,
+                "lon": -75.6953148
+            },
+            {
+                "station_id": 2033,
+                "name": "Gloucester & Bay",
+                "lat": 45.4155738,
+                "lon": -75.7041346
+            },
+            {
+                "station_id": 2034,
+                "name": "Gloucester & Kent",
+                "lat": 45.4169997,
+                "lon": -75.7009276
+            },
+            {
+                "station_id": 2035,
+                "name": "Gloucester & Bank",
+                "lat": 45.4178986,
+                "lon": -75.6987519
+            },
+            {
+                "station_id": 2036,
+                "name": "Gloucester & O'Connor",
+                "lat": 45.4188265,
+                "lon": -75.6967794
+            },
+            {
+                "station_id": 2037,
+                "name": "Gloucester & Metcalfe",
+                "lat": 45.4194217,
+                "lon": -75.6943525
+            },
+            {
+                "station_id": 2038,
+                "name": "Gloucester & Elgin",
+                "lat": 45.4202714,
+                "lon": -75.6925574
+            },
+            {
+                "station_id": 2039,
+                "name": "Nepean & Bay",
+                "lat": 45.4149563,
+                "lon": -75.7036151
+            },
+            {
+                "station_id": 2042,
+                "name": "Nepean & O'Connor",
+                "lat": 45.4181892,
+                "lon": -75.6961403
+            },
+            {
+                "station_id": 2043,
+                "name": "Nepean & Elgin (SW)",
+                "lat": 45.4196348,
+                "lon": -75.6920065
+            },
+            {
+                "station_id": 2045,
+                "name": "Primrose E & Bronson. Bronson Centre",
+                "lat": 45.4133603,
+                "lon": -75.7067415
+            },
+            {
+                "station_id": 2046,
+                "name": "Metcalfe b/w Nepean & Lisgar",
+                "lat": 45.4187273,
+                "lon": -75.6937502
+            },
+            {
+                "station_id": 2047,
+                "name": "Lisgar b/w Lyon N & Kent",
+                "lat": 45.4154061,
+                "lon": -75.7008533
+            },
+            {
+                "station_id": 2048,
+                "name": "Lisgar & Kent",
+                "lat": 45.4157831,
+                "lon": -75.69984
+            },
+            {
+                "station_id": 2049,
+                "name": "Lisgar & Bank",
+                "lat": 45.4166767,
+                "lon": -75.6977025
+            },
+            {
+                "station_id": 2050,
+                "name": "Lisgar & O'Connor",
+                "lat": 45.4174393,
+                "lon": -75.6952951
+            },
+            {
+                "station_id": 2051,
+                "name": "Lisgar & Metcalfe",
+                "lat": 45.4183945,
+                "lon": -75.6933448
+            },
+            {
+                "station_id": 2053,
+                "name": "Cooper & Bronson",
+                "lat": 45.4123269,
+                "lon": -75.7060183
+            },
+            {
+                "station_id": 2054,
+                "name": "Cooper & Percy",
+                "lat": 45.4129514,
+                "lon": -75.7046108
+            },
+            {
+                "station_id": 2055,
+                "name": "Cooper & Bay",
+                "lat": 45.4136776,
+                "lon": -75.7025653
+            },
+            {
+                "station_id": 2056,
+                "name": "Cooper & O'Connor",
+                "lat": 45.4143234,
+                "lon": -75.7010003
+            },
+            {
+                "station_id": 2057,
+                "name": "Cooper & Kent",
+                "lat": 45.4152521,
+                "lon": -75.6990087
+            },
+            {
+                "station_id": 2058,
+                "name": "Cooper & Bank (NW)",
+                "lat": 45.4160316,
+                "lon": -75.6971662
+            },
+            {
+                "station_id": 2059,
+                "name": "Cooper & Bank (SE)",
+                "lat": 45.416059,
+                "lon": -75.696776
+            },
+            {
+                "station_id": 2060,
+                "name": "Cooper & Bank (SW)",
+                "lat": 45.4157815,
+                "lon": -75.6968307
+            },
+            {
+                "station_id": 2061,
+                "name": "Cooper & O'Connor",
+                "lat": 45.416919,
+                "lon": -75.6947455
+            },
+            {
+                "station_id": 2062,
+                "name": "Cooper b/w Metcalfe & Elgin",
+                "lat": 45.4181409,
+                "lon": -75.6920432
+            },
+            {
+                "station_id": 2063,
+                "name": "Cooper & Elgin",
+                "lat": 45.4186315,
+                "lon": -75.690877
+            },
+            {
+                "station_id": 2064,
+                "name": "Elgin b/w Cooper & Somerset",
+                "lat": 45.4182108,
+                "lon": -75.690757
+            },
+            {
+                "station_id": 2065,
+                "name": "Somerset b/w Bay & Lyon N",
+                "lat": 45.4132309,
+                "lon": -75.7017416
+            },
+            {
+                "station_id": 2066,
+                "name": "Somerset & Kent",
+                "lat": 45.4145686,
+                "lon": -75.6987102
+            },
+            {
+                "station_id": 2067,
+                "name": "Somerset & Bank",
+                "lat": 45.4152094,
+                "lon": -75.6963147
+            },
+            {
+                "station_id": 2068,
+                "name": "Somerset b/w Metcalfe & Elgin",
+                "lat": 45.417211,
+                "lon": -75.691733
+            },
+            {
+                "station_id": 2069,
+                "name": "Somerset & Elgin (NE)",
+                "lat": 45.4179773,
+                "lon": -75.6903702
+            },
+            {
+                "station_id": 2070,
+                "name": "MacLaren & Bay. Dundonald Park",
+                "lat": 45.4124195,
+                "lon": -75.7016161
+            },
+            {
+                "station_id": 2071,
+                "name": "MacLaren & Kent",
+                "lat": 45.4136367,
+                "lon": -75.6979232
+            },
+            {
+                "station_id": 2072,
+                "name": "MacLaren & Bank",
+                "lat": 45.4147307,
+                "lon": -75.6956531
+            },
+            {
+                "station_id": 2073,
+                "name": "MacLaren & O'Connor",
+                "lat": 45.4154771,
+                "lon": -75.6937878
+            },
+            {
+                "station_id": 2074,
+                "name": "MacLaren b/w O'Connor & Metcalfe",
+                "lat": 45.4161827,
+                "lon": -75.6924306
+            },
+            {
+                "station_id": 2075,
+                "name": "MacLaren & Metcalfe",
+                "lat": 45.4164632,
+                "lon": -75.6916826
+            },
+            {
+                "station_id": 2076,
+                "name": "MacLaren & Elgin",
+                "lat": 45.4172117,
+                "lon": -75.6900046
+            },
+            {
+                "station_id": 2077,
+                "name": "MacLaren & Cartier",
+                "lat": 45.417945,
+                "lon": -75.687923
+            },
+            {
+                "station_id": 2078,
+                "name": "MacLaren & MacDonald",
+                "lat": 45.4189022,
+                "lon": -75.6859723
+            },
+            {
+                "station_id": 2079,
+                "name": "Gilmour & Percy",
+                "lat": 45.4109844,
+                "lon": -75.7026072
+            },
+            {
+                "station_id": 2080,
+                "name": "Gilmour & Bay",
+                "lat": 45.4115838,
+                "lon": -75.7011828
+            },
+            {
+                "station_id": 2081,
+                "name": "Gilmour & Lyon N",
+                "lat": 45.4123269,
+                "lon": -75.6993655
+            },
+            {
+                "station_id": 2082,
+                "name": "Gilmour & Kent",
+                "lat": 45.4132163,
+                "lon": -75.6972395
+            },
+            {
+                "station_id": 2083,
+                "name": "Gilmour & Bank (NW)",
+                "lat": 45.4140562,
+                "lon": -75.6954657
+            },
+            {
+                "station_id": 2084,
+                "name": "Gilmour & Bank (NE)",
+                "lat": 45.414152,
+                "lon": -75.6951245
+            },
+            {
+                "station_id": 2085,
+                "name": "Gilmour & O'Connor",
+                "lat": 45.4148046,
+                "lon": -75.6932065
+            },
+            {
+                "station_id": 2086,
+                "name": "Gilmour & Metcalfe",
+                "lat": 45.4157212,
+                "lon": -75.6914336
+            },
+            {
+                "station_id": 2087,
+                "name": "Gilmour & Elgin",
+                "lat": 45.4165114,
+                "lon": -75.6894321
+            },
+            {
+                "station_id": 2088,
+                "name": "Gilmour & MacDonald",
+                "lat": 45.418201,
+                "lon": -75.6854997
+            },
+            {
+                "station_id": 2089,
+                "name": "Christie & Bronson",
+                "lat": 45.4096696,
+                "lon": -75.7049077
+            },
+            {
+                "station_id": 2090,
+                "name": "Lewis & Elgin",
+                "lat": 45.4163181,
+                "lon": -75.6889462
+            },
+            {
+                "station_id": 2091,
+                "name": "James & Percy",
+                "lat": 45.4102213,
+                "lon": -75.7023625
+            },
+            {
+                "station_id": 2092,
+                "name": "James & Kent",
+                "lat": 45.4126049,
+                "lon": -75.6970437
+            },
+            {
+                "station_id": 2093,
+                "name": "James & Bank",
+                "lat": 45.4133905,
+                "lon": -75.6948635
+            },
+            {
+                "station_id": 2094,
+                "name": "Waverley W & Bank",
+                "lat": 45.4132272,
+                "lon": -75.6943289
+            },
+            {
+                "station_id": 2095,
+                "name": "Waverley & Elgin",
+                "lat": 45.4155052,
+                "lon": -75.6883852
+            },
+            {
+                "station_id": 2096,
+                "name": "Waverley & MacDonald",
+                "lat": 45.4171762,
+                "lon": -75.6844878
+            },
+            {
+                "station_id": 2097,
+                "name": "Waverley & Robert",
+                "lat": 45.4179278,
+                "lon": -75.6830381
+            },
+            {
+                "station_id": 2098,
+                "name": "Florence & Percy",
+                "lat": 45.4097186,
+                "lon": -75.7015727
+            },
+            {
+                "station_id": 2099,
+                "name": "Florence & Lyon N",
+                "lat": 45.4109599,
+                "lon": -75.6985951
+            },
+            {
+                "station_id": 2100,
+                "name": "Florence & Kent",
+                "lat": 45.4119076,
+                "lon": -75.6961523
+            },
+            {
+                "station_id": 2101,
+                "name": "Florence b/w Kent & Bank",
+                "lat": 45.4125485,
+                "lon": -75.6947412
+            },
+            {
+                "station_id": 2102,
+                "name": "Frank & Bank",
+                "lat": 45.4126571,
+                "lon": -75.6938284
+            },
+            {
+                "station_id": 2103,
+                "name": "Frank & Metcalfe",
+                "lat": 45.414372,
+                "lon": -75.6898583
+            },
+            {
+                "station_id": 2104,
+                "name": "Frank & Elgin",
+                "lat": 45.4149621,
+                "lon": -75.687784
+            },
+            {
+                "station_id": 2105,
+                "name": "Frank & MacDonald",
+                "lat": 45.4167014,
+                "lon": -75.6839809
+            },
+            {
+                "station_id": 2106,
+                "name": "Gladstone & Bronson (NW)",
+                "lat": 45.4078232,
+                "lon": -75.7039285
+            },
+            {
+                "station_id": 2107,
+                "name": "Gladstone & Bronson (NE)",
+                "lat": 45.4080762,
+                "lon": -75.7036136
+            },
+            {
+                "station_id": 2108,
+                "name": "Gladstone & Percy",
+                "lat": 45.4090294,
+                "lon": -75.7010185
+            },
+            {
+                "station_id": 2109,
+                "name": "Gladstone & Lyon N",
+                "lat": 45.4103315,
+                "lon": -75.6977328
+            },
+            {
+                "station_id": 2110,
+                "name": "Gladstone & Kent",
+                "lat": 45.4113462,
+                "lon": -75.6959716
+            },
+            {
+                "station_id": 2111,
+                "name": "Gladstone & Bank",
+                "lat": 45.4120261,
+                "lon": -75.6934438
+            },
+            {
+                "station_id": 2112,
+                "name": "Gladstone & O'Connor",
+                "lat": 45.4130241,
+                "lon": -75.6913824
+            },
+            {
+                "station_id": 2113,
+                "name": "Gladstone & Metcalfe",
+                "lat": 45.4138501,
+                "lon": -75.6894022
+            },
+            {
+                "station_id": 2114,
+                "name": "Gladstone & Elgin",
+                "lat": 45.4145271,
+                "lon": -75.6875575
+            },
+            {
+                "station_id": 2115,
+                "name": "McLeod b/w Bronson & Percy",
+                "lat": 45.4074493,
+                "lon": -75.7028416
+            },
+            {
+                "station_id": 2116,
+                "name": "McLeod & Percy",
+                "lat": 45.4083161,
+                "lon": -75.7005373
+            },
+            {
+                "station_id": 2117,
+                "name": "McLeod & Bay",
+                "lat": 45.4091993,
+                "lon": -75.6988216
+            },
+            {
+                "station_id": 2118,
+                "name": "McLeod & Lyon N",
+                "lat": 45.4098446,
+                "lon": -75.6972644
+            },
+            {
+                "station_id": 2119,
+                "name": "McLeod & Kent",
+                "lat": 45.4107189,
+                "lon": -75.6954465
+            },
+            {
+                "station_id": 2120,
+                "name": "McLeod & O'Connor",
+                "lat": 45.4124197,
+                "lon": -75.6908083
+            },
+            {
+                "station_id": 2121,
+                "name": "McLeod & Metcalfe (SW). Museum of Nature",
+                "lat": 45.4130436,
+                "lon": -75.6893143
+            },
+            {
+                "station_id": 2122,
+                "name": "McLeod & Metcalfe (SE). Museum of Nature",
+                "lat": 45.4132679,
+                "lon": -75.6887649
+            },
+            {
+                "station_id": 2123,
+                "name": "McLeod & Elgin",
+                "lat": 45.4140967,
+                "lon": -75.6871992
+            },
+            {
+                "station_id": 2124,
+                "name": "Flore & Percy",
+                "lat": 45.4078674,
+                "lon": -75.7000253
+            },
+            {
+                "station_id": 2125,
+                "name": "Flora & Bay",
+                "lat": 45.4085845,
+                "lon": -75.6983048
+            },
+            {
+                "station_id": 2126,
+                "name": "Flora & Lyon N",
+                "lat": 45.4092387,
+                "lon": -75.6967464
+            },
+            {
+                "station_id": 2127,
+                "name": "Flora & Kent",
+                "lat": 45.4100858,
+                "lon": -75.694575
+            },
+            {
+                "station_id": 2128,
+                "name": "Flora b/w Kent & Bank",
+                "lat": 45.4106299,
+                "lon": -75.6932566
+            },
+            {
+                "station_id": 2129,
+                "name": "Argyle & O'Connor",
+                "lat": 45.4115814,
+                "lon": -75.6901588
+            },
+            {
+                "station_id": 2130,
+                "name": "Argyle & Metcalfe",
+                "lat": 45.4127673,
+                "lon": -75.6868543
+            },
+            {
+                "station_id": 2131,
+                "name": "Argyle & Elgin",
+                "lat": 45.4129005,
+                "lon": -75.6861985
+            },
+            {
+                "station_id": 2132,
+                "name": "Arlington & Bronson",
+                "lat": 45.4060538,
+                "lon": -75.7024138
+            },
+            {
+                "station_id": 2133,
+                "name": "Arlington & Lyon N",
+                "lat": 45.4085743,
+                "lon": -75.696181
+            },
+            {
+                "station_id": 2134,
+                "name": "Arlington & Kent",
+                "lat": 45.4092862,
+                "lon": -75.6940879
+            },
+            {
+                "station_id": 2135,
+                "name": "Catherine & Percy",
+                "lat": 45.4066443,
+                "lon": -75.6992965
+            },
+            {
+                "station_id": 2136,
+                "name": "Catherine b/w Bay & Lyon N",
+                "lat": 45.407623,
+                "lon": -75.6967907
+            },
+            {
+                "station_id": 2137,
+                "name": "Catherine & Kent",
+                "lat": 45.4089342,
+                "lon": -75.6936948
+            },
+            {
+                "station_id": 2138,
+                "name": "Catherine b/w Bank & O'Connor",
+                "lat": 45.4099519,
+                "lon": -75.6912043
+            },
+            {
+                "station_id": 2139,
+                "name": "Catherine & Metcalfe",
+                "lat": 45.4116176,
+                "lon": -75.6872538
+            },
+            {
+                "station_id": 2140,
+                "name": "isabella & Metcalfe",
+                "lat": 45.4104465,
+                "lon": -75.686741
+            },
+            {
+                "station_id": 2141,
+                "name": "Bank & Pretoria (W)",
+                "lat": 45.4080704,
+                "lon": -75.691446
+            },
+            {
+                "station_id": 2142,
+                "name": "Bronson b/w Imperial & Renfrew",
+                "lat": 45.4034182,
+                "lon": -75.7009369
+            },
+            {
+                "station_id": 2143,
+                "name": "Bronson & Renfrew",
+                "lat": 45.4032068,
+                "lon": -75.7010961
+            },
+            {
+                "station_id": 2144,
+                "name": "Strathcona & O'Connor",
+                "lat": 45.4085619,
+                "lon": -75.6879085
+            },
+            {
+                "station_id": 2145,
+                "name": "Strathcona & Metcalfe",
+                "lat": 45.4094773,
+                "lon": -75.6856765
+            },
+            {
+                "station_id": 2146,
+                "name": "Strathcona & Queen Elizabeth Driveway",
+                "lat": 45.410187,
+                "lon": -75.6839476
+            },
+            {
+                "station_id": 2147,
+                "name": "Patterson & Metcalfe",
+                "lat": 45.4089998,
+                "lon": -75.6853443
+            },
+            {
+                "station_id": 2148,
+                "name": "Powell & Bronson",
+                "lat": 45.4022838,
+                "lon": -75.7005466
+            },
+            {
+                "station_id": 2149,
+                "name": "Monkland & O'Connor",
+                "lat": 45.4077252,
+                "lon": -75.6870055
+            },
+            {
+                "station_id": 2150,
+                "name": "Clemow & Bronson",
+                "lat": 45.4017028,
+                "lon": -75.6999632
+            },
+            {
+                "station_id": 2152,
+                "name": "Clemow & Bank (SE)",
+                "lat": 45.4058839,
+                "lon": -75.6898144
+            },
+            {
+                "station_id": 2153,
+                "name": "Clemow & O'Connor",
+                "lat": 45.4072545,
+                "lon": -75.6868636
+            },
+            {
+                "station_id": 2154,
+                "name": "Glebe & Percy",
+                "lat": 45.402432,
+                "lon": -75.6960247
+            },
+            {
+                "station_id": 2155,
+                "name": "Glebe & Lyon S",
+                "lat": 45.4038304,
+                "lon": -75.6926977
+            },
+            {
+                "station_id": 2156,
+                "name": "Glebe & Bank (NE)",
+                "lat": 45.4052969,
+                "lon": -75.689464
+            },
+            {
+                "station_id": 2157,
+                "name": "Glebe & O'Connor",
+                "lat": 45.4065853,
+                "lon": -75.686301
+            },
+            {
+                "station_id": 2158,
+                "name": "First & Bronson",
+                "lat": 45.4001949,
+                "lon": -75.6993605
+            },
+            {
+                "station_id": 2159,
+                "name": "First & Percy",
+                "lat": 45.4019262,
+                "lon": -75.6950865
+            },
+            {
+                "station_id": 2160,
+                "name": "First & Lyon S",
+                "lat": 45.4032795,
+                "lon": -75.6917817
+            },
+            {
+                "station_id": 2162,
+                "name": "First & O'Connor",
+                "lat": 45.4059892,
+                "lon": -75.6856209
+            },
+            {
+                "station_id": 2164,
+                "name": "Second & O'Connor",
+                "lat": 45.405145,
+                "lon": -75.6849315
+            },
+            {
+                "station_id": 2165,
+                "name": "Third & Chrysler",
+                "lat": 45.3997268,
+                "lon": -75.6963647
+            },
+            {
+                "station_id": 2166,
+                "name": "Third & Percy",
+                "lat": 45.4005638,
+                "lon": -75.6943179
+            },
+            {
+                "station_id": 2167,
+                "name": "Third & Lyon S",
+                "lat": 45.4019062,
+                "lon": -75.6910364
+            },
+            {
+                "station_id": 2168,
+                "name": "Third & Bank",
+                "lat": 45.403079,
+                "lon": -75.6881566
+            },
+            {
+                "station_id": 2169,
+                "name": "Fourth & Lyon S",
+                "lat": 45.4012417,
+                "lon": -75.6904459
+            },
+            {
+                "station_id": 2171,
+                "name": "Fifth & Bronson",
+                "lat": 45.3974436,
+                "lon": -75.6974886
+            },
+            {
+                "station_id": 2172,
+                "name": "Fifth & Gordon",
+                "lat": 45.3981643,
+                "lon": -75.6957824
+            },
+            {
+                "station_id": 2173,
+                "name": "Fifth & Percy",
+                "lat": 45.3994481,
+                "lon": -75.6930783
+            },
+            {
+                "station_id": 2174,
+                "name": "Fifth & Lyon S",
+                "lat": 45.4007486,
+                "lon": -75.6898966
+            },
+            {
+                "station_id": 2177,
+                "name": "Lakeside & Bronson",
+                "lat": 45.3965786,
+                "lon": -75.6973184
+            },
+            {
+                "station_id": 2178,
+                "name": "CLarey & Bank",
+                "lat": 45.400543,
+                "lon": -75.6867649
+            },
+            {
+                "station_id": 2179,
+                "name": "Holmwood & Bronson",
+                "lat": 45.3958363,
+                "lon": -75.6965449
+            },
+            {
+                "station_id": 2180,
+                "name": "Holmwood & Gordon",
+                "lat": 45.3965332,
+                "lon": -75.6948229
+            },
+            {
+                "station_id": 2181,
+                "name": "Holmwood & Adelaide",
+                "lat": 45.4011773,
+                "lon": -75.6835032
+            },
+            {
+                "station_id": 2182,
+                "name": "Holmwood & O'Connor",
+                "lat": 45.4013467,
+                "lon": -75.6825889
+            },
+            {
+                "station_id": 2183,
+                "name": "Bank b/w Holmwood & Marche",
+                "lat": 45.3995812,
+                "lon": -75.6862853
+            },
+            {
+                "station_id": 2185,
+                "name": "Bank b/w Exhibition & Wilton",
+                "lat": 45.3982707,
+                "lon": -75.6855179
+            },
+            {
+                "station_id": 2190,
+                "name": "Lees & Main",
+                "lat": 45.4119961,
+                "lon": -75.679522
+            },
+            {
+                "station_id": 2191,
+                "name": "Lees Station",
+                "lat": 45.4161134,
+                "lon": -75.6706126
+            },
+            {
+                "station_id": 2192,
+                "name": "Springhurst & Main",
+                "lat": 45.4105139,
+                "lon": -75.678723
+            },
+            {
+                "station_id": 2193,
+                "name": "Des Oblats & Main",
+                "lat": 45.4098869,
+                "lon": -75.6785927
+            },
+            {
+                "station_id": 2194,
+                "name": "Main b/w Des Oblats & Hazel",
+                "lat": 45.4092534,
+                "lon": -75.6780004
+            },
+            {
+                "station_id": 2195,
+                "name": "Hazel & Main",
+                "lat": 45.4086687,
+                "lon": -75.677844
+            },
+            {
+                "station_id": 2196,
+                "name": "Main b/w Hazel & Herridge. Saint Paul University",
+                "lat": 45.4081733,
+                "lon": -75.6772718
+            },
+            {
+                "station_id": 2198,
+                "name": "Sunnyside & Seneca",
+                "lat": 45.3914891,
+                "lon": -75.6902241
+            },
+            {
+                "station_id": 2199,
+                "name": "Sunnyside & Leonard",
+                "lat": 45.3922125,
+                "lon": -75.6884671
+            },
+            {
+                "station_id": 2200,
+                "name": "Sunnyside & Grosvenor",
+                "lat": 45.3931277,
+                "lon": -75.6860314
+            },
+            {
+                "station_id": 2201,
+                "name": "Sunnyside & Bank (NW)",
+                "lat": 45.3942646,
+                "lon": -75.6836674
+            },
+            {
+                "station_id": 2202,
+                "name": "Sunnyside & Bank (SE)",
+                "lat": 45.394267,
+                "lon": -75.6832265
+            },
+            {
+                "station_id": 2203,
+                "name": "Sunnyside & Riverdale",
+                "lat": 45.3963443,
+                "lon": -75.679003
+            },
+            {
+                "station_id": 2204,
+                "name": "Hopewell & Bank",
+                "lat": 45.3933459,
+                "lon": -75.6827081
+            },
+            {
+                "station_id": 2205,
+                "name": "Belmont & Riverdale",
+                "lat": 45.3939344,
+                "lon": -75.6789422
+            },
+            {
+                "station_id": 2206,
+                "name": "Bank b/w Grove & Ossington",
+                "lat": 45.3920969,
+                "lon": -75.6815942
+            },
+            {
+                "station_id": 2207,
+                "name": "Cameron & Seneca. Brewer Park",
+                "lat": 45.3887208,
+                "lon": -75.6876159
+            },
+            {
+                "station_id": 2208,
+                "name": "Cameron & Bank",
+                "lat": 45.3913895,
+                "lon": -75.6810358
+            },
+            {
+                "station_id": 2209,
+                "name": "Cameron & Riverdale",
+                "lat": 45.3918975,
+                "lon": -75.6790436
+            },
+            {
+                "station_id": 2211,
+                "name": "Fleet & Lett",
+                "lat": 45.4161049,
+                "lon": -75.7124332
+            },
+            {
+                "station_id": 2212,
+                "name": "Booth b/w Fleet & Albert. Pimisi Station",
+                "lat": 45.4134608,
+                "lon": -75.7127787
+            },
+            {
+                "station_id": 2214,
+                "name": "Albert & Empress",
+                "lat": 45.4135737,
+                "lon": -75.7109132
+            },
+            {
+                "station_id": 2215,
+                "name": "Cambridge N b/w Laurier W & Primrose E",
+                "lat": 45.4138636,
+                "lon": -75.7081472
+            },
+            {
+                "station_id": 2216,
+                "name": "Primrose E & Bronson (NW)",
+                "lat": 45.4131657,
+                "lon": -75.7069993
+            },
+            {
+                "station_id": 2217,
+                "name": "Primrose E & Arthur",
+                "lat": 45.4123522,
+                "lon": -75.7085381
+            },
+            {
+                "station_id": 2218,
+                "name": "Primrose E dead end west of Empress",
+                "lat": 45.4118988,
+                "lon": -75.7101851
+            },
+            {
+                "station_id": 2219,
+                "name": "Primrose & Booth",
+                "lat": 45.4114673,
+                "lon": -75.7115983
+            },
+            {
+                "station_id": 2220,
+                "name": "Elm & Booth",
+                "lat": 45.4108844,
+                "lon": -75.711467
+            },
+            {
+                "station_id": 2221,
+                "name": "Somerset & Arthur",
+                "lat": 45.4105769,
+                "lon": -75.7073414
+            },
+            {
+                "station_id": 2222,
+                "name": "Somerset & Bell N",
+                "lat": 45.4105658,
+                "lon": -75.7081812
+            },
+            {
+                "station_id": 2223,
+                "name": "Somerset & Lebreton N",
+                "lat": 45.4099423,
+                "lon": -75.7093841
+            },
+            {
+                "station_id": 2224,
+                "name": "Somerset & Upper Lorne",
+                "lat": 45.4100191,
+                "lon": -75.7097035
+            },
+            {
+                "station_id": 2225,
+                "name": "Somerset & Booth (NE)",
+                "lat": 45.4097201,
+                "lon": -75.7106138
+            },
+            {
+                "station_id": 2226,
+                "name": "Somerset & Booth (SW)",
+                "lat": 45.4093448,
+                "lon": -75.7105401
+            },
+            {
+                "station_id": 2227,
+                "name": "Eccles & Bell",
+                "lat": 45.4094778,
+                "lon": -75.7077802
+            },
+            {
+                "station_id": 2228,
+                "name": "Eccles & Booth",
+                "lat": 45.4088329,
+                "lon": -75.7099619
+            },
+            {
+                "station_id": 2229,
+                "name": "Christie & Arthur",
+                "lat": 45.4088253,
+                "lon": -75.7064905
+            },
+            {
+                "station_id": 2230,
+                "name": "Poplar & Booth",
+                "lat": 45.4076368,
+                "lon": -75.7094972
+            },
+            {
+                "station_id": 2231,
+                "name": "Willow & Bell N",
+                "lat": 45.4076675,
+                "lon": -75.7067177
+            },
+            {
+                "station_id": 2232,
+                "name": "Willow & Booth",
+                "lat": 45.4069239,
+                "lon": -75.7090793
+            },
+            {
+                "station_id": 2233,
+                "name": "Gladstone & Cambridge N",
+                "lat": 45.4072626,
+                "lon": -75.7047937
+            },
+            {
+                "station_id": 2234,
+                "name": "Gladstone & Arthur",
+                "lat": 45.4072103,
+                "lon": -75.7055534
+            },
+            {
+                "station_id": 2235,
+                "name": "Gladstone & Bell N",
+                "lat": 45.406768,
+                "lon": -75.7059175
+            },
+            {
+                "station_id": 2236,
+                "name": "Gladstone & Lebreton N",
+                "lat": 45.406464,
+                "lon": -75.7074421
+            },
+            {
+                "station_id": 2237,
+                "name": "Gladstone & Booth (SE)",
+                "lat": 45.4058708,
+                "lon": -75.7082066
+            },
+            {
+                "station_id": 2238,
+                "name": "Gladstone & Booth (NW)",
+                "lat": 45.4058026,
+                "lon": -75.7085473
+            },
+            {
+                "station_id": 2239,
+                "name": "Louisa & Bell N",
+                "lat": 45.405944,
+                "lon": -75.7055435
+            },
+            {
+                "station_id": 2240,
+                "name": "Arlington & Cambridge N",
+                "lat": 45.405677,
+                "lon": -75.7039023
+            },
+            {
+                "station_id": 2241,
+                "name": "Arlington & Booth",
+                "lat": 45.4046454,
+                "lon": -75.7075871
+            },
+            {
+                "station_id": 2242,
+                "name": "Raymond & Bell N",
+                "lat": 45.4046311,
+                "lon": -75.7048742
+            },
+            {
+                "station_id": 2243,
+                "name": "Henry & Bell",
+                "lat": 45.4020998,
+                "lon": -75.703074
+            },
+            {
+                "station_id": 2244,
+                "name": "Powell & Cambridge S",
+                "lat": 45.4021963,
+                "lon": -75.701791
+            },
+            {
+                "station_id": 2245,
+                "name": "Laurier E & King Edward",
+                "lat": 45.4253982,
+                "lon": -75.6826058
+            },
+            {
+                "station_id": 2246,
+                "name": "Somerset E & Sweetland",
+                "lat": 45.4233075,
+                "lon": -75.6771173
+            },
+            {
+                "station_id": 2247,
+                "name": "Mann & Chapel",
+                "lat": 45.4210359,
+                "lon": -75.6724528
+            },
+            {
+                "station_id": 2248,
+                "name": "Clarence & Dalhousie",
+                "lat": 45.4298288,
+                "lon": -75.691433
+            },
+            {
+                "station_id": 2250,
+                "name": "Somerset & Bronson",
+                "lat": 45.4113396,
+                "lon": -75.7062883
+            },
+            {
+                "station_id": 2251,
+                "name": "McLeod & Bank",
+                "lat": 45.4115433,
+                "lon": -75.6930029
+            },
+            {
+                "station_id": 2252,
+                "name": "Somerset & Elgin (SW)",
+                "lat": 45.4177017,
+                "lon": -75.6903344
+            },
+            {
+                "station_id": 2253,
+                "name": "Cooper & Cartier",
+                "lat": 45.4192172,
+                "lon": -75.6891908
+            },
+            {
+                "station_id": 2254,
+                "name": "Gilmour & Cartier",
+                "lat": 45.4171967,
+                "lon": -75.6871944
+            },
+            {
+                "station_id": 2255,
+                "name": "Second b/w Lyon S & Bank",
+                "lat": 45.4032904,
+                "lon": -75.6894491
+            },
+            {
+                "station_id": 2256,
+                "name": "Holmwood & Bank",
+                "lat": 45.3999256,
+                "lon": -75.6864417
+            },
+            {
+                "station_id": 2257,
+                "name": "Bank & Pretoria (SE)",
+                "lat": 45.4080803,
+                "lon": -75.6909517
+            },
+            {
+                "station_id": 2258,
+                "name": "Grove & Bank",
+                "lat": 45.3922767,
+                "lon": -75.682283
+            },
+            {
+                "station_id": 2259,
+                "name": "Glebe & Bank (SW)",
+                "lat": 45.4050045,
+                "lon": -75.6898545
+            },
+            {
+                "station_id": 2534,
+                "name": "Rideau Gate & Sussex",
+                "lat": 45.4444219,
+                "lon": -75.6920898
+            },
+            {
+                "station_id": 2535,
+                "name": "MacKay & Queen Victoria",
+                "lat": 45.4421802,
+                "lon": -75.6876284
+            },
+            {
+                "station_id": 2536,
+                "name": "MacKay & Ivy W",
+                "lat": 45.440106,
+                "lon": -75.6802624
+            },
+            {
+                "station_id": 2537,
+                "name": "MacKay & Beechwood",
+                "lat": 45.4394864,
+                "lon": -75.6771854
+            },
+            {
+                "station_id": 2538,
+                "name": "Crichton & Union",
+                "lat": 45.4418007,
+                "lon": -75.6899214
+            },
+            {
+                "station_id": 2539,
+                "name": "Cricthon & Keefer",
+                "lat": 45.4405855,
+                "lon": -75.6863158
+            },
+            {
+                "station_id": 2540,
+                "name": "Crichton b/w Dufferin & Electric",
+                "lat": 45.4391818,
+                "lon": -75.6811321
+            },
+            {
+                "station_id": 2541,
+                "name": "Crichton & Beechwood",
+                "lat": 45.4385333,
+                "lon": -75.6779264
+            },
+            {
+                "station_id": 2542,
+                "name": "Stanley & Sussex",
+                "lat": 45.441649,
+                "lon": -75.6943963
+            },
+            {
+                "station_id": 2543,
+                "name": "Stanley & Queen Victoria",
+                "lat": 45.4401871,
+                "lon": -75.6885406
+            },
+            {
+                "station_id": 2544,
+                "name": "Stanley b/w Keefer & Crichton. New Edinburgh Park",
+                "lat": 45.4391253,
+                "lon": -75.6850727
+            },
+            {
+                "station_id": 2545,
+                "name": "Putman & Springfield",
+                "lat": 45.4422938,
+                "lon": -75.6770382
+            },
+            {
+                "station_id": 2546,
+                "name": "Beechwood & Springfield",
+                "lat": 45.4398965,
+                "lon": -75.6765271
+            },
+            {
+                "station_id": 2547,
+                "name": "Beechwood & St. Charles",
+                "lat": 45.4408434,
+                "lon": -75.6739748
+            },
+            {
+                "station_id": 2548,
+                "name": "Beechwood & Ste-Cecile",
+                "lat": 45.4425392,
+                "lon": -75.6708758
+            },
+            {
+                "station_id": 2549,
+                "name": "Beechwood & Marquette",
+                "lat": 45.4432797,
+                "lon": -75.6704283
+            },
+            {
+                "station_id": 2550,
+                "name": "Beechwood & Jolliet",
+                "lat": 45.4441097,
+                "lon": -75.6703557
+            },
+            {
+                "station_id": 2551,
+                "name": "Barrette & Marier",
+                "lat": 45.4418799,
+                "lon": -75.6714811
+            },
+            {
+                "station_id": 2552,
+                "name": "Genest & Ste-Cecile",
+                "lat": 45.4419798,
+                "lon": -75.6689936
+            },
+            {
+                "station_id": 2553,
+                "name": "Peres-Blancs & Ste-Cecile",
+                "lat": 45.4404813,
+                "lon": -75.6652289
+            },
+            {
+                "station_id": 2554,
+                "name": "Landry & Baribeau",
+                "lat": 45.4388448,
+                "lon": -75.6675238
+            },
+            {
+                "station_id": 2555,
+                "name": "Dagmar & Vachon",
+                "lat": 45.4392655,
+                "lon": -75.6658948
+            },
+            {
+                "station_id": 2556,
+                "name": "Shakespeare & Marier",
+                "lat": 45.4391999,
+                "lon": -75.6634987
+            },
+            {
+                "station_id": 2557,
+                "name": "Montfort & Granville",
+                "lat": 45.4391027,
+                "lon": -75.6569005
+            },
+            {
+                "station_id": 2558,
+                "name": "Ethel & Marier",
+                "lat": 45.43816,
+                "lon": -75.6629684
+            },
+            {
+                "station_id": 2559,
+                "name": "Carillon & Marier",
+                "lat": 45.4375849,
+                "lon": -75.6622073
+            },
+            {
+                "station_id": 2560,
+                "name": "Carillon & Park",
+                "lat": 45.4379349,
+                "lon": -75.661285
+            },
+            {
+                "station_id": 2561,
+                "name": "Deschamps & Emond",
+                "lat": 45.4366284,
+                "lon": -75.6652992
+            },
+            {
+                "station_id": 2562,
+                "name": "Montreal & North River",
+                "lat": 45.4330724,
+                "lon": -75.6699066
+            },
+            {
+                "station_id": 2563,
+                "name": "Montreal & Vanier Parkway",
+                "lat": 45.4342839,
+                "lon": -75.6665564
+            },
+            {
+                "station_id": 2564,
+                "name": "Montreal & Hannah",
+                "lat": 45.4354132,
+                "lon": -75.6636332
+            },
+            {
+                "station_id": 2565,
+                "name": "Montreal & Olmstead",
+                "lat": 45.4356714,
+                "lon": -75.6623075
+            },
+            {
+                "station_id": 2566,
+                "name": "Montreal & Begin",
+                "lat": 45.4363272,
+                "lon": -75.6605019
+            },
+            {
+                "station_id": 2567,
+                "name": "Montreal & Bradley",
+                "lat": 45.4373908,
+                "lon": -75.6584917
+            },
+            {
+                "station_id": 2568,
+                "name": "Montreal & Lafontaine",
+                "lat": 45.4379027,
+                "lon": -75.6561729
+            },
+            {
+                "station_id": 2569,
+                "name": "Jeanne-Mance & Olmstead",
+                "lat": 45.4334436,
+                "lon": -75.6605629
+            },
+            {
+                "station_id": 2570,
+                "name": "Jeanne-Mance & Blake",
+                "lat": 45.4337282,
+                "lon": -75.6580802
+            },
+            {
+                "station_id": 2571,
+                "name": "McArthur & North River",
+                "lat": 45.4308427,
+                "lon": -75.6691538
+            },
+            {
+                "station_id": 2572,
+                "name": "McArthur & Larouche",
+                "lat": 45.4311839,
+                "lon": -75.6615836
+            },
+            {
+                "station_id": 2573,
+                "name": "McArthur & Olmstead",
+                "lat": 45.4314103,
+                "lon": -75.6603513
+            },
+            {
+                "station_id": 2574,
+                "name": "McArthur & Allen",
+                "lat": 45.4314749,
+                "lon": -75.6568471
+            },
+            {
+                "station_id": 2575,
+                "name": "McArthur & Lafontaine",
+                "lat": 45.4318238,
+                "lon": -75.654344
+            },
+            {
+                "station_id": 2576,
+                "name": "McArthur & Brant",
+                "lat": 45.4319696,
+                "lon": -75.650327
+            },
+            {
+                "station_id": 2577,
+                "name": "Washington & North River",
+                "lat": 45.4294115,
+                "lon": -75.6681984
+            },
+            {
+                "station_id": 2578,
+                "name": "Donald & west dead end. Adawe Crossing",
+                "lat": 45.4269044,
+                "lon": -75.6694072
+            },
+            {
+                "station_id": 2579,
+                "name": "Donald & North River",
+                "lat": 45.4268608,
+                "lon": -75.6670683
+            },
+            {
+                "station_id": 2580,
+                "name": "Donald & Quill",
+                "lat": 45.4276356,
+                "lon": -75.6576236
+            },
+            {
+                "station_id": 2581,
+                "name": "Donald & Eve",
+                "lat": 45.4279374,
+                "lon": -75.6549235
+            },
+            {
+                "station_id": 2582,
+                "name": "Donald & Lola",
+                "lat": 45.4279809,
+                "lon": -75.6525455
+            },
+            {
+                "station_id": 2585,
+                "name": "Donald & Barnaby",
+                "lat": 45.4284706,
+                "lon": -75.6473151
+            },
+            {
+                "station_id": 2587,
+                "name": "Donald & Alesther",
+                "lat": 45.4289391,
+                "lon": -75.6411214
+            },
+            {
+                "station_id": 2588,
+                "name": "Columbus & Quill",
+                "lat": 45.4267077,
+                "lon": -75.6577215
+            },
+            {
+                "station_id": 2589,
+                "name": "Lawson b/w Frances & King George",
+                "lat": 45.4270049,
+                "lon": -75.6455953
+            },
+            {
+                "station_id": 2590,
+                "name": "King George & North River",
+                "lat": 45.4247055,
+                "lon": -75.6660312
+            },
+            {
+                "station_id": 2591,
+                "name": "Queen Mary & Lola",
+                "lat": 45.4252453,
+                "lon": -75.6525395
+            },
+            {
+                "station_id": 2592,
+                "name": "Prince Albert b/w Vanier Parkway & Vera",
+                "lat": 45.4239524,
+                "lon": -75.6613281
+            },
+            {
+                "station_id": 2593,
+                "name": "Prince Albert b/w Vera & Quill",
+                "lat": 45.4241443,
+                "lon": -75.6586618
+            },
+            {
+                "station_id": 2594,
+                "name": "Drouin & North River",
+                "lat": 45.4228946,
+                "lon": -75.6651649
+            },
+            {
+                "station_id": 2595,
+                "name": "West Presland & North River",
+                "lat": 45.4222324,
+                "lon": -75.6648504
+            },
+            {
+                "station_id": 2596,
+                "name": "Rideau Terrace b/w Springfield & Ridgeway",
+                "lat": 45.4436364,
+                "lon": -75.6759907
+            },
+            {
+                "station_id": 2622,
+                "name": "Albert & Preston",
+                "lat": 45.4113763,
+                "lon": -75.7158855
+            },
+            {
+                "station_id": 2623,
+                "name": "Albert b/w Preston & City Centre",
+                "lat": 45.4112366,
+                "lon": -75.7169639
+            },
+            {
+                "station_id": 2624,
+                "name": "Albert & City Centre (NE)",
+                "lat": 45.4105611,
+                "lon": -75.7185551
+            },
+            {
+                "station_id": 2625,
+                "name": "Albert & City Centre (SW)",
+                "lat": 45.4101131,
+                "lon": -75.7186099
+            },
+            {
+                "station_id": 2626,
+                "name": "Bayview Station (E)",
+                "lat": 45.4096146,
+                "lon": -75.7213366
+            },
+            {
+                "station_id": 2627,
+                "name": "Bayview Station (W)",
+                "lat": 45.4092977,
+                "lon": -75.7226044
+            },
+            {
+                "station_id": 2628,
+                "name": "Primrose & Rochester",
+                "lat": 45.4109409,
+                "lon": -75.7131885
+            },
+            {
+                "station_id": 2629,
+                "name": "Primrose & Preston",
+                "lat": 45.4103227,
+                "lon": -75.7153177
+            },
+            {
+                "station_id": 2630,
+                "name": "Spruce & Rochester",
+                "lat": 45.4096407,
+                "lon": -75.7124908
+            },
+            {
+                "station_id": 2632,
+                "name": "Somerset & Rochester (NE)",
+                "lat": 45.4091385,
+                "lon": -75.7118807
+            },
+            {
+                "station_id": 2633,
+                "name": "Somerset & Rochester (SW)",
+                "lat": 45.4089576,
+                "lon": -75.7121084
+            },
+            {
+                "station_id": 2634,
+                "name": "Somerset & Preston (NW)",
+                "lat": 45.4083601,
+                "lon": -75.7145057
+            },
+            {
+                "station_id": 2635,
+                "name": "Preston b/w Eccles & Anderson",
+                "lat": 45.4076188,
+                "lon": -75.7138205
+            },
+            {
+                "station_id": 2636,
+                "name": "Anderson & Rochester",
+                "lat": 45.4078528,
+                "lon": -75.7113477
+            },
+            {
+                "station_id": 2637,
+                "name": "Oak & Preston",
+                "lat": 45.4068438,
+                "lon": -75.7133672
+            },
+            {
+                "station_id": 2638,
+                "name": "Poplar & Preston",
+                "lat": 45.4066042,
+                "lon": -75.7130526
+            },
+            {
+                "station_id": 2639,
+                "name": "Willow & Rochester",
+                "lat": 45.4065758,
+                "lon": -75.7104402
+            },
+            {
+                "station_id": 2640,
+                "name": "Willow & Preston",
+                "lat": 45.4059262,
+                "lon": -75.7126415
+            },
+            {
+                "station_id": 2641,
+                "name": "Preston & Balsam",
+                "lat": 45.4054101,
+                "lon": -75.7124967
+            },
+            {
+                "station_id": 2642,
+                "name": "Gladstone & Rochester",
+                "lat": 45.4052994,
+                "lon": -75.7099677
+            },
+            {
+                "station_id": 2643,
+                "name": "Gladstone & Preston (NE)",
+                "lat": 45.4048025,
+                "lon": -75.7119075
+            },
+            {
+                "station_id": 2644,
+                "name": "Gladstone & Preston (SW)",
+                "lat": 45.4044569,
+                "lon": -75.7119277
+            },
+            {
+                "station_id": 2645,
+                "name": "St. Anthony & Preston",
+                "lat": 45.4033775,
+                "lon": -75.7112571
+            },
+            {
+                "station_id": 2646,
+                "name": "George W & Preston",
+                "lat": 45.4019749,
+                "lon": -75.7102643
+            },
+            {
+                "station_id": 2647,
+                "name": "Aberdeen & Preston",
+                "lat": 45.4013732,
+                "lon": -75.7098892
+            },
+            {
+                "station_id": 2648,
+                "name": "Beech & Preston (NE)",
+                "lat": 45.4007837,
+                "lon": -75.7093069
+            },
+            {
+                "station_id": 2649,
+                "name": "Norman & Preston",
+                "lat": 45.3999054,
+                "lon": -75.7090008
+            },
+            {
+                "station_id": 2650,
+                "name": "Pamilla & Preston",
+                "lat": 45.3991751,
+                "lon": -75.708727
+            },
+            {
+                "station_id": 2651,
+                "name": "Adeline & Preston",
+                "lat": 45.3987617,
+                "lon": -75.7083081
+            },
+            {
+                "station_id": 2652,
+                "name": "Sidney & Preston",
+                "lat": 45.3979501,
+                "lon": -75.7077636
+            },
+            {
+                "station_id": 2653,
+                "name": "Burnside & Parkdale",
+                "lat": 45.4083676,
+                "lon": -75.7335649
+            },
+            {
+                "station_id": 2654,
+                "name": "Bayview Station b/w Slidell & Scott",
+                "lat": 45.4093872,
+                "lon": -75.7280272
+            },
+            {
+                "station_id": 2655,
+                "name": "Lyndale & Hinchey",
+                "lat": 45.4071511,
+                "lon": -75.7308359
+            },
+            {
+                "station_id": 2656,
+                "name": "Scott & Bayview Station (NW)",
+                "lat": 45.4081279,
+                "lon": -75.7248441
+            },
+            {
+                "station_id": 2657,
+                "name": "Scott & Bayview Station (SE)",
+                "lat": 45.4078088,
+                "lon": -75.7238317
+            },
+            {
+                "station_id": 2658,
+                "name": "Scott & Merton",
+                "lat": 45.4068269,
+                "lon": -75.7267881
+            },
+            {
+                "station_id": 2659,
+                "name": "Scott & Carruthers",
+                "lat": 45.4058511,
+                "lon": -75.7291209
+            },
+            {
+                "station_id": 2660,
+                "name": "Scott & Parkdale",
+                "lat": 45.4048537,
+                "lon": -75.7314804
+            },
+            {
+                "station_id": 2661,
+                "name": "Ladouceur & Carruthers",
+                "lat": 45.4042978,
+                "lon": -75.728249
+            },
+            {
+                "station_id": 2662,
+                "name": "Armstrong & Bayview Station",
+                "lat": 45.40747,
+                "lon": -75.7223912
+            },
+            {
+                "station_id": 2663,
+                "name": "Wellington W & Bayview Station",
+                "lat": 45.407386,
+                "lon": -75.7214141
+            },
+            {
+                "station_id": 2664,
+                "name": "Wellington W & Hilda",
+                "lat": 45.4064625,
+                "lon": -75.7221698
+            },
+            {
+                "station_id": 2665,
+                "name": "Wellington W & Somerset",
+                "lat": 45.4059433,
+                "lon": -75.7225467
+            },
+            {
+                "station_id": 2666,
+                "name": "Wellington W & Irving SW",
+                "lat": 45.4053302,
+                "lon": -75.7229068
+            },
+            {
+                "station_id": 2667,
+                "name": "Wellington W & Fairmont (SE)",
+                "lat": 45.4046277,
+                "lon": -75.7237544
+            },
+            {
+                "station_id": 2668,
+                "name": "Wellington W & Fairmont (N)",
+                "lat": 45.4045716,
+                "lon": -75.72397
+            },
+            {
+                "station_id": 2669,
+                "name": "Wellington W & Merton. Hintonburg Community Centre",
+                "lat": 45.4036736,
+                "lon": -75.724646
+            },
+            {
+                "station_id": 2670,
+                "name": "Wellington W & Melrose",
+                "lat": 45.4033181,
+                "lon": -75.7252867
+            },
+            {
+                "station_id": 2671,
+                "name": "Wellington W & Rosemount",
+                "lat": 45.4022278,
+                "lon": -75.7262921
+            },
+            {
+                "station_id": 2672,
+                "name": "Wellington W & Carruthers",
+                "lat": 45.4021595,
+                "lon": -75.7265568
+            },
+            {
+                "station_id": 2673,
+                "name": "Wellington W & McCormick",
+                "lat": 45.4017405,
+                "lon": -75.7271234
+            },
+            {
+                "station_id": 2674,
+                "name": "Wellington W b/w McCormick & Parkdale",
+                "lat": 45.4012586,
+                "lon": -75.7277508
+            },
+            {
+                "station_id": 2675,
+                "name": "Wellington W & Parkdale (SE)",
+                "lat": 45.4009136,
+                "lon": -75.7286323
+            },
+            {
+                "station_id": 2677,
+                "name": "Somerset W & Breezehill",
+                "lat": 45.4067618,
+                "lon": -75.7194318
+            },
+            {
+                "station_id": 2678,
+                "name": "Somerset W & Bayswater",
+                "lat": 45.4064749,
+                "lon": -75.7207814
+            },
+            {
+                "station_id": 2679,
+                "name": "Somerset W & Spadina",
+                "lat": 45.4060169,
+                "lon": -75.7219378
+            },
+            {
+                "station_id": 2681,
+                "name": "Gladstone & Fairmont",
+                "lat": 45.401296,
+                "lon": -75.7218063
+            },
+            {
+                "station_id": 2682,
+                "name": "Gladstone & Rosemount",
+                "lat": 45.4003912,
+                "lon": -75.7253695
+            },
+            {
+                "station_id": 2683,
+                "name": "Westmount & Parkdale",
+                "lat": 45.3977829,
+                "lon": -75.7271383
+            },
+            {
+                "station_id": 2684,
+                "name": "Beech & Loretta S",
+                "lat": 45.3994972,
+                "lon": -75.7135595
+            },
+            {
+                "station_id": 2685,
+                "name": "Beech & Bayswater",
+                "lat": 45.398671,
+                "lon": -75.7158247
+            },
+            {
+                "station_id": 2686,
+                "name": "Champagne S b/w Beech & Hickory",
+                "lat": 45.3990181,
+                "lon": -75.7117265
+            },
+            {
+                "station_id": 2687,
+                "name": "Sherwood & Fairmont",
+                "lat": 45.3968054,
+                "lon": -75.7186645
+            },
+            {
+                "station_id": 2688,
+                "name": "Sherwood & Parkdale",
+                "lat": 45.3958982,
+                "lon": -75.7261147
+            },
+            {
+                "station_id": 2689,
+                "name": "Kenilworth & Reid",
+                "lat": 45.3958742,
+                "lon": -75.7217901
+            },
+            {
+                "station_id": 2690,
+                "name": "Kenilworth & Parkdale (NE)",
+                "lat": 45.3947864,
+                "lon": -75.7254487
+            },
+            {
+                "station_id": 2691,
+                "name": "Kenilworth & Parkdale (SE)",
+                "lat": 45.3945615,
+                "lon": -75.7254162
+            },
+            {
+                "station_id": 2692,
+                "name": "Ruskin & MacFarlane",
+                "lat": 45.394048,
+                "lon": -75.7226657
+            },
+            {
+                "station_id": 2693,
+                "name": "Inglewood & Parkdale",
+                "lat": 45.3921781,
+                "lon": -75.7238738
+            },
+            {
+                "station_id": 2694,
+                "name": "Clearview & Carleton",
+                "lat": 45.40411,
+                "lon": -75.7444846
+            },
+            {
+                "station_id": 2695,
+                "name": "Clearview & Patricia",
+                "lat": 45.4028945,
+                "lon": -75.7482631
+            },
+            {
+                "station_id": 2696,
+                "name": "Sunnymede & Carleton",
+                "lat": 45.4020496,
+                "lon": -75.7433077
+            },
+            {
+                "station_id": 2697,
+                "name": "Sunnymede & Keyworth",
+                "lat": 45.4014,
+                "lon": -75.7456474
+            },
+            {
+                "station_id": 2698,
+                "name": "Amanda & Carleton",
+                "lat": 45.4007922,
+                "lon": -75.7426847
+            },
+            {
+                "station_id": 2700,
+                "name": "Scott & Holland (NW). Tunney's Pasture Station",
+                "lat": 45.4038396,
+                "lon": -75.7346704
+            },
+            {
+                "station_id": 2701,
+                "name": "Spencer & Hamilton",
+                "lat": 45.4022384,
+                "lon": -75.7310283
+            },
+            {
+                "station_id": 2702,
+                "name": "Spencer & Holland",
+                "lat": 45.4016853,
+                "lon": -75.7329707
+            },
+            {
+                "station_id": 2703,
+                "name": "Spencer & Huron",
+                "lat": 45.4015319,
+                "lon": -75.7341424
+            },
+            {
+                "station_id": 2704,
+                "name": "Spencer & Smirle",
+                "lat": 45.4006841,
+                "lon": -75.7362407
+            },
+            {
+                "station_id": 2705,
+                "name": "Spencer & Grange",
+                "lat": 45.4005827,
+                "lon": -75.7372981
+            },
+            {
+                "station_id": 2706,
+                "name": "Spencer & Ross",
+                "lat": 45.4000429,
+                "lon": -75.7383058
+            },
+            {
+                "station_id": 2707,
+                "name": "Spencer & Gilchrist",
+                "lat": 45.399961,
+                "lon": -75.7393769
+            },
+            {
+                "station_id": 2708,
+                "name": "Armstrong & Hamilton N",
+                "lat": 45.4016342,
+                "lon": -75.7306873
+            },
+            {
+                "station_id": 2709,
+                "name": "Wellington W & Hinton N",
+                "lat": 45.4002185,
+                "lon": -75.7310048
+            },
+            {
+                "station_id": 2710,
+                "name": "Wellington W b/w Huron & Holland",
+                "lat": 45.3996513,
+                "lon": -75.7325355
+            },
+            {
+                "station_id": 2711,
+                "name": "Wellington W & Holland (SW)",
+                "lat": 45.399618,
+                "lon": -75.7321586
+            },
+            {
+                "station_id": 2712,
+                "name": "Wellington W & Huron N",
+                "lat": 45.3995924,
+                "lon": -75.7329704
+            },
+            {
+                "station_id": 2713,
+                "name": "Wellington W & Harmer",
+                "lat": 45.3992316,
+                "lon": -75.7337657
+            },
+            {
+                "station_id": 2714,
+                "name": "Wellington W & Caroline",
+                "lat": 45.3992252,
+                "lon": -75.7344703
+            },
+            {
+                "station_id": 2715,
+                "name": "Wellington W & Julian",
+                "lat": 45.3989469,
+                "lon": -75.7348713
+            },
+            {
+                "station_id": 2716,
+                "name": "Wellington W & Smirle",
+                "lat": 45.3990134,
+                "lon": -75.7354312
+            },
+            {
+                "station_id": 2717,
+                "name": "Wellington W & Warren",
+                "lat": 45.398789,
+                "lon": -75.7359193
+            },
+            {
+                "station_id": 2718,
+                "name": "Wellington W & Grange",
+                "lat": 45.3988084,
+                "lon": -75.7365038
+            },
+            {
+                "station_id": 2719,
+                "name": "Wellington W & Clarendon",
+                "lat": 45.3985286,
+                "lon": -75.7369316
+            },
+            {
+                "station_id": 2720,
+                "name": "Wellington W & Ross",
+                "lat": 45.3986339,
+                "lon": -75.7372876
+            },
+            {
+                "station_id": 2721,
+                "name": "Wellington W & Granville",
+                "lat": 45.3982087,
+                "lon": -75.7388087
+            },
+            {
+                "station_id": 2722,
+                "name": "Wellington W & Mayfair",
+                "lat": 45.398059,
+                "lon": -75.7402778
+            },
+            {
+                "station_id": 2723,
+                "name": "Tyndall & Parkdale",
+                "lat": 45.3983865,
+                "lon": -75.7278766
+            },
+            {
+                "station_id": 2724,
+                "name": "Tybdall & Holland",
+                "lat": 45.3976986,
+                "lon": -75.7305535
+            },
+            {
+                "station_id": 2725,
+                "name": "Faraday & Harmer N",
+                "lat": 45.3947657,
+                "lon": -75.7312072
+            },
+            {
+                "station_id": 2726,
+                "name": "Sherwood & Holland",
+                "lat": 45.3950983,
+                "lon": -75.7290685
+            },
+            {
+                "station_id": 2727,
+                "name": "Kenilworth & Holland (NE)",
+                "lat": 45.3938916,
+                "lon": -75.7282417
+            },
+            {
+                "station_id": 2728,
+                "name": "Kenilworth & Holland (SW)",
+                "lat": 45.3937368,
+                "lon": -75.728537
+            },
+            {
+                "station_id": 2729,
+                "name": "Ruskin & Holland (NE)",
+                "lat": 45.3926433,
+                "lon": -75.7275949
+            },
+            {
+                "station_id": 2730,
+                "name": "Ruskin & Holland (SW)",
+                "lat": 45.3924135,
+                "lon": -75.7277368
+            },
+            {
+                "station_id": 2731,
+                "name": "Inglewood & Holland (NE)",
+                "lat": 45.3913518,
+                "lon": -75.7268156
+            },
+            {
+                "station_id": 2732,
+                "name": "Inglewood & Holland (NW)",
+                "lat": 45.3913053,
+                "lon": -75.7269438
+            },
+            {
+                "station_id": 2733,
+                "name": "Lanark & Ellendale (NW)",
+                "lat": 45.3993657,
+                "lon": -75.7508185
+            },
+            {
+                "station_id": 2734,
+                "name": "Lanark & Ellendale (S)",
+                "lat": 45.3992065,
+                "lon": -75.7506893
+            },
+            {
+                "station_id": 2735,
+                "name": "Lanark & Briarway",
+                "lat": 45.3988987,
+                "lon": -75.7520952
+            },
+            {
+                "station_id": 2736,
+                "name": "Lanark b/w Briarway & Beechgrove",
+                "lat": 45.3982351,
+                "lon": -75.7532636
+            },
+            {
+                "station_id": 2737,
+                "name": "Lanark & Beechgrove",
+                "lat": 45.397699,
+                "lon": -75.75433
+            },
+            {
+                "station_id": 2738,
+                "name": "Lanark & Churchill",
+                "lat": 45.3968521,
+                "lon": -75.7568323
+            },
+            {
+                "station_id": 2739,
+                "name": "Workman & Churchill",
+                "lat": 45.3952849,
+                "lon": -75.755841
+            },
+            {
+                "station_id": 2740,
+                "name": "Scott & Churchill N (NW)",
+                "lat": 45.3949477,
+                "lon": -75.7552903
+            },
+            {
+                "station_id": 2741,
+                "name": "Scott & Churchill N (SE)",
+                "lat": 45.3946974,
+                "lon": -75.7552875
+            },
+            {
+                "station_id": 2742,
+                "name": "Whitby & Churchill N (NE)",
+                "lat": 45.3935413,
+                "lon": -75.7545699
+            },
+            {
+                "station_id": 2743,
+                "name": "Whitby & Churchill N (SW)",
+                "lat": 45.3933369,
+                "lon": -75.7546025
+            },
+            {
+                "station_id": 2744,
+                "name": "Richmond & Patricia",
+                "lat": 45.3963732,
+                "lon": -75.7444566
+            },
+            {
+                "station_id": 2745,
+                "name": "Richmond & McRae (SE)",
+                "lat": 45.3944162,
+                "lon": -75.7483638
+            },
+            {
+                "station_id": 2746,
+                "name": "Richmond & McRae",
+                "lat": 45.3945497,
+                "lon": -75.7484694
+            },
+            {
+                "station_id": 2747,
+                "name": "Richmond & Tweedsmuir",
+                "lat": 45.3938125,
+                "lon": -75.7501888
+            },
+            {
+                "station_id": 2748,
+                "name": "Richmond & Athlone",
+                "lat": 45.3934362,
+                "lon": -75.751082
+            },
+            {
+                "station_id": 2749,
+                "name": "Richmond & Edgemoore",
+                "lat": 45.3930083,
+                "lon": -75.7515254
+            },
+            {
+                "station_id": 2750,
+                "name": "Richmond & Eden",
+                "lat": 45.3925954,
+                "lon": -75.7524454
+            },
+            {
+                "station_id": 2751,
+                "name": "Richmond & Churchill N (NW)",
+                "lat": 45.3923175,
+                "lon": -75.7535827
+            },
+            {
+                "station_id": 2752,
+                "name": "Richmond & Churchill N (SW)",
+                "lat": 45.3919495,
+                "lon": -75.7537599
+            },
+            {
+                "station_id": 2753,
+                "name": "Richmond & Winston",
+                "lat": 45.391046,
+                "lon": -75.7562895
+            },
+            {
+                "station_id": 2754,
+                "name": "Richmond & Roosevelt (NW)",
+                "lat": 45.3906707,
+                "lon": -75.7571195
+            },
+            {
+                "station_id": 2755,
+                "name": "Richmond & Berkley",
+                "lat": 45.3900817,
+                "lon": -75.7577829
+            },
+            {
+                "station_id": 2756,
+                "name": "Lincoln & Churchill",
+                "lat": 45.391298,
+                "lon": -75.7531516
+            },
+            {
+                "station_id": 2757,
+                "name": "Byron & Tweedsmuir",
+                "lat": 45.3923631,
+                "lon": -75.7489327
+            },
+            {
+                "station_id": 2759,
+                "name": "Wesley & Kirkwood",
+                "lat": 45.3928092,
+                "lon": -75.7452136
+            },
+            {
+                "station_id": 2760,
+                "name": "Geoffrey & Kirkwood",
+                "lat": 45.3918279,
+                "lon": -75.74463
+            },
+            {
+                "station_id": 2761,
+                "name": "Ravenill E & Churchill N",
+                "lat": 45.3903428,
+                "lon": -75.7529436
+            },
+            {
+                "station_id": 2762,
+                "name": "Kenwood & Churchill N",
+                "lat": 45.3887033,
+                "lon": -75.7517883
+            },
+            {
+                "station_id": 2763,
+                "name": "Iona & Kirkwood",
+                "lat": 45.3908589,
+                "lon": -75.7440374
+            },
+            {
+                "station_id": 2764,
+                "name": "Clare & Kirkwood",
+                "lat": 45.3890571,
+                "lon": -75.7431198
+            },
+            {
+                "station_id": 2765,
+                "name": "Princeton & Churchill N",
+                "lat": 45.3873784,
+                "lon": -75.7509916
+            },
+            {
+                "station_id": 2767,
+                "name": "Avondale & Churchill N",
+                "lat": 45.3857503,
+                "lon": -75.7498978
+            },
+            {
+                "station_id": 2768,
+                "name": "Dovercourt & Kirkwood",
+                "lat": 45.3862746,
+                "lon": -75.7415724
+            },
+            {
+                "station_id": 2769,
+                "name": "Dovercourt & Churchill N (NE)",
+                "lat": 45.384454,
+                "lon": -75.7491169
+            },
+            {
+                "station_id": 2770,
+                "name": "Dovercourt & Churchill N (SW)",
+                "lat": 45.3841228,
+                "lon": -75.749045
+            },
+            {
+                "station_id": 2772,
+                "name": "Switzer & Kirkwood",
+                "lat": 45.3858706,
+                "lon": -75.7409504
+            },
+            {
+                "station_id": 2775,
+                "name": "Scott & Athlone",
+                "lat": 45.3958089,
+                "lon": -75.752943
+            },
+            {
+                "station_id": 2815,
+                "name": "Robin & Churchill N",
+                "lat": 45.3815594,
+                "lon": -75.747487
+            },
+            {
+                "station_id": 2816,
+                "name": "Presland & Lola",
+                "lat": 45.4236274,
+                "lon": -75.6519586
+            },
+            {
+                "station_id": 2817,
+                "name": "Coventry & Lola",
+                "lat": 45.4211404,
+                "lon": -75.6509531
+            },
+            {
+                "station_id": 2818,
+                "name": "Coventry & Belfast",
+                "lat": 45.4214024,
+                "lon": -75.6477924
+            },
+            {
+                "station_id": 2819,
+                "name": "Coventry b/w Belfast & St. Laurent",
+                "lat": 45.4242549,
+                "lon": -75.640473
+            },
+            {
+                "station_id": 2820,
+                "name": "Montreal & Ducharme",
+                "lat": 45.4388012,
+                "lon": -75.6534327
+            },
+            {
+                "station_id": 2821,
+                "name": "Dunbarton & St. Laurent",
+                "lat": 45.4456914,
+                "lon": -75.6501728
+            },
+            {
+                "station_id": 2822,
+                "name": "Hemlock & Lansdowne S",
+                "lat": 45.447626,
+                "lon": -75.6683776
+            },
+            {
+                "station_id": 2823,
+                "name": "Hemlock & Birch",
+                "lat": 45.4490365,
+                "lon": -75.6626641
+            },
+            {
+                "station_id": 2824,
+                "name": "York & Sussex. Ottawa Sign #3",
+                "lat": 45.4273758,
+                "lon": -75.6946283
+            },
+            {
+                "station_id": 2825,
+                "name": "Colonel By & Daly. Westin Hotel",
+                "lat": 45.4244634,
+                "lon": -75.6924147
+            },
+            {
+                "station_id": 2826,
+                "name": "Fifth & Bank (SW)",
+                "lat": 45.4018703,
+                "lon": -75.6876095
+            },
+            {
+                "station_id": 3289,
+                "name": "Canada Day",
+                "lat": 45.4291074,
+                "lon": -75.6971601
+            },
+            {
+                "station_id": 3291,
+                "name": "Albert BW Preston/Booth",
+                "lat": 45.4126031,
+                "lon": -75.7137635
+            },
+            {
+                "station_id": 3314,
+                "name": "Hazelview",
+                "lat": 45.4310523,
+                "lon": -75.6804648
+            },
+            {
+                "station_id": 3379,
+                "name": "Besserer and Nelson",
+                "lat": 45.4289343,
+                "lon": -75.68338
+            },
+            {
+                "station_id": 3380,
+                "name": "Besserer and Friel",
+                "lat": 45.4294244,
+                "lon": -75.6820444
+            },
+            {
+                "station_id": 3381,
+                "name": "Besserer and Cobourg",
+                "lat": 45.4315131,
+                "lon": -75.6773211
+            },
+            {
+                "station_id": 3382,
+                "name": "Stewart and Cobourg",
+                "lat": 45.4301456,
+                "lon": -75.6763732
+            },
+            {
+                "station_id": 3383,
+                "name": "Wilbrod and Friel",
+                "lat": 45.4276458,
+                "lon": -75.6805535
+            },
+            {
+                "station_id": 3384,
+                "name": "Wilbrod and Augusta",
+                "lat": 45.4290798,
+                "lon": -75.6773204
+            },
+            {
+                "station_id": 3385,
+                "name": "Wilbrod and Charlotte",
+                "lat": 45.4303283,
+                "lon": -75.6743124
+            },
+            {
+                "station_id": 3386,
+                "name": "Osgoode and Sweetland",
+                "lat": 45.4247968,
+                "lon": -75.678599
+            },
+            {
+                "station_id": 3387,
+                "name": "Osgoode and Goulburn",
+                "lat": 45.4263739,
+                "lon": -75.6748705
+            },
+            {
+                "station_id": 3388,
+                "name": "Osgoode and Range",
+                "lat": 45.4271147,
+                "lon": -75.6732479
+            },
+            {
+                "station_id": 3389,
+                "name": "Somerset and Nelson",
+                "lat": 45.4227422,
+                "lon": -75.6782618
+            },
+            {
+                "station_id": 3390,
+                "name": "Templeton and Nelson",
+                "lat": 45.4212677,
+                "lon": -75.6772241
+            },
+            {
+                "station_id": 3391,
+                "name": "Templeton and Sweetland",
+                "lat": 45.4217919,
+                "lon": -75.6759408
+            },
+            {
+                "station_id": 3392,
+                "name": "Templeton and Goulburn",
+                "lat": 45.4233881,
+                "lon": -75.6721244
+            },
+            {
+                "station_id": 3393,
+                "name": "Templeton and Range",
+                "lat": 45.4239594,
+                "lon": -75.6705714
+            },
+            {
+                "station_id": 3394,
+                "name": "Mann & Goulburn",
+                "lat": 45.4215638,
+                "lon": -75.6709469
+            },
+            {
+                "station_id": 3395,
+                "name": "Mann and Marlborough",
+                "lat": 45.4221066,
+                "lon": -75.6698421
+            },
+            {
+                "station_id": 3396,
+                "name": "Montreal and Eglise",
+                "lat": 45.4393866,
+                "lon": -75.6516301
+            },
+            {
+                "station_id": 3399,
+                "name": "Montreal & Cyr",
+                "lat": 45.4350684,
+                "lon": -75.6639272
+            },
+            {
+                "station_id": 3505,
+                "name": "Bank and Riverdale",
+                "lat": 45.3899122,
+                "lon": -75.6790438
+            },
+            {
+                "station_id": 3698,
+                "name": "Albert b/w Lyon N & Kent (north)",
+                "lat": 45.4189218,
+                "lon": -75.7028282
+            },
+            {
+                "station_id": 3699,
+                "name": "Albert b/w Lyon N & Kent (south)",
+                "lat": 45.4187719,
+                "lon": -75.7028314
+            },
+            {
+                "station_id": 3811,
+                "name": "Bank & Wilton (NW)",
+                "lat": 45.3977234,
+                "lon": -75.6856342
+            },
+            {
+                "station_id": 3891,
+                "name": "Gilmour & MacDonald",
+                "lat": 45.4180458,
+                "lon": -75.6853585
+            },
+            {
+                "station_id": 3892,
+                "name": "Nepean & Bank",
+                "lat": 45.4172631,
+                "lon": -75.6983695
+            },
+            {
+                "station_id": 3966,
+                "name": "Not functioning",
+                "lat": 45.4170125,
+                "lon": -75.6988698
+            },
+            {
+                "station_id": 3967,
+                "name": "Not functioning",
+                "lat": 45.4159974,
+                "lon": -75.7033505
+            },
+            {
+                "station_id": 3968,
+                "name": "Not functioning",
+                "lat": 45.4166994,
+                "lon": -75.7016956
+            },
+            {
+                "station_id": 3969,
+                "name": "Not functioning",
+                "lat": 45.4259102,
+                "lon": -75.6834263
+            },
+            {
+                "station_id": 3970,
+                "name": "Not functioning",
+                "lat": 45.4251276,
+                "lon": -75.6779878
+            },
+            {
+                "station_id": 3971,
+                "name": "Not functioning",
+                "lat": 45.4246397,
+                "lon": -75.67565
+            },
+            {
+                "station_id": 3972,
+                "name": "Not functioning",
+                "lat": 45.4232026,
+                "lon": -75.6746432
+            },
+            {
+                "station_id": 3973,
+                "name": "Not functioning",
+                "lat": 45.4211282,
+                "lon": -75.6721613
+            },
+            {
+                "station_id": 3974,
+                "name": "Not functioning",
+                "lat": 45.421471,
+                "lon": -75.671392
+            },
+            {
+                "station_id": 3975,
+                "name": "Not functioning",
+                "lat": 45.4237894,
+                "lon": -75.6708906
+            },
+            {
+                "station_id": 3976,
+                "name": "Not functioning",
+                "lat": 45.4254766,
+                "lon": -75.6722456
+            },
+            {
+                "station_id": 3977,
+                "name": "Not functioning",
+                "lat": 45.4245231,
+                "lon": -75.6660244
+            },
+            {
+                "station_id": 3978,
+                "name": "Not functioning",
+                "lat": 45.4266768,
+                "lon": -75.6745907
+            },
+            {
+                "station_id": 3979,
+                "name": "Not functioning",
+                "lat": 45.4305924,
+                "lon": -75.6745522
+            },
+            {
+                "station_id": 3980,
+                "name": "Not functioning",
+                "lat": 45.4317605,
+                "lon": -75.6753771
+            },
+            {
+                "station_id": 3981,
+                "name": "Not functioning",
+                "lat": 45.4317721,
+                "lon": -75.6743296
+            },
+            {
+                "station_id": 3982,
+                "name": "Not functioning",
+                "lat": 45.4330646,
+                "lon": -75.6752877
+            },
+            {
+                "station_id": 3983,
+                "name": "Not functioning",
+                "lat": 45.4342186,
+                "lon": -75.685093
+            },
+            {
+                "station_id": 3984,
+                "name": "Not functioning",
+                "lat": 45.4330068,
+                "lon": -75.6847622
+            },
+            {
+                "station_id": 3985,
+                "name": "Not functioning",
+                "lat": 45.434672,
+                "lon": -75.6910263
+            },
+            {
+                "station_id": 3986,
+                "name": "Not functioning",
+                "lat": 45.4326537,
+                "lon": -75.6929416
+            },
+            {
+                "station_id": 3987,
+                "name": "Not functioning",
+                "lat": 45.4300036,
+                "lon": -75.6930387
+            },
+            {
+                "station_id": 3988,
+                "name": "Not functioning",
+                "lat": 45.4310865,
+                "lon": -75.6931088
+            },
+            {
+                "station_id": 3989,
+                "name": "Not functioning",
+                "lat": 45.4275005,
+                "lon": -75.6961291
+            },
+            {
+                "station_id": 3990,
+                "name": "Not functioning",
+                "lat": 45.4266414,
+                "lon": -75.6943098
+            },
+            {
+                "station_id": 3991,
+                "name": "Not functioning",
+                "lat": 45.4264353,
+                "lon": -75.6911432
+            },
+            {
+                "station_id": 3992,
+                "name": "Not functioning",
+                "lat": 45.4165493,
+                "lon": -75.6944356
+            },
+            {
+                "station_id": 3993,
+                "name": "Not functioning",
+                "lat": 45.4173643,
+                "lon": -75.693952
+            },
+            {
+                "station_id": 3994,
+                "name": "Not functioning",
+                "lat": 45.4170125,
+                "lon": -75.6988698
+            },
+            {
+                "station_id": 3995,
+                "name": "Not functioning",
+                "lat": 45.4159974,
+                "lon": -75.7033505
+            },
+            {
+                "station_id": 3996,
+                "name": "Not functioning",
+                "lat": 45.4166994,
+                "lon": -75.7016956
+            },
+            {
+                "station_id": 3997,
+                "name": "Not functioning",
+                "lat": 45.4259102,
+                "lon": -75.6834263
+            },
+            {
+                "station_id": 3998,
+                "name": "Not functioning",
+                "lat": 45.4251276,
+                "lon": -75.6779878
+            },
+            {
+                "station_id": 3999,
+                "name": "Not functioning",
+                "lat": 45.4246397,
+                "lon": -75.67565
+            },
+            {
+                "station_id": 4000,
+                "name": "Not functioning",
+                "lat": 45.4232026,
+                "lon": -75.6746432
+            },
+            {
+                "station_id": 4001,
+                "name": "Not functioning",
+                "lat": 45.4211282,
+                "lon": -75.6721613
+            },
+            {
+                "station_id": 4002,
+                "name": "Not functioning",
+                "lat": 45.421471,
+                "lon": -75.671392
+            },
+            {
+                "station_id": 4003,
+                "name": "Not functioning",
+                "lat": 45.4237894,
+                "lon": -75.6708906
+            },
+            {
+                "station_id": 4004,
+                "name": "Not functioning",
+                "lat": 45.4254766,
+                "lon": -75.6722456
+            },
+            {
+                "station_id": 4005,
+                "name": "Not functioning",
+                "lat": 45.4245231,
+                "lon": -75.6660244
+            },
+            {
+                "station_id": 4006,
+                "name": "Not functioning",
+                "lat": 45.4266768,
+                "lon": -75.6745907
+            },
+            {
+                "station_id": 4007,
+                "name": "Not functioning",
+                "lat": 45.4305924,
+                "lon": -75.6745522
+            },
+            {
+                "station_id": 4008,
+                "name": "Not functioning",
+                "lat": 45.4317605,
+                "lon": -75.6753771
+            },
+            {
+                "station_id": 4009,
+                "name": "Not functioning",
+                "lat": 45.4317721,
+                "lon": -75.6743296
+            },
+            {
+                "station_id": 4010,
+                "name": "Not functioning",
+                "lat": 45.4330646,
+                "lon": -75.6752877
+            },
+            {
+                "station_id": 4011,
+                "name": "Not functioning",
+                "lat": 45.4342186,
+                "lon": -75.685093
+            },
+            {
+                "station_id": 4012,
+                "name": "Not functioning",
+                "lat": 45.4330068,
+                "lon": -75.6847622
+            },
+            {
+                "station_id": 4013,
+                "name": "Not functioning",
+                "lat": 45.434672,
+                "lon": -75.6910263
+            },
+            {
+                "station_id": 4014,
+                "name": "Not functioning",
+                "lat": 45.4326537,
+                "lon": -75.6929416
+            },
+            {
+                "station_id": 4015,
+                "name": "Not functioning",
+                "lat": 45.4300036,
+                "lon": -75.6930387
+            },
+            {
+                "station_id": 4016,
+                "name": "Not functioning",
+                "lat": 45.4310865,
+                "lon": -75.6931088
+            },
+            {
+                "station_id": 4017,
+                "name": "Not functioning",
+                "lat": 45.4275005,
+                "lon": -75.6961291
+            },
+            {
+                "station_id": 4018,
+                "name": "Not functioning",
+                "lat": 45.4266414,
+                "lon": -75.6943098
+            },
+            {
+                "station_id": 4019,
+                "name": "Not functioning",
+                "lat": 45.4264353,
+                "lon": -75.6911432
+            },
+            {
+                "station_id": 4020,
+                "name": "Not functioning",
+                "lat": 45.4165493,
+                "lon": -75.6944356
+            },
+            {
+                "station_id": 4021,
+                "name": "Not functioning",
+                "lat": 45.4173643,
+                "lon": -75.693952
+            },
+            {
+                "station_id": 5769,
+                "name": "Batch import 136",
+                "lat": 45.419381,
+                "lon": -75.6914445
+            },
+            {
+                "station_id": 5771,
+                "name": "Batch import 583",
+                "lat": 45.420657,
+                "lon": -75.7175435
+            },
+            {
+                "station_id": 5772,
+                "name": "Batch import 584",
+                "lat": 45.38999,
+                "lon": -75.6916535
+            },
+            {
+                "station_id": 5776,
+                "name": "Batch import 371",
+                "lat": 45.428297,
+                "lon": -75.649759
+            },
+            {
+                "station_id": 5777,
+                "name": "Batch import 373",
+                "lat": 45.4287765,
+                "lon": -75.6410575
+            },
+            {
+                "station_id": 6194,
+                "name": "Albert b/w Preston & Booth",
+                "lat": 45.412022,
+                "lon": -75.715096
+            },
+            {
+                "station_id": 6195,
+                "name": "Wellington & Booth",
+                "lat": 45.416556,
+                "lon": -75.7138475
+            },
+            {
+                "station_id": 7069,
+                "name": "Batch import 558",
+                "lat": 45.3983955,
+                "lon": -75.685843
+            },
+            {
+                "station_id": 7070,
+                "name": "Batch import 583",
+                "lat": 45.401022,
+                "lon": -75.6833855
+            },
+            {
+                "station_id": 7937,
+                "name": "Batch import 125",
+                "lat": 45.4163135,
+                "lon": -75.700169
+            },
+            {
+                "station_id": 7938,
+                "name": "Batch import 392",
+                "lat": 45.4087705,
+                "lon": -75.71767600000001
+            },
+            {
+                "station_id": 7939,
+                "name": "Batch import 440",
+                "lat": 45.403113000000005,
+                "lon": -75.716969
+            },
+            {
+                "station_id": 7940,
+                "name": "Batch import 584",
+                "lat": 45.4161625,
+                "lon": -75.707083
+            },
+            {
+                "station_id": 7941,
+                "name": "Batch import 585",
+                "lat": 45.4164455,
+                "lon": -75.708452
+            },
+            {
+                "station_id": 7942,
+                "name": "Batch import 586",
+                "lat": 45.423511000000005,
+                "lon": -75.6875385
+            },
+            {
+                "station_id": 7943,
+                "name": "Batch import 587",
+                "lat": 45.423338,
+                "lon": -75.68723
+            },
+            {
+                "station_id": 7944,
+                "name": "Batch import 588",
+                "lat": 45.4236025,
+                "lon": -75.6864445
+            },
+            {
+                "station_id": 7945,
+                "name": "Batch import 589",
+                "lat": 45.425194,
+                "lon": -75.6874105
+            },
+            {
+                "station_id": 7950,
+                "name": "Batch import 105",
+                "lat": 45.419608999999994,
+                "lon": -75.699024
+            },
+            {
+                "station_id": 7952,
+                "name": "Carleton University 1",
+                "lat": 45.3891579,
+                "lon": -75.6963948
+            },
+            {
+                "station_id": 7953,
+                "name": "Carleton University",
+                "lat": 45.3868672,
+                "lon": -75.6917542
+            },
+            {
+                "station_id": 8071,
+                "name": "Corso Italia Station",
+                "lat": 45.404196999999996,
+                "lon": -75.7142715
+            },
+            {
+                "station_id": 8160,
+                "name": "Batch import 240",
+                "lat": 45.4044205,
+                "lon": -75.68897150000001
+            },
+            {
+                "station_id": 8161,
+                "name": "Batch import 242",
+                "lat": 45.4038065,
+                "lon": -75.68862200000001
+            },
+            {
+                "station_id": 8163,
+                "name": "Batch import 249",
+                "lat": 45.40222,
+                "lon": -75.68809200000001
+            },
+            {
+                "station_id": 8164,
+                "name": "Batch import 255",
+                "lat": 45.400809,
+                "lon": -75.68739099999999
+            }
+        ]
+    },
+    "ttl": 3599,
+    "last_updated": 1761019018
+}

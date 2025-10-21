@@ -1,0 +1,47 @@
+{
+    "last_updated": "2025-04-08T02:51:43+00:00",
+    "ttl": 3600,
+    "version": "3.0",
+    "data": {
+        "vehicle_types": [
+            {
+                "vehicle_type_id": "flamingo-scooter",
+                "form_factor": "scooter_standing",
+                "propulsion_type": "electric",
+                "name": [
+                    { "text": "Flamingo Electric Scooter", "language": "en" }
+                ],
+                "description": [
+                    {
+                        "text": "The safest sharing e-scooter in New Zealand, with dual suspension and braking you can ride comfortably across town. Our scooters have a top speed of 25 km/h.",
+                        "language": "en"
+                    }
+                ],
+                "color": "pink",
+                "rider_capacity": 1,
+                "max_range_meters": 22000,
+                "max_permitted_speed": 25,
+                "default_pricing_plan_id": "14-standard"
+            },
+            {
+                "vehicle_type_id": "flamingo-bike",
+                "form_factor": "bicycle",
+                "propulsion_type": "electric_assist",
+                "name": [
+                    { "text": "Flamingo Electric Bike", "language": "en" }
+                ],
+                "description": [
+                    {
+                        "text": "The Flamingo Bike is electric assisted, the onboard intelligent system automatically applies power as you pedal based on the cycling environment. Our bikes have a top assisted speed of 32 km/h.",
+                        "language": "en"
+                    }
+                ],
+                "color": "pink",
+                "rider_capacity": 1,
+                "max_range_meters": 32000,
+                "max_permitted_speed": 30,
+                "default_pricing_plan_id": "14-standard"
+            }
+        ]
+    }
+}

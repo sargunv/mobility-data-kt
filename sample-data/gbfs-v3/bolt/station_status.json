@@ -1,0 +1,783 @@
+{
+    "last_updated": "2025-10-21T04:12:20Z",
+    "ttl": 0,
+    "version": "3.0",
+    "data": {
+        "stations": [
+            {
+                "station_id": "ba0181e6-88df-59cd-a2e3-e3a2c8b39db5",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-09-19T11:20:37Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "90a90cf4-40cf-59c5-8518-2fce6f7dba13",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-09-19T11:20:37Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "31d4ea46-08f8-55de-9a35-8dfd0d4251c7",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-09-19T11:20:37Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "424500e8-531d-50df-aa59-5213e40edc53",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-09-19T11:20:37Z",
+                "num_vehicles_available": 1
+            },
+            {
+                "station_id": "4a1d70d6-215b-5a2d-b8af-2c25438e5aa3",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "78d35bd7-d90e-5510-ae93-45425d266fd5",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "11439f6d-ffb9-5247-a7cd-8aad67c7a8f8",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "47a442b7-cf7f-51e6-83db-cdc9a5f7a028",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "e6df7cbb-b029-5da9-88fa-add9b365755f",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                        "count": 2
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 2
+            },
+            {
+                "station_id": "cd5df322-d476-5ce5-bc2d-f57fc90b396f",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "805f1d00-3d36-57a2-bba8-7b321d987d0c",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "07312595-80f2-5646-864d-2009a9a08409",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "28dbad61-1d9a-57ab-afc8-619979e12d00",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "7db8ac9e-fee2-5bab-800a-11ac479442f4",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "216c3880-500b-5b86-a500-f24cc289bff3",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "bb4c808a-3510-5b7e-aad0-9ecb114d5df5",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ff2858e0-4ef3-5521-84a9-c2ad69952aff",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 1
+            },
+            {
+                "station_id": "d21ebf4a-0c19-50a2-88d9-5d489cfda2d3",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "894788f8-d0b1-5b80-911f-4f8ea1e77f86",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "351abdab-1273-5d12-afe3-e660ef81b8fe",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "2b17c982-d56d-585c-8d57-12c87492a447",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "4aba4bde-e1b8-58ee-b518-c7574f2e4a07",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "460f4314-1b1e-5c48-8f8e-aa3ab0430e8a",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "bc9c0cef-c917-5093-abaf-2f034495dad4",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "bc971d8a-c089-5565-9c9d-70e9db4d7d15",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "d7217f63-5ccb-5573-96fa-09a3f5699f7a",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "d9d71208-b0eb-5424-b110-9c614eccb567",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "cdf1adc0-ce75-5cd8-9fc4-530f90be90f4",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "ba701a92-1f07-5f00-b58d-447bb6c373c2",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                        "count": 2
+                    },
+                    {
+                        "vehicle_type_id": "ff2858e0-4ef3-5521-84a9-c2ad69952aff",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 3
+            },
+            {
+                "station_id": "bcb8aec7-8856-58d0-9c3d-001da1f3ed0f",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 1
+            },
+            {
+                "station_id": "6543a352-109c-5789-bb72-1c00ba83eb48",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "35a14468-050b-5fbf-9f9f-22c648bce381",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "16a82aca-bd42-5637-ae17-01832bd5e593",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "dfe28d03-5da9-53df-b8a4-fc21ff646f8d",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "0193a652-d345-58a7-9538-ef2a9420a990",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "437c89cd-27a1-568a-b168-4d5752f6f4b3",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "b07376d3-ed51-5583-be02-0514b875eb8d",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "b757d346-66b6-5ac8-859d-8d32bd249500",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "6a81e58c-859a-5f8e-baa9-d9e73b4499ab",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "315e6b06-6f92-528f-910a-057de3813062",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 1
+            },
+            {
+                "station_id": "d926df97-bf49-5eb9-b59a-e6a893ac82ce",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "e867910c-943b-5377-961a-f9b3f496d003",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "64ee8e74-e934-5aa6-9bbe-6aad4871b39f",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "92921dbb-c8e7-5192-9827-54075ff7dd2e",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "3446d17e-7512-571c-bd28-db0d7c3f0ae4",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "f445c9fa-7ad3-5bfa-a960-8449fcf8e68a",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "ae905e5b-916b-5227-9923-9260a73fb2d3",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "bbdb7340-7360-5c67-992f-88a811ae0c44",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "c60f529c-9c79-5a90-9795-90d43bb24f6e",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "2d631fbe-2953-58a0-9b9c-258e1aeba819",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "f5a256be-11a0-5990-9bf5-5a677315c2e9",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "e659810d-9fac-5210-9908-5fa9b82fd933",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "ba01d2da-72f6-51c7-b817-75af8862c9ec",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "3fcc2735-bd7d-5e81-8be8-b8413d60062b",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "ca60e4ed-3fef-5a42-b261-8fa9329a0b05",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "60bcdaee-ea52-5fd8-905a-c5a4e64e30ab",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "cbdd6339-16e9-5b31-a3ec-1c73aaa31ac3",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "c64ee7b1-12b8-5232-8135-f24f47506162",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "c20383d7-a37c-5f8c-9cee-19c67339ff96",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "12b9d021-fca6-51a1-b25d-986f06155e63",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "56a51488-b053-587d-9cb8-23113694d4fe",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "35ae7892-afb4-5897-a3ce-372a36ec81a7",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "912e5c17-1cfa-53a1-aa1e-62b08a7424d7",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "1a45178b-bb9e-5497-ad4f-499d12140e37",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 1
+            },
+            {
+                "station_id": "30f0342d-130f-55fc-8ed1-8869266ce797",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                        "count": 2
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 2
+            },
+            {
+                "station_id": "a084a5dc-8849-5a97-ae12-9fbe910c3fb1",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "f50d0767-e038-595f-88d9-6bdb175be504",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 1
+            },
+            {
+                "station_id": "3780088f-cd66-5741-b4df-f10de7769371",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:26Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "938ef658-8d4b-5553-9c46-105ac70b3540",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "9944b5c6-f08b-5254-9ec3-104158356e27",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "0a2ba2de-9dc0-5095-bf23-162feb7aaaed",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "6296be55-a8aa-5863-816f-8f5e9e7c41a8",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "beb553fb-4a79-5efc-8286-ff277a5c15e8",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "4f4ae302-327f-588d-a99e-c6da003981c0",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "6a8d2f21-0586-5294-8454-dc2d1e1df958",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "a8c2094e-f9a5-541f-b2bf-7ce527b88e0b",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "faa698b5-0049-5d90-b8bc-6f74c56b2af6",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "a760ff97-f02c-5655-b2ee-8e64d7e7e782",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "206d6cc4-dc18-508d-8495-c3b4dd3fc8c5",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "0ade5ace-8cee-5c6b-94a0-44101b547e6a",
+                "vehicle_types_available": [],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 0
+            },
+            {
+                "station_id": "309ed937-8d65-50e9-b19b-0edae39ac280",
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-02-02T21:25:27Z",
+                "num_vehicles_available": 1
+            }
+        ]
+    }
+}

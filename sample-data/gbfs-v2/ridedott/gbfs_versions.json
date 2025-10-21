@@ -1,0 +1,13 @@
+{
+    "data": {
+        "versions": [
+            {
+                "url": "https://gbfs.api.ridedott.com/public/v2/gbfs.json",
+                "version": "2.3"
+            }
+        ]
+    },
+    "last_updated": 1761018328,
+    "ttl": 0,
+    "version": "2.3"
+}

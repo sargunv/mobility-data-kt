@@ -1,0 +1,79 @@
+{
+    "last_updated": 1761018668,
+    "ttl": 60,
+    "data": {
+        "de": {
+            "feeds": [
+                {
+                    "name": "system_information",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/de/system_information.json"
+                },
+                {
+                    "name": "vehicle_types",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/de/vehicle_types.json"
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/de/station_information.json"
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/de/station_status.json"
+                },
+                {
+                    "name": "free_bike_status",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/de/free_bike_status.json"
+                },
+                {
+                    "name": "system_hours",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/de/system_hours.json"
+                },
+                {
+                    "name": "system_regions",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/de/system_regions.json"
+                },
+                {
+                    "name": "system_pricing_plans",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/de/system_pricing_plans.json"
+                }
+            ]
+        },
+        "en": {
+            "feeds": [
+                {
+                    "name": "system_information",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/en/system_information.json"
+                },
+                {
+                    "name": "vehicle_types",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/en/vehicle_types.json"
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/en/station_information.json"
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/en/station_status.json"
+                },
+                {
+                    "name": "free_bike_status",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/en/free_bike_status.json"
+                },
+                {
+                    "name": "system_hours",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/en/system_hours.json"
+                },
+                {
+                    "name": "system_regions",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/en/system_regions.json"
+                },
+                {
+                    "name": "system_pricing_plans",
+                    "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/en/system_pricing_plans.json"
+                }
+            ]
+        }
+    },
+    "version": "2.3"
+}

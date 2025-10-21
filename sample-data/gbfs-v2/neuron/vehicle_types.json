@@ -1,0 +1,21 @@
+{
+    "version": "2.0",
+    "data": {
+        "vehicle_types": [
+            {
+                "vehicle_type_id": "e8fbc1f0-3504-3dff-852a-9e6dab5e204d",
+                "form_factor": "scooter",
+                "propulsion_type": "electric",
+                "max_range_meters": 48000.0
+            },
+            {
+                "vehicle_type_id": "9e8e37ae-b444-3d57-9e9a-58ce02e9f2fd",
+                "form_factor": "bicycle",
+                "propulsion_type": "electric_assist",
+                "max_range_meters": 72000.0
+            }
+        ]
+    },
+    "ttl": 120,
+    "last_updated": 1761019015
+}

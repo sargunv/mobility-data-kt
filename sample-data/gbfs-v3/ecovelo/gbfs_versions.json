@@ -1,0 +1,17 @@
+{
+    "data": {
+        "versions": [
+            {
+                "url": "https://api.gbfs.v2.2.ecovelo.mobi/velodaqui/gbfs.json",
+                "version": "2.2"
+            },
+            {
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/gbfs.json",
+                "version": "3.0"
+            }
+        ]
+    },
+    "last_updated": "2025-10-21T06:14:34+02:00",
+    "ttl": 0,
+    "version": "3.0"
+}

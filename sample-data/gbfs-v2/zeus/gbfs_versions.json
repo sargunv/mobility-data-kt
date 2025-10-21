@@ -1,0 +1,13 @@
+{
+    "last_updated": 1761019305,
+    "ttl": 0,
+    "version": "2.2",
+    "data": {
+        "versions": [
+            {
+                "version": "2.2",
+                "url": "https://zeus.city/api/v1/mds/gbfs/schweinfurt/gbfs.json"
+            }
+        ]
+    }
+}

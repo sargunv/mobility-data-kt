@@ -1,0 +1,18 @@
+{
+    "last_updated": 1761018444,
+    "ttl": 0,
+    "version": "1.0",
+    "data": {
+        "stations": [
+            {
+                "station_id": "seattle",
+                "num_vehicles_available": 12040,
+                "num_docks_available": 999999,
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761018444
+            }
+        ]
+    }
+}

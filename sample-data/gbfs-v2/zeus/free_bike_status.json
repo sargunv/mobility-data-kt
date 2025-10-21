@@ -1,0 +1,4965 @@
+{
+    "last_updated": 1761019307,
+    "ttl": 0,
+    "version": "2.2",
+    "data": {
+        "bikes": [
+            {
+                "bike_id": "3c17a2e3b2f19e97f5af24f7838d529c",
+                "lat": 50.035832,
+                "lon": 10.212082,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=5161"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1754256614,
+                "current_range_meters": 34300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "e4ada14f9279831b804447f1a1290a3a",
+                "lat": 50.049842,
+                "lon": 10.226383,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1924"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1635056361,
+                "current_range_meters": 22750,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "f416abda66cfca0be48a2a5423de4268",
+                "lat": 50.045413,
+                "lon": 10.193218,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=3632"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019156,
+                "current_range_meters": 27300,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "931d0bf2dd11ccd048b298ef5e73cce3",
+                "lat": 50.064277,
+                "lon": 10.257082,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2220"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019277,
+                "current_range_meters": 23800,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "f8ff21a0b4f2d4fb54af617167b29c96",
+                "lat": 50.004708,
+                "lon": 10.181738,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2423"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1660049706,
+                "current_range_meters": 8050,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "2f007d8668823d534174f5ceb7f1d850",
+                "lat": 50.029268,
+                "lon": 10.207352,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1040"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1629586681,
+                "current_range_meters": 0,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "c507415d27df3bdd90349226955fa328",
+                "lat": 50.038852,
+                "lon": 10.247378,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2374"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1630730824,
+                "current_range_meters": 34650,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "b3fe96f9afacc8904daa906fa2f1a2ba",
+                "lat": 50.029998,
+                "lon": 10.239728,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1647"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019275,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "45f9b0e2170346648a1ef0b181863920",
+                "lat": 50.046007,
+                "lon": 10.236548,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1998"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1670441283,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "3686a4e29b5849608bb3265d564b144d",
+                "lat": 50.035678,
+                "lon": 10.207577,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2009"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1633776551,
+                "current_range_meters": 0,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "5df50132d4c74b2b448ed4c3734c9067",
+                "lat": 50.042535,
+                "lon": 10.234642,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2337"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1646242972,
+                "current_range_meters": 27650,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "94474dc35b8b5cea539b4d732bc21e73",
+                "lat": 50.054452,
+                "lon": 10.226882,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2194"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1760396620,
+                "current_range_meters": 18900,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "31fdeaee9c2012c6c641ec41a2a73da3",
+                "lat": 50.054907,
+                "lon": 10.258032,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2478"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1658652574,
+                "current_range_meters": 24850,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "62075401155c9f519ead770485d2611f",
+                "lat": 50.05124,
+                "lon": 10.229183,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=4515"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019267,
+                "current_range_meters": 31500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "88f25b311b5c44e5b6abd47c27bb7971",
+                "lat": 50.038722,
+                "lon": 10.209227,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1519"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1666915196,
+                "current_range_meters": 29750,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "5ea38dd5e37eff28b80bc6f0a448ead1",
+                "lat": 50.039785,
+                "lon": 10.221332,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2744"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019153,
+                "current_range_meters": 6650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b45b354a3ab06ca4dea2dff828cf720e",
+                "lat": 50.049905,
+                "lon": 10.2129,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2759"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019216,
+                "current_range_meters": 34650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "ba6ac32a9714f20fb41160da1d0a5e76",
+                "lat": 50.053705,
+                "lon": 10.25033,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1644"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019243,
+                "current_range_meters": 30800,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "3e6b5f7340035f696669983579753b8a",
+                "lat": 50.049677,
+                "lon": 10.226432,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2163"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1642174280,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "9e7cf3e519bbee0592d5a12c1697c069",
+                "lat": 50.057703,
+                "lon": 10.23351,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1997"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1687424304,
+                "current_range_meters": 13650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "15f11cfe4683be1cfc21f18d024e7c39",
+                "lat": 50.050738,
+                "lon": 10.215283,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1094"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1633237516,
+                "current_range_meters": 21000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "505ff21b9dcebf77061c897d0ea740cf",
+                "lat": 50.036108,
+                "lon": 10.213113,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1496"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1666712520,
+                "current_range_meters": 0,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "0ec7ae3104fe604520e024be6ca3e739",
+                "lat": 50.04721,
+                "lon": 10.2137,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=3661"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019224,
+                "current_range_meters": 12600,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "e3be875197c352845a373075a37d4c24",
+                "lat": 50.071075,
+                "lon": 10.235568,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6000"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019272,
+                "current_range_meters": 31500,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "77a6fc9ebaa42ab21f35d641f6253e46",
+                "lat": 50.050912,
+                "lon": 10.222307,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=5009"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019294,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "0977592ee5663d2ec11068de3f4e0182",
+                "lat": 50.046215,
+                "lon": 10.236478,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1849"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019227,
+                "current_range_meters": 30800,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b834550d8b482f3233c7308ae1b74195",
+                "lat": 50.057283,
+                "lon": 10.214608,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1246"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019276,
+                "current_range_meters": 32550,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "96a8cee802a0cec6f73fe0d11b1890f9",
+                "lat": 50.037428,
+                "lon": 10.203937,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8180"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1759673563,
+                "current_range_meters": 0,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "a9aa3832de1076cdeb0eeb05b849e9bf",
+                "lat": 50.045315,
+                "lon": 10.220157,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6034"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019139,
+                "current_range_meters": 32200,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "e0f2be3b0c6b1bbdde2a0eb2618a4287",
+                "lat": 50.044027,
+                "lon": 10.23704,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2745"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019107,
+                "current_range_meters": 32200,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "15cae098bd0c193a1de3417693378c51",
+                "lat": 50.03908,
+                "lon": 10.242215,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=5026"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019251,
+                "current_range_meters": 21350,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "236ebed87d7dd8f698b9da2ff836824c",
+                "lat": 50.020087,
+                "lon": 10.217205,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=4343"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019162,
+                "current_range_meters": 18900,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "e0cde132f5365890047c91e4e12d6739",
+                "lat": 50.05785,
+                "lon": 10.190068,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1737"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019285,
+                "current_range_meters": 9450,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "acbd17b701c6e8e87279201b0ae91bca",
+                "lat": 50.04036,
+                "lon": 10.222125,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=4726"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019269,
+                "current_range_meters": 14700,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "05cfca29a5345c591d2f3232b36cd44e",
+                "lat": 50.040323,
+                "lon": 10.22652,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8200"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1760541908,
+                "current_range_meters": 0,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "bd0f26e127af75852a7cbe80fef0dd2d",
+                "lat": 50.039637,
+                "lon": 10.221512,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=4481"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019264,
+                "current_range_meters": 11200,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "111dc3f77ebbd2d24a12585ab59dcb7a",
+                "lat": 50.038115,
+                "lon": 10.22007,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=2869"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1755241289,
+                "current_range_meters": 25900,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "c579f8b23a65fa9b722717f081c58c53",
+                "lat": 50.043977,
+                "lon": 10.23679,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=3314"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019287,
+                "current_range_meters": 34300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "74b6cf39eabff80de54439776bf0c11b",
+                "lat": 50.045548,
+                "lon": 10.210782,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=4955"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019259,
+                "current_range_meters": 5600,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "645e16a026efea1a6c396e5c4e6ddd2e",
+                "lat": 50.069873,
+                "lon": 10.255527,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=4841"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019178,
+                "current_range_meters": 24850,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "8084aac66bc560c39bd4f22b64b7caa4",
+                "lat": 50.037368,
+                "lon": 10.199167,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=5069"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019255,
+                "current_range_meters": 14000,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "44dc2b704d342776d3d074a22bf64bb2",
+                "lat": 50.037035,
+                "lon": 10.199468,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=5330"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019283,
+                "current_range_meters": 32200,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9e6984f199bc998dc2e615121eaf6aba",
+                "lat": 50.06668,
+                "lon": 10.253728,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=5823"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019252,
+                "current_range_meters": 22050,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "3619f2d16461d3be4ff4a94f3f46fb3c",
+                "lat": 50.030587,
+                "lon": 10.199223,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=5906"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019209,
+                "current_range_meters": 24850,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "cc2d6360b06157859f8f5d9a1ddc5648",
+                "lat": 50.048533,
+                "lon": 10.221595,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=5809"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019261,
+                "current_range_meters": 30800,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "93cd4bd249fe346491a9fdee3d958c33",
+                "lat": 50.054603,
+                "lon": 10.199995,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8648"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019290,
+                "current_range_meters": 34300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "fbee0be5e2c48a988b66ece46328afae",
+                "lat": 50.05621,
+                "lon": 10.205558,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8344"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019164,
+                "current_range_meters": 12950,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "af715ec1b2d9535ff35dfcf052a0ed38",
+                "lat": 50.043183,
+                "lon": 10.22333,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7181"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1692045762,
+                "current_range_meters": 32550,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "7f0160718f5dccf614322e3ef0c09855",
+                "lat": 50.047663,
+                "lon": 10.19728,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6918"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019304,
+                "current_range_meters": 9450,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "147547e8ddf45b6757042f32f047b26c",
+                "lat": 50.040945,
+                "lon": 10.229037,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7076"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019132,
+                "current_range_meters": 20650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "567686e891b34905a3fa9b46377c6843",
+                "lat": 50.034447,
+                "lon": 10.237903,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7057"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1697195977,
+                "current_range_meters": 0,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "b9129860dd3bf2bf04713379b0021080",
+                "lat": 50.054695,
+                "lon": 10.221908,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7034"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1690487891,
+                "current_range_meters": 24150,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "2899475430f19b557f5fae7216369043",
+                "lat": 50.057953,
+                "lon": 10.19007,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6630"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019306,
+                "current_range_meters": 28000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "f652b4c3799095360592d145363980f9",
+                "lat": 50.056373,
+                "lon": 10.232245,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7266"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019278,
+                "current_range_meters": 25550,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "039f2f25c722c275d200dd8046fcf80d",
+                "lat": 50.037158,
+                "lon": 10.201445,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7388"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019282,
+                "current_range_meters": 21000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9be72359e1df8526cb3a0da486c392a1",
+                "lat": 50.043672,
+                "lon": 10.205935,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7308"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019214,
+                "current_range_meters": 11900,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "99b2c50d3973cfda11b2498fbaf8f497",
+                "lat": 50.045255,
+                "lon": 10.225997,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10805"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019258,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "38b605f01612f5f765f4420a81f4156b",
+                "lat": 50.038602,
+                "lon": 10.234997,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6669"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1698553211,
+                "current_range_meters": 12950,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "fe6283130f44fd7424b1d5a4ed9b8235",
+                "lat": 50.067652,
+                "lon": 10.254557,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6525"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1745952797,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "44d2b089ba0b33c6fa86743fcff7e2a8",
+                "lat": 50.049863,
+                "lon": 10.216278,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1515"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1662748584,
+                "current_range_meters": 23800,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "d5f05405f5c3e5c050104290dcfec105",
+                "lat": 50.031853,
+                "lon": 10.22843,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1543"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1757443308,
+                "current_range_meters": 17150,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "4b5b54439bb87bff4b3586c982bbecec",
+                "lat": 50.042677,
+                "lon": 10.227593,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1146"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019205,
+                "current_range_meters": 30800,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "8187d2916478d510dbc7f9851661e202",
+                "lat": 50.061038,
+                "lon": 10.251407,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7511"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019307,
+                "current_range_meters": 12600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9a04b9375d634e655c6280654b9ebb62",
+                "lat": 50.05073,
+                "lon": 10.218708,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7145"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019302,
+                "current_range_meters": 15400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "d7f9b35e608161ebee1c09a9697a70c8",
+                "lat": 50.039947,
+                "lon": 10.219425,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6606"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019212,
+                "current_range_meters": 29750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "c698bef0a76894b2331c54dfb3befed0",
+                "lat": 50.044037,
+                "lon": 10.217595,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7409"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019207,
+                "current_range_meters": 10500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "18df640996ac8f19baf7dfe8e3556555",
+                "lat": 50.046102,
+                "lon": 10.224477,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=50044"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1743307517,
+                "current_range_meters": 33600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "84ff7421e0667d10000e402eecf51ec2",
+                "lat": 50.038825,
+                "lon": 10.220378,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7425"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019134,
+                "current_range_meters": 11200,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "a48be2576ccefe626955ef673453541e",
+                "lat": 50.05367,
+                "lon": 10.194235,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7514"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1712584938,
+                "current_range_meters": 0,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "a84d6c3f7c7b58776d1ee21b68e3ffe2",
+                "lat": 50.048108,
+                "lon": 10.21198,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7055"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1729004696,
+                "current_range_meters": 21000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "90ea3d9ac7494fa8d2b56b1960ced9ef",
+                "lat": 50.02559,
+                "lon": 10.225572,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7003"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019160,
+                "current_range_meters": 16450,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "83dae659f1dd8ca2505a40a1dee584a4",
+                "lat": 50.0378,
+                "lon": 10.230532,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12153"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019169,
+                "current_range_meters": 14350,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "8e58afbcd3810cf9f1e5408c0615a80a",
+                "lat": 50.05532,
+                "lon": 10.241863,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6993"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1692230753,
+                "current_range_meters": 13300,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "bde65471b97a4e8814e1c532212f1beb",
+                "lat": 50.044022,
+                "lon": 10.237002,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6450"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019299,
+                "current_range_meters": 33250,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "8c5235efd1fa9a0b33e1fb7ac46a65b0",
+                "lat": 50.04574,
+                "lon": 10.206448,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6649"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019228,
+                "current_range_meters": 30800,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "53a3c43e8f457b7e5742c0134d7bd8c9",
+                "lat": 50.035853,
+                "lon": 10.203578,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6482"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1760360049,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "8278f20149b00551201a337b657cd8e8",
+                "lat": 50.039127,
+                "lon": 10.220992,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6453"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019244,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "4a781a687205650c30b537737ce23c56",
+                "lat": 50.042615,
+                "lon": 10.238025,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1170"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1673752208,
+                "current_range_meters": 28350,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "97cd2dd90a4dfd2746946f21d8751de9",
+                "lat": 50.051317,
+                "lon": 10.243338,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6552"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019291,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "eccb0749f9360a4249bb34daea73a163",
+                "lat": 50.037695,
+                "lon": 10.209423,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7709"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019215,
+                "current_range_meters": 10500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "c6bfd48bd04fe7b4ab76184f99aa52b4",
+                "lat": 50.055763,
+                "lon": 10.207242,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7823"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1715357205,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9d0fe72bbc8036d2adf6bbc4b20c89b0",
+                "lat": 50.056917,
+                "lon": 10.230065,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7069"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019158,
+                "current_range_meters": 26250,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "ba04bfc2be21e262f7441bb91967f084",
+                "lat": 50.042368,
+                "lon": 10.22851,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6860"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019198,
+                "current_range_meters": 20300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "1d7fa62d3da0bb1d6d377717517d06ff",
+                "lat": 50.062975,
+                "lon": 10.225843,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7790"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1690723026,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "e7744d31491883ebb55498afa5198899",
+                "lat": 50.04405,
+                "lon": 10.237013,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7699"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019203,
+                "current_range_meters": 9800,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "919bc3435f5be1451c716a37948030c4",
+                "lat": 50.045967,
+                "lon": 10.234088,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7698"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019281,
+                "current_range_meters": 7000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "27927c5cba8aa14e12f9e14209c3298b",
+                "lat": 50.027768,
+                "lon": 10.208475,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7537"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019226,
+                "current_range_meters": 17150,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "71bc598c0c757cb0f7f389dc559dd532",
+                "lat": 50.035945,
+                "lon": 10.21163,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7549"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019160,
+                "current_range_meters": 29750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "a6e795b1252d9bae860d98ecd453aeea",
+                "lat": 50.045385,
+                "lon": 10.193167,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7021"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019203,
+                "current_range_meters": 34650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "c34c448c60ceca62b3f31085e6e5dde6",
+                "lat": 50.045575,
+                "lon": 10.211765,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7597"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019147,
+                "current_range_meters": 20650,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "aa881e78ed353581f66dfa49398e16e0",
+                "lat": 50.046797,
+                "lon": 10.233338,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6376"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019096,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "a26b3cc5c7eeee22dfe927ccbe63aab3",
+                "lat": 50.06685,
+                "lon": 10.253918,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7264"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019253,
+                "current_range_meters": 12950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "8caa24b2bd08a42abebacc2aa9042612",
+                "lat": 50.048142,
+                "lon": 10.210948,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6387"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019073,
+                "current_range_meters": 14700,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "f6d28480b4bb19f9d7869c63c0288bf4",
+                "lat": 50.015132,
+                "lon": 10.2056,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7828"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019280,
+                "current_range_meters": 12950,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "7b13b7064fe4b6209d4acb39e0b33d08",
+                "lat": 50.06105,
+                "lon": 10.233633,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7751"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1700732458,
+                "current_range_meters": 34300,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "76a239b05600a5d9e315fd91ce901480",
+                "lat": 50.056722,
+                "lon": 10.193318,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7759"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1757951562,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "11cadd24fb48286306736ce1d30efa81",
+                "lat": 50.04014,
+                "lon": 10.199558,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7812"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1713364832,
+                "current_range_meters": 23800,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b240af692e773ab1b09ee1c3f6c24dcd",
+                "lat": 50.037353,
+                "lon": 10.200758,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7098"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019256,
+                "current_range_meters": 11900,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "231ce1e202bc596e51e15e223ad7d9ae",
+                "lat": 50.062473,
+                "lon": 10.192675,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7542"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019222,
+                "current_range_meters": 33600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "f3402261011a41a23281289f9a7b63dc",
+                "lat": 50.025798,
+                "lon": 10.19808,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7310"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1760878611,
+                "current_range_meters": 13300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "bf1c0542928f633a11fcd9debc8839ba",
+                "lat": 50.048907,
+                "lon": 10.210802,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7735"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1703944384,
+                "current_range_meters": 0,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "59f7c8e2f39e430c312c537194c25596",
+                "lat": 50.046497,
+                "lon": 10.230427,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8660"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1732078725,
+                "current_range_meters": 34650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b8009d70b6703f891323b27c71dcc83f",
+                "lat": 50.044547,
+                "lon": 10.225545,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6566"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1684104385,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "cb0c0c1de17a8e3e2a4fedb0910296b2",
+                "lat": 50.059398,
+                "lon": 10.246137,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13742"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019300,
+                "current_range_meters": 15050,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "80de904b8cc24836469095f09649e586",
+                "lat": 50.03508,
+                "lon": 10.2218,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13400"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1759713823,
+                "current_range_meters": 11200,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "880841ea05af2ba693064016f2405cec",
+                "lat": 50.051202,
+                "lon": 10.21459,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7733"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1689974666,
+                "current_range_meters": 25900,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9708c9a7411bfa7f740378fbf65b0efd",
+                "lat": 50.03525,
+                "lon": 10.227367,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7353"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1676786774,
+                "current_range_meters": 15750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "09fa9d27203864e2367502034bdbb39e",
+                "lat": 50.046187,
+                "lon": 10.236598,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8695"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019280,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "a0a064aed0331de7916b004a1c908295",
+                "lat": 50.059395,
+                "lon": 10.211515,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6530"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1741331398,
+                "current_range_meters": 19600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "bbe89d40debb57b054c704442497e3cb",
+                "lat": 50.036902,
+                "lon": 10.199263,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7684"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019304,
+                "current_range_meters": 15750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "e02b8d023d36fc11960cdd94b3cd6d0c",
+                "lat": 50.049595,
+                "lon": 10.21744,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6540"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019231,
+                "current_range_meters": 10500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "1eea7c4339f74b717158d1b4da394b15",
+                "lat": 50.040137,
+                "lon": 10.220283,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6709"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019231,
+                "current_range_meters": 12950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "52c87de849114c82598ed4c80f62bafb",
+                "lat": 50.043075,
+                "lon": 10.22835,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6420"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019257,
+                "current_range_meters": 27650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "0641786630bdaf6d1e687cca21eb4d44",
+                "lat": 50.06095,
+                "lon": 10.251332,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7589"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019237,
+                "current_range_meters": 25900,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "70982dabc09dbd14cda02fe0186e5b0f",
+                "lat": 50.054272,
+                "lon": 10.235708,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7590"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1690464998,
+                "current_range_meters": 12600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "918fe65d3e8998b62c41e53934eaa9d4",
+                "lat": 50.098202,
+                "lon": 10.208225,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11845"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019168,
+                "current_range_meters": 3150,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "8c2f295928af1e9718a07dd0c58cd78c",
+                "lat": 50.041633,
+                "lon": 10.220662,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6498"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1681631110,
+                "current_range_meters": 26250,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "4030bb34574a62afe6be29c178a5e6f8",
+                "lat": 50.04607,
+                "lon": 10.225813,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7513"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1727025897,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "596341f1467f1d13182f75f6eb6956f2",
+                "lat": 50.041178,
+                "lon": 10.224555,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7064"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019258,
+                "current_range_meters": 17850,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b742216ee7e636e83c69284fda2b9d7c",
+                "lat": 50.063218,
+                "lon": 10.236205,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6535"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019188,
+                "current_range_meters": 18200,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "add1eb911cd839b3130e88067bd53686",
+                "lat": 50.05398,
+                "lon": 10.194962,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7005"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1673864922,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "88a84005c04684fdfba90b111f9bb403",
+                "lat": 50.061518,
+                "lon": 10.23224,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7635"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1690663886,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "4102a9c363a936a831d691f65a6efc99",
+                "lat": 50.061652,
+                "lon": 10.194428,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6887"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019271,
+                "current_range_meters": 13300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5699f51b005ca9f107ebcbb1de66ad0b",
+                "lat": 50.054858,
+                "lon": 10.220433,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6944"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019289,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "48198db8df44658df0855afee3624373",
+                "lat": 50.042852,
+                "lon": 10.193703,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7325"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1728640393,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b76470849044252f6b9e93b03a96da32",
+                "lat": 50.037562,
+                "lon": 10.213402,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7463"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019205,
+                "current_range_meters": 15050,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "6e928f6ca05dd6fe6cd46df086aae4f8",
+                "lat": 50.04161,
+                "lon": 10.206025,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7073"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1755786598,
+                "current_range_meters": 26950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "aa26c1a75dba733f34ff5ce311acd1c9",
+                "lat": 50.044485,
+                "lon": 10.234182,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7573"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1681774794,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9c03d0667c881188d5d2f19c3cbd0190",
+                "lat": 50.046238,
+                "lon": 10.224008,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6844"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019267,
+                "current_range_meters": 16450,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "a13f2243eec8a5f96ad7f4941b2b732b",
+                "lat": 50.061055,
+                "lon": 10.231908,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6762"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019264,
+                "current_range_meters": 9450,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "7f8778e19da95c7f13e49814525d7b15",
+                "lat": 50.035862,
+                "lon": 10.211778,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6567"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019197,
+                "current_range_meters": 15400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9166b39b3706ae618e7d344dd5823374",
+                "lat": 50.078282,
+                "lon": 10.219103,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7604"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1707419358,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "91cb7bf72e94a22fad57f46797348d33",
+                "lat": 50.042117,
+                "lon": 10.196155,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=52126"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1736618041,
+                "current_range_meters": 14000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9520967dcc37fedfb315d1cdcf95a719",
+                "lat": 50.060815,
+                "lon": 10.248208,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6067"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019170,
+                "current_range_meters": 15050,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "41ac3f6a02c5ed570e60487507ab17d1",
+                "lat": 50.061027,
+                "lon": 10.251465,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7334"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019286,
+                "current_range_meters": 21000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "3b8e8f33e76926113d27ff0be5570da5",
+                "lat": 50.046282,
+                "lon": 10.22687,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6840"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019165,
+                "current_range_meters": 15050,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b9def388d2f42b449658bce0a7e09e9c",
+                "lat": 50.035818,
+                "lon": 10.212037,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6959"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019304,
+                "current_range_meters": 15050,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "78a52c63115732621d6dafb8a3ca3d2c",
+                "lat": 50.046227,
+                "lon": 10.225748,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6419"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1726223655,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "65d39a1473fd30349c9f84168cc2a266",
+                "lat": 50.057827,
+                "lon": 10.24472,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7486"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1690045772,
+                "current_range_meters": 20650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "da7bc2dd8d0bd00b5e3899a81569f831",
+                "lat": 50.021975,
+                "lon": 10.19319,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7436"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019275,
+                "current_range_meters": 26600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "7c25f382353134804c1adb42a43f6c66",
+                "lat": 50.042457,
+                "lon": 10.230452,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7665"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1757217495,
+                "current_range_meters": 31500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "582b19488c9e315f89114e726f9de74f",
+                "lat": 50.027747,
+                "lon": 10.208435,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7107"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019142,
+                "current_range_meters": 18200,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5a8e32d1965b0e50f7221aa980a338ce",
+                "lat": 50.056595,
+                "lon": 10.233565,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7596"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1752137674,
+                "current_range_meters": 13650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "98e0f3e1be604d5f419c3e74326770e1",
+                "lat": 50.012092,
+                "lon": 10.205918,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6924"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1724518060,
+                "current_range_meters": 26600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "19c614ad0879f5f801e1423d7b8726c3",
+                "lat": 50.024698,
+                "lon": 10.227765,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7604"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1713328376,
+                "current_range_meters": 32900,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "eb043893e43a7cb3325aa716e2a8250f",
+                "lat": 50.04346,
+                "lon": 10.191172,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6749"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1701724310,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "1bdb1269554835a2bf60bb99dcc0ef4c",
+                "lat": 50.057578,
+                "lon": 10.23297,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6994"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1689757128,
+                "current_range_meters": 7000,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "4688a826baddd44bf9b8e2cb3042f43f",
+                "lat": 50.026947,
+                "lon": 10.239147,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7005"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1720858471,
+                "current_range_meters": 15400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9e0cf169451d5cba6e575d596aaef77d",
+                "lat": 50.06531,
+                "lon": 10.22034,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8647"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019293,
+                "current_range_meters": 8400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "6dc62f4998ab236fe3c2714b72bd7ab9",
+                "lat": 50.037308,
+                "lon": 10.25148,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1669"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019173,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "161f8db06a2193ad58d990c469f744e2",
+                "lat": 50.054775,
+                "lon": 10.230623,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12098"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1676041151,
+                "current_range_meters": 32200,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "43aedff4419fc52606040b733e4a2cb0",
+                "lat": 50.040153,
+                "lon": 10.196442,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6766"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1690445658,
+                "current_range_meters": 12250,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "12da8742298925ff83cc4aea30539e8b",
+                "lat": 50.04269,
+                "lon": 10.229398,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6585"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019293,
+                "current_range_meters": 21350,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "2e3d0dcaba5856a8c1bdcca1f47d134c",
+                "lat": 50.052638,
+                "lon": 10.230513,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=3290"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019141,
+                "current_range_meters": 17850,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "bb409c28aceb4775ddb5bfbd06db6f0d",
+                "lat": 50.033973,
+                "lon": 10.233633,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=4663"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019182,
+                "current_range_meters": 30450,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "275c8694025bdcffcf9602b7b1dd71e8",
+                "lat": 50.040773,
+                "lon": 10.22945,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=3876"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019264,
+                "current_range_meters": 23100,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "edcff13bd7e65d2a4c44f377bb244e3c",
+                "lat": 50.056913,
+                "lon": 10.230142,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7055"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1733830822,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "2ed2aa8bba3cbcadf47e0cb969e338ef",
+                "lat": 50.07,
+                "lon": 10.232893,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11436"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019247,
+                "current_range_meters": 27650,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "4ee7ed3f68e0f9ff089ccf45d4cf3bbb",
+                "lat": 50.048012,
+                "lon": 10.225132,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13656"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019253,
+                "current_range_meters": 3500,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "9f9efbc5fabc96d455b9b35a85da8941",
+                "lat": 50.04399,
+                "lon": 10.236722,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6898"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019291,
+                "current_range_meters": 26950,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "84b2cd00ad079ca6081458af04f7f6e2",
+                "lat": 50.040468,
+                "lon": 10.218355,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=98978"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1737404140,
+                "current_range_meters": 14700,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "04cce593377681971997731661a06560",
+                "lat": 50.032002,
+                "lon": 10.228137,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11365"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019100,
+                "current_range_meters": 10500,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "59fa816cea3b403cf0d7a87c77e143aa",
+                "lat": 50.055715,
+                "lon": 10.212,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11376"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019213,
+                "current_range_meters": 26600,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "975bebb23541e3bb218b6784aba11fce",
+                "lat": 50.066975,
+                "lon": 10.255258,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11248"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019087,
+                "current_range_meters": 28700,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "e17ed8a191d184fe4da35a4e59e799b3",
+                "lat": 50.041127,
+                "lon": 10.202043,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7323"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019202,
+                "current_range_meters": 4550,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "33b49bcf54395c7f756879b5f156047e",
+                "lat": 50.043972,
+                "lon": 10.236982,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11224"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019241,
+                "current_range_meters": 33600,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "177473056c918108cef085ab15a2a7cd",
+                "lat": 50.050023,
+                "lon": 10.198717,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8195"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019280,
+                "current_range_meters": 10150,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "d4a506e0d6eb5b5df06071a8976c8281",
+                "lat": 50.044043,
+                "lon": 10.230827,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10043"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1731377785,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "fa1d2775205113674b04c109276496fa",
+                "lat": 50.04619,
+                "lon": 10.23655,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10037"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019252,
+                "current_range_meters": 24500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "4efdee8f470ba28b26c274d58900a195",
+                "lat": 50.047367,
+                "lon": 10.209,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=65163"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1738826263,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "94f53f9b4726deeab29d343d4b35bc2d",
+                "lat": 50.030532,
+                "lon": 10.204007,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=9936"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019186,
+                "current_range_meters": 33250,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "496be2807fb0712514d2629579f53eb1",
+                "lat": 50.058318,
+                "lon": 10.189692,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=9851"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019244,
+                "current_range_meters": 15400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "984bbb7a412e09343676c0c80dea6f5f",
+                "lat": 50.020058,
+                "lon": 10.215848,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=9972"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1754599739,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "2ff3e2f42a60cee5d4b636c6ee3d324b",
+                "lat": 50.038382,
+                "lon": 10.222878,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10038"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019237,
+                "current_range_meters": 19600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "76f8d7ccb2f989e0b9fdb27b49beadda",
+                "lat": 50.043735,
+                "lon": 10.21154,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=9830"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019227,
+                "current_range_meters": 14000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "2d2848844a1ca16f113da6a7a6d6dceb",
+                "lat": 50.06149,
+                "lon": 10.232235,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7333"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1691771394,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "eabb49a802e8b4eaab2eb0e6a17670dd",
+                "lat": 50.040892,
+                "lon": 10.203965,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6753"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1757891302,
+                "current_range_meters": 12600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5ba936d4a48c61685c7d1d52bd8f551c",
+                "lat": 50.035965,
+                "lon": 10.211765,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6355"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019110,
+                "current_range_meters": 13300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "16ec2164ed0b9798f547b55623e4aa46",
+                "lat": 50.035815,
+                "lon": 10.206678,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6864"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019227,
+                "current_range_meters": 15050,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "e97518594c0d219d49083a039d5bf5ea",
+                "lat": 50.04625,
+                "lon": 10.22769,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7448"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019154,
+                "current_range_meters": 20650,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "8e54ef2a887528bc9d79ba45f12188b5",
+                "lat": 50.053345,
+                "lon": 10.236952,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6341"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019192,
+                "current_range_meters": 8400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b1e542326f9d3fd2e2f3683408c4ca14",
+                "lat": 50.04707,
+                "lon": 10.239523,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6626"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019211,
+                "current_range_meters": 10850,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "4a1c2793a9312b98854038615c32ecc0",
+                "lat": 50.045363,
+                "lon": 10.193198,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6685"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019174,
+                "current_range_meters": 27300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "c77c6d8954a68a2d8bd520bb1e7064c2",
+                "lat": 50.040283,
+                "lon": 10.23541,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6862"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019276,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "79ba0b015d4f794d84cc04e8289784d9",
+                "lat": 50.045362,
+                "lon": 10.193187,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7622"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019078,
+                "current_range_meters": 7700,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "f56d7efdc54a16dc58699509a3275545",
+                "lat": 50.057283,
+                "lon": 10.214787,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8415"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019107,
+                "current_range_meters": 9100,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b78def4e924027b4ca99c33036102219",
+                "lat": 50.036662,
+                "lon": 10.201138,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=9391"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019236,
+                "current_range_meters": 21000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "d26bce811a004df42d275deddb199ca9",
+                "lat": 50.03649,
+                "lon": 10.210933,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6611"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1693311705,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "4308cdb3cb5eead655d02eb9ca1d9fac",
+                "lat": 50.012015,
+                "lon": 10.215107,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6907"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019252,
+                "current_range_meters": 15400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "405848f832603325749f78b54da1f633",
+                "lat": 50.046182,
+                "lon": 10.213725,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7811"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1734014708,
+                "current_range_meters": 34300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "1ac44dfce176e4acd3fc74a3e6534c83",
+                "lat": 50.040705,
+                "lon": 10.229732,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6741"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019165,
+                "current_range_meters": 12250,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "53863a87f2bfcc173db55edfbeb8d47c",
+                "lat": 50.045938,
+                "lon": 10.225818,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7792"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1720026556,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "68172cc306f61e2582e01ee78634a6a3",
+                "lat": 50.057327,
+                "lon": 10.194312,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10615"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1691728947,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "1013efd4e25c980a78124aaf4d452167",
+                "lat": 50.037055,
+                "lon": 10.196977,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10856"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019291,
+                "current_range_meters": 22400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "3427c88f5be0cd6104f40372949224a6",
+                "lat": 50.06805,
+                "lon": 10.251198,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10966"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019242,
+                "current_range_meters": 18550,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "c7fb8fac8993372b78ec6e4e89dc6541",
+                "lat": 50.049607,
+                "lon": 10.21249,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10913"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1748684072,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "470c80a9ac3d54fe93fac208adf0e4f5",
+                "lat": 50.034837,
+                "lon": 10.223902,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10641"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1711239180,
+                "current_range_meters": 21700,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "2ebf62b4fa1002eeb16c8c3673947b4d",
+                "lat": 50.050607,
+                "lon": 10.201137,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10789"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019178,
+                "current_range_meters": 8750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "a253d7a0c5850d8d9aab924ad6301c1f",
+                "lat": 50.04561,
+                "lon": 10.211483,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10829"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019303,
+                "current_range_meters": 27300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "e36947c17eb304a89e22d8c287234f75",
+                "lat": 50.025817,
+                "lon": 10.198138,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10779"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019229,
+                "current_range_meters": 15750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "442666c9ccebecae5b672b33f0b5c8b7",
+                "lat": 50.035922,
+                "lon": 10.211625,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10876"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019290,
+                "current_range_meters": 6650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "4bb5bac5813fc2920b765f9ba1100020",
+                "lat": 50.04662,
+                "lon": 10.236023,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10967"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019193,
+                "current_range_meters": 17500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "209f8f2a5b71e703f0c819e8171d9541",
+                "lat": 50.046182,
+                "lon": 10.227305,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10628"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019288,
+                "current_range_meters": 13650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "474585c03a89010afbcfffb91fafb4cd",
+                "lat": 50.038753,
+                "lon": 10.209215,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10858"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1750372429,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "8b78b2a7c221f23ee29a9c23784366ae",
+                "lat": 50.045382,
+                "lon": 10.216115,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=71336"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1736750758,
+                "current_range_meters": 22050,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "608bbdd91191a09267450423f9d51e00",
+                "lat": 50.043997,
+                "lon": 10.23673,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10859"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019252,
+                "current_range_meters": 8400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "6e1db80721a8bfe9808fdecce0752b3a",
+                "lat": 50.046225,
+                "lon": 10.236463,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10916"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019179,
+                "current_range_meters": 17500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "15ffa94697b8d86ee66d8e2ca5c5fd27",
+                "lat": 50.049173,
+                "lon": 10.207193,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10808"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1745794067,
+                "current_range_meters": 31500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "cb11805ba84273c51c2e91f156a61a29",
+                "lat": 50.045372,
+                "lon": 10.193212,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10587"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019097,
+                "current_range_meters": 14000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "1d49bd071a6c53fdb4c0245c79061a74",
+                "lat": 50.039235,
+                "lon": 10.200132,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10840"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019102,
+                "current_range_meters": 22050,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "96edbea34cffb0f96c82c5d891a44dc7",
+                "lat": 50.035875,
+                "lon": 10.248083,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10844"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1734692347,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "23652507d9d9af0abd02ce22135ec88f",
+                "lat": 50.058213,
+                "lon": 10.19289,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10782"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019237,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "6e59af93cd49420218f4a7024cfa7185",
+                "lat": 50.042023,
+                "lon": 10.20766,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=71311"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1730397265,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "bbef8cbd34b5b7cf92c23dcde897a493",
+                "lat": 50.055517,
+                "lon": 10.203322,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10957"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019182,
+                "current_range_meters": 32550,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "6036cbc4022b55a765e9391f972cafc3",
+                "lat": 50.036282,
+                "lon": 10.211833,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10813"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019231,
+                "current_range_meters": 19950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "d13fd0a57157346c72ca02584604aaf1",
+                "lat": 50.046447,
+                "lon": 10.227053,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10902"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019206,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "f8b38ff616f9c2cfc1c5217cea69881a",
+                "lat": 50.036195,
+                "lon": 10.213152,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10951"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019268,
+                "current_range_meters": 14000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "d79a18593ded1e732941bf9a7691eb72",
+                "lat": 50.036637,
+                "lon": 10.214842,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10642"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019190,
+                "current_range_meters": 13300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5db673160aa06ace00774a35ce656e39",
+                "lat": 50.04332,
+                "lon": 10.226338,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10900"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019237,
+                "current_range_meters": 15400,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "aae60e4318eab8a7564b9f61de26c3f0",
+                "lat": 50.043993,
+                "lon": 10.236935,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10781"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019294,
+                "current_range_meters": 14350,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "f082204d118bbad31ec89a8685044df1",
+                "lat": 50.046262,
+                "lon": 10.227152,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=71288"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1740565515,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "2e1d296c60f25fab65d47c81a50b57d9",
+                "lat": 50.053547,
+                "lon": 10.194887,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10887"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019291,
+                "current_range_meters": 12250,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5d4ee4570249d74ecc01ca4f2e5a90d1",
+                "lat": 50.04235,
+                "lon": 10.224107,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10760"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019245,
+                "current_range_meters": 18550,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "7e38686e556471f525c909db2f34b180",
+                "lat": 50.06006,
+                "lon": 10.246095,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10759"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019187,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "527a905505240237e4a6a23aa4ba60ce",
+                "lat": 50.046218,
+                "lon": 10.236457,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10904"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019205,
+                "current_range_meters": 11550,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "516dcc7816d55ff8cde0590bdb905d67",
+                "lat": 50.058205,
+                "lon": 10.215118,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10772"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019102,
+                "current_range_meters": 17850,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "c18dd75d8aa0fa10488f15604e60a380",
+                "lat": 50.0534,
+                "lon": 10.194622,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10869"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761002956,
+                "current_range_meters": 21000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "4ac2c2671045bf0aa37af2989cbcf6c7",
+                "lat": 50.085707,
+                "lon": 10.139527,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10605"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019224,
+                "current_range_meters": 700,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5eee09ab8683921a13c356590ab56e5d",
+                "lat": 50.055442,
+                "lon": 10.217785,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10837"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019304,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b0516a153607390f40c4725132ffab06",
+                "lat": 50.054848,
+                "lon": 10.197042,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10624"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019260,
+                "current_range_meters": 34650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "381f2de1d6452c16daf9ed78b4313ee5",
+                "lat": 50.056343,
+                "lon": 10.216828,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10853"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019247,
+                "current_range_meters": 18900,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "f5faac9a0ab97e50d63a75c83471ff7b",
+                "lat": 50.033827,
+                "lon": 10.232662,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10865"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019187,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "108c6cc4498a02ad83dc21f7abf1842b",
+                "lat": 50.039247,
+                "lon": 10.22566,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10765"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019195,
+                "current_range_meters": 14000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "7847ca15c19da408a45704b1884d85be",
+                "lat": 50.047713,
+                "lon": 10.210727,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10812"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019284,
+                "current_range_meters": 17500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5b8380f42ace2b6b07e1c67576418ea7",
+                "lat": 50.042383,
+                "lon": 10.230497,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10767"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019268,
+                "current_range_meters": 21350,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "da41180e3a2529556087061a83e3c1a1",
+                "lat": 50.056047,
+                "lon": 10.226203,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10574"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019168,
+                "current_range_meters": 19950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "cdee589edcfbbc7f2dd3e3644bd9ae5a",
+                "lat": 50.043243,
+                "lon": 10.219307,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10786"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019215,
+                "current_range_meters": 10500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "9895fbb1cf6482472514fac92c7ad29c",
+                "lat": 50.065173,
+                "lon": 10.229147,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10936"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019253,
+                "current_range_meters": 18200,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "80dd846a8a19d120854103e1b0320303",
+                "lat": 50.048668,
+                "lon": 10.229468,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=71339"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1739044890,
+                "current_range_meters": 33600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "bea916087976b8eed6be707c4397b188",
+                "lat": 50.040932,
+                "lon": 10.22929,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10862"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1748497387,
+                "current_range_meters": 29750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "6937c647730f525201449772940cf7a8",
+                "lat": 50.041763,
+                "lon": 10.229868,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10850"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019187,
+                "current_range_meters": 25550,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "47e746b0786a03424c70bb0109890681",
+                "lat": 50.049232,
+                "lon": 10.203527,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10665"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019254,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "33c32f1272b00723f02bed466f0ff349",
+                "lat": 50.0483,
+                "lon": 10.210583,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10863"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019297,
+                "current_range_meters": 9800,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b4b5f6ef6c969bd9bb5b6eb56e3860d2",
+                "lat": 50.037247,
+                "lon": 10.251883,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10627"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019194,
+                "current_range_meters": 28000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "cc6f22f74ff705b907dbc24a24c12731",
+                "lat": 50.033942,
+                "lon": 10.233533,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10910"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019215,
+                "current_range_meters": 20300,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "b979f8bf7780059274ac3189046fd264",
+                "lat": 50.043997,
+                "lon": 10.236715,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10618"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019284,
+                "current_range_meters": 9800,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "0d2f39da451fa04499af09921225ca6d",
+                "lat": 50.042043,
+                "lon": 10.220887,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10821"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019170,
+                "current_range_meters": 25550,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "fd701dce8c99fc7da0158c7f6d5bd31b",
+                "lat": 50.05493,
+                "lon": 10.219958,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10855"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019088,
+                "current_range_meters": 33950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "f28a1cf3bfe6ad47ea4fcaf36f053ba6",
+                "lat": 50.045375,
+                "lon": 10.193208,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10906"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019177,
+                "current_range_meters": 16800,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "14e5f79580ac3339b59eb88b1c2ea644",
+                "lat": 50.02445,
+                "lon": 10.19571,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10969"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019224,
+                "current_range_meters": 7700,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "bb2490e6430304a6c86a1b3fcebb13b0",
+                "lat": 50.0234,
+                "lon": 10.209552,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10645"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1760966710,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "a38e320d71757b303e08d2b22108b8b5",
+                "lat": 50.043987,
+                "lon": 10.236832,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10656"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019134,
+                "current_range_meters": 23450,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "ca483555b90d17018e396d099a091b7a",
+                "lat": 50.036022,
+                "lon": 10.211847,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10835"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1757519149,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "5290049d35deb7c3211a7699a328d78e",
+                "lat": 50.04143,
+                "lon": 10.224782,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10784"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019300,
+                "current_range_meters": 33600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "bac4a3382ab424fa8c2b3b25ed322001",
+                "lat": 50.047905,
+                "lon": 10.23631,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10584"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019225,
+                "current_range_meters": 14350,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "ba203b94effa352ea22a21ba16af1f76",
+                "lat": 50.012093,
+                "lon": 10.213915,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6766"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019125,
+                "current_range_meters": 12250,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "cff6a28bc94b2b49824d4303ac1746c8",
+                "lat": 50.042208,
+                "lon": 10.225403,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=1866"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019307,
+                "current_range_meters": 25550,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "bf0614a9e0ee3840fc6db7385cb6ae5d",
+                "lat": 50.074528,
+                "lon": 10.256833,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10791"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019274,
+                "current_range_meters": 18200,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "1a7f532f142188f64e37c222978c3c14",
+                "lat": 50.065788,
+                "lon": 10.247655,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11031"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019228,
+                "current_range_meters": 11550,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "8bd428406579512e5f20460db7ac4ad7",
+                "lat": 50.044002,
+                "lon": 10.236708,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10578"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019195,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "426f8f4ddba64b9487d985698535faa8",
+                "lat": 50.058328,
+                "lon": 10.219415,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11060"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019121,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "a9af03ad8f211769cc6e35e9ea02406a",
+                "lat": 50.043227,
+                "lon": 10.229367,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11036"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019302,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "7438a67b1b9c015e9ad5857fb3aa48b6",
+                "lat": 50.031975,
+                "lon": 10.228193,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11033"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019195,
+                "current_range_meters": 12600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "7c4da90447d2cbbf3dd57c880c222ae8",
+                "lat": 50.055502,
+                "lon": 10.20333,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10699"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019215,
+                "current_range_meters": 15750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "fbd1d3f8110cda1d73d5387e689a5de5",
+                "lat": 50.056508,
+                "lon": 10.212827,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10600"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019230,
+                "current_range_meters": 30100,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "6c7ff2291a5d2775f8fbcd682e2ac85f",
+                "lat": 50.035873,
+                "lon": 10.211898,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11118"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1757183841,
+                "current_range_meters": 0,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5abd80415e166ef8cc98b4d8ef845651",
+                "lat": 50.044047,
+                "lon": 10.230757,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10971"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1733372900,
+                "current_range_meters": 31150,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5bd40b11f9f7814792d22ecb5cf2e9d3",
+                "lat": 50.057243,
+                "lon": 10.194475,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11015"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019234,
+                "current_range_meters": 10500,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "a8184659a91ef4105d25aa38ae7d9ab9",
+                "lat": 50.034888,
+                "lon": 10.226355,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10612"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1751950141,
+                "current_range_meters": 8750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "8d4ef81f57f6f28f5862102edfde7358",
+                "lat": 50.074553,
+                "lon": 10.256805,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10702"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019214,
+                "current_range_meters": 22750,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "ce3667637d694781539ad6a968f244ec",
+                "lat": 50.020318,
+                "lon": 10.215562,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7694"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019266,
+                "current_range_meters": 34650,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "85fc159a3d5f858aa0eb240e165a59ca",
+                "lat": 50.042195,
+                "lon": 10.228672,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10658"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019220,
+                "current_range_meters": 17850,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "3122bf5c01453b9b9fdff05307c256cd",
+                "lat": 50.046243,
+                "lon": 10.236493,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10615"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019259,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "dedd0430bc4c50cea297d3983c05c289",
+                "lat": 50.04541,
+                "lon": 10.210552,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6926"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019301,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "077a4c24a0e02373ff2423c3f893b1ed",
+                "lat": 50.04861,
+                "lon": 10.19819,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11769"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019266,
+                "current_range_meters": 12600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "d8bf669f02d0aa02fa96ee6ba8fa2243",
+                "lat": 50.048038,
+                "lon": 10.215867,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11612"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019272,
+                "current_range_meters": 19600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "aca70dfb4e52d28c0537835ec6d1b8f7",
+                "lat": 50.046613,
+                "lon": 10.243253,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11856"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019297,
+                "current_range_meters": 11200,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "81d984256f95f137185cb3b7a0834031",
+                "lat": 50.041173,
+                "lon": 10.22458,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13835"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019167,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "4"
+            },
+            {
+                "bike_id": "e5ebc2546ca6858cc59558937d668a3d",
+                "lat": 50.021317,
+                "lon": 10.21604,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11631"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1757865529,
+                "current_range_meters": 29050,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "95d155ca3978b4fcf5e87a31a99fb793",
+                "lat": 50.037347,
+                "lon": 10.217508,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10891"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1756122817,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "02342c8bee50f5f9417111371765f266",
+                "lat": 50.037883,
+                "lon": 10.210058,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11777"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1756588316,
+                "current_range_meters": 23450,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "5bad6d40dd5fe96216090e57ff8243c2",
+                "lat": 50.050368,
+                "lon": 10.234032,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=9834"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019299,
+                "current_range_meters": 5600,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "0631418b1ce7f4a57f139fd0534abe74",
+                "lat": 50.071867,
+                "lon": 10.224683,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12195"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019259,
+                "current_range_meters": 23450,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "57632ec70cafeb65368012c0c8a84851",
+                "lat": 50.003773,
+                "lon": 10.11545,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11125"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019257,
+                "current_range_meters": 23450,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "81691dc37d4cadb0e9f52f0369f9456f",
+                "lat": 50.055878,
+                "lon": 10.222043,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12473"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019158,
+                "current_range_meters": 19250,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "6cc5a6319d29433cb95b94a0e40a78c1",
+                "lat": 50.042963,
+                "lon": 10.2278,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12457"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019257,
+                "current_range_meters": 31500,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "52985c6b55a23972f4d5c37282ebbc3c",
+                "lat": 50.044487,
+                "lon": 10.223665,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10884"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1759646095,
+                "current_range_meters": 26950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "d40fbd694a96f858ac105ef41c2971e1",
+                "lat": 50.035085,
+                "lon": 10.243055,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11279"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019269,
+                "current_range_meters": 27300,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "4949dc0541cede3182abc4aaffabdda9",
+                "lat": 50.043292,
+                "lon": 10.23542,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10588"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019202,
+                "current_range_meters": 29050,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "f5ee07c40c0dfde800ef5abdab9d1182",
+                "lat": 50.068747,
+                "lon": 10.229737,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7514"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019226,
+                "current_range_meters": 18900,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "7f62d2e20df77d2715376be2be0b8030",
+                "lat": 50.047927,
+                "lon": 10.222783,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7611"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1746471343,
+                "current_range_meters": 26950,
+                "pricing_plan_id": "3"
+            },
+            {
+                "bike_id": "39106b32dd5021ba1125b3db600d3900",
+                "lat": 50.050697,
+                "lon": 10.19385,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11467"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1756606916,
+                "current_range_meters": 32200,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "27d26a9e84ceef2409fd00918b9ade4c",
+                "lat": 50.061653,
+                "lon": 10.248373,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12813"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019231,
+                "current_range_meters": 30100,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "53162648a090b34ebb76470b0657fb0d",
+                "lat": 50.072262,
+                "lon": 10.221063,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7604"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019137,
+                "current_range_meters": 12950,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "315fe96d6c5f0c605692e65d4d58dd15",
+                "lat": 50.062328,
+                "lon": 10.244722,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12822"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019179,
+                "current_range_meters": 29050,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "d039f1fa9ea568d33bc793b53cdfb57d",
+                "lat": 50.023088,
+                "lon": 10.214763,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12878"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1760352160,
+                "current_range_meters": 0,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "a07dd4fc6bfa53f0867c482d7ca1685a",
+                "lat": 50.041218,
+                "lon": 10.194128,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10814"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019243,
+                "current_range_meters": 25550,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "7bff6343d93e8a3c099ae59811f26469",
+                "lat": 50.053732,
+                "lon": 10.244483,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12873"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019230,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "b4cfc0e322bf96d64f90fa77ef883f53",
+                "lat": 50.037793,
+                "lon": 10.230515,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12875"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019232,
+                "current_range_meters": 27300,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "cfc02f21655e522924987501cba9e6ba",
+                "lat": 50.038677,
+                "lon": 10.198735,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=98980"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1737067192,
+                "current_range_meters": 34300,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "ee90b2c8eb62b0d5563b2ee0a2ed9ec6",
+                "lat": 50.038373,
+                "lon": 10.222933,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12918"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019293,
+                "current_range_meters": 26600,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "15564bb61df062c263cf2313924dba3e",
+                "lat": 50.050147,
+                "lon": 10.201312,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13017"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019293,
+                "current_range_meters": 12950,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "941bc4bf6ccc77304d6712a6c3c8c7c7",
+                "lat": 50.027925,
+                "lon": 10.201662,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12924"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019178,
+                "current_range_meters": 14350,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "bf77788304da722a4b230db937c0a060",
+                "lat": 50.038107,
+                "lon": 10.198992,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12941"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019273,
+                "current_range_meters": 24850,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "12f226c6f5c5e1b7aad2815e733ee49b",
+                "lat": 50.055157,
+                "lon": 10.230855,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12809"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019213,
+                "current_range_meters": 10500,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "4f61930531caa74c048dadaf7aaa94cc",
+                "lat": 50.034932,
+                "lon": 10.237465,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12913"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019069,
+                "current_range_meters": 16800,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "72ba0ff09dd0124fe04921a70a929415",
+                "lat": 50.057832,
+                "lon": 10.200917,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13007"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019142,
+                "current_range_meters": 16450,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "33950ff5f0c3aa87ceda6c8d2b722b60",
+                "lat": 50.051188,
+                "lon": 10.199538,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6750"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019297,
+                "current_range_meters": 15400,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "51eb071725eee9eb70fac9ce7520e3fd",
+                "lat": 50.031497,
+                "lon": 10.203982,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12948"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019142,
+                "current_range_meters": 14350,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "b1a4c0661de521f2b750a5a1ed809184",
+                "lat": 50.03828,
+                "lon": 10.209052,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11283"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019195,
+                "current_range_meters": 18550,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "8b287afc1b8df71749c67652089e7b9a",
+                "lat": 50.074582,
+                "lon": 10.256823,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13266"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019124,
+                "current_range_meters": 25900,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "81804066ed09d07b7f8a1e5f1eaf6516",
+                "lat": 50.04692,
+                "lon": 10.219157,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13239"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019257,
+                "current_range_meters": 14350,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "0fed8aa06441e54e7f08398617e4263f",
+                "lat": 50.048093,
+                "lon": 10.203182,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13236"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019199,
+                "current_range_meters": 14000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "c9dc1ab66806f1f1eea073b08e2d85e3",
+                "lat": 50.03488,
+                "lon": 10.23221,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13206"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019134,
+                "current_range_meters": 32900,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "1b5ee6b3509471008f97b0a90c417f2c",
+                "lat": 50.049388,
+                "lon": 10.211363,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13250"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019282,
+                "current_range_meters": 33600,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "d502d429ce4f01e0f508fce32962f5cf",
+                "lat": 50.051198,
+                "lon": 10.19959,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6435"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019228,
+                "current_range_meters": 24850,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "05cb38e3bf24f75da804325201dd5273",
+                "lat": 50.042658,
+                "lon": 10.22588,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7495"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019291,
+                "current_range_meters": 16100,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "b9822796e42125f281e4a6d705891ea7",
+                "lat": 50.074328,
+                "lon": 10.254507,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7823"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019307,
+                "current_range_meters": 18900,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "74f7ca324db7ac2287ef1bcf63be61bf",
+                "lat": 50.045427,
+                "lon": 10.209997,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8643"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019267,
+                "current_range_meters": 24150,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "37278171ea3016f163d9cc1104cfc270",
+                "lat": 50.041692,
+                "lon": 10.226943,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7438"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019128,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "7ed78a430ce68c1ac98bff402ea349c5",
+                "lat": 50.019982,
+                "lon": 10.22121,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7364"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019293,
+                "current_range_meters": 33250,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "95f81e6393c7ecc2c630654ca74aab80",
+                "lat": 50.043232,
+                "lon": 10.235002,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7604"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1727270074,
+                "current_range_meters": 27300,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "e2dac460f9456f2be944892f91bdce23",
+                "lat": 50.035967,
+                "lon": 10.241292,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13484"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019299,
+                "current_range_meters": 18200,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "e147b4bdeb4f498a3042e433f4b5897c",
+                "lat": 50.052502,
+                "lon": 10.222167,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7181"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019123,
+                "current_range_meters": 22750,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "c4c417c2aa4cd827620e6789a08fce50",
+                "lat": 50.049873,
+                "lon": 10.200487,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=3672"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019218,
+                "current_range_meters": 24850,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "07faeba2f869ce053b6b4b7250b12005",
+                "lat": 50.041233,
+                "lon": 10.219545,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=13496"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019086,
+                "current_range_meters": 14350,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "a0e9c6cfe194d8d1599132911daec9d3",
+                "lat": 50.050162,
+                "lon": 10.2013,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8312"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019297,
+                "current_range_meters": 12950,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "d74bd9464b15c6dc2c51c4a5facae2a4",
+                "lat": 50.037338,
+                "lon": 10.20818,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7675"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019072,
+                "current_range_meters": 19950,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "2a3907ddf2918a380d6f568c164011ed",
+                "lat": 50.05129,
+                "lon": 10.194002,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10676"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019249,
+                "current_range_meters": 14350,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "8384b55da3ff9d54b9c352a56a199119",
+                "lat": 50.051732,
+                "lon": 10.220127,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7005"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1756791516,
+                "current_range_meters": 15400,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "3e30c6a4e694c11ff473683360820960",
+                "lat": 50.074568,
+                "lon": 10.256812,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7271"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019205,
+                "current_range_meters": 24500,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "2d70dd244571eaada489874bc3f2b3d1",
+                "lat": 50.060927,
+                "lon": 10.230817,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=3305"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019218,
+                "current_range_meters": 18550,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "2f9f8f3f2522156d178c7040cff99e1d",
+                "lat": 50.052485,
+                "lon": 10.196717,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=14098"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019270,
+                "current_range_meters": 16100,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "40d19db2e6efe250ad9e025a8f4e2638",
+                "lat": 50.069927,
+                "lon": 10.255537,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12224"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019109,
+                "current_range_meters": 33250,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "f51c109f93334d51378b10763986fe41",
+                "lat": 50.060928,
+                "lon": 10.230262,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=14055"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019107,
+                "current_range_meters": 2800,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "f360fa237e4d73ccc0573af7d11e5a14",
+                "lat": 50.034503,
+                "lon": 10.23745,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=9837"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019227,
+                "current_range_meters": 27650,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "c650bba5d986ca495f8a6b335a318039",
+                "lat": 50.04497,
+                "lon": 10.22542,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10043"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019218,
+                "current_range_meters": 22750,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "f89ebdcf43b0802d15a156b5cbc30c4b",
+                "lat": 50.04402,
+                "lon": 10.236978,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6722"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019129,
+                "current_range_meters": 13650,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "5ef31920a1e9e5c7be2ef4fa2e812003",
+                "lat": 50.051335,
+                "lon": 10.199213,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=5155"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019286,
+                "current_range_meters": 11200,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "3de7e297969da4f9adf27f1bcf812d96",
+                "lat": 50.040145,
+                "lon": 10.205988,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10971"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019288,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "3a96a27e71cd3ae33d0dcb899760ff19",
+                "lat": 50.041253,
+                "lon": 10.229255,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7602"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019300,
+                "current_range_meters": 32900,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "5c3e1d4a62ef2e4e01b0af391fe91e57",
+                "lat": 50.035948,
+                "lon": 10.213077,
+                "is_reserved": false,
+                "is_disabled": true,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7103"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1748946906,
+                "current_range_meters": 5600,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "107cf5d9186d7fe44328e4e2803a9798",
+                "lat": 50.051463,
+                "lon": 10.198972,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=8660"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019167,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "d81f43d7a392c0fcf9af8e43fd39cf58",
+                "lat": 50.053552,
+                "lon": 10.194858,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=4716"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019192,
+                "current_range_meters": 10850,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "18e73e2eafb9a56b95bd3d538f2e23ce",
+                "lat": 50.042393,
+                "lon": 10.23045,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10844"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019295,
+                "current_range_meters": 20650,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "d2588388195c62430fe0d50bac33cf81",
+                "lat": 50.044002,
+                "lon": 10.236933,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10783"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019090,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "34d10b6511ff9f1f127130982ce94f65",
+                "lat": 50.046632,
+                "lon": 10.204862,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=7516"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019288,
+                "current_range_meters": 17500,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "4d52c9a26ae253a5e1b6ccbbfa16e144",
+                "lat": 50.050577,
+                "lon": 10.237193,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=10883"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019200,
+                "current_range_meters": 20650,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "05fa9effbf500dddf9bd720af0422cbd",
+                "lat": 50.044,
+                "lon": 10.236718,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=9888"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019277,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "a2b9497b8d2cc9c7d26150c88ec24687",
+                "lat": 50.0374,
+                "lon": 10.196533,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12933"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019082,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "44d37619b5dd5bce10c7220a3f2784d1",
+                "lat": 50.03582,
+                "lon": 10.212035,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11126"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019146,
+                "current_range_meters": 35000,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "06f3aa12ae66c4dc1f4beb3e836bdc93",
+                "lat": 50.051298,
+                "lon": 10.193988,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=11304"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019268,
+                "current_range_meters": 14350,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "b7cec9b34e767c9a5ab569d51afda3d3",
+                "lat": 50.06223,
+                "lon": 10.192532,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=6379"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019306,
+                "current_range_meters": 10150,
+                "pricing_plan_id": "2"
+            },
+            {
+                "bike_id": "214034693da32c985e15e5c3d7d81aa5",
+                "lat": 50.042165,
+                "lon": 10.226033,
+                "is_reserved": false,
+                "is_disabled": false,
+                "rental_uris": {
+                    "web": "https://zeus.city/api/v1/applinks?vehicle=12050"
+                },
+                "vehicle_type_id": "yimi_plus_3",
+                "last_reported": 1761019194,
+                "current_range_meters": 32200,
+                "pricing_plan_id": "2"
+            }
+        ]
+    }
+}

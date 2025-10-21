@@ -1,0 +1,13 @@
+{
+    "version": "2.3",
+    "data": {
+        "regions": [
+            {
+                "region_id": "19efc4d3-10db-4802-8ec4-c9cc1aef69af",
+                "name": "seattle-washington"
+            }
+        ]
+    },
+    "last_updated": 1761018730,
+    "ttl": 60
+}

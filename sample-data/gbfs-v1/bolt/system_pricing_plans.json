@@ -1,0 +1,17 @@
+{
+    "last_updated": 1761018428,
+    "ttl": 0,
+    "version": "1.0",
+    "data": {
+        "plans": [
+            {
+                "plan_id": "761af50c-7682-5c98-8c9e-b7a9896a43d1",
+                "name": "ESSEN SCOOTER",
+                "currency": "EUR",
+                "price": 0.59,
+                "is_taxable": 0,
+                "description": "Unlock 0.59 EUR, 0.23 EUR/MIN."
+            }
+        ]
+    }
+}

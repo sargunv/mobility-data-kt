@@ -1,0 +1,48 @@
+{
+    "last_updated": "2025-10-21T06:11:32.6861329+02:00",
+    "ttl": 300,
+    "version": "3.0",
+    "data": {
+        "system_id": "citiz_hauts_de_france",
+        "languages": ["fr"],
+        "name": [
+            {
+                "text": "Citiz Hauts de France",
+                "language": "fr"
+            }
+        ],
+        "short_name": [
+            {
+                "text": "Hauts de France",
+                "language": "fr"
+            }
+        ],
+        "operator": [
+            {
+                "text": "Lilas Autopartage",
+                "language": "fr"
+            }
+        ],
+        "opening_hours": "Mo-Su 00:00-24:00",
+        "phone_number": "\u002B33320740740",
+        "email": "hautsdefrance@citiz.fr",
+        "feed_contact_email": "hautsdefrance@citiz.fr",
+        "timezone": "Europe/Paris",
+        "license_id": "CC0-1.0",
+        "manifest_url": "https://backend.citiz.fr/public/gbfs/manifest.json",
+        "terms_url": [
+            {
+                "text": "https://backend.citiz.fr/public/cgl/cgl_reseau_citiz_20240101.pdf",
+                "language": "fr"
+            }
+        ],
+        "terms_last_updated": "2024-01-01",
+        "privacy_url": [
+            {
+                "text": "https://lille.citiz.coop/mentions-legales-lille",
+                "language": "fr"
+            }
+        ],
+        "privacy_last_updated": "2024-01-01"
+    }
+}

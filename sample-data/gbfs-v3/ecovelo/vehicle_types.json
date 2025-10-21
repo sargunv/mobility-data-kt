@@ -1,0 +1,33 @@
+{
+    "data": {
+        "vehicle_types": [
+            {
+                "form_factor": "bicycle",
+                "max_range_meters": 20000,
+                "propulsion_type": "electric_assist",
+                "vehicle_type_id": "titibike"
+            },
+            {
+                "form_factor": "bicycle",
+                "max_range_meters": 60000,
+                "propulsion_type": "electric_assist",
+                "vehicle_type_id": "x2"
+            },
+            {
+                "form_factor": "scooter",
+                "max_range_meters": 35000,
+                "propulsion_type": "electric",
+                "vehicle_type_id": "knot"
+            },
+            {
+                "form_factor": "scooter",
+                "max_range_meters": 60000,
+                "propulsion_type": "electric",
+                "vehicle_type_id": "pony"
+            }
+        ]
+    },
+    "last_updated": "2025-10-21T06:11:26+02:00",
+    "ttl": 0,
+    "version": "3.0"
+}

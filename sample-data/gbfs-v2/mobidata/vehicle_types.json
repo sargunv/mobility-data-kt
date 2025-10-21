@@ -1,0 +1,288 @@
+{
+    "last_updated": 1761019010,
+    "ttl": 60,
+    "version": "2.3",
+    "data": {
+        "vehicle_types": [
+            {
+                "vehicle_type_id": "ORE:VehicleType:opelcombo",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "combustion",
+                "max_range_meters": 300000.0,
+                "name": "Opel Combo",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Opel",
+                "model": "Combo",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:medium_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:medium_hour_nighttime",
+                    "ORE:PricingPlan:medium_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:zoe200",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "electric",
+                "max_range_meters": 300000.0,
+                "name": "Zoe 200",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Zoe",
+                "model": "200",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:small_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:small_hour_nighttime",
+                    "ORE:PricingPlan:small_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:zoe500",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "electric",
+                "max_range_meters": 300000.0,
+                "name": "Zoe 500",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Zoe",
+                "model": "500",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:small_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:small_hour_nighttime",
+                    "ORE:PricingPlan:small_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:opelcorsa",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "combustion",
+                "max_range_meters": 300000.0,
+                "name": "Opel Corsa",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Opel",
+                "model": "Corsa",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:small_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:small_hour_nighttime",
+                    "ORE:PricingPlan:small_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:renaultkangoo",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "combustion_diesel",
+                "max_range_meters": 300000.0,
+                "name": "Renault Kangoo",
+                "vehicle_accessories": ["doors_5", "air_conditioning"],
+                "make": "Renault",
+                "model": "Kangoo",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:medium_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:medium_hour_nighttime",
+                    "ORE:PricingPlan:medium_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:renaulttrafic",
+                "form_factor": "car",
+                "rider_capacity": 9,
+                "propulsion_type": "combustion_diesel",
+                "max_range_meters": 300000.0,
+                "name": "Renault Trafic",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "manual",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Renault",
+                "model": "Trafic",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:van_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:van_hour_nighttime",
+                    "ORE:PricingPlan:van_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:zoe400",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "electric",
+                "max_range_meters": 300000.0,
+                "name": "Zoe 400",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Zoe",
+                "model": "400",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:small_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:small_hour_nighttime",
+                    "ORE:PricingPlan:small_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:renaultclio",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "combustion",
+                "max_range_meters": 300000.0,
+                "name": "Renault Clio",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Renault",
+                "model": "Clio",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:small_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:small_hour_nighttime",
+                    "ORE:PricingPlan:small_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:fiat500c",
+                "form_factor": "car",
+                "rider_capacity": 4,
+                "propulsion_type": "combustion",
+                "max_range_meters": 300000.0,
+                "name": "Fiat 500 C",
+                "vehicle_accessories": [
+                    "air_conditioning",
+                    "navigation",
+                    "convertible"
+                ],
+                "make": "Fiat",
+                "model": "500 C",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:medium_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:medium_hour_nighttime",
+                    "ORE:PricingPlan:medium_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:renaultekangoo",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "electric",
+                "max_range_meters": 300000.0,
+                "name": "Renault eKangoo",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Renault",
+                "model": "eKangoo",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:medium_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:medium_hour_nighttime",
+                    "ORE:PricingPlan:medium_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:esmart",
+                "form_factor": "car",
+                "rider_capacity": 2,
+                "propulsion_type": "electric",
+                "max_range_meters": 300000.0,
+                "name": "eSmart",
+                "vehicle_accessories": ["air_conditioning"],
+                "make": "eSmar",
+                "model": "eSmart",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:mini_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:mini_hour_nighttime",
+                    "ORE:PricingPlan:mini_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:renaultmeganegrandtour",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "combustion",
+                "max_range_meters": 300000.0,
+                "name": "Renault Megane Grandtour",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Renault",
+                "model": "Megane Grandtour",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:large_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:large_hour_nighttime",
+                    "ORE:PricingPlan:large_hour_daytime"
+                ]
+            },
+            {
+                "vehicle_type_id": "ORE:VehicleType:renaultcliograndtour",
+                "form_factor": "car",
+                "rider_capacity": 5,
+                "propulsion_type": "combustion",
+                "max_range_meters": 300000.0,
+                "name": "Renault Clio Grandtour",
+                "vehicle_accessories": [
+                    "doors_5",
+                    "air_conditioning",
+                    "navigation"
+                ],
+                "make": "Renault",
+                "model": "Clio Grandtour",
+                "wheel_count": 4,
+                "return_constraint": "roundtrip_station",
+                "default_pricing_plan_id": "ORE:PricingPlan:medium_hour_daytime",
+                "pricing_plan_ids": [
+                    "ORE:PricingPlan:medium_hour_nighttime",
+                    "ORE:PricingPlan:medium_hour_daytime"
+                ]
+            }
+        ]
+    }
+}

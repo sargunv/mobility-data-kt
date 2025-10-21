@@ -1,0 +1,29 @@
+{
+    "last_updated": "2025-10-21T04:13:42.910865597Z",
+    "ttl": 3600,
+    "version": "3.0",
+    "data": {
+        "feeds": [
+            {
+                "name": "gbfs_versions",
+                "url": "https://api.cyclocity.fr/contracts/dublin/gbfs/v3/gbfs_versions.json"
+            },
+            {
+                "name": "station_information",
+                "url": "https://api.cyclocity.fr/contracts/dublin/gbfs/v3/station_information.json"
+            },
+            {
+                "name": "system_information",
+                "url": "https://api.cyclocity.fr/contracts/dublin/gbfs/v3/system_information.json"
+            },
+            {
+                "name": "station_status",
+                "url": "https://api.cyclocity.fr/contracts/dublin/gbfs/v3/station_status.json"
+            },
+            {
+                "name": "vehicle_types",
+                "url": "https://api.cyclocity.fr/contracts/dublin/gbfs/v3/vehicle_types.json"
+            }
+        ]
+    }
+}

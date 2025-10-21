@@ -1,0 +1,39 @@
+{
+    "last_updated": 1760952888,
+    "ttl": 60,
+    "version": "2.3",
+    "data": {
+        "de": {
+            "feeds": [
+                {
+                    "name": "system_information",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/oekostadt_renningen/system_information"
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/oekostadt_renningen/station_information"
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/oekostadt_renningen/station_status"
+                },
+                {
+                    "name": "free_bike_status",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/oekostadt_renningen/free_bike_status"
+                },
+                {
+                    "name": "vehicle_types",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/oekostadt_renningen/vehicle_types"
+                },
+                {
+                    "name": "system_pricing_plans",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/oekostadt_renningen/system_pricing_plans"
+                },
+                {
+                    "name": "system_alerts",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/oekostadt_renningen/system_alerts"
+                }
+            ]
+        }
+    }
+}

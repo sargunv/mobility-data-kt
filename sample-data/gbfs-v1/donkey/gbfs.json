@@ -1,0 +1,35 @@
+{
+    "ttl": 60,
+    "last_updated": 1761018382,
+    "data": {
+        "en": {
+            "feeds": [
+                {
+                    "name": "system_information",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/donkey_barcelona/en/system_information.json"
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/donkey_barcelona/en/station_information.json"
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/donkey_barcelona/en/station_status.json"
+                },
+                {
+                    "name": "system_hours",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/donkey_barcelona/en/system_hours.json"
+                },
+                {
+                    "name": "system_regions",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/donkey_barcelona/en/system_regions.json"
+                },
+                {
+                    "name": "system_pricing_plans",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/donkey_barcelona/en/system_pricing_plans.json"
+                }
+            ]
+        }
+    },
+    "version": "1.1"
+}

@@ -1,0 +1,17 @@
+{
+    "ttl": 60,
+    "last_updated": 1761018901,
+    "data": {
+        "vehicle_types": [
+            {
+                "vehicle_type_id": "bike",
+                "form_factor": "bicycle",
+                "propulsion_type": "human",
+                "name": "Bike",
+                "default_pricing_plan_id": "80",
+                "pricing_plan_ids": ["80"]
+            }
+        ]
+    },
+    "version": "2.3"
+}

@@ -1,0 +1,29 @@
+{
+    "last_updated": "2025-05-21T14:35:20Z",
+    "ttl": 0,
+    "version": "3.0",
+    "data": {
+        "feeds": [
+            {
+                "name": "vehicle_types",
+                "url": "https://maas.zeus.cooltra.com/gbfs/the_hague/3.0/en/vehicle_types.json"
+            },
+            {
+                "name": "system_information",
+                "url": "https://maas.zeus.cooltra.com/gbfs/the_hague/3.0/en/system_information.json"
+            },
+            {
+                "name": "vehicle_status",
+                "url": "https://maas.zeus.cooltra.com/gbfs/the_hague/3.0/en/vehicle_status.json"
+            },
+            {
+                "name": "geofencing_zones",
+                "url": "https://maas.zeus.cooltra.com/gbfs/the_hague/3.0/en/geofencing_zones.json"
+            },
+            {
+                "name": "system_pricing_plans",
+                "url": "https://maas.zeus.cooltra.com/gbfs/the_hague/3.0/en/system_pricing_plans.json"
+            }
+        ]
+    }
+}

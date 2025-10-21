@@ -1,0 +1,27 @@
+{
+    "ttl": 60,
+    "last_updated": 1761018901,
+    "data": {
+        "plans": [
+            {
+                "plan_id": "80",
+                "url": "https://www.donkey.bike/cities/bike-rental-barcelona/",
+                "name": "Bike pricing",
+                "currency": "EUR",
+                "price": "2.0",
+                "is_taxable": false,
+                "description": "With the new Just Ride pricing, you now pay a flat fee for the first several minutes of your ride. After that, the price accumulates on a per-minute basis until the cap price is reached in each 24 h window.",
+                "per_min_pricing": [
+                    { "start": 15, "rate": 2.0, "interval": 15, "end": 26 },
+                    { "start": 1440, "rate": 2.0, "interval": 15, "end": 1452 },
+                    { "start": 2880, "rate": 2.0, "interval": 15, "end": 2892 },
+                    { "start": 4320, "rate": 2.0, "interval": 15, "end": 4332 },
+                    { "start": 5760, "rate": 2.0, "interval": 15, "end": 5772 },
+                    { "start": 7200, "rate": 2.0, "interval": 15, "end": 7212 },
+                    { "start": 8640, "rate": 2.0, "interval": 15, "end": 8652 }
+                ]
+            }
+        ]
+    },
+    "version": "2.3"
+}

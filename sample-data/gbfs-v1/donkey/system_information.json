@@ -1,0 +1,17 @@
+{
+    "ttl": 60,
+    "last_updated": 1761018382,
+    "data": {
+        "system_id": "donkey_barcelona",
+        "language": "en",
+        "name": "Donkey Barcelona",
+        "operator": "Donkey Republic",
+        "url": "https://www.donkey.bike/cities/bike-rental-barcelona/",
+        "purchase_url": "https://www.donkey.bike/cities/bike-rental-barcelona/",
+        "phone_number": "+34 93 181 68 78",
+        "email": "support@donkeyrepublic.com",
+        "timezone": "Europe/Madrid",
+        "license_id": "CC0-1.0"
+    },
+    "version": "1.1"
+}

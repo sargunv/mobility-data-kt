@@ -1,0 +1,12 @@
+{
+    "data": {
+        "geofencing_zones": {
+            "features": [],
+            "type": "FeatureCollection"
+        },
+        "global_rules": []
+    },
+    "last_updated": "2025-10-21T06:11:26+02:00",
+    "ttl": 0,
+    "version": "3.0"
+}

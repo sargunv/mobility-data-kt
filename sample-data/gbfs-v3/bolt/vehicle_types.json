@@ -1,0 +1,215 @@
+{
+    "last_updated": "2025-10-21T04:12:19Z",
+    "ttl": 0,
+    "version": "3.0",
+    "data": {
+        "vehicle_types": [
+            {
+                "vehicle_type_id": "a4762863-8d98-5a7b-b2e2-383b557d43f9",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 12160,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "4f5e8477-6bde-5857-8408-34ff71e0a40a",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 24000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "822e1c03-0203-5bce-8a1b-754f07cdbcd4",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 20000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "2212d8e5-4d82-5a7f-b6db-1e8ff381652f",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 36000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "0ca31efe-3c56-5b6b-bf99-d9ed72eff34f",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 50000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "c82b505f-2960-5f48-bba6-18177f105e5c",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 50000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "23e1231b-5673-5af2-adab-47bf06b2d5e1",
+                "propulsion_type": "electric_assist",
+                "form_factor": "bicycle",
+                "max_range_meters": 50000,
+                "name": [{ "language": "en", "text": "BICYCLE" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "fdbbbf7e-e074-523b-b286-bfc8b68d0e28",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 36000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "7cc5184d-7159-5f61-97a9-e866e7218f63",
+                "propulsion_type": "electric_assist",
+                "form_factor": "bicycle",
+                "max_range_meters": 50000,
+                "name": [{ "language": "en", "text": "BICYCLE" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "d5bc57ea-90bc-561d-99c2-3ecc0a36814b",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 50000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "1ae4039e-a1f2-5f40-9a97-ef8295f42d59",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 50000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "0fe72a8b-1cf8-53f8-bfb1-0a02528b8b99",
+                "propulsion_type": "electric_assist",
+                "form_factor": "bicycle",
+                "max_range_meters": 62000,
+                "name": [{ "language": "en", "text": "BICYCLE" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "4931996e-caa1-592c-9361-b9cf22ee1379",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 40000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "e92dc79f-736d-5eca-9ff4-1806653b6672",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 40000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "ff2858e0-4ef3-5521-84a9-c2ad69952aff",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 36000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "84fe1021-7807-515b-8de9-ab80f44c8e22",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 70000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "1df21533-afbb-5c16-88d3-2f5127d6c489",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 70000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "e6fc84c1-c8cf-58d8-b626-e64f94298850",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 70000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "635b05df-18f6-5850-9b22-616c7377761a",
+                "propulsion_type": "electric",
+                "form_factor": "scooter_standing",
+                "max_range_meters": 70000,
+                "name": [{ "language": "en", "text": "SCOOTER_STANDING" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "7ff246ec-cbdb-5da9-b9db-dfd6c323f2cc",
+                "propulsion_type": "electric_assist",
+                "form_factor": "bicycle",
+                "max_range_meters": 70000,
+                "name": [{ "language": "en", "text": "BICYCLE" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "e133ac24-9677-56cf-b391-d9a3d95c168d",
+                "propulsion_type": "human",
+                "form_factor": "bicycle",
+                "name": [{ "language": "en", "text": "BICYCLE" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "6810d765-42b8-51af-8374-617cc0d54f97",
+                "propulsion_type": "electric_assist",
+                "form_factor": "bicycle",
+                "max_range_meters": 62000,
+                "name": [{ "language": "en", "text": "BICYCLE" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            },
+            {
+                "vehicle_type_id": "69cbe23c-c3b5-5baa-b217-4b17641cf00a",
+                "propulsion_type": "electric_assist",
+                "form_factor": "bicycle",
+                "max_range_meters": 70000,
+                "name": [{ "language": "en", "text": "BICYCLE" }],
+                "return_constraint": "free_floating",
+                "default_reserve_time": 108000
+            }
+        ]
+    }
+}

@@ -1,0 +1,809 @@
+{
+    "last_updated": "2025-10-21T06:14:15.8151832+02:00",
+    "ttl": 300,
+    "version": "3.0",
+    "data": {
+        "vehicle_types": [
+            {
+                "vehicle_type_id": "1",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Twingo",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_33",
+                "model": [
+                    {
+                        "text": "Twingo",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "2",
+                "form_factor": "car",
+                "propulsion_type": "hybrid",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Clio V",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_34",
+                "model": [
+                    {
+                        "text": "Clio V",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "3",
+                "form_factor": "car",
+                "propulsion_type": "electric",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Zo\u00E9",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_33",
+                "model": [
+                    {
+                        "text": "Zo\u00E9",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "4",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Kangoo",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_35",
+                "model": [
+                    {
+                        "text": "Kangoo",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "5",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Peugeot 208",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_40",
+                "model": [
+                    {
+                        "text": "208",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Peugeot",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "7",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Citro\u00EBn C3",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_34",
+                "model": [
+                    {
+                        "text": "C3",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Citro\u00EBn",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "8",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Citro\u00EBn C4",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_35",
+                "model": [
+                    {
+                        "text": "C4",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Citro\u00EBn",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "10",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Citro\u00EBn Berlingo",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_35",
+                "model": [
+                    {
+                        "text": "Berlingo",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Citro\u00EBn",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "13",
+                "form_factor": "car",
+                "propulsion_type": "hybrid",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Suzuki Swift",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_34",
+                "model": [
+                    {
+                        "text": "Swift",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Suzuki",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "16",
+                "form_factor": "car",
+                "propulsion_type": "hybrid",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Dacia Jogger",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_36",
+                "model": [
+                    {
+                        "text": "Jogger",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Dacia",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "21",
+                "form_factor": "car",
+                "propulsion_type": "electric",
+                "max_range_meters": 240000,
+                "name": [
+                    {
+                        "text": "Fiat 500e",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_34",
+                "model": [
+                    {
+                        "text": "500e",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Fiat",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "30",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Clio",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_34",
+                "model": [
+                    {
+                        "text": "Clio",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "31",
+                "form_factor": "car",
+                "propulsion_type": "hybrid",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Clio Hybride",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_34",
+                "model": [
+                    {
+                        "text": "Clio Hybride",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "34",
+                "form_factor": "car",
+                "propulsion_type": "electric",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Nouvelle Zo\u00E9",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_33",
+                "model": [
+                    {
+                        "text": "Nouvelle Zo\u00E9",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "40",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Toyota ProAce Minibus",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_37",
+                "model": [
+                    {
+                        "text": "ProAce Minibus",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Toyota",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "42",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Citro\u00EBn C1",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_33",
+                "model": [
+                    {
+                        "text": "C1",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Citro\u00EBn",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "44",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Peugeot 308",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_35",
+                "model": [
+                    {
+                        "text": "308",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Peugeot",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "45",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Citro\u00EBn C4 SpaceTourer",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_36",
+                "model": [
+                    {
+                        "text": "C4 SpaceTourer",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Citro\u00EBn",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "47",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Citro\u00EBn Cactus",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_35",
+                "model": [
+                    {
+                        "text": "Cactus",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Citro\u00EBn",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "48",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Opel Corsa",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_34",
+                "model": [
+                    {
+                        "text": "Corsa",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Opel",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "50",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Kangoo PMR",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_38",
+                "model": [
+                    {
+                        "text": "Kangoo PMR",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "51",
+                "form_factor": "car",
+                "propulsion_type": "electric",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Nissan Leaf",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_35",
+                "model": [
+                    {
+                        "text": "Leaf",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Nissan",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "52",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Megane",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_35",
+                "model": [
+                    {
+                        "text": "Megane",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "53",
+                "form_factor": "car",
+                "propulsion_type": "hybrid",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Fiat Panda",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_33",
+                "model": [
+                    {
+                        "text": "Panda",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Fiat",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "54",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Scenic",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_36",
+                "model": [
+                    {
+                        "text": "Scenic",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "55",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Scenic IV",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_36",
+                "model": [
+                    {
+                        "text": "Scenic IV",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "84",
+                "form_factor": "car",
+                "propulsion_type": "combustion",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Dacia Sandero",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_34",
+                "model": [
+                    {
+                        "text": "Sandero",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Dacia",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "101",
+                "form_factor": "car",
+                "propulsion_type": "electric",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Citro\u00EBn e-Berlingo",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_130",
+                "model": [
+                    {
+                        "text": "e-Berlingo",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Citro\u00EBn",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "109",
+                "form_factor": "car",
+                "propulsion_type": "hybrid",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Renault Arkana",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_35",
+                "model": [
+                    {
+                        "text": "Arkana",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Renault",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "151",
+                "form_factor": "car",
+                "propulsion_type": "hybrid",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Citro\u00EBn C4 hybride",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_35",
+                "model": [
+                    {
+                        "text": "C4 hybride",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Citro\u00EBn",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "152",
+                "form_factor": "car",
+                "propulsion_type": "hybrid",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Fiat 500 hybride",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_34",
+                "model": [
+                    {
+                        "text": "500 hybride",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Fiat",
+                        "language": "fr"
+                    }
+                ]
+            },
+            {
+                "vehicle_type_id": "153",
+                "form_factor": "car",
+                "propulsion_type": "hybrid",
+                "max_range_meters": 0,
+                "name": [
+                    {
+                        "text": "Suzuki Ignis hybride",
+                        "language": "fr"
+                    }
+                ],
+                "default_pricing_plan_id": "49_33",
+                "model": [
+                    {
+                        "text": "Ignis hybride",
+                        "language": "fr"
+                    }
+                ],
+                "make": [
+                    {
+                        "text": "Suzuki",
+                        "language": "fr"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "last_updated": 1761018668,
+    "ttl": 86400,
+    "data": {
+        "plans": [
+            {
+                "plan_id": "Rate0311",
+                "name": "EUR 1/15min, max. EUR 15/24h",
+                "currency": "EUR",
+                "price": 0,
+                "is_taxable": false,
+                "description": "EUR 1/15min, max. EUR 15/24h",
+                "per_min_pricing": [
+                    { "start": 0, "interval": 0, "rate": 1, "end": 16 },
+                    { "start": 16, "interval": 15, "rate": 1, "end": 211 },
+                    { "start": 211, "interval": 0, "rate": 1, "end": 1441 },
+                    { "start": 1441, "interval": 15, "rate": 1, "end": 1651 },
+                    { "start": 1651, "interval": 0, "rate": 1, "end": 2881 },
+                    { "start": 2881, "interval": 15, "rate": 1, "end": 3091 },
+                    { "start": 3091, "interval": 0, "rate": 1, "end": 4321 },
+                    { "start": 4321, "interval": 15, "rate": 1, "end": 4531 },
+                    { "start": 4531, "interval": 0, "rate": 1, "end": 5761 },
+                    { "start": 5761, "interval": 15, "rate": 1, "end": 5971 },
+                    { "start": 5971, "interval": 0, "rate": 1, "end": 7201 },
+                    { "start": 7201, "interval": 15, "rate": 1, "end": 7411 },
+                    { "start": 7411, "interval": 0, "rate": 1, "end": 8641 },
+                    { "start": 8641, "interval": 15, "rate": 1, "end": 8851 },
+                    { "start": 8851, "interval": 0, "rate": 1, "end": 11520 },
+                    { "start": 11520, "interval": 1440, "rate": 15 }
+                ]
+            },
+            {
+                "plan_id": "Rate0604",
+                "name": "EUR 1.50 /15min, max EUR 25 /24h",
+                "currency": "EUR",
+                "price": 0,
+                "is_taxable": false,
+                "description": "EUR 1.50 /15min, max EUR 25 /24h",
+                "per_min_pricing": [
+                    { "start": 0, "interval": 15, "rate": 1.5, "end": 240 },
+                    { "start": 240, "interval": 0, "rate": 1, "end": 1440 },
+                    { "start": 1440, "interval": 15, "rate": 1.5, "end": 1680 },
+                    { "start": 1680, "interval": 0, "rate": 1, "end": 2880 },
+                    { "start": 2880, "interval": 15, "rate": 1.5, "end": 3120 },
+                    { "start": 3120, "interval": 0, "rate": 1, "end": 4320 },
+                    { "start": 4320, "interval": 15, "rate": 1.5, "end": 4560 },
+                    { "start": 4560, "interval": 0, "rate": 1, "end": 5760 },
+                    { "start": 5760, "interval": 15, "rate": 1.5, "end": 6000 },
+                    { "start": 6000, "interval": 0, "rate": 1, "end": 7200 },
+                    { "start": 7200, "interval": 15, "rate": 1.5, "end": 7440 },
+                    { "start": 7440, "interval": 0, "rate": 1, "end": 8640 },
+                    { "start": 8640, "interval": 15, "rate": 1.5, "end": 8880 },
+                    { "start": 8880, "interval": 0, "rate": 1, "end": 11520 },
+                    { "start": 11520, "interval": 1440, "rate": 25 }
+                ]
+            }
+        ]
+    },
+    "version": "2.3"
+}

@@ -1,0 +1,51 @@
+{
+    "last_updated": 1761019332,
+    "ttl": 60,
+    "version": "2.3",
+    "data": {
+        "rental_hours": [
+            {
+                "user_types": ["member", "nonmember"],
+                "days": ["mon"],
+                "start_time": "05:00:00",
+                "end_time": "22:59:59"
+            },
+            {
+                "user_types": ["member", "nonmember"],
+                "days": ["tue"],
+                "start_time": "05:00:00",
+                "end_time": "22:59:59"
+            },
+            {
+                "user_types": ["member", "nonmember"],
+                "days": ["wed"],
+                "start_time": "05:00:00",
+                "end_time": "22:59:59"
+            },
+            {
+                "user_types": ["member", "nonmember"],
+                "days": ["thu"],
+                "start_time": "05:00:00",
+                "end_time": "22:59:59"
+            },
+            {
+                "user_types": ["member", "nonmember"],
+                "days": ["fri"],
+                "start_time": "05:00:00",
+                "end_time": "22:59:59"
+            },
+            {
+                "user_types": ["member", "nonmember"],
+                "days": ["sat"],
+                "start_time": "05:00:00",
+                "end_time": "22:59:59"
+            },
+            {
+                "user_types": ["member", "nonmember"],
+                "days": ["sun"],
+                "start_time": "05:00:00",
+                "end_time": "22:59:59"
+            }
+        ]
+    }
+}

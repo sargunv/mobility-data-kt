@@ -1,0 +1,27 @@
+{
+    "last_updated": 1761018443,
+    "ttl": 0,
+    "version": "1.0",
+    "data": {
+        "en": {
+            "feeds": [
+                {
+                    "name": "system_information",
+                    "url": "https://data.lime.bike/api/partners/v1/gbfs/seattle/system_information"
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://data.lime.bike/api/partners/v1/gbfs/seattle/station_information"
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://data.lime.bike/api/partners/v1/gbfs/seattle/station_status"
+                },
+                {
+                    "name": "free_bike_status",
+                    "url": "https://data.lime.bike/api/partners/v1/gbfs/seattle/free_bike_status"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "last_updated": "2025-10-21T06:14:23.1830992+02:00",
+    "ttl": 300,
+    "version": "3.0",
+    "data": {
+        "versions": [
+            {
+                "version": "3.0",
+                "url": "https://backend.citiz.fr/public/provider/16/gbfs/v3.0/gbfs.json"
+            }
+        ]
+    }
+}

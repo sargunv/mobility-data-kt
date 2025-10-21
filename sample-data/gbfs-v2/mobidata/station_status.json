@@ -1,0 +1,454 @@
+{
+    "last_updated": 1761019010,
+    "ttl": 60,
+    "version": "2.3",
+    "data": {
+        "stations": [
+            {
+                "station_id": "ORE:Station:9089",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe500", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:6132",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcorsa",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:4596",
+                "num_bikes_available": 3,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe500", "count": 1 },
+                    { "vehicle_type_id": "ORE:VehicleType:zoe400", "count": 1 },
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultcliograndtour",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:7743",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaulttrafic",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:9084",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe500", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:3287",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcombo",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:9087",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe500", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:3284",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe200", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:9088",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe200", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:10558",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultclio",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2982",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcorsa",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:10572",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe500", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:7876",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe500", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:4027",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:fiat500c",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:4128",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultclio",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:8421",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcorsa",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:8422",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcorsa",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:4102",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultclio",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:10162",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcorsa",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2680",
+                "num_bikes_available": 2,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe400", "count": 1 },
+                    { "vehicle_type_id": "ORE:VehicleType:esmart", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:8180",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe500", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2812",
+                "num_bikes_available": 2,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultekangoo",
+                        "count": 1
+                    },
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaulttrafic",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2679",
+                "num_bikes_available": 2,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe400", "count": 1 },
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultekangoo",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2811",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultclio",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2678",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcombo",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2677",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultclio",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:9090",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:fiat500c",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2676",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultkangoo",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:9091",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe500", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2675",
+                "num_bikes_available": 3,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaulttrafic",
+                        "count": 1
+                    },
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcombo",
+                        "count": 1
+                    },
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:renaultmeganegrandtour",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:4752",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcorsa",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2815",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    { "vehicle_type_id": "ORE:VehicleType:zoe500", "count": 1 }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            },
+            {
+                "station_id": "ORE:Station:2813",
+                "num_bikes_available": 1,
+                "vehicle_types_available": [
+                    {
+                        "vehicle_type_id": "ORE:VehicleType:opelcorsa",
+                        "count": 1
+                    }
+                ],
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": 1761019010
+            }
+        ]
+    }
+}

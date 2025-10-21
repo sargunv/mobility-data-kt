@@ -1,0 +1,183 @@
+{
+    "data": {
+        "stations": [
+            {
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-10-21T06:13:12+02:00",
+                "num_docks_available": 2,
+                "num_docks_disabled": 0,
+                "num_vehicles_available": 0,
+                "num_vehicles_disabled": 0,
+                "station_id": "stn_3nethCPFFb6e4T3bBPMynk",
+                "vehicle_types_available": [
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "titibike"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "x2"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "knot"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "pony"
+                    }
+                ]
+            },
+            {
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-10-21T06:13:12+02:00",
+                "num_docks_available": 2,
+                "num_docks_disabled": 0,
+                "num_vehicles_available": 0,
+                "num_vehicles_disabled": 0,
+                "station_id": "stn_5AASa7yvEUpsEfVJswtizX",
+                "vehicle_types_available": [
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "titibike"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "x2"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "knot"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "pony"
+                    }
+                ]
+            },
+            {
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-10-21T06:13:12+02:00",
+                "num_docks_available": 2,
+                "num_docks_disabled": 0,
+                "num_vehicles_available": 0,
+                "num_vehicles_disabled": 0,
+                "station_id": "stn_gqJ6zgKtEawg8KEEauf7Qe",
+                "vehicle_types_available": [
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "titibike"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "x2"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "knot"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "pony"
+                    }
+                ]
+            },
+            {
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-10-21T06:13:12+02:00",
+                "num_docks_available": 8,
+                "num_docks_disabled": 0,
+                "num_vehicles_available": 0,
+                "num_vehicles_disabled": 0,
+                "station_id": "stn_iPeNJXC3ZNcN8xqXQozBq8",
+                "vehicle_types_available": [
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "titibike"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "x2"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "knot"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "pony"
+                    }
+                ]
+            },
+            {
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-10-21T06:13:12+02:00",
+                "num_docks_available": 8,
+                "num_docks_disabled": 0,
+                "num_vehicles_available": 0,
+                "num_vehicles_disabled": 0,
+                "station_id": "stn_BqHu8UvbgqyuvwRosikU5s",
+                "vehicle_types_available": [
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "titibike"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "x2"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "knot"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "pony"
+                    }
+                ]
+            },
+            {
+                "is_installed": true,
+                "is_renting": true,
+                "is_returning": true,
+                "last_reported": "2025-10-21T06:13:12+02:00",
+                "num_docks_available": 8,
+                "num_docks_disabled": 0,
+                "num_vehicles_available": 0,
+                "num_vehicles_disabled": 0,
+                "station_id": "stn_AkFzhargtZxk48QF9Rhqng",
+                "vehicle_types_available": [
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "titibike"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "x2"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "knot"
+                    },
+                    {
+                        "count": 0,
+                        "vehicle_type_id": "pony"
+                    }
+                ]
+            }
+        ]
+    },
+    "last_updated": "2025-10-21T06:13:12+02:00",
+    "ttl": 0,
+    "version": "3.0"
+}

@@ -1,0 +1,40 @@
+{
+    "last_updated": "2025-10-21T04:13:55.528349048Z",
+    "ttl": 3600,
+    "version": "3.0",
+    "data": {
+        "system_id": "dublin",
+        "languages": ["en"],
+        "name": [{ "text": "dublinbikes", "language": "en" }],
+        "opening_hours": "Mo-Su,PH 00:00-00:30,05:00-24:00 ",
+        "url": "https://www.dublinbikes.ie/",
+        "purchase_url": "https://www.dublinbikes.ie/en/offers/groups",
+        "email": "contactus@dublinbikes.ie",
+        "feed_contact_email": "developer@jcdecaux.com",
+        "timezone": "Europe/Dublin",
+        "license_url": "https://developer.jcdecaux.com/files/Open-Licence-fr.pdf",
+        "terms_url": [
+            {
+                "text": "https://www.dublinbikes.ie/en/documents/cgau/vls",
+                "language": "en"
+            }
+        ],
+        "terms_last_updated": "2024-04-09",
+        "privacy_url": [
+            {
+                "text": "https://www.dublinbikes.ie/en/legal-information/privacy-policy",
+                "language": "en"
+            }
+        ],
+        "rental_apps": {
+            "android": {
+                "store_uri": "https://play.google.com/store/apps/details?id=com.jcdecaux.vls.dublin",
+                "discovery_uri": "com.jcdecaux.vls.dublin://"
+            },
+            "ios": {
+                "store_uri": "https://itunes.apple.com/app/id1539150180",
+                "discovery_uri": "com.jcdecaux.vls.dublin://"
+            }
+        }
+    }
+}

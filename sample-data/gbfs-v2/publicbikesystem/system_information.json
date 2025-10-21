@@ -1,0 +1,19 @@
+{
+    "last_updated": 1761018577,
+    "ttl": 30,
+    "data": {
+        "system_id": "bike_nordelta",
+        "language": "en",
+        "name": "Bike Nordelta",
+        "timezone": "America/Argentina/Buenos_Aires",
+        "build_version": "2025.2",
+        "build_label": "2025-07-08",
+        "build_hash": "6615b5b",
+        "build_number": "20",
+        "mobile_head_version": "2",
+        "mobile_minimum_supported_version": "1",
+        "_vehicle_count": { "_mechanical_count": 200, "_ebike_count": 0 },
+        "_station_count": 20
+    },
+    "version": "2.3"
+}

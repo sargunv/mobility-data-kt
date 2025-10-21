@@ -1,0 +1,27 @@
+{
+    "last_updated": 1761018668,
+    "ttl": 60,
+    "data": {
+        "vehicle_types": [
+            {
+                "vehicle_type_id": "29",
+                "vehicle_image": "https://static.nextbike.net/app/biketypes/type/al/29/h500.png",
+                "name": "CARGObike",
+                "_description": "",
+                "form_factor": "cargo_bicycle",
+                "rider_capacity": 1,
+                "propulsion_type": "human"
+            },
+            {
+                "vehicle_type_id": "150",
+                "vehicle_image": "https://static.nextbike.net/app/biketypes/type/al/150/h500.png",
+                "name": "with Framelock",
+                "_description": "",
+                "form_factor": "bicycle",
+                "rider_capacity": 1,
+                "propulsion_type": "human"
+            }
+        ]
+    },
+    "version": "2.3"
+}

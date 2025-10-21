@@ -1,0 +1,47 @@
+{
+    "ttl": 60,
+    "last_updated": 1761018900,
+    "data": {
+        "en": {
+            "feeds": [
+                {
+                    "name": "system_information",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/en/system_information.json"
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/en/station_information.json"
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/en/station_status.json"
+                },
+                {
+                    "name": "system_hours",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/en/system_hours.json"
+                },
+                {
+                    "name": "system_regions",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/en/system_regions.json"
+                },
+                {
+                    "name": "system_pricing_plans",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/en/system_pricing_plans.json"
+                },
+                {
+                    "name": "free_bike_status",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/en/free_bike_status.json"
+                },
+                {
+                    "name": "gbfs_versions",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/en/gbfs_versions.json"
+                },
+                {
+                    "name": "vehicle_types",
+                    "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/en/vehicle_types.json"
+                }
+            ]
+        }
+    },
+    "version": "2.3"
+}

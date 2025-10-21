@@ -1,0 +1,15 @@
+{
+    "last_updated": 1761019010,
+    "ttl": 60,
+    "version": "2.3",
+    "data": {
+        "alerts": [
+            {
+                "alert_id": "ORE:Alert:mobidatabw_1",
+                "type": "other",
+                "summary": "Keine Echtzeitdaten",
+                "description": "Keine Echtzeitdaten zum Buchungsstatus der Fahrzeuge. Verfügbarkeit ist im Buchungssystem des Anbieters sichtbar."
+            }
+        ]
+    }
+}

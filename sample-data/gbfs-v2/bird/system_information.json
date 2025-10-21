@@ -1,0 +1,23 @@
+{
+    "version": "2.3",
+    "data": {
+        "system_id": "bird-seattle-washington",
+        "name": "bird seattle washington",
+        "language": "en",
+        "timezone": "America/Los_Angeles",
+        "license_url": "https://www.bird.co/wp-content/uploads/2019/03/GBFS-Data-License-Agreement-2018-09-25.pdf",
+        "operator": "Bird Rides, Inc.",
+        "rental_apps": {
+            "android": {
+                "discovery_uri": "bird://charger-onboarding",
+                "store_uri": "https://play.google.com/store/apps/details?id=co.bird.android"
+            },
+            "ios": {
+                "discovery_uri": "bird://",
+                "store_uri": "https://apps.apple.com/us/app/bird-be-free-enjoy-the-ride/id1260842311"
+            }
+        }
+    },
+    "last_updated": 1761018729,
+    "ttl": 60
+}

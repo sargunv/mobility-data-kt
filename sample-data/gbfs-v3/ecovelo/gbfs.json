@@ -1,0 +1,49 @@
+{
+    "data": {
+        "feeds": [
+            {
+                "name": "vehicle_types",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/vehicle_types.json"
+            },
+            {
+                "name": "gbfs_versions",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/gbfs_versions.json"
+            },
+            {
+                "name": "geofencing_zones",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/geofencing_zones.json"
+            },
+            {
+                "name": "station_information",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/station_information.json"
+            },
+            {
+                "name": "station_status",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/station_status.json"
+            },
+            {
+                "name": "system_alerts",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/system_alerts.json"
+            },
+            {
+                "name": "system_information",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/system_information.json"
+            },
+            {
+                "name": "system_pricing_plans",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/system_pricing_plans.json"
+            },
+            {
+                "name": "system_regions",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/system_regions.json"
+            },
+            {
+                "name": "vehicle_status",
+                "url": "https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/vehicle_status.json"
+            }
+        ]
+    },
+    "last_updated": "2025-10-21T06:14:03+02:00",
+    "ttl": 0,
+    "version": "3.0"
+}

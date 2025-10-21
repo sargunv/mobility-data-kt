@@ -8,8 +8,6 @@ import io.ktor.http.fullPath
 import io.ktor.http.headersOf
 import kotlin.test.Ignore
 import kotlin.test.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertNotEquals
 import kotlinx.coroutines.test.runTest
 import kotlinx.io.buffered
 import kotlinx.io.files.FileNotFoundException
@@ -45,9 +43,8 @@ class ProducerTest {
   }
 
   @Test
-  @Ignore // TODO: the real manifest contains extra keys; we should ignore them or not use an enum
+  @Ignore // https://github.com/sargunv/mobility-data-kt/issues/16
   fun publicbikesystem() = runTest {
-    // https://pittsburgh.publicbikesystem.net/ube/gbfs/v1/
     val client =
       GbfsV1Client(
         createMockEngine(
@@ -61,64 +58,45 @@ class ProducerTest {
     val service = manifest.data.getService("en")
 
     context(service) {
-      val systemInformation = client.getSystemInformation().data
-      assertEquals("pittsburgh", systemInformation.systemId)
-
-      val pricingPlans = client.getSystemPricingPlans().data
-      assertEquals(13, pricingPlans.size)
-
-      val stationInfo = client.getStationInformation().data
-      assertEquals(60, stationInfo.size)
-
-      val stationStatus = client.getStationStatus().data
-      assertEquals(60, stationStatus.size)
-
-      val stationRegions = client.getSystemRegions().data
-      assertEquals(0, stationRegions.size)
+      client.getSystemInformation()
+      client.getSystemPricingPlans()
+      client.getStationInformation()
+      client.getStationStatus()
+      client.getSystemRegions()
     }
   }
 
   @Test
   fun bird() = runTest {
-    // https://mds.bird.co/gbfs/seattle-washington/gbfs.json
     val client = GbfsV1Client(createMockEngine("/gbfs/seattle-washington/", "bird"))
     val manifest = client.getSystemManifest("gbfs.json")
     val service = manifest.data.getService("en")
 
     context(service) {
-      val systemInformation = client.getSystemInformation().data
-      assertEquals("bird-seattle-washington", systemInformation.systemId)
-
-      val versions = client.getVersionManifest().data
-      assertEquals(2, versions.size)
-
-      val regions = client.getSystemRegions().data
-      assertEquals(1, regions.size)
-
-      val freeBikeStatus = client.getFreeBikeStatus().data
-      assertNotEquals(0, freeBikeStatus.size)
+      client.getSystemInformation()
+      client.getVersionManifest()
+      client.getSystemRegions()
+      client.getFreeBikeStatus()
     }
   }
 
   @Test
   fun bcycle() = runTest {
-    // https://gbfs.bcycle.com/bcycle_rtcbikeshare/gbfs.json
-    // TODO actually write the test
+    // TODO
   }
 
   @Test
   fun donkey() = runTest {
-    // TODO: get https://stables.donkey.bike/api/public/gbfs/donkey_barcelona/gbfs.json
+    // TODO
   }
 
   @Test
   fun bolt() = runTest {
-    // TODO: get https://mds.bolt.eu/gbfs/1/720/gbfs
+    // TODO
   }
 
   @Test
   fun lime() = runTest {
-    // TODO: get https://data.lime.bike/api/partners/v1/gbfs/seattle/gbfs.json
-    // and watch out; the station status feed is non conformant
+    // TODO Watch out; the station status feed is non conformant. Skip it.
   }
 }

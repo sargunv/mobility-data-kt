@@ -1,0 +1,44 @@
+{
+    "last_updated": "2025-05-21T14:35:20Z",
+    "ttl": 1800,
+    "version": "3.0",
+    "data": {
+        "system_id": "the_hague",
+        "name": [
+            {
+                "text": "Cooltra",
+                "language": "en"
+            }
+        ],
+        "operator": [
+            {
+                "text": "Cooltra",
+                "language": "en"
+            }
+        ],
+        "languages": ["en"],
+        "opening_hours": "Mo-Su 00:00-24:00",
+        "feed_contact_email": "zeus@cooltra.com",
+        "url": "https://cooltra.com",
+        "email": "info@cooltra.com",
+        "timezone": "CET",
+        "rental_apps": {
+            "android": {
+                "store_uri": "https://play.google.com/store/apps/details?id=com.mobime.ecooltra",
+                "discovery_uri": "cooltra://mapa"
+            },
+            "ios": {
+                "store_uri": "https://apps.apple.com/app/apple-store/id1083424977",
+                "discovery_uri": "cooltra://mapa"
+            },
+            "android": {
+                "store_uri": "https://play.google.com/store/apps/details?id=com.felyx.android",
+                "discovery_uri": "felyx://mapa"
+            },
+            "ios": {
+                "store_uri": "https://apps.apple.com/es/app/felyx/id1250107307",
+                "discovery_uri": "felyx://mapa"
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "last_updated": "2025-10-21T04:13:57.079075032Z",
+    "ttl": 3600,
+    "version": "3.0",
+    "data": {
+        "vehicle_types": [
+            {
+                "vehicle_type_id": "mechanical",
+                "form_factor": "bicycle",
+                "propulsion_type": "human",
+                "name": [{ "text": "dublinbikes", "language": "en" }],
+                "default_reserve_time": 0,
+                "return_constraint": "any_station"
+            },
+            {
+                "vehicle_type_id": "electrical",
+                "form_factor": "bicycle",
+                "propulsion_type": "electric_assist",
+                "name": [{ "text": "dublinbikes", "language": "en" }],
+                "max_range_meters": 40000,
+                "default_reserve_time": 0,
+                "return_constraint": "any_station"
+            }
+        ]
+    }
+}

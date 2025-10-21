@@ -1,0 +1,45 @@
+{
+    "last_updated": "2025-04-08T02:51:43+00:00",
+    "ttl": 3600,
+    "version": "3.0",
+    "data": {
+        "feeds": [
+            {
+                "name": "system_information",
+                "url": "https://data.rideflamingo.com/gbfs/3/tauranga/system_information.json"
+            },
+            {
+                "name": "system_alerts",
+                "url": "https://data.rideflamingo.com/gbfs/3/tauranga/system_alerts.json"
+            },
+            {
+                "name": "system_pricing_plans",
+                "url": "https://data.rideflamingo.com/gbfs/3/tauranga/system_pricing_plans.json"
+            },
+            {
+                "name": "station_information",
+                "url": "https://data.rideflamingo.com/gbfs/3/tauranga/station_information.json"
+            },
+            {
+                "name": "station_status",
+                "url": "https://data.rideflamingo.com/gbfs/3/tauranga/station_status.json"
+            },
+            {
+                "name": "geofencing_zones",
+                "url": "https://data.rideflamingo.com/gbfs/3/tauranga/geofencing_zones.json"
+            },
+            {
+                "name": "vehicle_status",
+                "url": "https://data.rideflamingo.com/gbfs/3/tauranga/vehicle_status.json"
+            },
+            {
+                "name": "vehicle_types",
+                "url": "https://data.rideflamingo.com/gbfs/3/tauranga/vehicle_types.json"
+            },
+            {
+                "name": "gbfs_versions",
+                "url": "https://data.rideflamingo.com/gbfs/3/tauranga/gbfs_versions.json"
+            }
+        ]
+    }
+}

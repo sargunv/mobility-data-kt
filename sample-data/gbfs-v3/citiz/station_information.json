@@ -1,0 +1,1196 @@
+{
+    "last_updated": "2025-10-21T06:10:12.2061859+02:00",
+    "ttl": 300,
+    "version": "3.0",
+    "data": {
+        "stations": [
+            {
+                "station_id": "290",
+                "name": [
+                    {
+                        "text": "BUISSON",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.65625,
+                "lon": 3.0875918865203857,
+                "address": "679 avenue de la R\u00E9publique, \u00E0 hauteur de la station tramway Buisson et de la station V\u0027Lille.",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "291",
+                "name": [
+                    {
+                        "text": "CANON D\u0027OR",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.649627685546875,
+                "lon": 3.0423483848571777,
+                "address": "257 avenue de Lille, \u00E0 l\u0027angle de l\u0027avenue Becquart.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "292",
+                "name": [
+                    {
+                        "text": "TOURCOING CENTRE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.72293472290039,
+                "lon": 3.164000988006592,
+                "address": "Parking place Miss Cavell au bout de la rue de la cloche, devant la station V\u0027Lille.",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "293",
+                "name": [
+                    {
+                        "text": "CROIX CENTRE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.67484664916992,
+                "lon": 3.146480083465576,
+                "address": "Parking de la Place des Martyrs, rue de la Gare, \u00E0 proximit\u00E9 de la station de m\u00E9tro Croix Centre.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "294",
+                "name": [
+                    {
+                        "text": "EURATECHNOLOGIES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.630699157714844,
+                "lon": 3.022758960723877,
+                "address": "Entre le 248 et le 280 de la rue du Pont \u00E0 Fourchon.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "295",
+                "name": [
+                    {
+                        "text": "FIVES-CAULIER",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.63572692871094,
+                "lon": 3.0881659984588623,
+                "address": "Rue de Bouvines, \u00E0 proximit\u00E9 de la caserne des pompiers et du pont de Caulier.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "296",
+                "name": [
+                    {
+                        "text": "GAMBETTA",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.62592697143555,
+                "lon": 3.054245710372925,
+                "address": " 34 - 36 rue Littr\u00E9, proche du m\u00E9tro Gambetta",
+                "parking_type": "street_parking",
+                "capacity": 6,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "297",
+                "name": [
+                    {
+                        "text": "GARE LILLE EUROPE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.63971710205078,
+                "lon": 3.077147960662842,
+                "address": "55 rue du Luxembourg (derri\u00E8re la gare Lille Europe, c\u00F4t\u00E9 quartier St Maurice).",
+                "parking_type": "street_parking",
+                "capacity": 6,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "298",
+                "name": [
+                    {
+                        "text": "GARE LILLE FLANDRES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.63477325439453,
+                "lon": 3.0724008083343506,
+                "address": "28 rue de Tournai Lille, devant l\u0027agence CITIZ\nAcc\u00E8s m\u00E9tro/bus/tram gare Lille Flandres",
+                "parking_type": "street_parking",
+                "capacity": 12,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "299",
+                "name": [
+                    {
+                        "text": "GRAND PLACE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.690303802490234,
+                "lon": 3.175076961517334,
+                "address": "Au niveau du 11 rue du ch\u00E2teau, proche de la Grand Place, \u00E0 cot\u00E9 de la m\u00E9diath\u00E8que.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "300",
+                "name": [
+                    {
+                        "text": "HALLE AUX SUCRES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.64394760131836,
+                "lon": 3.060096025466919,
+                "address": "Angle de la rue des Archives et de la rue de l\u0027Entrep\u00F4t, derri\u00E8re la poste et le tribunal de commerce.",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "301",
+                "name": [
+                    {
+                        "text": "MAIRIE DE VILLENEUVE D\u0027ASCQ",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.61945343017578,
+                "lon": 3.1326920986175537,
+                "address": "Parking du Forum des Sciences, arr\u00EAt de m\u00E9tro H\u00F4tel de Ville de Villeneuve d\u0027Ascq.",
+                "parking_type": "parking_lot",
+                "capacity": 4,
+                "is_virtual_station": true,
+                "station_area": {
+                    "type": "MultiPolygon",
+                    "coordinates": [
+                        [
+                            [
+                                [3.131602209898956, 50.62083997463927],
+                                [3.1324819744558408, 50.62082636082992],
+                                [3.1326590002508237, 50.6202103318335],
+                                [3.132282035932583, 50.619948910612706],
+                                [3.131466644392056, 50.620476452684784],
+                                [3.131602209898956, 50.62083997463927]
+                            ]
+                        ]
+                    ]
+                }
+            },
+            {
+                "station_id": "302",
+                "name": [
+                    {
+                        "text": "JEANNE D\u0027ARC",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.62593078613281,
+                "lon": 3.0635389,
+                "address": "98, rue br\u00FBle-maison ",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "303",
+                "name": [
+                    {
+                        "text": "CORMONTAIGNE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6265915,
+                "lon": 3.0403042,
+                "address": "6, Place Cormontaigne, proche station de m\u00E9tro Cormontaigne.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "304",
+                "name": [
+                    {
+                        "text": "LIBERTE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.63510513305664,
+                "lon": 3.055804967880249,
+                "address": "Devant le 55 Boulevard de la Libert\u00E9, \u00E0 proximit\u00E9 de la rue Nationale.",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "305",
+                "name": [
+                    {
+                        "text": "LOMME-LAMBERSART",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.64066696166992,
+                "lon": 3.0187880992889404,
+                "address": "382 avenue de Dunkerque, \u00E0 l\u0027entr\u00E9e du parking, face \u00E0 la maison du citoyen, \u00E0 proximit\u00E9 de la station de m\u00E9tro Lomme Lambersart.",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "306",
+                "name": [
+                    {
+                        "text": "MAIRIE DE CROIX",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.67920684814453,
+                "lon": 3.156139850616455,
+                "address": "234 rue Jean Jaur\u00E8s, m\u00E9tro Croix Mairie.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "307",
+                "name": [
+                    {
+                        "text": "MAIRIE D\u0027HELLEMMES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.62678146362305,
+                "lon": 3.1090140342712402,
+                "address": "Parking villa Lisbeth, ruelle St Sauveur, face \u00E0 la mairie, acc\u00E8s direct m\u00E9tro  Mairie d\u0027Hellemmes.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "308",
+                "name": [
+                    {
+                        "text": "MAIRIE DE LILLE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.63197326660156,
+                "lon": 3.071063995361328,
+                "address": "Avenue Saint Sauveur, face \u00E0 la station de m\u00E9tro Maire de Lille",
+                "parking_type": "street_parking",
+                "capacity": 9,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "309",
+                "name": [
+                    {
+                        "text": "MAIRIE DE MONS",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.64208984375,
+                "lon": 3.1100099086761475,
+                "address": "Face \u00E0 l\u0027h\u00F4tel de ville, avenue Robert Schuman.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "310",
+                "name": [
+                    {
+                        "text": "MAIRIE DE RONCHIN",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.604942321777344,
+                "lon": 3.0765459537506104,
+                "address": "Parking public en face du garage Citro\u00EBn et du supermarch\u00E9 Match.",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "311",
+                "name": [
+                    {
+                        "text": "PEUPLE BELGE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6420783996582,
+                "lon": 3.064079999923706,
+                "address": "14 avenue du peuple Belge.",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "312",
+                "name": [
+                    {
+                        "text": "PLACE DU MARCHE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.65496063232422,
+                "lon": 3.068403482437134,
+                "address": "72 rue Gambetta \u00E0 la Madeleine, devant la m\u00E9diath\u00E8que",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "313",
+                "name": [
+                    {
+                        "text": "PORTE DE VALENCIENNES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.62135696411133,
+                "lon": 3.079580068588257,
+                "address": "Parking Place du Lin,  face au m\u00E9tro Porte de Valenciennes, \u00E0 proximit\u00E9 du Boulevard de Belfort.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "314",
+                "name": [
+                    {
+                        "text": "PORTE DES POSTES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.618988037109375,
+                "lon": 3.05190110206604,
+                "address": "280 boulevard Victor Hugo, c\u00F4t\u00E9 rond point des Postes, face \u00E0 la station Total.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "315",
+                "name": [
+                    {
+                        "text": "RIHOUR",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.635215759277344,
+                "lon": 3.061866044998169,
+                "address": "Place Rihour, parking derri\u00E8re le magasin Printemps, \u00E0 c\u00F4t\u00E9 de l\u0027office de tourisme.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "316",
+                "name": [
+                    {
+                        "text": "ROMARIN",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.643959045410156,
+                "lon": 3.074660062789917,
+                "address": "Rue Konrad Adenauer",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "317",
+                "name": [
+                    {
+                        "text": "SAINT MAUR",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.65076446533203,
+                "lon": 3.0836551189422607,
+                "address": "54 avenue \u00C9mile Zola, devant la r\u00E9sidence Chambord, \u00E0 proximit\u00E9 de la station de tramway Saint Maur.",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "318",
+                "name": [
+                    {
+                        "text": "SAINT MAURICE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.64236068725586,
+                "lon": 3.089430093765259,
+                "address": "Rue du Faubourg de Roubaix, le long de la station de M\u00E9tro Saint Maurice Pellevoisin et de la station V\u0027Lille.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "319",
+                "name": [
+                    {
+                        "text": "SEBASTOPOL",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.62907028198242,
+                "lon": 3.0583701133728027,
+                "address": "Place S\u00E9bastopol sur le parking du th\u00E9\u00E2tre S\u00E9bastopol, \u00E0 c\u00F4t\u00E9 de la station V\u0027Lille (c\u00F4t\u00E9 rue Solf\u00E9rino).",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "321",
+                "name": [
+                    {
+                        "text": "5\u00E8me AVENUE (1379)",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.647220611572266,
+                "lon": 3.077810049057007,
+                "address": "Parking ext\u00E9rieur de la r\u00E9sidence 5\u00E8me avenue (code portail : 1379 puis t\u00E9l\u00E9commande pour sortir),au d\u00E9but de l\u0027Avenue Albert 1er, juste apr\u00E8s le garage Renault.",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "322",
+                "name": [
+                    {
+                        "text": "EMILE BRETON",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.28643798828125,
+                "lon": 2.7824459075927734,
+                "address": "28 rue \u00C9mile Breton, sur le parking derri\u00E8re la gare SNCF.\n",
+                "parking_type": "street_parking",
+                "capacity": 1,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "323",
+                "name": [
+                    {
+                        "text": "PLACE FOCH",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.28715896606445,
+                "lon": 2.7814269065856934,
+                "address": "3 place du Mar\u00E9chal Foch, devant la gare SNCF.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "324",
+                "name": [
+                    {
+                        "text": "PLACE DU THEATRE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.29005432128906,
+                "lon": 2.7734360694885254,
+                "address": "Rue Ernestale, devant le magasin Yves Rocher.",
+                "parking_type": "street_parking",
+                "capacity": 1,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "325",
+                "name": [
+                    {
+                        "text": "PLACE GUY MOLLET",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.293213,
+                "lon": 2.779014,
+                "address": "4, Place Guy Mollet.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "326",
+                "name": [
+                    {
+                        "text": "VICTOR HUGO",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.62281036376953,
+                "lon": 3.0637450218200684,
+                "address": "Rue de Wazemmes, angle Boulevard Victor Hugo, devant la salle de sport Maryvonne Dupureur, \u00E0 proximit\u00E9 de la place Colette et de la station V\u0027Lille.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "327",
+                "name": [
+                    {
+                        "text": "OSCAR LAMBRET",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6136360168457,
+                "lon": 3.0357930660247803,
+                "address": "Rue Combemale, devant la Maison Familiale Hospitali\u00E8re, \u00E0 proximit\u00E9 du m\u00E9tro  Oscar Lambret.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "328",
+                "name": [
+                    {
+                        "text": "PHILIPPE LEBON",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6277326,
+                "lon": 3.0623819,
+                "address": "2, rue Jean Bart",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "329",
+                "name": [
+                    {
+                        "text": "MAIRIE ST LAURENT BLANGY",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.29890441894531,
+                "lon": 2.8020219802856445,
+                "address": "Parking Mairie de St Laurent Blangy, face \u00E0 l\u0027\u00E9glise, devant la borne de recharge PASS PASS.",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "330",
+                "name": [
+                    {
+                        "text": "MAIRIE DE LEZENNES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.614566802978516,
+                "lon": 3.1164140701293945,
+                "address": "Parking de la mairie, Place de la R\u00E9publique.",
+                "parking_type": "street_parking",
+                "capacity": 1,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "332",
+                "name": [
+                    {
+                        "text": "FIVES-LANNOY",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.634376525878906,
+                "lon": 3.098828077316284,
+                "address": "Situ\u00E9e au 145 rue de Lannoy, devant l\u0027ESAT Mal\u00E9cot, face au supermarch\u00E9 Leclerc.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "333",
+                "name": [
+                    {
+                        "text": "COURS DE VERDUN",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.29032897949219,
+                "lon": 2.7685599327087402,
+                "address": "Place du 33\u00E8me, pr\u00E8s de la caserne Schramm.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "334",
+                "name": [
+                    {
+                        "text": "CANTELEU",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.638710021972656,
+                "lon": 3.024660110473633,
+                "address": "Parking de la place du Nouveau Canteleu, le long de l\u0027Avenue Ste C\u00E9cile.",
+                "parking_type": "street_parking",
+                "capacity": 10,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "335",
+                "name": [
+                    {
+                        "text": "MAIRIE DE LAMBERSART",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6478385925293,
+                "lon": 3.019779920578003,
+                "address": "129 rue de la Carnoy, devant le restaurant scolaire.",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "336",
+                "name": [
+                    {
+                        "text": "DELECAUX",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.64485549926758,
+                "lon": 3.034480094909668,
+                "address": "89 avenue Henri Delecaux.",
+                "parking_type": "street_parking",
+                "capacity": 1,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "337",
+                "name": [
+                    {
+                        "text": "BOURG ",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.652977,
+                "lon": 3.025986,
+                "address": "1 rue de l\u0027avenir sur le parking. \n(entre la rue du Bourg et l\u0027avenue du parc)",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "338",
+                "name": [
+                    {
+                        "text": "JEAN MOULIN",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.68509292602539,
+                "lon": 3.1718358993530273,
+                "address": "50, avenue du G\u00E9n\u00E9ral de Gaulle sur la contre-all\u00E9e. A proximit\u00E9 du Tramway Jean Moulin et du m\u00E9tro Charles de Gaulle.",
+                "parking_type": "street_parking",
+                "capacity": 10,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "339",
+                "name": [
+                    {
+                        "text": "LA PISCINE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6935038,
+                "lon": 3.1674859,
+                "address": "4, rue Pasteur, parking devant le mus\u00E9e de la Piscine ",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "340",
+                "name": [
+                    {
+                        "text": "FIVES-CAIL",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.628841400146484,
+                "lon": 3.09592604637146,
+                "address": "Rue Andr\u00E9 Ballet, face \u00E0 l\u0027entr\u00E9e du lyc\u00E9e h\u00F4telier. A proximit\u00E9 du m\u00E9tro Marbrerie.",
+                "parking_type": "street_parking",
+                "capacity": 5,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "341",
+                "name": [
+                    {
+                        "text": "MAIRIE DE ST ANDRE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.66064453125,
+                "lon": 3.050903081893921,
+                "address": "68-70 rue du g\u00E9n\u00E9ral Leclerc",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "342",
+                "name": [
+                    {
+                        "text": "MONTEBELLO",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.62248992919922,
+                "lon": 3.0448760986328125,
+                "address": "4 places 106-108, Boulevard Montebello. A c\u00F4t\u00E9 du m\u00E9tro Montebello.",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "343",
+                "name": [
+                    {
+                        "text": "CROISE LAROCHE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.66596221923828,
+                "lon": 3.104001998901367,
+                "address": "24 place Lisfranc, \u00E0 proximit\u00E9 du tramway Crois\u00E9 Laroche",
+                "parking_type": "street_parking",
+                "capacity": 10,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "344",
+                "name": [
+                    {
+                        "text": "PONT SUPERIEUR",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.64466857910156,
+                "lon": 3.013474941253662,
+                "address": "512 Avenue de Dunkerque, \u00E0 proximit\u00E9 du m\u00E9tro Pont Sup\u00E9rieur",
+                "parking_type": "street_parking",
+                "capacity": 10,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "524",
+                "name": [
+                    {
+                        "text": "LEMIRE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.652313232421875,
+                "lon": 3.0736653804779053,
+                "address": "Parking municipal rue de l\u0027abb\u00E9 Lemire",
+                "parking_type": "street_parking",
+                "capacity": 1,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "525",
+                "name": [
+                    {
+                        "text": "MAIRIE DE LA MADELEINE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.65454864501953,
+                "lon": 3.0740699768066406,
+                "address": "Parking de la mairie de La Madeleine",
+                "parking_type": "street_parking",
+                "capacity": 6,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "526",
+                "name": [
+                    {
+                        "text": " CARNOT",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.60601806640625,
+                "lon": 3.066437005996704,
+                "address": "52, rue Carnot - devant la mission locale",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "541",
+                "name": [
+                    {
+                        "text": " PALAIS RAMEAU",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.63462448120117,
+                "lon": 3.048135280609131,
+                "address": "face au 21, rue de la digue, \u00E0 proximit\u00E9 du croisement Solf\u00E9rino/Vauban et du palais Rameau ",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "542",
+                "name": [
+                    {
+                        "text": " COLBERT",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.63433837890625,
+                "lon": 3.040907382965088,
+                "address": "199, rue Colbert, face \u00E0 l\u0027\u00E9glise.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "543",
+                "name": [
+                    {
+                        "text": "MOULINS",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.622379302978516,
+                "lon": 3.072323799133301,
+                "address": "4, rue de Valenciennes, au croisement avec la rue de Douai.",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "597",
+                "name": [
+                    {
+                        "text": "REPUBLIQUE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.63155746459961,
+                "lon": 3.064563035964966,
+                "address": "15, place Jacquard",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "713",
+                "name": [
+                    {
+                        "text": "LYC\u00C9E PASTEUR",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6412239074707,
+                "lon": 3.0695536136627197,
+                "address": "Rue des urbanistes, face au lyc\u00E9e Pasteur",
+                "parking_type": "street_parking",
+                "capacity": 4,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "714",
+                "name": [
+                    {
+                        "text": "SAINT SEBASTIEN",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.64738845825195,
+                "lon": 3.06020188331604,
+                "address": "60, rue Saint S\u00E9bastien, face au laboratoire d\u0027analyse",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1194",
+                "name": [
+                    {
+                        "text": "MAISON DES ENFANTS",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6457461,
+                "lon": 2.9901281,
+                "address": "1, rue Lamartine 59160 Lille-Lomme",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1208",
+                "name": [
+                    {
+                        "text": "HAUTS DE MONS",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6455733,
+                "lon": 3.1009346,
+                "address": "Parking \u00E0 l\u2019angle des rues Franklin et G\u00E9n\u00E9ral de Gaulle ",
+                "parking_type": "street_parking",
+                "capacity": 3,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1216",
+                "name": [
+                    {
+                        "text": "PLACE JAURES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6087619,
+                "lon": 3.0149936,
+                "address": "Face au 146, Boulevard de la R\u00E9publique",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1217",
+                "name": [
+                    {
+                        "text": "PARKING G.DUPONT",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6132588,
+                "lon": 3.018214542,
+                "address": "Parking angle avenue Georges Dupont et rue Jules Guesde",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1219",
+                "name": [
+                    {
+                        "text": "DOUAI GARE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.3711608,
+                "lon": 3.0890884,
+                "address": "Bd de Phalempin",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1262",
+                "name": [
+                    {
+                        "text": "PREFECTURE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.2923941,
+                "lon": 2.7658475,
+                "address": "18, Place de la Pr\u00E9fecture. ",
+                "parking_type": "street_parking",
+                "capacity": 1,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1528",
+                "name": [
+                    {
+                        "text": "SAINTE-H\u00C9L\u00C8NE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6571981,
+                "lon": 3.0563526,
+                "address": "50, rue H\u00E9l\u00E8ne 59350 Saint-Andr\u00E9-lez-lille",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1674",
+                "name": [
+                    {
+                        "text": "MAIRIE DE WASQUEHAL",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.669979,
+                "lon": 3.130465,
+                "address": "Place Mend\u00E8s France, parking face au m\u00E9tro Wasquehal H\u00F4tel de Ville ",
+                "parking_type": "street_parking",
+                "capacity": 1,
+                "is_virtual_station": true,
+                "station_area": {
+                    "type": "MultiPolygon",
+                    "coordinates": [
+                        [
+                            [
+                                [3.1304074416899885, 50.6703407295726],
+                                [3.130743271645313, 50.66984156773447],
+                                [3.1302390163505134, 50.66967497212594],
+                                [3.129901058014637, 50.67018665675716],
+                                [3.1297632816117504, 50.67041909495],
+                                [3.130444562701533, 50.67057548836541],
+                                [3.130546486644099, 50.67041229522444],
+                                [3.1304074416899885, 50.6703407295726]
+                            ]
+                        ]
+                    ]
+                }
+            },
+            {
+                "station_id": "1684",
+                "name": [
+                    {
+                        "text": "PLACE GENEVI\u00C8RES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6240447,
+                "lon": 3.0394156,
+                "address": "1, Place Genevi\u00E8res.",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1696",
+                "name": [
+                    {
+                        "text": "PLACE CASQUETTE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.624599,
+                "lon": 3.0443958,
+                "address": "22 Rue d\u0027Esquermes",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1716",
+                "name": [
+                    {
+                        "text": "BBNE - CHATEAU ROUGE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.680614,
+                "lon": 3.11381,
+                "address": "165, avenue de la Marne, places r\u00E9serv\u00E9es BBNE n\u00B0 225 et 226.",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1722",
+                "name": [
+                    {
+                        "text": "PARKING DES POTIERS",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6673337,
+                "lon": 1.8393261,
+                "address": "Parking des potiers, devant la Communaut\u00E9 de communes de Desvres-Samer\n",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1723",
+                "name": [
+                    {
+                        "text": "PLACE DE L\u0027ABBAYE",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.639172,
+                "lon": 1.746373,
+                "address": "2, place de l\u0027Abbaye",
+                "parking_type": "street_parking",
+                "capacity": 1,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1730",
+                "name": [
+                    {
+                        "text": "BOURSE DU TRAVAIL",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6258661,
+                "lon": 3.0897945,
+                "address": "24, Boulevard de l\u0027usine",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            },
+            {
+                "station_id": "1747",
+                "name": [
+                    {
+                        "text": "MAIRIE DE WAMBRECHIES",
+                        "language": "fr"
+                    }
+                ],
+                "lat": 50.6863528,
+                "lon": 3.0534191,
+                "address": "13, avenue de Robersart, derri\u00E8re l\u0027\u00E9glise, \u00E0 c\u00F4t\u00E9 de l\u0027abri V Lille",
+                "parking_type": "street_parking",
+                "capacity": 2,
+                "is_virtual_station": false
+            }
+        ]
+    }
+}

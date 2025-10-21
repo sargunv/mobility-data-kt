@@ -1,0 +1,24 @@
+{
+    "last_updated": 1761019306,
+    "ttl": 0,
+    "version": "2.2",
+    "data": {
+        "system_id": "zeus_schweinfurt",
+        "language": "en",
+        "name": "Zeus Scooters",
+        "url": "https://zeusscooters.com",
+        "phone_number": "+49 157 35981123",
+        "email": "support@zeusscooters.com",
+        "timezone": "Europe/Berlin",
+        "rental_apps": {
+            "android": {
+                "discovery_uri": "com.zeus.app://",
+                "store_uri": "https://play.google.com/store/apps/details?id=com.zeus.app"
+            },
+            "ios": {
+                "discovery_uri": "zeus.rideatom.live://",
+                "store_uri": "https://apps.apple.com/us/app/zeus-deutschland/id1484472542"
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "last_updated": "2025-10-21T04:08:42+00:00",
+    "ttl": 3600,
+    "version": "3.0",
+    "data": {
+        "plans": [
+            {
+                "plan_id": "14-standard",
+                "name": [{ "text": "STANDARD", "language": "en" }],
+                "currency": "NZD",
+                "price": 1,
+                "is_taxable": true,
+                "description": [
+                    {
+                        "text": "$1 NZD to unlock, 55c per min",
+                        "language": "en"
+                    }
+                ],
+                "per_min_pricing": [{ "rate": 0.55, "start": 0, "interval": 1 }]
+            }
+        ]
+    }
+}

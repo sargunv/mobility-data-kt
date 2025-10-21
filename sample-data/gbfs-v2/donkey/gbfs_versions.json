@@ -1,0 +1,17 @@
+{
+    "ttl": 60,
+    "last_updated": 1761018900,
+    "data": {
+        "versions": [
+            {
+                "version": "1.0",
+                "url": "https://stables.donkey.bike/api/public/gbfs/donkey_barcelona/gbfs.json"
+            },
+            {
+                "version": "2.3",
+                "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_barcelona/gbfs.json"
+            }
+        ]
+    },
+    "version": "2.3"
+}

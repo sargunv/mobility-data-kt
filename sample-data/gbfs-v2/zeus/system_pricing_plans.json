@@ -1,0 +1,36 @@
+{
+    "last_updated": 1761019309,
+    "ttl": 0,
+    "version": "2.2",
+    "data": {
+        "plans": [
+            {
+                "plan_id": "4",
+                "name": "Simple rate gold",
+                "currency": "EUR",
+                "price": 0,
+                "is_taxable": false,
+                "description": "0.00EUR unlock fee, 0.23EUR per minute",
+                "per_min_pricing": [{ "start": 0, "rate": 0.23, "interval": 1 }]
+            },
+            {
+                "plan_id": "3",
+                "name": "Simple rate silver",
+                "currency": "EUR",
+                "price": 0.5,
+                "is_taxable": false,
+                "description": "0.50EUR unlock fee, 0.23EUR per minute",
+                "per_min_pricing": [{ "start": 0, "rate": 0.23, "interval": 1 }]
+            },
+            {
+                "plan_id": "2",
+                "name": "Simple rate standard",
+                "currency": "EUR",
+                "price": 1,
+                "is_taxable": false,
+                "description": "1.00EUR unlock fee, 0.23EUR per minute",
+                "per_min_pricing": [{ "start": 0, "rate": 0.23, "interval": 1 }]
+            }
+        ]
+    }
+}

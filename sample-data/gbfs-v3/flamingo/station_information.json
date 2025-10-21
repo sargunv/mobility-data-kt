@@ -1,0 +1,157 @@
+{
+    "last_updated": "2025-10-21T04:08:43+00:00",
+    "ttl": 3600,
+    "version": "3.0",
+    "data": {
+        "stations": [
+            {
+                "station_id": "0aa47b43-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Bureta Road", "language": "en" }],
+                "lat": -37.668409,
+                "lon": 176.153369,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "0aa480e8-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Cameron Road", "language": "en" }],
+                "lat": -37.725234,
+                "lon": 176.13364,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "0aa483b9-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Cricket Ground", "language": "en" }],
+                "lat": -37.686846,
+                "lon": 176.165674,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "0aa48483-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Eleventh Avenue", "language": "en" }],
+                "lat": -37.698323,
+                "lon": 176.15884,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "0aa48535-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Girven Road", "language": "en" }],
+                "lat": -37.675066,
+                "lon": 176.225787,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "0aa485d1-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Marine Parade", "language": "en" }],
+                "lat": -37.632722,
+                "lon": 176.181059,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "0aa48672-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Maunganui Road", "language": "en" }],
+                "lat": -37.639816,
+                "lon": 176.183956,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "0aa48703-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Princess Road", "language": "en" }],
+                "lat": -37.678827,
+                "lon": 176.12855,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "0aa4878c-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Spring Street", "language": "en" }],
+                "lat": -37.684272,
+                "lon": 176.169379,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "0aa4881d-0e06-11f0-b792-42010a40000c",
+                "name": [{ "text": "Tauranga South", "language": "en" }],
+                "lat": -37.708531,
+                "lon": 176.148944,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "9c01b6d5-4c95-11f0-96e7-42010abfbc02",
+                "name": [
+                    {
+                        "text": "Haumaru Sport & Recreation Centre",
+                        "language": "en"
+                    }
+                ],
+                "lat": -37.695988,
+                "lon": 176.160686,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "2a4886d1-7262-11f0-86f8-42010abfbc12",
+                "name": [{ "text": "Vitality Organics", "language": "en" }],
+                "lat": -37.642842,
+                "lon": 176.186464,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            },
+            {
+                "station_id": "69cfffd6-7262-11f0-86f8-42010abfbc12",
+                "name": [{ "text": "Vitality Kitchen", "language": "en" }],
+                "lat": -37.683709,
+                "lon": 176.169013,
+                "is_virtual_station": true,
+                "rental_uris": {
+                    "android": "https://ride.flamingoscooters.com/",
+                    "ios": "https://ride.flamingoscooters.com/"
+                }
+            }
+        ]
+    }
+}

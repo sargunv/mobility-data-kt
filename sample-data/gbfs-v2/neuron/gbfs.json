@@ -1,0 +1,39 @@
+{
+    "version": "2.0",
+    "data": {
+        "en": {
+            "feeds": [
+                {
+                    "name": "system_information",
+                    "url": "https://mds.neuron-mobility.com/yow/gbfs/2/en/system_information"
+                },
+                {
+                    "name": "free_bike_status",
+                    "url": "https://mds.neuron-mobility.com/yow/gbfs/2/en/free_bike_status"
+                },
+                {
+                    "name": "vehicle_types",
+                    "url": "https://mds.neuron-mobility.com/yow/gbfs/2/en/vehicle_types"
+                },
+                {
+                    "name": "geofencing_zones",
+                    "url": "https://mds.neuron-mobility.com/yow/gbfs/2/en/geofencing_zones"
+                },
+                {
+                    "name": "system_regions",
+                    "url": "https://mds.neuron-mobility.com/yow/gbfs/2/en/system_regions"
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://mds.neuron-mobility.com/yow/gbfs/2/en/station_information"
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://mds.neuron-mobility.com/yow/gbfs/2/en/station_status"
+                }
+            ]
+        }
+    },
+    "ttl": 600,
+    "last_updated": 1761019012
+}

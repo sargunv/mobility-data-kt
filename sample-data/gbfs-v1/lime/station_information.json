@@ -1,0 +1,15 @@
+{
+    "last_updated": 1761018443,
+    "ttl": 0,
+    "version": "1.0",
+    "data": {
+        "stations": [
+            {
+                "station_id": "seattle",
+                "name": "Seattle",
+                "lat": 47.6137,
+                "lon": -122.3395
+            }
+        ]
+    }
+}

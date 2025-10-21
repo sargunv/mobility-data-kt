@@ -1,0 +1,12 @@
+{
+    "last_updated": "2025-10-21T04:12:18Z",
+    "ttl": 0,
+    "version": "3.0",
+    "data": {
+        "versions": [
+            { "version": "1.0", "url": "https://mds.bolt.eu/gbfs/1/720/gbfs" },
+            { "version": "2.3", "url": "https://mds.bolt.eu/gbfs/2/720/gbfs" },
+            { "version": "3.0", "url": "https://mds.bolt.eu/gbfs/3/720/gbfs" }
+        ]
+    }
+}

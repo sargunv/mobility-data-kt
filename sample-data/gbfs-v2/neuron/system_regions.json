@@ -1,0 +1,16 @@
+{
+    "version": "2.0",
+    "data": {
+        "regions": [
+            { "name": "Ottawa West", "region_id": 9965 },
+            { "name": "Ottawa East", "region_id": 9899 },
+            { "name": "Ottawa Lowertown", "region_id": 9891 },
+            { "name": "Ottawa Byward Market", "region_id": 9890 },
+            { "name": "Ottawa South", "region_id": 9888 },
+            { "name": "Ottawa The Glebe", "region_id": 9887 },
+            { "name": "Ottawa Downtown", "region_id": 9885 }
+        ]
+    },
+    "ttl": 0,
+    "last_updated": 1761019018
+}
