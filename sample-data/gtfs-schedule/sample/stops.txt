@@ -1,4 +1,0 @@
-stop_id,stop_name,stop_lat,stop_lon,location_type,wheelchair_boarding
-S1,Main St Station,37.7749,-122.4194,0,1
-S2,Market St Station,37.7750,-122.4195,0,1
-S3,Downtown Terminal,37.7751,-122.4196,1,1

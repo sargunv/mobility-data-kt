@@ -1,3 +1,0 @@
-trip_id,route_id,service_id,trip_headsign,direction_id,wheelchair_accessible,bikes_allowed
-T1,R1,WD,Downtown,0,1,2
-T2,R1,WD,Uptown,1,1,1

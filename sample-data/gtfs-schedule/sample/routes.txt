@@ -1,3 +1,0 @@
-route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color
-R1,DTA,17,Mission,3,FF0000,FFFFFF
-R2,DTA,22,Downtown Express,3,00FF00,000000
