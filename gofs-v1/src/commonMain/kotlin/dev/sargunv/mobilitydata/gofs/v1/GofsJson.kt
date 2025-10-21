@@ -7,4 +7,5 @@ public val GofsJson: Json = Json {
   explicitNulls = true
   encodeDefaults = false
   ignoreUnknownKeys = true
+  isLenient = true
 }
