@@ -26,7 +26,11 @@ public data class ServiceManifest(
  */
 @Serializable
 @JvmInline
-public value class FeedType(public val value: String) {
+public value class FeedType(
+  /** The string value representing the feed type. */
+  public val value: String
+) {
+  /** Companion object containing predefined feed type constants. */
   public companion object {
 
     /** The gbfs_versions.json file listing available GBFS versions for this system. */

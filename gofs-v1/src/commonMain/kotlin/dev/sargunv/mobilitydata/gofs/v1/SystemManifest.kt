@@ -63,7 +63,11 @@ public data class Service(
  */
 @Serializable
 @JvmInline
-public value class FeedType(public val value: String) {
+public value class FeedType(
+  /** The string value representing the feed type. */
+  public val value: String
+) {
+  /** Companion object containing predefined feed type constants. */
   public companion object {
     /** Auto-discovery file linking to all other feeds. */
     public val SystemManifest: FeedType = FeedType("gofs")
