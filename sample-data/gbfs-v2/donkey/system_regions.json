@@ -1,6 +1,3 @@
-{
-    "ttl": 60,
-    "last_updated": 1761018901,
-    "data": { "regions": [{ "region_id": "125", "name": "Donkey Barcelona" }] },
-    "version": "2.3"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:73e942322f68be6430347226e146ec589c44fb5c3f166680c612a7179841b760
+size 153

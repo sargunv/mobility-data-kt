@@ -1,15 +1,3 @@
-{
-    "last_updated": 1761018668,
-    "ttl": 60,
-    "data": {
-        "rental_hours": [
-            {
-                "user_types": ["member", "nonmember"],
-                "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-                "start_time": "00:00:00",
-                "end_time": "23:59:59"
-            }
-        ]
-    },
-    "version": "2.3"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b553fe077942763102b36c1c4b7c9e1c4ba9819e7fbeacf8605a3e2a2a5f6d9
+size 368

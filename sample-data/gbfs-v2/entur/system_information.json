@@ -1,24 +1,3 @@
-{
-    "last_updated": 1761019332,
-    "ttl": 60,
-    "version": "2.3",
-    "data": {
-        "system_id": "rydeoslo",
-        "language": "no",
-        "name": "Ryde_Oslo",
-        "operator": "Ryde",
-        "url": "https://www.ryde-technology.com/",
-        "email": "media@ryde-technology.com",
-        "timezone": "Europe/Oslo",
-        "rental_apps": {
-            "android": {
-                "store_uri": "https://play.google.com/store/apps/details?id=com.ryde_android",
-                "discovery_uri": "rydelink://com.ryde_android"
-            },
-            "ios": {
-                "store_uri": "https://apps.apple.com/app/apple-store/id1495605028",
-                "discovery_uri": "Ryde-linking://"
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3396195858e6f03a4d826b78ef3733719586cfd5dd1a902667cbcdab50b244ed
+size 744

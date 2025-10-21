@@ -1,27 +1,3 @@
-{
-    "data": {
-        "plans": [
-            {
-                "currency": "EUR",
-                "description": "Pricing information for 🇧🇪 Brussels (bicycle): Riders pay 1 EUR to unlock and 0.32 EUR per minute.",
-                "is_taxable": false,
-                "name": "brussels-bicycle-system-pricing-plan",
-                "plan_id": "372def2c-ba2f-52c6-a043-41a236497ca5",
-                "price": 1,
-                "per_min_pricing": [{ "interval": 1, "rate": 0.32, "start": 1 }]
-            },
-            {
-                "currency": "EUR",
-                "description": "Pricing information for 🇧🇪 Brussels (scooter): Riders pay 1 EUR to unlock and 0.35 EUR per minute.",
-                "is_taxable": false,
-                "name": "brussels-scooter-system-pricing-plan",
-                "plan_id": "31531fbf-77ec-4002-a635-ebe80880ac44",
-                "price": 1,
-                "per_min_pricing": [{ "interval": 1, "rate": 0.35, "start": 1 }]
-            }
-        ]
-    },
-    "last_updated": 1761018323,
-    "ttl": 0,
-    "version": "2.3"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e9d170b2e6b7e6440abaa2627d214dfb7dbf5d985c89f935be3e9a4219193bf
+size 1080

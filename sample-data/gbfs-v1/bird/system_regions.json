@@ -1,13 +1,3 @@
-{
-    "version": "1.1",
-    "data": {
-        "regions": [
-            {
-                "region_id": "19efc4d3-10db-4802-8ec4-c9cc1aef69af",
-                "name": "seattle-washington"
-            }
-        ]
-    },
-    "last_updated": 1761012375,
-    "ttl": 60
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c18d241b879f9bbe236d777879c48d7d990d1d47ce2a2c4f1be45c2c8cc101e
+size 266

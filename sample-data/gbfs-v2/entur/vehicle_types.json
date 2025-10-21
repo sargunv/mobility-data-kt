@@ -1,35 +1,3 @@
-{
-    "last_updated": 1761018219,
-    "ttl": 1800,
-    "version": "2.3",
-    "data": {
-        "vehicle_types": [
-            {
-                "vehicle_type_id": "YRY:VehicleType:1",
-                "form_factor": "scooter",
-                "propulsion_type": "electric",
-                "max_range_meters": 56300.0,
-                "name": "E-scooter",
-                "vehicle_image": "https://uploads-ssl.webflow.com/62552eb964d8fe8880e9cf6a/640f1284d1a77e6ea19fedbb_1.762.png",
-                "vehicle_assets": {
-                    "icon_url": "https://uploads-ssl.webflow.com/62552eb964d8fe8880e9cf6a/640f15dd2feda08faa560884__r_%20-%20612px%20-%20black%20icon.svg",
-                    "icon_url_dark": "https://uploads-ssl.webflow.com/62552eb964d8fe8880e9cf6a/640f15dd67ef8d0d56333603__r_%20-%20612px%20-%20icon.svg",
-                    "icon_last_modified": "2023-03-11"
-                }
-            },
-            {
-                "vehicle_type_id": "YRY:VehicleType:2",
-                "form_factor": "bicycle",
-                "propulsion_type": "electric_assist",
-                "max_range_meters": 48750.0,
-                "name": "E-Bike",
-                "vehicle_image": "https://uploads-ssl.webflow.com/62552eb964d8fe8880e9cf6a/64f04e3cbcc8e4125ce2128e_Ryde%20ebike.png",
-                "vehicle_assets": {
-                    "icon_url": "https://uploads-ssl.webflow.com/62552eb964d8fe8880e9cf6a/640f15dd2feda08faa560884__r_%20-%20612px%20-%20black%20icon.svg",
-                    "icon_url_dark": "https://uploads-ssl.webflow.com/62552eb964d8fe8880e9cf6a/640f15dd67ef8d0d56333603__r_%20-%20612px%20-%20icon.svg",
-                    "icon_last_modified": "2023-08-30"
-                }
-            }
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4da7a9d0351d349cb32322f9fbfcc21249f1f646c2a4bbf733f03f34eb491cf3
+size 1746

@@ -1,18 +1,3 @@
-{
-    "last_updated": 1761018708,
-    "ttl": 0,
-    "version": "2.2",
-    "data": {
-        "stations": [
-            {
-                "station_id": "seattle",
-                "num_vehicles_available": 12062,
-                "num_docks_available": 999999,
-                "is_installed": true,
-                "is_renting": true,
-                "is_returning": true,
-                "last_reported": 1761018708
-            }
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e0e27e87ec16411fef4f42225c637265ac0db01a8e28e408cd28991d1e93fb1e
+size 445

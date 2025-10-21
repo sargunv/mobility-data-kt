@@ -1,33 +1,3 @@
-{
-    "data": {
-        "vehicle_types": [
-            {
-                "form_factor": "bicycle",
-                "max_range_meters": 20000,
-                "propulsion_type": "electric_assist",
-                "vehicle_type_id": "titibike"
-            },
-            {
-                "form_factor": "bicycle",
-                "max_range_meters": 60000,
-                "propulsion_type": "electric_assist",
-                "vehicle_type_id": "x2"
-            },
-            {
-                "form_factor": "scooter",
-                "max_range_meters": 35000,
-                "propulsion_type": "electric",
-                "vehicle_type_id": "knot"
-            },
-            {
-                "form_factor": "scooter",
-                "max_range_meters": 60000,
-                "propulsion_type": "electric",
-                "vehicle_type_id": "pony"
-            }
-        ]
-    },
-    "last_updated": "2025-10-21T06:11:26+02:00",
-    "ttl": 0,
-    "version": "3.0"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53ce77ce22037c11c789889919fdbbdce04780f2649b653c8dbccab0b2ebd5a7
+size 973

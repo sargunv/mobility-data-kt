@@ -1,15 +1,3 @@
-{
-    "data": {
-        "vehicle_types": [
-            {
-                "form_factor": "moped",
-                "max_range_meters": 60000.0,
-                "propulsion_type": "electric",
-                "vehicle_type_id": "check_moped_rijswijk_60"
-            }
-        ]
-    },
-    "last_updated": "2025-10-21 04:14:57.493931+00:00",
-    "ttl": 600,
-    "version": "3.0"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:65074af62ab2efddd4ae02026e94a7fe9ac3ff9e9bb05e41929a512ee71d4ce9
+size 376

@@ -1,8 +1,3 @@
-{
-    "last_updated": 1761018573,
-    "ttl": 30,
-    "data": {
-        "geofencing_zones": { "features": [], "type": "FeatureCollection" }
-    },
-    "version": "2.3"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:56a32611e04ddf91c7d7d2e523219922cf71f0d0d30998f2d525cde1992b7208
+size 169

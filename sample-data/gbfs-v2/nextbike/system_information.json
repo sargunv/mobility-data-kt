@@ -1,27 +1,3 @@
-{
-    "last_updated": 1761018668,
-    "ttl": 60,
-    "data": {
-        "system_id": "nextbike_al",
-        "language": "en",
-        "name": "city bike Linz",
-        "operator": "City Bike Linz Rental Service GmbH, Wischerstraße 2, 4040 Linz, Österreich",
-        "url": "https://citybikelinz.at/",
-        "phone_number": "+43 732 28 59 08",
-        "email": "kundenservice@nextbike.de",
-        "feed_contact_email": "gbfs@nextbike.net",
-        "timezone": "Europe/Berlin",
-        "license_id": "CC0-1.0",
-        "rental_apps": {
-            "android": {
-                "store_uri": "https://play.google.com/store/apps/details?id=de.nextbike",
-                "discovery_uri": "https://app.nextbike.net/"
-            },
-            "ios": {
-                "store_uri": "https://apps.apple.com/app/id504288371",
-                "discovery_uri": "nextbike://"
-            }
-        }
-    },
-    "version": "2.3"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b39ee1fc824014cc52b2bec6c31d14302958a75b934d25c2cbc1010d650397f8
+size 922

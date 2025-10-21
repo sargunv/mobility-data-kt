@@ -1,25 +1,3 @@
-{
-    "last_updated": "2025-10-21T04:12:17Z",
-    "ttl": 0,
-    "version": "3.0",
-    "data": {
-        "system_id": "BoltEU_Essen",
-        "languages": ["en"],
-        "name": [{ "language": "en", "text": "Bolt Technology OÜ" }],
-        "url": "https://www.bolt.eu/",
-        "timezone": "Europe/Tallinn",
-        "rental_apps": {
-            "android": {
-                "store_uri": "https://bolt.onelink.me/sbJ2/payzone?client_id=bray_payzone&deep_link_value=GBFS_PROVIDER_DEEPLINK",
-                "discovery_uri": "bolt://"
-            },
-            "ios": {
-                "store_uri": "https://bolt.onelink.me/sbJ2/payzone?client_id=bray_payzone&deep_link_value=GBFS_PROVIDER_DEEPLINK",
-                "discovery_uri": "bolt://"
-            }
-        },
-        "license_url": "https://bolt.eu/en/legal/security-gbfs-license/?category=micromobility",
-        "feed_contact_email": "gbfs@bolt.eu",
-        "opening_hours": "24/7"
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:92d146e521a25629a8d5e75b45c3597546147f28e6164dff5feebdcb9a0d3377
+size 952

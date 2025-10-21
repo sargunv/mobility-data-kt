@@ -1,13 +1,3 @@
-{
-    "last_updated": 1761018443,
-    "ttl": 0,
-    "version": "1.0",
-    "data": {
-        "system_id": "lime_seattle",
-        "language": "en",
-        "name": "Lime Seattle",
-        "timezone": "America/Los_Angeles",
-        "license_url": "https://www.li.me/gbfs-terms",
-        "attribution_organization_name": "Lime"
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a2dafaf44d92dc75697210dac2392fa22a84556b228bcc3fa2bcf1b49ba5817
+size 333

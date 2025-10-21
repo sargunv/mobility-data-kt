@@ -1,17 +1,3 @@
-{
-    "last_updated": 1761018573,
-    "ttl": 30,
-    "data": {
-        "versions": [
-            {
-                "version": "1.1",
-                "url": "https://nordelta.publicbikesystem.net/ube/gbfs/v1/"
-            },
-            {
-                "version": "2.3",
-                "url": "https://nordelta.publicbikesystem.net/customer/gbfs/v2/"
-            }
-        ]
-    },
-    "version": "2.3"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fac08bbe4585d3affaf6a30d75ebc9da714586ea757a8265cdc207965b8b36f
+size 407

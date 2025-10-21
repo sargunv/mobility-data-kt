@@ -1,15 +1,3 @@
-{
-    "last_updated": 1761019010,
-    "ttl": 60,
-    "version": "2.3",
-    "data": {
-        "alerts": [
-            {
-                "alert_id": "ORE:Alert:mobidatabw_1",
-                "type": "other",
-                "summary": "Keine Echtzeitdaten",
-                "description": "Keine Echtzeitdaten zum Buchungsstatus der Fahrzeuge. Verfügbarkeit ist im Buchungssystem des Anbieters sichtbar."
-            }
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a883fc499aeed1ad4aa410121ccbbe197ed63e6f53dc829db6a73bda29aa801
+size 436

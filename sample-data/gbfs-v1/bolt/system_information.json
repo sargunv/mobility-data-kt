@@ -1,12 +1,3 @@
-{
-    "last_updated": 1761018427,
-    "ttl": 0,
-    "version": "1.0",
-    "data": {
-        "system_id": "BoltEU_Essen",
-        "language": "en",
-        "name": "Bolt Technology OÜ",
-        "url": "https://www.bolt.eu/",
-        "timezone": "Europe/Tallinn"
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7de8c458b6282b01a6095f737aaa5c995015ab6469b58bef33f1de33d5cee26
+size 270

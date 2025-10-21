@@ -1,23 +1,3 @@
-{
-    "last_updated": 1761018426,
-    "ttl": 0,
-    "version": "1.0",
-    "data": {
-        "en": {
-            "feeds": [
-                {
-                    "name": "system_information",
-                    "url": "https://mds.bolt.eu/gbfs/1/720/system_information"
-                },
-                {
-                    "name": "free_bike_status",
-                    "url": "https://mds.bolt.eu/gbfs/1/720/free_bike_status"
-                },
-                {
-                    "name": "system_pricing_plans",
-                    "url": "https://mds.bolt.eu/gbfs/1/720/system_pricing_plans"
-                }
-            ]
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9220287839ab07b18d9a8058c1c85a37927644b5bf688fe5863c60056df625d6
+size 652

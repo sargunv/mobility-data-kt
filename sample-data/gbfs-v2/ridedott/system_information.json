@@ -1,21 +1,3 @@
-{
-    "data": {
-        "language": "en",
-        "name": "Dott brussels",
-        "rental_apps": {
-            "android": {
-                "discovery_uri": "com.ridedott.rider://v.ridedott.com",
-                "store_uri": "https://play.google.com/store/apps/details?id=com.ridedott.rider"
-            },
-            "ios": {
-                "discovery_uri": "com.ridedott.rider://",
-                "store_uri": "https://apps.apple.com/app/id1440301673"
-            }
-        },
-        "system_id": "dott-brussels",
-        "timezone": "Europe/Brussels"
-    },
-    "last_updated": 1761018330,
-    "ttl": 0,
-    "version": "2.3"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ea62ee8e152309d197293e5c7b192430c6519b611d0695a1ac2aad9a93ece30
+size 635

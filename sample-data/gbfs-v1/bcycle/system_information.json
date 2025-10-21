@@ -1,25 +1,3 @@
-{
-    "ttl": 60,
-    "data": {
-        "rental_apps": {
-            "android": {
-                "store_uri": "https://play.google.com/store/apps/details?id=com.bcycle",
-                "discovery_uri": "bcycle://"
-            },
-            "ios": {
-                "store_uri": "https://apps.apple.com/us/app/bcycle/id371185597",
-                "discovery_uri": "bcycle://"
-            }
-        },
-        "purchase_url": null,
-        "system_id": "bcycle_rtcbikeshare",
-        "name": "RTC Bike Share",
-        "language": "en",
-        "url": "https://rtcbikeshare.bcycle.com",
-        "phone_number": "844.641.7823",
-        "email": "support@bikeshare.rtcsnv.com",
-        "timezone": "America/Los_Angeles"
-    },
-    "version": "1.1",
-    "last_updated": 1761013962
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:81a65c4af6395e6f4f51fff5e6cf2ea537f61295797fa26308d3eb8149a24cbc
+size 779

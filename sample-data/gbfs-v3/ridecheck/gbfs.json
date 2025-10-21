@@ -1,25 +1,3 @@
-{
-    "data": {
-        "feeds": [
-            {
-                "name": "system_information",
-                "url": "https://api.ridecheck.app/gbfs/v3/rijswijk/system_information.json"
-            },
-            {
-                "name": "vehicle_types",
-                "url": "https://api.ridecheck.app/gbfs/v3/rijswijk/vehicle_types.json"
-            },
-            {
-                "name": "vehicle_status",
-                "url": "https://api.ridecheck.app/gbfs/v3/rijswijk/vehicle_status.json"
-            },
-            {
-                "name": "geofencing_zones",
-                "url": "https://api.ridecheck.app/gbfs/v3/rijswijk/geofencing_zones.json"
-            }
-        ]
-    },
-    "last_updated": "2025-10-21 04:14:56.282329+00:00",
-    "ttl": 600,
-    "version": "3.0"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8248bd36cfae5585677617b79ff358479cab85d6e23f58d9943287570cd1a4ce
+size 792

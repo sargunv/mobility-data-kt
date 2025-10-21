@@ -1,8 +1,3 @@
-{
-    "data": {
-        "regions": []
-    },
-    "last_updated": "2025-10-21T06:14:39+02:00",
-    "ttl": 0,
-    "version": "3.0"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29f27eef20dcaf979aa2993320c83f5db3657184c6f29c18c8bcc8937520a7ce
+size 131

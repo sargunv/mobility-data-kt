@@ -1,29 +1,3 @@
-{
-    "data": {
-        "vehicle_types": [
-            {
-                "form_factor": "scooter",
-                "max_range_meters": 30000,
-                "pricing_plan_ids": ["31531fbf-77ec-4002-a635-ebe80880ac44"],
-                "propulsion_type": "electric",
-                "vehicle_type_id": "dott_scooter"
-            },
-            {
-                "form_factor": "bicycle",
-                "max_range_meters": 100000,
-                "pricing_plan_ids": ["372def2c-ba2f-52c6-a043-41a236497ca5"],
-                "propulsion_type": "electric_assist",
-                "vehicle_type_id": "dott_bicycle"
-            },
-            {
-                "form_factor": "bicycle",
-                "pricing_plan_ids": ["8f2b6787-5530-535c-ada4-0d1c89ecf618"],
-                "propulsion_type": "human",
-                "vehicle_type_id": "dott_manual-bicycle"
-            }
-        ]
-    },
-    "last_updated": 1761018330,
-    "ttl": 0,
-    "version": "2.3"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5245a49879911021ec402ae84937d163237d052383e6b0783694bae5b25c2232
+size 964

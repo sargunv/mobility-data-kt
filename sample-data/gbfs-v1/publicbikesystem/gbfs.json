@@ -1,34 +1,3 @@
-{
-    "last_updated": 1761012478,
-    "ttl": 0,
-    "data": {
-        "en": {
-            "feeds": [
-                {
-                    "name": "station_information",
-                    "url": "https://pittsburgh.publicbikesystem.net/customer/ube/gbfs/v1/en/station_information"
-                },
-                {
-                    "name": "station_status",
-                    "url": "https://pittsburgh.publicbikesystem.net/customer/ube/gbfs/v1/en/station_status"
-                },
-                {
-                    "name": "system_regions",
-                    "url": "https://pittsburgh.publicbikesystem.net/customer/ube/gbfs/v1/en/system_regions"
-                },
-                {
-                    "name": "system_information",
-                    "url": "https://pittsburgh.publicbikesystem.net/customer/ube/gbfs/v1/en/system_information"
-                },
-                {
-                    "name": "system_pricing_plans",
-                    "url": "https://pittsburgh.publicbikesystem.net/customer/ube/gbfs/v1/en/system_pricing_plans"
-                },
-                {
-                    "name": "nearby_stations",
-                    "url": "https://pittsburgh.publicbikesystem.net/customer/ube/gbfs/v1/en/station_information/{station_id}/nearby_stations"
-                }
-            ]
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4541950a2051814d2a2a9ebdc5ddb2623afe6b5db2f872764465da3fb92b1ed
+size 1343

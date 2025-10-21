@@ -1,21 +1,3 @@
-{
-    "last_updated": 1761019306,
-    "ttl": 0,
-    "version": "2.2",
-    "data": {
-        "vehicle_types": [
-            {
-                "vehicle_type_id": "yimi_plus_2",
-                "form_factor": "scooter",
-                "propulsion_type": "electric_assist",
-                "max_range_meters": 35000
-            },
-            {
-                "vehicle_type_id": "yimi_plus_3",
-                "form_factor": "scooter",
-                "propulsion_type": "electric_assist",
-                "max_range_meters": 35000
-            }
-        ]
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c946171e756235081eeb02bd922d94d6310e631de011e0ea4ee1ffad6b0f1c2a
+size 562
