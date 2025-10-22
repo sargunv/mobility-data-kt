@@ -26,16 +26,7 @@ kotlin {
     }
   }
 
-  wasmWasi {
-    nodejs {
-      testTask {
-        useMocha {
-          // Increase timeout to prevent intermittent failures
-          timeout = "10000"
-        }
-      }
-    }
-  }
+  wasmWasi { nodejs {} }
 
   // native tier 1
   macosArm64()
