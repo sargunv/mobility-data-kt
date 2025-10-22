@@ -16,13 +16,13 @@ private val expected =
     RiderCategory(
       riderCategoryId = "regular",
       riderCategoryName = "Regular Fare",
-      isDefaultFareCategory = IsDefaultFareCategory.Yes,
+      isDefaultFareCategory = true,
       eligibilityUrl = null,
     ),
     RiderCategory(
       riderCategoryId = "senior",
       riderCategoryName = "Senior Citizen",
-      isDefaultFareCategory = IsDefaultFareCategory.No,
+      isDefaultFareCategory = false,
       eligibilityUrl = "https://example.com/senior",
     ),
   )

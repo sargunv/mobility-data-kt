@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.time.Duration.Companion.seconds
 
 private val csvContent = // language=CSV
   """
@@ -17,7 +18,7 @@ private val expected =
       fromLegGroupId = "local",
       toLegGroupId = "express",
       transferCount = null,
-      durationLimit = -1,
+      durationLimit = (-1).seconds,
       durationLimitType = null,
       fareTransferType = FareTransferType.FromLegPlusTransfer,
       fareProductId = null,
@@ -26,7 +27,7 @@ private val expected =
       fromLegGroupId = "express",
       toLegGroupId = "local",
       transferCount = 1,
-      durationLimit = 3600,
+      durationLimit = 3600.seconds,
       durationLimitType = DurationLimitType.ArrivalToDeparture,
       fareTransferType = FareTransferType.FromLegPlusTransferPlusToLeg,
       fareProductId = "transfer_product",

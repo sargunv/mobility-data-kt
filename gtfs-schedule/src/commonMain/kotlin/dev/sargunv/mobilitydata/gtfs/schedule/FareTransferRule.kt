@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.Id
+import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -21,8 +22,8 @@ public data class FareTransferRule(
   /** Defines how many consecutive transfers the transfer rule may be applied to. */
   @SerialName("transfer_count") public val transferCount: Int? = null,
 
-  /** Defines the duration limit of the transfer in seconds. */
-  @SerialName("duration_limit") public val durationLimit: Int? = null,
+  /** Defines the duration limit of the transfer. */
+  @SerialName("duration_limit") public val durationLimit: WholeSeconds? = null,
 
   /** Defines the relative start and end of the duration limit. */
   @SerialName("duration_limit_type") public val durationLimitType: DurationLimitType? = null,

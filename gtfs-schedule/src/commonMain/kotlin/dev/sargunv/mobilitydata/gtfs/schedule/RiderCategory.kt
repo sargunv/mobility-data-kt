@@ -1,8 +1,8 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.Id
+import dev.sargunv.mobilitydata.utils.IntBoolean
 import dev.sargunv.mobilitydata.utils.Url
-import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -20,26 +20,8 @@ public data class RiderCategory(
   @SerialName("rider_category_name") public val riderCategoryName: String,
 
   /** Indicates if this rider category is the default. */
-  @SerialName("is_default_fare_category") public val isDefaultFareCategory: IsDefaultFareCategory,
+  @SerialName("is_default_fare_category") public val isDefaultFareCategory: IntBoolean,
 
   /** URL describing the eligibility requirements for the rider category. */
   @SerialName("eligibility_url") public val eligibilityUrl: Url? = null,
 )
-
-/** Indicates if a rider category is the default. */
-@Serializable
-@JvmInline
-public value class IsDefaultFareCategory
-private constructor(
-  /** The integer value representing whether this is the default fare category. */
-  public val value: Int
-) {
-  /** Companion object containing predefined constants. */
-  public companion object {
-    /** Not the default fare category. */
-    public val No: IsDefaultFareCategory = IsDefaultFareCategory(0)
-
-    /** Default fare category. */
-    public val Yes: IsDefaultFareCategory = IsDefaultFareCategory(1)
-  }
-}

@@ -431,19 +431,19 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/FareRule$Companion {
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/FareTransferRule {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/FareTransferRule$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;ILjava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Lkotlin/time/Duration;Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Lkotlin/time/Duration;Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;ILjava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/Integer;
-	public final fun component4 ()Ljava/lang/Integer;
+	public final fun component4-FghU774 ()Lkotlin/time/Duration;
 	public final fun component5-tCd6S10 ()Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;
 	public final fun component6-OUfzTkk ()I
 	public final fun component7 ()Ljava/lang/String;
-	public final fun copy-GAwx1AM (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;ILjava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareTransferRule;
-	public static synthetic fun copy-GAwx1AM$default (Ldev/sargunv/mobilitydata/gtfs/schedule/FareTransferRule;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;ILjava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareTransferRule;
+	public final fun copy-o6777I4 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Lkotlin/time/Duration;Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;ILjava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareTransferRule;
+	public static synthetic fun copy-o6777I4$default (Ldev/sargunv/mobilitydata/gtfs/schedule/FareTransferRule;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Lkotlin/time/Duration;Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;ILjava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareTransferRule;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getDurationLimit ()Ljava/lang/Integer;
+	public final fun getDurationLimit-FghU774 ()Lkotlin/time/Duration;
 	public final fun getDurationLimitType-tCd6S10 ()Ldev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType;
 	public final fun getFareProductId ()Ljava/lang/String;
 	public final fun getFareTransferType-OUfzTkk ()I
@@ -498,37 +498,6 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/FareTransferType$Compa
 	public final fun getFromLegPlusTransfer-OUfzTkk ()I
 	public final fun getFromLegPlusTransferPlusToLeg-OUfzTkk ()I
 	public final fun getTransferOnly-OUfzTkk ()I
-	public final fun serializer ()Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/IsDefaultFareCategory {
-	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/IsDefaultFareCategory$Companion;
-	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/IsDefaultFareCategory;
-	public fun equals (Ljava/lang/Object;)Z
-	public static fun equals-impl (ILjava/lang/Object;)Z
-	public static final fun equals-impl0 (II)Z
-	public final fun getValue ()I
-	public fun hashCode ()I
-	public static fun hashCode-impl (I)I
-	public fun toString ()Ljava/lang/String;
-	public static fun toString-impl (I)Ljava/lang/String;
-	public final synthetic fun unbox-impl ()I
-}
-
-public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/IsDefaultFareCategory$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/IsDefaultFareCategory$$serializer;
-	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public final fun deserialize-I5_wCPA (Lkotlinx/serialization/encoding/Decoder;)I
-	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public final fun serialize-iBA0oiw (Lkotlinx/serialization/encoding/Encoder;I)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/IsDefaultFareCategory$Companion {
-	public final fun getNo-StZzthY ()I
-	public final fun getYes-StZzthY ()I
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -693,20 +662,20 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff$Companio
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/RiderCategory {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/RiderCategory$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
-	public final fun component3-StZzthY ()I
+	public final fun component3 ()Z
 	public final fun component4 ()Ljava/lang/String;
-	public final fun copy-sSKx22I (Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/RiderCategory;
-	public static synthetic fun copy-sSKx22I$default (Ldev/sargunv/mobilitydata/gtfs/schedule/RiderCategory;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/RiderCategory;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/RiderCategory;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/schedule/RiderCategory;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/RiderCategory;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getEligibilityUrl ()Ljava/lang/String;
 	public final fun getRiderCategoryId ()Ljava/lang/String;
 	public final fun getRiderCategoryName ()Ljava/lang/String;
 	public fun hashCode ()I
-	public final fun isDefaultFareCategory-StZzthY ()I
+	public final fun isDefaultFareCategory ()Z
 	public fun toString ()Ljava/lang/String;
 }
 
