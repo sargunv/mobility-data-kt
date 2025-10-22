@@ -9,10 +9,10 @@ import kotlinx.serialization.Serializable
 /**
  * Exceptions for the services defined in the calendar.txt.
  *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#calendar_datestxt)
+ * This class represents a record in the calendar_dates.txt file.
  */
 @Serializable
-public data class CalendarDate(
+public data class ServiceCalendarOverride(
   /** Identifies a set of dates when a service exception occurs. */
   @SerialName("service_id") public val serviceId: Id<ServiceCalendar>,
 
@@ -20,26 +20,23 @@ public data class CalendarDate(
   @SerialName("date") public val date: BasicLocalDate,
 
   /** Indicates whether service is available on the date specified. */
-  @SerialName("exception_type") public val exceptionType: ExceptionType,
+  @SerialName("exception_type") public val overrideType: OverrideType,
 )
 
-/**
- * Indicates whether service is available on the date specified.
- *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#calendar_datestxt)
- */
+/** Indicates whether service is available on the date specified. */
 @Serializable
 @JvmInline
-public value class ExceptionType(
+public value class OverrideType
+private constructor(
   /** The integer value representing the exception type. */
   public val value: Int
 ) {
   /** Companion object containing predefined exception type constants. */
-  public companion object {
+  public companion object Companion {
     /** Service has been added for the specified date. */
-    public val ServiceAdded: ExceptionType = ExceptionType(1)
+    public val ServiceAdded: OverrideType = OverrideType(1)
 
     /** Service has been removed for the specified date. */
-    public val ServiceRemoved: ExceptionType = ExceptionType(2)
+    public val ServiceRemoved: OverrideType = OverrideType(2)
   }
 }

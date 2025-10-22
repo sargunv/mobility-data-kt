@@ -1,8 +1,6 @@
 plugins { id("published-library") }
 
 kotlin {
-  compilerOptions { freeCompilerArgs.add("-Xcontext-parameters") }
-
   sourceSets {
     commonMain {
       dependencies {

@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 /**
  * Times that a vehicle arrives at and departs from stops for each trip.
  *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stop_timestxt)
+ * This class represents a record in the stop_times.txt file.
  */
 @Serializable
 public data class StopTime(
@@ -25,17 +25,38 @@ public data class StopTime(
   /** Identifies the serviced stop. */
   @SerialName("stop_id") public val stopId: Id<Stop>,
 
+  /**
+   * Identifies the serviced location group that indicates groups of stops where riders may request
+   * pickup or drop off.
+   */
+  @SerialName("location_group_id") public val locationGroupId: Id<LocationGroup>? = null,
+
+  /**
+   * Identifies the GeoJSON location that corresponds to serviced zone where riders may request
+   * pickup or drop off.
+   */
+  @SerialName("location_id") public val locationId: Id<Nothing>? = null,
+
   /** Order of stops for a particular trip. */
   @SerialName("stop_sequence") public val stopSequence: Int,
 
   /** Text that appears on signage identifying the trip's destination to riders. */
   @SerialName("stop_headsign") public val stopHeadsign: String? = null,
 
+  /**
+   * Time that on-demand service becomes available in a GeoJSON location, location group, or stop.
+   */
+  @SerialName("start_pickup_drop_off_window")
+  public val startPickupDropOffWindow: ServiceTime? = null,
+
+  /** Time that on-demand service ends in a GeoJSON location, location group, or stop. */
+  @SerialName("end_pickup_drop_off_window") public val endPickupDropOffWindow: ServiceTime? = null,
+
   /** Indicates pickup method. */
-  @SerialName("pickup_type") public val pickupType: PickupDropOffType? = null,
+  @SerialName("pickup_type") public val pickupType: PickupDropoff? = null,
 
   /** Indicates drop off method. */
-  @SerialName("drop_off_type") public val dropOffType: PickupDropOffType? = null,
+  @SerialName("drop_off_type") public val dropOffType: PickupDropoff? = null,
 
   /** Indicates continuous pickup behavior. */
   @SerialName("continuous_pickup") public val continuousPickup: ContinuousPickupDropOff? = null,
@@ -49,45 +70,42 @@ public data class StopTime(
   /** Indicates whether a rider can board or alight at this stop. */
   @SerialName("timepoint") public val timepoint: Timepoint? = null,
 
-  /** Buffer time in seconds before scheduled departure. */
-  @SerialName("departure_buffer") public val departureBuffer: Int? = null,
+  /** Identifies the boarding booking rule at this stop time. */
+  @SerialName("pickup_booking_rule_id") public val pickupBookingRuleId: Id<BookingRule>? = null,
+
+  /** Identifies the alighting booking rule at this stop time. */
+  @SerialName("drop_off_booking_rule_id") public val dropOffBookingRuleId: Id<BookingRule>? = null,
 )
 
-/**
- * Indicates pickup or drop off method.
- *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stop_timestxt)
- */
+/** Indicates pickup or drop off method. */
 @Serializable
 @JvmInline
-public value class PickupDropOffType(
+public value class PickupDropoff
+private constructor(
   /** The integer value representing the pickup/drop off type. */
   public val value: Int
 ) {
   /** Companion object containing predefined pickup/drop off type constants. */
-  public companion object {
+  public companion object Companion {
     /** Regularly scheduled pickup/drop off. */
-    public val Regular: PickupDropOffType = PickupDropOffType(0)
+    public val Regular: PickupDropoff = PickupDropoff(0)
 
     /** No pickup/drop off available. */
-    public val None: PickupDropOffType = PickupDropOffType(1)
+    public val None: PickupDropoff = PickupDropoff(1)
 
     /** Must phone agency to arrange pickup/drop off. */
-    public val PhoneAgency: PickupDropOffType = PickupDropOffType(2)
+    public val PhoneAgency: PickupDropoff = PickupDropoff(2)
 
     /** Must coordinate with driver to arrange pickup/drop off. */
-    public val CoordinateWithDriver: PickupDropOffType = PickupDropOffType(3)
+    public val CoordinateWithDriver: PickupDropoff = PickupDropoff(3)
   }
 }
 
-/**
- * Indicates whether a rider can board the transit vehicle at this stop.
- *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stop_timestxt)
- */
+/** Indicates whether a rider can board the transit vehicle at this stop. */
 @Serializable
 @JvmInline
-public value class Timepoint(
+public value class Timepoint
+private constructor(
   /** The integer value representing the timepoint status. */
   public val value: Int
 ) {

@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 /**
  * Transit agencies with service represented in this dataset.
  *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#agencytxt)
+ * This class represents a record in the agency.txt file.
  */
 @Serializable
 public data class Agency(
@@ -37,4 +37,10 @@ public data class Agency(
 
   /** Email address for customer service at the agency. */
   @SerialName("agency_email") public val agencyEmail: String? = null,
+
+  /**
+   * Indicates if riders can access a transit service associated with this agency by using a
+   * contactless EMV card or mobile device as fare media at a fare validator.
+   */
+  @SerialName("cemv_support") public val cemvSupport: TriState? = null,
 )

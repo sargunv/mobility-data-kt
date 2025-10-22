@@ -6,8 +6,8 @@ targets, including JVM, Native, JS, and WASM.
 
 ## Supported Formats
 
-- (TODO) [GTFS Schedule](./gtfs-schedule.md): A client library for the General
-  Transit Feed Specification (GTFS)
+- [GTFS Schedule](./gtfs-schedule.md): A client library for the General Transit
+  Feed Specification (GTFS)
 - (TODO) [GTFS Realtime](./gtfs-realtime.md): A client library for the GTFS
   Realtime format
 - [GBFS](./gbfs.md): A client library for the General Bikeshare Feed

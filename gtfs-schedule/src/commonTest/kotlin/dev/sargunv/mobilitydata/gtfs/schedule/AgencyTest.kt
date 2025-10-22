@@ -6,27 +6,25 @@ import kotlinx.datetime.TimeZone
 
 private val csvContent = // language=CSV
   """
-agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
-DTA,Demo Transit Authority,http://google.com,America/Los_Angeles,en,555-1234,http://google.com/fares,info@demo.com
-"""
-    .trimIndent() + "\n"
+  agency_id,agency_name,agency_url,agency_timezone
+  DTA,Demo Transit Authority,https://google.com,America/Los_Angeles
+  """
+    .trimIndent()
 
-private val expectedAgency =
-  Agency(
-    agencyId = "DTA",
-    agencyName = "Demo Transit Authority",
-    agencyUrl = "http://google.com",
-    agencyTimezone = TimeZone.of("America/Los_Angeles"),
-    agencyLang = "en",
-    agencyPhone = "555-1234",
-    agencyFareUrl = "http://google.com/fares",
-    agencyEmail = "info@demo.com",
+private val expected =
+  listOf(
+    Agency(
+      agencyId = "DTA",
+      agencyName = "Demo Transit Authority",
+      agencyUrl = "https://google.com",
+      agencyTimezone = TimeZone.of("America/Los_Angeles"),
+    )
   )
 
 class AgencyTest {
   @Test
   fun decode() {
     val decoded = GtfsCsv.decodeFromString<Agency>(csvContent)
-    assertEquals(listOf(expectedAgency), decoded)
+    assertEquals(expected, decoded)
   }
 }

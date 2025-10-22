@@ -1,7 +1,7 @@
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Agency {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Agency$Companion;
-	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
@@ -10,8 +10,9 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Agency {
 	public final fun component6 ()Ljava/lang/String;
 	public final fun component7 ()Ljava/lang/String;
 	public final fun component8 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/Agency;
-	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Agency;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Agency;
+	public final fun component9-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
+	public final fun copy-3Y5P_Nw (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;)Ldev/sargunv/mobilitydata/gtfs/schedule/Agency;
+	public static synthetic fun copy-3Y5P_Nw$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Agency;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Agency;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAgencyEmail ()Ljava/lang/String;
 	public final fun getAgencyFareUrl ()Ljava/lang/String;
@@ -21,6 +22,7 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Agency {
 	public final fun getAgencyPhone ()Ljava/lang/String;
 	public final fun getAgencyTimezone ()Lkotlinx/datetime/TimeZone;
 	public final fun getAgencyUrl ()Ljava/lang/String;
+	public final fun getCemvSupport-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
@@ -40,78 +42,13 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Agency$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed {
-	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed$Companion;
-	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed;
-	public static fun constructor-impl (I)I
-	public fun equals (Ljava/lang/Object;)Z
-	public static fun equals-impl (ILjava/lang/Object;)Z
-	public static final fun equals-impl0 (II)Z
-	public final fun getValue ()I
-	public fun hashCode ()I
-	public static fun hashCode-impl (I)I
-	public fun toString ()Ljava/lang/String;
-	public static fun toString-impl (I)Ljava/lang/String;
-	public final synthetic fun unbox-impl ()I
-}
-
-public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed$$serializer;
-	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public final fun deserialize-PF9Yi6U (Lkotlinx/serialization/encoding/Decoder;)I
-	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public final fun serialize-rml4VCU (Lkotlinx/serialization/encoding/Encoder;I)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed$Companion {
-	public final fun getAllowed-a5wOld0 ()I
-	public final fun getNoInfo-a5wOld0 ()I
-	public final fun getNotAllowed-a5wOld0 ()I
-	public final fun serializer ()Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/Block {
-	public fun <init> ()V
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/CalendarDate {
-	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/CalendarDate$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Lkotlinx/datetime/LocalDate;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun component1 ()Ljava/lang/String;
-	public final fun component2 ()Lkotlinx/datetime/LocalDate;
-	public final fun component3-1aepsb0 ()I
-	public final fun copy-gDh2Sjc (Ljava/lang/String;Lkotlinx/datetime/LocalDate;I)Ldev/sargunv/mobilitydata/gtfs/schedule/CalendarDate;
-	public static synthetic fun copy-gDh2Sjc$default (Ldev/sargunv/mobilitydata/gtfs/schedule/CalendarDate;Ljava/lang/String;Lkotlinx/datetime/LocalDate;IILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/CalendarDate;
-	public fun equals (Ljava/lang/Object;)Z
-	public final fun getDate ()Lkotlinx/datetime/LocalDate;
-	public final fun getExceptionType-1aepsb0 ()I
-	public final fun getServiceId ()Ljava/lang/String;
-	public fun hashCode ()I
-	public fun toString ()Ljava/lang/String;
-}
-
-public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/CalendarDate$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/CalendarDate$$serializer;
-	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/CalendarDate;
-	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/CalendarDate;)V
-	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/CalendarDate$Companion {
-	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+public final class dev/sargunv/mobilitydata/gtfs/schedule/CommonKt {
+	public static final fun getGtfsCsv ()Ldev/sargunv/kotlindsv/DsvFormat;
 }
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff$Companion;
 	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
-	public static fun constructor-impl (I)I
 	public fun equals (Ljava/lang/Object;)Z
 	public static fun equals-impl (ILjava/lang/Object;)Z
 	public static final fun equals-impl0 (II)Z
@@ -145,7 +82,6 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOf
 public final class dev/sargunv/mobilitydata/gtfs/schedule/DirectionId {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId$Companion;
 	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;
-	public static fun constructor-impl (I)I
 	public fun equals (Ljava/lang/Object;)Z
 	public static fun equals-impl (ILjava/lang/Object;)Z
 	public static final fun equals-impl0 (II)Z
@@ -169,55 +105,14 @@ public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/DirectionId$
 }
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/DirectionId$Companion {
-	public final fun getInbound-oVFDMFg ()I
-	public final fun getOutbound-oVFDMFg ()I
+	public final fun getOtherWay-oVFDMFg ()I
+	public final fun getThatWay-oVFDMFg ()I
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/ExceptionType {
-	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/ExceptionType$Companion;
-	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/ExceptionType;
-	public static fun constructor-impl (I)I
-	public fun equals (Ljava/lang/Object;)Z
-	public static fun equals-impl (ILjava/lang/Object;)Z
-	public static final fun equals-impl0 (II)Z
-	public final fun getValue ()I
-	public fun hashCode ()I
-	public static fun hashCode-impl (I)I
-	public fun toString ()Ljava/lang/String;
-	public static fun toString-impl (I)Ljava/lang/String;
-	public final synthetic fun unbox-impl ()I
-}
-
-public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/ExceptionType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/ExceptionType$$serializer;
-	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public final fun deserialize-QUAAfWw (Lkotlinx/serialization/encoding/Decoder;)I
-	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public final fun serialize-0XPaAg0 (Lkotlinx/serialization/encoding/Encoder;I)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/ExceptionType$Companion {
-	public final fun getServiceAdded-1aepsb0 ()I
-	public final fun getServiceRemoved-1aepsb0 ()I
-	public final fun serializer ()Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/GtfsCsvKt {
-	public static final fun getGtfsCsv ()Ldev/sargunv/kotlindsv/DsvFormat;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/Level {
-	public fun <init> ()V
 }
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/LocationType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType$Companion;
 	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;
-	public static fun constructor-impl (I)I
 	public fun equals (Ljava/lang/Object;)Z
 	public static fun equals-impl (ILjava/lang/Object;)Z
 	public static final fun equals-impl0 (II)Z
@@ -242,21 +137,16 @@ public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/LocationType
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/LocationType$Companion {
 	public final fun getBoardingArea-68KN1qg ()I
-	public final fun getEntranceExit-68KN1qg ()I
+	public final fun getEntranceOrExit-68KN1qg ()I
 	public final fun getGenericNode-68KN1qg ()I
 	public final fun getStation-68KN1qg ()I
 	public final fun getStop-68KN1qg ()I
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gtfs/schedule/Network {
-	public fun <init> ()V
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType {
-	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType$Companion;
-	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;
-	public static fun constructor-impl (I)I
+public final class dev/sargunv/mobilitydata/gtfs/schedule/OverrideType {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/OverrideType$Companion;
+	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/OverrideType;
 	public fun equals (Ljava/lang/Object;)Z
 	public static fun equals-impl (ILjava/lang/Object;)Z
 	public static final fun equals-impl0 (II)Z
@@ -268,34 +158,66 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType {
 	public final synthetic fun unbox-impl ()I
 }
 
-public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType$$serializer;
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/OverrideType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/OverrideType$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public final fun deserialize-55s7rjM (Lkotlinx/serialization/encoding/Decoder;)I
+	public final fun deserialize-F5ufXzk (Lkotlinx/serialization/encoding/Decoder;)I
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public final fun serialize-q-SxGmI (Lkotlinx/serialization/encoding/Encoder;I)V
+	public final fun serialize-kUP4_ts (Lkotlinx/serialization/encoding/Encoder;I)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType$Companion {
-	public final fun getCoordinateWithDriver-XaxB2fw ()I
-	public final fun getNone-XaxB2fw ()I
-	public final fun getPhoneAgency-XaxB2fw ()I
-	public final fun getRegular-XaxB2fw ()I
+public final class dev/sargunv/mobilitydata/gtfs/schedule/OverrideType$Companion {
+	public final fun getServiceAdded-Ff9wtzM ()I
+	public final fun getServiceRemoved-Ff9wtzM ()I
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff$Companion;
+	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-X9f1NFw (Lkotlinx/serialization/encoding/Decoder;)I
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-JjLpVg0 (Lkotlinx/serialization/encoding/Encoder;I)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff$Companion {
+	public final fun getCoordinateWithDriver-19JJ1WI ()I
+	public final fun getNone-19JJ1WI ()I
+	public final fun getPhoneAgency-19JJ1WI ()I
+	public final fun getRegular-19JJ1WI ()I
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Route {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Route$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component10 ()Ljava/lang/Integer;
 	public final fun component11-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
 	public final fun component12-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
 	public final fun component13 ()Ljava/lang/String;
+	public final fun component14-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()Ljava/lang/String;
@@ -304,10 +226,11 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Route {
 	public final fun component7 ()Ljava/lang/String;
 	public final fun component8-NhXREWg ()Ldev/sargunv/mobilitydata/utils/RgbColor;
 	public final fun component9-NhXREWg ()Ldev/sargunv/mobilitydata/utils/RgbColor;
-	public final fun copy-e4oRqrE (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/Route;
-	public static synthetic fun copy-e4oRqrE$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Route;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Route;
+	public final fun copy-jAUMUJA (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;)Ldev/sargunv/mobilitydata/gtfs/schedule/Route;
+	public static synthetic fun copy-jAUMUJA$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Route;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/RgbColor;Ldev/sargunv/mobilitydata/utils/RgbColor;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Route;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAgencyId ()Ljava/lang/String;
+	public final fun getCemvSupport-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun getContinuousDropOff-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
 	public final fun getContinuousPickup-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
 	public final fun getNetworkId ()Ljava/lang/String;
@@ -342,7 +265,6 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Route$Companion {
 public final class dev/sargunv/mobilitydata/gtfs/schedule/RouteType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/RouteType$Companion;
 	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/RouteType;
-	public static fun constructor-impl (I)I
 	public fun equals (Ljava/lang/Object;)Z
 	public static fun equals-impl (ILjava/lang/Object;)Z
 	public static final fun equals-impl0 (II)Z
@@ -424,21 +346,49 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendar$Compan
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gtfs/schedule/Shape {
-	public fun <init> ()V
+public final class dev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lkotlinx/datetime/LocalDate;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lkotlinx/datetime/LocalDate;
+	public final fun component3-Ff9wtzM ()I
+	public final fun copy-rClSUlo (Ljava/lang/String;Lkotlinx/datetime/LocalDate;I)Ldev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride;
+	public static synthetic fun copy-rClSUlo$default (Ldev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride;Ljava/lang/String;Lkotlinx/datetime/LocalDate;IILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDate ()Lkotlinx/datetime/LocalDate;
+	public final fun getOverrideType-Ff9wtzM ()I
+	public final fun getServiceId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverride$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Stop {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Stop$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component10-TJayHJ4 ()Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;
 	public final fun component11 ()Ljava/lang/String;
-	public final fun component12 ()Ljava/lang/String;
-	public final fun component13-KxijeFg ()Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding;
+	public final fun component12 ()Lkotlinx/datetime/TimeZone;
+	public final fun component13-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun component14 ()Ljava/lang/String;
 	public final fun component15 ()Ljava/lang/String;
+	public final fun component16-F0ffIHQ ()Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()Ljava/lang/String;
@@ -447,23 +397,24 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Stop {
 	public final fun component7 ()Ljava/lang/Double;
 	public final fun component8 ()Ljava/lang/String;
 	public final fun component9 ()Ljava/lang/String;
-	public final fun copy-MKfc7Fo (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/Stop;
-	public static synthetic fun copy-MKfc7Fo$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Stop;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Stop;
+	public final fun copy-ycl3Das (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess;)Ldev/sargunv/mobilitydata/gtfs/schedule/Stop;
+	public static synthetic fun copy-ycl3Das$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Stop;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Stop;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getLevelId ()Ljava/lang/String;
 	public final fun getLocationType-TJayHJ4 ()Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;
 	public final fun getParentStation ()Ljava/lang/String;
 	public final fun getPlatformCode ()Ljava/lang/String;
+	public final fun getStopAccess-F0ffIHQ ()Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess;
 	public final fun getStopCode ()Ljava/lang/String;
-	public final fun getStopDesc ()Ljava/lang/String;
+	public final fun getStopDescription ()Ljava/lang/String;
 	public final fun getStopId ()Ljava/lang/String;
-	public final fun getStopLat ()Ljava/lang/Double;
-	public final fun getStopLon ()Ljava/lang/Double;
+	public final fun getStopLatitude ()Ljava/lang/Double;
+	public final fun getStopLongitude ()Ljava/lang/Double;
 	public final fun getStopName ()Ljava/lang/String;
-	public final fun getStopTimezone ()Ljava/lang/String;
+	public final fun getStopTimezone ()Lkotlinx/datetime/TimeZone;
 	public final fun getStopUrl ()Ljava/lang/String;
 	public final fun getTtsStopName ()Ljava/lang/String;
-	public final fun getWheelchairBoarding-KxijeFg ()Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding;
+	public final fun getWheelchairBoarding-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun getZoneId ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
@@ -484,32 +435,75 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Stop$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class dev/sargunv/mobilitydata/gtfs/schedule/StopAccess {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess$Companion;
+	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/StopAccess$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-mryjHjs (Lkotlinx/serialization/encoding/Decoder;)I
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-W8isSVU (Lkotlinx/serialization/encoding/Encoder;I)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/StopAccess$Companion {
+	public final fun getDirect-dUtyWyo ()I
+	public final fun getIndirect-dUtyWyo ()I
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/gtfs/schedule/StopTime {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/StopTime$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/Double;Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/Double;Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/Double;Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/Double;Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
-	public final fun component10-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
-	public final fun component11 ()Ljava/lang/Double;
-	public final fun component12-J88MXmk ()Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;
+	public final fun component10 ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
+	public final fun component11-P_AMKQQ ()Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;
+	public final fun component12-P_AMKQQ ()Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;
+	public final fun component13-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
+	public final fun component14-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
+	public final fun component15 ()Ljava/lang/Double;
+	public final fun component16-J88MXmk ()Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;
+	public final fun component17 ()Ljava/lang/String;
+	public final fun component18 ()Ljava/lang/String;
 	public final fun component2 ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
 	public final fun component3 ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
 	public final fun component4 ()Ljava/lang/String;
-	public final fun component5 ()I
+	public final fun component5 ()Ljava/lang/String;
 	public final fun component6 ()Ljava/lang/String;
-	public final fun component7-xz4QBqg ()Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;
-	public final fun component8-xz4QBqg ()Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;
-	public final fun component9-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
-	public final fun copy-vFKhMc0 (Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/Double;Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;)Ldev/sargunv/mobilitydata/gtfs/schedule/StopTime;
-	public static synthetic fun copy-vFKhMc0$default (Ldev/sargunv/mobilitydata/gtfs/schedule/StopTime;Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/Double;Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/StopTime;
+	public final fun component7 ()I
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
+	public final fun copy-voRedgE (Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/Double;Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/StopTime;
+	public static synthetic fun copy-voRedgE$default (Ldev/sargunv/mobilitydata/gtfs/schedule/StopTime;Ljava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/utils/ServiceTime;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;Ljava/lang/Double;Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/StopTime;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getArrivalTime ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
 	public final fun getContinuousDropOff-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
 	public final fun getContinuousPickup-q3B4MUE ()Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
 	public final fun getDepartureTime ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
-	public final fun getDropOffType-xz4QBqg ()Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;
-	public final fun getPickupType-xz4QBqg ()Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropOffType;
+	public final fun getDropOffBookingRuleId ()Ljava/lang/String;
+	public final fun getDropOffType-P_AMKQQ ()Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;
+	public final fun getEndPickupDropOffWindow ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
+	public final fun getLocationGroupId ()Ljava/lang/String;
+	public final fun getLocationId ()Ljava/lang/String;
+	public final fun getPickupBookingRuleId ()Ljava/lang/String;
+	public final fun getPickupType-P_AMKQQ ()Ldev/sargunv/mobilitydata/gtfs/schedule/PickupDropoff;
 	public final fun getShapeDistTraveled ()Ljava/lang/Double;
+	public final fun getStartPickupDropOffWindow ()Ldev/sargunv/mobilitydata/utils/ServiceTime;
 	public final fun getStopHeadsign ()Ljava/lang/String;
 	public final fun getStopId ()Ljava/lang/String;
 	public final fun getStopSequence ()I
@@ -537,7 +531,6 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/StopTime$Companion {
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Timepoint {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint$Companion;
 	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/Timepoint;
-	public static fun constructor-impl (I)I
 	public fun equals (Ljava/lang/Object;)Z
 	public static fun equals-impl (ILjava/lang/Object;)Z
 	public static final fun equals-impl0 (II)Z
@@ -566,12 +559,46 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Timepoint$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class dev/sargunv/mobilitydata/gtfs/schedule/TriState {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/TriState$Companion;
+	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/TriState$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/TriState$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-qMlR7j4 (Lkotlinx/serialization/encoding/Decoder;)I
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-xxvul1g (Lkotlinx/serialization/encoding/Encoder;I)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/TriState$Companion {
+	public final fun getNo-XcTAKkk ()I
+	public final fun getUnknown-XcTAKkk ()I
+	public final fun getYes-XcTAKkk ()I
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Trip {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Trip$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility;Ldev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility;Ldev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
-	public final fun component10-b1oxrSs ()Ldev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed;
+	public final fun component10-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
+	public final fun component11-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()Ljava/lang/String;
@@ -579,12 +606,13 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Trip {
 	public final fun component6--4gII_U ()Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;
 	public final fun component7 ()Ljava/lang/String;
 	public final fun component8 ()Ljava/lang/String;
-	public final fun component9-9_Z6DLU ()Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility;
-	public final fun copy-fcQgAw4 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility;Ldev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed;)Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;
-	public static synthetic fun copy-fcQgAw4$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility;Ldev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;
+	public final fun component9-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
+	public final fun copy-5hJLgoE (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;)Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;
+	public static synthetic fun copy-5hJLgoE$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getBikesAllowed-b1oxrSs ()Ldev/sargunv/mobilitydata/gtfs/schedule/BikesAllowed;
+	public final fun getBikesAllowed-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun getBlockId ()Ljava/lang/String;
+	public final fun getCarsAllowed-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun getDirectionId--4gII_U ()Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;
 	public final fun getRouteId ()Ljava/lang/String;
 	public final fun getServiceId ()Ljava/lang/String;
@@ -592,7 +620,7 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Trip {
 	public final fun getTripHeadsign ()Ljava/lang/String;
 	public final fun getTripId ()Ljava/lang/String;
 	public final fun getTripShortName ()Ljava/lang/String;
-	public final fun getWheelchairAccessible-9_Z6DLU ()Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility;
+	public final fun getWheelchairAccessible-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
@@ -610,75 +638,5 @@ public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/Trip$$serial
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Trip$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility {
-	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility$Companion;
-	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility;
-	public static fun constructor-impl (I)I
-	public fun equals (Ljava/lang/Object;)Z
-	public static fun equals-impl (ILjava/lang/Object;)Z
-	public static final fun equals-impl0 (II)Z
-	public final fun getValue ()I
-	public fun hashCode ()I
-	public static fun hashCode-impl (I)I
-	public fun toString ()Ljava/lang/String;
-	public static fun toString-impl (I)Ljava/lang/String;
-	public final synthetic fun unbox-impl ()I
-}
-
-public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility$$serializer;
-	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public final fun deserialize-kvEqk4g (Lkotlinx/serialization/encoding/Decoder;)I
-	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public final fun serialize-mt9lCKI (Lkotlinx/serialization/encoding/Encoder;I)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/WheelchairAccessibility$Companion {
-	public final fun getAccessible-vZyhuPY ()I
-	public final fun getNoInfo-vZyhuPY ()I
-	public final fun getNotAccessible-vZyhuPY ()I
-	public final fun serializer ()Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding {
-	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding$Companion;
-	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding;
-	public static fun constructor-impl (I)I
-	public fun equals (Ljava/lang/Object;)Z
-	public static fun equals-impl (ILjava/lang/Object;)Z
-	public static final fun equals-impl0 (II)Z
-	public final fun getValue ()I
-	public fun hashCode ()I
-	public static fun hashCode-impl (I)I
-	public fun toString ()Ljava/lang/String;
-	public static fun toString-impl (I)Ljava/lang/String;
-	public final synthetic fun unbox-impl ()I
-}
-
-public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
-	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding$$serializer;
-	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public final fun deserialize-dkyk39M (Lkotlinx/serialization/encoding/Decoder;)I
-	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public final fun serialize-cY5-R5A (Lkotlinx/serialization/encoding/Encoder;I)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/WheelchairBoarding$Companion {
-	public final fun getAccessible-6f2kETA ()I
-	public final fun getNoInfo-6f2kETA ()I
-	public final fun getNotAccessible-6f2kETA ()I
-	public final fun serializer ()Lkotlinx/serialization/KSerializer;
-}
-
-public final class dev/sargunv/mobilitydata/gtfs/schedule/Zone {
-	public fun <init> ()V
 }
 

@@ -6,75 +6,42 @@ import kotlinx.io.files.Path
 import kotlinx.io.files.SystemFileSystem
 
 class ProducerTest {
-  private fun getProjectDir(): Path {
+
+  private inline fun <reified T> decodeCsvFile(path: String) {
     val cwd = SystemFileSystem.resolve(Path("."))
-    return when (cwd.name) {
-      "mobility-data-gtfs-schedule-test" -> cwd.parent!!.parent!!.parent!!.parent!!
-      "gtfs-schedule" -> cwd.parent!!
-      else -> error("unexpected: $cwd")
-    }
-  }
-
-  private fun openCsvFile(fileName: String) =
-    SystemFileSystem.source(
-        Path("${getProjectDir()}", "sample-data", "gtfs-schedule", "sound-transit", fileName)
-      )
+    val projectDir =
+      when (cwd.name) {
+        "mobility-data-gtfs-schedule-test" -> cwd.parent!!.parent!!.parent!!.parent!!
+        "gtfs-schedule" -> cwd.parent!!
+        else -> error("unexpected: $cwd")
+      }
+    SystemFileSystem.source(Path(projectDir, "sample-data", "gtfs-schedule", path))
       .buffered()
-
-  @Test
-  fun testAgency() {
-    openCsvFile("agency.txt").use { source ->
-      val agencies = GtfsCsv.decodeFromSource<Agency>(source)
-      // Consume the sequence to verify decoding works
-      agencies.forEach {}
-    }
+      .use { source ->
+        val count = GtfsCsv.decodeFromSource<T>(source).count()
+        println("${T::class.simpleName}: decoded $count records")
+      }
   }
 
   @Test
-  fun testRoutes() {
-    openCsvFile("routes.txt").use { source ->
-      val routes = GtfsCsv.decodeFromSource<Route>(source)
-      routes.forEach {}
-    }
+  fun amtrak() {
+    decodeCsvFile<Agency>("amtrak/agency.txt")
+    decodeCsvFile<Route>("amtrak/routes.txt")
+    decodeCsvFile<Trip>("amtrak/trips.txt")
+    decodeCsvFile<Stop>("amtrak/stops.txt")
+    decodeCsvFile<StopTime>("amtrak/stop_times.txt")
+    decodeCsvFile<ServiceCalendar>("amtrak/calendar.txt")
+    decodeCsvFile<ServiceCalendarOverride>("amtrak/calendar_dates.txt")
   }
 
   @Test
-  fun testTrips() {
-    openCsvFile("trips.txt").use { source ->
-      val trips = GtfsCsv.decodeFromSource<Trip>(source)
-      trips.forEach {}
-    }
-  }
-
-  @Test
-  fun testStops() {
-    openCsvFile("stops.txt").use { source ->
-      val stops = GtfsCsv.decodeFromSource<Stop>(source)
-      stops.forEach {}
-    }
-  }
-
-  @Test
-  fun testStopTimes() {
-    openCsvFile("stop_times.txt").use { source ->
-      val stopTimes = GtfsCsv.decodeFromSource<StopTime>(source)
-      stopTimes.forEach {}
-    }
-  }
-
-  @Test
-  fun testCalendar() {
-    openCsvFile("calendar.txt").use { source ->
-      val calendars = GtfsCsv.decodeFromSource<ServiceCalendar>(source)
-      calendars.forEach {}
-    }
-  }
-
-  @Test
-  fun testCalendarDates() {
-    openCsvFile("calendar_dates.txt").use { source ->
-      val calendarDates = GtfsCsv.decodeFromSource<CalendarDate>(source)
-      calendarDates.forEach {}
-    }
+  fun `puget-sound`() {
+    decodeCsvFile<Agency>("puget-sound/agency.txt")
+    decodeCsvFile<Route>("puget-sound/routes.txt")
+    decodeCsvFile<Trip>("puget-sound/trips.txt")
+    decodeCsvFile<Stop>("puget-sound/stops.txt")
+    decodeCsvFile<StopTime>("puget-sound/stop_times.txt")
+    decodeCsvFile<ServiceCalendar>("puget-sound/calendar.txt")
+    decodeCsvFile<ServiceCalendarOverride>("puget-sound/calendar_dates.txt")
   }
 }

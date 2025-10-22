@@ -3,13 +3,14 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
+import kotlinx.datetime.TimeZone
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
  * Stops where vehicles pick up or drop off riders.
  *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stopstxt)
+ * This class represents a record in the stops.txt file.
  */
 @Serializable
 public data class Stop(
@@ -26,16 +27,16 @@ public data class Stop(
   @SerialName("tts_stop_name") public val ttsStopName: String? = null,
 
   /** Description of the location. */
-  @SerialName("stop_desc") public val stopDesc: String? = null,
+  @SerialName("stop_desc") public val stopDescription: String? = null,
 
   /** Latitude of the location. */
-  @SerialName("stop_lat") public val stopLat: Double? = null,
+  @SerialName("stop_lat") public val stopLatitude: Double? = null,
 
   /** Longitude of the location. */
-  @SerialName("stop_lon") public val stopLon: Double? = null,
+  @SerialName("stop_lon") public val stopLongitude: Double? = null,
 
   /** Identifies the fare zone for a stop. */
-  @SerialName("zone_id") public val zoneId: String? = null,
+  @SerialName("zone_id") public val zoneId: Id<Zone>? = null,
 
   /** URL of a web page about the location. */
   @SerialName("stop_url") public val stopUrl: Url? = null,
@@ -47,26 +48,26 @@ public data class Stop(
   @SerialName("parent_station") public val parentStation: Id<Stop>? = null,
 
   /** Timezone of the location. */
-  @SerialName("stop_timezone") public val stopTimezone: String? = null,
+  @SerialName("stop_timezone") public val stopTimezone: TimeZone? = null,
 
   /** Indicates whether wheelchair boardings are possible from the location. */
-  @SerialName("wheelchair_boarding") public val wheelchairBoarding: WheelchairBoarding? = null,
+  @SerialName("wheelchair_boarding") public val wheelchairBoarding: TriState? = null,
 
   /** Level of the location. */
-  @SerialName("level_id") public val levelId: String? = null,
+  @SerialName("level_id") public val levelId: Id<Level>? = null,
 
   /** Platform identifier for a platform stop. */
   @SerialName("platform_code") public val platformCode: String? = null,
+
+  /** Indicates how the stop is accessed for a particular station. */
+  @SerialName("stop_access") public val stopAccess: StopAccess? = null,
 )
 
-/**
- * Type of the location.
- *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stopstxt)
- */
+/** Type of the location. */
 @Serializable
 @JvmInline
-public value class LocationType(
+public value class LocationType
+private constructor(
   /** The integer value representing the location type. */
   public val value: Int
 ) {
@@ -81,7 +82,7 @@ public value class LocationType(
     public val Station: LocationType = LocationType(1)
 
     /** Entrance/Exit. A location where passengers can enter or exit a station. */
-    public val EntranceExit: LocationType = LocationType(2)
+    public val EntranceOrExit: LocationType = LocationType(2)
 
     /** Generic Node. A location within a station, not matching any other location_type. */
     public val GenericNode: LocationType = LocationType(3)
@@ -91,32 +92,28 @@ public value class LocationType(
   }
 }
 
-/**
- * Indicates whether wheelchair boardings are possible from the location.
- *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#stopstxt)
- */
+/** Indicates how the stop is accessed for a particular station. */
 @Serializable
 @JvmInline
-public value class WheelchairBoarding(
-  /** The integer value representing wheelchair boarding status. */
+public value class StopAccess
+private constructor(
+  /** The integer value representing the stop access type. */
   public val value: Int
 ) {
-  /** Companion object containing predefined wheelchair boarding constants. */
+  /** Companion object containing predefined stop access constants. */
   public companion object {
-    /** No accessibility information for the stop. */
-    public val NoInfo: WheelchairBoarding = WheelchairBoarding(0)
+    /**
+     * The stop/platform cannot be directly accessed from the street network. It must be accessed
+     * from a station entrance if there is one defined for the station, otherwise the station
+     * itself. If there are pathways defined for the station, they must be used to access the
+     * stop/platform.
+     */
+    public val Indirect: StopAccess = StopAccess(0)
 
-    /** Some vehicles at this stop can be boarded by a rider in a wheelchair. */
-    public val Accessible: WheelchairBoarding = WheelchairBoarding(1)
-
-    /** Wheelchair boarding is not possible at this stop. */
-    public val NotAccessible: WheelchairBoarding = WheelchairBoarding(2)
+    /**
+     * Consuming applications should generate directions for access directly to the stop,
+     * independent of any entrances or pathways of the parent station.
+     */
+    public val Direct: StopAccess = StopAccess(1)
   }
 }
-
-/** Placeholder for Zone entity. */
-public class Zone
-
-/** Placeholder for Level entity. */
-public class Level

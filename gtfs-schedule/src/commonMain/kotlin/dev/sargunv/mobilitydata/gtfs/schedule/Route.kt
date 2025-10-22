@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 /**
  * Transit routes. A route is a group of trips that are displayed to riders as a single service.
  *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#routestxt)
+ * This class represents a record in the routes.txt file.
  */
 @Serializable
 public data class Route(
@@ -53,17 +53,20 @@ public data class Route(
   @SerialName("continuous_drop_off") public val continuousDropOff: ContinuousPickupDropOff? = null,
 
   /** Network ID to which a route belongs. */
-  @SerialName("network_id") public val networkId: String? = null,
+  @SerialName("network_id") public val networkId: Id<Network>? = null,
+
+  /**
+   * Indicates if riders can access a transit service associated with this route by using a
+   * contactless EMV card or mobile device as fare media at a fare validator.
+   */
+  @SerialName("cemv_support") public val cemvSupport: TriState? = null,
 )
 
-/**
- * Type of transportation used on a route.
- *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#routestxt)
- */
+/** Type of transportation used on a route. */
 @Serializable
 @JvmInline
-public value class RouteType(
+public value class RouteType
+private constructor(
   /** The integer value representing the route type. */
   public val value: Int
 ) {
@@ -101,14 +104,11 @@ public value class RouteType(
   }
 }
 
-/**
- * Indicates continuous pickup or drop off behavior.
- *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#routestxt)
- */
+/** Indicates continuous pickup or drop off behavior. */
 @Serializable
 @JvmInline
-public value class ContinuousPickupDropOff(
+public value class ContinuousPickupDropOff
+private constructor(
   /** The integer value representing the continuous pickup/drop off type. */
   public val value: Int
 ) {
@@ -127,6 +127,3 @@ public value class ContinuousPickupDropOff(
     public val CoordinateWithDriver: ContinuousPickupDropOff = ContinuousPickupDropOff(3)
   }
 }
-
-/** Placeholder for Network entity. */
-public class Network

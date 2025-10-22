@@ -6,8 +6,8 @@ Kotlin Multiplatform.
 ## Modules
 
 - `./utils` - Common utilities for all modules
-- `./gtfs-schedule` - (TODO) General Transit Feed Specification (GTFS) -
-  Schedule client
+- `./gtfs-schedule` - General Transit Feed Specification (GTFS) - Schedule
+  client
     - Reference:
       https://raw.githubusercontent.com/google/transit/refs/heads/master/gtfs/spec/en/reference.md
 - `./gtfs-realtime` - (TODO) GTFS - Realtime client

@@ -9,9 +9,7 @@ import kotlinx.serialization.Serializable
 /**
  * Service dates specified using a weekly schedule with start and end dates.
  *
- * This file represents the calendar.txt file in GTFS.
- *
- * See [GTFS Reference](https://gtfs.org/documentation/schedule/reference/#calendartxt)
+ * This class represents a record in the calendar.txt file.
  */
 @Serializable
 public data class ServiceCalendar(
@@ -42,6 +40,6 @@ public data class ServiceCalendar(
   /** Start service day for the service interval. */
   @SerialName("start_date") public val startDate: BasicLocalDate,
 
-  /** End service day for the service interval. */
+  /** End service day (inclusive) for the service interval. */
   @SerialName("end_date") public val endDate: BasicLocalDate,
 )
