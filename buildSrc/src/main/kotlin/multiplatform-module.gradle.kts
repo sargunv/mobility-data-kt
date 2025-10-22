@@ -1,8 +1,6 @@
 @file:OptIn(ExperimentalWasmDsl::class)
 
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.internal.platform.wasm.WasmPlatforms.wasmJs
-import org.jetbrains.kotlin.gradle.internal.platform.wasm.WasmPlatforms.wasmWasi
 import org.jetbrains.kotlin.gradle.plugin.KotlinJsCompilerType
 
 plugins { id("base-module") }
@@ -13,14 +11,7 @@ kotlin {
       // our mock http tests rely on the filesystem
       testTask { enabled = false }
     }
-    nodejs {
-      testTask {
-        useMocha {
-          // Increase timeout to prevent intermittent failures
-          timeout = "10000"
-        }
-      }
-    }
+    nodejs {}
   }
 
   wasmJs {
@@ -28,14 +19,7 @@ kotlin {
       // our mock http tests rely on the filesystem
       testTask { enabled = false }
     }
-    nodejs {
-      testTask {
-        useMocha {
-          // Increase timeout to prevent intermittent failures
-          timeout = "10000"
-        }
-      }
-    }
+    nodejs {}
     d8 {
       // https://github.com/sargunv/mobility-data-kt/issues/5
       testTask { enabled = false }
