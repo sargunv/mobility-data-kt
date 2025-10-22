@@ -22,7 +22,6 @@ jobs:
               with:
                   fetch-depth: 0
                   fetch-tags: true
-                  submodules: recursive
             - uses: actions/setup-java@v5
               with:
                   distribution: temurin

@@ -14,7 +14,7 @@ targets, including JVM, Native, JS, and WASM.
 
 It implements clients for:
 
-- TODO: General Transit Feed Specification (GTFS)
+- General Transit Feed Specification (GTFS)
 - General Bikeshare Feed Specification (GBFS)
 - General On-Demand Feed Specification (GOFS)
 
