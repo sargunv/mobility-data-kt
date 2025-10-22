@@ -15,14 +15,14 @@ private val expected =
   listOf(
     FareAttribute(
       fareId = "p",
-      price = 1.25f,
+      price = 1.25,
       currencyType = "USD",
       paymentMethod = PaymentMethod.OnBoard,
-      transfers = Transfers.None,
+      transfers = 0,
     ),
     FareAttribute(
       fareId = "a",
-      price = 5.25f,
+      price = 5.25,
       currencyType = "USD",
       paymentMethod = PaymentMethod.OnBoard,
       transfers = null,
