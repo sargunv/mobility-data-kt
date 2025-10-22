@@ -16,6 +16,7 @@ jobs:
               with:
                   fetch-depth: 0
                   fetch-tags: true
+                  lfs: true
             - uses: actions/setup-java@v5
               with:
                   distribution: temurin
@@ -52,6 +53,7 @@ jobs:
                   fetch-depth: 0
                   fetch-tags: true
                   persist-credentials: false
+                  lfs: true
             - uses: actions/setup-java@v5
               with:
                   distribution: temurin

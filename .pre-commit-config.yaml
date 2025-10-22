@@ -35,4 +35,4 @@ repos:
             stages: [manual]
 
 # ignore formatting for generated and test files
-exclude: '^(.*\.api)|(sample-data/.*)$'
+exclude: '^.*\.api$'
