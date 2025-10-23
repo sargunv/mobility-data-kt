@@ -48,8 +48,5 @@ public typealias Block = Nothing
 /** Placeholder type for GTFS route shapes. */
 public typealias Shape = Nothing
 
-/** Placeholder type for GTFS location groups. */
-public typealias LocationGroup = Nothing
-
 /** Placeholder type for GTFS booking rules. */
 public typealias BookingRule = Nothing

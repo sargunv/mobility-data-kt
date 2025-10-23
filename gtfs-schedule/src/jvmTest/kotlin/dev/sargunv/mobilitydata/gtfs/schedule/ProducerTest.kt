@@ -93,3 +93,5 @@ class ProducerTest {
 // - networks.txt
 // - rider_categories.txt
 // - route_networks.txt
+// - location_groups.txt
+// - location_group_stops.txt
