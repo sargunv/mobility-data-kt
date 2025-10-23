@@ -892,6 +892,42 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/ServiceCalendarOverrid
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class dev/sargunv/mobilitydata/gtfs/schedule/Shape {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Shape$Companion;
+	public fun <init> (Ljava/lang/String;DDILjava/lang/Double;)V
+	public synthetic fun <init> (Ljava/lang/String;DDILjava/lang/Double;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()D
+	public final fun component3 ()D
+	public final fun component4 ()I
+	public final fun component5 ()Ljava/lang/Double;
+	public final fun copy (Ljava/lang/String;DDILjava/lang/Double;)Ldev/sargunv/mobilitydata/gtfs/schedule/Shape;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Shape;Ljava/lang/String;DDILjava/lang/Double;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Shape;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getShapeDistTraveled ()Ljava/lang/Double;
+	public final fun getShapeId ()Ljava/lang/String;
+	public final fun getShapePointLatitude ()D
+	public final fun getShapePointLongitude ()D
+	public final fun getShapePointSequence ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/Shape$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/Shape$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/Shape;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/Shape;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/Shape$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Stop {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Stop$Companion;
 	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/StopAccess;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
