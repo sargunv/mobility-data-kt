@@ -11,7 +11,7 @@ kotlin {
       // our mock http tests rely on the filesystem
       testTask { enabled = false }
     }
-    nodejs {}
+    nodejs { testTask { useMocha { timeout = "10s" } } }
   }
 
   wasmJs {
