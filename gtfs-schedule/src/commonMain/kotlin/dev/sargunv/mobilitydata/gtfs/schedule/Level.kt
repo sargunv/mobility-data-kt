@@ -19,7 +19,4 @@ public data class Level(
 
   /** Name of the level. */
   @SerialName("level_name") public val levelName: String? = null,
-
-  /** Elevation of the level in meters. */
-  @SerialName("level_elevation") public val levelElevation: Double? = null,
 )

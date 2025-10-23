@@ -1,6 +1,8 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.Id
+import dev.sargunv.mobilitydata.utils.IntBoolean
+import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -25,13 +27,13 @@ public data class Pathway(
   @SerialName("pathway_mode") public val pathwayMode: PathwayMode,
 
   /** Indicates whether the pathway can be used in both directions. */
-  @SerialName("is_bidirectional") public val isBidirectional: Boolean,
+  @SerialName("is_bidirectional") public val isBidirectional: IntBoolean,
 
   /** Horizontal length in meters of the pathway from the origin location to the destination. */
   @SerialName("length") public val length: Double? = null,
 
   /** Average time in seconds needed to walk through the pathway from the origin to destination. */
-  @SerialName("traversal_time") public val traversalTime: Int? = null,
+  @SerialName("traversal_time") public val traversalTime: WholeSeconds? = null,
 
   /** Number of stairs of the pathway. */
   @SerialName("stair_count") public val stairCount: Int? = null,
