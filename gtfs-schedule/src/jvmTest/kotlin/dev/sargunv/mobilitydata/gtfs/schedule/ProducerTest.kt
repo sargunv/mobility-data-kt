@@ -32,6 +32,8 @@ class ProducerTest {
     decodeCsvFile<StopTime>("amtrak/stop_times.txt")
     decodeCsvFile<ServiceCalendar>("amtrak/calendar.txt")
     decodeCsvFile<ServiceCalendarOverride>("amtrak/calendar_dates.txt")
+    decodeCsvFile<FareAttribute>("amtrak/fare_attributes.txt")
+    decodeCsvFile<FareRule>("amtrak/fare_rules.txt")
   }
 
   @Test
@@ -43,5 +45,7 @@ class ProducerTest {
     decodeCsvFile<StopTime>("puget-sound/stop_times.txt")
     decodeCsvFile<ServiceCalendar>("puget-sound/calendar.txt")
     decodeCsvFile<ServiceCalendarOverride>("puget-sound/calendar_dates.txt")
+    decodeCsvFile<FareAttribute>("puget-sound/fare_attributes.txt")
+    decodeCsvFile<FareRule>("puget-sound/fare_rules.txt")
   }
 }

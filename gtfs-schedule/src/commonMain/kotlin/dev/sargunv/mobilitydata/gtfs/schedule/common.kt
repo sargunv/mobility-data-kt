@@ -42,9 +42,6 @@ public typealias Zone = Nothing
 /** Placeholder type for GTFS station levels. */
 public typealias Level = Nothing
 
-/** Placeholder type for GTFS route networks. */
-public typealias Network = Nothing
-
 /** Placeholder type for GTFS trip blocks. */
 public typealias Block = Nothing
 
