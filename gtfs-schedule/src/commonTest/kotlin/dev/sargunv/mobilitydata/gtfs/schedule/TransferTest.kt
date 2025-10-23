@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.time.Duration.Companion.seconds
 
 private val csvContent = // language=CSV
   """
@@ -20,7 +21,7 @@ private val expected =
       fromStopId = "STOP3",
       toStopId = "STOP4",
       transferType = TransferType.MinimumTime,
-      minTransferTime = 180,
+      minTransferTime = 180.seconds,
     ),
     Transfer(
       fromStopId = "STOP5",

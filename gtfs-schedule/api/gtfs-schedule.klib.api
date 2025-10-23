@@ -822,7 +822,7 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/Timeframe { // dev.sargunv.mo
 }
 
 final class dev.sargunv.mobilitydata.gtfs.schedule/Transfer { // dev.sargunv.mobilitydata.gtfs.schedule/Transfer|null[0]
-    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TransferType? = ..., kotlin/Int? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.TransferType?;kotlin.Int?){}[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TransferType? = ..., kotlin.time/Duration? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.TransferType?;kotlin.time.Duration?){}[0]
 
     final val fromRouteId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromRouteId|{}fromRouteId[0]
         final fun <get-fromRouteId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromRouteId.<get-fromRouteId>|<get-fromRouteId>(){}[0]
@@ -831,7 +831,7 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/Transfer { // dev.sargunv.mob
     final val fromTripId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromTripId|{}fromTripId[0]
         final fun <get-fromTripId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromTripId.<get-fromTripId>|<get-fromTripId>(){}[0]
     final val minTransferTime // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.minTransferTime|{}minTransferTime[0]
-        final fun <get-minTransferTime>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.minTransferTime.<get-minTransferTime>|<get-minTransferTime>(){}[0]
+        final fun <get-minTransferTime>(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.minTransferTime.<get-minTransferTime>|<get-minTransferTime>(){}[0]
     final val toRouteId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toRouteId|{}toRouteId[0]
         final fun <get-toRouteId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toRouteId.<get-toRouteId>|<get-toRouteId>(){}[0]
     final val toStopId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toStopId|{}toStopId[0]
@@ -848,8 +848,8 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/Transfer { // dev.sargunv.mob
     final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component5|component5(){}[0]
     final fun component6(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component6|component6(){}[0]
     final fun component7(): dev.sargunv.mobilitydata.gtfs.schedule/TransferType? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component7|component7(){}[0]
-    final fun component8(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component8|component8(){}[0]
-    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TransferType? = ..., kotlin/Int? = ...): dev.sargunv.mobilitydata.gtfs.schedule/Transfer // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.copy|copy(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.TransferType?;kotlin.Int?){}[0]
+    final fun component8(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component8|component8(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TransferType? = ..., kotlin.time/Duration? = ...): dev.sargunv.mobilitydata.gtfs.schedule/Transfer // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.copy|copy(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.TransferType?;kotlin.time.Duration?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toString|toString(){}[0]

@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.Id
+import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -55,7 +56,7 @@ public data class Transfer(
    * Amount of time, in seconds, that must be available to permit a transfer between routes at the
    * specified stops.
    */
-  @SerialName("min_transfer_time") public val minTransferTime: Int? = null,
+  @SerialName("min_transfer_time") public val minTransferTime: WholeSeconds? = null,
 )
 
 /** Indicates the type of connection for a transfer. */

@@ -1139,8 +1139,8 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Timepoint$Companion {
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Transfer {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Transfer$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TransferType;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TransferType;Ljava/lang/Integer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TransferType;Lkotlin/time/Duration;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TransferType;Lkotlin/time/Duration;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
@@ -1148,14 +1148,14 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Transfer {
 	public final fun component5 ()Ljava/lang/String;
 	public final fun component6 ()Ljava/lang/String;
 	public final fun component7-7aZr9Fg ()Ldev/sargunv/mobilitydata/gtfs/schedule/TransferType;
-	public final fun component8 ()Ljava/lang/Integer;
-	public final fun copy-etkLCNc (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TransferType;Ljava/lang/Integer;)Ldev/sargunv/mobilitydata/gtfs/schedule/Transfer;
-	public static synthetic fun copy-etkLCNc$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Transfer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TransferType;Ljava/lang/Integer;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Transfer;
+	public final fun component8-FghU774 ()Lkotlin/time/Duration;
+	public final fun copy-hNU-sjs (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TransferType;Lkotlin/time/Duration;)Ldev/sargunv/mobilitydata/gtfs/schedule/Transfer;
+	public static synthetic fun copy-hNU-sjs$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Transfer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TransferType;Lkotlin/time/Duration;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Transfer;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getFromRouteId ()Ljava/lang/String;
 	public final fun getFromStopId ()Ljava/lang/String;
 	public final fun getFromTripId ()Ljava/lang/String;
-	public final fun getMinTransferTime ()Ljava/lang/Integer;
+	public final fun getMinTransferTime-FghU774 ()Lkotlin/time/Duration;
 	public final fun getToRouteId ()Ljava/lang/String;
 	public final fun getToStopId ()Ljava/lang/String;
 	public final fun getToTripId ()Ljava/lang/String;
