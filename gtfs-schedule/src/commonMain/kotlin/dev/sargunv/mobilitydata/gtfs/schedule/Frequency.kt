@@ -1,9 +1,9 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.Id
+import dev.sargunv.mobilitydata.utils.IntBoolean
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import dev.sargunv.mobilitydata.utils.WholeSeconds
-import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -28,30 +28,10 @@ public data class Frequency(
   /** Time between departures from the same stop (headway) for the trip. */
   @SerialName("headway_secs") public val headwaySecs: WholeSeconds,
 
-  /** Indicates the type of service for a trip. */
-  @SerialName("exact_times") public val exactTimes: ExactTimes? = null,
+  /**
+   * Indicates the type of service for a trip. When false (0), frequency-based trips are not exactly
+   * scheduled. When true (1), schedule-based trips with exact times. Defaults to false when null or
+   * empty.
+   */
+  @SerialName("exact_times") public val exactTimes: IntBoolean? = null,
 )
-
-/** Indicates the type of service for a trip. */
-@Serializable
-@JvmInline
-public value class ExactTimes
-private constructor(
-  /** The integer value representing the exact times type. */
-  public val value: Int
-) {
-  /** Companion object containing predefined exact times constants. */
-  public companion object {
-    /**
-     * Frequency-based trips. Trips are not scheduled exactly, but the specified headway is
-     * maintained.
-     */
-    public val FrequencyBased: ExactTimes = ExactTimes(0)
-
-    /**
-     * Schedule-based trips. Trips follow a fixed schedule with exact departure times that can be
-     * derived from start_time and headway_secs.
-     */
-    public val ScheduleBased: ExactTimes = ExactTimes(1)
-  }
-}
