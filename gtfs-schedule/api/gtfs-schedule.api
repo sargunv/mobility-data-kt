@@ -537,6 +537,65 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Frequency$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class dev/sargunv/mobilitydata/gtfs/schedule/LocationGroup {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroup$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroup;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroup;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroup;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLocationGroupId ()Ljava/lang/String;
+	public final fun getLocationGroupName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/LocationGroup$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroup$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroup;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroup;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/LocationGroup$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLocationGroupId ()Ljava/lang/String;
+	public final fun getStopId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/LocationGroupStop$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/gtfs/schedule/LocationType {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType$Companion;
 	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/LocationType;

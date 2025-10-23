@@ -45,8 +45,5 @@ public typealias Level = Nothing
 /** Placeholder type for GTFS trip blocks. */
 public typealias Block = Nothing
 
-/** Placeholder type for GTFS location groups. */
-public typealias LocationGroup = Nothing
-
 /** Placeholder type for GTFS booking rules. */
 public typealias BookingRule = Nothing
