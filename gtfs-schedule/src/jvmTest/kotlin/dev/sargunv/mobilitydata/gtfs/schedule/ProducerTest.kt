@@ -48,7 +48,7 @@ class ProducerTest {
     decodeCsvFile<Shape>("puget-sound/shapes.txt")
     decodeCsvFile<StopTime>("puget-sound/stop_times.txt")
     decodeCsvFile<Stop>("puget-sound/stops.txt")
-    // decodeCsvFile<Transfer>("transfers.txt")
+    decodeCsvFile<Transfer>("puget-sound/transfers.txt")
     decodeCsvFile<Trip>("puget-sound/trips.txt")
   }
 
@@ -82,7 +82,7 @@ class ProducerTest {
     decodeCsvFile<StopTime>("mbta/stop_times.txt")
     decodeCsvFile<Stop>("mbta/stops.txt")
     decodeCsvFile<Timeframe>("mbta/timeframes.txt")
-    // decodeCsvFile<Transfer>("mbta/transfers.txt")
+    decodeCsvFile<Transfer>("mbta/transfers.txt")
     decodeCsvFile<Trip>("mbta/trips.txt")
     // decodeCsvFile<TripProperty>("mbta/trips_properties.txt")
     // decodeCsvFile<TripPropertyDefinition>("mbta/trips_properties_definitions.txt")
