@@ -413,18 +413,18 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/GbfsV3Client : java/lang/Aut
 	public fun <init> (Lkotlin/jvm/functions/Function1;)V
 	public synthetic fun <init> (Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun close ()V
-	public final fun getDatasetManifest (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getGeofencingZones (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getServiceManifest (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getStationInformation (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getStationStatus (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemAlerts (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemInformation (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemPricingPlans (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemRegions (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getVehicleStatus (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getVehicleTypes (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getVersionManifest (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getDatasetManifest-gIAlu-s (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getGeofencingZones-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getServiceManifest-gIAlu-s (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getStationInformation-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getStationStatus-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemAlerts-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemInformation-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemPricingPlans-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemRegions-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getVehicleStatus-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getVehicleTypes-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getVersionManifest-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v3/ServiceManifest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/GeofencingZone {
