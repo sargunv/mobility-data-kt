@@ -72,6 +72,54 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Area$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class dev/sargunv/mobilitydata/gtfs/schedule/Attribution {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Attribution$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/Boolean;
+	public final fun component7 ()Ljava/lang/Boolean;
+	public final fun component8 ()Ljava/lang/Boolean;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/Attribution;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Attribution;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Attribution;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAgencyId ()Ljava/lang/String;
+	public final fun getAttributionEmail ()Ljava/lang/String;
+	public final fun getAttributionId ()Ljava/lang/String;
+	public final fun getAttributionPhone ()Ljava/lang/String;
+	public final fun getAttributionUrl ()Ljava/lang/String;
+	public final fun getOrganizationName ()Ljava/lang/String;
+	public final fun getRouteId ()Ljava/lang/String;
+	public final fun getTripId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isAuthority ()Ljava/lang/Boolean;
+	public final fun isOperator ()Ljava/lang/Boolean;
+	public final fun isProducer ()Ljava/lang/Boolean;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/Attribution$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/Attribution$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/Attribution;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/Attribution;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/Attribution$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/gtfs/schedule/CommonKt {
 	public static final fun getGtfsCsv ()Ldev/sargunv/kotlindsv/DsvFormat;
 }
@@ -498,6 +546,52 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/FareTransferType$Compa
 	public final fun getFromLegPlusTransfer-OUfzTkk ()I
 	public final fun getFromLegPlusTransferPlusToLeg-OUfzTkk ()I
 	public final fun getTransferOnly-OUfzTkk ()I
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/FeedInfo {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/FeedInfo$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Lkotlinx/datetime/LocalDate;
+	public final fun component6 ()Lkotlinx/datetime/LocalDate;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/FeedInfo;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/schedule/FeedInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/FeedInfo;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDefaultLang ()Ljava/lang/String;
+	public final fun getFeedContactEmail ()Ljava/lang/String;
+	public final fun getFeedContactUrl ()Ljava/lang/String;
+	public final fun getFeedEndDate ()Lkotlinx/datetime/LocalDate;
+	public final fun getFeedId ()Ljava/lang/String;
+	public final fun getFeedLang ()Ljava/lang/String;
+	public final fun getFeedPublisherName ()Ljava/lang/String;
+	public final fun getFeedPublisherUrl ()Ljava/lang/String;
+	public final fun getFeedStartDate ()Lkotlinx/datetime/LocalDate;
+	public final fun getFeedVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/FeedInfo$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/FeedInfo$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/FeedInfo;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/FeedInfo;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/FeedInfo$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
