@@ -134,7 +134,7 @@ final class dev.sargunv.mobilitydata.gbfs.v3/AlertTime { // dev.sargunv.mobility
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v3/BrandAssets { // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets|null[0]
-    constructor <init>(kotlinx.datetime/LocalDate, kotlin/String? = ..., kotlin/String, kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.<init>|<init>(kotlinx.datetime.LocalDate;kotlin.String?;kotlin.String;kotlin.String?;kotlin.String?){}[0]
+    constructor <init>(kotlinx.datetime/LocalDate, kotlin/String? = ..., kotlin/String, kotlin/String? = ..., dev.sargunv.mobilitydata.utils/RgbColor? = ...) // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.<init>|<init>(kotlinx.datetime.LocalDate;kotlin.String?;kotlin.String;kotlin.String?;dev.sargunv.mobilitydata.utils.RgbColor?){}[0]
 
     final val brandImageUrl // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.brandImageUrl|{}brandImageUrl[0]
         final fun <get-brandImageUrl>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.brandImageUrl.<get-brandImageUrl>|<get-brandImageUrl>(){}[0]
@@ -145,14 +145,14 @@ final class dev.sargunv.mobilitydata.gbfs.v3/BrandAssets { // dev.sargunv.mobili
     final val brandTermsUrl // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.brandTermsUrl|{}brandTermsUrl[0]
         final fun <get-brandTermsUrl>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.brandTermsUrl.<get-brandTermsUrl>|<get-brandTermsUrl>(){}[0]
     final val color // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.color|{}color[0]
-        final fun <get-color>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.color.<get-color>|<get-color>(){}[0]
+        final fun <get-color>(): dev.sargunv.mobilitydata.utils/RgbColor? // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.color.<get-color>|<get-color>(){}[0]
 
     final fun component1(): kotlinx.datetime/LocalDate // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.component1|component1(){}[0]
     final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.component2|component2(){}[0]
     final fun component3(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.component3|component3(){}[0]
     final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.component4|component4(){}[0]
-    final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.component5|component5(){}[0]
-    final fun copy(kotlinx.datetime/LocalDate = ..., kotlin/String? = ..., kotlin/String = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gbfs.v3/BrandAssets // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.copy|copy(kotlinx.datetime.LocalDate;kotlin.String?;kotlin.String;kotlin.String?;kotlin.String?){}[0]
+    final fun component5(): dev.sargunv.mobilitydata.utils/RgbColor? // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.component5|component5(){}[0]
+    final fun copy(kotlinx.datetime/LocalDate = ..., kotlin/String? = ..., kotlin/String = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.utils/RgbColor? = ...): dev.sargunv.mobilitydata.gbfs.v3/BrandAssets // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.copy|copy(kotlinx.datetime.LocalDate;kotlin.String?;kotlin.String;kotlin.String?;dev.sargunv.mobilitydata.utils.RgbColor?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/BrandAssets.toString|toString(){}[0]
