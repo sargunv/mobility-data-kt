@@ -35,12 +35,6 @@ import kotlinx.datetime.serializers.LocalTimeIso8601Serializer
 import kotlinx.datetime.toInstant
 import kotlinx.serialization.Serializable
 
-/** A string that identifies that particular entity of type [T]. */
-public typealias Id<@Suppress("unused") T> = String
-
-/** A string that identifies that particular entity of type [T1] or [T2]. */
-public typealias Id2<@Suppress("unused") T1, @Suppress("unused") T2> = String
-
 /** Currency code following the [ISO 4217 standard](https://en.wikipedia.org/wiki/ISO_4217). */
 public typealias CurrencyCode = String
 

@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import dev.sargunv.mobilitydata.utils.WholeMinutes
 import kotlin.jvm.JvmInline
@@ -26,12 +25,12 @@ public data class BookingRule(
    * One or many zone IDs from zones.json that cover the area of the pickup location for this
    * booking rule.
    */
-  @SerialName("from_zone_ids") public val fromZoneIds: List<Id<Zone>>,
+  @SerialName("from_zone_ids") public val fromZoneIds: List<String>,
   /**
    * One or many zone IDs from zones.json that cover the area of the destination for this booking
    * rule.
    */
-  @SerialName("to_zone_ids") public val toZoneIds: List<Id<Zone>>?,
+  @SerialName("to_zone_ids") public val toZoneIds: List<String>?,
   /** Indicates how far in advance booking can be made. */
   @SerialName("booking_type") public val bookingType: BookingType,
   /**
@@ -77,7 +76,7 @@ public data class BookingRule(
    * prior_notice_start_day=2 will be two business days in advance. Optional if booking_type=2.
    * Forbidden otherwise.
    */
-  @SerialName("prior_notice_calendar_id") public val priorNoticeCalendarId: Id<Calendar>? = null,
+  @SerialName("prior_notice_calendar_id") public val priorNoticeCalendarId: String? = null,
   /**
    * Message to riders utilizing service inside a zone when booking on-demand pickup and drop off.
    * Meant to provide minimal information to be transmitted within a user interface about the action

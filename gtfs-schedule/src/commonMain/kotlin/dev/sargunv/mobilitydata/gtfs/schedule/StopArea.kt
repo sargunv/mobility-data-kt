@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,8 +11,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class StopArea(
   /** Identifies an area. */
-  @SerialName("area_id") public val areaId: Id<Area>,
+  @SerialName("area_id") public val areaId: String,
 
   /** Identifies a stop. */
-  @SerialName("stop_id") public val stopId: Id<Stop>,
+  @SerialName("stop_id") public val stopId: String,
 )

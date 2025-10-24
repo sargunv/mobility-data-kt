@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v1
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.IntBoolean
 import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.serialization.SerialName
@@ -18,7 +17,7 @@ public data class SystemPricingPlans(
 @Serializable
 public data class PricingPlan(
   /** Identifier for a pricing plan in the system. */
-  @SerialName("plan_id") public val planId: Id<PricingPlan>,
+  @SerialName("plan_id") public val planId: String,
 
   /** URL where the customer can learn more about this pricing plan. */
   public val url: Url? = null,

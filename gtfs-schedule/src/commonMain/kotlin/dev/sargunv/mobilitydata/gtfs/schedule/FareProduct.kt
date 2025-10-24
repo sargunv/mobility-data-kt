@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -13,16 +12,16 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class FareProduct(
   /** Identifies a fare product or set of fare products. */
-  @SerialName("fare_product_id") public val fareProductId: Id<FareProduct>,
+  @SerialName("fare_product_id") public val fareProductId: String,
 
   /** The name of the fare product as displayed to riders. */
   @SerialName("fare_product_name") public val fareProductName: String? = null,
 
   /** Identifies a rider category eligible for the fare product. */
-  @SerialName("rider_category_id") public val riderCategoryId: Id<RiderCategory>? = null,
+  @SerialName("rider_category_id") public val riderCategoryId: String? = null,
 
   /** Identifies a fare media that can be employed to use the fare product. */
-  @SerialName("fare_media_id") public val fareMediaId: Id<FareMedia>? = null,
+  @SerialName("fare_media_id") public val fareMediaId: String? = null,
 
   /** The cost of the fare product. May be negative to represent transfer discounts. */
   @SerialName("amount") public val amount: Double,

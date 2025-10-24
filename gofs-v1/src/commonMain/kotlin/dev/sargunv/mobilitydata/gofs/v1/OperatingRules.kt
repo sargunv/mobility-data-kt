@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -22,12 +21,12 @@ public data class OperatingRules(
 @Serializable
 public data class OperatingRule(
   /** ID from a zone defined in zones.json representing the boarding zone for the current rule. */
-  @SerialName("from_zone_id") public val fromZoneId: Id<Zone>,
+  @SerialName("from_zone_id") public val fromZoneId: String,
   /**
    * ID from a zone defined in zones.json representing the alighting zone for the current rule.
    * from_zone_id and to_zone_id may reference the same zone.
    */
-  @SerialName("to_zone_id") public val toZoneId: Id<Zone>,
+  @SerialName("to_zone_id") public val toZoneId: String,
   /**
    * Time at which the pickup starts being available in from_zone_id defined in this array. If
    * start_pickup_window is provided, either end_pickup_window or end_dropoff_window must also be
@@ -51,14 +50,14 @@ public data class OperatingRule(
    * Array of calendar IDs from calendars.json defining the dates and days when the pickup and drop
    * off occur.
    */
-  public val calendars: List<Id<Calendar>>,
+  public val calendars: List<String>,
   /**
    * ID from a service brand defined in service_brands.json. If this field is not provided, the
    * operating rule applies to every service brand defined in service_brands.json.
    */
-  @SerialName("brand_id") public val brandId: Id<Brand>? = null,
+  @SerialName("brand_id") public val brandId: String? = null,
   /** Array of vehicle types used for delivering the on-demand service. */
-  @SerialName("vehicle_type_id") public val vehicleTypeIds: List<Id<VehicleType>>,
+  @SerialName("vehicle_type_id") public val vehicleTypeIds: List<String>,
   /** Unique identifier of a fare. Used to determine the price of the on-demand service. */
-  @SerialName("fare_id") public val fareId: Id<Fare>? = null,
+  @SerialName("fare_id") public val fareId: String? = null,
 )

@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.IntBoolean
 import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.serialization.SerialName
@@ -17,7 +16,7 @@ public data class Attribution(
    * Identifies an attribution for the dataset or a subset of it. This is mostly useful for
    * translations.
    */
-  @SerialName("attribution_id") public val attributionId: Id<Attribution>? = null,
+  @SerialName("attribution_id") public val attributionId: String? = null,
 
   /**
    * Agency to which the attribution applies.
@@ -25,19 +24,19 @@ public data class Attribution(
    * If one agency_id, route_id, or trip_id attribution is defined, the other ones must be empty. If
    * none of them is specified, the attribution will apply to the whole dataset.
    */
-  @SerialName("agency_id") public val agencyId: Id<Agency>? = null,
+  @SerialName("agency_id") public val agencyId: String? = null,
 
   /**
    * Functions in the same way as agency_id except the attribution applies to a route. Multiple
    * attributions may apply to the same route.
    */
-  @SerialName("route_id") public val routeId: Id<Route>? = null,
+  @SerialName("route_id") public val routeId: String? = null,
 
   /**
    * Functions in the same way as agency_id except the attribution applies to a trip. Multiple
    * attributions may apply to the same trip.
    */
-  @SerialName("trip_id") public val tripId: Id<Trip>? = null,
+  @SerialName("trip_id") public val tripId: String? = null,
 
   /** Name of the organization that the dataset is attributed to. */
   @SerialName("organization_name") public val organizationName: String,

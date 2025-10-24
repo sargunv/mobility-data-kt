@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.IntBoolean
 import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlin.jvm.JvmInline
@@ -15,13 +14,13 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Pathway(
   /** Uniquely identifies a pathway. */
-  @SerialName("pathway_id") public val pathwayId: Id<Pathway>,
+  @SerialName("pathway_id") public val pathwayId: String,
 
   /** Location at which the pathway begins. */
-  @SerialName("from_stop_id") public val fromStopId: Id<Stop>,
+  @SerialName("from_stop_id") public val fromStopId: String,
 
   /** Location at which the pathway ends. */
-  @SerialName("to_stop_id") public val toStopId: Id<Stop>,
+  @SerialName("to_stop_id") public val toStopId: String,
 
   /** Type of pathway between the specified from_stop_id and to_stop_id. */
   @SerialName("pathway_mode") public val pathwayMode: PathwayMode,

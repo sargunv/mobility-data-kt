@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -14,7 +13,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Timeframe(
   /** Identifies a timeframe or set of timeframes. */
-  @SerialName("timeframe_group_id") public val timeframeGroupId: Id<Timeframe>,
+  @SerialName("timeframe_group_id") public val timeframeGroupId: String,
 
   /** Defines the beginning of a timeframe. An empty value is considered 00:00:00. */
   @SerialName("start_time") public val startTime: ServiceTime? = null,
@@ -23,5 +22,5 @@ public data class Timeframe(
   @SerialName("end_time") public val endTime: ServiceTime? = null,
 
   /** Identifies a set of dates that a timeframe is in effect. */
-  @SerialName("service_id") public val serviceId: Id<ServiceCalendar>,
+  @SerialName("service_id") public val serviceId: String,
 )

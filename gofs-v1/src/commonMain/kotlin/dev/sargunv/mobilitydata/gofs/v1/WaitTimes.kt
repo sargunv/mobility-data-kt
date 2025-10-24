@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -24,7 +23,7 @@ public data class WaitTimes(
 @Serializable
 public data class WaitTime(
   /** ID from a service brand defined in service_brands.json. */
-  @SerialName("brand_id") public val brandId: Id<Brand>,
+  @SerialName("brand_id") public val brandId: String,
   /** Wait time in seconds the rider will need to wait in the location before pickup. */
   @SerialName("wait_time") public val waitTime: WholeSeconds,
 )

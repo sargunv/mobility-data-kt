@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.BasicLocalDate
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.IntBoolean
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -14,7 +13,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class ServiceCalendar(
   /** Uniquely identifies a set of dates when service is available for one or more routes. */
-  @SerialName("service_id") public val serviceId: Id<ServiceCalendar>,
+  @SerialName("service_id") public val serviceId: String,
 
   /** Indicates whether the service operates on all Mondays in the date range. */
   @SerialName("monday") public val monday: IntBoolean,

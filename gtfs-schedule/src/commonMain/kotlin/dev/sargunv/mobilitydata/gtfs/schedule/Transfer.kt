@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
@@ -17,37 +16,37 @@ public data class Transfer(
    * Identifies a stop or station where a connection between routes begins. If this field refers to
    * a station, the transfer rule applies to all its child stops.
    */
-  @SerialName("from_stop_id") public val fromStopId: Id<Stop>? = null,
+  @SerialName("from_stop_id") public val fromStopId: String? = null,
 
   /**
    * Identifies a stop or station where a connection between routes ends. If this field refers to a
    * station, the transfer rule applies to all child stops.
    */
-  @SerialName("to_stop_id") public val toStopId: Id<Stop>? = null,
+  @SerialName("to_stop_id") public val toStopId: String? = null,
 
   /**
    * Identifies a route where a connection begins. If defined, the transfer will apply to the
    * arriving trip on the route for the given from_stop_id.
    */
-  @SerialName("from_route_id") public val fromRouteId: Id<Route>? = null,
+  @SerialName("from_route_id") public val fromRouteId: String? = null,
 
   /**
    * Identifies a route where a connection ends. If defined, the transfer will apply to the
    * departing trip on the route for the given to_stop_id.
    */
-  @SerialName("to_route_id") public val toRouteId: Id<Route>? = null,
+  @SerialName("to_route_id") public val toRouteId: String? = null,
 
   /**
    * Identifies a trip where a connection between routes begins. If defined, the transfer will apply
    * to the arriving trip for the given from_stop_id.
    */
-  @SerialName("from_trip_id") public val fromTripId: Id<Trip>? = null,
+  @SerialName("from_trip_id") public val fromTripId: String? = null,
 
   /**
    * Identifies a trip where a connection between routes ends. If defined, the transfer will apply
    * to the departing trip for the given to_stop_id.
    */
-  @SerialName("to_trip_id") public val toTripId: Id<Trip>? = null,
+  @SerialName("to_trip_id") public val toTripId: String? = null,
 
   /** Indicates the type of connection for the specified (from_stop_id, to_stop_id) pair. */
   @SerialName("transfer_type") public val transferType: TransferType? = null,

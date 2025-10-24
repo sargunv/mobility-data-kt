@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -20,7 +19,7 @@ public data class VehicleTypes(
 @Serializable
 public data class VehicleType(
   /** Unique identifier of the vehicle type. */
-  @SerialName("vehicle_type_id") public val vehicleTypeId: Id<VehicleType>,
+  @SerialName("vehicle_type_id") public val vehicleTypeId: String,
   /** Maximum number of riders that the vehicle can legally carry. */
   @SerialName("max_capacity") public val maxCapacity: Int? = null,
   /** Possibility for riders with a wheelchair to board the vehicle. */

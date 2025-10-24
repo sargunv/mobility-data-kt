@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LanguageCode
 import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.datetime.TimeZone
@@ -15,7 +14,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Agency(
   /** Uniquely identifies a transit agency. */
-  @SerialName("agency_id") public val agencyId: Id<Agency>? = null,
+  @SerialName("agency_id") public val agencyId: String? = null,
 
   /** Full name of the transit agency. */
   @SerialName("agency_name") public val agencyName: String,

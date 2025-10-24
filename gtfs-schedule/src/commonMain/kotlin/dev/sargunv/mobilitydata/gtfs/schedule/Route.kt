@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.RgbColorTriplet
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
@@ -15,10 +14,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Route(
   /** Uniquely identifies a route. */
-  @SerialName("route_id") public val routeId: Id<Route>,
+  @SerialName("route_id") public val routeId: String,
 
   /** Agency for the specified route. */
-  @SerialName("agency_id") public val agencyId: Id<Agency>? = null,
+  @SerialName("agency_id") public val agencyId: String? = null,
 
   /** Short name of a route. */
   @SerialName("route_short_name") public val routeShortName: String? = null,
@@ -53,7 +52,7 @@ public data class Route(
   @SerialName("continuous_drop_off") public val continuousDropOff: ContinuousPickupDropOff? = null,
 
   /** Network ID to which a route belongs. */
-  @SerialName("network_id") public val networkId: Id<Network>? = null,
+  @SerialName("network_id") public val networkId: String? = null,
 
   /**
    * Indicates if riders can access a transit service associated with this route by using a

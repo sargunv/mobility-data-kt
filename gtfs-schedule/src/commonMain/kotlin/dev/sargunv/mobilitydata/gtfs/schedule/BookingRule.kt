@@ -1,7 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
-import dev.sargunv.mobilitydata.utils.Id2
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.WholeMinutes
@@ -17,7 +15,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class BookingRule(
   /** Identifies the booking rule. */
-  @SerialName("booking_rule_id") public val bookingRuleId: Id<BookingRule>,
+  @SerialName("booking_rule_id") public val bookingRuleId: String,
 
   /** Indicates when booking can be made. */
   @SerialName("booking_type") public val bookingType: BookingType,
@@ -41,8 +39,7 @@ public data class BookingRule(
   @SerialName("prior_notice_start_time") public val priorNoticeStartTime: ServiceTime? = null,
 
   /** Service days relative to the day of travel to make the request by. */
-  @SerialName("prior_notice_service_id")
-  public val priorNoticeServiceId: Id2<ServiceCalendar, ServiceCalendarOverride>? = null,
+  @SerialName("prior_notice_service_id") public val priorNoticeServiceId: String? = null,
 
   /** Message to riders utilizing service at a stop. */
   @SerialName("message") public val message: String? = null,

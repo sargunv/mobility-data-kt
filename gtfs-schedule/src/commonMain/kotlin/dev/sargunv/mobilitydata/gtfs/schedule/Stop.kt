@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
 import kotlinx.datetime.TimeZone
@@ -15,7 +14,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Stop(
   /** Uniquely identifies a stop, station, or station entrance. */
-  @SerialName("stop_id") public val stopId: Id<Stop>,
+  @SerialName("stop_id") public val stopId: String,
 
   /** Short text or a number that identifies the location for riders. */
   @SerialName("stop_code") public val stopCode: String? = null,
@@ -36,7 +35,7 @@ public data class Stop(
   @SerialName("stop_lon") public val stopLongitude: Double? = null,
 
   /** Identifies the fare zone for a stop. */
-  @SerialName("zone_id") public val zoneId: Id<Zone>? = null,
+  @SerialName("zone_id") public val zoneId: String? = null,
 
   /** URL of a web page about the location. */
   @SerialName("stop_url") public val stopUrl: Url? = null,
@@ -45,7 +44,7 @@ public data class Stop(
   @SerialName("location_type") public val locationType: LocationType? = null,
 
   /** Defines hierarchy between the different locations. */
-  @SerialName("parent_station") public val parentStation: Id<Stop>? = null,
+  @SerialName("parent_station") public val parentStation: String? = null,
 
   /** Timezone of the location. */
   @SerialName("stop_timezone") public val stopTimezone: TimeZone? = null,
@@ -54,7 +53,7 @@ public data class Stop(
   @SerialName("wheelchair_boarding") public val wheelchairBoarding: TriState? = null,
 
   /** Level of the location. */
-  @SerialName("level_id") public val levelId: Id<Level>? = null,
+  @SerialName("level_id") public val levelId: String? = null,
 
   /** Platform identifier for a platform stop. */
   @SerialName("platform_code") public val platformCode: String? = null,

@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.utils.EpochSeconds
-import dev.sargunv.mobilitydata.utils.Id
 import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -23,7 +22,7 @@ public data class StationStatus(
 @Serializable
 public data class StationStatusEntry(
   /** Identifier of a station. See station_information.json. */
-  @SerialName("station_id") public val stationId: Id<Station>,
+  @SerialName("station_id") public val stationId: String,
 
   /**
    * Number of functional vehicles physically at the station that may be offered for rental.
@@ -115,7 +114,7 @@ public data class StationStatusEntry(
 @Serializable
 public data class VehicleTypeAvailability(
   /** The vehicle_type_id of this vehicle type as described in vehicle_types.json. */
-  @SerialName("vehicle_type_id") public val vehicleTypeId: Id<VehicleType>,
+  @SerialName("vehicle_type_id") public val vehicleTypeId: String,
 
   /** The total number of available vehicles of the corresponding vehicle_type_id at the station. */
   public val count: Int,
@@ -128,7 +127,7 @@ public data class VehicleDockAvailability(
    * An array of vehicle_type_id values that are able to use a particular type of dock at the
    * station.
    */
-  @SerialName("vehicle_type_ids") public val vehicleTypeIds: List<Id<VehicleType>>,
+  @SerialName("vehicle_type_ids") public val vehicleTypeIds: List<String>,
 
   /**
    * The total number of available docks at the station that can accept vehicles of the

@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gbfs.v1
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -21,7 +20,7 @@ public data class SystemRegions(
 @Serializable
 public data class Region(
   /** Identifier for the region. */
-  @SerialName("region_id") public val regionId: Id<Region>,
+  @SerialName("region_id") public val regionId: String,
 
   /** Public name for this region. */
   public val name: String,

@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.IntBoolean
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import dev.sargunv.mobilitydata.utils.WholeSeconds
@@ -15,7 +14,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Frequency(
   /** Identifies a trip to which the specified headway of service applies. */
-  @SerialName("trip_id") public val tripId: Id<Trip>,
+  @SerialName("trip_id") public val tripId: String,
 
   /** Time at which the first vehicle departs from the first stop of the trip. */
   @SerialName("start_time") public val startTime: ServiceTime,

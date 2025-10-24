@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.utils.ExtendedLocalDate
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LanguageCode
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
@@ -21,7 +20,7 @@ public data class SystemInformation(
    * This value is intended to remain the same over the life of the system. Each distinct system or
    * geographic area in which vehicles are operated SHOULD have its own system_id.
    */
-  @SerialName("system_id") public val systemId: Id<SystemInformation>,
+  @SerialName("system_id") public val systemId: String,
 
   /**
    * The language that will be used throughout the rest of the files.

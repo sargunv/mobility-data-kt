@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.WholeSeconds
@@ -28,7 +27,7 @@ public data class RealtimeBookings(
 @Serializable
 public data class RealtimeBooking(
   /** ID from a service brand defined in service_brands.json. */
-  @SerialName("brand_id") public val brandId: Id<Brand>,
+  @SerialName("brand_id") public val brandId: String,
   /** Wait time in seconds the rider will need to wait in the location before pickup. */
   @SerialName("wait_time") public val waitTime: WholeSeconds,
   /**

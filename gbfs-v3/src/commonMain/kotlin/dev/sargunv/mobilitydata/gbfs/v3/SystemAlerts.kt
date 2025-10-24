@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.LocalizedUrl
 import dev.sargunv.mobilitydata.utils.Timestamp
@@ -29,7 +28,7 @@ public data class SystemAlerts(
 @Serializable
 public data class Alert(
   /** Identifier for this alert. */
-  @SerialName("alert_id") public val alertId: Id<Alert>,
+  @SerialName("alert_id") public val alertId: String,
 
   /** Type of alert. */
   public val type: AlertType,
@@ -47,14 +46,14 @@ public data class Alert(
    *
    * If both station_ids and region_ids are omitted, this alert affects the entire system.
    */
-  @SerialName("station_ids") public val stationIds: List<Id<Station>>? = null,
+  @SerialName("station_ids") public val stationIds: List<String>? = null,
 
   /**
    * If this system has regions, and if this alert only affects certain regions, their IDs.
    *
    * If both station_ids and region_ids are omitted, this alert affects the entire system.
    */
-  @SerialName("region_ids") public val regionIds: List<Id<Region>>? = null,
+  @SerialName("region_ids") public val regionIds: List<String>? = null,
 
   /** URL where the customer can learn more information about this alert. */
   public val url: LocalizedUrl? = null,

@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.utils.EpochSeconds
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
 import kotlin.time.ExperimentalTime
@@ -28,7 +27,7 @@ public data class SystemAlerts(
 @Serializable
 public data class Alert(
   /** Identifier for this alert. */
-  @SerialName("alert_id") public val alertId: Id<Alert>,
+  @SerialName("alert_id") public val alertId: String,
 
   /** Type of alert. */
   public val type: AlertType,
@@ -46,14 +45,14 @@ public data class Alert(
    *
    * If both station_ids and region_ids are omitted, this alert affects the entire system.
    */
-  @SerialName("station_ids") public val stationIds: List<Id<Station>>? = null,
+  @SerialName("station_ids") public val stationIds: List<String>? = null,
 
   /**
    * If this system has regions, and if this alert only affects certain regions, their IDs.
    *
    * If both station_ids and region_ids are omitted, this alert affects the entire system.
    */
-  @SerialName("region_ids") public val regionIds: List<Id<Region>>? = null,
+  @SerialName("region_ids") public val regionIds: List<String>? = null,
 
   /** URL where the customer can learn more information about this alert. */
   public val url: Url? = null,

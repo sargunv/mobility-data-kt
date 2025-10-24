@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v1
 
 import dev.sargunv.mobilitydata.utils.EpochSeconds
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.IntBoolean
 import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
@@ -19,7 +18,7 @@ public data class StationStatus(
 @Serializable
 public data class StationStatusEntry(
   /** Identifier of a station. See station_information.json. */
-  @SerialName("station_id") public val stationId: Id<Station>,
+  @SerialName("station_id") public val stationId: String,
 
   /** Number of functional vehicles physically at the station that may be offered for rental. */
   @SerialName("num_bikes_available") public val numBikesAvailable: Int,

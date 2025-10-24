@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,8 +11,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class LocationGroupStop(
   /** Identifies a location group. */
-  @SerialName("location_group_id") public val locationGroupId: Id<LocationGroup>,
+  @SerialName("location_group_id") public val locationGroupId: String,
 
   /** Identifies a stop. */
-  @SerialName("stop_id") public val stopId: Id<Stop>,
+  @SerialName("stop_id") public val stopId: String,
 )

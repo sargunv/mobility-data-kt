@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.IntBoolean
 import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.serialization.SerialName
@@ -14,7 +13,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class RiderCategory(
   /** Identifies a rider category. */
-  @SerialName("rider_category_id") public val riderCategoryId: Id<RiderCategory>,
+  @SerialName("rider_category_id") public val riderCategoryId: String,
 
   /** Name of the rider category. */
   @SerialName("rider_category_name") public val riderCategoryName: String,

@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -18,17 +17,17 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class FareRule(
   /** Identifies a fare class. */
-  @SerialName("fare_id") public val fareId: Id<FareAttribute>,
+  @SerialName("fare_id") public val fareId: String,
 
   /** Identifies a route associated with the fare class. */
-  @SerialName("route_id") public val routeId: Id<Route>? = null,
+  @SerialName("route_id") public val routeId: String? = null,
 
   /** Identifies an origin zone. */
-  @SerialName("origin_id") public val originId: Id<Zone>? = null,
+  @SerialName("origin_id") public val originId: String? = null,
 
   /** Identifies a destination zone. */
-  @SerialName("destination_id") public val destinationId: Id<Zone>? = null,
+  @SerialName("destination_id") public val destinationId: String? = null,
 
   /** Identifies the zones that a rider will enter while using a given fare class. */
-  @SerialName("contains_id") public val containsId: Id<Zone>? = null,
+  @SerialName("contains_id") public val containsId: String? = null,
 )

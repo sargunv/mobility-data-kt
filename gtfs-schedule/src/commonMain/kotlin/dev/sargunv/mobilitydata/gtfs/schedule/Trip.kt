@@ -1,7 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
-import dev.sargunv.mobilitydata.utils.Id2
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -15,13 +13,13 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Trip(
   /** Uniquely identifies a trip. */
-  @SerialName("trip_id") public val tripId: Id<Trip>,
+  @SerialName("trip_id") public val tripId: String,
 
   /** Identifies a route. */
-  @SerialName("route_id") public val routeId: Id<Route>,
+  @SerialName("route_id") public val routeId: String,
 
   /** Identifies a set of dates when service is available for one or more routes. */
-  @SerialName("service_id") public val serviceId: Id2<ServiceCalendar, ServiceCalendarOverride>,
+  @SerialName("service_id") public val serviceId: String,
 
   /** Text that appears on signage identifying the trip's destination to riders. */
   @SerialName("trip_headsign") public val tripHeadsign: String? = null,
@@ -33,10 +31,10 @@ public data class Trip(
   @SerialName("direction_id") public val directionId: DirectionId? = null,
 
   /** Identifies the block to which the trip belongs. */
-  @SerialName("block_id") public val blockId: Id<Block>? = null,
+  @SerialName("block_id") public val blockId: String? = null,
 
   /** Identifies a geospatial shape describing the vehicle travel path for a trip. */
-  @SerialName("shape_id") public val shapeId: Id<Shape>? = null,
+  @SerialName("shape_id") public val shapeId: String? = null,
 
   /** Indicates wheelchair accessibility. */
   @SerialName("wheelchair_accessible") public val wheelchairAccessible: TriState? = null,

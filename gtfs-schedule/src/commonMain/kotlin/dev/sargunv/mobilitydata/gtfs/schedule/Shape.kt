@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,7 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Shape(
   /** Identifies a shape. */
-  @SerialName("shape_id") public val shapeId: Id<Shape>,
+  @SerialName("shape_id") public val shapeId: String,
 
   /** Latitude of a shape point. */
   @SerialName("shape_pt_lat") public val shapePointLatitude: Double,

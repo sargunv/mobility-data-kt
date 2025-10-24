@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,7 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Level(
   /** Uniquely identifies a level in a station. */
-  @SerialName("level_id") public val levelId: Id<Level>,
+  @SerialName("level_id") public val levelId: String,
 
   /** Numeric index of the level relative to ground level. */
   @SerialName("level_index") public val levelIndex: Double,

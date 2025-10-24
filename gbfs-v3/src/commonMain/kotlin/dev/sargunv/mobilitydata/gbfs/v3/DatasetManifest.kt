@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.Serializable
 
 /**
@@ -23,7 +22,7 @@ public data class DatasetManifest(
 @Serializable
 public data class Dataset(
   /** The system_id from system_information.json for the corresponding data set(s). */
-  public val systemId: Id<SystemInformation>,
+  public val systemId: String,
 
   /**
    * Contains one object for each of the available versions of a feed. The array MUST be sorted by
