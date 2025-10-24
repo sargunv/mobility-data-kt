@@ -491,7 +491,7 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/FareTransferRule { // dev.sar
 }
 
 final class dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo { // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo|null[0]
-    constructor <init>(kotlin/String, kotlin/String, kotlin/String, kotlin/String? = ..., kotlinx.datetime/LocalDate? = ..., kotlinx.datetime/LocalDate? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlinx.datetime.LocalDate?;kotlinx.datetime.LocalDate?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+    constructor <init>(kotlin/String, kotlin/String, kotlin/String, kotlin/String? = ..., kotlinx.datetime/LocalDate? = ..., kotlinx.datetime/LocalDate? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlinx.datetime.LocalDate?;kotlinx.datetime.LocalDate?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
 
     final val defaultLang // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.defaultLang|{}defaultLang[0]
         final fun <get-defaultLang>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.defaultLang.<get-defaultLang>|<get-defaultLang>(){}[0]
@@ -501,8 +501,6 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo { // dev.sargunv.mob
         final fun <get-feedContactUrl>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.feedContactUrl.<get-feedContactUrl>|<get-feedContactUrl>(){}[0]
     final val feedEndDate // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.feedEndDate|{}feedEndDate[0]
         final fun <get-feedEndDate>(): kotlinx.datetime/LocalDate? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.feedEndDate.<get-feedEndDate>|<get-feedEndDate>(){}[0]
-    final val feedId // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.feedId|{}feedId[0]
-        final fun <get-feedId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.feedId.<get-feedId>|<get-feedId>(){}[0]
     final val feedLang // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.feedLang|{}feedLang[0]
         final fun <get-feedLang>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.feedLang.<get-feedLang>|<get-feedLang>(){}[0]
     final val feedPublisherName // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.feedPublisherName|{}feedPublisherName[0]
@@ -515,7 +513,6 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo { // dev.sargunv.mob
         final fun <get-feedVersion>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.feedVersion.<get-feedVersion>|<get-feedVersion>(){}[0]
 
     final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.component1|component1(){}[0]
-    final fun component10(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.component10|component10(){}[0]
     final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.component2|component2(){}[0]
     final fun component3(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.component3|component3(){}[0]
     final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.component4|component4(){}[0]
@@ -524,7 +521,7 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo { // dev.sargunv.mob
     final fun component7(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.component7|component7(){}[0]
     final fun component8(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.component8|component8(){}[0]
     final fun component9(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.component9|component9(){}[0]
-    final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/String? = ..., kotlinx.datetime/LocalDate? = ..., kotlinx.datetime/LocalDate? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.copy|copy(kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlinx.datetime.LocalDate?;kotlinx.datetime.LocalDate?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/String? = ..., kotlinx.datetime/LocalDate? = ..., kotlinx.datetime/LocalDate? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.copy|copy(kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlinx.datetime.LocalDate?;kotlinx.datetime.LocalDate?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo.toString|toString(){}[0]

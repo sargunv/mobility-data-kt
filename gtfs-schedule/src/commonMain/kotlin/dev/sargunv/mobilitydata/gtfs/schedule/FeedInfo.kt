@@ -56,7 +56,4 @@ public data class FeedInfo(
    * contact for GTFS-consuming applications.
    */
   @SerialName("feed_contact_url") public val feedContactUrl: Url? = null,
-
-  /** Uniquely identifies the feed. This field is optional. */
-  @SerialName("feed_id") public val feedId: String? = null,
 )
