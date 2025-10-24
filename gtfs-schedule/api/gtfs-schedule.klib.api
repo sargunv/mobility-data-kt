@@ -141,6 +141,74 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/Attribution { // dev.sargunv.
     }
 }
 
+final class dev.sargunv.mobilitydata.gtfs.schedule/BookingRule { // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule|null[0]
+    constructor <init>(kotlin/String, dev.sargunv.mobilitydata.gtfs.schedule/BookingType, kotlin.time/Duration? = ..., kotlin.time/Duration? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.<init>|<init>(kotlin.String;dev.sargunv.mobilitydata.gtfs.schedule.BookingType;kotlin.time.Duration?;kotlin.time.Duration?;kotlin.Int?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.Int?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+
+    final val bookingRuleId // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.bookingRuleId|{}bookingRuleId[0]
+        final fun <get-bookingRuleId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.bookingRuleId.<get-bookingRuleId>|<get-bookingRuleId>(){}[0]
+    final val bookingType // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.bookingType|{}bookingType[0]
+        final fun <get-bookingType>(): dev.sargunv.mobilitydata.gtfs.schedule/BookingType // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.bookingType.<get-bookingType>|<get-bookingType>(){}[0]
+    final val bookingUrl // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.bookingUrl|{}bookingUrl[0]
+        final fun <get-bookingUrl>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.bookingUrl.<get-bookingUrl>|<get-bookingUrl>(){}[0]
+    final val dropOffMessage // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.dropOffMessage|{}dropOffMessage[0]
+        final fun <get-dropOffMessage>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.dropOffMessage.<get-dropOffMessage>|<get-dropOffMessage>(){}[0]
+    final val infoUrl // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.infoUrl|{}infoUrl[0]
+        final fun <get-infoUrl>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.infoUrl.<get-infoUrl>|<get-infoUrl>(){}[0]
+    final val message // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.message|{}message[0]
+        final fun <get-message>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.message.<get-message>|<get-message>(){}[0]
+    final val phoneNumber // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.phoneNumber|{}phoneNumber[0]
+        final fun <get-phoneNumber>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.phoneNumber.<get-phoneNumber>|<get-phoneNumber>(){}[0]
+    final val pickupMessage // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.pickupMessage|{}pickupMessage[0]
+        final fun <get-pickupMessage>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.pickupMessage.<get-pickupMessage>|<get-pickupMessage>(){}[0]
+    final val priorNoticeDurationMax // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeDurationMax|{}priorNoticeDurationMax[0]
+        final fun <get-priorNoticeDurationMax>(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeDurationMax.<get-priorNoticeDurationMax>|<get-priorNoticeDurationMax>(){}[0]
+    final val priorNoticeDurationMin // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeDurationMin|{}priorNoticeDurationMin[0]
+        final fun <get-priorNoticeDurationMin>(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeDurationMin.<get-priorNoticeDurationMin>|<get-priorNoticeDurationMin>(){}[0]
+    final val priorNoticeLastDay // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeLastDay|{}priorNoticeLastDay[0]
+        final fun <get-priorNoticeLastDay>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeLastDay.<get-priorNoticeLastDay>|<get-priorNoticeLastDay>(){}[0]
+    final val priorNoticeLastTime // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeLastTime|{}priorNoticeLastTime[0]
+        final fun <get-priorNoticeLastTime>(): dev.sargunv.mobilitydata.utils/ServiceTime? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeLastTime.<get-priorNoticeLastTime>|<get-priorNoticeLastTime>(){}[0]
+    final val priorNoticeServiceId // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeServiceId|{}priorNoticeServiceId[0]
+        final fun <get-priorNoticeServiceId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeServiceId.<get-priorNoticeServiceId>|<get-priorNoticeServiceId>(){}[0]
+    final val priorNoticeStartDay // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeStartDay|{}priorNoticeStartDay[0]
+        final fun <get-priorNoticeStartDay>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeStartDay.<get-priorNoticeStartDay>|<get-priorNoticeStartDay>(){}[0]
+    final val priorNoticeStartTime // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeStartTime|{}priorNoticeStartTime[0]
+        final fun <get-priorNoticeStartTime>(): dev.sargunv.mobilitydata.utils/ServiceTime? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.priorNoticeStartTime.<get-priorNoticeStartTime>|<get-priorNoticeStartTime>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component1|component1(){}[0]
+    final fun component10(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component10|component10(){}[0]
+    final fun component11(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component11|component11(){}[0]
+    final fun component12(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component12|component12(){}[0]
+    final fun component13(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component13|component13(){}[0]
+    final fun component14(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component14|component14(){}[0]
+    final fun component15(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component15|component15(){}[0]
+    final fun component2(): dev.sargunv.mobilitydata.gtfs.schedule/BookingType // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component2|component2(){}[0]
+    final fun component3(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component3|component3(){}[0]
+    final fun component4(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component4|component4(){}[0]
+    final fun component5(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component5|component5(){}[0]
+    final fun component6(): dev.sargunv.mobilitydata.utils/ServiceTime? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component6|component6(){}[0]
+    final fun component7(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component7|component7(){}[0]
+    final fun component8(): dev.sargunv.mobilitydata.utils/ServiceTime? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component8|component8(){}[0]
+    final fun component9(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.component9|component9(){}[0]
+    final fun copy(kotlin/String = ..., dev.sargunv.mobilitydata.gtfs.schedule/BookingType = ..., kotlin.time/Duration? = ..., kotlin.time/Duration? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.schedule/BookingRule // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.copy|copy(kotlin.String;dev.sargunv.mobilitydata.gtfs.schedule.BookingType;kotlin.time.Duration?;kotlin.time.Duration?;kotlin.Int?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.Int?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/BookingRule> { // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/BookingRule // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/BookingRule) // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.BookingRule){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/BookingRule> // dev.sargunv.mobilitydata.gtfs.schedule/BookingRule.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class dev.sargunv.mobilitydata.gtfs.schedule/FareAttribute { // dev.sargunv.mobilitydata.gtfs.schedule/FareAttribute|null[0]
     constructor <init>(kotlin/String, kotlin/Double, kotlin/String, dev.sargunv.mobilitydata.gtfs.schedule/PaymentMethod, kotlin/Int?, kotlin/String? = ..., kotlin.time/Duration? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/FareAttribute.<init>|<init>(kotlin.String;kotlin.Double;kotlin.String;dev.sargunv.mobilitydata.gtfs.schedule.PaymentMethod;kotlin.Int?;kotlin.String?;kotlin.time.Duration?){}[0]
 
@@ -475,6 +543,134 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/FeedInfo { // dev.sargunv.mob
     }
 }
 
+final class dev.sargunv.mobilitydata.gtfs.schedule/Frequency { // dev.sargunv.mobilitydata.gtfs.schedule/Frequency|null[0]
+    constructor <init>(kotlin/String, dev.sargunv.mobilitydata.utils/ServiceTime, dev.sargunv.mobilitydata.utils/ServiceTime, kotlin.time/Duration, kotlin/Boolean? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.<init>|<init>(kotlin.String;dev.sargunv.mobilitydata.utils.ServiceTime;dev.sargunv.mobilitydata.utils.ServiceTime;kotlin.time.Duration;kotlin.Boolean?){}[0]
+
+    final val endTime // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.endTime|{}endTime[0]
+        final fun <get-endTime>(): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.endTime.<get-endTime>|<get-endTime>(){}[0]
+    final val exactTimes // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.exactTimes|{}exactTimes[0]
+        final fun <get-exactTimes>(): kotlin/Boolean? // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.exactTimes.<get-exactTimes>|<get-exactTimes>(){}[0]
+    final val headwaySecs // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.headwaySecs|{}headwaySecs[0]
+        final fun <get-headwaySecs>(): kotlin.time/Duration // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.headwaySecs.<get-headwaySecs>|<get-headwaySecs>(){}[0]
+    final val startTime // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.startTime|{}startTime[0]
+        final fun <get-startTime>(): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.startTime.<get-startTime>|<get-startTime>(){}[0]
+    final val tripId // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.tripId|{}tripId[0]
+        final fun <get-tripId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.tripId.<get-tripId>|<get-tripId>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.component1|component1(){}[0]
+    final fun component2(): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.component2|component2(){}[0]
+    final fun component3(): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.component3|component3(){}[0]
+    final fun component4(): kotlin.time/Duration // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.component4|component4(){}[0]
+    final fun component5(): kotlin/Boolean? // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.component5|component5(){}[0]
+    final fun copy(kotlin/String = ..., dev.sargunv.mobilitydata.utils/ServiceTime = ..., dev.sargunv.mobilitydata.utils/ServiceTime = ..., kotlin.time/Duration = ..., kotlin/Boolean? = ...): dev.sargunv.mobilitydata.gtfs.schedule/Frequency // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.copy|copy(kotlin.String;dev.sargunv.mobilitydata.utils.ServiceTime;dev.sargunv.mobilitydata.utils.ServiceTime;kotlin.time.Duration;kotlin.Boolean?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Frequency> { // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/Frequency // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/Frequency) // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.Frequency){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Frequency> // dev.sargunv.mobilitydata.gtfs.schedule/Frequency.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.schedule/Level { // dev.sargunv.mobilitydata.gtfs.schedule/Level|null[0]
+    constructor <init>(kotlin/String, kotlin/Double, kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Level.<init>|<init>(kotlin.String;kotlin.Double;kotlin.String?){}[0]
+
+    final val levelId // dev.sargunv.mobilitydata.gtfs.schedule/Level.levelId|{}levelId[0]
+        final fun <get-levelId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Level.levelId.<get-levelId>|<get-levelId>(){}[0]
+    final val levelIndex // dev.sargunv.mobilitydata.gtfs.schedule/Level.levelIndex|{}levelIndex[0]
+        final fun <get-levelIndex>(): kotlin/Double // dev.sargunv.mobilitydata.gtfs.schedule/Level.levelIndex.<get-levelIndex>|<get-levelIndex>(){}[0]
+    final val levelName // dev.sargunv.mobilitydata.gtfs.schedule/Level.levelName|{}levelName[0]
+        final fun <get-levelName>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Level.levelName.<get-levelName>|<get-levelName>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Level.component1|component1(){}[0]
+    final fun component2(): kotlin/Double // dev.sargunv.mobilitydata.gtfs.schedule/Level.component2|component2(){}[0]
+    final fun component3(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Level.component3|component3(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/Double = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.schedule/Level // dev.sargunv.mobilitydata.gtfs.schedule/Level.copy|copy(kotlin.String;kotlin.Double;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Level.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Level.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Level.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Level> { // dev.sargunv.mobilitydata.gtfs.schedule/Level.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/Level.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/Level.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/Level.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/Level // dev.sargunv.mobilitydata.gtfs.schedule/Level.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/Level) // dev.sargunv.mobilitydata.gtfs.schedule/Level.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.Level){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/Level.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Level> // dev.sargunv.mobilitydata.gtfs.schedule/Level.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup { // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup|null[0]
+    constructor <init>(kotlin/String, kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.<init>|<init>(kotlin.String;kotlin.String?){}[0]
+
+    final val locationGroupId // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.locationGroupId|{}locationGroupId[0]
+        final fun <get-locationGroupId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.locationGroupId.<get-locationGroupId>|<get-locationGroupId>(){}[0]
+    final val locationGroupName // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.locationGroupName|{}locationGroupName[0]
+        final fun <get-locationGroupName>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.locationGroupName.<get-locationGroupName>|<get-locationGroupName>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.copy|copy(kotlin.String;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup> { // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup) // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.LocationGroup){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup> // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroup.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop { // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop|null[0]
+    constructor <init>(kotlin/String, kotlin/String) // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.<init>|<init>(kotlin.String;kotlin.String){}[0]
+
+    final val locationGroupId // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.locationGroupId|{}locationGroupId[0]
+        final fun <get-locationGroupId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.locationGroupId.<get-locationGroupId>|<get-locationGroupId>(){}[0]
+    final val stopId // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.stopId|{}stopId[0]
+        final fun <get-stopId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.stopId.<get-stopId>|<get-stopId>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.component1|component1(){}[0]
+    final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ...): dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.copy|copy(kotlin.String;kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop> { // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop) // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.LocationGroupStop){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop> // dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class dev.sargunv.mobilitydata.gtfs.schedule/Network { // dev.sargunv.mobilitydata.gtfs.schedule/Network|null[0]
     constructor <init>(kotlin/String, kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Network.<init>|<init>(kotlin.String;kotlin.String?){}[0]
 
@@ -501,6 +697,65 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/Network { // dev.sargunv.mobi
 
     final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/Network.Companion|null[0]
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Network> // dev.sargunv.mobilitydata.gtfs.schedule/Network.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.schedule/Pathway { // dev.sargunv.mobilitydata.gtfs.schedule/Pathway|null[0]
+    constructor <init>(kotlin/String, kotlin/String, kotlin/String, dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode, kotlin/Boolean, kotlin/Double? = ..., kotlin.time/Duration? = ..., kotlin/Int? = ..., kotlin/Double? = ..., kotlin/Double? = ..., kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;dev.sargunv.mobilitydata.gtfs.schedule.PathwayMode;kotlin.Boolean;kotlin.Double?;kotlin.time.Duration?;kotlin.Int?;kotlin.Double?;kotlin.Double?;kotlin.String?;kotlin.String?){}[0]
+
+    final val fromStopId // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.fromStopId|{}fromStopId[0]
+        final fun <get-fromStopId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.fromStopId.<get-fromStopId>|<get-fromStopId>(){}[0]
+    final val isBidirectional // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.isBidirectional|{}isBidirectional[0]
+        final fun <get-isBidirectional>(): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.isBidirectional.<get-isBidirectional>|<get-isBidirectional>(){}[0]
+    final val length // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.length|{}length[0]
+        final fun <get-length>(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.length.<get-length>|<get-length>(){}[0]
+    final val maxSlope // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.maxSlope|{}maxSlope[0]
+        final fun <get-maxSlope>(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.maxSlope.<get-maxSlope>|<get-maxSlope>(){}[0]
+    final val minWidth // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.minWidth|{}minWidth[0]
+        final fun <get-minWidth>(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.minWidth.<get-minWidth>|<get-minWidth>(){}[0]
+    final val pathwayId // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.pathwayId|{}pathwayId[0]
+        final fun <get-pathwayId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.pathwayId.<get-pathwayId>|<get-pathwayId>(){}[0]
+    final val pathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.pathwayMode|{}pathwayMode[0]
+        final fun <get-pathwayMode>(): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.pathwayMode.<get-pathwayMode>|<get-pathwayMode>(){}[0]
+    final val reversedSignpostedAs // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.reversedSignpostedAs|{}reversedSignpostedAs[0]
+        final fun <get-reversedSignpostedAs>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.reversedSignpostedAs.<get-reversedSignpostedAs>|<get-reversedSignpostedAs>(){}[0]
+    final val signpostedAs // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.signpostedAs|{}signpostedAs[0]
+        final fun <get-signpostedAs>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.signpostedAs.<get-signpostedAs>|<get-signpostedAs>(){}[0]
+    final val stairCount // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.stairCount|{}stairCount[0]
+        final fun <get-stairCount>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.stairCount.<get-stairCount>|<get-stairCount>(){}[0]
+    final val toStopId // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.toStopId|{}toStopId[0]
+        final fun <get-toStopId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.toStopId.<get-toStopId>|<get-toStopId>(){}[0]
+    final val traversalTime // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.traversalTime|{}traversalTime[0]
+        final fun <get-traversalTime>(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.traversalTime.<get-traversalTime>|<get-traversalTime>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component1|component1(){}[0]
+    final fun component10(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component10|component10(){}[0]
+    final fun component11(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component11|component11(){}[0]
+    final fun component12(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component12|component12(){}[0]
+    final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component2|component2(){}[0]
+    final fun component3(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component3|component3(){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component4|component4(){}[0]
+    final fun component5(): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component5|component5(){}[0]
+    final fun component6(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component6|component6(){}[0]
+    final fun component7(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component7|component7(){}[0]
+    final fun component8(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component8|component8(){}[0]
+    final fun component9(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.component9|component9(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode = ..., kotlin/Boolean = ..., kotlin/Double? = ..., kotlin.time/Duration? = ..., kotlin/Int? = ..., kotlin/Double? = ..., kotlin/Double? = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.schedule/Pathway // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.copy|copy(kotlin.String;kotlin.String;kotlin.String;dev.sargunv.mobilitydata.gtfs.schedule.PathwayMode;kotlin.Boolean;kotlin.Double?;kotlin.time.Duration?;kotlin.Int?;kotlin.Double?;kotlin.Double?;kotlin.String?;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Pathway> { // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/Pathway // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/Pathway) // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.Pathway){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Pathway> // dev.sargunv.mobilitydata.gtfs.schedule/Pathway.Companion.serializer|serializer(){}[0]
     }
 }
 
@@ -718,6 +973,44 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/ServiceCalendarOverride { // 
     }
 }
 
+final class dev.sargunv.mobilitydata.gtfs.schedule/Shape { // dev.sargunv.mobilitydata.gtfs.schedule/Shape|null[0]
+    constructor <init>(kotlin/String, kotlin/Double, kotlin/Double, kotlin/Int, kotlin/Double? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Shape.<init>|<init>(kotlin.String;kotlin.Double;kotlin.Double;kotlin.Int;kotlin.Double?){}[0]
+
+    final val shapeDistTraveled // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapeDistTraveled|{}shapeDistTraveled[0]
+        final fun <get-shapeDistTraveled>(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapeDistTraveled.<get-shapeDistTraveled>|<get-shapeDistTraveled>(){}[0]
+    final val shapeId // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapeId|{}shapeId[0]
+        final fun <get-shapeId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapeId.<get-shapeId>|<get-shapeId>(){}[0]
+    final val shapePointLatitude // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapePointLatitude|{}shapePointLatitude[0]
+        final fun <get-shapePointLatitude>(): kotlin/Double // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapePointLatitude.<get-shapePointLatitude>|<get-shapePointLatitude>(){}[0]
+    final val shapePointLongitude // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapePointLongitude|{}shapePointLongitude[0]
+        final fun <get-shapePointLongitude>(): kotlin/Double // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapePointLongitude.<get-shapePointLongitude>|<get-shapePointLongitude>(){}[0]
+    final val shapePointSequence // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapePointSequence|{}shapePointSequence[0]
+        final fun <get-shapePointSequence>(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Shape.shapePointSequence.<get-shapePointSequence>|<get-shapePointSequence>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Shape.component1|component1(){}[0]
+    final fun component2(): kotlin/Double // dev.sargunv.mobilitydata.gtfs.schedule/Shape.component2|component2(){}[0]
+    final fun component3(): kotlin/Double // dev.sargunv.mobilitydata.gtfs.schedule/Shape.component3|component3(){}[0]
+    final fun component4(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Shape.component4|component4(){}[0]
+    final fun component5(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.schedule/Shape.component5|component5(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/Double = ..., kotlin/Double = ..., kotlin/Int = ..., kotlin/Double? = ...): dev.sargunv.mobilitydata.gtfs.schedule/Shape // dev.sargunv.mobilitydata.gtfs.schedule/Shape.copy|copy(kotlin.String;kotlin.Double;kotlin.Double;kotlin.Int;kotlin.Double?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Shape.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Shape.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Shape.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Shape> { // dev.sargunv.mobilitydata.gtfs.schedule/Shape.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/Shape.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/Shape.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/Shape.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/Shape // dev.sargunv.mobilitydata.gtfs.schedule/Shape.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/Shape) // dev.sargunv.mobilitydata.gtfs.schedule/Shape.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.Shape){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/Shape.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Shape> // dev.sargunv.mobilitydata.gtfs.schedule/Shape.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class dev.sargunv.mobilitydata.gtfs.schedule/Stop { // dev.sargunv.mobilitydata.gtfs.schedule/Stop|null[0]
     constructor <init>(kotlin/String, kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/Double? = ..., kotlin/Double? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/LocationType? = ..., kotlin/String? = ..., kotlinx.datetime/TimeZone? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TriState? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/StopAccess? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Stop.<init>|<init>(kotlin.String;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.Double?;kotlin.Double?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.LocationType?;kotlin.String?;kotlinx.datetime.TimeZone?;dev.sargunv.mobilitydata.gtfs.schedule.TriState?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.StopAccess?){}[0]
 
@@ -930,6 +1223,97 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/Timeframe { // dev.sargunv.mo
     }
 }
 
+final class dev.sargunv.mobilitydata.gtfs.schedule/Transfer { // dev.sargunv.mobilitydata.gtfs.schedule/Transfer|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TransferType? = ..., kotlin.time/Duration? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.TransferType?;kotlin.time.Duration?){}[0]
+
+    final val fromRouteId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromRouteId|{}fromRouteId[0]
+        final fun <get-fromRouteId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromRouteId.<get-fromRouteId>|<get-fromRouteId>(){}[0]
+    final val fromStopId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromStopId|{}fromStopId[0]
+        final fun <get-fromStopId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromStopId.<get-fromStopId>|<get-fromStopId>(){}[0]
+    final val fromTripId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromTripId|{}fromTripId[0]
+        final fun <get-fromTripId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.fromTripId.<get-fromTripId>|<get-fromTripId>(){}[0]
+    final val minTransferTime // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.minTransferTime|{}minTransferTime[0]
+        final fun <get-minTransferTime>(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.minTransferTime.<get-minTransferTime>|<get-minTransferTime>(){}[0]
+    final val toRouteId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toRouteId|{}toRouteId[0]
+        final fun <get-toRouteId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toRouteId.<get-toRouteId>|<get-toRouteId>(){}[0]
+    final val toStopId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toStopId|{}toStopId[0]
+        final fun <get-toStopId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toStopId.<get-toStopId>|<get-toStopId>(){}[0]
+    final val toTripId // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toTripId|{}toTripId[0]
+        final fun <get-toTripId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toTripId.<get-toTripId>|<get-toTripId>(){}[0]
+    final val transferType // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.transferType|{}transferType[0]
+        final fun <get-transferType>(): dev.sargunv.mobilitydata.gtfs.schedule/TransferType? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.transferType.<get-transferType>|<get-transferType>(){}[0]
+
+    final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component2|component2(){}[0]
+    final fun component3(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component3|component3(){}[0]
+    final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component4|component4(){}[0]
+    final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component5|component5(){}[0]
+    final fun component6(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component6|component6(){}[0]
+    final fun component7(): dev.sargunv.mobilitydata.gtfs.schedule/TransferType? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component7|component7(){}[0]
+    final fun component8(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.component8|component8(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TransferType? = ..., kotlin.time/Duration? = ...): dev.sargunv.mobilitydata.gtfs.schedule/Transfer // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.copy|copy(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.TransferType?;kotlin.time.Duration?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Transfer> { // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/Transfer // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/Transfer) // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.Transfer){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Transfer> // dev.sargunv.mobilitydata.gtfs.schedule/Transfer.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.schedule/Translation { // dev.sargunv.mobilitydata.gtfs.schedule/Translation|null[0]
+    constructor <init>(kotlin/String, kotlin/String, kotlin/String, kotlin/String, kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Translation.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+
+    final val fieldName // dev.sargunv.mobilitydata.gtfs.schedule/Translation.fieldName|{}fieldName[0]
+        final fun <get-fieldName>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Translation.fieldName.<get-fieldName>|<get-fieldName>(){}[0]
+    final val fieldValue // dev.sargunv.mobilitydata.gtfs.schedule/Translation.fieldValue|{}fieldValue[0]
+        final fun <get-fieldValue>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Translation.fieldValue.<get-fieldValue>|<get-fieldValue>(){}[0]
+    final val language // dev.sargunv.mobilitydata.gtfs.schedule/Translation.language|{}language[0]
+        final fun <get-language>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Translation.language.<get-language>|<get-language>(){}[0]
+    final val recordId // dev.sargunv.mobilitydata.gtfs.schedule/Translation.recordId|{}recordId[0]
+        final fun <get-recordId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Translation.recordId.<get-recordId>|<get-recordId>(){}[0]
+    final val recordSubId // dev.sargunv.mobilitydata.gtfs.schedule/Translation.recordSubId|{}recordSubId[0]
+        final fun <get-recordSubId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Translation.recordSubId.<get-recordSubId>|<get-recordSubId>(){}[0]
+    final val tableName // dev.sargunv.mobilitydata.gtfs.schedule/Translation.tableName|{}tableName[0]
+        final fun <get-tableName>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Translation.tableName.<get-tableName>|<get-tableName>(){}[0]
+    final val translation // dev.sargunv.mobilitydata.gtfs.schedule/Translation.translation|{}translation[0]
+        final fun <get-translation>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Translation.translation.<get-translation>|<get-translation>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Translation.component1|component1(){}[0]
+    final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Translation.component2|component2(){}[0]
+    final fun component3(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Translation.component3|component3(){}[0]
+    final fun component4(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Translation.component4|component4(){}[0]
+    final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Translation.component5|component5(){}[0]
+    final fun component6(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Translation.component6|component6(){}[0]
+    final fun component7(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/Translation.component7|component7(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.schedule/Translation // dev.sargunv.mobilitydata.gtfs.schedule/Translation.copy|copy(kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Translation.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Translation.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Translation.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Translation> { // dev.sargunv.mobilitydata.gtfs.schedule/Translation.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/Translation.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/Translation.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/Translation.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/Translation // dev.sargunv.mobilitydata.gtfs.schedule/Translation.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/Translation) // dev.sargunv.mobilitydata.gtfs.schedule/Translation.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.Translation){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/Translation.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Translation> // dev.sargunv.mobilitydata.gtfs.schedule/Translation.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class dev.sargunv.mobilitydata.gtfs.schedule/Trip { // dev.sargunv.mobilitydata.gtfs.schedule/Trip|null[0]
     constructor <init>(kotlin/String, kotlin/String, kotlin/String, kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/DirectionId? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TriState? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TriState? = ..., dev.sargunv.mobilitydata.gtfs.schedule/TriState? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Trip.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.DirectionId?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.schedule.TriState?;dev.sargunv.mobilitydata.gtfs.schedule.TriState?;dev.sargunv.mobilitydata.gtfs.schedule.TriState?){}[0]
 
@@ -983,6 +1367,35 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/Trip { // dev.sargunv.mobilit
 
     final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/Trip.Companion|null[0]
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Trip> // dev.sargunv.mobilitydata.gtfs.schedule/Trip.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final value class dev.sargunv.mobilitydata.gtfs.schedule/BookingType { // dev.sargunv.mobilitydata.gtfs.schedule/BookingType|null[0]
+    final val value // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.value|{}value[0]
+        final fun <get-value>(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/BookingType> { // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/BookingType // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/BookingType) // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.BookingType){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.Companion|null[0]
+        final val PriorDays // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.Companion.PriorDays|{}PriorDays[0]
+            final fun <get-PriorDays>(): dev.sargunv.mobilitydata.gtfs.schedule/BookingType // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.Companion.PriorDays.<get-PriorDays>|<get-PriorDays>(){}[0]
+        final val RealTime // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.Companion.RealTime|{}RealTime[0]
+            final fun <get-RealTime>(): dev.sargunv.mobilitydata.gtfs.schedule/BookingType // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.Companion.RealTime.<get-RealTime>|<get-RealTime>(){}[0]
+        final val SameDay // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.Companion.SameDay|{}SameDay[0]
+            final fun <get-SameDay>(): dev.sargunv.mobilitydata.gtfs.schedule/BookingType // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.Companion.SameDay.<get-SameDay>|<get-SameDay>(){}[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/BookingType> // dev.sargunv.mobilitydata.gtfs.schedule/BookingType.Companion.serializer|serializer(){}[0]
     }
 }
 
@@ -1197,6 +1610,43 @@ final value class dev.sargunv.mobilitydata.gtfs.schedule/OverrideType { // dev.s
     }
 }
 
+final value class dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode { // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode|null[0]
+    final val value // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.value|{}value[0]
+        final fun <get-value>(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode> { // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode) // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.PathwayMode){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion|null[0]
+        final val Elevator // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.Elevator|{}Elevator[0]
+            final fun <get-Elevator>(): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.Elevator.<get-Elevator>|<get-Elevator>(){}[0]
+        final val Escalator // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.Escalator|{}Escalator[0]
+            final fun <get-Escalator>(): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.Escalator.<get-Escalator>|<get-Escalator>(){}[0]
+        final val ExitGate // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.ExitGate|{}ExitGate[0]
+            final fun <get-ExitGate>(): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.ExitGate.<get-ExitGate>|<get-ExitGate>(){}[0]
+        final val FareGate // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.FareGate|{}FareGate[0]
+            final fun <get-FareGate>(): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.FareGate.<get-FareGate>|<get-FareGate>(){}[0]
+        final val MovingSidewalk // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.MovingSidewalk|{}MovingSidewalk[0]
+            final fun <get-MovingSidewalk>(): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.MovingSidewalk.<get-MovingSidewalk>|<get-MovingSidewalk>(){}[0]
+        final val Stairs // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.Stairs|{}Stairs[0]
+            final fun <get-Stairs>(): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.Stairs.<get-Stairs>|<get-Stairs>(){}[0]
+        final val Walkway // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.Walkway|{}Walkway[0]
+            final fun <get-Walkway>(): dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.Walkway.<get-Walkway>|<get-Walkway>(){}[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode> // dev.sargunv.mobilitydata.gtfs.schedule/PathwayMode.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final value class dev.sargunv.mobilitydata.gtfs.schedule/PaymentMethod { // dev.sargunv.mobilitydata.gtfs.schedule/PaymentMethod|null[0]
     final val value // dev.sargunv.mobilitydata.gtfs.schedule/PaymentMethod.value|{}value[0]
         final fun <get-value>(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/PaymentMethod.value.<get-value>|<get-value>(){}[0]
@@ -1349,6 +1799,41 @@ final value class dev.sargunv.mobilitydata.gtfs.schedule/Timepoint { // dev.sarg
             final fun <get-Exact>(): dev.sargunv.mobilitydata.gtfs.schedule/Timepoint // dev.sargunv.mobilitydata.gtfs.schedule/Timepoint.Companion.Exact.<get-Exact>|<get-Exact>(){}[0]
 
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/Timepoint> // dev.sargunv.mobilitydata.gtfs.schedule/Timepoint.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final value class dev.sargunv.mobilitydata.gtfs.schedule/TransferType { // dev.sargunv.mobilitydata.gtfs.schedule/TransferType|null[0]
+    final val value // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.value|{}value[0]
+        final fun <get-value>(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/TransferType> { // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/TransferType // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/TransferType) // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.TransferType){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion|null[0]
+        final val InSeat // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.InSeat|{}InSeat[0]
+            final fun <get-InSeat>(): dev.sargunv.mobilitydata.gtfs.schedule/TransferType // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.InSeat.<get-InSeat>|<get-InSeat>(){}[0]
+        final val MinimumTime // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.MinimumTime|{}MinimumTime[0]
+            final fun <get-MinimumTime>(): dev.sargunv.mobilitydata.gtfs.schedule/TransferType // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.MinimumTime.<get-MinimumTime>|<get-MinimumTime>(){}[0]
+        final val NotInSeat // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.NotInSeat|{}NotInSeat[0]
+            final fun <get-NotInSeat>(): dev.sargunv.mobilitydata.gtfs.schedule/TransferType // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.NotInSeat.<get-NotInSeat>|<get-NotInSeat>(){}[0]
+        final val NotPossible // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.NotPossible|{}NotPossible[0]
+            final fun <get-NotPossible>(): dev.sargunv.mobilitydata.gtfs.schedule/TransferType // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.NotPossible.<get-NotPossible>|<get-NotPossible>(){}[0]
+        final val Recommended // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.Recommended|{}Recommended[0]
+            final fun <get-Recommended>(): dev.sargunv.mobilitydata.gtfs.schedule/TransferType // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.Recommended.<get-Recommended>|<get-Recommended>(){}[0]
+        final val Timed // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.Timed|{}Timed[0]
+            final fun <get-Timed>(): dev.sargunv.mobilitydata.gtfs.schedule/TransferType // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.Timed.<get-Timed>|<get-Timed>(){}[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/TransferType> // dev.sargunv.mobilitydata.gtfs.schedule/TransferType.Companion.serializer|serializer(){}[0]
     }
 }
 

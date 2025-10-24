@@ -31,7 +31,7 @@ class ProducerTest {
     decodeCsvFile<FareAttribute>("amtrak/fare_attributes.txt")
     decodeCsvFile<FareRule>("amtrak/fare_rules.txt")
     decodeCsvFile<Route>("amtrak/routes.txt")
-    //    decodeCsvFile<Shape>("amtrak/shapes.txt")
+    decodeCsvFile<Shape>("amtrak/shapes.txt")
     decodeCsvFile<StopTime>("amtrak/stop_times.txt")
     decodeCsvFile<Stop>("amtrak/stops.txt")
   }
@@ -45,10 +45,10 @@ class ProducerTest {
     decodeCsvFile<FareRule>("puget-sound/fare_rules.txt")
     decodeCsvFile<FeedInfo>("puget-sound/feed_info.txt")
     decodeCsvFile<Route>("puget-sound/routes.txt")
-    // decodeCsvFile<Shape>("puget-sound/shapes.txt")
+    decodeCsvFile<Shape>("puget-sound/shapes.txt")
     decodeCsvFile<StopTime>("puget-sound/stop_times.txt")
     decodeCsvFile<Stop>("puget-sound/stops.txt")
-    // decodeCsvFile<Transfer>("transfers.txt")
+    decodeCsvFile<Transfer>("puget-sound/transfers.txt")
     decodeCsvFile<Trip>("puget-sound/trips.txt")
   }
 
@@ -70,19 +70,19 @@ class ProducerTest {
     decodeCsvFile<FareProduct>("mbta/fare_products.txt")
     decodeCsvFile<FareTransferRule>("mbta/fare_transfer_rules.txt")
     decodeCsvFile<FeedInfo>("mbta/feed_info.txt")
-    // decodeCsvFile<Level>("mbta/levels.txt")
+    decodeCsvFile<Level>("mbta/levels.txt")
     // decodeCsvFile<Line>("mbta/lines.txt")
     // decodeCsvFile<LinkedDataset>("mbta/linked_datasets.txt")
     // decodeCsvFile<MultiRouteTrip>("mbta/multi_route_trips.txt")
-    // decodeCsvFile<Pathway>("mbta/pathways.txt")
+    decodeCsvFile<Pathway>("mbta/pathways.txt")
     // decodeCsvFile<RoutePattern>("mbta/route_patterns.txt")
     decodeCsvFile<Route>("mbta/routes.txt")
-    // decodeCsvFile<Shape>("mbta/shapes.txt")
+    decodeCsvFile<Shape>("mbta/shapes.txt")
     decodeCsvFile<StopArea>("mbta/stop_areas.txt")
     decodeCsvFile<StopTime>("mbta/stop_times.txt")
     decodeCsvFile<Stop>("mbta/stops.txt")
     decodeCsvFile<Timeframe>("mbta/timeframes.txt")
-    // decodeCsvFile<Transfer>("mbta/transfers.txt")
+    decodeCsvFile<Transfer>("mbta/transfers.txt")
     decodeCsvFile<Trip>("mbta/trips.txt")
     // decodeCsvFile<TripProperty>("mbta/trips_properties.txt")
     // decodeCsvFile<TripPropertyDefinition>("mbta/trips_properties_definitions.txt")
@@ -90,6 +90,11 @@ class ProducerTest {
 }
 
 // TODO find datasets that publish:
+// - booking_rules.txt
+// - frequencies.txt
 // - networks.txt
 // - rider_categories.txt
 // - route_networks.txt
+// - location_groups.txt
+// - location_group_stops.txt
+// - translations.txt
