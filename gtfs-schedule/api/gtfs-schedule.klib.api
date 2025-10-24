@@ -668,6 +668,35 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/LocationGroupStop { // dev.sa
     }
 }
 
+final class dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties { // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.<init>|<init>(kotlin.String?;kotlin.String?){}[0]
+
+    final val stopDesc // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.stopDesc|{}stopDesc[0]
+        final fun <get-stopDesc>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.stopDesc.<get-stopDesc>|<get-stopDesc>(){}[0]
+    final val stopName // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.stopName|{}stopName[0]
+        final fun <get-stopName>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.stopName.<get-stopName>|<get-stopName>(){}[0]
+
+    final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.component2|component2(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.copy|copy(kotlin.String?;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties> { // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties) // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.LocationProperties){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties> // dev.sargunv.mobilitydata.gtfs.schedule/LocationProperties.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class dev.sargunv.mobilitydata.gtfs.schedule/Network { // dev.sargunv.mobilitydata.gtfs.schedule/Network|null[0]
     constructor <init>(kotlin/String, kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.schedule/Network.<init>|<init>(kotlin.String;kotlin.String?){}[0]
 

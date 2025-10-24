@@ -30,7 +30,6 @@ import kotlinx.datetime.format.DateTimeComponents
 import kotlinx.datetime.format.DateTimeComponents.Formats.ISO_DATE_TIME_OFFSET
 import kotlinx.datetime.format.DateTimeFormat
 import kotlinx.datetime.format.parse
-import kotlinx.datetime.plus
 import kotlinx.datetime.serializers.LocalDateIso8601Serializer
 import kotlinx.datetime.serializers.LocalTimeIso8601Serializer
 import kotlinx.datetime.toInstant
@@ -170,8 +169,7 @@ public data class ServiceTime(
   @OptIn(ExperimentalTime::class)
   public fun toInstant(serviceDate: LocalDate, timezone: TimeZone): Instant {
     val noonOnServiceDate = serviceDate.atTime(LocalTime(hour = 12, minute = 0)).toInstant(timezone)
-    val origin = noonOnServiceDate - 12.hours
-    return origin + hours.hours + minutes.minutes + seconds.seconds
+    return noonOnServiceDate - 12.hours + hours.hours + minutes.minutes + seconds.seconds
   }
 
   override fun compareTo(other: ServiceTime): Int =
