@@ -14,17 +14,23 @@ import dev.sargunv.mobilitydata.utils.serialization.WholeMinutesSerializer
 import dev.sargunv.mobilitydata.utils.serialization.WholeSecondsSerializer
 import kotlin.jvm.JvmInline
 import kotlin.time.Duration
+import kotlin.time.Duration.Companion.hours
+import kotlin.time.Duration.Companion.minutes
+import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.DayOfWeek
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.Month
+import kotlinx.datetime.TimeZone
 import kotlinx.datetime.UtcOffset
+import kotlinx.datetime.atTime
 import kotlinx.datetime.format.DateTimeComponents
 import kotlinx.datetime.format.DateTimeComponents.Formats.ISO_DATE_TIME_OFFSET
 import kotlinx.datetime.format.DateTimeFormat
 import kotlinx.datetime.format.parse
+import kotlinx.datetime.plus
 import kotlinx.datetime.serializers.LocalDateIso8601Serializer
 import kotlinx.datetime.serializers.LocalTimeIso8601Serializer
 import kotlinx.datetime.toInstant
@@ -156,6 +162,22 @@ public data class ServiceTime(
    * Converts this service time to a [LocalTime], wrapping hours greater than 23 using modulo 24.
    */
   public fun toLocalTime(): LocalTime = LocalTime(hours % 24, minutes, seconds)
+
+  /**
+   * Converts this service time to an [Instant] on the given [serviceDate] in the specified
+   * [timezone]. If the service time represents a time after midnight (hours &gt; 23), the resulting
+   * instant will fall on the next calendar day.
+   *
+   * @param serviceDate The service date to which this service time belongs
+   * @param timezone The timezone in which to interpret the service time
+   * @return The corresponding instant in time
+   */
+  @OptIn(ExperimentalTime::class)
+  public fun toInstant(serviceDate: LocalDate, timezone: TimeZone): Instant {
+    val noonOnServiceDate = serviceDate.atTime(LocalTime(hour = 12, minute = 0)).toInstant(timezone)
+    val origin = noonOnServiceDate - 12.hours
+    return origin + hours.hours + minutes.minutes + seconds.seconds
+  }
 
   override fun compareTo(other: ServiceTime): Int =
     when {
