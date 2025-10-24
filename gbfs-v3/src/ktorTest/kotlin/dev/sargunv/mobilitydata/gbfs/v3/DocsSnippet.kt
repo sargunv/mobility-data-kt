@@ -14,21 +14,22 @@ class DocsSnippet {
           .getServiceManifest( // (2)!
             discoveryUrl = "https://locomotion.app/api/gbfs/3.0/montreal/gbfs"
           )
+          .getOrThrow()
           .data
 
       context(service) { // (3)!
-        val systemInfo = gbfs.getSystemInformation().data // (4)!
+        val systemInfo = gbfs.getSystemInformation().getOrThrow().data // (4)!
 
         println("System: ${systemInfo.name["en-CA"]}")
         println("Operator: ${systemInfo.operator?.get("en-CA")}")
         println("Timezone: ${systemInfo.timezone}")
 
-        val vehicleTypes = gbfs.getVehicleTypes().data // (5)!
+        val vehicleTypes = gbfs.getVehicleTypes().getOrThrow().data // (5)!
 
         println("\nVehicle Types:")
         vehicleTypes.forEach { type -> println("  - ${type.formFactor}: (${type.propulsionType})") }
 
-        val freeBikes = gbfs.getVehicleStatus().data // (6)!
+        val freeBikes = gbfs.getVehicleStatus().getOrThrow().data // (6)!
 
         println("\nAvailable bikes: ${freeBikes.size}")
         freeBikes.take(3).forEach { bike ->

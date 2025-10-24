@@ -41,112 +41,112 @@ class ProducerTest {
   @Test
   fun bolt() = runTest {
     val client = GbfsV3Client(createMockEngine("bolt"))
-    val service = client.getServiceManifest("gbfs.json").data
+    val service = client.getServiceManifest("gbfs.json").getOrThrow().data
 
     context(service) {
-      client.getVersionManifest()
-      client.getGeofencingZones()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getSystemInformation()
-      client.getSystemPricingPlans()
-      client.getVehicleStatus()
-      client.getVehicleTypes()
+      client.getVersionManifest().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getSystemInformation().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getVehicleStatus().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
     }
   }
 
   @Test
   fun citiz() = runTest {
     val client = GbfsV3Client(createMockEngine("citiz"))
-    val service = client.getServiceManifest("gbfs.json").data
+    val service = client.getServiceManifest("gbfs.json").getOrThrow().data
 
     context(service) {
-      client.getSystemInformation()
-      client.getVersionManifest()
-      client.getSystemPricingPlans()
-      client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getVehicleStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVersionManifest().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getVehicleStatus().getOrThrow()
     }
   }
 
   @Test
   fun cooltra() = runTest {
     val client = GbfsV3Client(createMockEngine("cooltra"))
-    val service = client.getServiceManifest("gbfs.json").data
+    val service = client.getServiceManifest("gbfs.json").getOrThrow().data
 
     context(service) {
-      client.getSystemInformation()
-      client.getSystemPricingPlans()
-      client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getVehicleStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getVehicleStatus().getOrThrow()
     }
   }
 
   @Test
   fun cyclocity() = runTest {
     val client = GbfsV3Client(createMockEngine("cyclocity"))
-    val service = client.getServiceManifest("gbfs.json").data
+    val service = client.getServiceManifest("gbfs.json").getOrThrow().data
 
     context(service) {
-      client.getSystemInformation()
-      client.getVersionManifest()
-      client.getVehicleTypes()
-      client.getStationInformation()
-      client.getStationStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVersionManifest().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
     }
   }
 
   @Test
   fun ecovelo() = runTest {
     val client = GbfsV3Client(createMockEngine("ecovelo"))
-    val service = client.getServiceManifest("gbfs.json").data
+    val service = client.getServiceManifest("gbfs.json").getOrThrow().data
 
     context(service) {
-      client.getSystemInformation()
-      client.getVersionManifest()
-      client.getSystemRegions()
-      client.getSystemPricingPlans()
-      client.getSystemAlerts()
-      client.getGeofencingZones()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getVehicleStatus()
-      client.getVehicleTypes()
+      client.getSystemInformation().getOrThrow()
+      client.getVersionManifest().getOrThrow()
+      client.getSystemRegions().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getSystemAlerts().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getVehicleStatus().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
     }
   }
 
   @Test
   fun flamingo() = runTest {
     val client = GbfsV3Client(createMockEngine("flamingo"))
-    val service = client.getServiceManifest("gbfs.json").data
+    val service = client.getServiceManifest("gbfs.json").getOrThrow().data
 
     context(service) {
-      client.getSystemInformation()
-      client.getVersionManifest()
-      client.getSystemPricingPlans()
-      client.getSystemAlerts()
-      client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getVehicleStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVersionManifest().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getSystemAlerts().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getVehicleStatus().getOrThrow()
     }
   }
 
   @Test
   fun ridecheck() = runTest {
     val client = GbfsV3Client(createMockEngine("ridecheck"))
-    val service = client.getServiceManifest("gbfs.json").data
+    val service = client.getServiceManifest("gbfs.json").getOrThrow().data
 
     context(service) {
-      client.getSystemInformation()
-      client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getVehicleStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getVehicleStatus().getOrThrow()
     }
   }
 }
