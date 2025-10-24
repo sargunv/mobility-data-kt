@@ -16,22 +16,6 @@ files that describe transit routes, stops, trips, and schedules.
   types
 - Kotlin Multiplatform support (JVM, Native, JS, WASM)
 
-## Status
-
-This module is currently in progress and provides a partial implementation of
-the GTFS Schedule specification. The following files are supported:
-
-- agency.txt
-- routes.txt
-- trips.txt
-- stops.txt
-- stop_times.txt
-- calendar.txt
-- calendar_dates.txt
-
-See [issue #8](https://github.com/sargunv/mobility-data-kt/issues/8) for the
-current roadmap and implementation status.
-
 ## Installation
 
 Add the dependency to your `build.gradle.kts`:
