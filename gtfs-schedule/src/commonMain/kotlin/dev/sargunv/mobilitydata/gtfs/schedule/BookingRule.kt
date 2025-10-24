@@ -4,7 +4,7 @@ import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Id2
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import dev.sargunv.mobilitydata.utils.Url
-import dev.sargunv.mobilitydata.utils.WholeSeconds
+import dev.sargunv.mobilitydata.utils.WholeMinutes
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -23,10 +23,10 @@ public data class BookingRule(
   @SerialName("booking_type") public val bookingType: BookingType,
 
   /** Minimum number of minutes before travel to make the request. */
-  @SerialName("prior_notice_duration_min") public val priorNoticeDurationMin: WholeSeconds? = null,
+  @SerialName("prior_notice_duration_min") public val priorNoticeDurationMin: WholeMinutes? = null,
 
   /** Maximum number of minutes before travel to make the request. */
-  @SerialName("prior_notice_duration_max") public val priorNoticeDurationMax: WholeSeconds? = null,
+  @SerialName("prior_notice_duration_max") public val priorNoticeDurationMax: WholeMinutes? = null,
 
   /** Latest time on the day prior to travel to make the booking request. */
   @SerialName("prior_notice_last_day") public val priorNoticeLastDay: Int? = null,
