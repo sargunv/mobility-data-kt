@@ -34,7 +34,7 @@ final class dev.sargunv.mobilitydata.utils/ServiceTime : kotlin/Comparable<dev.s
     final fun copy(kotlin/Int = ..., kotlin/Int = ..., kotlin/Int = ...): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.utils/ServiceTime.copy|copy(kotlin.Int;kotlin.Int;kotlin.Int){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.utils/ServiceTime.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.utils/ServiceTime.hashCode|hashCode(){}[0]
-    final fun toLocalTime(): kotlinx.datetime/LocalTime // dev.sargunv.mobilitydata.utils/ServiceTime.toLocalTime|toLocalTime(){}[0]
+    final fun toInstant(kotlinx.datetime/LocalDate, kotlinx.datetime/TimeZone): kotlin.time/Instant // dev.sargunv.mobilitydata.utils/ServiceTime.toInstant|toInstant(kotlinx.datetime.LocalDate;kotlinx.datetime.TimeZone){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.utils/ServiceTime.toString|toString(){}[0]
 
     final object Companion { // dev.sargunv.mobilitydata.utils/ServiceTime.Companion|null[0]
@@ -194,5 +194,3 @@ final object dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer
     final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlin.time/Duration // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Duration) // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Duration){}[0]
 }
-
-final fun (kotlinx.datetime/LocalTime).dev.sargunv.mobilitydata.utils/toServiceTime(kotlin/Int = ...): dev.sargunv.mobilitydata.utils/ServiceTime // dev.sargunv.mobilitydata.utils/toServiceTime|toServiceTime@kotlinx.datetime.LocalTime(kotlin.Int){}[0]

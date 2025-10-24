@@ -1,12 +1,11 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.utils.toServiceTime
+import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
-import kotlinx.datetime.LocalTime
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -49,9 +48,9 @@ private val expectedResponse =
             OperatingRule(
               fromZoneId = "zoneA",
               toZoneId = "zoneA",
-              startPickupWindow = LocalTime.parse("06:00:00").toServiceTime(),
-              endPickupWindow = LocalTime.parse("09:00:00").toServiceTime(),
-              endDropoffWindow = LocalTime.parse("09:30:00").toServiceTime(),
+              startPickupWindow = ServiceTime(6, 0, 0),
+              endPickupWindow = ServiceTime(9, 0, 0),
+              endDropoffWindow = ServiceTime(9, 30, 0),
               calendars = listOf("weekend", "labor_day"),
               brandId = "large_ride",
               vehicleTypeIds = listOf("large_van"),

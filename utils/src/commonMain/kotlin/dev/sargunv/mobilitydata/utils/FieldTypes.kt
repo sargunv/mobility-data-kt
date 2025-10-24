@@ -159,13 +159,8 @@ public data class ServiceTime(
   }
 
   /**
-   * Converts this service time to a [LocalTime], wrapping hours greater than 23 using modulo 24.
-   */
-  public fun toLocalTime(): LocalTime = LocalTime(hours % 24, minutes, seconds)
-
-  /**
    * Converts this service time to an [Instant] on the given [serviceDate] in the specified
-   * [timezone]. If the service time represents a time after midnight (hours &gt; 23), the resulting
+   * [timezone]. If the service time represents a time after midnight ([hours] > 23), the resulting
    * instant will fall on the next calendar day.
    *
    * @param serviceDate The service date to which this service time belongs
@@ -185,16 +180,6 @@ public data class ServiceTime(
       this.minutes != other.minutes -> this.minutes.compareTo(other.minutes)
       else -> this.seconds.compareTo(other.seconds)
     }
-}
-
-/**
- * Converts this [LocalTime] to a [ServiceTime], optionally adding a day offset.
- *
- * @param dayOffset Number of days to add (0 for same day, 1 for next day, etc.).
- */
-public fun LocalTime.toServiceTime(dayOffset: Int = 0): ServiceTime {
-  val totalHours = hour + dayOffset * 24
-  return ServiceTime(totalHours, minute, second)
 }
 
 /** Duration as an integer of minutes. */

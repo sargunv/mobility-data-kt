@@ -1,13 +1,12 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
-import dev.sargunv.mobilitydata.utils.toServiceTime
+import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.DayOfWeek
-import kotlinx.datetime.LocalTime
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -57,14 +56,14 @@ private val expectedResponse =
             SystemHoursEntry(
               userTypes = listOf(UserType.Member),
               days = listOf(DayOfWeek.SATURDAY, DayOfWeek.SUNDAY),
-              startTime = LocalTime(0, 0, 0).toServiceTime(),
-              endTime = LocalTime(23, 59, 59).toServiceTime(),
+              startTime = ServiceTime(0, 0, 0),
+              endTime = ServiceTime(23, 59, 59),
             ),
             SystemHoursEntry(
               userTypes = listOf(UserType.NonMember),
               days = listOf(DayOfWeek.SATURDAY, DayOfWeek.SUNDAY),
-              startTime = LocalTime(5, 0, 0).toServiceTime(),
-              endTime = LocalTime(23, 59, 59).toServiceTime(),
+              startTime = ServiceTime(5, 0, 0),
+              endTime = ServiceTime(23, 59, 59),
             ),
             SystemHoursEntry(
               userTypes = listOf(UserType.Member, UserType.NonMember),
@@ -76,8 +75,8 @@ private val expectedResponse =
                   DayOfWeek.THURSDAY,
                   DayOfWeek.FRIDAY,
                 ),
-              startTime = LocalTime(0, 0, 0).toServiceTime(),
-              endTime = LocalTime(23, 59, 59).toServiceTime(),
+              startTime = ServiceTime(0, 0, 0),
+              endTime = ServiceTime(23, 59, 59),
             ),
           )
       ),
