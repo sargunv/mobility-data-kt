@@ -16,11 +16,10 @@ jobs:
     copilot-setup-steps:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v5
+            - uses: nschloe/action-cached-lfs-checkout@v1
               with:
                   fetch-depth: 0
                   fetch-tags: true
-                  lfs: true
             - uses: actions/setup-java@v5
               with:
                   distribution: temurin
