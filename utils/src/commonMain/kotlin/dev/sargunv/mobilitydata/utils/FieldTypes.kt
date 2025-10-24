@@ -108,16 +108,6 @@ public typealias RgbColorTriplet = @Serializable(with = RgbColorTripletSerialize
  */
 public typealias RgbColorCode = @Serializable(with = RgbColorCodeSerializer::class) RgbColor
 
-/**
- * English name of a color. All words must be in lower case, without special characters, quotation
- * marks, hyphens, underscores, commas, or dots. Spaces are allowed in case of a compound name.
- *
- * Examples:
- * - green
- * - dark blue
- */
-public typealias ColorName = String
-
 /** [LocalDate] in the ISO 8601 basic format (YYYYMMDD). */
 public typealias BasicLocalDate = @Serializable(with = IsoBasicLocalDateSerializer::class) LocalDate
 
