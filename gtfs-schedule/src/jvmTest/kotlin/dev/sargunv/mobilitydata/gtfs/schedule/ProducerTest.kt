@@ -96,3 +96,4 @@ class ProducerTest {
 // - route_networks.txt
 // - location_groups.txt
 // - location_group_stops.txt
+// - translations.txt
