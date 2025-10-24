@@ -1,6 +1,6 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.utils.RgbColor
+import dev.sargunv.mobilitydata.utils.RgbColorTriplet
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
@@ -55,20 +55,20 @@ private val expectedResponse =
             Brand(
               brandId = "regular_ride",
               brandName = "Regular Ride",
-              brandColor = RgbColor(0x1C7F49),
-              brandTextColor = RgbColor(0xFFFFFF),
+              brandColor = RgbColorTriplet(0x1C7F49),
+              brandTextColor = RgbColorTriplet(0xFFFFFF),
             ),
             Brand(
               brandId = "large_ride",
               brandName = "Large Ride",
-              brandColor = RgbColor(0x1C7F49),
-              brandTextColor = RgbColor(0xFFFFFF),
+              brandColor = RgbColorTriplet(0x1C7F49),
+              brandTextColor = RgbColorTriplet(0xFFFFFF),
             ),
             Brand(
               brandId = "shared_ride",
               brandName = "Shared Ride",
-              brandColor = RgbColor(0x1C7F49),
-              brandTextColor = RgbColor(0xFFFFFF),
+              brandColor = RgbColorTriplet(0x1C7F49),
+              brandTextColor = RgbColorTriplet(0xFFFFFF),
             ),
           )
       ),

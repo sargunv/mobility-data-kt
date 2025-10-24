@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import dev.sargunv.mobilitydata.utils.RgbColorCode
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -127,7 +128,7 @@ private val expectedResponse =
             brandLastModified = LocalDate(2021, 6, 15),
             brandImageUrl = "https://www.example.com/assets/brand_image.svg",
             brandImageUrlDark = "https://www.example.com/assets/brand_image_dark.svg",
-            color = "#C2D32C",
+            color = RgbColorCode(0xC2D32C),
             brandTermsUrl = "https://www.example.com/assets/brand.pdf",
           ),
       ),

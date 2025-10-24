@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
+import dev.sargunv.mobilitydata.utils.RgbColorCode
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
@@ -100,7 +101,7 @@ private val expectedResponse =
             brandLastModified = LocalDate(2021, 6, 15),
             brandImageUrl = "https://www.example.com/assets/brand_image.svg",
             brandImageUrlDark = "https://www.example.com/assets/brand_image_dark.svg",
-            color = "#C2D32C",
+            color = RgbColorCode(0xC2D32C),
             brandTermsUrl = "https://www.example.com/assets/brand.pdf",
           ),
       ),

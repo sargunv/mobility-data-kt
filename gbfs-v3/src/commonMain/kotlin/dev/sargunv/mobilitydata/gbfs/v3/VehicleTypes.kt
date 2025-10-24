@@ -88,7 +88,16 @@ public data class VehicleType(
   /** The name of the vehicle model. */
   public val model: LocalizedText? = null,
 
-  /** The color of the vehicle. */
+  /**
+   * The color of the vehicle, in plain English.
+   *
+   * All words must be in lower case, without special characters, quotation marks, hyphens,
+   * underscores, commas, or dots. Spaces are allowed in case of a compound name.
+   *
+   * Example
+   * - green
+   * - dark blue
+   */
   public val color: String? = null,
 
   /** Customer-readable description of the vehicle type outlining special features or how-tos. */

@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.utils.ExtendedLocalDate
 import dev.sargunv.mobilitydata.utils.LanguageCode
+import dev.sargunv.mobilitydata.utils.RgbColorCode
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.datetime.TimeZone
@@ -145,7 +146,7 @@ public data class BrandAssets(
    * Color used to represent the brand for the service expressed as a 6 digit hexadecimal color code
    * in the form #000000.
    */
-  public val color: String? = null,
+  public val color: RgbColorCode? = null,
 )
 
 /** Contains rental app information for different platforms. */
