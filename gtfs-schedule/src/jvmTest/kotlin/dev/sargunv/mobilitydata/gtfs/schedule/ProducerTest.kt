@@ -90,6 +90,7 @@ class ProducerTest {
 }
 
 // TODO find datasets that publish:
+// - booking_rules.txt
 // - frequencies.txt
 // - networks.txt
 // - rider_categories.txt
