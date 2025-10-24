@@ -625,6 +625,38 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Frequency$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class dev/sargunv/mobilitydata/gtfs/schedule/Level {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Level$Companion;
+	public fun <init> (Ljava/lang/String;DLjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;DLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()D
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;DLjava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/Level;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Level;Ljava/lang/String;DLjava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Level;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLevelId ()Ljava/lang/String;
+	public final fun getLevelIndex ()D
+	public final fun getLevelName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/Level$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/Level$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/Level;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/Level;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/Level$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/gtfs/schedule/LocationGroup {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/LocationGroup$Companion;
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
@@ -776,6 +808,92 @@ public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/OverrideType
 public final class dev/sargunv/mobilitydata/gtfs/schedule/OverrideType$Companion {
 	public final fun getServiceAdded-Ff9wtzM ()I
 	public final fun getServiceRemoved-Ff9wtzM ()I
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/Pathway {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Pathway$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZLjava/lang/Double;Lkotlin/time/Duration;Ljava/lang/Integer;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZLjava/lang/Double;Lkotlin/time/Duration;Ljava/lang/Integer;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/Double;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4-lVsYjmM ()I
+	public final fun component5 ()Z
+	public final fun component6 ()Ljava/lang/Double;
+	public final fun component7-FghU774 ()Lkotlin/time/Duration;
+	public final fun component8 ()Ljava/lang/Integer;
+	public final fun component9 ()Ljava/lang/Double;
+	public final fun copy-Ejjncfc (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZLjava/lang/Double;Lkotlin/time/Duration;Ljava/lang/Integer;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/Pathway;
+	public static synthetic fun copy-Ejjncfc$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Pathway;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZLjava/lang/Double;Lkotlin/time/Duration;Ljava/lang/Integer;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Pathway;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFromStopId ()Ljava/lang/String;
+	public final fun getLength ()Ljava/lang/Double;
+	public final fun getMaxSlope ()Ljava/lang/Double;
+	public final fun getMinWidth ()Ljava/lang/Double;
+	public final fun getPathwayId ()Ljava/lang/String;
+	public final fun getPathwayMode-lVsYjmM ()I
+	public final fun getReversedSignpostedAs ()Ljava/lang/String;
+	public final fun getSignpostedAs ()Ljava/lang/String;
+	public final fun getStairCount ()Ljava/lang/Integer;
+	public final fun getToStopId ()Ljava/lang/String;
+	public final fun getTraversalTime-FghU774 ()Lkotlin/time/Duration;
+	public fun hashCode ()I
+	public final fun isBidirectional ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/Pathway$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/Pathway$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/Pathway;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/Pathway;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/Pathway$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/PathwayMode {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/PathwayMode$Companion;
+	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/PathwayMode;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/PathwayMode$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/PathwayMode$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-ai9RVtI (Lkotlinx/serialization/encoding/Decoder;)I
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-CWG0zGA (Lkotlinx/serialization/encoding/Encoder;I)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/PathwayMode$Companion {
+	public final fun getElevator-lVsYjmM ()I
+	public final fun getEscalator-lVsYjmM ()I
+	public final fun getExitGate-lVsYjmM ()I
+	public final fun getFareGate-lVsYjmM ()I
+	public final fun getMovingSidewalk-lVsYjmM ()I
+	public final fun getStairs-lVsYjmM ()I
+	public final fun getWalkway-lVsYjmM ()I
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 

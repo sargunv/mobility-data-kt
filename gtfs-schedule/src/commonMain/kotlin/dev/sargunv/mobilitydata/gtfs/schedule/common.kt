@@ -39,8 +39,5 @@ public value class TriState(
 /** Placeholder type for GTFS fare zones. */
 public typealias Zone = Nothing
 
-/** Placeholder type for GTFS station levels. */
-public typealias Level = Nothing
-
 /** Placeholder type for GTFS trip blocks. */
 public typealias Block = Nothing
