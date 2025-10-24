@@ -3,7 +3,8 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.time.Duration.Companion.seconds
+import kotlin.time.Duration.Companion.days
+import kotlin.time.Duration.Companion.hours
 
 private val csvContent = // language=CSV
   """
@@ -19,7 +20,7 @@ private val expected =
     BookingRule(
       bookingRuleId = "same_day_booking",
       bookingType = BookingType.SameDay,
-      priorNoticeDurationMin = 60.seconds,
+      priorNoticeDurationMin = 1.hours,
       priorNoticeDurationMax = null,
       priorNoticeLastDay = null,
       priorNoticeLastTime = null,
@@ -53,8 +54,8 @@ private val expected =
     BookingRule(
       bookingRuleId = "prior_days_booking",
       bookingType = BookingType.PriorDays,
-      priorNoticeDurationMin = 120.seconds,
-      priorNoticeDurationMax = 10080.seconds,
+      priorNoticeDurationMin = 2.hours,
+      priorNoticeDurationMax = 7.days,
       priorNoticeLastDay = 1,
       priorNoticeLastTime = ServiceTime(18, 0, 0),
       priorNoticeStartDay = 7,
