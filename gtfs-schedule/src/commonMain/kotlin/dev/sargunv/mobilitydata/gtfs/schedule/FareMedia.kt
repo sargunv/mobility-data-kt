@@ -11,14 +11,14 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class FareMedia(
-  /** Identifies a fare media. */
-  @SerialName("fare_media_id") public val fareMediaId: String,
+    /** Identifies a fare media. */
+    @SerialName("fare_media_id") public val fareMediaId: String,
 
-  /** Name of the fare media. */
-  @SerialName("fare_media_name") public val fareMediaName: String? = null,
+    /** Name of the fare media. */
+    @SerialName("fare_media_name") public val fareMediaName: String? = null,
 
-  /** The type of fare media. */
-  @SerialName("fare_media_type") public val fareMediaType: FareMediaType,
+    /** The type of fare media. */
+    @SerialName("fare_media_type") public val fareMediaType: FareMediaType,
 )
 
 /** Type of fare media. */
@@ -26,26 +26,27 @@ public data class FareMedia(
 @JvmInline
 public value class FareMediaType
 private constructor(
-  /** The integer value representing the fare media type. */
-  public val value: Int
+    /** The integer value representing the fare media type. */
+    public val value: Int
 ) {
-  /** Companion object containing predefined fare media type constants. */
-  public companion object {
-    /**
-     * None. Used when there is no fare media involved in purchasing or validating a fare product.
-     */
-    public val None: FareMediaType = FareMediaType(0)
+    /** Companion object containing predefined fare media type constants. */
+    public companion object {
+        /**
+         * None. Used when there is no fare media involved in purchasing or validating a fare
+         * product.
+         */
+        public val None: FareMediaType = FareMediaType(0)
 
-    /** Physical paper ticket. */
-    public val PhysicalPaperTicket: FareMediaType = FareMediaType(1)
+        /** Physical paper ticket. */
+        public val PhysicalPaperTicket: FareMediaType = FareMediaType(1)
 
-    /** Physical transit card. */
-    public val PhysicalTransitCard: FareMediaType = FareMediaType(2)
+        /** Physical transit card. */
+        public val PhysicalTransitCard: FareMediaType = FareMediaType(2)
 
-    /** cEMV (contactless Europay, Mastercard and Visa). */
-    public val cEMV: FareMediaType = FareMediaType(3)
+        /** cEMV (contactless Europay, Mastercard and Visa). */
+        public val cEMV: FareMediaType = FareMediaType(3)
 
-    /** Mobile app. */
-    public val MobileApp: FareMediaType = FareMediaType(4)
-  }
+        /** Mobile app. */
+        public val MobileApp: FareMediaType = FareMediaType(4)
+    }
 }

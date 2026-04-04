@@ -14,21 +14,21 @@ import kotlinx.serialization.Serializable
 @Serializable
 @OptIn(ExperimentalTime::class)
 public data class GbfsFeedResponse<T : GbfsFeedData>(
-  /** POSIX timestamp indicating the last time the data in this feed was updated. */
-  @SerialName("last_updated") public val lastUpdated: EpochSeconds,
+    /** POSIX timestamp indicating the last time the data in this feed was updated. */
+    @SerialName("last_updated") public val lastUpdated: EpochSeconds,
 
-  /**
-   * Number of seconds representing how long before the data in this feed will be updated again.
-   *
-   * Represents the minimum amount of time the client should wait before polling the feed again.
-   */
-  public val ttl: WholeSeconds,
+    /**
+     * Number of seconds representing how long before the data in this feed will be updated again.
+     *
+     * Represents the minimum amount of time the client should wait before polling the feed again.
+     */
+    public val ttl: WholeSeconds,
 
-  /** GBFS version number to which the feed conforms, according to the versioning framework. */
-  public val version: String? = null,
+    /** GBFS version number to which the feed conforms, according to the versioning framework. */
+    public val version: String? = null,
 
-  /** Response data in the form of the specific feed type being accessed. */
-  public val data: T,
+    /** Response data in the form of the specific feed type being accessed. */
+    public val data: T,
 )
 
 /** A possible value of [GbfsFeedResponse.data]. */

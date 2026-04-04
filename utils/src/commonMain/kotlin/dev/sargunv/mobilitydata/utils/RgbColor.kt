@@ -13,26 +13,26 @@ import kotlinx.serialization.Serializable
  */
 @JvmInline
 public value class RgbColor(
-  /** The 24-bit integer representation of this color (0x000000 to 0xFFFFFF). */
-  public val value: Int
+    /** The 24-bit integer representation of this color (0x000000 to 0xFFFFFF). */
+    public val value: Int
 ) {
-  init {
-    require(value in 0x000000..0xFFFFFF) { "Color value must be a 6-digit hexadecimal number." }
-  }
+    init {
+        require(value in 0x000000..0xFFFFFF) { "Color value must be a 6-digit hexadecimal number." }
+    }
 
-  /** The red component of this color (0-255). */
-  public val red: Byte
-    get() = (value shr 16).toByte()
+    /** The red component of this color (0-255). */
+    public val red: Byte
+        get() = (value shr 16).toByte()
 
-  /** The green component of this color (0-255). */
-  public val green: Byte
-    get() = (value shr 8).toByte()
+    /** The green component of this color (0-255). */
+    public val green: Byte
+        get() = (value shr 8).toByte()
 
-  /** The blue component of this color (0-255). */
-  public val blue: Byte
-    get() = value.toByte()
+    /** The blue component of this color (0-255). */
+    public val blue: Byte
+        get() = value.toByte()
 
-  public override fun toString(): String = "#${value.toHexString(HexFormat.UpperCase)}"
+    public override fun toString(): String = "#${value.toHexString(HexFormat.UpperCase)}"
 }
 
 /**

@@ -9,7 +9,7 @@ import kotlinx.datetime.serializers.FormattedLocalDateSerializer
  * Example: 20211109 for November 9th, 2021.
  */
 public object IsoBasicLocalDateSerializer :
-  FormattedLocalDateSerializer(
-    name = "dev.sargunv.mobilitydata.utils.serialization.IsoBasicLocalDateSerializer",
-    format = LocalDate.Formats.ISO_BASIC,
-  )
+    FormattedLocalDateSerializer(
+        name = "dev.sargunv.mobilitydata.utils.serialization.IsoBasicLocalDateSerializer",
+        format = LocalDate.Formats.ISO_BASIC,
+    )

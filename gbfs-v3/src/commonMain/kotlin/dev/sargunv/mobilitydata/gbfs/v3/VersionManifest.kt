@@ -10,20 +10,20 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class VersionManifest(
-  /**
-   * Contains one object for each of the available versions of a feed.
-   *
-   * The array MUST be sorted by increasing MAJOR and MINOR version number.
-   */
-  public val versions: List<VersionInfo>
+    /**
+     * Contains one object for each of the available versions of a feed.
+     *
+     * The array MUST be sorted by increasing MAJOR and MINOR version number.
+     */
+    public val versions: List<VersionInfo>
 ) : GbfsFeedData, List<VersionInfo> by versions
 
 /** Information about a specific version of a GBFS feed. */
 @Serializable
 public data class VersionInfo(
-  /** The semantic version of the feed in the form X.Y. */
-  public val version: String,
+    /** The semantic version of the feed in the form X.Y. */
+    public val version: String,
 
-  /** URL of the corresponding gbfs.json endpoint. */
-  public val url: Url,
+    /** URL of the corresponding gbfs.json endpoint. */
+    public val url: Url,
 )

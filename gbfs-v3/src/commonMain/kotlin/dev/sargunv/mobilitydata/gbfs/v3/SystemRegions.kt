@@ -13,16 +13,16 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class SystemRegions(
-  /** Array of regions in the system. */
-  public val regions: List<Region>
+    /** Array of regions in the system. */
+    public val regions: List<Region>
 ) : GbfsFeedData
 
 /** A geographic or administrative region within the system. */
 @Serializable
 public data class Region(
-  /** Identifier for the region. */
-  @SerialName("region_id") public val regionId: String,
+    /** Identifier for the region. */
+    @SerialName("region_id") public val regionId: String,
 
-  /** Public name for this region. */
-  public val name: LocalizedText,
+    /** Public name for this region. */
+    public val name: LocalizedText,
 )

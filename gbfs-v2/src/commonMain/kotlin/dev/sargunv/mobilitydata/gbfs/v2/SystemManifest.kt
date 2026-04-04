@@ -16,19 +16,19 @@ import kotlinx.serialization.Serializable
 @JvmInline
 @Serializable
 public value class SystemManifest(
-  @SerialName("feeds") private val services: Map<LanguageCode, Service>
+    @SerialName("feeds") private val services: Map<LanguageCode, Service>
 ) : GbfsFeedData, Map<LanguageCode, Service> by services {
-  public constructor(vararg entries: Pair<LanguageCode, Service>) : this(mapOf(*entries))
+    public constructor(vararg entries: Pair<LanguageCode, Service>) : this(mapOf(*entries))
 
-  /**
-   * Get the GBFS service for a specific language code.
-   *
-   * @throws NoSuchElementException if the language code is not found
-   */
-  public fun getService(language: LanguageCode): Service = services.getValue(language)
+    /**
+     * Get the GBFS service for a specific language code.
+     *
+     * @throws NoSuchElementException if the language code is not found
+     */
+    public fun getService(language: LanguageCode): Service = services.getValue(language)
 
-  /** Get the GBFS service for a specific language code, or null if not found. */
-  public fun getServiceOrNull(language: LanguageCode): Service? = services[language]
+    /** Get the GBFS service for a specific language code, or null if not found. */
+    public fun getServiceOrNull(language: LanguageCode): Service? = services[language]
 }
 
 /**
@@ -38,10 +38,10 @@ public value class SystemManifest(
  */
 @Serializable
 public data class Service(
-  /** Map of feed types to their corresponding URLs. */
-  @Serializable(with = FeedDiscoverySerializer::class) val feeds: Map<FeedType, Url>
+    /** Map of feed types to their corresponding URLs. */
+    @Serializable(with = FeedDiscoverySerializer::class) val feeds: Map<FeedType, Url>
 ) : Map<FeedType, Url> by feeds {
-  public constructor(vararg entries: Pair<FeedType, Url>) : this(mapOf(*entries))
+    public constructor(vararg entries: Pair<FeedType, Url>) : this(mapOf(*entries))
 }
 
 /**
@@ -52,45 +52,45 @@ public data class Service(
 @Serializable
 @JvmInline
 public value class FeedType(
-  /** The string value representing the feed type. */
-  public val value: String
+    /** The string value representing the feed type. */
+    public val value: String
 ) {
-  /** Companion object containing predefined feed type constants. */
-  public companion object {
-    /** The gbfs_versions.json file listing available GBFS versions. */
-    public val VersionManifest: FeedType = FeedType("gbfs_versions")
+    /** Companion object containing predefined feed type constants. */
+    public companion object {
+        /** The gbfs_versions.json file listing available GBFS versions. */
+        public val VersionManifest: FeedType = FeedType("gbfs_versions")
 
-    /** The system_information.json file with system details. */
-    public val SystemInformation: FeedType = FeedType("system_information")
+        /** The system_information.json file with system details. */
+        public val SystemInformation: FeedType = FeedType("system_information")
 
-    /** The vehicle_types.json file describing available vehicle types. */
-    public val VehicleTypes: FeedType = FeedType("vehicle_types")
+        /** The vehicle_types.json file describing available vehicle types. */
+        public val VehicleTypes: FeedType = FeedType("vehicle_types")
 
-    /** The station_information.json file with station details. */
-    public val StationInformation: FeedType = FeedType("station_information")
+        /** The station_information.json file with station details. */
+        public val StationInformation: FeedType = FeedType("station_information")
 
-    /** The station_status.json file with real-time station status. */
-    public val StationStatus: FeedType = FeedType("station_status")
+        /** The station_status.json file with real-time station status. */
+        public val StationStatus: FeedType = FeedType("station_status")
 
-    /** The free_bike_status.json file with available vehicles. */
-    public val FreeBikeStatus: FeedType = FeedType("free_bike_status")
+        /** The free_bike_status.json file with available vehicles. */
+        public val FreeBikeStatus: FeedType = FeedType("free_bike_status")
 
-    /** The system_hours.json file with operating hours. */
-    public val SystemHours: FeedType = FeedType("system_hours")
+        /** The system_hours.json file with operating hours. */
+        public val SystemHours: FeedType = FeedType("system_hours")
 
-    /** The system_calendar.json file with operating calendar. */
-    public val SystemCalendar: FeedType = FeedType("system_calendar")
+        /** The system_calendar.json file with operating calendar. */
+        public val SystemCalendar: FeedType = FeedType("system_calendar")
 
-    /** The system_regions.json file with geographic regions. */
-    public val SystemRegions: FeedType = FeedType("system_regions")
+        /** The system_regions.json file with geographic regions. */
+        public val SystemRegions: FeedType = FeedType("system_regions")
 
-    /** The system_pricing_plans.json file with pricing information. */
-    public val SystemPricingPlans: FeedType = FeedType("system_pricing_plans")
+        /** The system_pricing_plans.json file with pricing information. */
+        public val SystemPricingPlans: FeedType = FeedType("system_pricing_plans")
 
-    /** The system_alerts.json file with system alerts. */
-    public val SystemAlerts: FeedType = FeedType("system_alerts")
+        /** The system_alerts.json file with system alerts. */
+        public val SystemAlerts: FeedType = FeedType("system_alerts")
 
-    /** The geofencing_zones.json file with geofencing zones. */
-    public val GeofencingZones: FeedType = FeedType("geofencing_zones")
-  }
+        /** The geofencing_zones.json file with geofencing zones. */
+        public val GeofencingZones: FeedType = FeedType("geofencing_zones")
+    }
 }

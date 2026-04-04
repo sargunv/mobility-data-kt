@@ -9,8 +9,8 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class DatasetManifest(
-  /** An array of datasets produced by a publisher. */
-  public val datasets: List<Dataset>
+    /** An array of datasets produced by a publisher. */
+    public val datasets: List<Dataset>
 ) : GbfsFeedData, List<Dataset> by datasets
 
 /**
@@ -21,12 +21,12 @@ public data class DatasetManifest(
  */
 @Serializable
 public data class Dataset(
-  /** The system_id from system_information.json for the corresponding data set(s). */
-  public val systemId: String,
+    /** The system_id from system_information.json for the corresponding data set(s). */
+    public val systemId: String,
 
-  /**
-   * Contains one object for each of the available versions of a feed. The array MUST be sorted by
-   * increasing MAJOR and MINOR version number.
-   */
-  public val versions: List<VersionInfo>,
+    /**
+     * Contains one object for each of the available versions of a feed. The array MUST be sorted by
+     * increasing MAJOR and MINOR version number.
+     */
+    public val versions: List<VersionInfo>,
 )

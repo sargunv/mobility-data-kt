@@ -5,38 +5,39 @@ package dev.sargunv.mobilitydata.gbfs.v1
 import kotlinx.coroutines.test.runTest
 
 class DocsSnippet {
-  fun example() = runTest {
-    // --8<-- [start:example]
-    GbfsV1Client().use { gbfs -> // (1)!
-      val manifest =
-        gbfs
-          .getSystemManifest( // (2)!
-            discoveryUrl = "https://data.lime.bike/api/partners/v1/gbfs/seattle/gbfs.json"
-          )
-          .data
+    fun example() = runTest {
+        // --8<-- [start:example]
+        GbfsV1Client().use { gbfs -> // (1)!
+            val manifest =
+                gbfs
+                    .getSystemManifest( // (2)!
+                        discoveryUrl =
+                            "https://data.lime.bike/api/partners/v1/gbfs/seattle/gbfs.json"
+                    )
+                    .data
 
-      context(manifest.getService("en")) { // (3)!
-        val systemInfo = gbfs.getSystemInformation().data // (4)!
+            context(manifest.getService("en")) { // (3)!
+                val systemInfo = gbfs.getSystemInformation().data // (4)!
 
-        println("System: ${systemInfo.name}")
-        println("Operator: ${systemInfo.operator}")
-        println("Timezone: ${systemInfo.timezone}")
+                println("System: ${systemInfo.name}")
+                println("Operator: ${systemInfo.operator}")
+                println("Timezone: ${systemInfo.timezone}")
 
-        val stations = gbfs.getStationInformation().data // (5)!
+                val stations = gbfs.getStationInformation().data // (5)!
 
-        println("\nStations: ${stations.size}")
-        stations.take(3).forEach { station ->
-          println("  - ${station.name} (${station.capacity} bikes)")
+                println("\nStations: ${stations.size}")
+                stations.take(3).forEach { station ->
+                    println("  - ${station.name} (${station.capacity} bikes)")
+                }
+
+                val freeBikes = gbfs.getFreeBikeStatus().data.bikes // (6)!
+
+                println("\nAvailable bikes: ${freeBikes.size}")
+                freeBikes.take(3).forEach { bike ->
+                    println("  - ${bike.bikeId} at (${bike.lat}, ${bike.lon})")
+                }
+            }
         }
-
-        val freeBikes = gbfs.getFreeBikeStatus().data.bikes // (6)!
-
-        println("\nAvailable bikes: ${freeBikes.size}")
-        freeBikes.take(3).forEach { bike ->
-          println("  - ${bike.bikeId} at (${bike.lat}, ${bike.lon})")
-        }
-      }
+        // --8<-- [end:example]
     }
-    // --8<-- [end:example]
-  }
 }

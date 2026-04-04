@@ -10,12 +10,12 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class Level(
-  /** Uniquely identifies a level in a station. */
-  @SerialName("level_id") public val levelId: String,
+    /** Uniquely identifies a level in a station. */
+    @SerialName("level_id") public val levelId: String,
 
-  /** Numeric index of the level relative to ground level. */
-  @SerialName("level_index") public val levelIndex: Double,
+    /** Numeric index of the level relative to ground level. */
+    @SerialName("level_index") public val levelIndex: Double,
 
-  /** Name of the level. */
-  @SerialName("level_name") public val levelName: String? = null,
+    /** Name of the level. */
+    @SerialName("level_name") public val levelName: String? = null,
 )

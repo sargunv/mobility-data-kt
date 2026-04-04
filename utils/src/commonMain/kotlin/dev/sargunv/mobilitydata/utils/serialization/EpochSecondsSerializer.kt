@@ -11,12 +11,12 @@ import kotlinx.serialization.encoding.Encoder
 /** Serializer for [Instant] that uses POSIX epoch seconds (seconds since 1970-01-01T00:00:00Z). */
 @OptIn(ExperimentalTime::class)
 public object EpochSecondsSerializer : KSerializer<Instant> {
-  private val delegate = Long.serializer()
-  override val descriptor: SerialDescriptor = delegate.descriptor
+    private val delegate = Long.serializer()
+    override val descriptor: SerialDescriptor = delegate.descriptor
 
-  override fun serialize(encoder: Encoder, value: Instant): Unit =
-    delegate.serialize(encoder, value.epochSeconds)
+    override fun serialize(encoder: Encoder, value: Instant): Unit =
+        delegate.serialize(encoder, value.epochSeconds)
 
-  override fun deserialize(decoder: Decoder): Instant =
-    Instant.fromEpochSeconds(delegate.deserialize(decoder))
+    override fun deserialize(decoder: Decoder): Instant =
+        Instant.fromEpochSeconds(delegate.deserialize(decoder))
 }

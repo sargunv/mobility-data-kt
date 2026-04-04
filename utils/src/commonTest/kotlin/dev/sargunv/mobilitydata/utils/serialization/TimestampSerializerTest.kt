@@ -13,89 +13,89 @@ import kotlinx.serialization.json.jsonPrimitive
 
 @OptIn(ExperimentalTime::class)
 class TimestampSerializerTest {
-  @Serializable
-  private data class TestData(
-    @Serializable(with = TimestampSerializer::class) val timestamp: Timestamp
-  )
+    @Serializable
+    private data class TestData(
+        @Serializable(with = TimestampSerializer::class) val timestamp: Timestamp
+    )
 
-  private val json = Json
+    private val json = Json
 
-  @Test
-  fun testSerializeTimestamp() {
-    val instant = Instant.parse("2021-12-31T12:34:23Z")
-    val offset = UtcOffset.ZERO
-    val timestamp = Timestamp(instant, offset)
-    val testData = TestData(timestamp)
+    @Test
+    fun testSerializeTimestamp() {
+        val instant = Instant.parse("2021-12-31T12:34:23Z")
+        val offset = UtcOffset.ZERO
+        val timestamp = Timestamp(instant, offset)
+        val testData = TestData(timestamp)
 
-    val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
-    val timestampValue = jsonElement.jsonObject["timestamp"]!!.jsonPrimitive
+        val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+        val timestampValue = jsonElement.jsonObject["timestamp"]!!.jsonPrimitive
 
-    assertEquals("2021-12-31T12:34:23Z", timestampValue.content)
-  }
+        assertEquals("2021-12-31T12:34:23Z", timestampValue.content)
+    }
 
-  @Test
-  fun testDeserializeTimestamp() {
-    val jsonString = """{"timestamp":"2021-12-31T12:34:23Z"}"""
+    @Test
+    fun testDeserializeTimestamp() {
+        val jsonString = """{"timestamp":"2021-12-31T12:34:23Z"}"""
 
-    val result = json.decodeFromString(TestData.serializer(), jsonString)
+        val result = json.decodeFromString(TestData.serializer(), jsonString)
 
-    val expectedInstant = Instant.parse("2021-12-31T12:34:23Z")
-    val expectedOffset = UtcOffset.ZERO
-    assertEquals(Timestamp(expectedInstant, expectedOffset), result.timestamp)
-  }
+        val expectedInstant = Instant.parse("2021-12-31T12:34:23Z")
+        val expectedOffset = UtcOffset.ZERO
+        assertEquals(Timestamp(expectedInstant, expectedOffset), result.timestamp)
+    }
 
-  @Test
-  fun testRoundTrip() {
-    val instant = Instant.parse("2021-01-01T00:00:00Z")
-    val offset = UtcOffset.ZERO
-    val original = TestData(Timestamp(instant, offset))
+    @Test
+    fun testRoundTrip() {
+        val instant = Instant.parse("2021-01-01T00:00:00Z")
+        val offset = UtcOffset.ZERO
+        val original = TestData(Timestamp(instant, offset))
 
-    val jsonString = json.encodeToString(TestData.serializer(), original)
-    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
+        val jsonString = json.encodeToString(TestData.serializer(), original)
+        val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
-    assertEquals(original, decoded)
-  }
+        assertEquals(original, decoded)
+    }
 
-  @Test
-  fun testTimestampWithOffset() {
-    val instant = Instant.parse("2021-12-31T17:34:23Z")
-    val offset = UtcOffset(hours = -5)
-    val timestamp = Timestamp(instant, offset)
-    val testData = TestData(timestamp)
+    @Test
+    fun testTimestampWithOffset() {
+        val instant = Instant.parse("2021-12-31T17:34:23Z")
+        val offset = UtcOffset(hours = -5)
+        val timestamp = Timestamp(instant, offset)
+        val testData = TestData(timestamp)
 
-    val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
-    val timestampValue = jsonElement.jsonObject["timestamp"]!!.jsonPrimitive
+        val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+        val timestampValue = jsonElement.jsonObject["timestamp"]!!.jsonPrimitive
 
-    assertEquals("2021-12-31T12:34:23-05:00", timestampValue.content)
+        assertEquals("2021-12-31T12:34:23-05:00", timestampValue.content)
 
-    val jsonString = json.encodeToString(TestData.serializer(), testData)
-    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
+        val jsonString = json.encodeToString(TestData.serializer(), testData)
+        val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
-    assertEquals(testData, decoded)
-  }
+        assertEquals(testData, decoded)
+    }
 
-  @Test
-  fun testPositiveOffset() {
-    val instant = Instant.parse("2021-12-31T10:34:23Z")
-    val offset = UtcOffset(hours = 2)
-    val timestamp = Timestamp(instant, offset)
-    val testData = TestData(timestamp)
+    @Test
+    fun testPositiveOffset() {
+        val instant = Instant.parse("2021-12-31T10:34:23Z")
+        val offset = UtcOffset(hours = 2)
+        val timestamp = Timestamp(instant, offset)
+        val testData = TestData(timestamp)
 
-    val jsonString = json.encodeToString(TestData.serializer(), testData)
-    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
+        val jsonString = json.encodeToString(TestData.serializer(), testData)
+        val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
-    assertEquals(testData, decoded)
-  }
+        assertEquals(testData, decoded)
+    }
 
-  @Test
-  fun testDeserializeTimestampWithSpaceSeparator() {
-    // Test that timestamps with space instead of 'T' are accepted (common in some feeds)
-    val jsonString = """{"timestamp":"2025-10-21 04:14:56.870533+00:00"}"""
+    @Test
+    fun testDeserializeTimestampWithSpaceSeparator() {
+        // Test that timestamps with space instead of 'T' are accepted (common in some feeds)
+        val jsonString = """{"timestamp":"2025-10-21 04:14:56.870533+00:00"}"""
 
-    val result = json.decodeFromString(TestData.serializer(), jsonString)
+        val result = json.decodeFromString(TestData.serializer(), jsonString)
 
-    val expectedInstant = Instant.parse("2025-10-21T04:14:56.870533Z")
-    val expectedOffset = UtcOffset.ZERO
-    assertEquals(Timestamp(expectedInstant, expectedOffset), result.timestamp)
-  }
+        val expectedInstant = Instant.parse("2025-10-21T04:14:56.870533Z")
+        val expectedOffset = UtcOffset.ZERO
+        assertEquals(Timestamp(expectedInstant, expectedOffset), result.timestamp)
+    }
 }

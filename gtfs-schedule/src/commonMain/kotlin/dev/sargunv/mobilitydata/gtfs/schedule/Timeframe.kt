@@ -12,15 +12,15 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class Timeframe(
-  /** Identifies a timeframe or set of timeframes. */
-  @SerialName("timeframe_group_id") public val timeframeGroupId: String,
+    /** Identifies a timeframe or set of timeframes. */
+    @SerialName("timeframe_group_id") public val timeframeGroupId: String,
 
-  /** Defines the beginning of a timeframe. An empty value is considered 00:00:00. */
-  @SerialName("start_time") public val startTime: ServiceTime? = null,
+    /** Defines the beginning of a timeframe. An empty value is considered 00:00:00. */
+    @SerialName("start_time") public val startTime: ServiceTime? = null,
 
-  /** Defines the end of a timeframe. An empty value is considered 24:00:00. */
-  @SerialName("end_time") public val endTime: ServiceTime? = null,
+    /** Defines the end of a timeframe. An empty value is considered 24:00:00. */
+    @SerialName("end_time") public val endTime: ServiceTime? = null,
 
-  /** Identifies a set of dates that a timeframe is in effect. */
-  @SerialName("service_id") public val serviceId: String,
+    /** Identifies a set of dates that a timeframe is in effect. */
+    @SerialName("service_id") public val serviceId: String,
 )

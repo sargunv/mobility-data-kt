@@ -17,13 +17,13 @@ import org.maplibre.spatialk.geojson.Polygon
  */
 @Serializable
 public data class Zones(
-  /** GeoJSON FeatureCollection containing zone features with polygon geometries. */
-  public val zones: FeatureCollection<Polygon, Zone>
+    /** GeoJSON FeatureCollection containing zone features with polygon geometries. */
+    public val zones: FeatureCollection<Polygon, Zone>
 ) : GofsFeedData
 
 /** Properties for a zone feature. */
 @Serializable
 public data class Zone(
-  /** Indicates the name of the zone as displayed to the riders. */
-  public val name: String
+    /** Indicates the name of the zone as displayed to the riders. */
+    public val name: String
 )

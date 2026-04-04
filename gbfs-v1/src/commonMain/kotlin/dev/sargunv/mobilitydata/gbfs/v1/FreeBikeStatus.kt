@@ -11,8 +11,10 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class FreeBikeStatus(
-  /** Array that contains one object per vehicle that is currently not part of an active rental. */
-  public val bikes: List<Bike>
+    /**
+     * Array that contains one object per vehicle that is currently not part of an active rental.
+     */
+    public val bikes: List<Bike>
 ) : GbfsFeedData, List<Bike> by bikes
 
 /** Represents a vehicle that is currently not part of an active rental. */
@@ -20,35 +22,35 @@ public data class FreeBikeStatus(
 @Serializable
 public data class Bike(
 
-  /** Identifier of a vehicle. */
-  @SerialName("bike_id") public val bikeId: String,
+    /** Identifier of a vehicle. */
+    @SerialName("bike_id") public val bikeId: String,
 
-  /** Latitude of the vehicle in decimal degrees. */
-  public val lat: Double,
+    /** Latitude of the vehicle in decimal degrees. */
+    public val lat: Double,
 
-  /** Longitude of the vehicle in decimal degrees. */
-  public val lon: Double,
+    /** Longitude of the vehicle in decimal degrees. */
+    public val lon: Double,
 
-  /**
-   * Is the vehicle currently reserved?
-   * - `true` - Vehicle is currently reserved.
-   * - `false` - Vehicle is not currently reserved.
-   */
-  @SerialName("is_reserved") public val isReserved: IntBoolean,
+    /**
+     * Is the vehicle currently reserved?
+     * - `true` - Vehicle is currently reserved.
+     * - `false` - Vehicle is not currently reserved.
+     */
+    @SerialName("is_reserved") public val isReserved: IntBoolean,
 
-  /**
-   * Is the vehicle currently disabled?
-   * - `true` - Vehicle is currently disabled.
-   * - `false` - Vehicle is not currently disabled.
-   *
-   * This field is used to indicate vehicles that are in the field but not available for rental.
-   * This may be due to a mechanical issue, low battery, etc.
-   */
-  @SerialName("is_disabled") public val isDisabled: IntBoolean,
+    /**
+     * Is the vehicle currently disabled?
+     * - `true` - Vehicle is currently disabled.
+     * - `false` - Vehicle is not currently disabled.
+     *
+     * This field is used to indicate vehicles that are in the field but not available for rental.
+     * This may be due to a mechanical issue, low battery, etc.
+     */
+    @SerialName("is_disabled") public val isDisabled: IntBoolean,
 
-  /**
-   * JSON object that contains rental URIs for Android, iOS, and web in the android, ios, and web
-   * fields.
-   */
-  @SerialName("rental_uris") public val rentalUris: RentalUris? = null,
+    /**
+     * JSON object that contains rental URIs for Android, iOS, and web in the android, ios, and web
+     * fields.
+     */
+    @SerialName("rental_uris") public val rentalUris: RentalUris? = null,
 )

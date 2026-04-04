@@ -12,18 +12,18 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class WaitTimes(
-  /**
-   * An array that contains one object per brand_id. Should be empty if no wait time is available
-   * for the requested location.
-   */
-  @SerialName("wait_times") public val waitTimes: List<WaitTime>
+    /**
+     * An array that contains one object per brand_id. Should be empty if no wait time is available
+     * for the requested location.
+     */
+    @SerialName("wait_times") public val waitTimes: List<WaitTime>
 ) : GofsFeedData, List<WaitTime> by waitTimes
 
 /** Wait time information for a specific service brand. */
 @Serializable
 public data class WaitTime(
-  /** ID from a service brand defined in service_brands.json. */
-  @SerialName("brand_id") public val brandId: String,
-  /** Wait time in seconds the rider will need to wait in the location before pickup. */
-  @SerialName("wait_time") public val waitTime: WholeSeconds,
+    /** ID from a service brand defined in service_brands.json. */
+    @SerialName("brand_id") public val brandId: String,
+    /** Wait time in seconds the rider will need to wait in the location before pickup. */
+    @SerialName("wait_time") public val waitTime: WholeSeconds,
 )

@@ -29,11 +29,11 @@ public typealias BasicLocalDate = @Serializable(with = IsoBasicLocalDateSerializ
 
 /** [LocalDate] in the ISO 8601 extended format (YYYY-MM-DD). */
 public typealias ExtendedLocalDate =
-  @Serializable(with = LocalDateIso8601Serializer::class) LocalDate
+    @Serializable(with = LocalDateIso8601Serializer::class) LocalDate
 
 /** [LocalTime] in the ISO 8601 extended format (HH:MM:SS). */
 public typealias ExtendedLocalTime =
-  @Serializable(with = LocalTimeIso8601Serializer::class) LocalTime
+    @Serializable(with = LocalTimeIso8601Serializer::class) LocalTime
 
 /** Duration as an integer of minutes. */
 public typealias WholeMinutes = @Serializable(with = WholeMinutesSerializer::class) Duration
@@ -46,4 +46,4 @@ public typealias MonthNumber = @Serializable(with = MonthNumberSerializer::class
 
 /** Abbreviated (first 3 letters) English name of a day of the week. */
 public typealias AbbreviatedWeekday =
-  @Serializable(with = AbbreviatedWeekdaySerializer::class) DayOfWeek
+    @Serializable(with = AbbreviatedWeekdaySerializer::class) DayOfWeek

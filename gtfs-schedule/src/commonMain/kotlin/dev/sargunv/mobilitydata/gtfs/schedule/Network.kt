@@ -10,9 +10,9 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class Network(
-  /** Identifies a network. */
-  @SerialName("network_id") public val networkId: String,
+    /** Identifies a network. */
+    @SerialName("network_id") public val networkId: String,
 
-  /** Name of the network. */
-  @SerialName("network_name") public val networkName: String? = null,
+    /** Name of the network. */
+    @SerialName("network_name") public val networkName: String? = null,
 )

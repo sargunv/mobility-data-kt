@@ -4,33 +4,33 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 private val csvContent = // language=CSV
-  """
-  rider_category_id,rider_category_name,is_default_fare_category,eligibility_url
-  regular,Regular Fare,1,
-  senior,Senior Citizen,0,https://example.com/senior
-  """
-    .trimIndent()
+    """
+    rider_category_id,rider_category_name,is_default_fare_category,eligibility_url
+    regular,Regular Fare,1,
+    senior,Senior Citizen,0,https://example.com/senior
+    """
+        .trimIndent()
 
 private val expected =
-  listOf(
-    RiderCategory(
-      riderCategoryId = "regular",
-      riderCategoryName = "Regular Fare",
-      isDefaultFareCategory = true,
-      eligibilityUrl = null,
-    ),
-    RiderCategory(
-      riderCategoryId = "senior",
-      riderCategoryName = "Senior Citizen",
-      isDefaultFareCategory = false,
-      eligibilityUrl = "https://example.com/senior",
-    ),
-  )
+    listOf(
+        RiderCategory(
+            riderCategoryId = "regular",
+            riderCategoryName = "Regular Fare",
+            isDefaultFareCategory = true,
+            eligibilityUrl = null,
+        ),
+        RiderCategory(
+            riderCategoryId = "senior",
+            riderCategoryName = "Senior Citizen",
+            isDefaultFareCategory = false,
+            eligibilityUrl = "https://example.com/senior",
+        ),
+    )
 
 class RiderCategoryTest {
-  @Test
-  fun decode() {
-    val decoded = GtfsCsv.decodeFromString<RiderCategory>(csvContent)
-    assertEquals(expected, decoded)
-  }
+    @Test
+    fun decode() {
+        val decoded = GtfsCsv.decodeFromString<RiderCategory>(csvContent)
+        assertEquals(expected, decoded)
+    }
 }

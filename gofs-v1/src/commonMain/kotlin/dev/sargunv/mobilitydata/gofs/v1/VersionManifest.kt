@@ -11,18 +11,18 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class VersionManifest(
-  /**
-   * Contains one object for each of the available versions of a feed. The array must be sorted by
-   * increasing version numbers.
-   */
-  public val versions: List<VersionInfo>
+    /**
+     * Contains one object for each of the available versions of a feed. The array must be sorted by
+     * increasing version numbers.
+     */
+    public val versions: List<VersionInfo>
 ) : GofsFeedData, List<VersionInfo> by versions
 
 /** Information about a specific version of a GOFS feed. */
 @Serializable
 public data class VersionInfo(
-  /** Version number of the feed. */
-  public val version: String,
-  /** URL of the corresponding gofs.json endpoint. */
-  public val url: Url,
+    /** Version number of the feed. */
+    public val version: String,
+    /** URL of the corresponding gofs.json endpoint. */
+    public val url: Url,
 )

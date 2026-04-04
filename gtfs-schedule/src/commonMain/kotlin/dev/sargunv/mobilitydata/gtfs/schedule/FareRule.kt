@@ -16,18 +16,18 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class FareRule(
-  /** Identifies a fare class. */
-  @SerialName("fare_id") public val fareId: String,
+    /** Identifies a fare class. */
+    @SerialName("fare_id") public val fareId: String,
 
-  /** Identifies a route associated with the fare class. */
-  @SerialName("route_id") public val routeId: String? = null,
+    /** Identifies a route associated with the fare class. */
+    @SerialName("route_id") public val routeId: String? = null,
 
-  /** Identifies an origin zone. */
-  @SerialName("origin_id") public val originId: String? = null,
+    /** Identifies an origin zone. */
+    @SerialName("origin_id") public val originId: String? = null,
 
-  /** Identifies a destination zone. */
-  @SerialName("destination_id") public val destinationId: String? = null,
+    /** Identifies a destination zone. */
+    @SerialName("destination_id") public val destinationId: String? = null,
 
-  /** Identifies the zones that a rider will enter while using a given fare class. */
-  @SerialName("contains_id") public val containsId: String? = null,
+    /** Identifies the zones that a rider will enter while using a given fare class. */
+    @SerialName("contains_id") public val containsId: String? = null,
 )

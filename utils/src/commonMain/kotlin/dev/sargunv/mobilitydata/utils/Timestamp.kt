@@ -21,30 +21,31 @@ import kotlinx.serialization.Serializable
 @Serializable(with = TimestampSerializer::class)
 public data class Timestamp
 internal constructor(
-  /** The instant in time represented by this timestamp. */
-  public val instant: Instant,
-  /** The UTC offset from UTC for this timestamp. */
-  public val offset: UtcOffset,
+    /** The instant in time represented by this timestamp. */
+    public val instant: Instant,
+    /** The UTC offset from UTC for this timestamp. */
+    public val offset: UtcOffset,
 ) : Comparable<Timestamp> {
-  override fun compareTo(other: Timestamp): Int = this.instant.compareTo(other.instant)
+    override fun compareTo(other: Timestamp): Int = this.instant.compareTo(other.instant)
 
-  /** Companion object providing factory methods for [Timestamp]. */
-  public companion object {
-    /**
-     * Parses a timestamp string into a [Timestamp] instance.
-     *
-     * @param input The timestamp string to parse
-     * @param format The datetime format to use for parsing (defaults to ISO date-time offset
-     *   format)
-     * @return A [Timestamp] instance representing the parsed input
-     */
-    public fun parse(
-      input: String,
-      format: DateTimeFormat<DateTimeComponents> = DateTimeComponents.Formats.ISO_DATE_TIME_OFFSET,
-    ): Timestamp {
-      val components = DateTimeComponents.Companion.parse(input, format)
-      val offset = components.toUtcOffset()
-      return Timestamp(components.toLocalDateTime().toInstant(offset), offset)
+    /** Companion object providing factory methods for [Timestamp]. */
+    public companion object {
+        /**
+         * Parses a timestamp string into a [Timestamp] instance.
+         *
+         * @param input The timestamp string to parse
+         * @param format The datetime format to use for parsing (defaults to ISO date-time offset
+         *   format)
+         * @return A [Timestamp] instance representing the parsed input
+         */
+        public fun parse(
+            input: String,
+            format: DateTimeFormat<DateTimeComponents> =
+                DateTimeComponents.Formats.ISO_DATE_TIME_OFFSET,
+        ): Timestamp {
+            val components = DateTimeComponents.Companion.parse(input, format)
+            val offset = components.toUtcOffset()
+            return Timestamp(components.toLocalDateTime().toInstant(offset), offset)
+        }
     }
-  }
 }

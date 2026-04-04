@@ -5,11 +5,11 @@ import kotlinx.serialization.json.Json
 
 /** Pre-configured JSON instance for parsing GBFS feeds. */
 public val GbfsJson: Json = Json {
-  explicitNulls = true
-  encodeDefaults = false
-  ignoreUnknownKeys = true
-  @OptIn(ExperimentalSerializationApi::class)
-  decodeEnumsCaseInsensitive = true
-  coerceInputValues = true
-  isLenient = true
+    explicitNulls = true
+    encodeDefaults = false
+    ignoreUnknownKeys = true
+    @OptIn(ExperimentalSerializationApi::class)
+    decodeEnumsCaseInsensitive = true
+    coerceInputValues = true
+    isLenient = true
 }

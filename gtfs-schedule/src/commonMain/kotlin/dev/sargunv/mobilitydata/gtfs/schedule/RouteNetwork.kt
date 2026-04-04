@@ -10,9 +10,9 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class RouteNetwork(
-  /** Identifies a network. */
-  @SerialName("network_id") public val networkId: String,
+    /** Identifies a network. */
+    @SerialName("network_id") public val networkId: String,
 
-  /** Identifies a route. */
-  @SerialName("route_id") public val routeId: String,
+    /** Identifies a route. */
+    @SerialName("route_id") public val routeId: String,
 )

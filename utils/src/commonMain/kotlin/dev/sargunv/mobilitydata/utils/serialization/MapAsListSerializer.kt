@@ -19,23 +19,23 @@ import kotlinx.serialization.encoding.Encoder
  * @param delegateSerializer The serializer for the delegate entry type
  */
 public abstract class MapAsListSerializer<Delegate : Map.Entry<Key, Value>, Key, Value>(
-  delegateSerializer: KSerializer<Delegate>
+    delegateSerializer: KSerializer<Delegate>
 ) : KSerializer<Map<Key, Value>> {
-  private val delegate = ListSerializer(delegateSerializer)
+    private val delegate = ListSerializer(delegateSerializer)
 
-  override val descriptor: SerialDescriptor = delegate.descriptor
+    override val descriptor: SerialDescriptor = delegate.descriptor
 
-  override fun deserialize(decoder: Decoder): Map<Key, Value> =
-    delegate.deserialize(decoder).associate { it.key to it.value }
+    override fun deserialize(decoder: Decoder): Map<Key, Value> =
+        delegate.deserialize(decoder).associate { it.key to it.value }
 
-  override fun serialize(encoder: Encoder, value: Map<Key, Value>): Unit =
-    delegate.serialize(encoder, value.map { it.toDelegate() })
+    override fun serialize(encoder: Encoder, value: Map<Key, Value>): Unit =
+        delegate.serialize(encoder, value.map { it.toDelegate() })
 
-  /**
-   * Converts a map entry to the delegate type used for serialization.
-   *
-   * @param this The map entry to convert
-   * @return The delegate representation suitable for serialization
-   */
-  protected abstract fun Map.Entry<Key, Value>.toDelegate(): Delegate
+    /**
+     * Converts a map entry to the delegate type used for serialization.
+     *
+     * @param this The map entry to convert
+     * @return The delegate representation suitable for serialization
+     */
+    protected abstract fun Map.Entry<Key, Value>.toDelegate(): Delegate
 }
