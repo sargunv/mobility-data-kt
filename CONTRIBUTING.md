@@ -18,8 +18,8 @@ to set up the pre-commit hook.
 
 ## IDE Setup
 
-Install the [dprint IDE plugin](https://dprint.dev/install/#editor-extensions) for your editor to
-get format-on-save support. The project's `dprint.json` configures all formatting rules.
+Install the [dprint](https://plugins.jetbrains.com/plugin/18192-dprint) plugin for format-on-save
+support. The project's `dprint.json` configures all formatting rules.
 
 ## Formatting
 
