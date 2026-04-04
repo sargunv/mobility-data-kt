@@ -22,39 +22,38 @@ import kotlinx.serialization.Serializable
  */
 @Serializable(with = ServiceTimeSerializer::class)
 public data class ServiceTime(
-    /** The hour component (0 or greater, may exceed 23 for times after midnight). */
-    public val hours: Int,
-    /** The minute component (0-59). */
-    public val minutes: Int,
-    /** The second component (0-59). */
-    public val seconds: Int,
+  /** The hour component (0 or greater, may exceed 23 for times after midnight). */
+  public val hours: Int,
+  /** The minute component (0-59). */
+  public val minutes: Int,
+  /** The second component (0-59). */
+  public val seconds: Int,
 ) : Comparable<ServiceTime> {
-    init {
-        require(hours >= 0) { "Hours must be non-negative, but was $hours." }
-        require(minutes in 0..59) { "Minutes must be in the range 0..59, but was $minutes." }
-        require(seconds in 0..59) { "Seconds must be in the range 0..59, but was $seconds." }
-    }
+  init {
+    require(hours >= 0) { "Hours must be non-negative, but was $hours." }
+    require(minutes in 0..59) { "Minutes must be in the range 0..59, but was $minutes." }
+    require(seconds in 0..59) { "Seconds must be in the range 0..59, but was $seconds." }
+  }
 
-    /**
-     * Converts this service time to an [kotlin.time.Instant] on the given [serviceDate] in the
-     * specified [timezone]. If the service time represents a time after midnight ([hours] > 23),
-     * the resulting instant will fall on the next calendar day.
-     *
-     * @param serviceDate The service date to which this service time belongs
-     * @param timezone The timezone in which to interpret the service time
-     * @return The corresponding instant in time
-     */
-    @OptIn(ExperimentalTime::class)
-    public fun toInstant(serviceDate: LocalDate, timezone: TimeZone): Instant {
-        val noonOnServiceDate =
-            serviceDate.atTime(LocalTime(hour = 12, minute = 0)).toInstant(timezone)
-        return noonOnServiceDate - 12.hours + hours.hours + minutes.minutes + seconds.seconds
-    }
+  /**
+   * Converts this service time to an [kotlin.time.Instant] on the given [serviceDate] in the
+   * specified [timezone]. If the service time represents a time after midnight ([hours] > 23), the
+   * resulting instant will fall on the next calendar day.
+   *
+   * @param serviceDate The service date to which this service time belongs
+   * @param timezone The timezone in which to interpret the service time
+   * @return The corresponding instant in time
+   */
+  @OptIn(ExperimentalTime::class)
+  public fun toInstant(serviceDate: LocalDate, timezone: TimeZone): Instant {
+    val noonOnServiceDate = serviceDate.atTime(LocalTime(hour = 12, minute = 0)).toInstant(timezone)
+    return noonOnServiceDate - 12.hours + hours.hours + minutes.minutes + seconds.seconds
+  }
 
-    override fun compareTo(other: ServiceTime): Int =
-        when {
-            this.hours != other.hours -> this.hours.compareTo(other.hours)
-            this.minutes != other.minutes -> this.minutes.compareTo(other.minutes)
-            else -> this.seconds.compareTo(other.seconds)
-        }
+  override fun compareTo(other: ServiceTime): Int =
+    when {
+      this.hours != other.hours -> this.hours.compareTo(other.hours)
+      this.minutes != other.minutes -> this.minutes.compareTo(other.minutes)
+      else -> this.seconds.compareTo(other.seconds)
+    }
 }

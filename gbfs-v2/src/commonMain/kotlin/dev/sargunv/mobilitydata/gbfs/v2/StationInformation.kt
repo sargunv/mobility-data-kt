@@ -14,226 +14,225 @@ import org.maplibre.spatialk.geojson.MultiPolygon
  */
 @Serializable
 public data class StationInformation(
-    /** Array that contains one object per station. */
-    public val stations: List<Station>
+  /** Array that contains one object per station. */
+  public val stations: List<Station>
 ) : GbfsFeedData, List<Station> by stations
 
 /** Information about a single station. */
 @Serializable
 public data class Station(
-    /** Identifier of a station. */
-    @SerialName("station_id") public val stationId: String,
+  /** Identifier of a station. */
+  @SerialName("station_id") public val stationId: String,
 
-    /**
-     * The public name of the station for display in maps, digital signage, and other text
-     * applications.
-     *
-     * Names SHOULD reflect the station location through the use of a cross street or local
-     * landmark. Abbreviations SHOULD NOT be used unless a location is called by its abbreviated
-     * name.
-     */
-    public val name: String,
+  /**
+   * The public name of the station for display in maps, digital signage, and other text
+   * applications.
+   *
+   * Names SHOULD reflect the station location through the use of a cross street or local landmark.
+   * Abbreviations SHOULD NOT be used unless a location is called by its abbreviated name.
+   */
+  public val name: String,
 
-    /** Short name or other type of identifier. */
-    @SerialName("short_name") public val shortName: String? = null,
+  /** Short name or other type of identifier. */
+  @SerialName("short_name") public val shortName: String? = null,
 
-    /**
-     * Latitude of the station in decimal degrees.
-     *
-     * This field SHOULD have a precision of 6 decimal places (0.000001).
-     */
-    public val lat: Double,
+  /**
+   * Latitude of the station in decimal degrees.
+   *
+   * This field SHOULD have a precision of 6 decimal places (0.000001).
+   */
+  public val lat: Double,
 
-    /**
-     * Longitude of the station in decimal degrees.
-     *
-     * This field SHOULD have a precision of 6 decimal places (0.000001).
-     */
-    public val lon: Double,
+  /**
+   * Longitude of the station in decimal degrees.
+   *
+   * This field SHOULD have a precision of 6 decimal places (0.000001).
+   */
+  public val lon: Double,
 
-    /**
-     * Address (street number and name) where station is located.
-     *
-     * This MUST be a valid address, not a free-form text description.
-     */
-    public val address: String? = null,
+  /**
+   * Address (street number and name) where station is located.
+   *
+   * This MUST be a valid address, not a free-form text description.
+   */
+  public val address: String? = null,
 
-    /** Cross street or landmark where the station is located. */
-    @SerialName("cross_street") public val crossStreet: String? = null,
+  /** Cross street or landmark where the station is located. */
+  @SerialName("cross_street") public val crossStreet: String? = null,
 
-    /** Identifier of the region where station is located. See system_regions.json. */
-    @SerialName("region_id") public val regionId: String? = null,
+  /** Identifier of the region where station is located. See system_regions.json. */
+  @SerialName("region_id") public val regionId: String? = null,
 
-    /** Postal code where the station is located. */
-    @SerialName("post_code") public val postalCode: String? = null,
+  /** Postal code where the station is located. */
+  @SerialName("post_code") public val postalCode: String? = null,
 
-    /** Payment methods accepted at this station. */
-    @SerialName("rental_methods") public val rentalMethods: List<RentalMethod>? = null,
+  /** Payment methods accepted at this station. */
+  @SerialName("rental_methods") public val rentalMethods: List<RentalMethod>? = null,
 
-    /**
-     * Is this station a location with or without smart dock technology?
-     * - `true` - The station is a location without smart docking infrastructure. The station may be
-     *   defined by a point (lat/lon) and/or station_area.
-     * - `false` - The station consists of smart docking infrastructure (docks).
-     *
-     * This field SHOULD be published by mobility systems that have station locations without
-     * standard, internet connected physical docking infrastructure.
-     */
-    @SerialName("is_virtual_station") public val isVirtualStation: Boolean? = null,
+  /**
+   * Is this station a location with or without smart dock technology?
+   * - `true` - The station is a location without smart docking infrastructure. The station may be
+   *   defined by a point (lat/lon) and/or station_area.
+   * - `false` - The station consists of smart docking infrastructure (docks).
+   *
+   * This field SHOULD be published by mobility systems that have station locations without
+   * standard, internet connected physical docking infrastructure.
+   */
+  @SerialName("is_virtual_station") public val isVirtualStation: Boolean? = null,
 
-    /**
-     * A GeoJSON MultiPolygon that describes the area of a virtual station.
-     *
-     * If station_area is supplied, then the record describes a virtual station. If lat/lon and
-     * station_area are both defined, the lat/lon is the significant coordinate of the station. The
-     * station_area takes precedence over any ride_allowed rules in overlapping geofencing_zones.
-     */
-    @SerialName("station_area") public val stationArea: MultiPolygon? = null,
+  /**
+   * A GeoJSON MultiPolygon that describes the area of a virtual station.
+   *
+   * If station_area is supplied, then the record describes a virtual station. If lat/lon and
+   * station_area are both defined, the lat/lon is the significant coordinate of the station. The
+   * station_area takes precedence over any ride_allowed rules in overlapping geofencing_zones.
+   */
+  @SerialName("station_area") public val stationArea: MultiPolygon? = null,
 
-    /** Type of parking station. */
-    @SerialName("parking_type") public val parkingType: ParkingType? = null,
+  /** Type of parking station. */
+  @SerialName("parking_type") public val parkingType: ParkingType? = null,
 
-    /**
-     * Are parking hoops present at this station?
-     * - `true` - Parking hoops are present at this station.
-     * - `false` - Parking hoops are not present at this station.
-     *
-     * Parking hoops are lockable devices that are used to secure a parking space to prevent parking
-     * of unauthorized vehicles.
-     */
-    @SerialName("parking_hoop") public val parkingHoop: Boolean? = null,
+  /**
+   * Are parking hoops present at this station?
+   * - `true` - Parking hoops are present at this station.
+   * - `false` - Parking hoops are not present at this station.
+   *
+   * Parking hoops are lockable devices that are used to secure a parking space to prevent parking
+   * of unauthorized vehicles.
+   */
+  @SerialName("parking_hoop") public val parkingHoop: Boolean? = null,
 
-    /** Contact phone of the station. */
-    @SerialName("contact_phone") public val contactPhone: String? = null,
+  /** Contact phone of the station. */
+  @SerialName("contact_phone") public val contactPhone: String? = null,
 
-    /**
-     * Number of total docking points installed at this station, both available and unavailable,
-     * regardless of what vehicle types are allowed at each dock.
-     *
-     * If this is a virtual station, this number represents the total number of vehicles of all
-     * types that can be parked at the virtual station.
-     */
-    public val capacity: Int? = null,
+  /**
+   * Number of total docking points installed at this station, both available and unavailable,
+   * regardless of what vehicle types are allowed at each dock.
+   *
+   * If this is a virtual station, this number represents the total number of vehicles of all types
+   * that can be parked at the virtual station.
+   */
+  public val capacity: Int? = null,
 
-    /**
-     * An object describing the parking capacity of virtual stations, where each key is a
-     * vehicle_type_id and the value is a number representing the total number of vehicles of this
-     * type that can park within the virtual station.
-     */
-    @SerialName("vehicle_capacity") public val vehicleCapacity: Map<String, Int>? = null,
+  /**
+   * An object describing the parking capacity of virtual stations, where each key is a
+   * vehicle_type_id and the value is a number representing the total number of vehicles of this
+   * type that can park within the virtual station.
+   */
+  @SerialName("vehicle_capacity") public val vehicleCapacity: Map<String, Int>? = null,
 
-    /**
-     * An object describing the docking capacity of a station where each key is a vehicle_type_id
-     * and the value is a number representing the total docking points installed at this station for
-     * the specified vehicle type.
-     */
-    @SerialName("vehicle_type_capacity") public val vehicleTypeCapacity: Map<String, Int>? = null,
+  /**
+   * An object describing the docking capacity of a station where each key is a vehicle_type_id and
+   * the value is a number representing the total docking points installed at this station for the
+   * specified vehicle type.
+   */
+  @SerialName("vehicle_type_capacity") public val vehicleTypeCapacity: Map<String, Int>? = null,
 
-    /**
-     * Are valet services provided at this station?
-     * - `true` - Valet services are provided at this station.
-     * - `false` - Valet services are not provided at this station.
-     *
-     * This field's boolean SHOULD be set to true during the hours which valet service is provided
-     * at the station. Valet service is defined as providing unlimited capacity at a station.
-     */
-    @SerialName("is_valet_station") public val isValetStation: Boolean? = null,
+  /**
+   * Are valet services provided at this station?
+   * - `true` - Valet services are provided at this station.
+   * - `false` - Valet services are not provided at this station.
+   *
+   * This field's boolean SHOULD be set to true during the hours which valet service is provided at
+   * the station. Valet service is defined as providing unlimited capacity at a station.
+   */
+  @SerialName("is_valet_station") public val isValetStation: Boolean? = null,
 
-    /**
-     * Does the station support charging of electric vehicles?
-     * - `true` - Electric vehicle charging is available at this station.
-     * - `false` - Electric vehicle charging is not available at this station.
-     */
-    @SerialName("is_charging_station") public val isChargingStation: Boolean? = null,
+  /**
+   * Does the station support charging of electric vehicles?
+   * - `true` - Electric vehicle charging is available at this station.
+   * - `false` - Electric vehicle charging is not available at this station.
+   */
+  @SerialName("is_charging_station") public val isChargingStation: Boolean? = null,
 
-    /** Contains rental URIs for Android, iOS, and web. */
-    @SerialName("rental_uris") public val rentalUris: RentalUris? = null,
+  /** Contains rental URIs for Android, iOS, and web. */
+  @SerialName("rental_uris") public val rentalUris: RentalUris? = null,
 )
 
 /** Payment methods accepted at a station. */
 @Serializable
 @JvmInline
 public value class RentalMethod(
-    /** The string value representing the rental method. */
-    public val value: String
+  /** The string value representing the rental method. */
+  public val value: String
 ) {
-    /** Companion object containing predefined rental method constants. */
-    public companion object {
-        /** Operator issued vehicle key / fob / card. */
-        public val Key: RentalMethod = RentalMethod("key")
+  /** Companion object containing predefined rental method constants. */
+  public companion object {
+    /** Operator issued vehicle key / fob / card. */
+    public val Key: RentalMethod = RentalMethod("key")
 
-        /** Credit card payment. */
-        public val CreditCard: RentalMethod = RentalMethod("creditcard")
+    /** Credit card payment. */
+    public val CreditCard: RentalMethod = RentalMethod("creditcard")
 
-        /** PayPass payment. */
-        public val PayPass: RentalMethod = RentalMethod("paypass")
+    /** PayPass payment. */
+    public val PayPass: RentalMethod = RentalMethod("paypass")
 
-        /** Apple Pay payment. */
-        public val ApplePay: RentalMethod = RentalMethod("applepay")
+    /** Apple Pay payment. */
+    public val ApplePay: RentalMethod = RentalMethod("applepay")
 
-        /** Android Pay payment. */
-        public val AndroidPay: RentalMethod = RentalMethod("androidpay")
+    /** Android Pay payment. */
+    public val AndroidPay: RentalMethod = RentalMethod("androidpay")
 
-        /** Transit card payment. */
-        public val TransitCard: RentalMethod = RentalMethod("transitcard")
+    /** Transit card payment. */
+    public val TransitCard: RentalMethod = RentalMethod("transitcard")
 
-        /** Account number payment. */
-        public val AccountNumber: RentalMethod = RentalMethod("accountnumber")
+    /** Account number payment. */
+    public val AccountNumber: RentalMethod = RentalMethod("accountnumber")
 
-        /** Phone payment. */
-        public val Phone: RentalMethod = RentalMethod("phone")
-    }
+    /** Phone payment. */
+    public val Phone: RentalMethod = RentalMethod("phone")
+  }
 }
 
 /** Type of parking station. */
 @Serializable
 @JvmInline
 public value class ParkingType(
-    /** The string value representing the parking type. */
-    public val value: String
+  /** The string value representing the parking type. */
+  public val value: String
 ) {
-    /** Companion object containing predefined parking type constants. */
-    public companion object {
-        /** Off-street parking lot. */
-        public val ParkingLot: ParkingType = ParkingType("parking_lot")
+  /** Companion object containing predefined parking type constants. */
+  public companion object {
+    /** Off-street parking lot. */
+    public val ParkingLot: ParkingType = ParkingType("parking_lot")
 
-        /** Curbside parking. */
-        public val StreetParking: ParkingType = ParkingType("street_parking")
+    /** Curbside parking. */
+    public val StreetParking: ParkingType = ParkingType("street_parking")
 
-        /** Parking that is below street level, station may be non-communicating. */
-        public val UndergroundParking: ParkingType = ParkingType("underground_parking")
+    /** Parking that is below street level, station may be non-communicating. */
+    public val UndergroundParking: ParkingType = ParkingType("underground_parking")
 
-        /** Park vehicle on sidewalk, out of the pedestrian right of way. */
-        public val SidewalkParking: ParkingType = ParkingType("sidewalk_parking")
+    /** Park vehicle on sidewalk, out of the pedestrian right of way. */
+    public val SidewalkParking: ParkingType = ParkingType("sidewalk_parking")
 
-        /** Other type of parking. */
-        public val Other: ParkingType = ParkingType("other")
-    }
+    /** Other type of parking. */
+    public val Other: ParkingType = ParkingType("other")
+  }
 }
 
 /** Contains rental URIs for different platforms to support deep linking. */
 @Serializable
 public data class RentalUris(
-    /**
-     * URI that can be passed to an Android app to support Android Deep Links.
-     *
-     * This URI SHOULD be a deep link specific to this station or vehicle. Android App Links are
-     * preferred.
-     */
-    public val android: Url? = null,
+  /**
+   * URI that can be passed to an Android app to support Android Deep Links.
+   *
+   * This URI SHOULD be a deep link specific to this station or vehicle. Android App Links are
+   * preferred.
+   */
+  public val android: Url? = null,
 
-    /**
-     * URI that can be used on iOS to launch the rental app.
-     *
-     * This URI SHOULD be a deep link specific to this station or vehicle. iOS Universal Links are
-     * preferred.
-     */
-    public val ios: Url? = null,
+  /**
+   * URI that can be used on iOS to launch the rental app.
+   *
+   * This URI SHOULD be a deep link specific to this station or vehicle. iOS Universal Links are
+   * preferred.
+   */
+  public val ios: Url? = null,
 
-    /**
-     * URL that can be used by a web browser to show more information about renting.
-     *
-     * This URL SHOULD be a deep link specific to this station or vehicle.
-     */
-    public val web: Url? = null,
+  /**
+   * URL that can be used by a web browser to show more information about renting.
+   *
+   * This URL SHOULD be a deep link specific to this station or vehicle.
+   */
+  public val web: Url? = null,
 )

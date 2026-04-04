@@ -11,67 +11,66 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
 
 private val jsonContent = // language=JSON
-    """
-    {
-      "last_updated": 1609866247,
-      "ttl": 0,
-      "version": "1.0",
-      "data": {
-        "operating_rules" : [
-          {
-            "from_zone_id": "zoneA",
-            "to_zone_id": "zoneA",
-            "start_pickup_window" : "06:00:00",
-            "end_pickup_window": "09:00:00",
-            "end_dropoff_window": "09:30:00",
-            "calendars": ["weekend", "labor_day"],
-            "brand_id": "large_ride",
-            "vehicle_type_id": ["large_van"],
-            "fare_id": "RegularPrice"
-          }
-       ]
-      }
+  """
+  {
+    "last_updated": 1609866247,
+    "ttl": 0,
+    "version": "1.0",
+    "data": {
+      "operating_rules" : [
+        {
+          "from_zone_id": "zoneA",
+          "to_zone_id": "zoneA",
+          "start_pickup_window" : "06:00:00",
+          "end_pickup_window": "09:00:00",
+          "end_dropoff_window": "09:30:00",
+          "calendars": ["weekend", "labor_day"],
+          "brand_id": "large_ride",
+          "vehicle_type_id": ["large_van"],
+          "fare_id": "RegularPrice"
+        }
+     ]
     }
-    """
-        .trimIndent()
+  }
+  """
+    .trimIndent()
 
 @OptIn(ExperimentalTime::class)
 private val expectedResponse =
-    GofsFeedResponse(
-        lastUpdated = Instant.fromEpochSeconds(1609866247),
-        ttl = 0.seconds,
-        version = "1.0",
-        data =
-            OperatingRules(
-                operatingRules =
-                    listOf(
-                        OperatingRule(
-                            fromZoneId = "zoneA",
-                            toZoneId = "zoneA",
-                            startPickupWindow = ServiceTime(6, 0, 0),
-                            endPickupWindow = ServiceTime(9, 0, 0),
-                            endDropoffWindow = ServiceTime(9, 30, 0),
-                            calendars = listOf("weekend", "labor_day"),
-                            brandId = "large_ride",
-                            vehicleTypeIds = listOf("large_van"),
-                            fareId = "RegularPrice",
-                        )
-                    )
-            ),
-    )
+  GofsFeedResponse(
+    lastUpdated = Instant.fromEpochSeconds(1609866247),
+    ttl = 0.seconds,
+    version = "1.0",
+    data =
+      OperatingRules(
+        operatingRules =
+          listOf(
+            OperatingRule(
+              fromZoneId = "zoneA",
+              toZoneId = "zoneA",
+              startPickupWindow = ServiceTime(6, 0, 0),
+              endPickupWindow = ServiceTime(9, 0, 0),
+              endDropoffWindow = ServiceTime(9, 30, 0),
+              calendars = listOf("weekend", "labor_day"),
+              brandId = "large_ride",
+              vehicleTypeIds = listOf("large_van"),
+              fareId = "RegularPrice",
+            )
+          )
+      ),
+  )
 
 class OperatingRulesTest {
-    @Test
-    fun encode() {
-        val expectedJson = Json.decodeFromString<JsonElement>(jsonContent)
-        val encodedJson = GofsJson.encodeToJsonElement(expectedResponse)
-        assertEquals(expectedJson, encodedJson)
-    }
+  @Test
+  fun encode() {
+    val expectedJson = Json.decodeFromString<JsonElement>(jsonContent)
+    val encodedJson = GofsJson.encodeToJsonElement(expectedResponse)
+    assertEquals(expectedJson, encodedJson)
+  }
 
-    @Test
-    fun decode() {
-        val decodedResponse =
-            GofsJson.decodeFromString<GofsFeedResponse<OperatingRules>>(jsonContent)
-        assertEquals(expectedResponse, decodedResponse)
-    }
+  @Test
+  fun decode() {
+    val decodedResponse = GofsJson.decodeFromString<GofsFeedResponse<OperatingRules>>(jsonContent)
+    assertEquals(expectedResponse, decodedResponse)
+  }
 }

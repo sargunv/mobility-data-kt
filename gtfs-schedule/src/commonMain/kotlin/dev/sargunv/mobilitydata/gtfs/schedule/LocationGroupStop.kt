@@ -10,9 +10,9 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class LocationGroupStop(
-    /** Identifies a location group. */
-    @SerialName("location_group_id") public val locationGroupId: String,
+  /** Identifies a location group. */
+  @SerialName("location_group_id") public val locationGroupId: String,
 
-    /** Identifies a stop. */
-    @SerialName("stop_id") public val stopId: String,
+  /** Identifies a stop. */
+  @SerialName("stop_id") public val stopId: String,
 )

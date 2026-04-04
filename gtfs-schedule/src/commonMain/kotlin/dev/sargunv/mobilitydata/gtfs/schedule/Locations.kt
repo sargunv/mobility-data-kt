@@ -23,9 +23,9 @@ public typealias Location = Feature<PolygonGeometry, LocationProperties>
 /** Properties of a [Location]. */
 @Serializable
 public data class LocationProperties(
-    /** Indicates the name of the location as displayed to riders. */
-    @SerialName("stop_name") public val stopName: String? = null,
+  /** Indicates the name of the location as displayed to riders. */
+  @SerialName("stop_name") public val stopName: String? = null,
 
-    /** Meaningful description of the location to help orient riders. */
-    @SerialName("stop_desc") public val stopDesc: String? = null,
+  /** Meaningful description of the location to help orient riders. */
+  @SerialName("stop_desc") public val stopDesc: String? = null,
 )

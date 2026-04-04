@@ -10,9 +10,9 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class StopArea(
-    /** Identifies an area. */
-    @SerialName("area_id") public val areaId: String,
+  /** Identifies an area. */
+  @SerialName("area_id") public val areaId: String,
 
-    /** Identifies a stop. */
-    @SerialName("stop_id") public val stopId: String,
+  /** Identifies a stop. */
+  @SerialName("stop_id") public val stopId: String,
 )

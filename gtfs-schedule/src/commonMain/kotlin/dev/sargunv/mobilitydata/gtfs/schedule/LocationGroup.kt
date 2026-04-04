@@ -10,9 +10,9 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class LocationGroup(
-    /** Identifies a location group. */
-    @SerialName("location_group_id") public val locationGroupId: String,
+  /** Identifies a location group. */
+  @SerialName("location_group_id") public val locationGroupId: String,
 
-    /** Name of the location group as displayed to the rider. */
-    @SerialName("location_group_name") public val locationGroupName: String? = null,
+  /** Name of the location group as displayed to the rider. */
+  @SerialName("location_group_name") public val locationGroupName: String? = null,
 )

@@ -10,9 +10,9 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class Area(
-    /** Identifies an area. */
-    @SerialName("area_id") public val areaId: String,
+  /** Identifies an area. */
+  @SerialName("area_id") public val areaId: String,
 
-    /** Name of the area. */
-    @SerialName("area_name") public val areaName: String? = null,
+  /** Name of the area. */
+  @SerialName("area_name") public val areaName: String? = null,
 )

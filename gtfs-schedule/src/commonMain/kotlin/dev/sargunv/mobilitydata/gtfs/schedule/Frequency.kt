@@ -13,25 +13,24 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class Frequency(
-    /** Identifies a trip to which the specified headway of service applies. */
-    @SerialName("trip_id") public val tripId: String,
+  /** Identifies a trip to which the specified headway of service applies. */
+  @SerialName("trip_id") public val tripId: String,
 
-    /** Time at which the first vehicle departs from the first stop of the trip. */
-    @SerialName("start_time") public val startTime: ServiceTime,
+  /** Time at which the first vehicle departs from the first stop of the trip. */
+  @SerialName("start_time") public val startTime: ServiceTime,
 
-    /**
-     * Time at which service changes to a different headway (or ceases) at the first stop in the
-     * trip.
-     */
-    @SerialName("end_time") public val endTime: ServiceTime,
+  /**
+   * Time at which service changes to a different headway (or ceases) at the first stop in the trip.
+   */
+  @SerialName("end_time") public val endTime: ServiceTime,
 
-    /** Time between departures from the same stop (headway) for the trip. */
-    @SerialName("headway_secs") public val headwaySecs: WholeSeconds,
+  /** Time between departures from the same stop (headway) for the trip. */
+  @SerialName("headway_secs") public val headwaySecs: WholeSeconds,
 
-    /**
-     * Indicates the type of service for a trip. When false (0), frequency-based trips are not
-     * exactly scheduled. When true (1), schedule-based trips with exact times. Defaults to false
-     * when null or empty.
-     */
-    @SerialName("exact_times") public val exactTimes: IntBoolean? = null,
+  /**
+   * Indicates the type of service for a trip. When false (0), frequency-based trips are not exactly
+   * scheduled. When true (1), schedule-based trips with exact times. Defaults to false when null or
+   * empty.
+   */
+  @SerialName("exact_times") public val exactTimes: IntBoolean? = null,
 )

@@ -17,8 +17,8 @@ public typealias LanguageCode = String
 
 /** Text localized to multiple languages. */
 public typealias LocalizedText =
-    @Serializable(with = LocalizedTextSerializer::class) Map<LanguageCode, String>
+  @Serializable(with = LocalizedTextSerializer::class) Map<LanguageCode, String>
 
 /** [Url] localized to multiple languages. */
 public typealias LocalizedUrl =
-    @Serializable(with = LocalizedTextSerializer::class) Map<LanguageCode, Url>
+  @Serializable(with = LocalizedTextSerializer::class) Map<LanguageCode, Url>

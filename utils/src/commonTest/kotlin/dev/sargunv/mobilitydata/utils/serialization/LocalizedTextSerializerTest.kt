@@ -10,76 +10,76 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 
 class LocalizedTextSerializerTest {
-    @Serializable private data class TestData(val localizedText: LocalizedText)
+  @Serializable private data class TestData(val localizedText: LocalizedText)
 
-    private val json = Json
+  private val json = Json
 
-    @Test
-    fun testSerializeLocalizedText() {
-        val localizedText = mapOf("en" to "Hello", "fr" to "Bonjour", "es" to "Hola")
-        val testData = TestData(localizedText)
+  @Test
+  fun testSerializeLocalizedText() {
+    val localizedText = mapOf("en" to "Hello", "fr" to "Bonjour", "es" to "Hola")
+    val testData = TestData(localizedText)
 
-        val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
-        val localizedTextArray = jsonElement.jsonObject["localizedText"]!!.jsonArray
+    val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+    val localizedTextArray = jsonElement.jsonObject["localizedText"]!!.jsonArray
 
-        assertEquals(3, localizedTextArray.size)
+    assertEquals(3, localizedTextArray.size)
 
-        // Verify all entries are present
-        val entries = localizedTextArray.map {
-            it.jsonObject["language"]!!.jsonPrimitive.content to
-                it.jsonObject["text"]!!.jsonPrimitive.content
-        }
-
-        assertEquals(setOf("en" to "Hello", "fr" to "Bonjour", "es" to "Hola"), entries.toSet())
+    // Verify all entries are present
+    val entries = localizedTextArray.map {
+      it.jsonObject["language"]!!.jsonPrimitive.content to
+        it.jsonObject["text"]!!.jsonPrimitive.content
     }
 
-    @Test
-    fun testDeserializeLocalizedText() {
-        val jsonString =
-            """{"localizedText":[{"text":"Hello","language":"en"},{"text":"Bonjour","language":"fr"}]}"""
+    assertEquals(setOf("en" to "Hello", "fr" to "Bonjour", "es" to "Hola"), entries.toSet())
+  }
 
-        val result = json.decodeFromString(TestData.serializer(), jsonString)
+  @Test
+  fun testDeserializeLocalizedText() {
+    val jsonString =
+      """{"localizedText":[{"text":"Hello","language":"en"},{"text":"Bonjour","language":"fr"}]}"""
 
-        assertEquals(mapOf("en" to "Hello", "fr" to "Bonjour"), result.localizedText)
-    }
+    val result = json.decodeFromString(TestData.serializer(), jsonString)
 
-    @Test
-    fun testRoundTrip() {
-        val original = TestData(mapOf("en" to "Welcome", "de" to "Willkommen"))
+    assertEquals(mapOf("en" to "Hello", "fr" to "Bonjour"), result.localizedText)
+  }
 
-        val jsonString = json.encodeToString(TestData.serializer(), original)
-        val decoded = json.decodeFromString(TestData.serializer(), jsonString)
+  @Test
+  fun testRoundTrip() {
+    val original = TestData(mapOf("en" to "Welcome", "de" to "Willkommen"))
 
-        assertEquals(original, decoded)
-    }
+    val jsonString = json.encodeToString(TestData.serializer(), original)
+    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
-    @Test
-    fun testEmptyMap() {
-        val testData = TestData(emptyMap())
+    assertEquals(original, decoded)
+  }
 
-        val jsonString = json.encodeToString(TestData.serializer(), testData)
-        val decoded = json.decodeFromString(TestData.serializer(), jsonString)
+  @Test
+  fun testEmptyMap() {
+    val testData = TestData(emptyMap())
 
-        assertEquals(testData, decoded)
-    }
+    val jsonString = json.encodeToString(TestData.serializer(), testData)
+    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
-    @Test
-    fun testSingleEntry() {
-        val testData = TestData(mapOf("en" to "Goodbye"))
+    assertEquals(testData, decoded)
+  }
 
-        val jsonString = json.encodeToString(TestData.serializer(), testData)
-        val decoded = json.decodeFromString(TestData.serializer(), jsonString)
+  @Test
+  fun testSingleEntry() {
+    val testData = TestData(mapOf("en" to "Goodbye"))
 
-        assertEquals(testData, decoded)
-    }
+    val jsonString = json.encodeToString(TestData.serializer(), testData)
+    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
 
-    @Test
-    fun testSpecialCharactersInText() {
-        val testData = TestData(mapOf("en" to "Hello \"World\"!", "zh" to "你好"))
+    assertEquals(testData, decoded)
+  }
 
-        val jsonString = json.encodeToString(TestData.serializer(), testData)
-        val decoded = json.decodeFromString(TestData.serializer(), jsonString)
+  @Test
+  fun testSpecialCharactersInText() {
+    val testData = TestData(mapOf("en" to "Hello \"World\"!", "zh" to "你好"))
 
-        assertEquals(testData, decoded)
-    }
+    val jsonString = json.encodeToString(TestData.serializer(), testData)
+    val decoded = json.decodeFromString(TestData.serializer(), jsonString)
+
+    assertEquals(testData, decoded)
+  }
 }

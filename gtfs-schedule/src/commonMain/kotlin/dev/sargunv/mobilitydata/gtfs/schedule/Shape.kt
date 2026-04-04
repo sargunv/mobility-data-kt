@@ -10,21 +10,21 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class Shape(
-    /** Identifies a shape. */
-    @SerialName("shape_id") public val shapeId: String,
+  /** Identifies a shape. */
+  @SerialName("shape_id") public val shapeId: String,
 
-    /** Latitude of a shape point. */
-    @SerialName("shape_pt_lat") public val shapePointLatitude: Double,
+  /** Latitude of a shape point. */
+  @SerialName("shape_pt_lat") public val shapePointLatitude: Double,
 
-    /** Longitude of a shape point. */
-    @SerialName("shape_pt_lon") public val shapePointLongitude: Double,
+  /** Longitude of a shape point. */
+  @SerialName("shape_pt_lon") public val shapePointLongitude: Double,
 
-    /** Sequence in which the shape points connect to form the shape. */
-    @SerialName("shape_pt_sequence") public val shapePointSequence: Int,
+  /** Sequence in which the shape points connect to form the shape. */
+  @SerialName("shape_pt_sequence") public val shapePointSequence: Int,
 
-    /**
-     * Actual distance traveled along the shape from the first shape point to the point specified in
-     * this record.
-     */
-    @SerialName("shape_dist_traveled") public val shapeDistTraveled: Double? = null,
+  /**
+   * Actual distance traveled along the shape from the first shape point to the point specified in
+   * this record.
+   */
+  @SerialName("shape_dist_traveled") public val shapeDistTraveled: Double? = null,
 )

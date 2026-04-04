@@ -16,10 +16,7 @@ jobs:
               with:
                   fetch-depth: 0
                   fetch-tags: true
-            - uses: actions/setup-java@v5
-              with:
-                  distribution: temurin
-                  java-version: 21
+            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
             - run: ./gradlew build
 
     build-docs:
@@ -30,10 +27,7 @@ jobs:
                   fetch-depth: 0
                   fetch-tags: true
                   persist-credentials: false
-            - uses: actions/setup-java@v5
-              with:
-                  distribution: temurin
-                  java-version: 21
+            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
             - run: ./gradlew :mkdocsBuild
             - uses: actions/upload-pages-artifact@v4
               with:

@@ -12,15 +12,15 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public data class RiderCategory(
-    /** Identifies a rider category. */
-    @SerialName("rider_category_id") public val riderCategoryId: String,
+  /** Identifies a rider category. */
+  @SerialName("rider_category_id") public val riderCategoryId: String,
 
-    /** Name of the rider category. */
-    @SerialName("rider_category_name") public val riderCategoryName: String,
+  /** Name of the rider category. */
+  @SerialName("rider_category_name") public val riderCategoryName: String,
 
-    /** Indicates if this rider category is the default. */
-    @SerialName("is_default_fare_category") public val isDefaultFareCategory: IntBoolean,
+  /** Indicates if this rider category is the default. */
+  @SerialName("is_default_fare_category") public val isDefaultFareCategory: IntBoolean,
 
-    /** URL describing the eligibility requirements for the rider category. */
-    @SerialName("eligibility_url") public val eligibilityUrl: Url? = null,
+  /** URL describing the eligibility requirements for the rider category. */
+  @SerialName("eligibility_url") public val eligibilityUrl: Url? = null,
 )
