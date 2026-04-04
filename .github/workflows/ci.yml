@@ -16,10 +16,7 @@ jobs:
               with:
                   fetch-depth: 0
                   fetch-tags: true
-            - uses: actions/setup-java@v5
-              with:
-                  distribution: temurin
-                  java-version: 21
+            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
             - run: ./gradlew build
 
     build-docs:
@@ -30,10 +27,7 @@ jobs:
                   fetch-depth: 0
                   fetch-tags: true
                   persist-credentials: false
-            - uses: actions/setup-java@v5
-              with:
-                  distribution: temurin
-                  java-version: 21
+            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
             - run: ./gradlew :mkdocsBuild
             - uses: actions/upload-pages-artifact@v4
               with:
@@ -41,30 +35,14 @@ jobs:
 
     check-format:
         runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            checks: write
-            issues: write
-            pull-requests: write
         steps:
-            - uses: nschloe/action-cached-lfs-checkout@v1
+            - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
               with:
                   fetch-depth: 0
                   fetch-tags: true
                   persist-credentials: false
-            - uses: actions/setup-java@v5
-              with:
-                  distribution: temurin
-                  java-version: 21
-            - uses: pre-commit/action@v3.0.1
-              with:
-                  extra_args: --all-files --hook-stage manual
-            - if: ${{ github.event_name == 'pull_request' && always() }}
-              uses: reviewdog/action-suggester@v1
-              with:
-                  tool_name: format
-                  fail_level: any
-                  filter_mode: diff_context
+            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+            - run: mise run check
 
     # stub to use as a "required" check on github
     all-good:

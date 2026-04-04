@@ -25,11 +25,10 @@ class LocalizedTextSerializerTest {
     assertEquals(3, localizedTextArray.size)
 
     // Verify all entries are present
-    val entries =
-      localizedTextArray.map {
-        it.jsonObject["language"]!!.jsonPrimitive.content to
-          it.jsonObject["text"]!!.jsonPrimitive.content
-      }
+    val entries = localizedTextArray.map {
+      it.jsonObject["language"]!!.jsonPrimitive.content to
+        it.jsonObject["text"]!!.jsonPrimitive.content
+    }
 
     assertEquals(setOf("en" to "Hello", "fr" to "Bonjour", "es" to "Hola"), entries.toSet())
   }
