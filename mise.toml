@@ -42,14 +42,6 @@ depends = ["test:jvm", "test:jsnode", "test:wasmjsnode", "test:native"]
 description = "Serve documentation locally"
 run = "./gradlew :mkdocsServe"
 
-[tasks."update:gtfs-realtime:proto"]
-description = "Refresh the vendored official GTFS Realtime protobuf definition"
-run = """
-mkdir -p gtfs-realtime/proto
-curl -fsSL https://raw.githubusercontent.com/google/transit/master/gtfs-realtime/proto/gtfs-realtime.proto \
-  -o gtfs-realtime/proto/gtfs-realtime.proto
-"""
-
 [tasks."update:gtfs-realtime:fixtures"]
 description = "Refresh checked-in GTFS Realtime protobuf fixtures from public feeds"
 run = """

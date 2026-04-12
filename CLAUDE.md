@@ -19,3 +19,10 @@ Run a single test: `./gradlew :module:jvmTest --tests "*SomeTest*"`
 
 **After changing any public API**, run `mise run fix` to regenerate the `.api` files — the build
 fails without this.
+
+## gtfs-realtime
+
+The Kotlin data classes in this module are handwritten to match the
+[official GTFS Realtime protobuf schema](https://github.com/google/transit/blob/master/gtfs-realtime/proto/gtfs-realtime.proto).
+They are not generated from the `.proto` file. When the upstream spec changes, update the data
+classes and `@ProtoNumber` annotations manually.
