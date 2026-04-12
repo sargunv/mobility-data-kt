@@ -1,0 +1,1349 @@
+// Klib ABI Dump
+// Targets: [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, mingwX64, tvosArm64, tvosSimulatorArm64, wasmJs, wasmWasi, watchosArm32, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64]
+// Alias: native => [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, linuxArm64, linuxX64, macosArm64, mingwX64, tvosArm64, tvosSimulatorArm64, watchosArm32, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <dev.sargunv.mobility-data:gtfs-realtime>
+final class dev.sargunv.mobilitydata.gtfs.realtime/Alert { // dev.sargunv.mobilitydata.gtfs.realtime/Alert|null[0]
+    constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TimeRange> = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector> = ..., dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause = ..., dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/Alert.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TimeRange>;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.EntitySelector>;dev.sargunv.mobilitydata.gtfs.realtime.Alert.Cause;dev.sargunv.mobilitydata.gtfs.realtime.Alert.Effect;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.Alert.SeverityLevel;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedImage?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?){}[0]
+
+    final val activePeriod // dev.sargunv.mobilitydata.gtfs.realtime/Alert.activePeriod|{}activePeriod[0]
+        final fun <get-activePeriod>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TimeRange> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.activePeriod.<get-activePeriod>|<get-activePeriod>(){}[0]
+    final val cause // dev.sargunv.mobilitydata.gtfs.realtime/Alert.cause|{}cause[0]
+        final fun <get-cause>(): dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause // dev.sargunv.mobilitydata.gtfs.realtime/Alert.cause.<get-cause>|<get-cause>(){}[0]
+    final val causeDetail // dev.sargunv.mobilitydata.gtfs.realtime/Alert.causeDetail|{}causeDetail[0]
+        final fun <get-causeDetail>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.causeDetail.<get-causeDetail>|<get-causeDetail>(){}[0]
+    final val descriptionText // dev.sargunv.mobilitydata.gtfs.realtime/Alert.descriptionText|{}descriptionText[0]
+        final fun <get-descriptionText>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.descriptionText.<get-descriptionText>|<get-descriptionText>(){}[0]
+    final val effect // dev.sargunv.mobilitydata.gtfs.realtime/Alert.effect|{}effect[0]
+        final fun <get-effect>(): dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect // dev.sargunv.mobilitydata.gtfs.realtime/Alert.effect.<get-effect>|<get-effect>(){}[0]
+    final val effectDetail // dev.sargunv.mobilitydata.gtfs.realtime/Alert.effectDetail|{}effectDetail[0]
+        final fun <get-effectDetail>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.effectDetail.<get-effectDetail>|<get-effectDetail>(){}[0]
+    final val headerText // dev.sargunv.mobilitydata.gtfs.realtime/Alert.headerText|{}headerText[0]
+        final fun <get-headerText>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.headerText.<get-headerText>|<get-headerText>(){}[0]
+    final val image // dev.sargunv.mobilitydata.gtfs.realtime/Alert.image|{}image[0]
+        final fun <get-image>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.image.<get-image>|<get-image>(){}[0]
+    final val imageAlternativeText // dev.sargunv.mobilitydata.gtfs.realtime/Alert.imageAlternativeText|{}imageAlternativeText[0]
+        final fun <get-imageAlternativeText>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.imageAlternativeText.<get-imageAlternativeText>|<get-imageAlternativeText>(){}[0]
+    final val informedEntity // dev.sargunv.mobilitydata.gtfs.realtime/Alert.informedEntity|{}informedEntity[0]
+        final fun <get-informedEntity>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.informedEntity.<get-informedEntity>|<get-informedEntity>(){}[0]
+    final val severityLevel // dev.sargunv.mobilitydata.gtfs.realtime/Alert.severityLevel|{}severityLevel[0]
+        final fun <get-severityLevel>(): dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel // dev.sargunv.mobilitydata.gtfs.realtime/Alert.severityLevel.<get-severityLevel>|<get-severityLevel>(){}[0]
+    final val ttsDescriptionText // dev.sargunv.mobilitydata.gtfs.realtime/Alert.ttsDescriptionText|{}ttsDescriptionText[0]
+        final fun <get-ttsDescriptionText>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.ttsDescriptionText.<get-ttsDescriptionText>|<get-ttsDescriptionText>(){}[0]
+    final val ttsHeaderText // dev.sargunv.mobilitydata.gtfs.realtime/Alert.ttsHeaderText|{}ttsHeaderText[0]
+        final fun <get-ttsHeaderText>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.ttsHeaderText.<get-ttsHeaderText>|<get-ttsHeaderText>(){}[0]
+    final val url // dev.sargunv.mobilitydata.gtfs.realtime/Alert.url|{}url[0]
+        final fun <get-url>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.url.<get-url>|<get-url>(){}[0]
+
+    final fun component1(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TimeRange> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component1|component1(){}[0]
+    final fun component10(): dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component10|component10(){}[0]
+    final fun component11(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component11|component11(){}[0]
+    final fun component12(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component12|component12(){}[0]
+    final fun component13(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component13|component13(){}[0]
+    final fun component14(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component14|component14(){}[0]
+    final fun component2(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component2|component2(){}[0]
+    final fun component3(): dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component3|component3(){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component4|component4(){}[0]
+    final fun component5(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component5|component5(){}[0]
+    final fun component6(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component6|component6(){}[0]
+    final fun component7(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component7|component7(){}[0]
+    final fun component8(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component8|component8(){}[0]
+    final fun component9(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Alert.component9|component9(){}[0]
+    final fun copy(kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TimeRange> = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector> = ..., dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause = ..., dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ...): dev.sargunv.mobilitydata.gtfs.realtime/Alert // dev.sargunv.mobilitydata.gtfs.realtime/Alert.copy|copy(kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TimeRange>;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.EntitySelector>;dev.sargunv.mobilitydata.gtfs.realtime.Alert.Cause;dev.sargunv.mobilitydata.gtfs.realtime.Alert.Effect;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.Alert.SeverityLevel;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedImage?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/Alert.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/Alert.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/Alert.toString|toString(){}[0]
+
+    final enum class Cause : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause> { // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause|null[0]
+        enum entry Accident // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Accident|null[0]
+        enum entry Construction // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Construction|null[0]
+        enum entry Demonstration // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Demonstration|null[0]
+        enum entry Holiday // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Holiday|null[0]
+        enum entry Maintenance // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Maintenance|null[0]
+        enum entry MedicalEmergency // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.MedicalEmergency|null[0]
+        enum entry OtherCause // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.OtherCause|null[0]
+        enum entry PoliceActivity // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.PoliceActivity|null[0]
+        enum entry Strike // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Strike|null[0]
+        enum entry TechnicalProblem // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.TechnicalProblem|null[0]
+        enum entry UnknownCause // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.UnknownCause|null[0]
+        enum entry Weather // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Weather|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final enum class Effect : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect> { // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect|null[0]
+        enum entry AccessibilityIssue // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.AccessibilityIssue|null[0]
+        enum entry AdditionalService // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.AdditionalService|null[0]
+        enum entry Detour // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.Detour|null[0]
+        enum entry ModifiedService // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.ModifiedService|null[0]
+        enum entry NoEffect // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.NoEffect|null[0]
+        enum entry NoService // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.NoService|null[0]
+        enum entry OtherEffect // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.OtherEffect|null[0]
+        enum entry ReducedService // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.ReducedService|null[0]
+        enum entry SignificantDelays // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.SignificantDelays|null[0]
+        enum entry StopMoved // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.StopMoved|null[0]
+        enum entry UnknownEffect // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.UnknownEffect|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Effect.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final enum class SeverityLevel : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel> { // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel|null[0]
+        enum entry Info // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.Info|null[0]
+        enum entry Severe // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.Severe|null[0]
+        enum entry UnknownSeverity // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.UnknownSeverity|null[0]
+        enum entry Warning // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.Warning|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.SeverityLevel.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Alert> { // dev.sargunv.mobilitydata.gtfs.realtime/Alert.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/Alert.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/Alert.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/Alert // dev.sargunv.mobilitydata.gtfs.realtime/Alert.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/Alert) // dev.sargunv.mobilitydata.gtfs.realtime/Alert.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.Alert){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Alert> // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector { // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor? = ..., kotlin/String? = ..., kotlin/Int? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.Int?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor?;kotlin.String?;kotlin.Int?){}[0]
+
+    final val agencyId // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.agencyId|{}agencyId[0]
+        final fun <get-agencyId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.agencyId.<get-agencyId>|<get-agencyId>(){}[0]
+    final val directionId // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.directionId|{}directionId[0]
+        final fun <get-directionId>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.directionId.<get-directionId>|<get-directionId>(){}[0]
+    final val routeId // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.routeId|{}routeId[0]
+        final fun <get-routeId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.routeId.<get-routeId>|<get-routeId>(){}[0]
+    final val routeType // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.routeType|{}routeType[0]
+        final fun <get-routeType>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.routeType.<get-routeType>|<get-routeType>(){}[0]
+    final val stopId // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.stopId|{}stopId[0]
+        final fun <get-stopId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.stopId.<get-stopId>|<get-stopId>(){}[0]
+    final val trip // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.trip|{}trip[0]
+        final fun <get-trip>(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.trip.<get-trip>|<get-trip>(){}[0]
+
+    final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.component2|component2(){}[0]
+    final fun component3(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.component3|component3(){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.component4|component4(){}[0]
+    final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.component5|component5(){}[0]
+    final fun component6(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.component6|component6(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor? = ..., kotlin/String? = ..., kotlin/Int? = ...): dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.copy|copy(kotlin.String?;kotlin.String?;kotlin.Int?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor?;kotlin.String?;kotlin.Int?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector> { // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector) // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.EntitySelector){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector> // dev.sargunv.mobilitydata.gtfs.realtime/EntitySelector.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity { // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity|null[0]
+    constructor <init>(kotlin/String, kotlin/Boolean = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Alert? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Shape? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Stop? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripModifications? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.<init>|<init>(kotlin.String;kotlin.Boolean;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition?;dev.sargunv.mobilitydata.gtfs.realtime.Alert?;dev.sargunv.mobilitydata.gtfs.realtime.Shape?;dev.sargunv.mobilitydata.gtfs.realtime.Stop?;dev.sargunv.mobilitydata.gtfs.realtime.TripModifications?){}[0]
+
+    final val alert // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.alert|{}alert[0]
+        final fun <get-alert>(): dev.sargunv.mobilitydata.gtfs.realtime/Alert? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.alert.<get-alert>|<get-alert>(){}[0]
+    final val id // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.id|{}id[0]
+        final fun <get-id>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.id.<get-id>|<get-id>(){}[0]
+    final val isDeleted // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.isDeleted|{}isDeleted[0]
+        final fun <get-isDeleted>(): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.isDeleted.<get-isDeleted>|<get-isDeleted>(){}[0]
+    final val shape // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.shape|{}shape[0]
+        final fun <get-shape>(): dev.sargunv.mobilitydata.gtfs.realtime/Shape? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.shape.<get-shape>|<get-shape>(){}[0]
+    final val stop // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.stop|{}stop[0]
+        final fun <get-stop>(): dev.sargunv.mobilitydata.gtfs.realtime/Stop? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.stop.<get-stop>|<get-stop>(){}[0]
+    final val tripModifications // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.tripModifications|{}tripModifications[0]
+        final fun <get-tripModifications>(): dev.sargunv.mobilitydata.gtfs.realtime/TripModifications? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.tripModifications.<get-tripModifications>|<get-tripModifications>(){}[0]
+    final val tripUpdate // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.tripUpdate|{}tripUpdate[0]
+        final fun <get-tripUpdate>(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.tripUpdate.<get-tripUpdate>|<get-tripUpdate>(){}[0]
+    final val vehicle // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.vehicle|{}vehicle[0]
+        final fun <get-vehicle>(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.vehicle.<get-vehicle>|<get-vehicle>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.component1|component1(){}[0]
+    final fun component2(): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.component2|component2(){}[0]
+    final fun component3(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.component3|component3(){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.component4|component4(){}[0]
+    final fun component5(): dev.sargunv.mobilitydata.gtfs.realtime/Alert? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.component5|component5(){}[0]
+    final fun component6(): dev.sargunv.mobilitydata.gtfs.realtime/Shape? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.component6|component6(){}[0]
+    final fun component7(): dev.sargunv.mobilitydata.gtfs.realtime/Stop? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.component7|component7(){}[0]
+    final fun component8(): dev.sargunv.mobilitydata.gtfs.realtime/TripModifications? // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.component8|component8(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/Boolean = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Alert? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Shape? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Stop? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripModifications? = ...): dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.copy|copy(kotlin.String;kotlin.Boolean;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition?;dev.sargunv.mobilitydata.gtfs.realtime.Alert?;dev.sargunv.mobilitydata.gtfs.realtime.Shape?;dev.sargunv.mobilitydata.gtfs.realtime.Stop?;dev.sargunv.mobilitydata.gtfs.realtime.TripModifications?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity> { // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity) // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.FeedEntity){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity> // dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader { // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader|null[0]
+    constructor <init>(kotlin/String, dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality = ..., kotlin/Long? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.<init>|<init>(kotlin.String;dev.sargunv.mobilitydata.gtfs.realtime.FeedHeader.Incrementality;kotlin.Long?;kotlin.String?){}[0]
+
+    final val feedVersion // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.feedVersion|{}feedVersion[0]
+        final fun <get-feedVersion>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.feedVersion.<get-feedVersion>|<get-feedVersion>(){}[0]
+    final val gtfsRealtimeVersion // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.gtfsRealtimeVersion|{}gtfsRealtimeVersion[0]
+        final fun <get-gtfsRealtimeVersion>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.gtfsRealtimeVersion.<get-gtfsRealtimeVersion>|<get-gtfsRealtimeVersion>(){}[0]
+    final val incrementality // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.incrementality|{}incrementality[0]
+        final fun <get-incrementality>(): dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.incrementality.<get-incrementality>|<get-incrementality>(){}[0]
+    final val timestamp // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.timestamp|{}timestamp[0]
+        final fun <get-timestamp>(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.component1|component1(){}[0]
+    final fun component2(): dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.component2|component2(){}[0]
+    final fun component3(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.component3|component3(){}[0]
+    final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.component4|component4(){}[0]
+    final fun copy(kotlin/String = ..., dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality = ..., kotlin/Long? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.copy|copy(kotlin.String;dev.sargunv.mobilitydata.gtfs.realtime.FeedHeader.Incrementality;kotlin.Long?;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.toString|toString(){}[0]
+
+    final enum class Incrementality : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality> { // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality|null[0]
+        enum entry Differential // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality.Differential|null[0]
+        enum entry FullDataset // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality.FullDataset|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality> // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality> // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality> // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Incrementality.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader> { // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader) // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.FeedHeader){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader> // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage { // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage|null[0]
+    constructor <init>(dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader, kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity> = ...) // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.<init>|<init>(dev.sargunv.mobilitydata.gtfs.realtime.FeedHeader;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.FeedEntity>){}[0]
+
+    final val entity // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.entity|{}entity[0]
+        final fun <get-entity>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity> // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.entity.<get-entity>|<get-entity>(){}[0]
+    final val header // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.header|{}header[0]
+        final fun <get-header>(): dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.header.<get-header>|<get-header>(){}[0]
+
+    final fun component1(): dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.component1|component1(){}[0]
+    final fun component2(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity> // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.component2|component2(){}[0]
+    final fun copy(dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/FeedEntity> = ...): dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.copy|copy(dev.sargunv.mobilitydata.gtfs.realtime.FeedHeader;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.FeedEntity>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage> { // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage) // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.FeedMessage){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage> // dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/Position { // dev.sargunv.mobilitydata.gtfs.realtime/Position|null[0]
+    constructor <init>(kotlin/Float, kotlin/Float, kotlin/Float? = ..., kotlin/Double? = ..., kotlin/Float? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/Position.<init>|<init>(kotlin.Float;kotlin.Float;kotlin.Float?;kotlin.Double?;kotlin.Float?){}[0]
+
+    final val bearing // dev.sargunv.mobilitydata.gtfs.realtime/Position.bearing|{}bearing[0]
+        final fun <get-bearing>(): kotlin/Float? // dev.sargunv.mobilitydata.gtfs.realtime/Position.bearing.<get-bearing>|<get-bearing>(){}[0]
+    final val latitude // dev.sargunv.mobilitydata.gtfs.realtime/Position.latitude|{}latitude[0]
+        final fun <get-latitude>(): kotlin/Float // dev.sargunv.mobilitydata.gtfs.realtime/Position.latitude.<get-latitude>|<get-latitude>(){}[0]
+    final val longitude // dev.sargunv.mobilitydata.gtfs.realtime/Position.longitude|{}longitude[0]
+        final fun <get-longitude>(): kotlin/Float // dev.sargunv.mobilitydata.gtfs.realtime/Position.longitude.<get-longitude>|<get-longitude>(){}[0]
+    final val odometer // dev.sargunv.mobilitydata.gtfs.realtime/Position.odometer|{}odometer[0]
+        final fun <get-odometer>(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.realtime/Position.odometer.<get-odometer>|<get-odometer>(){}[0]
+    final val speed // dev.sargunv.mobilitydata.gtfs.realtime/Position.speed|{}speed[0]
+        final fun <get-speed>(): kotlin/Float? // dev.sargunv.mobilitydata.gtfs.realtime/Position.speed.<get-speed>|<get-speed>(){}[0]
+
+    final fun component1(): kotlin/Float // dev.sargunv.mobilitydata.gtfs.realtime/Position.component1|component1(){}[0]
+    final fun component2(): kotlin/Float // dev.sargunv.mobilitydata.gtfs.realtime/Position.component2|component2(){}[0]
+    final fun component3(): kotlin/Float? // dev.sargunv.mobilitydata.gtfs.realtime/Position.component3|component3(){}[0]
+    final fun component4(): kotlin/Double? // dev.sargunv.mobilitydata.gtfs.realtime/Position.component4|component4(){}[0]
+    final fun component5(): kotlin/Float? // dev.sargunv.mobilitydata.gtfs.realtime/Position.component5|component5(){}[0]
+    final fun copy(kotlin/Float = ..., kotlin/Float = ..., kotlin/Float? = ..., kotlin/Double? = ..., kotlin/Float? = ...): dev.sargunv.mobilitydata.gtfs.realtime/Position // dev.sargunv.mobilitydata.gtfs.realtime/Position.copy|copy(kotlin.Float;kotlin.Float;kotlin.Float?;kotlin.Double?;kotlin.Float?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/Position.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/Position.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/Position.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Position> { // dev.sargunv.mobilitydata.gtfs.realtime/Position.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/Position.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/Position.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/Position.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/Position // dev.sargunv.mobilitydata.gtfs.realtime/Position.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/Position) // dev.sargunv.mobilitydata.gtfs.realtime/Position.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.Position){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/Position.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Position> // dev.sargunv.mobilitydata.gtfs.realtime/Position.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop { // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop|null[0]
+    constructor <init>(kotlin/Int? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.<init>|<init>(kotlin.Int?;kotlin.String?){}[0]
+
+    final val stopId // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.stopId|{}stopId[0]
+        final fun <get-stopId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.stopId.<get-stopId>|<get-stopId>(){}[0]
+    final val travelTimeToStop // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.travelTimeToStop|{}travelTimeToStop[0]
+        final fun <get-travelTimeToStop>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.travelTimeToStop.<get-travelTimeToStop>|<get-travelTimeToStop>(){}[0]
+
+    final fun component1(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.component2|component2(){}[0]
+    final fun copy(kotlin/Int? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.copy|copy(kotlin.Int?;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop> { // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop) // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.ReplacementStop){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop> // dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/Shape { // dev.sargunv.mobilitydata.gtfs.realtime/Shape|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/Shape.<init>|<init>(kotlin.String?;kotlin.String?){}[0]
+
+    final val encodedPolyline // dev.sargunv.mobilitydata.gtfs.realtime/Shape.encodedPolyline|{}encodedPolyline[0]
+        final fun <get-encodedPolyline>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Shape.encodedPolyline.<get-encodedPolyline>|<get-encodedPolyline>(){}[0]
+    final val shapeId // dev.sargunv.mobilitydata.gtfs.realtime/Shape.shapeId|{}shapeId[0]
+        final fun <get-shapeId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Shape.shapeId.<get-shapeId>|<get-shapeId>(){}[0]
+
+    final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Shape.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Shape.component2|component2(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.realtime/Shape // dev.sargunv.mobilitydata.gtfs.realtime/Shape.copy|copy(kotlin.String?;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/Shape.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/Shape.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/Shape.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Shape> { // dev.sargunv.mobilitydata.gtfs.realtime/Shape.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/Shape.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/Shape.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/Shape.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/Shape // dev.sargunv.mobilitydata.gtfs.realtime/Shape.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/Shape) // dev.sargunv.mobilitydata.gtfs.realtime/Shape.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.Shape){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/Shape.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Shape> // dev.sargunv.mobilitydata.gtfs.realtime/Shape.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/Stop { // dev.sargunv.mobilitydata.gtfs.realtime/Stop|null[0]
+    constructor <init>(kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., kotlin/Float? = ..., kotlin/Float? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/Stop.<init>|<init>(kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;kotlin.Float?;kotlin.Float?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.Stop.WheelchairBoarding;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?){}[0]
+
+    final val levelId // dev.sargunv.mobilitydata.gtfs.realtime/Stop.levelId|{}levelId[0]
+        final fun <get-levelId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.levelId.<get-levelId>|<get-levelId>(){}[0]
+    final val parentStation // dev.sargunv.mobilitydata.gtfs.realtime/Stop.parentStation|{}parentStation[0]
+        final fun <get-parentStation>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.parentStation.<get-parentStation>|<get-parentStation>(){}[0]
+    final val platformCode // dev.sargunv.mobilitydata.gtfs.realtime/Stop.platformCode|{}platformCode[0]
+        final fun <get-platformCode>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.platformCode.<get-platformCode>|<get-platformCode>(){}[0]
+    final val stopCode // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopCode|{}stopCode[0]
+        final fun <get-stopCode>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopCode.<get-stopCode>|<get-stopCode>(){}[0]
+    final val stopDesc // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopDesc|{}stopDesc[0]
+        final fun <get-stopDesc>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopDesc.<get-stopDesc>|<get-stopDesc>(){}[0]
+    final val stopId // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopId|{}stopId[0]
+        final fun <get-stopId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopId.<get-stopId>|<get-stopId>(){}[0]
+    final val stopLat // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopLat|{}stopLat[0]
+        final fun <get-stopLat>(): kotlin/Float? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopLat.<get-stopLat>|<get-stopLat>(){}[0]
+    final val stopLon // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopLon|{}stopLon[0]
+        final fun <get-stopLon>(): kotlin/Float? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopLon.<get-stopLon>|<get-stopLon>(){}[0]
+    final val stopName // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopName|{}stopName[0]
+        final fun <get-stopName>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopName.<get-stopName>|<get-stopName>(){}[0]
+    final val stopTimezone // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopTimezone|{}stopTimezone[0]
+        final fun <get-stopTimezone>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopTimezone.<get-stopTimezone>|<get-stopTimezone>(){}[0]
+    final val stopUrl // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopUrl|{}stopUrl[0]
+        final fun <get-stopUrl>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.stopUrl.<get-stopUrl>|<get-stopUrl>(){}[0]
+    final val ttsStopName // dev.sargunv.mobilitydata.gtfs.realtime/Stop.ttsStopName|{}ttsStopName[0]
+        final fun <get-ttsStopName>(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.ttsStopName.<get-ttsStopName>|<get-ttsStopName>(){}[0]
+    final val wheelchairBoarding // dev.sargunv.mobilitydata.gtfs.realtime/Stop.wheelchairBoarding|{}wheelchairBoarding[0]
+        final fun <get-wheelchairBoarding>(): dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding // dev.sargunv.mobilitydata.gtfs.realtime/Stop.wheelchairBoarding.<get-wheelchairBoarding>|<get-wheelchairBoarding>(){}[0]
+    final val zoneId // dev.sargunv.mobilitydata.gtfs.realtime/Stop.zoneId|{}zoneId[0]
+        final fun <get-zoneId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.zoneId.<get-zoneId>|<get-zoneId>(){}[0]
+
+    final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component1|component1(){}[0]
+    final fun component10(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component10|component10(){}[0]
+    final fun component11(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component11|component11(){}[0]
+    final fun component12(): dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component12|component12(){}[0]
+    final fun component13(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component13|component13(){}[0]
+    final fun component14(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component14|component14(){}[0]
+    final fun component2(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component2|component2(){}[0]
+    final fun component3(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component3|component3(){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component4|component4(){}[0]
+    final fun component5(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component5|component5(){}[0]
+    final fun component6(): kotlin/Float? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component6|component6(){}[0]
+    final fun component7(): kotlin/Float? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component7|component7(){}[0]
+    final fun component8(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component8|component8(){}[0]
+    final fun component9(): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? // dev.sargunv.mobilitydata.gtfs.realtime/Stop.component9|component9(){}[0]
+    final fun copy(kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., kotlin/Float? = ..., kotlin/Float? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString? = ...): dev.sargunv.mobilitydata.gtfs.realtime/Stop // dev.sargunv.mobilitydata.gtfs.realtime/Stop.copy|copy(kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;kotlin.Float?;kotlin.Float?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.Stop.WheelchairBoarding;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/Stop.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/Stop.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/Stop.toString|toString(){}[0]
+
+    final enum class WheelchairBoarding : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding> { // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding|null[0]
+        enum entry Available // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.Available|null[0]
+        enum entry NotAvailable // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.NotAvailable|null[0]
+        enum entry Unknown // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.Unknown|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding> // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding> // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding> // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/Stop.WheelchairBoarding.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Stop> { // dev.sargunv.mobilitydata.gtfs.realtime/Stop.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/Stop.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/Stop.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/Stop.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/Stop // dev.sargunv.mobilitydata.gtfs.realtime/Stop.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/Stop) // dev.sargunv.mobilitydata.gtfs.realtime/Stop.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.Stop){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/Stop.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/Stop.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Stop> // dev.sargunv.mobilitydata.gtfs.realtime/Stop.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/StopSelector { // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector|null[0]
+    constructor <init>(kotlin/Int? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.<init>|<init>(kotlin.Int?;kotlin.String?){}[0]
+
+    final val stopId // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.stopId|{}stopId[0]
+        final fun <get-stopId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.stopId.<get-stopId>|<get-stopId>(){}[0]
+    final val stopSequence // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.stopSequence|{}stopSequence[0]
+        final fun <get-stopSequence>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.stopSequence.<get-stopSequence>|<get-stopSequence>(){}[0]
+
+    final fun component1(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.component2|component2(){}[0]
+    final fun copy(kotlin/Int? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.realtime/StopSelector // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.copy|copy(kotlin.Int?;kotlin.String?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/StopSelector> { // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/StopSelector // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/StopSelector) // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.StopSelector){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/StopSelector> // dev.sargunv.mobilitydata.gtfs.realtime/StopSelector.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/TimeRange { // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange|null[0]
+    constructor <init>(kotlin/Long? = ..., kotlin/Long? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.<init>|<init>(kotlin.Long?;kotlin.Long?){}[0]
+
+    final val end // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.end|{}end[0]
+        final fun <get-end>(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.end.<get-end>|<get-end>(){}[0]
+    final val start // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.start|{}start[0]
+        final fun <get-start>(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.start.<get-start>|<get-start>(){}[0]
+
+    final fun component1(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.component1|component1(){}[0]
+    final fun component2(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.component2|component2(){}[0]
+    final fun copy(kotlin/Long? = ..., kotlin/Long? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TimeRange // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.copy|copy(kotlin.Long?;kotlin.Long?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TimeRange> { // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TimeRange // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TimeRange) // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TimeRange){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TimeRange> // dev.sargunv.mobilitydata.gtfs.realtime/TimeRange.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage|null[0]
+    constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage> = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TranslatedImage.LocalizedImage>){}[0]
+
+    final val localizedImage // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.localizedImage|{}localizedImage[0]
+        final fun <get-localizedImage>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.localizedImage.<get-localizedImage>|<get-localizedImage>(){}[0]
+
+    final fun component1(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.component1|component1(){}[0]
+    final fun copy(kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage> = ...): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.copy|copy(kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TranslatedImage.LocalizedImage>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.toString|toString(){}[0]
+
+    final class LocalizedImage { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.<init>|<init>(kotlin.String;kotlin.String;kotlin.String?){}[0]
+
+        final val language // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.language|{}language[0]
+            final fun <get-language>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.language.<get-language>|<get-language>(){}[0]
+        final val mediaType // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.mediaType|{}mediaType[0]
+            final fun <get-mediaType>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.mediaType.<get-mediaType>|<get-mediaType>(){}[0]
+        final val url // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.url|{}url[0]
+            final fun <get-url>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.url.<get-url>|<get-url>(){}[0]
+
+        final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.component1|component1(){}[0]
+        final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.component2|component2(){}[0]
+        final fun component3(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.copy|copy(kotlin.String;kotlin.String;kotlin.String?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage> { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage) // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedImage.LocalizedImage){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.LocalizedImage.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage> { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage) // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedImage){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedImage.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString|null[0]
+    constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation> = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString.Translation>){}[0]
+
+    final val translation // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.translation|{}translation[0]
+        final fun <get-translation>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.translation.<get-translation>|<get-translation>(){}[0]
+
+    final fun component1(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.component1|component1(){}[0]
+    final fun copy(kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation> = ...): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.copy|copy(kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString.Translation>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.toString|toString(){}[0]
+
+    final class Translation { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation|null[0]
+        constructor <init>(kotlin/String, kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.<init>|<init>(kotlin.String;kotlin.String?){}[0]
+
+        final val language // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.language|{}language[0]
+            final fun <get-language>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.language.<get-language>|<get-language>(){}[0]
+        final val text // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.text|{}text[0]
+            final fun <get-text>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.text.<get-text>|<get-text>(){}[0]
+
+        final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.component2|component2(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.copy|copy(kotlin.String;kotlin.String?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation> { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation) // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString.Translation){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Translation.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString> { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString) // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TranslatedString){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString> // dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.Int?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ScheduleRelationship;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ModifiedTripSelector?){}[0]
+
+    final val directionId // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.directionId|{}directionId[0]
+        final fun <get-directionId>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.directionId.<get-directionId>|<get-directionId>(){}[0]
+    final val modifiedTrip // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.modifiedTrip|{}modifiedTrip[0]
+        final fun <get-modifiedTrip>(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.modifiedTrip.<get-modifiedTrip>|<get-modifiedTrip>(){}[0]
+    final val routeId // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.routeId|{}routeId[0]
+        final fun <get-routeId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.routeId.<get-routeId>|<get-routeId>(){}[0]
+    final val scheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.scheduleRelationship|{}scheduleRelationship[0]
+        final fun <get-scheduleRelationship>(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.scheduleRelationship.<get-scheduleRelationship>|<get-scheduleRelationship>(){}[0]
+    final val startDate // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.startDate|{}startDate[0]
+        final fun <get-startDate>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.startDate.<get-startDate>|<get-startDate>(){}[0]
+    final val startTime // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.startTime|{}startTime[0]
+        final fun <get-startTime>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.startTime.<get-startTime>|<get-startTime>(){}[0]
+    final val tripId // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.tripId|{}tripId[0]
+        final fun <get-tripId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.tripId.<get-tripId>|<get-tripId>(){}[0]
+
+    final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component2|component2(){}[0]
+    final fun component3(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component3|component3(){}[0]
+    final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component4|component4(){}[0]
+    final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component5|component5(){}[0]
+    final fun component6(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component6|component6(){}[0]
+    final fun component7(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component7|component7(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.copy|copy(kotlin.String?;kotlin.String?;kotlin.Int?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ScheduleRelationship;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ModifiedTripSelector?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.toString|toString(){}[0]
+
+    final enum class ScheduleRelationship : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship> { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship|null[0]
+        enum entry Added // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Added|null[0]
+        enum entry Canceled // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Canceled|null[0]
+        enum entry Deleted // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Deleted|null[0]
+        enum entry Duplicated // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Duplicated|null[0]
+        enum entry New // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.New|null[0]
+        enum entry Replacement // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Replacement|null[0]
+        enum entry Scheduled // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Scheduled|null[0]
+        enum entry Unscheduled // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Unscheduled|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship> // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship> // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship> // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final class ModifiedTripSelector { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector|null[0]
+        constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+
+        final val affectedTripId // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.affectedTripId|{}affectedTripId[0]
+            final fun <get-affectedTripId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.affectedTripId.<get-affectedTripId>|<get-affectedTripId>(){}[0]
+        final val modificationsId // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.modificationsId|{}modificationsId[0]
+            final fun <get-modificationsId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.modificationsId.<get-modificationsId>|<get-modificationsId>(){}[0]
+        final val startDate // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.startDate|{}startDate[0]
+            final fun <get-startDate>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.startDate.<get-startDate>|<get-startDate>(){}[0]
+        final val startTime // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.startTime|{}startTime[0]
+            final fun <get-startTime>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.startTime.<get-startTime>|<get-startTime>(){}[0]
+
+        final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.component2|component2(){}[0]
+        final fun component3(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.component3|component3(){}[0]
+        final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.component4|component4(){}[0]
+        final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.copy|copy(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector> { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector) // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ModifiedTripSelector){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector> // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor> { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor) // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor> // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/TripModifications { // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications|null[0]
+    constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips> = ..., kotlin.collections/List<kotlin/String> = ..., kotlin.collections/List<kotlin/String> = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification> = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TripModifications.SelectedTrips>;kotlin.collections.List<kotlin.String>;kotlin.collections.List<kotlin.String>;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TripModifications.Modification>){}[0]
+
+    final val modifications // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.modifications|{}modifications[0]
+        final fun <get-modifications>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.modifications.<get-modifications>|<get-modifications>(){}[0]
+    final val selectedTrips // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.selectedTrips|{}selectedTrips[0]
+        final fun <get-selectedTrips>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.selectedTrips.<get-selectedTrips>|<get-selectedTrips>(){}[0]
+    final val serviceDates // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.serviceDates|{}serviceDates[0]
+        final fun <get-serviceDates>(): kotlin.collections/List<kotlin/String> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.serviceDates.<get-serviceDates>|<get-serviceDates>(){}[0]
+    final val startTimes // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.startTimes|{}startTimes[0]
+        final fun <get-startTimes>(): kotlin.collections/List<kotlin/String> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.startTimes.<get-startTimes>|<get-startTimes>(){}[0]
+
+    final fun component1(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.component1|component1(){}[0]
+    final fun component2(): kotlin.collections/List<kotlin/String> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.component2|component2(){}[0]
+    final fun component3(): kotlin.collections/List<kotlin/String> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.component3|component3(){}[0]
+    final fun component4(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.component4|component4(){}[0]
+    final fun copy(kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips> = ..., kotlin.collections/List<kotlin/String> = ..., kotlin.collections/List<kotlin/String> = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification> = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripModifications // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.copy|copy(kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TripModifications.SelectedTrips>;kotlin.collections.List<kotlin.String>;kotlin.collections.List<kotlin.String>;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TripModifications.Modification>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.toString|toString(){}[0]
+
+    final class Modification { // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification|null[0]
+        constructor <init>(dev.sargunv.mobilitydata.gtfs.realtime/StopSelector? = ..., dev.sargunv.mobilitydata.gtfs.realtime/StopSelector? = ..., kotlin/Int = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop> = ..., kotlin/String? = ..., kotlin/Long? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.<init>|<init>(dev.sargunv.mobilitydata.gtfs.realtime.StopSelector?;dev.sargunv.mobilitydata.gtfs.realtime.StopSelector?;kotlin.Int;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.ReplacementStop>;kotlin.String?;kotlin.Long?){}[0]
+
+        final val endStopSelector // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.endStopSelector|{}endStopSelector[0]
+            final fun <get-endStopSelector>(): dev.sargunv.mobilitydata.gtfs.realtime/StopSelector? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.endStopSelector.<get-endStopSelector>|<get-endStopSelector>(){}[0]
+        final val lastModifiedTime // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.lastModifiedTime|{}lastModifiedTime[0]
+            final fun <get-lastModifiedTime>(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.lastModifiedTime.<get-lastModifiedTime>|<get-lastModifiedTime>(){}[0]
+        final val propagatedModificationDelay // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.propagatedModificationDelay|{}propagatedModificationDelay[0]
+            final fun <get-propagatedModificationDelay>(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.propagatedModificationDelay.<get-propagatedModificationDelay>|<get-propagatedModificationDelay>(){}[0]
+        final val replacementStops // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.replacementStops|{}replacementStops[0]
+            final fun <get-replacementStops>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.replacementStops.<get-replacementStops>|<get-replacementStops>(){}[0]
+        final val serviceAlertId // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.serviceAlertId|{}serviceAlertId[0]
+            final fun <get-serviceAlertId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.serviceAlertId.<get-serviceAlertId>|<get-serviceAlertId>(){}[0]
+        final val startStopSelector // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.startStopSelector|{}startStopSelector[0]
+            final fun <get-startStopSelector>(): dev.sargunv.mobilitydata.gtfs.realtime/StopSelector? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.startStopSelector.<get-startStopSelector>|<get-startStopSelector>(){}[0]
+
+        final fun component1(): dev.sargunv.mobilitydata.gtfs.realtime/StopSelector? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.component1|component1(){}[0]
+        final fun component2(): dev.sargunv.mobilitydata.gtfs.realtime/StopSelector? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.component2|component2(){}[0]
+        final fun component3(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.component3|component3(){}[0]
+        final fun component4(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.component4|component4(){}[0]
+        final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.component5|component5(){}[0]
+        final fun component6(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.component6|component6(){}[0]
+        final fun copy(dev.sargunv.mobilitydata.gtfs.realtime/StopSelector? = ..., dev.sargunv.mobilitydata.gtfs.realtime/StopSelector? = ..., kotlin/Int = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/ReplacementStop> = ..., kotlin/String? = ..., kotlin/Long? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.copy|copy(dev.sargunv.mobilitydata.gtfs.realtime.StopSelector?;dev.sargunv.mobilitydata.gtfs.realtime.StopSelector?;kotlin.Int;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.ReplacementStop>;kotlin.String?;kotlin.Long?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification> { // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification) // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripModifications.Modification){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.Companion|null[0]
+            final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.Companion.$childSerializers|{}$childSerializers[0]
+
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Modification.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class SelectedTrips { // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips|null[0]
+        constructor <init>(kotlin.collections/List<kotlin/String> = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.<init>|<init>(kotlin.collections.List<kotlin.String>;kotlin.String?){}[0]
+
+        final val shapeId // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.shapeId|{}shapeId[0]
+            final fun <get-shapeId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.shapeId.<get-shapeId>|<get-shapeId>(){}[0]
+        final val tripIds // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.tripIds|{}tripIds[0]
+            final fun <get-tripIds>(): kotlin.collections/List<kotlin/String> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.tripIds.<get-tripIds>|<get-tripIds>(){}[0]
+
+        final fun component1(): kotlin.collections/List<kotlin/String> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.component2|component2(){}[0]
+        final fun copy(kotlin.collections/List<kotlin/String> = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.copy|copy(kotlin.collections.List<kotlin.String>;kotlin.String?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips> { // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips) // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripModifications.SelectedTrips){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.Companion|null[0]
+            final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.Companion.$childSerializers|{}$childSerializers[0]
+
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.SelectedTrips.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications> { // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripModifications // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripModifications) // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripModifications){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripModifications> // dev.sargunv.mobilitydata.gtfs.realtime/TripModifications.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate|null[0]
+    constructor <init>(dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor, dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate> = ..., kotlin/Long? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.<init>|<init>(dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor;dev.sargunv.mobilitydata.gtfs.realtime.VehicleDescriptor?;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate>;kotlin.Long?;kotlin.Int?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.TripProperties?){}[0]
+
+    final val delay // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.delay|{}delay[0]
+        final fun <get-delay>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.delay.<get-delay>|<get-delay>(){}[0]
+    final val stopTimeUpdate // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.stopTimeUpdate|{}stopTimeUpdate[0]
+        final fun <get-stopTimeUpdate>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.stopTimeUpdate.<get-stopTimeUpdate>|<get-stopTimeUpdate>(){}[0]
+    final val timestamp // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.timestamp|{}timestamp[0]
+        final fun <get-timestamp>(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+    final val trip // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.trip|{}trip[0]
+        final fun <get-trip>(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.trip.<get-trip>|<get-trip>(){}[0]
+    final val tripProperties // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.tripProperties|{}tripProperties[0]
+        final fun <get-tripProperties>(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.tripProperties.<get-tripProperties>|<get-tripProperties>(){}[0]
+    final val vehicle // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.vehicle|{}vehicle[0]
+        final fun <get-vehicle>(): dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.vehicle.<get-vehicle>|<get-vehicle>(){}[0]
+
+    final fun component1(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.component1|component1(){}[0]
+    final fun component2(): dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.component2|component2(){}[0]
+    final fun component3(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.component3|component3(){}[0]
+    final fun component4(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.component4|component4(){}[0]
+    final fun component5(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.component5|component5(){}[0]
+    final fun component6(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.component6|component6(){}[0]
+    final fun copy(dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate> = ..., kotlin/Long? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.copy|copy(dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor;dev.sargunv.mobilitydata.gtfs.realtime.VehicleDescriptor?;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate>;kotlin.Long?;kotlin.Int?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.TripProperties?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.toString|toString(){}[0]
+
+    final class StopTimeEvent { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent|null[0]
+        constructor <init>(kotlin/Int? = ..., kotlin/Long? = ..., kotlin/Int? = ..., kotlin/Long? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.<init>|<init>(kotlin.Int?;kotlin.Long?;kotlin.Int?;kotlin.Long?){}[0]
+
+        final val delay // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.delay|{}delay[0]
+            final fun <get-delay>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.delay.<get-delay>|<get-delay>(){}[0]
+        final val scheduledTime // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.scheduledTime|{}scheduledTime[0]
+            final fun <get-scheduledTime>(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.scheduledTime.<get-scheduledTime>|<get-scheduledTime>(){}[0]
+        final val time // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.time|{}time[0]
+            final fun <get-time>(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.time.<get-time>|<get-time>(){}[0]
+        final val uncertainty // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.uncertainty|{}uncertainty[0]
+            final fun <get-uncertainty>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.uncertainty.<get-uncertainty>|<get-uncertainty>(){}[0]
+
+        final fun component1(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.component1|component1(){}[0]
+        final fun component2(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.component2|component2(){}[0]
+        final fun component3(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.component3|component3(){}[0]
+        final fun component4(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.component4|component4(){}[0]
+        final fun copy(kotlin/Int? = ..., kotlin/Long? = ..., kotlin/Int? = ..., kotlin/Long? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.copy|copy(kotlin.Int?;kotlin.Long?;kotlin.Int?;kotlin.Long?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent> { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeEvent){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class StopTimeUpdate { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate|null[0]
+        constructor <init>(kotlin/Int? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.<init>|<init>(kotlin.Int?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeEvent?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeEvent?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.OccupancyStatus?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate.ScheduleRelationship;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate.StopTimeProperties?){}[0]
+
+        final val arrival // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.arrival|{}arrival[0]
+            final fun <get-arrival>(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.arrival.<get-arrival>|<get-arrival>(){}[0]
+        final val departure // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.departure|{}departure[0]
+            final fun <get-departure>(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.departure.<get-departure>|<get-departure>(){}[0]
+        final val departureOccupancyStatus // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.departureOccupancyStatus|{}departureOccupancyStatus[0]
+            final fun <get-departureOccupancyStatus>(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.departureOccupancyStatus.<get-departureOccupancyStatus>|<get-departureOccupancyStatus>(){}[0]
+        final val scheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.scheduleRelationship|{}scheduleRelationship[0]
+            final fun <get-scheduleRelationship>(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.scheduleRelationship.<get-scheduleRelationship>|<get-scheduleRelationship>(){}[0]
+        final val stopId // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.stopId|{}stopId[0]
+            final fun <get-stopId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.stopId.<get-stopId>|<get-stopId>(){}[0]
+        final val stopSequence // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.stopSequence|{}stopSequence[0]
+            final fun <get-stopSequence>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.stopSequence.<get-stopSequence>|<get-stopSequence>(){}[0]
+        final val stopTimeProperties // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.stopTimeProperties|{}stopTimeProperties[0]
+            final fun <get-stopTimeProperties>(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.stopTimeProperties.<get-stopTimeProperties>|<get-stopTimeProperties>(){}[0]
+
+        final fun component1(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.component2|component2(){}[0]
+        final fun component3(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.component3|component3(){}[0]
+        final fun component4(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.component4|component4(){}[0]
+        final fun component5(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.component5|component5(){}[0]
+        final fun component6(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.component6|component6(){}[0]
+        final fun component7(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.component7|component7(){}[0]
+        final fun copy(kotlin/Int? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeEvent? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.copy|copy(kotlin.Int?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeEvent?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeEvent?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.OccupancyStatus?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate.ScheduleRelationship;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate.StopTimeProperties?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.toString|toString(){}[0]
+
+        final enum class ScheduleRelationship : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship> { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship|null[0]
+            enum entry NoData // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.NoData|null[0]
+            enum entry Scheduled // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.Scheduled|null[0]
+            enum entry Skipped // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.Skipped|null[0]
+            enum entry Unscheduled // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.Unscheduled|null[0]
+
+            final val entries // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.entries|#static{}entries[0]
+                final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.entries.<get-entries>|<get-entries>#static(){}[0]
+
+            final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.valueOf|valueOf#static(kotlin.String){}[0]
+            final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.values|values#static(){}[0]
+
+            final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.Companion|null[0]
+                final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.Companion.serializer|serializer(){}[0]
+                final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.ScheduleRelationship.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+            }
+        }
+
+        final class StopTimeProperties { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties|null[0]
+            constructor <init>(kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.<init>|<init>(kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?){}[0]
+
+            final val assignedStopId // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.assignedStopId|{}assignedStopId[0]
+                final fun <get-assignedStopId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.assignedStopId.<get-assignedStopId>|<get-assignedStopId>(){}[0]
+            final val dropOffType // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.dropOffType|{}dropOffType[0]
+                final fun <get-dropOffType>(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.dropOffType.<get-dropOffType>|<get-dropOffType>(){}[0]
+            final val pickupType // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.pickupType|{}pickupType[0]
+                final fun <get-pickupType>(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.pickupType.<get-pickupType>|<get-pickupType>(){}[0]
+            final val stopHeadsign // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.stopHeadsign|{}stopHeadsign[0]
+                final fun <get-stopHeadsign>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.stopHeadsign.<get-stopHeadsign>|<get-stopHeadsign>(){}[0]
+
+            final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.component1|component1(){}[0]
+            final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.component2|component2(){}[0]
+            final fun component3(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.component3|component3(){}[0]
+            final fun component4(): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.component4|component4(){}[0]
+            final fun copy(kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.copy|copy(kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?){}[0]
+            final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.equals|equals(kotlin.Any?){}[0]
+            final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.hashCode|hashCode(){}[0]
+            final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.toString|toString(){}[0]
+
+            final enum class DropOffPickupType : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType> { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType|null[0]
+                enum entry CoordinateWithDriver // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.CoordinateWithDriver|null[0]
+                enum entry None // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.None|null[0]
+                enum entry PhoneAgency // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.PhoneAgency|null[0]
+                enum entry Regular // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.Regular|null[0]
+
+                final val entries // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.entries|#static{}entries[0]
+                    final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.entries.<get-entries>|<get-entries>#static(){}[0]
+
+                final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.valueOf|valueOf#static(kotlin.String){}[0]
+                final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.values|values#static(){}[0]
+
+                final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.Companion|null[0]
+                    final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.Companion.serializer|serializer(){}[0]
+                    final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+                }
+            }
+
+            final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties> { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.$serializer|null[0]
+                final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.$serializer.descriptor|{}descriptor[0]
+                    final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+                final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.$serializer.childSerializers|childSerializers(){}[0]
+                final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+                final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate.StopTimeProperties){}[0]
+            }
+
+            final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.Companion|null[0]
+                final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.Companion.$childSerializers|{}$childSerializers[0]
+
+                final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.Companion.serializer|serializer(){}[0]
+            }
+        }
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate> { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.StopTimeUpdate){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.Companion|null[0]
+            final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.Companion.$childSerializers|{}$childSerializers[0]
+
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class TripProperties { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties|null[0]
+        constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+
+        final val shapeId // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.shapeId|{}shapeId[0]
+            final fun <get-shapeId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.shapeId.<get-shapeId>|<get-shapeId>(){}[0]
+        final val startDate // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.startDate|{}startDate[0]
+            final fun <get-startDate>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.startDate.<get-startDate>|<get-startDate>(){}[0]
+        final val startTime // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.startTime|{}startTime[0]
+            final fun <get-startTime>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.startTime.<get-startTime>|<get-startTime>(){}[0]
+        final val tripHeadsign // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.tripHeadsign|{}tripHeadsign[0]
+            final fun <get-tripHeadsign>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.tripHeadsign.<get-tripHeadsign>|<get-tripHeadsign>(){}[0]
+        final val tripId // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.tripId|{}tripId[0]
+            final fun <get-tripId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.tripId.<get-tripId>|<get-tripId>(){}[0]
+        final val tripShortName // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.tripShortName|{}tripShortName[0]
+            final fun <get-tripShortName>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.tripShortName.<get-tripShortName>|<get-tripShortName>(){}[0]
+
+        final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.component2|component2(){}[0]
+        final fun component3(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.component3|component3(){}[0]
+        final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.component4|component4(){}[0]
+        final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.component5|component5(){}[0]
+        final fun component6(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.component6|component6(){}[0]
+        final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.copy|copy(kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties> { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate.TripProperties){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.TripProperties.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate> { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate) // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.TripUpdate){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor { // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible = ...) // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.VehicleDescriptor.WheelchairAccessible){}[0]
+
+    final val id // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.id|{}id[0]
+        final fun <get-id>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.id.<get-id>|<get-id>(){}[0]
+    final val label // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.label|{}label[0]
+        final fun <get-label>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.label.<get-label>|<get-label>(){}[0]
+    final val licensePlate // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.licensePlate|{}licensePlate[0]
+        final fun <get-licensePlate>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.licensePlate.<get-licensePlate>|<get-licensePlate>(){}[0]
+    final val wheelchairAccessible // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.wheelchairAccessible|{}wheelchairAccessible[0]
+        final fun <get-wheelchairAccessible>(): dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.wheelchairAccessible.<get-wheelchairAccessible>|<get-wheelchairAccessible>(){}[0]
+
+    final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.component2|component2(){}[0]
+    final fun component3(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.component3|component3(){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.component4|component4(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible = ...): dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.copy|copy(kotlin.String?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.VehicleDescriptor.WheelchairAccessible){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.toString|toString(){}[0]
+
+    final enum class WheelchairAccessible : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible> { // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible|null[0]
+        enum entry NoValue // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.NoValue|null[0]
+        enum entry Unknown // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.Unknown|null[0]
+        enum entry WheelchairAccessible // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.WheelchairAccessible|null[0]
+        enum entry WheelchairInaccessible // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.WheelchairInaccessible|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible> // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible> // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible> // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.WheelchairAccessible.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor> { // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor) // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.VehicleDescriptor){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor> // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition|null[0]
+    constructor <init>(dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Position? = ..., kotlin/Int? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus = ..., kotlin/Long? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus? = ..., kotlin/Int? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails> = ...) // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.<init>|<init>(dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor?;dev.sargunv.mobilitydata.gtfs.realtime.VehicleDescriptor?;dev.sargunv.mobilitydata.gtfs.realtime.Position?;kotlin.Int?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.VehicleStopStatus;kotlin.Long?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.CongestionLevel?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.OccupancyStatus?;kotlin.Int?;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.CarriageDetails>){}[0]
+
+    final val congestionLevel // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.congestionLevel|{}congestionLevel[0]
+        final fun <get-congestionLevel>(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.congestionLevel.<get-congestionLevel>|<get-congestionLevel>(){}[0]
+    final val currentStatus // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.currentStatus|{}currentStatus[0]
+        final fun <get-currentStatus>(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.currentStatus.<get-currentStatus>|<get-currentStatus>(){}[0]
+    final val currentStopSequence // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.currentStopSequence|{}currentStopSequence[0]
+        final fun <get-currentStopSequence>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.currentStopSequence.<get-currentStopSequence>|<get-currentStopSequence>(){}[0]
+    final val multiCarriageDetails // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.multiCarriageDetails|{}multiCarriageDetails[0]
+        final fun <get-multiCarriageDetails>(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.multiCarriageDetails.<get-multiCarriageDetails>|<get-multiCarriageDetails>(){}[0]
+    final val occupancyPercentage // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.occupancyPercentage|{}occupancyPercentage[0]
+        final fun <get-occupancyPercentage>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.occupancyPercentage.<get-occupancyPercentage>|<get-occupancyPercentage>(){}[0]
+    final val occupancyStatus // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.occupancyStatus|{}occupancyStatus[0]
+        final fun <get-occupancyStatus>(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.occupancyStatus.<get-occupancyStatus>|<get-occupancyStatus>(){}[0]
+    final val position // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.position|{}position[0]
+        final fun <get-position>(): dev.sargunv.mobilitydata.gtfs.realtime/Position? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.position.<get-position>|<get-position>(){}[0]
+    final val stopId // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.stopId|{}stopId[0]
+        final fun <get-stopId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.stopId.<get-stopId>|<get-stopId>(){}[0]
+    final val timestamp // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.timestamp|{}timestamp[0]
+        final fun <get-timestamp>(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+    final val trip // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.trip|{}trip[0]
+        final fun <get-trip>(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.trip.<get-trip>|<get-trip>(){}[0]
+    final val vehicle // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.vehicle|{}vehicle[0]
+        final fun <get-vehicle>(): dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.vehicle.<get-vehicle>|<get-vehicle>(){}[0]
+
+    final fun component1(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component1|component1(){}[0]
+    final fun component10(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component10|component10(){}[0]
+    final fun component11(): kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component11|component11(){}[0]
+    final fun component2(): dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component2|component2(){}[0]
+    final fun component3(): dev.sargunv.mobilitydata.gtfs.realtime/Position? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component3|component3(){}[0]
+    final fun component4(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component4|component4(){}[0]
+    final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component5|component5(){}[0]
+    final fun component6(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component6|component6(){}[0]
+    final fun component7(): kotlin/Long? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component7|component7(){}[0]
+    final fun component8(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component8|component8(){}[0]
+    final fun component9(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.component9|component9(){}[0]
+    final fun copy(dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor? = ..., dev.sargunv.mobilitydata.gtfs.realtime/Position? = ..., kotlin/Int? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus = ..., kotlin/Long? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus? = ..., kotlin/Int? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails> = ...): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.copy|copy(dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor?;dev.sargunv.mobilitydata.gtfs.realtime.VehicleDescriptor?;dev.sargunv.mobilitydata.gtfs.realtime.Position?;kotlin.Int?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.VehicleStopStatus;kotlin.Long?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.CongestionLevel?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.OccupancyStatus?;kotlin.Int?;kotlin.collections.List<dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.CarriageDetails>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.toString|toString(){}[0]
+
+    final enum class CongestionLevel : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel> { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel|null[0]
+        enum entry Congestion // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.Congestion|null[0]
+        enum entry RunningSmoothly // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.RunningSmoothly|null[0]
+        enum entry SevereCongestion // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.SevereCongestion|null[0]
+        enum entry StopAndGo // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.StopAndGo|null[0]
+        enum entry UnknownCongestionLevel // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.UnknownCongestionLevel|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CongestionLevel.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final enum class OccupancyStatus : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus> { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus|null[0]
+        enum entry CrushedStandingRoomOnly // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.CrushedStandingRoomOnly|null[0]
+        enum entry Empty // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.Empty|null[0]
+        enum entry FewSeatsAvailable // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.FewSeatsAvailable|null[0]
+        enum entry Full // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.Full|null[0]
+        enum entry ManySeatsAvailable // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.ManySeatsAvailable|null[0]
+        enum entry NoDataAvailable // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.NoDataAvailable|null[0]
+        enum entry NotAcceptingPassengers // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.NotAcceptingPassengers|null[0]
+        enum entry NotBoardable // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.NotBoardable|null[0]
+        enum entry StandingRoomOnly // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.StandingRoomOnly|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final enum class VehicleStopStatus : kotlin/Enum<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus> { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus|null[0]
+        enum entry InTransitTo // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.InTransitTo|null[0]
+        enum entry IncomingAt // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.IncomingAt|null[0]
+        enum entry StoppedAt // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.StoppedAt|null[0]
+
+        final val entries // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.entries|#static{}entries[0]
+            final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.entries.<get-entries>|<get-entries>#static(){}[0]
+
+        final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.valueOf|valueOf#static(kotlin.String){}[0]
+        final fun values(): kotlin/Array<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.values|values#static(){}[0]
+
+        final object Companion : kotlinx.serialization.internal/SerializerFactory { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.Companion.serializer|serializer(){}[0]
+            final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.VehicleStopStatus.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+        }
+    }
+
+    final class CarriageDetails { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails|null[0]
+        constructor <init>(kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus = ..., kotlin/Int = ..., kotlin/Int? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.<init>|<init>(kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.OccupancyStatus;kotlin.Int;kotlin.Int?){}[0]
+
+        final val carriageSequence // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.carriageSequence|{}carriageSequence[0]
+            final fun <get-carriageSequence>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.carriageSequence.<get-carriageSequence>|<get-carriageSequence>(){}[0]
+        final val id // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.id|{}id[0]
+            final fun <get-id>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.id.<get-id>|<get-id>(){}[0]
+        final val label // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.label|{}label[0]
+            final fun <get-label>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.label.<get-label>|<get-label>(){}[0]
+        final val occupancyPercentage // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.occupancyPercentage|{}occupancyPercentage[0]
+            final fun <get-occupancyPercentage>(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.occupancyPercentage.<get-occupancyPercentage>|<get-occupancyPercentage>(){}[0]
+        final val occupancyStatus // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.occupancyStatus|{}occupancyStatus[0]
+            final fun <get-occupancyStatus>(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.occupancyStatus.<get-occupancyStatus>|<get-occupancyStatus>(){}[0]
+
+        final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.component2|component2(){}[0]
+        final fun component3(): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.component3|component3(){}[0]
+        final fun component4(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.component4|component4(){}[0]
+        final fun component5(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.component5|component5(){}[0]
+        final fun copy(kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.OccupancyStatus = ..., kotlin/Int = ..., kotlin/Int? = ...): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.copy|copy(kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.OccupancyStatus;kotlin.Int;kotlin.Int?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails> { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.$serializer|null[0]
+            final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails) // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition.CarriageDetails){}[0]
+        }
+
+        final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.Companion|null[0]
+            final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.Companion.$childSerializers|{}$childSerializers[0]
+
+            final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition> { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition) // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.realtime.VehiclePosition){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final object dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeProto { // dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeProto|null[0]
+    final fun decodeFeedMessage(kotlin/ByteArray): dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage // dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeProto.decodeFeedMessage|decodeFeedMessage(kotlin.ByteArray){}[0]
+    final fun encodeFeedMessage(dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage): kotlin/ByteArray // dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeProto.encodeFeedMessage|encodeFeedMessage(dev.sargunv.mobilitydata.gtfs.realtime.FeedMessage){}[0]
+}
+
+// Targets: [js, native, wasmJs]
+final class dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeClient : kotlin/AutoCloseable { // dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeClient|null[0]
+    constructor <init>(io.ktor.client.engine/HttpClientEngine, kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeClient.<init>|<init>(io.ktor.client.engine.HttpClientEngine;kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
+    constructor <init>(kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeClient.<init>|<init>(kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
+
+    final fun close() // dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeClient.close|close(){}[0]
+    final suspend fun getFeedMessage(kotlin/String): kotlin/Result<dev.sargunv.mobilitydata.gtfs.realtime/FeedMessage> // dev.sargunv.mobilitydata.gtfs.realtime/GtfsRealtimeClient.getFeedMessage|getFeedMessage(kotlin.String){}[0]
+}

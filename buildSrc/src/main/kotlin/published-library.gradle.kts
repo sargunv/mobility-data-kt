@@ -6,11 +6,16 @@ plugins {
   id("org.jetbrains.dokka")
   id("com.vanniktech.maven.publish")
   id("org.jetbrains.kotlinx.kover")
-  id("semver")
   id("dev.detekt")
 }
 
 group = "dev.sargunv.mobility-data"
+
+if (providers.gradleProperty("disableSemver").orNull == "true") {
+  version = "0.0.0-dev"
+} else {
+  pluginManager.apply("semver")
+}
 
 kotlin {
   explicitApi()

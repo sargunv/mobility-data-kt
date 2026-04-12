@@ -7,7 +7,7 @@ Kotlin. It supports all Kotlin Multiplatform targets, including JVM, Native, JS,
 
 - [GTFS Schedule](./gtfs-schedule.md): A client library for the General Transit Feed Specification
   (GTFS)
-- (TODO) [GTFS Realtime](./gtfs-realtime.md): A client library for the GTFS Realtime format
+- [GTFS Realtime](./gtfs-realtime.md): A protobuf model and codec for GTFS Realtime feeds
 - [GBFS](./gbfs.md): A client library for the General Bikeshare Feed Specification (GBFS)
 - [GOFS](./gofs.md): A client library for the General On-Demand Feed Specification (GOFS)
 
