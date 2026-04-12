@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gbfs.v1
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
@@ -23,7 +22,7 @@ public data class StationInformation(
 @Serializable
 public data class Station(
   /** Identifier of a station. */
-  @SerialName("station_id") public val stationId: Id<Station>,
+  @SerialName("station_id") public val stationId: String,
 
   /**
    * The public name of the station for display in maps, digital signage, and other text
@@ -51,7 +50,7 @@ public data class Station(
   @SerialName("cross_street") public val crossStreet: String? = null,
 
   /** Identifier of the region where station is located. See system_regions.json. */
-  @SerialName("region_id") public val regionId: Id<Region>? = null,
+  @SerialName("region_id") public val regionId: String? = null,
 
   /** Postal code where the station is located. */
   @SerialName("post_code") public val postalCode: String? = null,

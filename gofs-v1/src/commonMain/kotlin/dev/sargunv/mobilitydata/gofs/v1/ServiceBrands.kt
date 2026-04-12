@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.RgbColorTriplet
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -24,7 +23,7 @@ public data class Brand(
    * Unique identifier of the service brand. This value should remain the same over the availability
    * of the service.
    */
-  @SerialName("brand_id") public val brandId: Id<Brand>,
+  @SerialName("brand_id") public val brandId: String,
   /** Name of the service brand to be displayed to the riders. */
   @SerialName("brand_name") public val brandName: String,
   /** Color identifying the service brand to be displayed to the riders. */

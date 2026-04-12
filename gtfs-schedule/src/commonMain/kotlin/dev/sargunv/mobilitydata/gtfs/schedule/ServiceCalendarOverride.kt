@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.BasicLocalDate
-import dev.sargunv.mobilitydata.utils.Id
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -14,7 +13,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class ServiceCalendarOverride(
   /** Identifies a set of dates when a service exception occurs. */
-  @SerialName("service_id") public val serviceId: Id<ServiceCalendar>,
+  @SerialName("service_id") public val serviceId: String,
 
   /** Date when service exception occurs. */
   @SerialName("date") public val date: BasicLocalDate,

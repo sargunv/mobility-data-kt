@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
@@ -14,10 +13,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class FareTransferRule(
   /** Identifies a group of pre-transfer fare leg rules. */
-  @SerialName("from_leg_group_id") public val fromLegGroupId: Id<FareLegRule>? = null,
+  @SerialName("from_leg_group_id") public val fromLegGroupId: String? = null,
 
   /** Identifies a group of post-transfer fare leg rules. */
-  @SerialName("to_leg_group_id") public val toLegGroupId: Id<FareLegRule>? = null,
+  @SerialName("to_leg_group_id") public val toLegGroupId: String? = null,
 
   /** Defines how many consecutive transfers the transfer rule may be applied to. */
   @SerialName("transfer_count") public val transferCount: Int? = null,
@@ -32,7 +31,7 @@ public data class FareTransferRule(
   @SerialName("fare_transfer_type") public val fareTransferType: FareTransferType,
 
   /** The fare product required to transfer between two fare legs. */
-  @SerialName("fare_product_id") public val fareProductId: Id<FareProduct>? = null,
+  @SerialName("fare_product_id") public val fareProductId: String? = null,
 )
 
 /** Defines the relative start and end of a transfer duration limit. */

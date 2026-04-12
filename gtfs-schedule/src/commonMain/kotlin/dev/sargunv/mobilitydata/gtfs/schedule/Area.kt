@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,7 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Area(
   /** Identifies an area. */
-  @SerialName("area_id") public val areaId: Id<Area>,
+  @SerialName("area_id") public val areaId: String,
 
   /** Name of the area. */
   @SerialName("area_name") public val areaName: String? = null,

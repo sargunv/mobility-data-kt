@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.time.ExperimentalTime
@@ -73,7 +72,7 @@ public data class GeofencingZoneRule(
    *
    * If vehicle type IDs are not specified, then restrictions apply to all vehicle types.
    */
-  @SerialName("vehicle_type_ids") public val vehicleTypeIds: List<Id<VehicleType>>? = null,
+  @SerialName("vehicle_type_ids") public val vehicleTypeIds: List<String>? = null,
 
   /**
    * Is the undocked ("free floating") ride allowed to start in this zone?

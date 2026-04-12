@@ -1,11 +1,10 @@
 # GBFS
 
 The GBFS modules provides implementations of the
-[General Bikeshare Feed Specification (GBFS)](https://gbfs.org) for Kotlin
-Multiplatform.
+[General Bikeshare Feed Specification (GBFS)](https://gbfs.org) for Kotlin Multiplatform.
 
-GBFS is a standardized data feed for real-time access to information about
-bikeshare, scooter-share, and other shared mobility services.
+GBFS is a standardized data feed for real-time access to information about bikeshare, scooter-share,
+and other shared mobility services.
 
 ## Modules
 
@@ -17,15 +16,14 @@ bikeshare, scooter-share, and other shared mobility services.
 
 - JSON encoding and decoding with kotlinx-serialization
 - HTTP client for fetching feeds using Ktor
-- Strong type safety, with appropriate standard library or kotlinx-datetime
-  types
+- Strong type safety, with appropriate standard library or kotlinx-datetime types
 - Kotlin Multiplatform support (JVM, Native, JS, WASM)
 - GeoJSON support using [Spatial-K](https://maplibre.org/spatial-k/geojson/)
 
 ## Installation
 
-Add the dependency to your `build.gradle.kts`. The client functionality requires
-Ktor, so also add a Ktor engine:
+Add the dependency to your `build.gradle.kts`. The client functionality requires Ktor, so also add a
+Ktor engine:
 
 === "GBFS v3.0"
 

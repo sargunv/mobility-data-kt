@@ -2,7 +2,6 @@ package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.CountryCode
 import dev.sargunv.mobilitydata.utils.ExtendedLocalDate
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.WholeMinutes
@@ -26,7 +25,7 @@ public data class VehicleTypes(
 @Serializable
 public data class VehicleType(
   /** Unique identifier of a vehicle type. */
-  @SerialName("vehicle_type_id") public val vehicleTypeId: Id<VehicleType>,
+  @SerialName("vehicle_type_id") public val vehicleTypeId: String,
 
   /** The vehicle's general form factor. */
   @SerialName("form_factor") public val formFactor: VehicleFormFactor,
@@ -89,7 +88,16 @@ public data class VehicleType(
   /** The name of the vehicle model. */
   public val model: LocalizedText? = null,
 
-  /** The color of the vehicle. */
+  /**
+   * The color of the vehicle, in plain English.
+   *
+   * All words must be in lower case, without special characters, quotation marks, hyphens,
+   * underscores, commas, or dots. Spaces are allowed in case of a compound name.
+   *
+   * Example
+   * - green
+   * - dark blue
+   */
   public val color: String? = null,
 
   /** Customer-readable description of the vehicle type outlining special features or how-tos. */
@@ -129,7 +137,7 @@ public data class VehicleType(
    * This default pricing plan is superseded by pricing_plan_id when pricing_plan_id is defined in
    * vehicle_status.json.
    */
-  @SerialName("default_pricing_plan_id") public val defaultPricingPlanId: Id<PricingPlan>? = null,
+  @SerialName("default_pricing_plan_id") public val defaultPricingPlanId: String? = null,
 
   /**
    * Array of all pricing plan IDs that are applied to this vehicle type.
@@ -137,7 +145,7 @@ public data class VehicleType(
    * This array SHOULD be published when there are multiple pricing plans defined in
    * system_pricing_plans.json that apply to a single vehicle type.
    */
-  @SerialName("pricing_plan_ids") public val pricingPlanIds: List<Id<PricingPlan>>? = null,
+  @SerialName("pricing_plan_ids") public val pricingPlanIds: List<String>? = null,
 )
 
 /** The vehicle's general form factor. */

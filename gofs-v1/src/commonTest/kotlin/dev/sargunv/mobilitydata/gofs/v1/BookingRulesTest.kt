@@ -1,13 +1,12 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.utils.toServiceTime
+import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
-import kotlinx.datetime.LocalTime
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -62,7 +61,7 @@ private val expectedResponse =
               toZoneIds = listOf("zoneB"),
               bookingType = BookingType.AdvancePriorDay,
               priorNoticeStartDay = 2,
-              priorNoticeLastTime = LocalTime.parse("17:00:00").toServiceTime(),
+              priorNoticeLastTime = ServiceTime(17, 0, 0),
             ),
           )
       ),

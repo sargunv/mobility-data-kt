@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,7 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Network(
   /** Identifies a network. */
-  @SerialName("network_id") public val networkId: Id<Network>,
+  @SerialName("network_id") public val networkId: String,
 
   /** Name of the network. */
   @SerialName("network_name") public val networkName: String? = null,

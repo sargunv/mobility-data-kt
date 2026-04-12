@@ -1,8 +1,3 @@
-public final class dev/sargunv/mobilitydata/utils/FieldTypesKt {
-	public static final fun toServiceTime (Lkotlinx/datetime/LocalTime;I)Ldev/sargunv/mobilitydata/utils/ServiceTime;
-	public static synthetic fun toServiceTime$default (Lkotlinx/datetime/LocalTime;IILjava/lang/Object;)Ldev/sargunv/mobilitydata/utils/ServiceTime;
-}
-
 public final class dev/sargunv/mobilitydata/utils/RgbColor {
 	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/utils/RgbColor;
 	public static fun constructor-impl (I)I
@@ -35,7 +30,7 @@ public final class dev/sargunv/mobilitydata/utils/ServiceTime : java/lang/Compar
 	public final fun getMinutes ()I
 	public final fun getSeconds ()I
 	public fun hashCode ()I
-	public final fun toLocalTime ()Lkotlinx/datetime/LocalTime;
+	public final fun toInstant (Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/TimeZone;)Lkotlin/time/Instant;
 	public fun toString ()Ljava/lang/String;
 }
 

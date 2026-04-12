@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -20,7 +19,7 @@ public data class Fares(
 @Serializable
 public data class Fare(
   /** Unique identifier of the fare. */
-  @SerialName("fare_id") public val fareId: Id<Fare>,
+  @SerialName("fare_id") public val fareId: String,
   /** The currency of the fare. */
   public val currency: CurrencyCode,
   /**

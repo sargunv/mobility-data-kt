@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -13,14 +12,14 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class FareLegJoinRule(
   /** Matches a pre-transfer leg that uses the specified route network. */
-  @SerialName("from_network_id") public val fromNetworkId: Id<Network>,
+  @SerialName("from_network_id") public val fromNetworkId: String,
 
   /** Matches a post-transfer leg that uses the specified route network. */
-  @SerialName("to_network_id") public val toNetworkId: Id<Network>,
+  @SerialName("to_network_id") public val toNetworkId: String,
 
   /** Matches a pre-transfer leg that ends at the specified stop or station. */
-  @SerialName("from_stop_id") public val fromStopId: Id<Stop>? = null,
+  @SerialName("from_stop_id") public val fromStopId: String? = null,
 
   /** Matches a post-transfer leg that starts at the specified stop or station. */
-  @SerialName("to_stop_id") public val toStopId: Id<Stop>? = null,
+  @SerialName("to_stop_id") public val toStopId: String? = null,
 )

@@ -12,4 +12,4 @@
 - [ ] Link to related issues.
 - [ ] Write tests for all new functionality.
 - [ ] Disclose if and to what extent an AI coding assistant was used.
-- [ ] Run `./gradlew updateLegacyAbi` to dump the public API for review.
+- [ ] Run `./gradlew updateKotlinAbi` to dump the public API for review.

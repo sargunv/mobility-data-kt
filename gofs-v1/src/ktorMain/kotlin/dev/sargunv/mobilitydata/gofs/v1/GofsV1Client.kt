@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Url
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
@@ -152,7 +151,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
     pickupLon: Double,
     dropOffLat: Double? = null,
     dropOffLon: Double? = null,
-    brandIds: List<Id<Brand>> = emptyList(),
+    brandIds: List<String> = emptyList(),
   ): GofsFeedResponse<WaitTimes> {
     val url = URLBuilder(service.feeds.getValue(FeedType.WaitTimes))
 
@@ -212,7 +211,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
     pickupLon: Double,
     dropOffLat: Double? = null,
     dropOffLon: Double? = null,
-    brandIds: List<Id<Brand>> = emptyList(),
+    brandIds: List<String> = emptyList(),
     pickupAddress: String? = null,
     dropOffAddress: String? = null,
   ): GofsFeedResponse<RealtimeBookings> {

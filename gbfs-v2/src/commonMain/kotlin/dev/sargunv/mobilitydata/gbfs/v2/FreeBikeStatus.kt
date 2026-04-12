@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.utils.EpochSeconds
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.jvm.JvmInline
 import kotlin.time.ExperimentalTime
@@ -33,7 +32,7 @@ public data class Bike(
    * privacy. Use of persistent vehicle IDs poses a threat to user privacy. The bike_id identifier
    * SHOULD only be rotated once per trip.
    */
-  @SerialName("bike_id") public val bikeId: Id<Bike>,
+  @SerialName("bike_id") public val bikeId: String,
 
   /**
    * Latitude of the vehicle in decimal degrees.
@@ -79,7 +78,7 @@ public data class Bike(
    *
    * REQUIRED if the vehicle_types.json file is defined.
    */
-  @SerialName("vehicle_type_id") public val vehicleTypeId: Id<VehicleType>? = null,
+  @SerialName("vehicle_type_id") public val vehicleTypeId: String? = null,
 
   /** The last time this vehicle reported its status to the operator's backend. */
   @SerialName("last_reported") public val lastReported: EpochSeconds? = null,
@@ -106,13 +105,13 @@ public data class Bike(
    * REQUIRED if the vehicle is currently at a station and the vehicle_types.json file has been
    * defined.
    */
-  @SerialName("station_id") public val stationId: Id<Station>? = null,
+  @SerialName("station_id") public val stationId: String? = null,
 
   /**
    * The station_id of the station this vehicle must be returned to as defined in
    * station_information.json.
    */
-  @SerialName("home_station_id") public val homeStationId: Id<Station>? = null,
+  @SerialName("home_station_id") public val homeStationId: String? = null,
 
   /**
    * The plan_id of the pricing plan this vehicle is eligible for as described in
@@ -122,7 +121,7 @@ public data class Bike(
    * field SHOULD be used to override default_pricing_plan_id in vehicle_types.json to define
    * pricing plans for individual vehicles when necessary.
    */
-  @SerialName("pricing_plan_id") public val pricingPlanId: Id<PricingPlan>? = null,
+  @SerialName("pricing_plan_id") public val pricingPlanId: String? = null,
 
   /**
    * List of vehicle equipment provided by the operator in addition to the accessories already

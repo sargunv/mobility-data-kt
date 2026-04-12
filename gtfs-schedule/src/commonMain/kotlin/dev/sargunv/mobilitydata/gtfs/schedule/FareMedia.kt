@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -13,7 +12,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class FareMedia(
   /** Identifies a fare media. */
-  @SerialName("fare_media_id") public val fareMediaId: Id<FareMedia>,
+  @SerialName("fare_media_id") public val fareMediaId: String,
 
   /** Name of the fare media. */
   @SerialName("fare_media_name") public val fareMediaName: String? = null,

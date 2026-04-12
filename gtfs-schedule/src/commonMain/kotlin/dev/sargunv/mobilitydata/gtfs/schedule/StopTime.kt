@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
@@ -14,7 +13,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class StopTime(
   /** Identifies a trip. */
-  @SerialName("trip_id") public val tripId: Id<Trip>,
+  @SerialName("trip_id") public val tripId: String,
 
   /** Arrival time at a specific stop for a specific trip on a route. */
   @SerialName("arrival_time") public val arrivalTime: ServiceTime? = null,
@@ -23,19 +22,19 @@ public data class StopTime(
   @SerialName("departure_time") public val departureTime: ServiceTime? = null,
 
   /** Identifies the serviced stop. */
-  @SerialName("stop_id") public val stopId: Id<Stop>,
+  @SerialName("stop_id") public val stopId: String,
 
   /**
    * Identifies the serviced location group that indicates groups of stops where riders may request
    * pickup or drop off.
    */
-  @SerialName("location_group_id") public val locationGroupId: Id<LocationGroup>? = null,
+  @SerialName("location_group_id") public val locationGroupId: String? = null,
 
   /**
    * Identifies the GeoJSON location that corresponds to serviced zone where riders may request
    * pickup or drop off.
    */
-  @SerialName("location_id") public val locationId: Id<Nothing>? = null,
+  @SerialName("location_id") public val locationId: String? = null,
 
   /** Order of stops for a particular trip. */
   @SerialName("stop_sequence") public val stopSequence: Int,
@@ -71,10 +70,10 @@ public data class StopTime(
   @SerialName("timepoint") public val timepoint: Timepoint? = null,
 
   /** Identifies the boarding booking rule at this stop time. */
-  @SerialName("pickup_booking_rule_id") public val pickupBookingRuleId: Id<BookingRule>? = null,
+  @SerialName("pickup_booking_rule_id") public val pickupBookingRuleId: String? = null,
 
   /** Identifies the alighting booking rule at this stop time. */
-  @SerialName("drop_off_booking_rule_id") public val dropOffBookingRuleId: Id<BookingRule>? = null,
+  @SerialName("drop_off_booking_rule_id") public val dropOffBookingRuleId: String? = null,
 )
 
 /** Indicates pickup or drop off method. */

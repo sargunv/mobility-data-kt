@@ -2,7 +2,6 @@ package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.AbbreviatedWeekday
 import dev.sargunv.mobilitydata.utils.BasicLocalDate
-import dev.sargunv.mobilitydata.utils.Id
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -21,7 +20,7 @@ public data class Calendars(
 @Serializable
 public data class Calendar(
   /** Unique identifier of the calendar. */
-  @SerialName("calendar_id") public val calendarId: Id<Calendar>,
+  @SerialName("calendar_id") public val calendarId: String,
   /**
    * Array of abbreviations (first 3 letters) of English names of the days of the week for which
    * this object applies (e.g. ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]). If days are not

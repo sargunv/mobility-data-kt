@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.gbfs.v1
 
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.IntBoolean
 import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
@@ -22,7 +21,7 @@ public data class FreeBikeStatus(
 public data class Bike(
 
   /** Identifier of a vehicle. */
-  @SerialName("bike_id") public val bikeId: Id<Bike>,
+  @SerialName("bike_id") public val bikeId: String,
 
   /** Latitude of the vehicle in decimal degrees. */
   public val lat: Double,

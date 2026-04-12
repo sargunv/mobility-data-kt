@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
-import dev.sargunv.mobilitydata.utils.Id
 import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
@@ -15,7 +14,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class FareAttribute(
   /** Identifies a fare class. */
-  @SerialName("fare_id") public val fareId: Id<FareAttribute>,
+  @SerialName("fare_id") public val fareId: String,
 
   /** Fare price, in the unit specified by currency_type. */
   @SerialName("price") public val price: Double,
@@ -33,7 +32,7 @@ public data class FareAttribute(
   @SerialName("transfers") public val transfers: Int?,
 
   /** Identifies the relevant agency for a fare. */
-  @SerialName("agency_id") public val agencyId: Id<Agency>? = null,
+  @SerialName("agency_id") public val agencyId: String? = null,
 
   /** Length of time in seconds before a transfer expires. */
   @SerialName("transfer_duration") public val transferDuration: WholeSeconds? = null,
