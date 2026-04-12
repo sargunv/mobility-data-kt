@@ -33,8 +33,9 @@ public class GbfsV3Client internal constructor(private val httpClient: HttpClien
     }
   )
 
-  internal suspend inline fun <reified T : GbfsFeedData> getFeedResponse(url: Url) =
-    httpClient.get(url).body<GbfsFeedResponse<T>>()
+  internal suspend inline fun <reified T : GbfsFeedData> getFeedResponse(
+    url: Url
+  ): Result<GbfsFeedResponse<T>> = runCatching { httpClient.get(url).body<GbfsFeedResponse<T>>() }
 
   /**
    * Fetches the dataset manifest from the given URL.
@@ -43,10 +44,11 @@ public class GbfsV3Client internal constructor(private val httpClient: HttpClien
    * their system IDs and available versions.
    *
    * @param manifestUrl The URL of the manifest.json file
-   * @return The manifest response containing dataset information
+   * @return Result wrapping the manifest response containing dataset information, or an error
    */
-  public suspend fun getDatasetManifest(manifestUrl: Url): GbfsFeedResponse<DatasetManifest> =
-    getFeedResponse(manifestUrl)
+  public suspend fun getDatasetManifest(
+    manifestUrl: Url
+  ): Result<GbfsFeedResponse<DatasetManifest>> = getFeedResponse(manifestUrl)
 
   /**
    * Fetches the GBFS manifest (auto-discovery file) from the given URL.
@@ -54,110 +56,127 @@ public class GbfsV3Client internal constructor(private val httpClient: HttpClien
    * The manifest contains URLs for all available feeds.
    *
    * @param discoveryUrl The URL of the gbfs.json auto-discovery file
-   * @return The manifest response containing available feeds
+   * @return Result wrapping the manifest response containing available feeds, or an error
    */
-  public suspend fun getServiceManifest(discoveryUrl: Url): GbfsFeedResponse<ServiceManifest> =
-    getFeedResponse(discoveryUrl)
+  public suspend fun getServiceManifest(
+    discoveryUrl: Url
+  ): Result<GbfsFeedResponse<ServiceManifest>> = getFeedResponse(discoveryUrl)
 
   /**
    * Fetches the list of GBFS versions supported by this system.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing supported GBFS versions
+   * @return Result wrapping response containing supported GBFS versions, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getVersionManifest(): GbfsFeedResponse<VersionManifest> =
-    getFeedResponse(service.feeds.getValue(FeedType.VersionManifest))
+  public suspend fun getVersionManifest(): Result<GbfsFeedResponse<VersionManifest>> = runCatching {
+    getFeedResponse<VersionManifest>(service.feeds.getValue(FeedType.VersionManifest)).getOrThrow()
+  }
 
   /**
    * Fetches system information including name, operator, timezone, and contact details.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing system information
+   * @return Result wrapping response containing system information, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getSystemInformation(): GbfsFeedResponse<SystemInformation> =
-    getFeedResponse(service.feeds.getValue(FeedType.SystemInformation))
+  public suspend fun getSystemInformation(): Result<GbfsFeedResponse<SystemInformation>> =
+    runCatching {
+      getFeedResponse<SystemInformation>(service.feeds.getValue(FeedType.SystemInformation))
+        .getOrThrow()
+    }
 
   /**
    * Fetches information about vehicle types available in the system.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing vehicle type definitions
+   * @return Result wrapping response containing vehicle type definitions, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getVehicleTypes(): GbfsFeedResponse<VehicleTypes> =
-    getFeedResponse(service.feeds.getValue(FeedType.VehicleTypes))
+  public suspend fun getVehicleTypes(): Result<GbfsFeedResponse<VehicleTypes>> = runCatching {
+    getFeedResponse<VehicleTypes>(service.feeds.getValue(FeedType.VehicleTypes)).getOrThrow()
+  }
 
   /**
    * Fetches static information about stations in the system.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing station information
+   * @return Result wrapping response containing station information, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getStationInformation(): GbfsFeedResponse<StationInformation> =
-    getFeedResponse(service.feeds.getValue(FeedType.StationInformation))
+  public suspend fun getStationInformation(): Result<GbfsFeedResponse<StationInformation>> =
+    runCatching {
+      getFeedResponse<StationInformation>(service.feeds.getValue(FeedType.StationInformation))
+        .getOrThrow()
+    }
 
   /**
    * Fetches real-time status of stations including available bikes and docks.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing current station status
+   * @return Result wrapping response containing current station status, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getStationStatus(): GbfsFeedResponse<StationStatus> =
-    getFeedResponse(service.feeds.getValue(FeedType.StationStatus))
+  public suspend fun getStationStatus(): Result<GbfsFeedResponse<StationStatus>> = runCatching {
+    getFeedResponse<StationStatus>(service.feeds.getValue(FeedType.StationStatus)).getOrThrow()
+  }
 
   /**
    * Fetches real-time status of free-floating vehicles not currently docked.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing available vehicle locations and status
+   * @return Result wrapping response containing available vehicle locations and status, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getVehicleStatus(): GbfsFeedResponse<VehicleStatus> =
-    getFeedResponse(service.feeds.getValue(FeedType.VehicleStatus))
+  public suspend fun getVehicleStatus(): Result<GbfsFeedResponse<VehicleStatus>> = runCatching {
+    getFeedResponse<VehicleStatus>(service.feeds.getValue(FeedType.VehicleStatus)).getOrThrow()
+  }
 
   /**
    * Fetches information about geographic regions in the system.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing system regions
+   * @return Result wrapping response containing system regions, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getSystemRegions(): GbfsFeedResponse<SystemRegions> =
-    getFeedResponse(service.feeds.getValue(FeedType.SystemRegions))
+  public suspend fun getSystemRegions(): Result<GbfsFeedResponse<SystemRegions>> = runCatching {
+    getFeedResponse<SystemRegions>(service.feeds.getValue(FeedType.SystemRegions)).getOrThrow()
+  }
 
   /**
    * Fetches pricing plans for the system.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing pricing plan information
+   * @return Result wrapping response containing pricing plan information, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getSystemPricingPlans(): GbfsFeedResponse<SystemPricingPlans> =
-    getFeedResponse(service.feeds.getValue(FeedType.SystemPricingPlans))
+  public suspend fun getSystemPricingPlans(): Result<GbfsFeedResponse<SystemPricingPlans>> =
+    runCatching {
+      getFeedResponse<SystemPricingPlans>(service.feeds.getValue(FeedType.SystemPricingPlans))
+        .getOrThrow()
+    }
 
   /**
    * Fetches current system alerts about service disruptions or changes.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing active system alerts
+   * @return Result wrapping response containing active system alerts, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getSystemAlerts(): GbfsFeedResponse<SystemAlerts> =
-    getFeedResponse(service.feeds.getValue(FeedType.SystemAlerts))
+  public suspend fun getSystemAlerts(): Result<GbfsFeedResponse<SystemAlerts>> = runCatching {
+    getFeedResponse<SystemAlerts>(service.feeds.getValue(FeedType.SystemAlerts)).getOrThrow()
+  }
 
   /**
    * Fetches geofencing zones that define geographic restrictions.
    *
    * @param [service] The GBFS service containing feed URLs
-   * @return Response containing geofencing zone definitions
+   * @return Result wrapping response containing geofencing zone definitions, or an error
    */
   context(service: ServiceManifest)
-  public suspend fun getGeofencingZones(): GbfsFeedResponse<GeofencingZones> =
-    getFeedResponse(service.feeds.getValue(FeedType.GeofencingZones))
+  public suspend fun getGeofencingZones(): Result<GbfsFeedResponse<GeofencingZones>> = runCatching {
+    getFeedResponse<GeofencingZones>(service.feeds.getValue(FeedType.GeofencingZones)).getOrThrow()
+  }
 
   override fun close(): Unit = httpClient.close()
 }

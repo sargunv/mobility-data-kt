@@ -568,20 +568,20 @@ public final class dev/sargunv/mobilitydata/gofs/v1/GofsV1Client : java/lang/Aut
 	public fun <init> (Lkotlin/jvm/functions/Function1;)V
 	public synthetic fun <init> (Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun close ()V
-	public final fun getBookingRules (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getCalendars (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getFares (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getOperatingRules (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getRealtimeBookings (Ldev/sargunv/mobilitydata/gofs/v1/Service;DDLjava/lang/Double;Ljava/lang/Double;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static synthetic fun getRealtimeBookings$default (Ldev/sargunv/mobilitydata/gofs/v1/GofsV1Client;Ldev/sargunv/mobilitydata/gofs/v1/Service;DDLjava/lang/Double;Ljava/lang/Double;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public final fun getServiceBrands (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemInformation (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemManifest (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getVehicleTypes (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getVersionManifest (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getWaitTimes (Ldev/sargunv/mobilitydata/gofs/v1/Service;DDLjava/lang/Double;Ljava/lang/Double;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static synthetic fun getWaitTimes$default (Ldev/sargunv/mobilitydata/gofs/v1/GofsV1Client;Ldev/sargunv/mobilitydata/gofs/v1/Service;DDLjava/lang/Double;Ljava/lang/Double;Ljava/util/List;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public final fun getZones (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getBookingRules-gIAlu-s (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getCalendars-gIAlu-s (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getFares-gIAlu-s (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getOperatingRules-gIAlu-s (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getRealtimeBookings-tZkwj4A (Ldev/sargunv/mobilitydata/gofs/v1/Service;DDLjava/lang/Double;Ljava/lang/Double;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun getRealtimeBookings-tZkwj4A$default (Ldev/sargunv/mobilitydata/gofs/v1/GofsV1Client;Ldev/sargunv/mobilitydata/gofs/v1/Service;DDLjava/lang/Double;Ljava/lang/Double;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public final fun getServiceBrands-gIAlu-s (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemInformation-gIAlu-s (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemManifest-gIAlu-s (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getVehicleTypes-gIAlu-s (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getVersionManifest-gIAlu-s (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getWaitTimes-bMdYcbs (Ldev/sargunv/mobilitydata/gofs/v1/Service;DDLjava/lang/Double;Ljava/lang/Double;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun getWaitTimes-bMdYcbs$default (Ldev/sargunv/mobilitydata/gofs/v1/GofsV1Client;Ldev/sargunv/mobilitydata/gofs/v1/Service;DDLjava/lang/Double;Ljava/lang/Double;Ljava/util/List;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public final fun getZones-gIAlu-s (Ldev/sargunv/mobilitydata/gofs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public final class dev/sargunv/mobilitydata/gofs/v1/OperatingRule {

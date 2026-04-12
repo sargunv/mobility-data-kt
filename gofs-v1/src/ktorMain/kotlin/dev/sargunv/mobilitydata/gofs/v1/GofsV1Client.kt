@@ -35,11 +35,13 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
     }
   )
 
-  internal suspend inline fun <reified T : GofsFeedData> getFeedResponse(url: Url) =
-    httpClient.get(url).body<GofsFeedResponse<T>>()
+  internal suspend inline fun <reified T : GofsFeedData> getFeedResponse(
+    url: Url
+  ): Result<GofsFeedResponse<T>> = runCatching { httpClient.get(url).body<GofsFeedResponse<T>>() }
 
-  internal suspend inline fun <reified T : GofsFeedData> getFeedResponse(url: KtorUrl) =
-    httpClient.get(url).body<GofsFeedResponse<T>>()
+  internal suspend inline fun <reified T : GofsFeedData> getFeedResponse(
+    url: KtorUrl
+  ): Result<GofsFeedResponse<T>> = runCatching { httpClient.get(url).body<GofsFeedResponse<T>>() }
 
   /**
    * Fetches the GOFS manifest (auto-discovery file) from the given URL.
@@ -47,90 +49,101 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * The manifest contains URLs for all available feeds in all supported languages.
    *
    * @param discoveryUrl The URL of the gofs.json auto-discovery file
-   * @return The manifest response containing available feeds
+   * @return Result wrapping the manifest response containing available feeds, or an error
    */
-  public suspend fun getSystemManifest(discoveryUrl: Url): GofsFeedResponse<SystemManifest> =
-    getFeedResponse(discoveryUrl)
+  public suspend fun getSystemManifest(
+    discoveryUrl: Url
+  ): Result<GofsFeedResponse<SystemManifest>> = getFeedResponse(discoveryUrl)
 
   /**
    * Fetches the list of GOFS versions supported by this system.
    *
    * @param [service] The GOFS service containing feed URLs
-   * @return Response containing supported GOFS versions
+   * @return Result wrapping response containing supported GOFS versions, or an error
    */
   context(service: Service)
-  public suspend fun getVersionManifest(): GofsFeedResponse<VersionManifest> =
-    getFeedResponse(service.feeds.getValue(FeedType.VersionManifest))
+  public suspend fun getVersionManifest(): Result<GofsFeedResponse<VersionManifest>> = runCatching {
+    getFeedResponse<VersionManifest>(service.feeds.getValue(FeedType.VersionManifest)).getOrThrow()
+  }
 
   /**
    * Fetches system information including name, operator, timezone, and contact details.
    *
    * @param [service] The GOFS service containing feed URLs
-   * @return Response containing system information
+   * @return Result wrapping response containing system information, or an error
    */
   context(service: Service)
-  public suspend fun getSystemInformation(): GofsFeedResponse<SystemInformation> =
-    getFeedResponse(service.feeds.getValue(FeedType.SystemInformation))
+  public suspend fun getSystemInformation(): Result<GofsFeedResponse<SystemInformation>> =
+    runCatching {
+      getFeedResponse<SystemInformation>(service.feeds.getValue(FeedType.SystemInformation))
+        .getOrThrow()
+    }
 
   /**
    * Fetches information about service brands used in the system.
    *
    * @param [service] The GOFS service containing feed URLs
-   * @return Response containing service brand definitions
+   * @return Result wrapping response containing service brand definitions, or an error
    */
   context(service: Service)
-  public suspend fun getServiceBrands(): GofsFeedResponse<ServiceBrands> =
-    getFeedResponse(service.feeds.getValue(FeedType.ServiceBrands))
+  public suspend fun getServiceBrands(): Result<GofsFeedResponse<ServiceBrands>> = runCatching {
+    getFeedResponse<ServiceBrands>(service.feeds.getValue(FeedType.ServiceBrands)).getOrThrow()
+  }
 
   /**
    * Fetches information about vehicle types available in the system.
    *
    * @param [service] The GOFS service containing feed URLs
-   * @return Response containing vehicle type definitions
+   * @return Result wrapping response containing vehicle type definitions, or an error
    */
   context(service: Service)
-  public suspend fun getVehicleTypes(): GofsFeedResponse<VehicleTypes> =
-    getFeedResponse(service.feeds.getValue(FeedType.VehicleTypes))
+  public suspend fun getVehicleTypes(): Result<GofsFeedResponse<VehicleTypes>> = runCatching {
+    getFeedResponse<VehicleTypes>(service.feeds.getValue(FeedType.VehicleTypes)).getOrThrow()
+  }
 
   /**
    * Fetches zone definitions where services operate.
    *
    * @param [service] The GOFS service containing feed URLs
-   * @return Response containing zone definitions
+   * @return Result wrapping response containing zone definitions, or an error
    */
   context(service: Service)
-  public suspend fun getZones(): GofsFeedResponse<Zones> =
-    getFeedResponse(service.feeds.getValue(FeedType.Zones))
+  public suspend fun getZones(): Result<GofsFeedResponse<Zones>> = runCatching {
+    getFeedResponse<Zones>(service.feeds.getValue(FeedType.Zones)).getOrThrow()
+  }
 
   /**
    * Fetches operating rules governing the service.
    *
    * @param [service] The GOFS service containing feed URLs
-   * @return Response containing operating rules
+   * @return Result wrapping response containing operating rules, or an error
    */
   context(service: Service)
-  public suspend fun getOperatingRules(): GofsFeedResponse<OperatingRules> =
-    getFeedResponse(service.feeds.getValue(FeedType.OperatingRules))
+  public suspend fun getOperatingRules(): Result<GofsFeedResponse<OperatingRules>> = runCatching {
+    getFeedResponse<OperatingRules>(service.feeds.getValue(FeedType.OperatingRules)).getOrThrow()
+  }
 
   /**
    * Fetches calendar definitions for service availability.
    *
    * @param [service] The GOFS service containing feed URLs
-   * @return Response containing calendar definitions
+   * @return Result wrapping response containing calendar definitions, or an error
    */
   context(service: Service)
-  public suspend fun getCalendars(): GofsFeedResponse<Calendars> =
-    getFeedResponse(service.feeds.getValue(FeedType.Calendars))
+  public suspend fun getCalendars(): Result<GofsFeedResponse<Calendars>> = runCatching {
+    getFeedResponse<Calendars>(service.feeds.getValue(FeedType.Calendars)).getOrThrow()
+  }
 
   /**
    * Fetches fare structures and pricing information.
    *
    * @param [service] The GOFS service containing feed URLs
-   * @return Response containing fare information
+   * @return Result wrapping response containing fare information, or an error
    */
   context(service: Service)
-  public suspend fun getFares(): GofsFeedResponse<Fares> =
-    getFeedResponse(service.feeds.getValue(FeedType.Fares))
+  public suspend fun getFares(): Result<GofsFeedResponse<Fares>> = runCatching {
+    getFeedResponse<Fares>(service.feeds.getValue(FeedType.Fares)).getOrThrow()
+  }
 
   /**
    * Fetches wait time information for services.
@@ -143,7 +156,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @param dropOffLat Latitude where the user will be dropped off (optional)
    * @param dropOffLon Longitude where the user will be dropped off (optional)
    * @param brandIds List of brand IDs to filter wait times (optional)
-   * @return Response containing wait time information
+   * @return Result wrapping response containing wait time information, or an error
    */
   context(service: Service)
   public suspend fun getWaitTimes(
@@ -152,40 +165,43 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
     dropOffLat: Double? = null,
     dropOffLon: Double? = null,
     brandIds: List<String> = emptyList(),
-  ): GofsFeedResponse<WaitTimes> {
-    val url = URLBuilder(service.feeds.getValue(FeedType.WaitTimes))
-
+  ): Result<GofsFeedResponse<WaitTimes>> {
     require(
       dropOffLat == null && dropOffLon == null || (dropOffLat != null && dropOffLon != null)
     ) {
       "Both dropOffLat and dropOffLon must be provided together"
     }
 
-    url.parameters.append("pickup_lat", pickupLat.toString())
-    url.parameters.append("pickup_lon", pickupLon.toString())
+    return runCatching {
+      val url = URLBuilder(service.feeds.getValue(FeedType.WaitTimes))
 
-    if (dropOffLat != null && dropOffLon != null) {
-      url.parameters.append("drop_off_lat", dropOffLat.toString())
-      url.parameters.append("drop_off_lon", dropOffLon.toString())
+      url.parameters.append("pickup_lat", pickupLat.toString())
+      url.parameters.append("pickup_lon", pickupLon.toString())
+
+      if (dropOffLat != null && dropOffLon != null) {
+        url.parameters.append("drop_off_lat", dropOffLat.toString())
+        url.parameters.append("drop_off_lon", dropOffLon.toString())
+      }
+
+      if (brandIds.isNotEmpty()) {
+        val joined = brandIds.joinToString(",")
+        url.parameters.append("brand_id", joined)
+      }
+
+      getFeedResponse<WaitTimes>(url.build()).getOrThrow()
     }
-
-    if (brandIds.isNotEmpty()) {
-      val joined = brandIds.joinToString(",")
-      url.parameters.append("brand_id", joined)
-    }
-
-    return getFeedResponse(url.build())
   }
 
   /**
    * Fetches booking rules for the service.
    *
    * @param [service] The GOFS service containing feed URLs
-   * @return Response containing booking rules
+   * @return Result wrapping response containing booking rules, or an error
    */
   context(service: Service)
-  public suspend fun getBookingRules(): GofsFeedResponse<BookingRules> =
-    getFeedResponse(service.feeds.getValue(FeedType.BookingRules))
+  public suspend fun getBookingRules(): Result<GofsFeedResponse<BookingRules>> = runCatching {
+    getFeedResponse<BookingRules>(service.feeds.getValue(FeedType.BookingRules)).getOrThrow()
+  }
 
   /**
    * Fetches real-time booking information.
@@ -203,7 +219,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @param brandIds List of brand IDs to filter wait times (optional)
    * @param pickupAddress Full address where the user will be picked up (optional)
    * @param dropOffAddress Full address where the user will be dropped off (optional)
-   * @return Response containing real-time booking information
+   * @return Result wrapping response containing real-time booking information, or an error
    */
   context(service: Service)
   public suspend fun getRealtimeBookings(
@@ -214,32 +230,34 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
     brandIds: List<String> = emptyList(),
     pickupAddress: String? = null,
     dropOffAddress: String? = null,
-  ): GofsFeedResponse<RealtimeBookings> {
-    val url = URLBuilder(service.feeds.getValue(FeedType.RealtimeBookings))
-
+  ): Result<GofsFeedResponse<RealtimeBookings>> {
     require(
       dropOffLat == null && dropOffLon == null || (dropOffLat != null && dropOffLon != null)
     ) {
       "Both dropOffLat and dropOffLon must be provided together"
     }
 
-    url.parameters.append("pickup_lat", pickupLat.toString())
-    url.parameters.append("pickup_lon", pickupLon.toString())
+    return runCatching {
+      val url = URLBuilder(service.feeds.getValue(FeedType.RealtimeBookings))
 
-    if (dropOffLat != null && dropOffLon != null) {
-      url.parameters.append("drop_off_lat", dropOffLat.toString())
-      url.parameters.append("drop_off_lon", dropOffLon.toString())
+      url.parameters.append("pickup_lat", pickupLat.toString())
+      url.parameters.append("pickup_lon", pickupLon.toString())
+
+      if (dropOffLat != null && dropOffLon != null) {
+        url.parameters.append("drop_off_lat", dropOffLat.toString())
+        url.parameters.append("drop_off_lon", dropOffLon.toString())
+      }
+
+      if (brandIds.isNotEmpty()) {
+        val joined = brandIds.joinToString(",")
+        url.parameters.append("brand_id", joined)
+      }
+
+      if (pickupAddress != null) url.parameters.append("pickup_address", pickupAddress)
+      if (dropOffAddress != null) url.parameters.append("drop_off_address", dropOffAddress)
+
+      getFeedResponse<RealtimeBookings>(url.build()).getOrThrow()
     }
-
-    if (brandIds.isNotEmpty()) {
-      val joined = brandIds.joinToString(",")
-      url.parameters.append("brand_id", joined)
-    }
-
-    if (pickupAddress != null) url.parameters.append("pickup_address", pickupAddress)
-    if (dropOffAddress != null) url.parameters.append("drop_off_address", dropOffAddress)
-
-    return getFeedResponse(url.build())
   }
 
   override fun close(): Unit = httpClient.close()

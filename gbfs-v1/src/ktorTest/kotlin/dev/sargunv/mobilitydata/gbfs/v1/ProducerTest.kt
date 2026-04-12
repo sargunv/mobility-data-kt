@@ -42,29 +42,29 @@ class ProducerTest {
   fun publicbikesystem() = runTest {
     val client = GbfsV1Client(createMockEngine("publicbikesystem"))
 
-    val manifest = client.getSystemManifest("gbfs")
+    val manifest = client.getSystemManifest("gbfs").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getSystemPricingPlans()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getSystemRegions()
+      client.getSystemInformation().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getSystemRegions().getOrThrow()
     }
   }
 
   @Test
   fun bird() = runTest {
     val client = GbfsV1Client(createMockEngine("bird"))
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getVersionManifest()
-      client.getSystemRegions()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVersionManifest().getOrThrow()
+      client.getSystemRegions().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
     }
   }
 
@@ -72,14 +72,14 @@ class ProducerTest {
   fun bcycle() = runTest {
     val client = GbfsV1Client(createMockEngine("bcycle"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getSystemRegions()
+      client.getSystemInformation().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getSystemRegions().getOrThrow()
 
       // INVALID: data is empty {}
       // client.getVersionManifest()
@@ -93,16 +93,16 @@ class ProducerTest {
   fun donkey() = runTest {
     val client = GbfsV1Client(createMockEngine("donkey"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getSystemHours()
-      client.getSystemRegions()
-      client.getSystemPricingPlans()
+      client.getSystemInformation().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getSystemHours().getOrThrow()
+      client.getSystemRegions().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
     }
   }
 
@@ -110,13 +110,13 @@ class ProducerTest {
   fun bolt() = runTest {
     val client = GbfsV1Client(createMockEngine("bolt"))
 
-    val manifest = client.getSystemManifest("gbfs")
+    val manifest = client.getSystemManifest("gbfs").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getFreeBikeStatus()
-      client.getSystemPricingPlans()
+      client.getSystemInformation().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
     }
   }
 
@@ -124,13 +124,13 @@ class ProducerTest {
   fun lime() = runTest {
     val client = GbfsV1Client(createMockEngine("lime"))
 
-    val manifest = client.getSystemManifest("gbfs")
+    val manifest = client.getSystemManifest("gbfs").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getFreeBikeStatus()
-      client.getStationInformation()
+      client.getSystemInformation().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
+      client.getStationInformation().getOrThrow()
 
       // INVALID: num_bikes_available is named num_vehicles_available
       // client.getStationStatus()
