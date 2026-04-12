@@ -194,3 +194,5 @@ final object dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer
     final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlin.time/Duration // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Duration) // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Duration){}[0]
 }
+
+final inline fun <#A: kotlin/Any?> dev.sargunv.mobilitydata.utils/suspendRunCatching(kotlin/Function0<#A>): kotlin/Result<#A> // dev.sargunv.mobilitydata.utils/suspendRunCatching|suspendRunCatching(kotlin.Function0<0:0>){0§<kotlin.Any?>}[0]

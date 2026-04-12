@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gtfs.realtime
 
 import dev.sargunv.mobilitydata.utils.Url
+import dev.sargunv.mobilitydata.utils.suspendRunCatching
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.call.body
@@ -36,7 +37,7 @@ public class GtfsRealtimeClient internal constructor(private val httpClient: Htt
    * @param feedUrl Fully qualified URL of the GTFS Realtime protobuf feed
    * @return Result wrapping the decoded feed message, or an error
    */
-  public suspend fun getFeedMessage(feedUrl: Url): Result<FeedMessage> = runCatching {
+  public suspend fun getFeedMessage(feedUrl: Url): Result<FeedMessage> = suspendRunCatching {
     val bytes = httpClient.get(feedUrl).body<ByteArray>()
     GtfsRealtimeProto.decodeFeedMessage(bytes)
   }
