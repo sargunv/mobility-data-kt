@@ -1,24 +1,18 @@
 # GTFS Realtime
 
-The `gtfs-realtime` module provides Kotlin Multiplatform models for the
-[GTFS Realtime](https://gtfs.org/documentation/realtime/reference/) protobuf schema.
+The GTFS Realtime module provides an implementation of the
+[General Transit Feed Specification (GTFS) Realtime](https://gtfs.org/documentation/realtime/reference/)
+for Kotlin Multiplatform.
 
-This module implements the official GTFS Realtime protobuf schema for Kotlin Multiplatform. It
-ships:
-
-- Kotlin models for the upstream schema
-- A binary protobuf codec for `FeedMessage`
-- A Ktor-based client for fetching live GTFS Realtime feeds
-- The vendored upstream `gtfs-realtime.proto` file as a checked-in reference
+GTFS Realtime is a standardized data feed for real-time transit information such as trip updates,
+vehicle positions, and service alerts. It uses Protocol Buffers as its wire format.
 
 ## Features
 
-- GTFS Realtime protobuf models using `kotlinx.serialization`
-- Binary decode and encode helpers for `FeedMessage`
-- HTTP client for fetching protobuf feeds using Ktor
+- Protobuf encoding and decoding with kotlinx-serialization
+- HTTP client for fetching feeds using Ktor
+- Strong type safety, with appropriate standard library or kotlinx-datetime types
 - Kotlin Multiplatform support (JVM, Native, JS, WASM)
-- Real-feed fixture coverage with checked-in protobuf samples
-- Additional JVM interop coverage against the official Java GTFS Realtime bindings
 
 ## Installation
 
@@ -40,28 +34,9 @@ dependencies {
 
 1. Create a GTFS Realtime client instance. The client implements `AutoCloseable` so it can be used
    with `.use` to ensure proper cleanup.
-2. Fetch a GTFS Realtime protobuf feed from a public endpoint.
-3. Count the number of trip updates, vehicle positions, and alerts in the response.
-
-## Upstream Schema
-
-The canonical upstream protobuf definition is checked in at
-`gtfs-realtime/proto/gtfs-realtime.proto`.
-
-To update it manually:
-
-```bash
-mise run update:gtfs-realtime:proto
-```
-
-To refresh the checked-in real-feed fixtures:
-
-```bash
-mise run update:gtfs-realtime:fixtures
-```
+2. Fetch and decode a GTFS Realtime protobuf feed from a URL.
+3. Inspect the feed entities for trip updates, vehicle positions, and alerts.
 
 ## API Reference
 
-For detailed API documentation, see the API Reference:
-
-- [GTFS Realtime API Reference](./api/gtfs-realtime/index.html)
+For detailed API documentation, see the [API Reference](api/gtfs-realtime/index.html).
