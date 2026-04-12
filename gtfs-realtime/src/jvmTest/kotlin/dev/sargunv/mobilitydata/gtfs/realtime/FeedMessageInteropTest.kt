@@ -177,14 +177,15 @@ class FeedMessageInteropTest {
       officialFeed.entityList.zip(kotlinFeed.entity).forEach { (official, kotlin) ->
         assertEquals(official.id, kotlin.id)
         if (official.hasTripUpdate()) {
-          assertEquals(official.tripUpdate.trip.tripId, kotlin.tripUpdate?.trip?.tripId)
+          assertEquals(official.tripUpdate.trip.tripId, kotlin.tripUpdate?.trip?.tripId.orEmpty())
+          assertEquals(official.tripUpdate.trip.routeId, kotlin.tripUpdate?.trip?.routeId.orEmpty())
           assertEquals(
             official.tripUpdate.stopTimeUpdateCount,
             kotlin.tripUpdate?.stopTimeUpdate?.size,
           )
         }
         if (official.hasVehicle()) {
-          assertEquals(official.vehicle.vehicle.id, kotlin.vehicle?.vehicle?.id)
+          assertEquals(official.vehicle.vehicle.id, kotlin.vehicle?.vehicle?.id.orEmpty())
           if (official.vehicle.hasPosition()) {
             assertEquals(official.vehicle.position.latitude, kotlin.vehicle?.position?.latitude)
           }
