@@ -1,3 +1,7 @@
+public final class dev/sargunv/mobilitydata/utils/ResultKt {
+	public static final fun suspendRunCatching (Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;
+}
+
 public final class dev/sargunv/mobilitydata/utils/RgbColor {
 	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/utils/RgbColor;
 	public static fun constructor-impl (I)I

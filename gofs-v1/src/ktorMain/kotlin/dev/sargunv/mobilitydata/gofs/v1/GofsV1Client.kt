@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.Url
+import dev.sargunv.mobilitydata.utils.suspendRunCatching
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.call.body
@@ -37,11 +38,15 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
 
   internal suspend inline fun <reified T : GofsFeedData> getFeedResponse(
     url: Url
-  ): Result<GofsFeedResponse<T>> = runCatching { httpClient.get(url).body<GofsFeedResponse<T>>() }
+  ): Result<GofsFeedResponse<T>> = suspendRunCatching {
+    httpClient.get(url).body<GofsFeedResponse<T>>()
+  }
 
   internal suspend inline fun <reified T : GofsFeedData> getFeedResponse(
     url: KtorUrl
-  ): Result<GofsFeedResponse<T>> = runCatching { httpClient.get(url).body<GofsFeedResponse<T>>() }
+  ): Result<GofsFeedResponse<T>> = suspendRunCatching {
+    httpClient.get(url).body<GofsFeedResponse<T>>()
+  }
 
   /**
    * Fetches the GOFS manifest (auto-discovery file) from the given URL.
@@ -62,9 +67,11 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping response containing supported GOFS versions, or an error
    */
   context(service: Service)
-  public suspend fun getVersionManifest(): Result<GofsFeedResponse<VersionManifest>> = runCatching {
-    getFeedResponse<VersionManifest>(service.feeds.getValue(FeedType.VersionManifest)).getOrThrow()
-  }
+  public suspend fun getVersionManifest(): Result<GofsFeedResponse<VersionManifest>> =
+    suspendRunCatching {
+      getFeedResponse<VersionManifest>(service.feeds.getValue(FeedType.VersionManifest))
+        .getOrThrow()
+    }
 
   /**
    * Fetches system information including name, operator, timezone, and contact details.
@@ -74,7 +81,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    */
   context(service: Service)
   public suspend fun getSystemInformation(): Result<GofsFeedResponse<SystemInformation>> =
-    runCatching {
+    suspendRunCatching {
       getFeedResponse<SystemInformation>(service.feeds.getValue(FeedType.SystemInformation))
         .getOrThrow()
     }
@@ -86,9 +93,10 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping response containing service brand definitions, or an error
    */
   context(service: Service)
-  public suspend fun getServiceBrands(): Result<GofsFeedResponse<ServiceBrands>> = runCatching {
-    getFeedResponse<ServiceBrands>(service.feeds.getValue(FeedType.ServiceBrands)).getOrThrow()
-  }
+  public suspend fun getServiceBrands(): Result<GofsFeedResponse<ServiceBrands>> =
+    suspendRunCatching {
+      getFeedResponse<ServiceBrands>(service.feeds.getValue(FeedType.ServiceBrands)).getOrThrow()
+    }
 
   /**
    * Fetches information about vehicle types available in the system.
@@ -97,9 +105,10 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping response containing vehicle type definitions, or an error
    */
   context(service: Service)
-  public suspend fun getVehicleTypes(): Result<GofsFeedResponse<VehicleTypes>> = runCatching {
-    getFeedResponse<VehicleTypes>(service.feeds.getValue(FeedType.VehicleTypes)).getOrThrow()
-  }
+  public suspend fun getVehicleTypes(): Result<GofsFeedResponse<VehicleTypes>> =
+    suspendRunCatching {
+      getFeedResponse<VehicleTypes>(service.feeds.getValue(FeedType.VehicleTypes)).getOrThrow()
+    }
 
   /**
    * Fetches zone definitions where services operate.
@@ -108,7 +117,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping response containing zone definitions, or an error
    */
   context(service: Service)
-  public suspend fun getZones(): Result<GofsFeedResponse<Zones>> = runCatching {
+  public suspend fun getZones(): Result<GofsFeedResponse<Zones>> = suspendRunCatching {
     getFeedResponse<Zones>(service.feeds.getValue(FeedType.Zones)).getOrThrow()
   }
 
@@ -119,9 +128,10 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping response containing operating rules, or an error
    */
   context(service: Service)
-  public suspend fun getOperatingRules(): Result<GofsFeedResponse<OperatingRules>> = runCatching {
-    getFeedResponse<OperatingRules>(service.feeds.getValue(FeedType.OperatingRules)).getOrThrow()
-  }
+  public suspend fun getOperatingRules(): Result<GofsFeedResponse<OperatingRules>> =
+    suspendRunCatching {
+      getFeedResponse<OperatingRules>(service.feeds.getValue(FeedType.OperatingRules)).getOrThrow()
+    }
 
   /**
    * Fetches calendar definitions for service availability.
@@ -130,7 +140,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping response containing calendar definitions, or an error
    */
   context(service: Service)
-  public suspend fun getCalendars(): Result<GofsFeedResponse<Calendars>> = runCatching {
+  public suspend fun getCalendars(): Result<GofsFeedResponse<Calendars>> = suspendRunCatching {
     getFeedResponse<Calendars>(service.feeds.getValue(FeedType.Calendars)).getOrThrow()
   }
 
@@ -141,7 +151,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping response containing fare information, or an error
    */
   context(service: Service)
-  public suspend fun getFares(): Result<GofsFeedResponse<Fares>> = runCatching {
+  public suspend fun getFares(): Result<GofsFeedResponse<Fares>> = suspendRunCatching {
     getFeedResponse<Fares>(service.feeds.getValue(FeedType.Fares)).getOrThrow()
   }
 
@@ -172,7 +182,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
       "Both dropOffLat and dropOffLon must be provided together"
     }
 
-    return runCatching {
+    return suspendRunCatching {
       val url = URLBuilder(service.feeds.getValue(FeedType.WaitTimes))
 
       url.parameters.append("pickup_lat", pickupLat.toString())
@@ -199,9 +209,10 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping response containing booking rules, or an error
    */
   context(service: Service)
-  public suspend fun getBookingRules(): Result<GofsFeedResponse<BookingRules>> = runCatching {
-    getFeedResponse<BookingRules>(service.feeds.getValue(FeedType.BookingRules)).getOrThrow()
-  }
+  public suspend fun getBookingRules(): Result<GofsFeedResponse<BookingRules>> =
+    suspendRunCatching {
+      getFeedResponse<BookingRules>(service.feeds.getValue(FeedType.BookingRules)).getOrThrow()
+    }
 
   /**
    * Fetches real-time booking information.
@@ -237,7 +248,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
       "Both dropOffLat and dropOffLon must be provided together"
     }
 
-    return runCatching {
+    return suspendRunCatching {
       val url = URLBuilder(service.feeds.getValue(FeedType.RealtimeBookings))
 
       url.parameters.append("pickup_lat", pickupLat.toString())

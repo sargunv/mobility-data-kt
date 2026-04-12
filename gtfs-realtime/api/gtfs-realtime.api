@@ -1,0 +1,1241 @@
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Alert {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component10 ()Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;
+	public final fun component11 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;
+	public final fun component12 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component13 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component14 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public final fun component4 ()Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public final fun component5 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component7 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component8 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component9 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun copy (Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;)Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getActivePeriod ()Ljava/util/List;
+	public final fun getCause ()Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public final fun getCauseDetail ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getDescriptionText ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getEffect ()Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public final fun getEffectDetail ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getHeaderText ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getImage ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;
+	public final fun getImageAlternativeText ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getInformedEntity ()Ljava/util/List;
+	public final fun getSeverityLevel ()Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;
+	public final fun getTtsDescriptionText ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getTtsHeaderText ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getUrl ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/Alert$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause : java/lang/Enum {
+	public static final field Accident Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause$Companion;
+	public static final field Construction Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field Demonstration Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field Holiday Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field Maintenance Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field MedicalEmergency Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field OtherCause Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field PoliceActivity Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field Strike Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field TechnicalProblem Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field UnknownCause Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field Weather Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Alert$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect : java/lang/Enum {
+	public static final field AccessibilityIssue Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field AdditionalService Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect$Companion;
+	public static final field Detour Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field ModifiedService Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field NoEffect Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field NoService Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field OtherEffect Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field ReducedService Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field SignificantDelays Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field StopMoved Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static final field UnknownEffect Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Alert$Effect$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel : java/lang/Enum {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel$Companion;
+	public static final field Info Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;
+	public static final field Severe Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;
+	public static final field UnknownSeverity Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;
+	public static final field Warning Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Alert$SeverityLevel$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/EntitySelector {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/EntitySelector$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ljava/lang/String;Ljava/lang/Integer;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/Integer;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ljava/lang/String;Ljava/lang/Integer;)Ldev/sargunv/mobilitydata/gtfs/realtime/EntitySelector;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/EntitySelector;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/EntitySelector;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAgencyId ()Ljava/lang/String;
+	public final fun getDirectionId ()Ljava/lang/Integer;
+	public final fun getRouteId ()Ljava/lang/String;
+	public final fun getRouteType ()Ljava/lang/Integer;
+	public final fun getStopId ()Ljava/lang/String;
+	public final fun getTrip ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/EntitySelector$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/EntitySelector$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/EntitySelector;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/EntitySelector;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/EntitySelector$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/FeedEntity {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/FeedEntity$Companion;
+	public fun <init> (Ljava/lang/String;ZLdev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;)V
+	public synthetic fun <init> (Ljava/lang/String;ZLdev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Z
+	public final fun component3 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;
+	public final fun component4 ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;
+	public final fun component5 ()Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;
+	public final fun component7 ()Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;
+	public final fun component8 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;
+	public final fun copy (Ljava/lang/String;ZLdev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedEntity;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/FeedEntity;Ljava/lang/String;ZLdev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedEntity;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAlert ()Ldev/sargunv/mobilitydata/gtfs/realtime/Alert;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getShape ()Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;
+	public final fun getStop ()Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;
+	public final fun getTripModifications ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;
+	public final fun getTripUpdate ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;
+	public final fun getVehicle ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;
+	public fun hashCode ()I
+	public final fun isDeleted ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/FeedEntity$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/FeedEntity$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedEntity;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/FeedEntity;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/FeedEntity$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/FeedHeader {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Companion;
+	public fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;Ljava/lang/Long;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;Ljava/lang/Long;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;Ljava/lang/Long;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;Ljava/lang/Long;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFeedVersion ()Ljava/lang/String;
+	public final fun getGtfsRealtimeVersion ()Ljava/lang/String;
+	public final fun getIncrementality ()Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;
+	public final fun getTimestamp ()Ljava/lang/Long;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality : java/lang/Enum {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality$Companion;
+	public static final field Differential Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;
+	public static final field FullDataset Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/FeedHeader$Incrementality$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/FeedMessage {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/FeedMessage$Companion;
+	public fun <init> (Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;Ljava/util/List;)V
+	public synthetic fun <init> (Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;Ljava/util/List;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedMessage;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/FeedMessage;Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedMessage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEntity ()Ljava/util/List;
+	public final fun getHeader ()Ldev/sargunv/mobilitydata/gtfs/realtime/FeedHeader;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/FeedMessage$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/FeedMessage$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedMessage;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/FeedMessage;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/FeedMessage$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/GtfsRealtimeClient : java/lang/AutoCloseable {
+	public fun <init> (Lio/ktor/client/engine/HttpClientEngine;Lkotlin/jvm/functions/Function1;)V
+	public synthetic fun <init> (Lio/ktor/client/engine/HttpClientEngine;Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Lkotlin/jvm/functions/Function1;)V
+	public synthetic fun <init> (Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun close ()V
+	public final fun getFeedMessage-gIAlu-s (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/GtfsRealtimeProto {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/GtfsRealtimeProto;
+	public final fun decodeFeedMessage ([B)Ldev/sargunv/mobilitydata/gtfs/realtime/FeedMessage;
+	public final fun encodeFeedMessage (Ldev/sargunv/mobilitydata/gtfs/realtime/FeedMessage;)[B
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Position {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/Position$Companion;
+	public fun <init> (FFLjava/lang/Float;Ljava/lang/Double;Ljava/lang/Float;)V
+	public synthetic fun <init> (FFLjava/lang/Float;Ljava/lang/Double;Ljava/lang/Float;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()Ljava/lang/Float;
+	public final fun component4 ()Ljava/lang/Double;
+	public final fun component5 ()Ljava/lang/Float;
+	public final fun copy (FFLjava/lang/Float;Ljava/lang/Double;Ljava/lang/Float;)Ldev/sargunv/mobilitydata/gtfs/realtime/Position;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/Position;FFLjava/lang/Float;Ljava/lang/Double;Ljava/lang/Float;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/Position;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBearing ()Ljava/lang/Float;
+	public final fun getLatitude ()F
+	public final fun getLongitude ()F
+	public final fun getOdometer ()Ljava/lang/Double;
+	public final fun getSpeed ()Ljava/lang/Float;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/Position$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/Position$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/Position;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/Position;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Position$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Integer;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Integer;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/Integer;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getStopId ()Ljava/lang/String;
+	public final fun getTravelTimeToStop ()Ljava/lang/Integer;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/ReplacementStop$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Shape {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/Shape$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEncodedPolyline ()Ljava/lang/String;
+	public final fun getShapeId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/Shape$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/Shape$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/Shape;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Shape$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Stop {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;)V
+	public synthetic fun <init> (Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component12 ()Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;
+	public final fun component13 ()Ljava/lang/String;
+	public final fun component14 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component2 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component3 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component4 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component5 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun component6 ()Ljava/lang/Float;
+	public final fun component7 ()Ljava/lang/Float;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun copy (Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;)Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLevelId ()Ljava/lang/String;
+	public final fun getParentStation ()Ljava/lang/String;
+	public final fun getPlatformCode ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getStopCode ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getStopDesc ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getStopId ()Ljava/lang/String;
+	public final fun getStopLat ()Ljava/lang/Float;
+	public final fun getStopLon ()Ljava/lang/Float;
+	public final fun getStopName ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getStopTimezone ()Ljava/lang/String;
+	public final fun getStopUrl ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getTtsStopName ()Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public final fun getWheelchairBoarding ()Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;
+	public final fun getZoneId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/Stop$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/Stop;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Stop$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding : java/lang/Enum {
+	public static final field Available Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding$Companion;
+	public static final field NotAvailable Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;
+	public static final field Unknown Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/Stop$WheelchairBoarding$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/StopSelector {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Integer;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Integer;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/Integer;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getStopId ()Ljava/lang/String;
+	public final fun getStopSequence ()Ljava/lang/Integer;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/StopSelector$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/StopSelector$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TimeRange {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TimeRange$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Long;Ljava/lang/Long;)V
+	public synthetic fun <init> (Ljava/lang/Long;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Long;
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun copy (Ljava/lang/Long;Ljava/lang/Long;)Ldev/sargunv/mobilitydata/gtfs/realtime/TimeRange;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TimeRange;Ljava/lang/Long;Ljava/lang/Long;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TimeRange;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEnd ()Ljava/lang/Long;
+	public final fun getStart ()Ljava/lang/Long;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TimeRange$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TimeRange$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TimeRange;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TimeRange;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TimeRange$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLocalizedImage ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLanguage ()Ljava/lang/String;
+	public final fun getMediaType ()Ljava/lang/String;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedImage$LocalizedImage$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedString {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getTranslation ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLanguage ()Ljava/lang/String;
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TranslatedString$Translation$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public final fun component7 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDirectionId ()Ljava/lang/Integer;
+	public final fun getModifiedTrip ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;
+	public final fun getRouteId ()Ljava/lang/String;
+	public final fun getScheduleRelationship ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public final fun getStartDate ()Ljava/lang/String;
+	public final fun getStartTime ()Ljava/lang/String;
+	public final fun getTripId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAffectedTripId ()Ljava/lang/String;
+	public final fun getModificationsId ()Ljava/lang/String;
+	public final fun getStartDate ()Ljava/lang/String;
+	public final fun getStartTime ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ModifiedTripSelector$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship : java/lang/Enum {
+	public static final field Added Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public static final field Canceled Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship$Companion;
+	public static final field Deleted Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public static final field Duplicated Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public static final field New Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public static final field Replacement Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public static final field Scheduled Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public static final field Unscheduled Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor$ScheduleRelationship$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripModifications {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getModifications ()Ljava/util/List;
+	public final fun getSelectedTrips ()Ljava/util/List;
+	public final fun getServiceDates ()Ljava/util/List;
+	public final fun getStartTimes ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripModifications$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification$Companion;
+	public fun <init> ()V
+	public fun <init> (Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;ILjava/util/List;Ljava/lang/String;Ljava/lang/Long;)V
+	public synthetic fun <init> (Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;ILjava/util/List;Ljava/lang/String;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;
+	public final fun component2 ()Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;
+	public final fun component3 ()I
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/Long;
+	public final fun copy (Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;ILjava/util/List;Ljava/lang/String;Ljava/lang/Long;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification;Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;ILjava/util/List;Ljava/lang/String;Ljava/lang/Long;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEndStopSelector ()Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;
+	public final fun getLastModifiedTime ()Ljava/lang/Long;
+	public final fun getPropagatedModificationDelay ()I
+	public final fun getReplacementStops ()Ljava/util/List;
+	public final fun getServiceAlertId ()Ljava/lang/String;
+	public final fun getStartStopSelector ()Ldev/sargunv/mobilitydata/gtfs/realtime/StopSelector;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripModifications$Modification$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/util/List;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips;Ljava/util/List;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getShapeId ()Ljava/lang/String;
+	public final fun getTripIds ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripModifications$SelectedTrips$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$Companion;
+	public fun <init> (Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;)V
+	public synthetic fun <init> (Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;
+	public final fun component2 ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/lang/Long;
+	public final fun component5 ()Ljava/lang/Integer;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;
+	public final fun copy (Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDelay ()Ljava/lang/Integer;
+	public final fun getStopTimeUpdate ()Ljava/util/List;
+	public final fun getTimestamp ()Ljava/lang/Long;
+	public final fun getTrip ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;
+	public final fun getTripProperties ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;
+	public final fun getVehicle ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/Integer;Ljava/lang/Long;)V
+	public synthetic fun <init> (Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/Integer;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Integer;
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Ljava/lang/Long;
+	public final fun copy (Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/Integer;Ljava/lang/Long;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/Integer;Ljava/lang/Long;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDelay ()Ljava/lang/Integer;
+	public final fun getScheduledTime ()Ljava/lang/Long;
+	public final fun getTime ()Ljava/lang/Long;
+	public final fun getUncertainty ()Ljava/lang/Integer;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Integer;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;)V
+	public synthetic fun <init> (Ljava/lang/Integer;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Integer;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;
+	public final fun component4 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;
+	public final fun component5 ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;
+	public final fun component7 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;
+	public final fun copy (Ljava/lang/Integer;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate;Ljava/lang/Integer;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArrival ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;
+	public final fun getDeparture ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeEvent;
+	public final fun getDepartureOccupancyStatus ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public final fun getScheduleRelationship ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;
+	public final fun getStopId ()Ljava/lang/String;
+	public final fun getStopSequence ()Ljava/lang/Integer;
+	public final fun getStopTimeProperties ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship : java/lang/Enum {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship$Companion;
+	public static final field NoData Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;
+	public static final field Scheduled Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;
+	public static final field Skipped Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;
+	public static final field Unscheduled Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$ScheduleRelationship$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+	public final fun component4 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAssignedStopId ()Ljava/lang/String;
+	public final fun getDropOffType ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+	public final fun getPickupType ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+	public final fun getStopHeadsign ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType : java/lang/Enum {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType$Companion;
+	public static final field CoordinateWithDriver Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+	public static final field None Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+	public static final field PhoneAgency Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+	public static final field Regular Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$StopTimeUpdate$StopTimeProperties$DropOffPickupType$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getShapeId ()Ljava/lang/String;
+	public final fun getStartDate ()Ljava/lang/String;
+	public final fun getStartTime ()Ljava/lang/String;
+	public final fun getTripHeadsign ()Ljava/lang/String;
+	public final fun getTripId ()Ljava/lang/String;
+	public final fun getTripShortName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/TripUpdate$TripProperties$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getLicensePlate ()Ljava/lang/String;
+	public final fun getWheelchairAccessible ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible : java/lang/Enum {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible$Companion;
+	public static final field NoValue Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;
+	public static final field Unknown Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;
+	public static final field WheelchairAccessible Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;
+	public static final field WheelchairInaccessible Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor$WheelchairAccessible$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$Companion;
+	public fun <init> ()V
+	public fun <init> (Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/Position;Ljava/lang/Integer;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;Ljava/lang/Long;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;Ljava/lang/Integer;Ljava/util/List;)V
+	public synthetic fun <init> (Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/Position;Ljava/lang/Integer;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;Ljava/lang/Long;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;Ljava/lang/Integer;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;
+	public final fun component10 ()Ljava/lang/Integer;
+	public final fun component11 ()Ljava/util/List;
+	public final fun component2 ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;
+	public final fun component3 ()Ldev/sargunv/mobilitydata/gtfs/realtime/Position;
+	public final fun component4 ()Ljava/lang/Integer;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;
+	public final fun component7 ()Ljava/lang/Long;
+	public final fun component8 ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;
+	public final fun component9 ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public final fun copy (Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/Position;Ljava/lang/Integer;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;Ljava/lang/Long;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;Ljava/lang/Integer;Ljava/util/List;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;Ldev/sargunv/mobilitydata/gtfs/realtime/Position;Ljava/lang/Integer;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;Ljava/lang/Long;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;Ljava/lang/Integer;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCongestionLevel ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;
+	public final fun getCurrentStatus ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;
+	public final fun getCurrentStopSequence ()Ljava/lang/Integer;
+	public final fun getMultiCarriageDetails ()Ljava/util/List;
+	public final fun getOccupancyPercentage ()Ljava/lang/Integer;
+	public final fun getOccupancyStatus ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public final fun getPosition ()Ldev/sargunv/mobilitydata/gtfs/realtime/Position;
+	public final fun getStopId ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/Long;
+	public final fun getTrip ()Ldev/sargunv/mobilitydata/gtfs/realtime/TripDescriptor;
+	public final fun getVehicle ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehicleDescriptor;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;ILjava/lang/Integer;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;ILjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public final fun component4 ()I
+	public final fun component5 ()Ljava/lang/Integer;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;ILjava/lang/Integer;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;ILjava/lang/Integer;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCarriageSequence ()Ljava/lang/Integer;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getOccupancyPercentage ()I
+	public final fun getOccupancyStatus ()Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CarriageDetails$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel : java/lang/Enum {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel$Companion;
+	public static final field Congestion Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;
+	public static final field RunningSmoothly Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;
+	public static final field SevereCongestion Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;
+	public static final field StopAndGo Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;
+	public static final field UnknownCongestionLevel Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$CongestionLevel$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus : java/lang/Enum {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus$Companion;
+	public static final field CrushedStandingRoomOnly Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static final field Empty Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static final field FewSeatsAvailable Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static final field Full Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static final field ManySeatsAvailable Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static final field NoDataAvailable Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static final field NotAcceptingPassengers Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static final field NotBoardable Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static final field StandingRoomOnly Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$OccupancyStatus$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus : java/lang/Enum {
+	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus$Companion;
+	public static final field InTransitTo Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;
+	public static final field IncomingAt Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;
+	public static final field StoppedAt Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;
+	public static fun values ()[Ldev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/realtime/VehiclePosition$VehicleStopStatus$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+

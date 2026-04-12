@@ -4,8 +4,13 @@ import ru.vyarus.gradle.plugin.mkdocs.task.MkdocsTask
 plugins {
   id("org.jetbrains.kotlinx.kover")
   id("org.jetbrains.dokka")
-  id("semver")
   id("ru.vyarus.mkdocs-build")
+}
+
+if (providers.gradleProperty("disableSemver").orNull == "true") {
+  version = "0.0.0-dev"
+} else {
+  pluginManager.apply("semver")
 }
 
 dokka {
@@ -63,4 +68,7 @@ dependencies {
 
   dokka(project(":gtfs-schedule"))
   kover(project(":gtfs-schedule"))
+
+  dokka(project(":gtfs-realtime"))
+  kover(project(":gtfs-realtime"))
 }

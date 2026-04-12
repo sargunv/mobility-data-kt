@@ -42,6 +42,22 @@ depends = ["test:jvm", "test:jsnode", "test:wasmjsnode", "test:native"]
 description = "Serve documentation locally"
 run = "./gradlew :mkdocsServe"
 
+[tasks."update:gtfs-realtime:fixtures"]
+description = "Refresh checked-in GTFS Realtime protobuf fixtures from public feeds"
+run = """
+mkdir -p sample-data/gtfs-realtime/sound-transit sample-data/gtfs-realtime/tri-rail
+
+curl -fsSL https://s3.amazonaws.com/st-service-alerts-prod/alerts.pb \
+  -o sample-data/gtfs-realtime/sound-transit/alerts.pb
+
+curl -fsSL 'https://gtfsr.tri-rail.com/download.aspx?file=trip_updates.pb' \
+  -o sample-data/gtfs-realtime/tri-rail/trip_updates.pb
+curl -fsSL 'https://gtfsr.tri-rail.com/download.aspx?file=position_updates.pb' \
+  -o sample-data/gtfs-realtime/tri-rail/vehicle_positions.pb
+curl -fsSL 'https://gtfsr.tri-rail.com/download.aspx?file=alerts.pb' \
+  -o sample-data/gtfs-realtime/tri-rail/alerts.pb
+"""
+
 [tasks."xcode:select"]
 description = "Install and select the pinned Xcode version on macOS"
 run = """
