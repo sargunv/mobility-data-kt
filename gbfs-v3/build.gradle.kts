@@ -25,6 +25,8 @@ kotlin {
 
     commonTest {
       dependencies {
+        implementation(kotlin("test"))
+        implementation(kotlin("test-annotations-common"))
         implementation(libs.kotlinx.coroutines.test)
         implementation(libs.kotlinx.io.core)
       }
@@ -39,6 +41,7 @@ kotlin {
 
     create("ktorTest").apply {
       dependencies {
+        implementation(kotlin("test"))
         implementation(libs.ktor.client.mock)
         implementation(libs.kotlinx.io.core)
       }

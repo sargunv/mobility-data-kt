@@ -300,17 +300,17 @@ public final class dev/sargunv/mobilitydata/gbfs/v1/GbfsV1Client : java/lang/Aut
 	public fun <init> (Lkotlin/jvm/functions/Function1;)V
 	public synthetic fun <init> (Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun close ()V
-	public final fun getFreeBikeStatus (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getStationInformation (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getStationStatus (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemAlerts (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemCalendar (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemHours (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemInformation (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemManifest (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemPricingPlans (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getSystemRegions (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun getVersionManifest (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getFreeBikeStatus-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getStationInformation-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getStationStatus-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemAlerts-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemCalendar-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemHours-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemInformation-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemManifest-gIAlu-s (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemPricingPlans-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getSystemRegions-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getVersionManifest-gIAlu-s (Ldev/sargunv/mobilitydata/gbfs/v1/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public final class dev/sargunv/mobilitydata/gbfs/v1/PricingPlan {

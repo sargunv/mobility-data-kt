@@ -42,18 +42,18 @@ class ProducerTest {
   fun publicbikesystem() = runTest {
     val client = GbfsV2Client(createMockEngine("publicbikesystem"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getSystemPricingPlans()
-      client.getSystemRegions()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getVersionManifest()
+      client.getSystemInformation().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getSystemRegions().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getVersionManifest().getOrThrow()
     }
   }
 
@@ -61,19 +61,19 @@ class ProducerTest {
   fun bird() = runTest {
     val client = GbfsV2Client(createMockEngine("bird"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getVersionManifest()
-      client.getSystemRegions()
-      client.getSystemPricingPlans()
-      client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVersionManifest().getOrThrow()
+      client.getSystemRegions().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
     }
   }
 
@@ -81,19 +81,19 @@ class ProducerTest {
   fun donkey() = runTest {
     val client = GbfsV2Client(createMockEngine("donkey"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getVersionManifest()
-      client.getSystemRegions()
-      client.getSystemPricingPlans()
-      client.getSystemHours()
-      client.getVehicleTypes()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVersionManifest().getOrThrow()
+      client.getSystemRegions().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getSystemHours().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
     }
   }
 
@@ -101,18 +101,18 @@ class ProducerTest {
   fun entur() = runTest {
     val client = GbfsV2Client(createMockEngine("entur"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("no")
 
     context(service) {
-      client.getSystemInformation()
-      client.getSystemPricingPlans()
-      client.getSystemHours()
-      client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getSystemHours().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
     }
   }
 
@@ -120,14 +120,14 @@ class ProducerTest {
   fun lime() = runTest {
     val client = GbfsV2Client(createMockEngine("lime"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getVehicleTypes()
-      client.getStationInformation()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
 
       // INVALID: num_bikes_available is named num_vehicles_available
       // client.getStationStatus()
@@ -138,17 +138,17 @@ class ProducerTest {
   fun mobidata() = runTest {
     val client = GbfsV2Client(createMockEngine("mobidata"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("de")
 
     context(service) {
-      client.getSystemInformation()
-      client.getSystemPricingPlans()
-      client.getSystemAlerts()
-      client.getVehicleTypes()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getSystemAlerts().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
     }
   }
 
@@ -156,20 +156,20 @@ class ProducerTest {
   fun neuron() = runTest {
     val client = GbfsV2Client(createMockEngine("neuron"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getVehicleTypes()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
 
       // INVALID: station_id is int instead of string
-      client.getStationInformation()
-      client.getStationStatus()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
 
       // INVALID: region_id is int instead of string
-      client.getSystemRegions()
+      client.getSystemRegions().getOrThrow()
 
       // INVALID: rules should be array
       // client.getGeofencingZones()
@@ -180,18 +180,18 @@ class ProducerTest {
   fun nextbike() = runTest {
     val client = GbfsV2Client(createMockEngine("nextbike"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("de")
 
     context(service) {
-      client.getSystemInformation()
-      client.getSystemRegions()
-      client.getSystemPricingPlans()
-      client.getSystemHours()
-      client.getVehicleTypes()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getSystemRegions().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getSystemHours().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
     }
   }
 
@@ -199,18 +199,18 @@ class ProducerTest {
   fun ridedott() = runTest {
     val client = GbfsV2Client(createMockEngine("ridedott"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getVersionManifest()
-      client.getSystemPricingPlans()
-      client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getStationInformation()
-      client.getStationStatus()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVersionManifest().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getStationInformation().getOrThrow()
+      client.getStationStatus().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
     }
   }
 
@@ -218,16 +218,16 @@ class ProducerTest {
   fun zeuss() = runTest {
     val client = GbfsV2Client(createMockEngine("zeus"))
 
-    val manifest = client.getSystemManifest("gbfs.json")
+    val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
 
     context(service) {
-      client.getSystemInformation()
-      client.getVersionManifest()
-      client.getSystemPricingPlans()
-      client.getVehicleTypes()
-      client.getGeofencingZones()
-      client.getFreeBikeStatus()
+      client.getSystemInformation().getOrThrow()
+      client.getVersionManifest().getOrThrow()
+      client.getSystemPricingPlans().getOrThrow()
+      client.getVehicleTypes().getOrThrow()
+      client.getGeofencingZones().getOrThrow()
+      client.getFreeBikeStatus().getOrThrow()
     }
   }
 }
