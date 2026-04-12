@@ -5,15 +5,15 @@ package dev.sargunv.mobilitydata.gtfs.realtime
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.protobuf.ProtoBuf
 
-private val gtfsRealtimeProtoBuf: ProtoBuf = ProtoBuf { encodeDefaults = false }
-
 /** Binary GTFS Realtime protobuf codec. */
 public object GtfsRealtimeProto {
+  private val protoBuf: ProtoBuf = ProtoBuf { encodeDefaults = false }
+
   /** Decodes a GTFS Realtime feed message from protobuf bytes. */
   public fun decodeFeedMessage(bytes: ByteArray): FeedMessage =
-    gtfsRealtimeProtoBuf.decodeFromByteArray(FeedMessage.serializer(), bytes)
+    protoBuf.decodeFromByteArray(FeedMessage.serializer(), bytes)
 
   /** Encodes a GTFS Realtime feed message to protobuf bytes. */
   public fun encodeFeedMessage(feedMessage: FeedMessage): ByteArray =
-    gtfsRealtimeProtoBuf.encodeToByteArray(FeedMessage.serializer(), feedMessage)
+    protoBuf.encodeToByteArray(FeedMessage.serializer(), feedMessage)
 }

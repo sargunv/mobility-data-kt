@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.realtime
 
 import kotlin.test.Test
-import kotlin.test.assertEquals
 
 internal val sampleFeedMessage =
   FeedMessage(
@@ -69,9 +68,61 @@ internal val sampleFeedMessage =
 class FeedMessageTest {
   @Test
   fun roundTripsFeedMessage() {
-    val encoded = GtfsRealtimeProto.encodeFeedMessage(sampleFeedMessage)
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(encoded)
+    assertFeedRoundTrips(sampleFeedMessage)
+  }
 
-    assertEquals(sampleFeedMessage, decoded)
+  @Test
+  fun roundTripsEmptyFeed() {
+    assertFeedRoundTrips(FeedMessage(header = FeedHeader(gtfsRealtimeVersion = "2.0")))
+  }
+
+  @Test
+  fun roundTripsDeletedEntity() {
+    assertFeedRoundTrips(
+      FeedMessage(
+        header =
+          FeedHeader(
+            gtfsRealtimeVersion = "2.0",
+            incrementality = FeedHeader.Incrementality.Differential,
+          ),
+        entity = listOf(FeedEntity(id = "deleted-1", isDeleted = true)),
+      )
+    )
+  }
+
+  @Test
+  fun roundTripsDefaultEnumValues() {
+    assertFeedRoundTrips(
+      FeedMessage(
+        header = FeedHeader(gtfsRealtimeVersion = "2.0"),
+        entity =
+          listOf(
+            FeedEntity(
+              id = "defaults-vehicle",
+              vehicle =
+                VehiclePosition(
+                  trip = TripDescriptor(tripId = "trip-defaults"),
+                  position = Position(latitude = 0.0F, longitude = 0.0F),
+                ),
+            ),
+            FeedEntity(
+              id = "defaults-alert",
+              alert = Alert(informedEntity = listOf(EntitySelector(routeId = "route-x"))),
+            ),
+          ),
+      )
+    )
+  }
+
+  @Test
+  fun decodingEmptyBytesThrows() {
+    val result = runCatching { GtfsRealtimeProto.decodeFeedMessage(ByteArray(0)) }
+    kotlin.test.assertTrue(result.isFailure, "Expected failure for empty bytes")
+  }
+
+  @Test
+  fun decodingGarbageBytesThrows() {
+    val result = runCatching { GtfsRealtimeProto.decodeFeedMessage(byteArrayOf(0, 1, 2, 3, 4, 5)) }
+    kotlin.test.assertTrue(result.isFailure, "Expected failure for garbage bytes")
   }
 }

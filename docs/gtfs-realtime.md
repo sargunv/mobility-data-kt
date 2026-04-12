@@ -1,6 +1,6 @@
 # GTFS Realtime
 
-The GTFS Realtime module provides an implementation of the
+The GTFS Realtime module implements the
 [General Transit Feed Specification (GTFS) Realtime](https://gtfs.org/documentation/realtime/reference/)
 for Kotlin Multiplatform.
 
@@ -11,7 +11,7 @@ vehicle positions, and service alerts. It uses Protocol Buffers as its wire form
 
 - Protobuf encoding and decoding with kotlinx-serialization
 - HTTP client for fetching feeds using Ktor
-- Strong type safety, with appropriate standard library or kotlinx-datetime types
+- Strong type safety with Kotlin data classes and enums
 - Kotlin Multiplatform support (JVM, Native, JS, WASM)
 
 ## Installation
@@ -39,4 +39,4 @@ dependencies {
 
 ## API Reference
 
-For detailed API documentation, see the [API Reference](api/gtfs-realtime/index.html).
+See the [API Reference](api/gtfs-realtime/index.html).
