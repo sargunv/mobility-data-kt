@@ -10,6 +10,7 @@ java = "21.0.2"
 dprint = "0.53.2"
 hk = "1.40.0"
 pkl = "0.30.2"
+xcodes = "1.6.2"
 "aqua:facebook/ktfmt" = "0.62"
 python = "3.14"
 
@@ -31,7 +32,7 @@ run = "./gradlew wasmJsNodeTest"
 
 [tasks."test:native"]
 description = "Run native tests for the current platform"
-run = "./gradlew $( uname | grep -q Darwin && (uname -m | grep -q arm64 && echo macosArm64Test || echo macosX64Test) || echo linuxX64Test )"
+run = "./gradlew $( uname | grep -q Darwin && echo macosArm64Test || echo linuxX64Test )"
 
 [tasks.test]
 description = "Run all tests"
@@ -40,6 +41,47 @@ depends = ["test:jvm", "test:jsnode", "test:wasmjsnode", "test:native"]
 [tasks.docs]
 description = "Serve documentation locally"
 run = "./gradlew :mkdocsServe"
+
+[tasks."xcode:select"]
+description = "Install and select the pinned Xcode version on macOS"
+run = """
+if ! [ "$(uname)" = "Darwin" ]; then
+  echo "xcode:select is only supported on macOS" >&2
+  exit 1
+fi
+
+version="$(tr -d '\n' < .xcode-version)"
+if xcodes installed | grep -Fqx "$version"; then
+  xcodes select "$version"
+else
+  echo "Installing Xcode $version via xcodes. Apple ID credentials may be required." >&2
+  xcodes install "$version" --select
+fi
+"""
+
+[tasks."xcode:install-ios-simulator"]
+description = "Install the iOS simulator runtime required for Apple-native tests"
+run = """
+if ! [ "$(uname)" = "Darwin" ]; then
+  echo "xcode:install-ios-simulator is only supported on macOS" >&2
+  exit 1
+fi
+
+xcodebuild -downloadPlatform iOS
+"""
+
+[tasks."xcode:install-test-runtimes"]
+description = "Install the Apple simulator runtimes required for native test tasks"
+run = """
+if ! [ "$(uname)" = "Darwin" ]; then
+  echo "xcode:install-test-runtimes is only supported on macOS" >&2
+  exit 1
+fi
+
+xcodebuild -downloadPlatform iOS
+xcodebuild -downloadPlatform tvOS
+xcodebuild -downloadPlatform watchOS
+"""
 
 [tasks.check]
 description = "Run all linting and formatting checks"
