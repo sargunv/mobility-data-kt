@@ -27,7 +27,7 @@ public data class FeedHeader(
   /** Publisher-defined version string for the feed. */
   @ProtoNumber(4) public val feedVersion: String? = null,
 ) {
-  /** Whether this update is a full snapshot or a differential update. */
+  /** Whether this feed is a full snapshot or a differential update. */
   @Suppress("UndocumentedPublicProperty")
   @Serializable
   public enum class Incrementality {

@@ -8,7 +8,12 @@ import io.ktor.client.call.body
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.request.get
 
-/** HTTP client for fetching GTFS Realtime feeds. */
+/**
+ * HTTP client for fetching GTFS Realtime feeds.
+ *
+ * All constructors set `expectSuccess = true`; non-2xx responses surface as errors in the returned
+ * [Result].
+ */
 public class GtfsRealtimeClient internal constructor(private val httpClient: HttpClient) :
   AutoCloseable {
 
@@ -35,7 +40,7 @@ public class GtfsRealtimeClient internal constructor(private val httpClient: Htt
    * Fetches and decodes a GTFS Realtime protobuf feed from the given URL.
    *
    * @param feedUrl Fully qualified URL of the GTFS Realtime protobuf feed
-   * @return Result wrapping the decoded feed message, or an error
+   * @return a [Result] containing the decoded [FeedMessage] on success, or the exception on failure
    */
   public suspend fun getFeedMessage(feedUrl: Url): Result<FeedMessage> = suspendRunCatching {
     val bytes = httpClient.get(feedUrl).body<ByteArray>()
