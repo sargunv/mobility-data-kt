@@ -172,6 +172,27 @@ class FeedMessageInteropTest {
 
       assertEquals(officialFeed.entityCount, kotlinFeed.entity.size)
       assertEquals(officialFeed.header.gtfsRealtimeVersion, kotlinFeed.header.gtfsRealtimeVersion)
+
+      // Spot-check entity-level fields for each type present
+      officialFeed.entityList.zip(kotlinFeed.entity).forEach { (official, kotlin) ->
+        assertEquals(official.id, kotlin.id)
+        if (official.hasTripUpdate()) {
+          assertEquals(official.tripUpdate.trip.tripId, kotlin.tripUpdate?.trip?.tripId)
+          assertEquals(
+            official.tripUpdate.stopTimeUpdateCount,
+            kotlin.tripUpdate?.stopTimeUpdate?.size,
+          )
+        }
+        if (official.hasVehicle()) {
+          assertEquals(official.vehicle.vehicle.id, kotlin.vehicle?.vehicle?.id)
+          if (official.vehicle.hasPosition()) {
+            assertEquals(official.vehicle.position.latitude, kotlin.vehicle?.position?.latitude)
+          }
+        }
+        if (official.hasAlert()) {
+          assertEquals(official.alert.informedEntityCount, kotlin.alert?.informedEntity?.size)
+        }
+      }
     }
   }
 }
