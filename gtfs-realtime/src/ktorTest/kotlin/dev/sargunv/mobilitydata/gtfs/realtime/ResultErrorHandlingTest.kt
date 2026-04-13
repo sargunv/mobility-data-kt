@@ -35,7 +35,7 @@ class ResultErrorHandlingTest {
   fun invalidProtobufBodyReturnsFailure() = runTest {
     val engine = MockEngine {
       respond(
-        content = "not protobuf".toByteArray(),
+        content = "not protobuf",
         status = HttpStatusCode.OK,
         headers = headersOf(HttpHeaders.ContentType to listOf("application/x-protobuf")),
       )
