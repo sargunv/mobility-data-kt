@@ -37,7 +37,7 @@ internal val sampleFeedMessage =
             VehiclePosition(
               trip = TripDescriptor(tripId = "trip-1", routeId = "route-a"),
               vehicle = VehicleDescriptor(id = "vehicle-7", label = "Train 7"),
-              position = Position(latitude = 47.6097F, longitude = -122.3331F, speed = 11.5F),
+              position = Position(latitude = 47.625F, longitude = -122.25F, speed = 11.5F),
               currentStopSequence = 3,
               stopId = "stop-3",
               currentStatus = VehiclePosition.VehicleStopStatus.StoppedAt,

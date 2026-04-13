@@ -51,8 +51,8 @@ class ExperimentalEntitiesTest {
                           )
                         )
                     ),
-                  stopLat = 47.6205F,
-                  stopLon = -122.3493F,
+                  stopLat = 47.625F,
+                  stopLon = -122.375F,
                   zoneId = "zone-1",
                   stopUrl =
                     TranslatedString(
