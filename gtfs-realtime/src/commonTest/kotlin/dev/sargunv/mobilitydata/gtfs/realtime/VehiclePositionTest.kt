@@ -30,8 +30,8 @@ class VehiclePositionTest {
                     ),
                   position =
                     Position(
-                      latitude = 49.2827F,
-                      longitude = -123.1207F,
+                      latitude = 49.25F,
+                      longitude = -123.125F,
                       bearing = 182.5F,
                       odometer = 12_345.67,
                       speed = 13.25F,
