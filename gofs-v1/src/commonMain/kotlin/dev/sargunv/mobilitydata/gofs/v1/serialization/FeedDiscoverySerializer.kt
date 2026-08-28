@@ -15,14 +15,17 @@ internal object FeedDiscoverySerializer :
   override fun Map.Entry<FeedType, Url>.toDelegate(): FeedDiscoveryEntry =
     FeedDiscoveryEntry(feedType = this.key, url = this.value)
 
-  override fun deserialize(decoder: Decoder): Map<FeedType, Url> =
-    super.deserialize(decoder).mapKeys { (feedType, _) ->
-      when (feedType.value) {
-        // Freebee publishes the discovery name `wait_times` instead of GOFS v1.0 `wait_time`.
-        "wait_times" -> FeedType.WaitTimes
-        else -> feedType
-      }
-    }
+  override fun deserialize(decoder: Decoder): Map<FeedType, Url> {
+    val feeds = super.deserialize(decoder)
+    // Freebee publishes the discovery name `wait_times` instead of GOFS v1.0 `wait_time`.
+    // When both names are present, the spec name wins.
+    val specUrl = feeds[FeedType.WaitTimes]
+    val aliasUrl = feeds.entries.firstOrNull { it.key.value == "wait_times" }?.value
+    val withoutAlias = feeds.filterKeys { it.value != "wait_times" }
+    val waitTimesUrl = specUrl ?: aliasUrl
+    return if (waitTimesUrl == null) withoutAlias
+    else withoutAlias + (FeedType.WaitTimes to waitTimesUrl)
+  }
 
   @Serializable
   internal data class FeedDiscoveryEntry(@SerialName("name") val feedType: FeedType, val url: Url) :
