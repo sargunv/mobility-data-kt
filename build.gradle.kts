@@ -7,11 +7,7 @@ plugins {
   id("ru.vyarus.mkdocs-build")
 }
 
-if (providers.gradleProperty("disableSemver").orNull == "true") {
-  version = "0.0.0-dev"
-} else {
-  pluginManager.apply("semver")
-}
+version = providers.gradleProperty("mobilityDataVersion").get()
 
 dokka {
   moduleName = "Mobility Data for Kotlin"

@@ -76,3 +76,28 @@ Serve the documentation site locally:
 ```sh
 mise run docs
 ```
+
+The docs task passes versions derived from the Git tags, which the site prints as the coordinates to
+depend on. Gradle on its own uses the `0.0.0` placeholders from `gradle.properties`.
+
+## Versions
+
+Releases are tagged `vMAJOR.MINOR.PATCH`. `gradle.properties` carries placeholder versions, and
+`.mise/bin/version-args` derives the real ones from the tags. Only the tasks that publish or
+document a version pass them to Gradle, so an ordinary build needs no tags in the checkout.
+
+```sh
+mise run version            # what this commit would build as
+mise run version snapshot   # what the nightly job would publish
+mise run version release    # what the release workflow would publish
+```
+
+A tagged commit builds as that release; every other commit builds as a snapshot of the next patch.
+
+To cut a release, tag `main` and push the tag. The Release workflow publishes that version to Maven
+Central and deploys the documentation site:
+
+```sh
+git tag v0.5.0
+git push origin v0.5.0
+```

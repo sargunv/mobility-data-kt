@@ -11,7 +11,6 @@ dependencies {
   implementation(libs.gradle.dokka)
   implementation(libs.gradle.publish)
   implementation(libs.gradle.kover)
-  implementation(libs.gradle.semver)
   implementation(libs.gradle.mkdocs.build)
   implementation(libs.gradle.detekt)
 }

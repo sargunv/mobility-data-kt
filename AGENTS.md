@@ -48,6 +48,11 @@ mise exec -- ./gradlew :module:jvmTest --tests "*SomeTest*"
 
 # Serve the documentation site locally
 mise run docs
+
+# What this commit would build / publish as
+mise run version
+mise run version snapshot
+mise run version release
 ```
 
 Formatters and linters run automatically on pre-commit via [hk](https://hk.jdx.dev); you usually

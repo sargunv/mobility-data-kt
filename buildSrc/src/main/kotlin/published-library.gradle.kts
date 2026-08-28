@@ -11,11 +11,7 @@ plugins {
 
 group = "dev.sargunv.mobility-data"
 
-if (providers.gradleProperty("disableSemver").orNull == "true") {
-  version = "0.0.0-dev"
-} else {
-  pluginManager.apply("semver")
-}
+version = providers.gradleProperty("mobilityDataVersion").get()
 
 kotlin {
   explicitApi()
@@ -43,7 +39,9 @@ dokka {
     configureEach {
       includes.from("MODULE.md")
       sourceLink {
-        remoteUrl("https://github.com/sargunv/mobility-data-kt/tree/v${project.version}/")
+        // Dokka appends the source path with a leading slash.
+        val sourceRef = providers.gradleProperty("mobilityDataSourceRef").get()
+        remoteUrl("https://github.com/sargunv/mobility-data-kt/tree/$sourceRef")
         localDirectory = rootDir
       }
       externalDocumentationLinks {

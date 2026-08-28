@@ -67,7 +67,28 @@ depends = ["test:jvm", "test:jsnode", "test:wasmjsnode", "test:native"]
 
 [tasks.docs]
 description = "Serve documentation locally"
-run = "./gradlew :mkdocsServe"
+run = ".mise/bin/gradle-with-version build :mkdocsServe"
+
+[tasks."build:docs"]
+description = "Build the documentation site and the Dokka API reference"
+run = ".mise/bin/gradle-with-version build :mkdocsBuild"
+
+[tasks."publish:snapshot"]
+description = "Publish a snapshot build to Maven Central."
+run = ".mise/bin/gradle-with-version snapshot publishToMavenCentral"
+
+[tasks."publish:release"]
+description = "Publish and release the current tag to Maven Central."
+run = ".mise/bin/gradle-with-version release publishAndReleaseToMavenCentral --no-configuration-cache"
+
+[tasks.version]
+description = "Print the version properties this checkout builds with."
+usage = '''
+arg "[mode]" default="build" {
+  choices "build" "snapshot" "release"
+}
+'''
+run = '.mise/bin/version-args "$usage_mode"'
 
 [tasks."update:gtfs-realtime:fixtures"]
 description = "Refresh checked-in GTFS Realtime protobuf fixtures from public feeds"
