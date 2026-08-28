@@ -123,10 +123,7 @@ class UnknownEnumDecodeTest {
     val tripUpdate = decoded.entity.single().tripUpdate
     assertEquals("trip-unknown-relationship", decoded.entity.single().id)
     assertEquals("trip-9", tripUpdate?.trip?.tripId)
-    assertEquals(
-      TripDescriptor.ScheduleRelationship.Scheduled,
-      tripUpdate?.trip?.scheduleRelationship,
-    )
+    assertNull(tripUpdate?.trip?.scheduleRelationship)
     assertEquals(12, tripUpdate?.delay)
   }
 

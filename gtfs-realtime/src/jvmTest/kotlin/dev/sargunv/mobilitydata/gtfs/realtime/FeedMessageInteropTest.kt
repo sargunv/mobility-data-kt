@@ -126,6 +126,7 @@ class FeedMessageInteropTest {
     assertEquals("2.0", decoded.header.gtfsRealtimeVersion)
     assertEquals(3, decoded.entity.size)
     assertEquals("trip-1", decoded.entity[0].tripUpdate?.trip?.tripId)
+    assertEquals(null, decoded.entity[0].tripUpdate?.trip?.scheduleRelationship)
     assertEquals(45, decoded.entity[0].tripUpdate?.delay)
     assertEquals(VehiclePosition.OccupancyStatus.Full, decoded.entity[1].vehicle?.occupancyStatus)
     assertEquals(Alert.Cause.Weather, decoded.entity[2].alert?.cause)
@@ -143,6 +144,7 @@ class FeedMessageInteropTest {
 
     assertEquals("2.0", parsed.header.gtfsRealtimeVersion)
     assertEquals("trip-1", parsed.entityList[0].tripUpdate.trip.tripId)
+    assertEquals(false, parsed.entityList[0].tripUpdate.trip.hasScheduleRelationship())
     assertEquals(45, parsed.entityList[0].tripUpdate.delay)
     assertEquals(
       GtfsRealtime.VehiclePosition.OccupancyStatus.FULL,

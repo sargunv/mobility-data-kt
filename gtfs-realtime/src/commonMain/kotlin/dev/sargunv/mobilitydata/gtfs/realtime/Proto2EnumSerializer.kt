@@ -137,10 +137,9 @@ internal object SeverityLevelSerializer :
   )
 
 internal object TripScheduleRelationshipSerializer :
-  KSerializer<TripDescriptor.ScheduleRelationship> by proto2EnumSerializer(
+  KSerializer<TripDescriptor.ScheduleRelationship?> by proto2NullableEnumSerializer(
     generated = TripDescriptor.ScheduleRelationship.serializer(),
     values = TripDescriptor.ScheduleRelationship.entries,
-    fallback = TripDescriptor.ScheduleRelationship.Scheduled,
   )
 
 internal object StopTimeScheduleRelationshipSerializer :

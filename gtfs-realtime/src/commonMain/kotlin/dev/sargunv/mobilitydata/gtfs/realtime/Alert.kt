@@ -60,6 +60,7 @@ public data class Alert(
     @ProtoNumber(10) Construction,
     @ProtoNumber(11) PoliceActivity,
     @ProtoNumber(12) MedicalEmergency,
+    @ProtoNumber(13) SpecialEvent,
   }
 
   /** Rider-visible effect of the alert. */
