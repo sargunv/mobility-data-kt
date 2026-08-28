@@ -30,7 +30,7 @@ public data class BookingRule(
    * One or many zone IDs from zones.json that cover the area of the destination for this booking
    * rule.
    */
-  @SerialName("to_zone_ids") public val toZoneIds: List<String>?,
+  @SerialName("to_zone_ids") public val toZoneIds: List<String>? = null,
   /** Indicates how far in advance booking can be made. */
   @SerialName("booking_type") public val bookingType: BookingType,
   /**

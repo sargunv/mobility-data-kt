@@ -132,4 +132,43 @@ class ZonesTest {
     val decodedResponse = GofsJson.decodeFromString<GofsFeedResponse<Zones>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
   }
+
+  @Test
+  fun decodeOmitsOptionalName() {
+    val json = // language=JSON
+      """
+      {
+        "last_updated": 1609866247,
+        "ttl": 0,
+        "version": "1.0",
+        "data": {
+          "zones": {
+            "type": "FeatureCollection",
+            "features": [
+              {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                  "type": "Polygon",
+                  "coordinates": [
+                    [
+                      [-74.1, 45.35],
+                      [-73.3, 45.35],
+                      [-73.3, 45.75],
+                      [-74.1, 45.75],
+                      [-74.1, 45.35]
+                    ]
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+      """
+        .trimIndent()
+
+    val decoded = GofsJson.decodeFromString<GofsFeedResponse<Zones>>(json)
+    assertEquals(null, decoded.data.zones.features.single().properties?.name)
+  }
 }

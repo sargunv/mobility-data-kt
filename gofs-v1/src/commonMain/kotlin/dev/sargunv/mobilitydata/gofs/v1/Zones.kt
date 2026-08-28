@@ -24,6 +24,6 @@ public data class Zones(
 /** Properties for a zone feature. */
 @Serializable
 public data class Zone(
-  /** Indicates the name of the zone as displayed to the riders. */
-  public val name: String
+  /** Indicates the name of the zone as displayed to the riders. Optional in GOFS v1.0. */
+  public val name: String? = null
 )
