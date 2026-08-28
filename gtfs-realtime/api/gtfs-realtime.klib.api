@@ -278,8 +278,6 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader { // dev.sargunv.m
     }
 
     final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Companion|null[0]
-        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Companion.$childSerializers|{}$childSerializers[0]
-
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader> // dev.sargunv.mobilitydata.gtfs.realtime/FeedHeader.Companion.serializer|serializer(){}[0]
     }
 }
@@ -489,8 +487,6 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/Stop { // dev.sargunv.mobilit
     }
 
     final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/Stop.Companion|null[0]
-        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/Stop.Companion.$childSerializers|{}$childSerializers[0]
-
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/Stop> // dev.sargunv.mobilitydata.gtfs.realtime/Stop.Companion.serializer|serializer(){}[0]
     }
 }
@@ -767,8 +763,6 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor { // dev.sargu
     }
 
     final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.Companion|null[0]
-        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.Companion.$childSerializers|{}$childSerializers[0]
-
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor> // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.Companion.serializer|serializer(){}[0]
     }
 }
@@ -1043,8 +1037,6 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate { // dev.sargunv.m
             }
 
             final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.Companion|null[0]
-                final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.Companion.$childSerializers|{}$childSerializers[0]
-
                 final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.StopTimeProperties.Companion.serializer|serializer(){}[0]
             }
         }
@@ -1059,8 +1051,6 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate { // dev.sargunv.m
         }
 
         final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.Companion|null[0]
-            final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.Companion.$childSerializers|{}$childSerializers[0]
-
             final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate> // dev.sargunv.mobilitydata.gtfs.realtime/TripUpdate.StopTimeUpdate.Companion.serializer|serializer(){}[0]
         }
     }
@@ -1171,8 +1161,6 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor { // dev.sa
     }
 
     final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.Companion|null[0]
-        final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.Companion.$childSerializers|{}$childSerializers[0]
-
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor> // dev.sargunv.mobilitydata.gtfs.realtime/VehicleDescriptor.Companion.serializer|serializer(){}[0]
     }
 }
@@ -1312,8 +1300,6 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition { // dev.sarg
         }
 
         final object Companion { // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.Companion|null[0]
-            final val $childSerializers // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.Companion.$childSerializers|{}$childSerializers[0]
-
             final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails> // dev.sargunv.mobilitydata.gtfs.realtime/VehiclePosition.CarriageDetails.Companion.serializer|serializer(){}[0]
         }
     }

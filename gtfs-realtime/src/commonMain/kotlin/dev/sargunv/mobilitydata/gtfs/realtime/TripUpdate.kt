@@ -48,9 +48,12 @@ public data class TripUpdate(
     /** Updated departure timing. */
     @ProtoNumber(3) public val departure: StopTimeEvent? = null,
     /** Predicted passenger occupancy at departure. */
-    @ProtoNumber(7) public val departureOccupancyStatus: VehiclePosition.OccupancyStatus? = null,
+    @ProtoNumber(7)
+    @Serializable(with = NullableOccupancyStatusSerializer::class)
+    public val departureOccupancyStatus: VehiclePosition.OccupancyStatus? = null,
     /** Relationship between this stop time and the static schedule. */
     @ProtoNumber(5)
+    @Serializable(with = StopTimeScheduleRelationshipSerializer::class)
     public val scheduleRelationship: ScheduleRelationship = ScheduleRelationship.Scheduled,
     /** Realtime property overrides for this stop time. */
     @ProtoNumber(6) public val stopTimeProperties: StopTimeProperties? = null,
@@ -73,9 +76,13 @@ public data class TripUpdate(
       /** Overridden headsign displayed at this stop. */
       @ProtoNumber(2) public val stopHeadsign: String? = null,
       /** Overridden pickup behavior at this stop. */
-      @ProtoNumber(3) public val pickupType: DropOffPickupType? = null,
+      @ProtoNumber(3)
+      @Serializable(with = NullableDropOffPickupTypeSerializer::class)
+      public val pickupType: DropOffPickupType? = null,
       /** Overridden drop-off behavior at this stop. */
-      @ProtoNumber(4) public val dropOffType: DropOffPickupType? = null,
+      @ProtoNumber(4)
+      @Serializable(with = NullableDropOffPickupTypeSerializer::class)
+      public val dropOffType: DropOffPickupType? = null,
     ) {
       /** Updated pickup or drop-off behavior. */
       @Suppress("UndocumentedPublicProperty")
@@ -122,6 +129,7 @@ public data class TripDescriptor(
   @ProtoNumber(3) public val startDate: String? = null,
   /** Relationship between this trip and the static schedule. */
   @ProtoNumber(4)
+  @Serializable(with = TripScheduleRelationshipSerializer::class)
   public val scheduleRelationship: ScheduleRelationship = ScheduleRelationship.Scheduled,
   /** Reference to a modified trip, if applicable. */
   @ProtoNumber(7) public val modifiedTrip: ModifiedTripSelector? = null,
@@ -165,6 +173,7 @@ public data class VehicleDescriptor(
   @ProtoNumber(3) public val licensePlate: String? = null,
   /** Wheelchair accessibility of the vehicle. */
   @ProtoNumber(4)
+  @Serializable(with = WheelchairAccessibleSerializer::class)
   public val wheelchairAccessible: WheelchairAccessible = WheelchairAccessible.NoValue,
 ) {
   /** Wheelchair accessibility override for the trip or vehicle. */
@@ -213,7 +222,9 @@ public data class Stop(
   /** IANA time zone identifier for the stop. */
   @ProtoNumber(12) public val stopTimezone: TimeZoneId? = null,
   /** Wheelchair boarding availability at the stop. */
-  @ProtoNumber(13) public val wheelchairBoarding: WheelchairBoarding = WheelchairBoarding.Unknown,
+  @ProtoNumber(13)
+  @Serializable(with = WheelchairBoardingSerializer::class)
+  public val wheelchairBoarding: WheelchairBoarding = WheelchairBoarding.Unknown,
   /** GTFS `level_id` for the stop. */
   @ProtoNumber(14) public val levelId: String? = null,
   /** Platform identifier for the stop. */

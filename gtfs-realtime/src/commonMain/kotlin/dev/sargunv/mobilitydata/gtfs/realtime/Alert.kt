@@ -14,9 +14,13 @@ public data class Alert(
   /** GTFS entities affected by this alert. */
   @ProtoNumber(5) public val informedEntity: List<EntitySelector> = emptyList(),
   /** Root cause of the service disruption. */
-  @ProtoNumber(6) public val cause: Cause = Cause.UnknownCause,
+  @ProtoNumber(6)
+  @Serializable(with = CauseSerializer::class)
+  public val cause: Cause = Cause.UnknownCause,
   /** Rider-visible effect on service. */
-  @ProtoNumber(7) public val effect: Effect = Effect.UnknownEffect,
+  @ProtoNumber(7)
+  @Serializable(with = EffectSerializer::class)
+  public val effect: Effect = Effect.UnknownEffect,
   /** URL with additional alert information. */
   @ProtoNumber(8) public val url: TranslatedString? = null,
   /** Short summary of the alert. */
@@ -28,7 +32,9 @@ public data class Alert(
   /** Text-to-speech version of [descriptionText]. */
   @ProtoNumber(13) public val ttsDescriptionText: TranslatedString? = null,
   /** Severity of the alert. */
-  @ProtoNumber(14) public val severityLevel: SeverityLevel = SeverityLevel.UnknownSeverity,
+  @ProtoNumber(14)
+  @Serializable(with = SeverityLevelSerializer::class)
+  public val severityLevel: SeverityLevel = SeverityLevel.UnknownSeverity,
   /** Image to display alongside the alert. */
   @ProtoNumber(15) public val image: TranslatedImage? = null,
   /** Accessibility alt text for [image]. */
