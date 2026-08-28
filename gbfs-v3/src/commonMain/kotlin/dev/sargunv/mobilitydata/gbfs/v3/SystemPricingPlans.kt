@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
+import dev.sargunv.mobilitydata.utils.Decimal
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.serialization.SerialName
@@ -40,7 +41,7 @@ public data class PricingPlan(
    * the base price that is charged only once per trip (typically the price for unlocking) in
    * addition to per_km_pricing and/or per_min_pricing.
    */
-  public val price: Double,
+  public val price: Decimal,
 
   /**
    * Will additional tax be added to the base price?
@@ -102,7 +103,7 @@ public data class PricingInterval(
    * Can be a negative number, which indicates that the traveler will receive a discount. REQUIRED
    * if per_km_pricing or per_min_pricing is defined.
    */
-  public val rate: Double,
+  public val rate: Decimal,
 
   /**
    * Interval in units at which the rate of this segment is either reapplied indefinitely, or if

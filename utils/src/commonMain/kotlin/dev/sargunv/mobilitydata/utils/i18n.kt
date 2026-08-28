@@ -7,6 +7,15 @@ import kotlinx.serialization.Serializable
 public typealias CurrencyCode = String
 
 /**
+ * ISO 4217 minor-unit (fraction) digits for this currency code.
+ *
+ * Returns `null` if the code is unknown or has no usable minor unit, such as precious-metal and
+ * some fund codes. Values come from SIX Group's ISO 4217 List One, published 2026-01-01.
+ */
+public val CurrencyCode.defaultFractionDigits: Int?
+  get() = Iso4217MinorUnits[this]
+
+/**
  * Country code following the
  * [ISO 3166-1 alpha-2 notation](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
  */

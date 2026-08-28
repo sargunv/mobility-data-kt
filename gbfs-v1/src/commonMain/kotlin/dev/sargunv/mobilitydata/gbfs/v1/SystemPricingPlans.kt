@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v1
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
+import dev.sargunv.mobilitydata.utils.Decimal
 import dev.sargunv.mobilitydata.utils.IntBoolean
 import dev.sargunv.mobilitydata.utils.Url
 import kotlinx.serialization.SerialName
@@ -34,7 +35,7 @@ public data class PricingPlan(
   public val currency: CurrencyCode,
 
   /** Fare price, in the unit specified by currency. */
-  public val price: Double,
+  public val price: Decimal,
 
   /**
    * Will additional tax be added to the base price?

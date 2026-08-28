@@ -3,6 +3,50 @@ public final class dev/sargunv/mobilitydata/utils/DatetimeKt {
 	public static final fun toTimeZoneOrNull (Ljava/lang/String;)Lkotlinx/datetime/TimeZone;
 }
 
+public final class dev/sargunv/mobilitydata/utils/Decimal : java/lang/Comparable {
+	public static final field Companion Ldev/sargunv/mobilitydata/utils/Decimal$Companion;
+	public static final fun abs-OWyw9kc (J)J
+	public static final synthetic fun box-impl (J)Ldev/sargunv/mobilitydata/utils/Decimal;
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public fun compareTo-4QY4ec8 (J)I
+	public static fun compareTo-4QY4ec8 (JJ)I
+	public static final fun div-utXTLJ8 (JJ)J
+	public static final fun divide-OPsqKJc (JJLdev/sargunv/mobilitydata/utils/RoundingMode;)J
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (JLjava/lang/Object;)Z
+	public static final fun equals-impl0 (JJ)Z
+	public fun hashCode ()I
+	public static fun hashCode-impl (J)I
+	public static final fun minus-utXTLJ8 (JJ)J
+	public static final fun plus-utXTLJ8 (JJ)J
+	public static final fun round-_SxG2PM (JILdev/sargunv/mobilitydata/utils/RoundingMode;)J
+	public static final fun times-utXTLJ8 (JJ)J
+	public static final fun toDouble-impl (J)D
+	public static final fun toFloat-impl (J)F
+	public static final fun toIntExact-impl (J)I
+	public static final fun toLongExact-impl (J)J
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (J)Ljava/lang/String;
+	public static final fun toString-impl (JI)Ljava/lang/String;
+	public static final fun unaryMinus-OWyw9kc (J)J
+	public final synthetic fun unbox-impl ()J
+}
+
+public final class dev/sargunv/mobilitydata/utils/Decimal$Companion {
+	public final fun getONE-OWyw9kc ()J
+	public final fun getTEN-OWyw9kc ()J
+	public final fun getZERO-OWyw9kc ()J
+	public final fun of-mbt7RfU (I)J
+	public final fun of-mbt7RfU (J)J
+	public final fun parse-mbt7RfU (Ljava/lang/String;)J
+	public final fun parseOrNull-SW7QQnc (Ljava/lang/String;)Ldev/sargunv/mobilitydata/utils/Decimal;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/utils/I18nKt {
+	public static final fun getDefaultFractionDigits (Ljava/lang/String;)Ljava/lang/Integer;
+}
+
 public final class dev/sargunv/mobilitydata/utils/ResultKt {
 	public static final fun suspendRunCatching (Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;
 }
@@ -22,6 +66,20 @@ public final class dev/sargunv/mobilitydata/utils/RgbColor {
 	public fun toString ()Ljava/lang/String;
 	public static fun toString-impl (I)Ljava/lang/String;
 	public final synthetic fun unbox-impl ()I
+}
+
+public final class dev/sargunv/mobilitydata/utils/RoundingMode : java/lang/Enum {
+	public static final field CEILING Ldev/sargunv/mobilitydata/utils/RoundingMode;
+	public static final field DOWN Ldev/sargunv/mobilitydata/utils/RoundingMode;
+	public static final field FLOOR Ldev/sargunv/mobilitydata/utils/RoundingMode;
+	public static final field HALF_DOWN Ldev/sargunv/mobilitydata/utils/RoundingMode;
+	public static final field HALF_EVEN Ldev/sargunv/mobilitydata/utils/RoundingMode;
+	public static final field HALF_UP Ldev/sargunv/mobilitydata/utils/RoundingMode;
+	public static final field UNNECESSARY Ldev/sargunv/mobilitydata/utils/RoundingMode;
+	public static final field UP Ldev/sargunv/mobilitydata/utils/RoundingMode;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/sargunv/mobilitydata/utils/RoundingMode;
+	public static fun values ()[Ldev/sargunv/mobilitydata/utils/RoundingMode;
 }
 
 public final class dev/sargunv/mobilitydata/utils/ServiceTime : java/lang/Comparable {
@@ -73,6 +131,15 @@ public final class dev/sargunv/mobilitydata/utils/serialization/AbbreviatedWeekd
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lkotlinx/datetime/DayOfWeek;)V
+}
+
+public final class dev/sargunv/mobilitydata/utils/serialization/DecimalSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/DecimalSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize-mbt7RfU (Lkotlinx/serialization/encoding/Decoder;)J
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun serialize-hGjGj-I (Lkotlinx/serialization/encoding/Encoder;J)V
 }
 
 public final class dev/sargunv/mobilitydata/utils/serialization/EpochSecondsSerializer : kotlinx/serialization/KSerializer {

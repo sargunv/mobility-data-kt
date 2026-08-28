@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
+import dev.sargunv.mobilitydata.utils.Decimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -15,14 +16,14 @@ private val expected =
   listOf(
     FareAttribute(
       fareId = "p",
-      price = 1.25,
+      price = Decimal.parse("1.25"),
       currencyType = "USD",
       paymentMethod = PaymentMethod.OnBoard,
       transfers = 0,
     ),
     FareAttribute(
       fareId = "a",
-      price = 5.25,
+      price = Decimal.parse("5.25"),
       currencyType = "USD",
       paymentMethod = PaymentMethod.OnBoard,
       transfers = null,

@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v1
 
+import dev.sargunv.mobilitydata.utils.Decimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
@@ -45,7 +46,7 @@ private val expectedResponse =
               planId = "plan2",
               name = "One-Way",
               currency = "USD",
-              price = 2.1,
+              price = Decimal.parse("2.1"),
               isTaxable = false,
               description = "Includes 10km, overage fees apply after 10km.",
             )
@@ -70,8 +71,6 @@ class SystemPricingPlansTest {
 
   @Test
   fun decodeStringPrice() {
-    // In GBFS v1, price can be a string or a number
-
     val json = // language=json
       """
       {
@@ -90,7 +89,7 @@ class SystemPricingPlansTest {
         planId = "",
         name = "",
         currency = "",
-        price = 3.1,
+        price = Decimal.parse("3.1"),
         isTaxable = false,
         description = "",
       ),

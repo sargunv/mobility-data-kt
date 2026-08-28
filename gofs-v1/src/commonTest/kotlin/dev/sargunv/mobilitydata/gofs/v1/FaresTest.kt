@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
+import dev.sargunv.mobilitydata.utils.Decimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
@@ -65,11 +66,11 @@ private val expectedResponse =
               currency = "CAD",
               kilometer =
                 listOf(
-                  FareEntry(interval = 1.1, start = 10, amount = 1.1),
-                  FareEntry(interval = 5.1, start = 25, amount = 3.1),
+                  FareEntry(interval = 1.1, start = 10, amount = Decimal.parse("1.1")),
+                  FareEntry(interval = 5.1, start = 25, amount = Decimal.parse("3.1")),
                 ),
-              rider = listOf(FareEntry(amount = 2.5)),
-              luggage = listOf(FareEntry(start = 3, amount = 5.1)),
+              rider = listOf(FareEntry(amount = Decimal.parse("2.5"))),
+              luggage = listOf(FareEntry(start = 3, amount = Decimal.parse("5.1"))),
             )
           )
       ),

@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import dev.sargunv.mobilitydata.utils.Decimal
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -73,14 +74,24 @@ private val expectedResponse1 =
               planId = "plan2",
               name = mapOf("en" to "One-Way"),
               currency = "USD",
-              price = 2.01,
+              price = Decimal.parse("2.01"),
               isTaxable = false,
               description = mapOf("en" to "Includes 10km, overage fees apply after 10km."),
               perKmPricing =
                 listOf(
-                  PricingInterval(start = 10, rate = 1.01, interval = 1, end = 25),
-                  PricingInterval(start = 25, rate = 0.51, interval = 1, end = null),
-                  PricingInterval(start = 25, rate = 3.01, interval = 5, end = null),
+                  PricingInterval(start = 10, rate = Decimal.parse("1.01"), interval = 1, end = 25),
+                  PricingInterval(
+                    start = 25,
+                    rate = Decimal.parse("0.51"),
+                    interval = 1,
+                    end = null,
+                  ),
+                  PricingInterval(
+                    start = 25,
+                    rate = Decimal.parse("3.01"),
+                    interval = 5,
+                    end = null,
+                  ),
                 ),
             )
           )
@@ -147,14 +158,18 @@ private val expectedResponse2 =
               planId = "plan3",
               name = mapOf("en" to "Simple Rate"),
               currency = "CAD",
-              price = 3.01,
+              price = Decimal.parse("3.01"),
               isTaxable = true,
               description =
                 mapOf("en" to "$3 unlock fee, $0.25 per kilometer and 0.50 per minute."),
               perKmPricing =
-                listOf(PricingInterval(start = 0, rate = 0.25, interval = 1, end = null)),
+                listOf(
+                  PricingInterval(start = 0, rate = Decimal.parse("0.25"), interval = 1, end = null)
+                ),
               perMinPricing =
-                listOf(PricingInterval(start = 0, rate = 0.5, interval = 1, end = null)),
+                listOf(
+                  PricingInterval(start = 0, rate = Decimal.parse("0.5"), interval = 1, end = null)
+                ),
             )
           )
       ),

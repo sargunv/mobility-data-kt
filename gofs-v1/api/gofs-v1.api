@@ -378,17 +378,16 @@ public final class dev/sargunv/mobilitydata/gofs/v1/Fare$Companion {
 
 public final class dev/sargunv/mobilitydata/gofs/v1/FareEntry {
 	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/FareEntry$Companion;
-	public fun <init> ()V
-	public fun <init> (Ljava/lang/Double;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Double;)V
-	public synthetic fun <init> (Ljava/lang/Double;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Double;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/Double;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/Decimal;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/Double;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/Decimal;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/Double;
 	public final fun component2 ()Ljava/lang/Integer;
 	public final fun component3 ()Ljava/lang/Integer;
-	public final fun component4 ()Ljava/lang/Double;
-	public final fun copy (Ljava/lang/Double;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Double;)Ldev/sargunv/mobilitydata/gofs/v1/FareEntry;
-	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gofs/v1/FareEntry;Ljava/lang/Double;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Double;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/FareEntry;
+	public final fun component4-AqpWU4U ()Ldev/sargunv/mobilitydata/utils/Decimal;
+	public final fun copy-ZZvfV98 (Ljava/lang/Double;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/Decimal;)Ldev/sargunv/mobilitydata/gofs/v1/FareEntry;
+	public static synthetic fun copy-ZZvfV98$default (Ldev/sargunv/mobilitydata/gofs/v1/FareEntry;Ljava/lang/Double;Ljava/lang/Integer;Ljava/lang/Integer;Ldev/sargunv/mobilitydata/utils/Decimal;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/FareEntry;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getAmount ()Ljava/lang/Double;
+	public final fun getAmount-AqpWU4U ()Ldev/sargunv/mobilitydata/utils/Decimal;
 	public final fun getEnd ()Ljava/lang/Integer;
 	public final fun getInterval ()Ljava/lang/Double;
 	public final fun getStart ()Ljava/lang/Integer;
@@ -699,20 +698,20 @@ public final class dev/sargunv/mobilitydata/gofs/v1/OperatingRules$Companion {
 
 public final class dev/sargunv/mobilitydata/gofs/v1/RealtimeBooking {
 	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/RealtimeBooking$Companion;
-	public synthetic fun <init> (Ljava/lang/String;JLkotlin/time/Duration;Ljava/lang/Double;Ljava/lang/String;Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;JLkotlin/time/Duration;Ljava/lang/Double;Ljava/lang/String;Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;JLkotlin/time/Duration;Ldev/sargunv/mobilitydata/utils/Decimal;Ljava/lang/String;Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;JLkotlin/time/Duration;Ldev/sargunv/mobilitydata/utils/Decimal;Ljava/lang/String;Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2-UwyO8pc ()J
 	public final fun component3-FghU774 ()Lkotlin/time/Duration;
-	public final fun component4 ()Ljava/lang/Double;
+	public final fun component4-AqpWU4U ()Ldev/sargunv/mobilitydata/utils/Decimal;
 	public final fun component5 ()Ljava/lang/String;
 	public final fun component6 ()Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;
-	public final fun copy-016xb7w (Ljava/lang/String;JLkotlin/time/Duration;Ljava/lang/Double;Ljava/lang/String;Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;)Ldev/sargunv/mobilitydata/gofs/v1/RealtimeBooking;
-	public static synthetic fun copy-016xb7w$default (Ldev/sargunv/mobilitydata/gofs/v1/RealtimeBooking;Ljava/lang/String;JLkotlin/time/Duration;Ljava/lang/Double;Ljava/lang/String;Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/RealtimeBooking;
+	public final fun copy-d0r_Ymk (Ljava/lang/String;JLkotlin/time/Duration;Ldev/sargunv/mobilitydata/utils/Decimal;Ljava/lang/String;Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;)Ldev/sargunv/mobilitydata/gofs/v1/RealtimeBooking;
+	public static synthetic fun copy-d0r_Ymk$default (Ldev/sargunv/mobilitydata/gofs/v1/RealtimeBooking;Ljava/lang/String;JLkotlin/time/Duration;Ldev/sargunv/mobilitydata/utils/Decimal;Ljava/lang/String;Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/RealtimeBooking;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getBookingDetail ()Ldev/sargunv/mobilitydata/gofs/v1/BookingDetail;
 	public final fun getBrandId ()Ljava/lang/String;
-	public final fun getTravelCost ()Ljava/lang/Double;
+	public final fun getTravelCost-AqpWU4U ()Ldev/sargunv/mobilitydata/utils/Decimal;
 	public final fun getTravelCostCurrency ()Ljava/lang/String;
 	public final fun getTravelTime-FghU774 ()Lkotlin/time/Duration;
 	public final fun getWaitTime-UwyO8pc ()J
