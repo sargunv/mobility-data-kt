@@ -40,6 +40,8 @@ class DecimalParseTest {
         "0.0000000001e1" to "0.000000001",
         "9223372036854775807e-9" to "9223372036.854775807",
         "-9223372036854775808e-9" to "-9223372036.854775808",
+        "92233720368547758070e-10" to "9223372036.854775807",
+        "-92233720368547758080e-10" to "-9223372036.854775808",
       )
     for ((input, canonical) in cases) {
       assertEquals(canonical, Decimal.parse(input).toString(), input)
@@ -99,6 +101,8 @@ class DecimalParseTest {
     assertEquals(Decimal.parse("0.000000001"), Decimal.parse("0.0000000001e1"))
     assertEquals(Decimal.parse("9223372036.854775807"), Decimal.parse("9223372036854775807e-9"))
     assertEquals(Decimal.parse("-9223372036.854775808"), Decimal.parse("-9223372036854775808e-9"))
+    assertEquals(Decimal.parse("9223372036.854775807"), Decimal.parse("92233720368547758070e-10"))
+    assertEquals(Decimal.parse("-9223372036.854775808"), Decimal.parse("-92233720368547758080e-10"))
   }
 
   @Test

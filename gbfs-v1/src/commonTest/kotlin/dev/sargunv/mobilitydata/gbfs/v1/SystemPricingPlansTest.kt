@@ -3,11 +3,9 @@ package dev.sargunv.mobilitydata.gbfs.v1
 import dev.sargunv.mobilitydata.utils.Decimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertFailsWith
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
-import kotlinx.serialization.SerializationException
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -86,6 +84,16 @@ class SystemPricingPlansTest {
       """
         .trimIndent()
 
-    assertFailsWith<SerializationException> { GbfsJson.decodeFromString<PricingPlan>(json) }
+    assertEquals(
+      PricingPlan(
+        planId = "",
+        name = "",
+        currency = "",
+        price = Decimal.parse("3.1"),
+        isTaxable = false,
+        description = "",
+      ),
+      GbfsJson.decodeFromString<PricingPlan>(json),
+    )
   }
 }

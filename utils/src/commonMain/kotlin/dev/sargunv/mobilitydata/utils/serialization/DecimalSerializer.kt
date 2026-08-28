@@ -40,7 +40,7 @@ public object DecimalSerializer : KSerializer<Decimal> {
         val primitive =
           element as? JsonPrimitive
             ?: throw SerializationException("Expected a JSON primitive for Decimal, got $element")
-        if (primitive.isString) {
+        if (primitive.isString && !decoder.json.configuration.isLenient) {
           throw SerializationException("Expected a JSON number for Decimal, got a string")
         }
         primitive.content

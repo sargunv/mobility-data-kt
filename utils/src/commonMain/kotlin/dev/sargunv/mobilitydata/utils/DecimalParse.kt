@@ -15,23 +15,15 @@ internal fun parseDecimal(value: String): Decimal {
       else -> false
     }
 
-  var significand = text.takeScaledDigits(negative) ?: text.invalid()
+  val digits = StringBuilder()
+  if (text.takeDigitsInto(digits) == 0) text.invalid()
+
   var fractionDigits = 0
   if (text.peek() == '.') {
     text.take()
-    val firstFraction = text.takeDigit() ?: text.invalid()
-    significand = appendScaledDigit(significand, firstFraction, negative)
-    fractionDigits = 1
-    while (true) {
-      val digit = text.takeDigit() ?: break
-      significand = appendScaledDigit(significand, digit, negative)
-      fractionDigits++
-    }
-  }
-
-  while (fractionDigits > 0 && significand % 10L == 0L) {
-    significand /= 10L
-    fractionDigits--
+    val added = text.takeDigitsInto(digits)
+    if (added == 0) text.invalid()
+    fractionDigits = added
   }
 
   var exponent = 0L
@@ -42,13 +34,47 @@ internal fun parseDecimal(value: String): Decimal {
   }
 
   if (!text.atEnd()) text.invalid()
-
-  val scaleShift =
-    subtractExact(addExact(DECIMAL_SCALE.toLong(), exponent), fractionDigits.toLong())
-  return Decimal.fromScaled(applyScaleShift(significand, scaleShift))
+  return Decimal.fromScaled(toScaledValue(digits, fractionDigits, exponent, negative))
 }
 
 private const val MAX_SCALE_SHIFT: Long = 40L
+
+private fun toScaledValue(
+  digits: StringBuilder,
+  fractionDigits: Int,
+  exponent: Long,
+  negative: Boolean,
+): Long {
+  var start = 0
+  var end = digits.length
+  var fraction = fractionDigits
+
+  while (fraction > 0 && end > start && digits[end - 1] == '0') {
+    end--
+    fraction--
+  }
+  while (start < end - 1 && digits[start] == '0') {
+    start++
+  }
+
+  var scaleShift = subtractExact(addExact(DECIMAL_SCALE.toLong(), exponent), fraction.toLong())
+  while (scaleShift < 0L && end > start) {
+    if (digits[end - 1] != '0') {
+      throw ArithmeticException("Decimal exponent requires more than 9 fractional digits")
+    }
+    end--
+    scaleShift++
+  }
+  if (scaleShift < 0L || start == end || (end - start == 1 && digits[start] == '0')) {
+    return 0L
+  }
+
+  var significand = 0L
+  for (index in start until end) {
+    significand = appendDigit(significand, (digits[index] - '0').toLong(), negative)
+  }
+  return applyScaleShift(significand, scaleShift)
+}
 
 private fun applyScaleShift(significand: Long, scaleShift: Long): Long {
   if (significand == 0L || scaleShift == 0L) return significand
@@ -95,7 +121,7 @@ private fun divideByPowersOfTen(scaled: Long, exponent: Int): Long {
   return result
 }
 
-private fun appendScaledDigit(scaled: Long, digit: Long, negative: Boolean): Long =
+private fun appendDigit(scaled: Long, digit: Long, negative: Boolean): Long =
   if (negative) {
     subtractExact(multiplyExact(scaled, 10L), digit)
   } else {
@@ -120,14 +146,14 @@ private class DecimalText(private val text: String) {
     return (char - '0').toLong()
   }
 
-  fun takeScaledDigits(negative: Boolean): Long? {
-    val first = takeDigit() ?: return null
-    var scaled = appendScaledDigit(0L, first, negative)
+  fun takeDigitsInto(digits: StringBuilder): Int {
+    var count = 0
     while (true) {
       val digit = takeDigit() ?: break
-      scaled = appendScaledDigit(scaled, digit, negative)
+      digits.append('0' + digit.toInt())
+      count++
     }
-    return scaled
+    return count
   }
 
   fun takeExponent(): Long {

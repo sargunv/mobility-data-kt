@@ -62,6 +62,15 @@ class DecimalSerializerTest {
   }
 
   @Test
+  fun lenientJsonAcceptsQuotedNumericStrings() {
+    val lenient = Json { isLenient = true }
+    assertEquals(
+      TestData(Decimal.parse("3.1")),
+      lenient.decodeFromString(TestData.serializer(), """{"amount":"3.1"}"""),
+    )
+  }
+
+  @Test
   fun jsonDecodesExponentFormExactly() {
     val cases =
       listOf(
@@ -73,6 +82,7 @@ class DecimalSerializerTest {
         "0.0000000001e1" to "0.000000001",
         "9223372036854775807e-9" to "9223372036.854775807",
         "-9223372036854775808e-9" to "-9223372036.854775808",
+        "92233720368547758070e-10" to "9223372036.854775807",
       )
     for ((token, canonical) in cases) {
       val decoded = json.decodeFromString(TestData.serializer(), """{"amount":$token}""")
