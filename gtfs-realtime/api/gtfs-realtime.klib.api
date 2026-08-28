@@ -67,6 +67,7 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/Alert { // dev.sargunv.mobili
         enum entry MedicalEmergency // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.MedicalEmergency|null[0]
         enum entry OtherCause // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.OtherCause|null[0]
         enum entry PoliceActivity // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.PoliceActivity|null[0]
+        enum entry SpecialEvent // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.SpecialEvent|null[0]
         enum entry Strike // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.Strike|null[0]
         enum entry TechnicalProblem // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.TechnicalProblem|null[0]
         enum entry UnknownCause // dev.sargunv.mobilitydata.gtfs.realtime/Alert.Cause.UnknownCause|null[0]

@@ -59,6 +59,7 @@ public final class dev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause : java/lan
 	public static final field MedicalEmergency Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
 	public static final field OtherCause Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
 	public static final field PoliceActivity Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
+	public static final field SpecialEvent Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
 	public static final field Strike Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
 	public static final field TechnicalProblem Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
 	public static final field UnknownCause Ldev/sargunv/mobilitydata/gtfs/realtime/Alert$Cause;
