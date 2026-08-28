@@ -1,18 +1,37 @@
+# https://mise.jdx.dev
+min_version = "2026.7.15"
+
 [settings]
 experimental = true
 pin = true
+lockfile = true
+minimum_release_age = "3d"
 
 [hooks]
 postinstall = ["hk install --mise"]
 
 [tools]
-java = "21.0.2"
-dprint = "0.53.2"
-hk = "1.40.0"
-pkl = "0.30.2"
-xcodes = "1.6.2"
+"core:java" = "21.0.2"
+"aqua:dprint/dprint" = "0.53.2"
+"aqua:jdx/hk" = "1.40.0"
+"aqua:apple/pkl" = "0.30.2"
 "aqua:facebook/ktfmt" = "0.62"
-python = "3.14"
+"core:python" = "3.14"
+"aqua:git-lfs/git-lfs" = "3.7.1"
+
+# The CLI only; Xcode itself is installed via the xcode:* tasks. macOS-only.
+"aqua:XcodesOrg/xcodes" = { version = "1.6.2", os = ["macos"] }
+
+# Fetch the Git-LFS sample datasets used by tests. Runs automatically before
+# `mise run`/`mise exec` when the local LFS object cache is missing.
+[deps.git-lfs]
+auto = true
+outputs = [".git/lfs"]
+description = "Fetch the Git-LFS sample datasets used by tests"
+run = """
+git lfs install --local --skip-repo
+git lfs pull
+"""
 
 [tasks.build]
 description = "Build and check all targets"
