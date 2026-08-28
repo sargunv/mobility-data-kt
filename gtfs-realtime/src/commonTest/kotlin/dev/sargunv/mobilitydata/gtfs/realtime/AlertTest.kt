@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package dev.sargunv.mobilitydata.gtfs.realtime
 
 import kotlin.test.Test
@@ -119,6 +121,39 @@ class AlertTest {
                         listOf(
                           TranslatedString.Translation(
                             text = "Boarding moved to platform 4",
+                            language = "en",
+                          )
+                        )
+                    ),
+                ),
+            )
+          ),
+      )
+
+    assertFeedRoundTrips(feed)
+  }
+
+  @Test
+  fun roundTripsCommunicationAndImpactPeriods() {
+    val feed =
+      FeedMessage(
+        header = FeedHeader(gtfsRealtimeVersion = "2.0"),
+        entity =
+          listOf(
+            FeedEntity(
+              id = "alert-periods",
+              alert =
+                Alert(
+                  communicationPeriod =
+                    listOf(TimeRange(start = 1_744_640_000, end = 1_744_726_400)),
+                  impactPeriod = listOf(TimeRange(start = 1_744_643_600, end = 1_744_722_800)),
+                  informedEntity = listOf(EntitySelector(routeId = "route-d")),
+                  headerText =
+                    TranslatedString(
+                      translation =
+                        listOf(
+                          TranslatedString.Translation(
+                            text = "Track work on Route D",
                             language = "en",
                           )
                         )
