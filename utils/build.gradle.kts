@@ -7,6 +7,7 @@ kotlin {
         api(libs.kotlinx.serialization.core)
         api(libs.kotlinx.datetime)
         api(libs.osm.opening.hours)
+        implementation(libs.kotlinx.serialization.json)
       }
     }
 

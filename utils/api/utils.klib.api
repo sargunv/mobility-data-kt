@@ -6,6 +6,23 @@
 // - Show declarations: true
 
 // Library unique name: <dev.sargunv.mobility-data:utils>
+final enum class dev.sargunv.mobilitydata.utils/RoundingMode : kotlin/Enum<dev.sargunv.mobilitydata.utils/RoundingMode> { // dev.sargunv.mobilitydata.utils/RoundingMode|null[0]
+    enum entry CEILING // dev.sargunv.mobilitydata.utils/RoundingMode.CEILING|null[0]
+    enum entry DOWN // dev.sargunv.mobilitydata.utils/RoundingMode.DOWN|null[0]
+    enum entry FLOOR // dev.sargunv.mobilitydata.utils/RoundingMode.FLOOR|null[0]
+    enum entry HALF_DOWN // dev.sargunv.mobilitydata.utils/RoundingMode.HALF_DOWN|null[0]
+    enum entry HALF_EVEN // dev.sargunv.mobilitydata.utils/RoundingMode.HALF_EVEN|null[0]
+    enum entry HALF_UP // dev.sargunv.mobilitydata.utils/RoundingMode.HALF_UP|null[0]
+    enum entry UNNECESSARY // dev.sargunv.mobilitydata.utils/RoundingMode.UNNECESSARY|null[0]
+    enum entry UP // dev.sargunv.mobilitydata.utils/RoundingMode.UP|null[0]
+
+    final val entries // dev.sargunv.mobilitydata.utils/RoundingMode.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<dev.sargunv.mobilitydata.utils/RoundingMode> // dev.sargunv.mobilitydata.utils/RoundingMode.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): dev.sargunv.mobilitydata.utils/RoundingMode // dev.sargunv.mobilitydata.utils/RoundingMode.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<dev.sargunv.mobilitydata.utils/RoundingMode> // dev.sargunv.mobilitydata.utils/RoundingMode.values|values#static(){}[0]
+}
+
 abstract class <#A: kotlin.collections/Map.Entry<#B, #C>, #B: kotlin/Any?, #C: kotlin/Any?> dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer : kotlinx.serialization/KSerializer<kotlin.collections/Map<#B, #C>> { // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer|null[0]
     constructor <init>(kotlinx.serialization/KSerializer<#A>) // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer.<init>|<init>(kotlinx.serialization.KSerializer<1:0>){}[0]
 
@@ -61,6 +78,41 @@ final class dev.sargunv.mobilitydata.utils/Timestamp : kotlin/Comparable<dev.sar
     }
 }
 
+final value class dev.sargunv.mobilitydata.utils/Decimal : kotlin/Comparable<dev.sargunv.mobilitydata.utils/Decimal> { // dev.sargunv.mobilitydata.utils/Decimal|null[0]
+    final fun abs(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.abs|abs(){}[0]
+    final fun compareTo(dev.sargunv.mobilitydata.utils/Decimal): kotlin/Int // dev.sargunv.mobilitydata.utils/Decimal.compareTo|compareTo(dev.sargunv.mobilitydata.utils.Decimal){}[0]
+    final fun div(dev.sargunv.mobilitydata.utils/Decimal): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.div|div(dev.sargunv.mobilitydata.utils.Decimal){}[0]
+    final fun divide(dev.sargunv.mobilitydata.utils/Decimal, dev.sargunv.mobilitydata.utils/RoundingMode): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.divide|divide(dev.sargunv.mobilitydata.utils.Decimal;dev.sargunv.mobilitydata.utils.RoundingMode){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.utils/Decimal.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.utils/Decimal.hashCode|hashCode(){}[0]
+    final fun minus(dev.sargunv.mobilitydata.utils/Decimal): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.minus|minus(dev.sargunv.mobilitydata.utils.Decimal){}[0]
+    final fun plus(dev.sargunv.mobilitydata.utils/Decimal): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.plus|plus(dev.sargunv.mobilitydata.utils.Decimal){}[0]
+    final fun round(kotlin/Int, dev.sargunv.mobilitydata.utils/RoundingMode): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.round|round(kotlin.Int;dev.sargunv.mobilitydata.utils.RoundingMode){}[0]
+    final fun times(dev.sargunv.mobilitydata.utils/Decimal): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.times|times(dev.sargunv.mobilitydata.utils.Decimal){}[0]
+    final fun toDouble(): kotlin/Double // dev.sargunv.mobilitydata.utils/Decimal.toDouble|toDouble(){}[0]
+    final fun toFloat(): kotlin/Float // dev.sargunv.mobilitydata.utils/Decimal.toFloat|toFloat(){}[0]
+    final fun toIntExact(): kotlin/Int // dev.sargunv.mobilitydata.utils/Decimal.toIntExact|toIntExact(){}[0]
+    final fun toLongExact(): kotlin/Long // dev.sargunv.mobilitydata.utils/Decimal.toLongExact|toLongExact(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.utils/Decimal.toString|toString(){}[0]
+    final fun toString(kotlin/Int): kotlin/String // dev.sargunv.mobilitydata.utils/Decimal.toString|toString(kotlin.Int){}[0]
+    final fun unaryMinus(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.unaryMinus|unaryMinus(){}[0]
+
+    final object Companion { // dev.sargunv.mobilitydata.utils/Decimal.Companion|null[0]
+        final val ONE // dev.sargunv.mobilitydata.utils/Decimal.Companion.ONE|{}ONE[0]
+            final fun <get-ONE>(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.Companion.ONE.<get-ONE>|<get-ONE>(){}[0]
+        final val TEN // dev.sargunv.mobilitydata.utils/Decimal.Companion.TEN|{}TEN[0]
+            final fun <get-TEN>(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.Companion.TEN.<get-TEN>|<get-TEN>(){}[0]
+        final val ZERO // dev.sargunv.mobilitydata.utils/Decimal.Companion.ZERO|{}ZERO[0]
+            final fun <get-ZERO>(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.Companion.ZERO.<get-ZERO>|<get-ZERO>(){}[0]
+
+        final fun of(kotlin/Int): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.Companion.of|of(kotlin.Int){}[0]
+        final fun of(kotlin/Long): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.Companion.of|of(kotlin.Long){}[0]
+        final fun parse(kotlin/String): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils/Decimal.Companion.parse|parse(kotlin.String){}[0]
+        final fun parseOrNull(kotlin/String): dev.sargunv.mobilitydata.utils/Decimal? // dev.sargunv.mobilitydata.utils/Decimal.Companion.parseOrNull|parseOrNull(kotlin.String){}[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/Decimal> // dev.sargunv.mobilitydata.utils/Decimal.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final value class dev.sargunv.mobilitydata.utils/RgbColor { // dev.sargunv.mobilitydata.utils/RgbColor|null[0]
     constructor <init>(kotlin/Int) // dev.sargunv.mobilitydata.utils/RgbColor.<init>|<init>(kotlin.Int){}[0]
 
@@ -84,6 +136,14 @@ final object dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySeri
 
     final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlinx.datetime/DayOfWeek // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlinx.datetime/DayOfWeek) // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlinx.datetime.DayOfWeek){}[0]
+}
+
+final object dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/Decimal> { // dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer|null[0]
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.utils/Decimal) // dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.utils.Decimal){}[0]
 }
 
 final object dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer : kotlinx.serialization/KSerializer<kotlin.time/Instant> { // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer|null[0]
