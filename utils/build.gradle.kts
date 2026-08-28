@@ -6,6 +6,7 @@ kotlin {
       dependencies {
         api(libs.kotlinx.serialization.core)
         api(libs.kotlinx.datetime)
+        api(libs.osm.opening.hours)
       }
     }
 

@@ -1,3 +1,8 @@
+public final class dev/sargunv/mobilitydata/utils/OsmOpeningHoursKt {
+	public static final fun OsmOpeningHours (Ljava/lang/String;Z)Lde/westnordost/osm_opening_hours/model/OpeningHours;
+	public static synthetic fun OsmOpeningHours$default (Ljava/lang/String;ZILjava/lang/Object;)Lde/westnordost/osm_opening_hours/model/OpeningHours;
+}
+
 public final class dev/sargunv/mobilitydata/utils/ResultKt {
 	public static final fun suspendRunCatching (Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;
 }
@@ -149,6 +154,15 @@ public final class dev/sargunv/mobilitydata/utils/serialization/MonthNumberSeria
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lkotlinx/datetime/Month;)V
+}
+
+public final class dev/sargunv/mobilitydata/utils/serialization/OsmOpeningHoursSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/OsmOpeningHoursSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lde/westnordost/osm_opening_hours/model/OpeningHours;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lde/westnordost/osm_opening_hours/model/OpeningHours;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 }
 
 public final class dev/sargunv/mobilitydata/utils/serialization/RgbColorCodeSerializer : kotlinx/serialization/KSerializer {
