@@ -131,7 +131,11 @@ public data class TripDescriptor(
   @Serializable
   public enum class ScheduleRelationship {
     @ProtoNumber(0) Scheduled,
-    @Deprecated("Use New instead", replaceWith = ReplaceWith("New")) @ProtoNumber(1) Added,
+    @Deprecated(
+      "Use Duplicated for extras of an existing scheduled trip, or New for unrelated extras"
+    )
+    @ProtoNumber(1)
+    Added,
     @ProtoNumber(2) Unscheduled,
     @ProtoNumber(3) Canceled,
     @ProtoNumber(5) Replacement,
