@@ -1,21 +1,23 @@
 [versions]
-kotlin = "2.3.20"
-kotlinx-io = "0.9.0"
-kotlinx-kover = "0.9.8"
+kotlin = "2.4.10"
+kotlinx-io = "0.9.1"
+kotlinx-kover = "0.9.9"
+# 0.8.0 deprecates TimeZone serialization used by public models; zoneinfo matches 0.7.1.
 kotlinx-datetime = "0.7.1"
-kotlinx-datetime-zoneinfo = "2026a-spi.0.7.1"
-kotlinx-coroutines = "1.10.2"
+kotlinx-datetime-zoneinfo = "2026b-spi.0.7.1"
+kotlinx-coroutines = "1.11.0"
 kotlinx-serialization = "1.11.0"
-vanniktech-publish = "0.36.0"
+vanniktech-publish = "0.37.0"
 dokka = "2.2.0"
 semver = "0.9.0"
 mkdocs-build = "4.0.1"
-detekt = "2.0.0-alpha.2"
+# Still alpha; this is the release built against Kotlin 2.4.10.
+detekt = "2.0.0-alpha.6"
 spatialk = "0.7.0"
-ktor = "3.4.2"
-joda-timezone = "2.25.1"
+ktor = "3.5.2"
+joda-timezone = "2.25.2"
 kotlin-dsv = "0.4.0"
-gtfs-realtime-bindings = "0.0.8"
+gtfs-realtime-bindings = "0.2.0"
 
 [libraries]
 kotlin-dsv = { module = "dev.sargunv.kotlin-dsv:kotlin-dsv", version.ref = "kotlin-dsv" }

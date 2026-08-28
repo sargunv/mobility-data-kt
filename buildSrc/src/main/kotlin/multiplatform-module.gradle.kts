@@ -1,12 +1,11 @@
 @file:OptIn(ExperimentalWasmDsl::class)
 
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.plugin.KotlinJsCompilerType
 
 plugins { id("base-module") }
 
 kotlin {
-  js(KotlinJsCompilerType.IR) {
+  js {
     browser {
       // our mock http tests rely on the filesystem
       testTask { enabled = false }
