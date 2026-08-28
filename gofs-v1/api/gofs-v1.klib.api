@@ -716,7 +716,7 @@ final class dev.sargunv.mobilitydata.gofs.v1/ServiceBrands : dev.sargunv.mobilit
 }
 
 final class dev.sargunv.mobilitydata.gofs.v1/SystemInformation : dev.sargunv.mobilitydata.gofs.v1/GofsFeedData { // dev.sargunv.mobilitydata.gofs.v1/SystemInformation|null[0]
-    constructor <init>(kotlin/String, kotlinx.datetime/TimeZone, kotlin/String, kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlinx.datetime/LocalDate? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.<init>|<init>(kotlin.String;kotlinx.datetime.TimeZone;kotlin.String;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlinx.datetime.LocalDate?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+    constructor <init>(kotlin/String, kotlin/String, kotlin/String, kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlinx.datetime/LocalDate? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlinx.datetime.LocalDate?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
 
     final val email // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.email|{}email[0]
         final fun <get-email>(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.email.<get-email>|<get-email>(){}[0]
@@ -737,14 +737,14 @@ final class dev.sargunv.mobilitydata.gofs.v1/SystemInformation : dev.sargunv.mob
     final val subscribeUrl // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.subscribeUrl|{}subscribeUrl[0]
         final fun <get-subscribeUrl>(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.subscribeUrl.<get-subscribeUrl>|<get-subscribeUrl>(){}[0]
     final val timezone // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.timezone|{}timezone[0]
-        final fun <get-timezone>(): kotlinx.datetime/TimeZone // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.timezone.<get-timezone>|<get-timezone>(){}[0]
+        final fun <get-timezone>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.timezone.<get-timezone>|<get-timezone>(){}[0]
     final val url // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.url|{}url[0]
         final fun <get-url>(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.url.<get-url>|<get-url>(){}[0]
 
     final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component1|component1(){}[0]
     final fun component10(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component10|component10(){}[0]
     final fun component11(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component11|component11(){}[0]
-    final fun component2(): kotlinx.datetime/TimeZone // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component2|component2(){}[0]
+    final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component2|component2(){}[0]
     final fun component3(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component3|component3(){}[0]
     final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component4|component4(){}[0]
     final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component5|component5(){}[0]
@@ -752,7 +752,7 @@ final class dev.sargunv.mobilitydata.gofs.v1/SystemInformation : dev.sargunv.mob
     final fun component7(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component7|component7(){}[0]
     final fun component8(): kotlinx.datetime/LocalDate? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component8|component8(){}[0]
     final fun component9(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.component9|component9(){}[0]
-    final fun copy(kotlin/String = ..., kotlinx.datetime/TimeZone = ..., kotlin/String = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlinx.datetime/LocalDate? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gofs.v1/SystemInformation // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.copy|copy(kotlin.String;kotlinx.datetime.TimeZone;kotlin.String;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlinx.datetime.LocalDate?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlinx.datetime/LocalDate? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gofs.v1/SystemInformation // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.copy|copy(kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;kotlinx.datetime.LocalDate?;kotlin.String?;kotlin.String?;kotlin.String?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/SystemInformation.toString|toString(){}[0]

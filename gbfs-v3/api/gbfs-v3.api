@@ -1197,15 +1197,15 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/SystemAlerts$Companion {
 
 public final class dev/sargunv/mobilitydata/gbfs/v3/SystemInformation : dev/sargunv/mobilitydata/gbfs/v3/GbfsFeedData {
 	public static final field Companion Ldev/sargunv/mobilitydata/gbfs/v3/SystemInformation$Companion;
-	public fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Lde/westnordost/osm_opening_hours/model/OpeningHours;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/BrandAssets;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ldev/sargunv/mobilitydata/gbfs/v3/RentalAppUris;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Lde/westnordost/osm_opening_hours/model/OpeningHours;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/BrandAssets;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ldev/sargunv/mobilitydata/gbfs/v3/RentalAppUris;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Lde/westnordost/osm_opening_hours/model/OpeningHours;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/BrandAssets;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ldev/sargunv/mobilitydata/gbfs/v3/RentalAppUris;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Lde/westnordost/osm_opening_hours/model/OpeningHours;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/BrandAssets;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ldev/sargunv/mobilitydata/gbfs/v3/RentalAppUris;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component10 ()Lkotlinx/datetime/LocalDate;
 	public final fun component11 ()Ljava/lang/String;
 	public final fun component12 ()Ljava/lang/String;
 	public final fun component13 ()Ljava/lang/String;
 	public final fun component14 ()Ljava/lang/String;
-	public final fun component15 ()Lkotlinx/datetime/TimeZone;
+	public final fun component15 ()Ljava/lang/String;
 	public final fun component16 ()Ljava/lang/String;
 	public final fun component17 ()Ljava/lang/String;
 	public final fun component18 ()Ljava/util/Map;
@@ -1224,8 +1224,8 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/SystemInformation : dev/sarg
 	public final fun component7 ()Ljava/lang/String;
 	public final fun component8 ()Ljava/lang/String;
 	public final fun component9 ()Lkotlinx/datetime/LocalDate;
-	public final fun copy (Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Lde/westnordost/osm_opening_hours/model/OpeningHours;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/BrandAssets;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ldev/sargunv/mobilitydata/gbfs/v3/RentalAppUris;)Ldev/sargunv/mobilitydata/gbfs/v3/SystemInformation;
-	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gbfs/v3/SystemInformation;Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Lde/westnordost/osm_opening_hours/model/OpeningHours;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/TimeZone;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/BrandAssets;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ldev/sargunv/mobilitydata/gbfs/v3/RentalAppUris;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gbfs/v3/SystemInformation;
+	public final fun copy (Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Lde/westnordost/osm_opening_hours/model/OpeningHours;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/BrandAssets;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ldev/sargunv/mobilitydata/gbfs/v3/RentalAppUris;)Ldev/sargunv/mobilitydata/gbfs/v3/SystemInformation;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gbfs/v3/SystemInformation;Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Lde/westnordost/osm_opening_hours/model/OpeningHours;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lkotlinx/datetime/LocalDate;Lkotlinx/datetime/LocalDate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ldev/sargunv/mobilitydata/gbfs/v3/BrandAssets;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ljava/util/Map;Lkotlinx/datetime/LocalDate;Ldev/sargunv/mobilitydata/gbfs/v3/RentalAppUris;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gbfs/v3/SystemInformation;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAttributionOrganizationName ()Ljava/util/Map;
 	public final fun getAttributionUrl ()Ljava/lang/String;
@@ -1250,7 +1250,7 @@ public final class dev/sargunv/mobilitydata/gbfs/v3/SystemInformation : dev/sarg
 	public final fun getTerminationDate ()Lkotlinx/datetime/LocalDate;
 	public final fun getTermsLastUpdated ()Lkotlinx/datetime/LocalDate;
 	public final fun getTermsUrl ()Ljava/util/Map;
-	public final fun getTimezone ()Lkotlinx/datetime/TimeZone;
+	public final fun getTimezone ()Ljava/lang/String;
 	public final fun getUrl ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;

@@ -1,8 +1,8 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.LanguageCode
+import dev.sargunv.mobilitydata.utils.TimeZoneId
 import dev.sargunv.mobilitydata.utils.Url
-import kotlinx.datetime.TimeZone
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -22,8 +22,8 @@ public data class Agency(
   /** URL of the transit agency. */
   @SerialName("agency_url") public val agencyUrl: Url,
 
-  /** Timezone where the transit agency is located. */
-  @SerialName("agency_timezone") public val agencyTimezone: TimeZone,
+  /** IANA time zone identifier where the transit agency is located. */
+  @SerialName("agency_timezone") public val agencyTimezone: TimeZoneId,
 
   /** Primary language used by this transit agency. */
   @SerialName("agency_lang") public val agencyLang: LanguageCode? = null,

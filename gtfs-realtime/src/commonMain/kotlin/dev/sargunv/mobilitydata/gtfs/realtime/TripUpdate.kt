@@ -2,6 +2,7 @@
 
 package dev.sargunv.mobilitydata.gtfs.realtime
 
+import dev.sargunv.mobilitydata.utils.TimeZoneId
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.protobuf.ProtoNumber
@@ -209,8 +210,8 @@ public data class Stop(
   @ProtoNumber(9) public val stopUrl: TranslatedString? = null,
   /** GTFS `stop_id` of the parent station. */
   @ProtoNumber(11) public val parentStation: String? = null,
-  /** IANA timezone for the stop. */
-  @ProtoNumber(12) public val stopTimezone: String? = null,
+  /** IANA time zone identifier for the stop. */
+  @ProtoNumber(12) public val stopTimezone: TimeZoneId? = null,
   /** Wheelchair boarding availability at the stop. */
   @ProtoNumber(13) public val wheelchairBoarding: WheelchairBoarding = WheelchairBoarding.Unknown,
   /** GTFS `level_id` for the stop. */

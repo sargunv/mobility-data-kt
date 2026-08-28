@@ -1,8 +1,9 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
+import dev.sargunv.mobilitydata.utils.toTimeZoneOrNull
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlinx.datetime.TimeZone
+import kotlin.test.assertNull
 
 private val csvContent = // language=CSV
   """
@@ -17,7 +18,7 @@ private val expected =
       agencyId = "DTA",
       agencyName = "Demo Transit Authority",
       agencyUrl = "https://google.com",
-      agencyTimezone = TimeZone.of("America/Los_Angeles"),
+      agencyTimezone = "America/Los_Angeles",
     )
   )
 
@@ -26,5 +27,19 @@ class AgencyTest {
   fun decode() {
     val decoded = GtfsCsv.decodeFromString<Agency>(csvContent)
     assertEquals(expected, decoded)
+  }
+
+  @Test
+  fun unknownTimezoneIdIsPreserved() {
+    val csv = // language=CSV
+      """
+      agency_id,agency_name,agency_url,agency_timezone
+      DTA,Demo Transit Authority,https://google.com,Not/AZone
+      """
+        .trimIndent()
+
+    val decoded = GtfsCsv.decodeFromString<Agency>(csv).single()
+    assertEquals("Not/AZone", decoded.agencyTimezone)
+    assertNull(decoded.agencyTimezone.toTimeZoneOrNull())
   }
 }

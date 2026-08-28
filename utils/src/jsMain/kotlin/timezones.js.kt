@@ -2,4 +2,4 @@
 
 @JsModule("@js-joda/timezone") @JsNonModule private external object JsJodaTimeZoneModule
 
-@OptIn(ExperimentalJsExport::class) @JsExport private val jsJodaTz = JsJodaTimeZoneModule
+@Suppress("unused") private val jsJodaTz = JsJodaTimeZoneModule

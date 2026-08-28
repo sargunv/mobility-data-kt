@@ -10,9 +10,11 @@ import kotlin.time.Duration
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.DayOfWeek
+import kotlinx.datetime.IllegalTimeZoneException
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.Month
+import kotlinx.datetime.TimeZone
 import kotlinx.datetime.serializers.LocalDateIso8601Serializer
 import kotlinx.datetime.serializers.LocalTimeIso8601Serializer
 import kotlinx.serialization.Serializable
@@ -47,3 +49,26 @@ public typealias MonthNumber = @Serializable(with = MonthNumberSerializer::class
 /** Abbreviated (first 3 letters) English name of a day of the week. */
 public typealias AbbreviatedWeekday =
   @Serializable(with = AbbreviatedWeekdaySerializer::class) DayOfWeek
+
+/**
+ * IANA time zone identifier, such as `America/Chicago`.
+ *
+ * @see toTimeZone
+ * @see toTimeZoneOrNull
+ */
+public typealias TimeZoneId = String
+
+/**
+ * Resolves this identifier against the runtime time zone database.
+ *
+ * @throws IllegalTimeZoneException if the identifier is unknown on this platform
+ */
+public fun TimeZoneId.toTimeZone(): TimeZone = TimeZone.of(this)
+
+/** Resolves this identifier, or returns `null` if it is unknown on this platform. */
+public fun TimeZoneId.toTimeZoneOrNull(): TimeZone? =
+  try {
+    TimeZone.of(this)
+  } catch (_: IllegalTimeZoneException) {
+    null
+  }

@@ -6,10 +6,10 @@ import dev.sargunv.mobilitydata.utils.LanguageCode
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.LocalizedUrl
 import dev.sargunv.mobilitydata.utils.RgbColorCode
+import dev.sargunv.mobilitydata.utils.TimeZoneId
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.serialization.OsmOpeningHoursSerializer
-import kotlinx.datetime.TimeZone
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -80,8 +80,8 @@ public data class SystemInformation(
   /** A fully qualified URL pointing to the manifest.json file for the publisher. */
   @SerialName("manifest_url") public val manifestUrl: Url? = null,
 
-  /** The time zone where the system is located. */
-  public val timezone: TimeZone,
+  /** IANA time zone identifier where the system is located. */
+  public val timezone: TimeZoneId,
 
   /**
    * An identifier for a standard license from the [SPDX License List](https://spdx.org/licenses/).

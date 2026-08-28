@@ -2,8 +2,8 @@ package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.BasicLocalDate
 import dev.sargunv.mobilitydata.utils.LanguageCode
+import dev.sargunv.mobilitydata.utils.TimeZoneId
 import dev.sargunv.mobilitydata.utils.Url
-import kotlinx.datetime.TimeZone
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -17,8 +17,8 @@ import kotlinx.serialization.Serializable
 public data class SystemInformation(
   /** Language used throughout the rest of the files. */
   public val language: LanguageCode,
-  /** Timezone where the on-demand service system is located. */
-  public val timezone: TimeZone,
+  /** IANA time zone identifier where the on-demand service system is located. */
+  public val timezone: TimeZoneId,
   /** Name of the on-demand service system to be displayed to the riders. */
   public val name: String,
   /** Abbreviation commonly used to name the on-demand service system. */

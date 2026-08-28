@@ -2,9 +2,9 @@ package dev.sargunv.mobilitydata.gbfs.v1
 
 import dev.sargunv.mobilitydata.utils.ExtendedLocalDate
 import dev.sargunv.mobilitydata.utils.LanguageCode
+import dev.sargunv.mobilitydata.utils.TimeZoneId
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
-import kotlinx.datetime.TimeZone
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -67,8 +67,8 @@ public data class SystemInformation(
   /** A single contact email for feed consumers to report technical issues with the feed. */
   @SerialName("feed_contact_email") public val feedContactEmail: String? = null,
 
-  /** The time zone where the system is located. */
-  public val timezone: TimeZone,
+  /** IANA time zone identifier where the system is located. */
+  public val timezone: TimeZoneId,
 
   /**
    * A fully qualified URL of a page that defines the license terms for the GBFS data for this
