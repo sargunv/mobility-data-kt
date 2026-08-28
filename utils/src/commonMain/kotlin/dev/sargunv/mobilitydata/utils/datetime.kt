@@ -53,8 +53,8 @@ public typealias AbbreviatedWeekday =
 /**
  * IANA time zone identifier, such as `America/Chicago`.
  *
- * Feed formats store these as strings. Resolving an identifier to [TimeZone] rules is a separate,
- * fallible step because time zone databases differ across platforms and versions.
+ * @see toTimeZone
+ * @see toTimeZoneOrNull
  */
 public typealias TimeZoneId = String
 
