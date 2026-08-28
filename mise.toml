@@ -19,9 +19,10 @@ postinstall = ["hk install --mise"]
 "core:python" = "3.14"
 "aqua:git-lfs/git-lfs" = "3.7.1"
 
-# For tooling outside Gradle (e.g. the actions-up task); Kotlin/JS brings its own
-# Node via Gradle.
+# For tooling outside Gradle (also provides npm for the npm: backend below);
+# Kotlin/JS brings its own Node via Gradle.
 "core:node" = "24.19.0"
+"npm:actions-up" = "1.18.0"
 
 # The CLI only; Xcode itself is installed via the xcode:* tasks. macOS-only.
 "aqua:XcodesOrg/xcodes" = { version = "1.6.2", os = ["macos"] }
@@ -86,7 +87,7 @@ curl -fsSL 'https://gtfsr.tri-rail.com/download.aspx?file=alerts.pb' \
 
 [tasks.actions-up]
 description = "Update and pin GitHub Actions steps."
-run = "npx -y actions-up"
+run = "actions-up"
 
 [tasks."xcode:select"]
 description = "Install and select the pinned Xcode version on macOS"
