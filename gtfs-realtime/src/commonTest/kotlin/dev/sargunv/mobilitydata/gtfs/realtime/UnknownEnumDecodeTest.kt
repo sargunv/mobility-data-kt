@@ -402,6 +402,76 @@ class UnknownEnumDecodeTest {
   }
 
   @Test
+  fun knownThenUnknownOccupancyKeepsRecognizedValue() {
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        feedMessageBytes(
+          ProtoWire.concat(
+            ProtoWire.stringField(1, "vehicle-occupancy"),
+            ProtoWire.messageField(
+              4,
+              ProtoWire.concat(ProtoWire.varintField(9, 5), ProtoWire.varintField(9, 99)),
+            ),
+          )
+        )
+      )
+
+    assertEquals(
+      VehiclePosition.OccupancyStatus.Full,
+      decoded.entity.single().vehicle?.occupancyStatus,
+    )
+  }
+
+  @Test
+  fun knownThenUnknownStopTimeScheduleKeepsRecognizedValue() {
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        feedMessageBytes(
+          ProtoWire.concat(
+            ProtoWire.stringField(1, "trip-stop-schedule"),
+            ProtoWire.messageField(
+              3,
+              ProtoWire.concat(
+                ProtoWire.messageField(1, ProtoWire.stringField(1, "trip-1")),
+                ProtoWire.messageField(
+                  2,
+                  ProtoWire.concat(ProtoWire.varintField(5, 1), ProtoWire.varintField(5, 99)),
+                ),
+              ),
+            ),
+          )
+        )
+      )
+
+    assertEquals(
+      TripUpdate.StopTimeUpdate.ScheduleRelationship.Skipped,
+      decoded.entity.single().tripUpdate?.stopTimeUpdate?.single()?.scheduleRelationship,
+    )
+  }
+
+  @Test
+  fun unknownCongestionDoesNotAbortFeed() {
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        feedMessageBytes(
+          ProtoWire.concat(
+            ProtoWire.stringField(1, "vehicle-congestion"),
+            ProtoWire.messageField(
+              4,
+              ProtoWire.concat(ProtoWire.varintField(4, 1), ProtoWire.varintField(6, 99)),
+            ),
+          )
+        )
+      )
+
+    assertEquals(
+      VehiclePosition.VehicleStopStatus.StoppedAt,
+      decoded.entity.single().vehicle?.currentStatus,
+    )
+    assertNull(decoded.entity.single().vehicle?.congestionLevel)
+  }
+
+  @Test
   fun derivedSchemaIncludesEveryRealtimeEnumField() {
     val feed = GtfsRealtimeEnumSchema.feedMessage
     val header = feed.messages.getValue(1)
