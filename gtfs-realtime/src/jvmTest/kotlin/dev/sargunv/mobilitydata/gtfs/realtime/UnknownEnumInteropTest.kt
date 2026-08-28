@@ -5,6 +5,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertNull
+import kotlin.test.assertTrue
 
 class UnknownEnumInteropTest {
   @Test
@@ -67,5 +68,47 @@ class UnknownEnumInteropTest {
       VehiclePosition.VehicleStopStatus.StoppedAt,
       decoded.entity.single().vehicle?.currentStatus,
     )
+  }
+
+  @Test
+  fun officialJavaKeepsKnownCauseWhenFollowedByUnknown() {
+    val bytes =
+      feedMessageBytes(
+        ProtoWire.concat(
+          ProtoWire.stringField(1, "alert-known-then-unknown"),
+          ProtoWire.messageField(
+            5,
+            ProtoWire.concat(ProtoWire.varintField(6, 8), ProtoWire.varintField(6, 99)),
+          ),
+        )
+      )
+
+    val official = GtfsRealtime.FeedMessage.parseFrom(bytes)
+    assertTrue(official.getEntity(0).alert.hasCause())
+    assertEquals(GtfsRealtime.Alert.Cause.WEATHER, official.getEntity(0).alert.cause)
+
+    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes)
+    assertEquals(Alert.Cause.Weather, decoded.entity.single().alert?.cause)
+  }
+
+  @Test
+  fun officialJavaKeepsKnownCauseWhenPrecededByUnknown() {
+    val bytes =
+      feedMessageBytes(
+        ProtoWire.concat(
+          ProtoWire.stringField(1, "alert-unknown-then-known"),
+          ProtoWire.messageField(
+            5,
+            ProtoWire.concat(ProtoWire.varintField(6, 99), ProtoWire.varintField(6, 8)),
+          ),
+        )
+      )
+
+    val official = GtfsRealtime.FeedMessage.parseFrom(bytes)
+    assertTrue(official.getEntity(0).alert.hasCause())
+    assertEquals(GtfsRealtime.Alert.Cause.WEATHER, official.getEntity(0).alert.cause)
+
+    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes)
+    assertEquals(Alert.Cause.Weather, decoded.entity.single().alert?.cause)
   }
 }

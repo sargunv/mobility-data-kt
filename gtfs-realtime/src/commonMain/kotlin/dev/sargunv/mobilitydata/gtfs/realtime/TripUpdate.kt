@@ -77,11 +77,11 @@ public data class TripUpdate(
       @ProtoNumber(2) public val stopHeadsign: String? = null,
       /** Overridden pickup behavior at this stop. */
       @ProtoNumber(3)
-      @Serializable(with = NullableDropOffPickupTypeSerializer::class)
+      @Serializable(with = PickupTypeSerializer::class)
       public val pickupType: DropOffPickupType? = null,
       /** Overridden drop-off behavior at this stop. */
       @ProtoNumber(4)
-      @Serializable(with = NullableDropOffPickupTypeSerializer::class)
+      @Serializable(with = DropOffTypeSerializer::class)
       public val dropOffType: DropOffPickupType? = null,
     ) {
       /** Updated pickup or drop-off behavior. */

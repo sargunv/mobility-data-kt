@@ -4,8 +4,6 @@ package dev.sargunv.mobilitydata.gtfs.realtime
 
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.PrimitiveKind
-import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
@@ -14,9 +12,9 @@ import kotlinx.serialization.protobuf.ProtoNumber
 /**
  * Decodes proto2 enums so an unrecognized number does not abort the message.
  *
- * Official proto2 treats an unknown enum value as missing and leaves the field at its default.
- * These serializers consume the varint and fall back the same way: non-null properties use their
- * Kotlin default, and already-nullable properties become null.
+ * Official proto2 treats an unknown enum occurrence as an unknown field: it does not overwrite a
+ * previously recognized value, and an unknown-only field stays at the property default. Numeric
+ * varint handling is protobuf-only; other formats keep the generated enum serializer.
  */
 internal fun <T : Enum<T>> proto2EnumSerializer(
   generated: KSerializer<T>,
@@ -24,16 +22,22 @@ internal fun <T : Enum<T>> proto2EnumSerializer(
   fallback: T,
 ): KSerializer<T> {
   val byNumber = protoNumberMap(generated, values)
-  val byValue = byNumber.entries.associate { (number, value) -> value to number }
   return object : KSerializer<T> {
-    override val descriptor: SerialDescriptor =
-      PrimitiveSerialDescriptor(generated.descriptor.serialName, PrimitiveKind.INT)
+    override val descriptor: SerialDescriptor = generated.descriptor
 
     override fun serialize(encoder: Encoder, value: T) {
-      encoder.encodeInt(byValue.getValue(value))
+      generated.serialize(encoder, value)
     }
 
-    override fun deserialize(decoder: Decoder): T = byNumber[decoder.decodeInt()] ?: fallback
+    override fun deserialize(decoder: Decoder): T {
+      if (!decoder.isProtobuf()) return generated.deserialize(decoder)
+      val known = byNumber[decoder.decodeInt()]
+      return if (known != null) {
+        Proto2EnumDecodeSession.remember(decoder, this, known)
+      } else {
+        Proto2EnumDecodeSession.previous(decoder, this) ?: fallback
+      }
+    }
   }
 }
 
@@ -42,16 +46,22 @@ internal fun <T : Enum<T>> proto2NullableEnumSerializer(
   values: List<T>,
 ): KSerializer<T?> {
   val byNumber = protoNumberMap(generated, values)
-  val byValue = byNumber.entries.associate { (number, value) -> value to number }
   return object : KSerializer<T?> {
-    override val descriptor: SerialDescriptor =
-      PrimitiveSerialDescriptor(generated.descriptor.serialName, PrimitiveKind.INT)
+    override val descriptor: SerialDescriptor = generated.descriptor
 
     override fun serialize(encoder: Encoder, value: T?) {
-      encoder.encodeInt(byValue.getValue(checkNotNull(value)))
+      generated.serialize(encoder, checkNotNull(value))
     }
 
-    override fun deserialize(decoder: Decoder): T? = byNumber[decoder.decodeInt()]
+    override fun deserialize(decoder: Decoder): T? {
+      if (!decoder.isProtobuf()) return generated.deserialize(decoder)
+      val known = byNumber[decoder.decodeInt()]
+      return if (known != null) {
+        Proto2EnumDecodeSession.remember(decoder, this, known)
+      } else {
+        Proto2EnumDecodeSession.previous(decoder, this)
+      }
+    }
   }
 }
 
@@ -70,6 +80,32 @@ private fun <T : Enum<T>> protoNumberMap(generated: KSerializer<T>, values: List
       put(number, value)
     }
   }
+}
+
+private fun Decoder.isProtobuf(): Boolean = this::class.simpleName.orEmpty().contains("Protobuf")
+
+internal object Proto2EnumDecodeSession {
+  private val lastKnown = mutableListOf<LastKnown>()
+
+  fun <T> remember(decoder: Decoder, serializer: Any, value: T): T {
+    val existing = lastKnown.indexOfFirst { it.decoder === decoder && it.serializer === serializer }
+    if (existing >= 0) {
+      lastKnown[existing] = LastKnown(decoder, serializer, value)
+    } else {
+      lastKnown += LastKnown(decoder, serializer, value)
+    }
+    return value
+  }
+
+  @Suppress("UNCHECKED_CAST")
+  fun <T> previous(decoder: Decoder, serializer: Any): T? =
+    lastKnown.firstOrNull { it.decoder === decoder && it.serializer === serializer }?.value as T?
+
+  fun clear() {
+    lastKnown.clear()
+  }
+
+  private class LastKnown(val decoder: Decoder, val serializer: Any, val value: Any?)
 }
 
 internal object IncrementalitySerializer :
@@ -114,7 +150,15 @@ internal object StopTimeScheduleRelationshipSerializer :
     fallback = TripUpdate.StopTimeUpdate.ScheduleRelationship.Scheduled,
   )
 
-internal object NullableDropOffPickupTypeSerializer :
+internal object PickupTypeSerializer :
+  KSerializer<
+    TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?
+  > by proto2NullableEnumSerializer(
+    generated = TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.serializer(),
+    values = TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.entries,
+  )
+
+internal object DropOffTypeSerializer :
   KSerializer<
     TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?
   > by proto2NullableEnumSerializer(
