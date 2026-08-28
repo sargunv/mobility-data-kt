@@ -15,47 +15,50 @@ internal fun parseDecimal(value: String): Decimal {
       else -> false
     }
 
-  var scaled = text.takeScaledDigits(negative) ?: text.invalid()
+  var significand = text.takeScaledDigits(negative) ?: text.invalid()
   var fractionDigits = 0
   if (text.peek() == '.') {
     text.take()
     val firstFraction = text.takeDigit() ?: text.invalid()
-    scaled = appendScaledDigit(scaled, firstFraction, negative)
+    significand = appendScaledDigit(significand, firstFraction, negative)
     fractionDigits = 1
     while (true) {
       val digit = text.takeDigit() ?: break
-      if (fractionDigits < DECIMAL_SCALE) {
-        scaled = appendScaledDigit(scaled, digit, negative)
-        fractionDigits++
-      } else if (digit != 0L) {
-        throw ArithmeticException("Decimal exceeds 9 fractional digits: $value")
-      }
+      significand = appendScaledDigit(significand, digit, negative)
+      fractionDigits++
     }
   }
 
-  repeat(DECIMAL_SCALE - fractionDigits) { scaled = multiplyExact(scaled, 10L) }
+  while (fractionDigits > 0 && significand % 10L == 0L) {
+    significand /= 10L
+    fractionDigits--
+  }
 
+  var exponent = 0L
   val exponentMarker = text.peek()
   if (exponentMarker == 'e' || exponentMarker == 'E') {
     text.take()
-    scaled = applyExponent(scaled, text.takeExponent())
+    exponent = text.takeExponent()
   }
 
   if (!text.atEnd()) text.invalid()
-  return Decimal.fromScaled(scaled)
+
+  val scaleShift =
+    subtractExact(addExact(DECIMAL_SCALE.toLong(), exponent), fractionDigits.toLong())
+  return Decimal.fromScaled(applyScaleShift(significand, scaleShift))
 }
 
-private const val MAX_EXPONENT_SHIFT: Long = 40L
+private const val MAX_SCALE_SHIFT: Long = 40L
 
-private fun applyExponent(scaled: Long, exponent: Long): Long {
-  if (exponent == 0L || scaled == 0L) return scaled
-  if (exponent > MAX_EXPONENT_SHIFT || exponent < -MAX_EXPONENT_SHIFT) {
+private fun applyScaleShift(significand: Long, scaleShift: Long): Long {
+  if (significand == 0L || scaleShift == 0L) return significand
+  if (scaleShift > MAX_SCALE_SHIFT || scaleShift < -MAX_SCALE_SHIFT) {
     throw ArithmeticException("Decimal exponent is out of range")
   }
-  return if (exponent > 0L) {
-    multiplyByPowersOfTen(scaled, exponent.toInt())
+  return if (scaleShift > 0L) {
+    multiplyByPowersOfTen(significand, scaleShift.toInt())
   } else {
-    divideByPowersOfTen(scaled, (-exponent).toInt())
+    divideByPowersOfTen(significand, (-scaleShift).toInt())
   }
 }
 

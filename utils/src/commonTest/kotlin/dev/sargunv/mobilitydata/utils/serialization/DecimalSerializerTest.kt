@@ -70,6 +70,9 @@ class DecimalSerializerTest {
         "123e-9" to "0.000000123",
         "-1.5e+1" to "-15",
         "1e3" to "1000",
+        "0.0000000001e1" to "0.000000001",
+        "9223372036854775807e-9" to "9223372036.854775807",
+        "-9223372036854775808e-9" to "-9223372036.854775808",
       )
     for ((token, canonical) in cases) {
       val decoded = json.decodeFromString(TestData.serializer(), """{"amount":$token}""")

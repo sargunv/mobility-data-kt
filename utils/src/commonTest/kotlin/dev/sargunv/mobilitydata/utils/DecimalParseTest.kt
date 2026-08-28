@@ -37,6 +37,9 @@ class DecimalParseTest {
         "1.0e-9" to "0.000000001",
         "1e01" to "10",
         "9e9" to "9000000000",
+        "0.0000000001e1" to "0.000000001",
+        "9223372036854775807e-9" to "9223372036.854775807",
+        "-9223372036854775808e-9" to "-9223372036.854775808",
       )
     for ((input, canonical) in cases) {
       assertEquals(canonical, Decimal.parse(input).toString(), input)
@@ -89,6 +92,13 @@ class DecimalParseTest {
       assertFailsWith<ArithmeticException>(input) { Decimal.parse(input) }
       assertNull(Decimal.parseOrNull(input), input)
     }
+  }
+
+  @Test
+  fun parsesExponentFormFromEffectiveScale() {
+    assertEquals(Decimal.parse("0.000000001"), Decimal.parse("0.0000000001e1"))
+    assertEquals(Decimal.parse("9223372036.854775807"), Decimal.parse("9223372036854775807e-9"))
+    assertEquals(Decimal.parse("-9223372036.854775808"), Decimal.parse("-9223372036854775808e-9"))
   }
 
   @Test

@@ -121,8 +121,9 @@ class DecimalOracleTest {
 
   private fun BigDecimal.toDecimalOrNull(): Decimal? {
     if (compareTo(DECIMAL_MIN) < 0 || compareTo(DECIMAL_MAX) > 0) return null
-    if (stripTrailingZeros().scale() > DECIMAL_SCALE) return null
-    return Decimal.parse(toPlainString())
+    val stripped = stripTrailingZeros()
+    if (stripped.scale() > DECIMAL_SCALE) return null
+    return Decimal.parse(stripped.toPlainString())
   }
 
   private fun Decimal.toBigDecimal(): BigDecimal = BigDecimal(toString())
