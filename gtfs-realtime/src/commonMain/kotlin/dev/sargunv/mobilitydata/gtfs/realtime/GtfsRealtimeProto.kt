@@ -11,7 +11,7 @@ public object GtfsRealtimeProto {
 
   /** Decodes a GTFS Realtime feed message from protobuf bytes. */
   public fun decodeFeedMessage(bytes: ByteArray): FeedMessage =
-    protoBuf.decodeFromByteArray(FeedMessage.serializer(), bytes)
+    protoBuf.decodeFromByteArray(FeedMessage.serializer(), Proto2UnknownEnumStripper.strip(bytes))
 
   /** Encodes a GTFS Realtime feed message to protobuf bytes. */
   public fun encodeFeedMessage(feedMessage: FeedMessage): ByteArray =

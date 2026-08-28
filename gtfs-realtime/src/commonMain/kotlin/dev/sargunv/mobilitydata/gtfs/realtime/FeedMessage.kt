@@ -21,7 +21,9 @@ public data class FeedHeader(
   /** Version of the GTFS Realtime spec (e.g. `"2.0"`). */
   @ProtoNumber(1) public val gtfsRealtimeVersion: String,
   /** Whether this feed is a full snapshot or a differential update. */
-  @ProtoNumber(2) public val incrementality: Incrementality = Incrementality.FullDataset,
+  @ProtoNumber(2)
+  @Serializable(with = IncrementalitySerializer::class)
+  public val incrementality: Incrementality = Incrementality.FullDataset,
   /** POSIX timestamp when the feed content was created. */
   @ProtoNumber(3) public val timestamp: Long? = null,
   /** Publisher-defined version string for the feed. */

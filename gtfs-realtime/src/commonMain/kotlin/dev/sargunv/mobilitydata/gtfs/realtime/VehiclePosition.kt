@@ -20,13 +20,19 @@ public data class VehiclePosition(
   /** GTFS `stop_id` of the current stop. */
   @ProtoNumber(7) public val stopId: String? = null,
   /** Vehicle's relationship to the current stop. */
-  @ProtoNumber(4) public val currentStatus: VehicleStopStatus = VehicleStopStatus.InTransitTo,
+  @ProtoNumber(4)
+  @Serializable(with = VehicleStopStatusSerializer::class)
+  public val currentStatus: VehicleStopStatus = VehicleStopStatus.InTransitTo,
   /** POSIX timestamp when this position was measured. */
   @ProtoNumber(5) public val timestamp: Long? = null,
   /** Traffic congestion affecting the vehicle. */
-  @ProtoNumber(6) public val congestionLevel: CongestionLevel? = null,
+  @ProtoNumber(6)
+  @Serializable(with = NullableCongestionLevelSerializer::class)
+  public val congestionLevel: CongestionLevel? = null,
   /** Passenger occupancy status of the vehicle. */
-  @ProtoNumber(9) public val occupancyStatus: OccupancyStatus? = null,
+  @ProtoNumber(9)
+  @Serializable(with = NullableOccupancyStatusSerializer::class)
+  public val occupancyStatus: OccupancyStatus? = null,
   /** Passenger occupancy as a percentage of capacity. */
   @ProtoNumber(10) public val occupancyPercentage: Int? = null,
   /** Per-carriage occupancy and identification details. */
@@ -75,7 +81,9 @@ public data class VehiclePosition(
     /** User-visible label for the carriage. */
     @ProtoNumber(2) public val label: String? = null,
     /** Passenger occupancy status of the carriage. */
-    @ProtoNumber(3) public val occupancyStatus: OccupancyStatus = OccupancyStatus.NoDataAvailable,
+    @ProtoNumber(3)
+    @Serializable(with = OccupancyStatusSerializer::class)
+    public val occupancyStatus: OccupancyStatus = OccupancyStatus.NoDataAvailable,
     /** Passenger occupancy as a percentage of carriage capacity; -1 if unknown. */
     @ProtoNumber(4) public val occupancyPercentage: Int = -1,
     /** 1-based position of this carriage from the front of the vehicle. */
