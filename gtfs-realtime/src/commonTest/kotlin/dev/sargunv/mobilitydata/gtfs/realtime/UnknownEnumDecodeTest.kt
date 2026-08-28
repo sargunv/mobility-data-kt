@@ -130,6 +130,7 @@ class UnknownEnumDecodeTest {
     assertEquals(12, tripUpdate?.delay)
   }
 
+  @OptIn(ExperimentalSerializationApi::class)
   @Test
   fun generatedProtobufEnumSerializerStillAbortsOnUnknownNumber() {
     val result = runCatching {
