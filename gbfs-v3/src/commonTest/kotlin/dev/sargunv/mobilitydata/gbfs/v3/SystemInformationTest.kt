@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import de.westnordost.osm_opening_hours.parser.toOpeningHours
 import dev.sargunv.mobilitydata.utils.RgbColorCode
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
@@ -39,7 +40,7 @@ private val jsonContent = // language=JSON
           "language": "en"
         }
       ],
-      "opening_hours": "Apr 1-Nov 3 00:00-24:00",
+      "opening_hours": "Apr 01-Nov 03 00:00-24:00",
       "start_date": "2010-06-10",
       "url": "https://www.example.com",
       "purchase_url": "https://www.example.com",
@@ -95,7 +96,7 @@ private val expectedResponse =
         systemId = "example_cityname",
         languages = listOf("en"),
         name = mapOf("en" to "Example Bike Rental"),
-        openingHours = "Apr 1-Nov 3 00:00-24:00",
+        openingHours = "Apr 1-Nov 3 00:00-24:00".toOpeningHours(lenient = true),
         shortName = mapOf("en" to "Example Bike"),
         operator = mapOf("en" to "Example Sharing, Inc"),
         url = "https://www.example.com",

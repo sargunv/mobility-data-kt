@@ -151,6 +151,15 @@ public final class dev/sargunv/mobilitydata/utils/serialization/MonthNumberSeria
 	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lkotlinx/datetime/Month;)V
 }
 
+public final class dev/sargunv/mobilitydata/utils/serialization/OsmOpeningHoursSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/OsmOpeningHoursSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lde/westnordost/osm_opening_hours/model/OpeningHours;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lde/westnordost/osm_opening_hours/model/OpeningHours;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
 public final class dev/sargunv/mobilitydata/utils/serialization/RgbColorCodeSerializer : kotlinx/serialization/KSerializer {
 	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/RgbColorCodeSerializer;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;

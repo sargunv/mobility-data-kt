@@ -11,6 +11,7 @@ dokka = "2.2.0"
 mkdocs-build = "4.0.1"
 detekt = "2.0.0-alpha.2"
 spatialk = "0.7.0"
+osm-opening-hours = "0.4.0"
 ktor = "3.4.2"
 joda-timezone = "2.25.1"
 kotlin-dsv = "0.4.0"
@@ -36,6 +37,7 @@ ktor-client-winhttp = { module = "io.ktor:ktor-client-winhttp", version.ref = "k
 ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
 ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
 spatialk-geojson = { module = "org.maplibre.spatialk:geojson", version.ref = "spatialk" }
+osm-opening-hours = { module = "de.westnordost:osm-opening-hours", version.ref = "osm-opening-hours" }
 gradle-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 gradle-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 gradle-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }

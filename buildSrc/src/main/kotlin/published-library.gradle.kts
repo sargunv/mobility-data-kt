@@ -47,6 +47,12 @@ dokka {
       externalDocumentationLinks {
         create("kotlinx-serialization") { url("https://kotlinlang.org/api/kotlinx.serialization/") }
         create("ktor") { url("https://api.ktor.io") }
+        create("osm-opening-hours") {
+          url("https://westnordost.github.io/osm-opening-hours/")
+          packageListUrl(
+            "https://westnordost.github.io/osm-opening-hours/-o-s-m%20-opening%20-hours/package-list"
+          )
+        }
       }
     }
   }
