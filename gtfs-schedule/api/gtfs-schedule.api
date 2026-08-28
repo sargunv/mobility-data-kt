@@ -518,15 +518,6 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/FareProduct$Companion 
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gtfs/schedule/FareProductSerializer : kotlinx/serialization/KSerializer {
-	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/FareProductSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareProduct;
-	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gtfs/schedule/FareProduct;)V
-	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-}
-
 public final class dev/sargunv/mobilitydata/gtfs/schedule/FareRule {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/FareRule$Companion;
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

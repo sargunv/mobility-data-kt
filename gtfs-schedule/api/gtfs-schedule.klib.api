@@ -1885,13 +1885,5 @@ final value class dev.sargunv.mobilitydata.gtfs.schedule/TriState { // dev.sargu
     }
 }
 
-final object dev.sargunv.mobilitydata.gtfs.schedule/FareProductSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gtfs.schedule/FareProduct> { // dev.sargunv.mobilitydata.gtfs.schedule/FareProductSerializer|null[0]
-    final val descriptor // dev.sargunv.mobilitydata.gtfs.schedule/FareProductSerializer.descriptor|{}descriptor[0]
-        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gtfs.schedule/FareProductSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
-
-    final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gtfs.schedule/FareProduct // dev.sargunv.mobilitydata.gtfs.schedule/FareProductSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
-    final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gtfs.schedule/FareProduct) // dev.sargunv.mobilitydata.gtfs.schedule/FareProductSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gtfs.schedule.FareProduct){}[0]
-}
-
 final val dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv|{}GtfsCsv[0]
     final fun <get-GtfsCsv>(): dev.sargunv.kotlindsv/DsvFormat // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.<get-GtfsCsv>|<get-GtfsCsv>(){}[0]

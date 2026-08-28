@@ -66,9 +66,7 @@ public value class Decimal private constructor(private val value: Long) : Compar
    * [decimalPlaces] must be in `0..9`. The returned value still uses the fixed internal scale of 9.
    */
   public fun round(decimalPlaces: Int, roundingMode: RoundingMode): Decimal {
-    require(decimalPlaces in 0..DECIMAL_SCALE) {
-      "decimalPlaces must be in 0..$DECIMAL_SCALE, but was $decimalPlaces"
-    }
+    requireDecimalPlaces(decimalPlaces)
     return fromScaled(roundScaled(value, decimalPlaces, roundingMode))
   }
 
@@ -111,16 +109,13 @@ public value class Decimal private constructor(private val value: Long) : Compar
    */
   public override fun toString(): String {
     if (value == 0L) return "0"
-    val negative = value < 0L
-    val magnitude = value.unsignedAbs()
-    val integerPart = magnitude / DECIMAL_SCALE_FACTOR.toULong()
-    val fraction = magnitude % DECIMAL_SCALE_FACTOR.toULong()
+    val parts = parts()
     return buildString {
-      if (negative) append('-')
-      append(integerPart)
-      if (fraction != 0uL) {
+      if (parts.negative) append('-')
+      append(parts.integerPart)
+      if (parts.fraction != 0uL) {
         append('.')
-        append(fraction.toString().padStart(DECIMAL_SCALE, '0').trimEnd('0'))
+        append(parts.fraction.toString().padStart(DECIMAL_SCALE, '0').trimEnd('0'))
       }
     }
   }
@@ -132,26 +127,29 @@ public value class Decimal private constructor(private val value: Long) : Compar
    * meaningful precision beyond [decimalPlaces]. [decimalPlaces] must be in `0..9`.
    */
   public fun toString(decimalPlaces: Int): String {
-    require(decimalPlaces in 0..DECIMAL_SCALE) {
-      "decimalPlaces must be in 0..$DECIMAL_SCALE, but was $decimalPlaces"
-    }
-    val negative = value < 0L
-    val magnitude = value.unsignedAbs()
-    val integerPart = magnitude / DECIMAL_SCALE_FACTOR.toULong()
-    val fraction = magnitude % DECIMAL_SCALE_FACTOR.toULong()
+    requireDecimalPlaces(decimalPlaces)
+    val parts = parts()
     val factor = DECIMAL_POW10[DECIMAL_SCALE - decimalPlaces].toULong()
-    if (fraction % factor != 0uL) {
+    if (parts.fraction % factor != 0uL) {
       throw ArithmeticException("Value $this has precision beyond $decimalPlaces decimal places")
     }
-    val shownFraction = fraction / factor
     return buildString {
-      if (negative) append('-')
-      append(integerPart)
+      if (parts.negative) append('-')
+      append(parts.integerPart)
       if (decimalPlaces > 0) {
         append('.')
-        append(shownFraction.toString().padStart(decimalPlaces, '0'))
+        append((parts.fraction / factor).toString().padStart(decimalPlaces, '0'))
       }
     }
+  }
+
+  private fun parts(): DecimalParts {
+    val magnitude = value.unsignedAbs()
+    return DecimalParts(
+      negative = value < 0L,
+      integerPart = magnitude / DECIMAL_SCALE_FACTOR.toULong(),
+      fraction = magnitude % DECIMAL_SCALE_FACTOR.toULong(),
+    )
   }
 
   /** Constants and parsers for [Decimal]. */
@@ -209,121 +207,4 @@ public value class Decimal private constructor(private val value: Long) : Compar
   }
 }
 
-private fun parseDecimal(value: String): Decimal {
-  if (value.isEmpty()) {
-    throw NumberFormatException("Invalid decimal: $value")
-  }
-
-  var index = 0
-  val negative =
-    when (value[0]) {
-      '-' -> {
-        index = 1
-        if (index >= value.length) {
-          throw NumberFormatException("Invalid decimal: $value")
-        }
-        true
-      }
-      '+' -> throw NumberFormatException("Invalid decimal: $value")
-      else -> false
-    }
-
-  if (index >= value.length || value[index] !in '0'..'9') {
-    throw NumberFormatException("Invalid decimal: $value")
-  }
-
-  var scaled = 0L
-  while (index < value.length && value[index] in '0'..'9') {
-    val digit = (value[index] - '0').toLong()
-    scaled =
-      if (negative) {
-        subtractExact(multiplyExact(scaled, 10L), digit)
-      } else {
-        addExact(multiplyExact(scaled, 10L), digit)
-      }
-    index++
-  }
-
-  var fractionDigits = 0
-  if (index < value.length && value[index] == '.') {
-    index++
-    if (index >= value.length || value[index] !in '0'..'9') {
-      throw NumberFormatException("Invalid decimal: $value")
-    }
-    while (index < value.length && value[index] in '0'..'9') {
-      val digit = (value[index] - '0').toLong()
-      if (fractionDigits < DECIMAL_SCALE) {
-        scaled =
-          if (negative) {
-            subtractExact(multiplyExact(scaled, 10L), digit)
-          } else {
-            addExact(multiplyExact(scaled, 10L), digit)
-          }
-        fractionDigits++
-      } else if (digit != 0L) {
-        throw ArithmeticException("Decimal exceeds 9 fractional digits: $value")
-      }
-      index++
-    }
-  }
-
-  repeat(DECIMAL_SCALE - fractionDigits) { scaled = multiplyExact(scaled, 10L) }
-
-  if (index < value.length && (value[index] == 'e' || value[index] == 'E')) {
-    index++
-    if (index >= value.length) {
-      throw NumberFormatException("Invalid decimal: $value")
-    }
-    var exponentNegative = false
-    when (value[index]) {
-      '-' -> {
-        exponentNegative = true
-        index++
-      }
-      '+' -> index++
-    }
-    if (index >= value.length || value[index] !in '0'..'9') {
-      throw NumberFormatException("Invalid decimal: $value")
-    }
-    var exponent = 0L
-    while (index < value.length && value[index] in '0'..'9') {
-      val digit = (value[index] - '0').toLong()
-      exponent = addExact(multiplyExact(exponent, 10L), digit)
-      index++
-    }
-    scaled = applyExponent(scaled, if (exponentNegative) negateExact(exponent) else exponent)
-  }
-
-  if (index != value.length) {
-    throw NumberFormatException("Invalid decimal: $value")
-  }
-
-  return Decimal.fromScaled(scaled)
-}
-
-private const val MAX_EXPONENT_SHIFT: Long = 40L
-
-private fun applyExponent(scaled: Long, exponent: Long): Long {
-  if (exponent == 0L || scaled == 0L) return scaled
-  if (exponent > MAX_EXPONENT_SHIFT || exponent < -MAX_EXPONENT_SHIFT) {
-    throw ArithmeticException("Decimal exponent is out of range")
-  }
-  var result = scaled
-  if (exponent > 0L) {
-    var remaining = exponent
-    while (remaining > 0L) {
-      result = multiplyExact(result, 10L)
-      remaining--
-    }
-    return result
-  }
-  var remaining = -exponent
-  while (remaining > 0L) {
-    if (result % 10L != 0L) {
-      throw ArithmeticException("Decimal exponent requires more than 9 fractional digits")
-    }
-    result /= 10L
-    remaining--
-  }
-  return result
-}
+private class DecimalParts(val negative: Boolean, val integerPart: ULong, val fraction: ULong)

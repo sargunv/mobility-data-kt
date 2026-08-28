@@ -47,12 +47,15 @@ public object DecimalSerializer : KSerializer<Decimal> {
       } else {
         decoder.decodeString()
       }
-    return try {
-      Decimal.parse(text)
-    } catch (e: NumberFormatException) {
-      throw SerializationException("Invalid decimal: $text", e)
-    } catch (e: ArithmeticException) {
-      throw SerializationException("Invalid decimal: $text", e)
-    }
+    return parseDecimalToken(text)
   }
 }
+
+private fun parseDecimalToken(text: String): Decimal =
+  try {
+    Decimal.parse(text)
+  } catch (e: NumberFormatException) {
+    throw SerializationException("Invalid decimal: $text", e)
+  } catch (e: ArithmeticException) {
+    throw SerializationException("Invalid decimal: $text", e)
+  }

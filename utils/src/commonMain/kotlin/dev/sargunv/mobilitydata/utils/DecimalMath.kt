@@ -3,6 +3,12 @@ package dev.sargunv.mobilitydata.utils
 internal const val DECIMAL_SCALE: Int = 9
 internal const val DECIMAL_SCALE_FACTOR: Long = 1_000_000_000L
 
+internal fun requireDecimalPlaces(decimalPlaces: Int) {
+  require(decimalPlaces in 0..DECIMAL_SCALE) {
+    "decimalPlaces must be in 0..$DECIMAL_SCALE, but was $decimalPlaces"
+  }
+}
+
 internal val DECIMAL_POW10: LongArray =
   longArrayOf(
     1L,
@@ -57,7 +63,7 @@ internal fun multiplyExact(x: Long, y: Long): Long {
   return result
 }
 
-internal fun multiplyExact(x: ULong, y: ULong): ULong {
+private fun multiplyExact(x: ULong, y: ULong): ULong {
   if (x == 0uL || y == 0uL) return 0uL
   val result = x * y
   if (result / x != y) {
@@ -89,7 +95,7 @@ internal fun ULong.toSignedLong(negative: Boolean): Long {
   throw ArithmeticException("Long overflow")
 }
 
-internal fun gcd(a: ULong, b: ULong): ULong {
+private fun gcd(a: ULong, b: ULong): ULong {
   var x = a
   var y = b
   while (y != 0uL) {
@@ -168,7 +174,7 @@ internal fun roundScaled(value: Long, decimalPlaces: Int, roundingMode: Rounding
   return multiplyExact(rounded, factor).toSignedLong(negative)
 }
 
-internal fun applyRounding(
+private fun applyRounding(
   quotient: ULong,
   remainder: ULong,
   divisor: ULong,
@@ -203,12 +209,12 @@ internal fun applyRounding(
   return quotient + 1uL
 }
 
-internal fun compareRemainderToHalf(remainder: ULong, divisor: ULong): Int {
+private fun compareRemainderToHalf(remainder: ULong, divisor: ULong): Int {
   if (remainder > ULong.MAX_VALUE / 2uL) return 1
   return (remainder * 2uL).compareTo(divisor)
 }
 
-internal fun multiplyTo128(a: ULong, b: ULong): Pair<ULong, ULong> {
+private fun multiplyTo128(a: ULong, b: ULong): Pair<ULong, ULong> {
   val mask = 0xFFFFFFFFUL
   val aLow = a and mask
   val aHigh = a shr 32
@@ -227,7 +233,7 @@ internal fun multiplyTo128(a: ULong, b: ULong): Pair<ULong, ULong> {
   return high to low
 }
 
-internal fun divide128By64(high: ULong, low: ULong, divisor: ULong): Pair<ULong, ULong> {
+private fun divide128By64(high: ULong, low: ULong, divisor: ULong): Pair<ULong, ULong> {
   if (divisor == 0uL) {
     throw ArithmeticException("Division by zero")
   }
@@ -238,6 +244,8 @@ internal fun divide128By64(high: ULong, low: ULong, divisor: ULong): Pair<ULong,
     throw ArithmeticException("Long overflow")
   }
 
+  // Long division over the 128-bit numerator, high word first. A set bit in the
+  // high word would mean the quotient does not fit in 64 bits.
   var remainder = 0uL
   var quotient = 0uL
   for (bitIndex in 63 downTo 0) {
