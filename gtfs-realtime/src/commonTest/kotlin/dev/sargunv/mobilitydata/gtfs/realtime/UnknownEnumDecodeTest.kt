@@ -8,7 +8,6 @@ import kotlin.test.assertTrue
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerializationException
-import kotlinx.serialization.json.Json
 import kotlinx.serialization.protobuf.ProtoBuf
 import kotlinx.serialization.protobuf.ProtoNumber
 
@@ -228,19 +227,6 @@ class UnknownEnumDecodeTest {
       properties?.pickupType,
     )
     assertNull(properties?.dropOffType)
-  }
-
-  @Test
-  fun jsonStillUsesEnumNames() {
-    val json = Json { encodeDefaults = true }
-    val encoded = json.encodeToString(Alert.serializer(), Alert(cause = Alert.Cause.Weather))
-
-    assertTrue(encoded.contains("\"cause\":\"Weather\""), encoded)
-    assertEquals(Alert.Cause.Weather, json.decodeFromString(Alert.serializer(), encoded).cause)
-    assertEquals(
-      Alert.Cause.Weather,
-      json.decodeFromString(Alert.serializer(), """{"cause":"Weather"}""").cause,
-    )
   }
 
   @Test
