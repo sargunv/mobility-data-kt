@@ -227,6 +227,181 @@ class UnknownEnumDecodeTest {
   }
 
   @Test
+  fun unknownIncrementalityDoesNotAbortFeed() {
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        ProtoWire.concat(
+          ProtoWire.messageField(
+            1,
+            ProtoWire.concat(ProtoWire.stringField(1, "2.0"), ProtoWire.varintField(2, 99)),
+          )
+        )
+      )
+
+    assertEquals("2.0", decoded.header.gtfsRealtimeVersion)
+    assertEquals(FeedHeader.Incrementality.FullDataset, decoded.header.incrementality)
+  }
+
+  @Test
+  fun unknownCarriageOccupancyDoesNotReuseEarlierCarriage() {
+    val vehicleEntity =
+      ProtoWire.concat(
+        ProtoWire.stringField(1, "vehicle-carriages"),
+        ProtoWire.messageField(
+          4,
+          ProtoWire.concat(
+            ProtoWire.varintField(4, 1),
+            ProtoWire.messageField(11, ProtoWire.varintField(3, 5)),
+            ProtoWire.messageField(11, ProtoWire.varintField(3, 99)),
+          ),
+        ),
+      )
+
+    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(vehicleEntity))
+    val carriages = decoded.entity.single().vehicle?.multiCarriageDetails.orEmpty()
+
+    assertEquals(2, carriages.size)
+    assertEquals(VehiclePosition.OccupancyStatus.Full, carriages[0].occupancyStatus)
+    assertEquals(VehiclePosition.OccupancyStatus.NoDataAvailable, carriages[1].occupancyStatus)
+  }
+
+  @Test
+  fun unknownCarriageOccupancyDoesNotAbortFeed() {
+    val vehicleEntity =
+      ProtoWire.concat(
+        ProtoWire.stringField(1, "vehicle-carriage"),
+        ProtoWire.messageField(
+          4,
+          ProtoWire.concat(
+            ProtoWire.varintField(4, 1),
+            ProtoWire.messageField(11, ProtoWire.varintField(3, 99)),
+          ),
+        ),
+      )
+
+    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(vehicleEntity))
+    assertEquals(
+      VehiclePosition.VehicleStopStatus.StoppedAt,
+      decoded.entity.single().vehicle?.currentStatus,
+    )
+    assertEquals(
+      VehiclePosition.OccupancyStatus.NoDataAvailable,
+      decoded.entity.single().vehicle?.multiCarriageDetails?.single()?.occupancyStatus,
+    )
+  }
+
+  @Test
+  fun packedCauseWrongWireTypeDoesNotAbortFeed() {
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        feedMessageBytes(
+          ProtoWire.concat(
+            ProtoWire.stringField(1, "alert-packed-cause"),
+            ProtoWire.messageField(5, ProtoWire.packedVarintField(6, 8, 99)),
+          )
+        )
+      )
+
+    assertEquals("alert-packed-cause", decoded.entity.single().id)
+    assertEquals(Alert.Cause.UnknownCause, decoded.entity.single().alert?.cause)
+  }
+
+  @Test
+  fun unknownNestedTripScheduleRelationshipDoesNotAbortFeed() {
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        feedMessageBytes(
+          ProtoWire.concat(
+            ProtoWire.stringField(1, "alert-nested-trip"),
+            ProtoWire.messageField(
+              5,
+              ProtoWire.concat(
+                ProtoWire.messageField(
+                  5,
+                  ProtoWire.messageField(
+                    4,
+                    ProtoWire.concat(
+                      ProtoWire.stringField(1, "trip-2"),
+                      ProtoWire.varintField(4, 99),
+                    ),
+                  ),
+                ),
+                ProtoWire.varintField(7, 4),
+              ),
+            ),
+          )
+        )
+      )
+
+    val selector = decoded.entity.single().alert?.informedEntity?.single()
+    assertEquals("trip-2", selector?.trip?.tripId)
+    assertNull(selector?.trip?.scheduleRelationship)
+    assertEquals(Alert.Effect.Detour, decoded.entity.single().alert?.effect)
+  }
+
+  @Test
+  fun knownThenUnknownIncrementalityKeepsRecognizedValue() {
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        ProtoWire.concat(
+          ProtoWire.messageField(
+            1,
+            ProtoWire.concat(
+              ProtoWire.stringField(1, "2.0"),
+              ProtoWire.varintField(2, 1),
+              ProtoWire.varintField(2, 99),
+            ),
+          )
+        )
+      )
+
+    assertEquals(FeedHeader.Incrementality.Differential, decoded.header.incrementality)
+  }
+
+  @Test
+  fun unknownStopWheelchairBoardingDoesNotAbortFeed() {
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        feedMessageBytes(
+          ProtoWire.concat(
+            ProtoWire.stringField(1, "stop-unknown-wheelchair"),
+            ProtoWire.messageField(
+              7,
+              ProtoWire.concat(ProtoWire.stringField(1, "stop-1"), ProtoWire.varintField(13, 99)),
+            ),
+          )
+        )
+      )
+
+    assertEquals("stop-1", decoded.entity.single().stop?.stopId)
+    assertEquals(Stop.WheelchairBoarding.Unknown, decoded.entity.single().stop?.wheelchairBoarding)
+  }
+
+  @Test
+  fun knownThenUnknownWheelchairAccessibleKeepsRecognizedValue() {
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        feedMessageBytes(
+          ProtoWire.concat(
+            ProtoWire.stringField(1, "vehicle-wheelchair"),
+            ProtoWire.messageField(
+              4,
+              ProtoWire.messageField(
+                8,
+                ProtoWire.concat(ProtoWire.varintField(4, 2), ProtoWire.varintField(4, 99)),
+              ),
+            ),
+          )
+        )
+      )
+
+    assertEquals(
+      VehicleDescriptor.WheelchairAccessible.WheelchairAccessible,
+      decoded.entity.single().vehicle?.vehicle?.wheelchairAccessible,
+    )
+  }
+
+  @Test
   fun knownEnumValuesStillRoundTrip() {
     assertFeedRoundTrips(
       FeedMessage(

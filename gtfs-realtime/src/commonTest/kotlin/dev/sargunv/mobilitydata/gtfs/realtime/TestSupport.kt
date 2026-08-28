@@ -31,6 +31,9 @@ internal object ProtoWire {
 
   fun messageField(field: Int, value: ByteArray): ByteArray = bytesField(field, value)
 
+  fun packedVarintField(field: Int, vararg values: Long): ByteArray =
+    bytesField(field, concat(*values.map { varint(it) }.toTypedArray()))
+
   private fun bytesField(field: Int, value: ByteArray): ByteArray =
     concat(tag(field, LEN), varint(value.size.toLong()), value)
 
