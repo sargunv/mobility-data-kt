@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.TimeZone
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -104,7 +103,7 @@ private val expectedResponse =
         phoneNumber = "+18005551234",
         email = "customerservice@example.com",
         feedContactEmail = "datafeed@example.com",
-        timezone = TimeZone.of("America/Chicago"),
+        timezone = "America/Chicago",
         licenseUrl = "https://www.example.com/data-license.html",
         termsUrl = mapOf("en" to "https://www.example.com/en/terms"),
         termsLastUpdated = LocalDate(2021, 6, 21),

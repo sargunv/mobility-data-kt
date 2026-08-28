@@ -6,7 +6,6 @@ import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.TimeZone
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -43,7 +42,7 @@ private val expectedResponse =
     data =
       SystemInformation(
         language = "en",
-        timezone = TimeZone.of("America/Toronto"),
+        timezone = "America/Toronto",
         name = "Example MicroTransit",
         shortName = "Micro",
         operator = "MicroTransit, Inc",

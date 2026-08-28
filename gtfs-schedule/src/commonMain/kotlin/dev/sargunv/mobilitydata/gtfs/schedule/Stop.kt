@@ -1,8 +1,8 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
+import dev.sargunv.mobilitydata.utils.TimeZoneId
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
-import kotlinx.datetime.TimeZone
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -46,8 +46,8 @@ public data class Stop(
   /** Defines hierarchy between the different locations. */
   @SerialName("parent_station") public val parentStation: String? = null,
 
-  /** Timezone of the location. */
-  @SerialName("stop_timezone") public val stopTimezone: TimeZone? = null,
+  /** IANA time zone identifier of the location. */
+  @SerialName("stop_timezone") public val stopTimezone: TimeZoneId? = null,
 
   /** Indicates whether wheelchair boardings are possible from the location. */
   @SerialName("wheelchair_boarding") public val wheelchairBoarding: TriState? = null,

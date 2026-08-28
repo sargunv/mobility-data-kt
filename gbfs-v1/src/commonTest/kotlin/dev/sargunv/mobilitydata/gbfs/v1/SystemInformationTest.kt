@@ -6,7 +6,6 @@ import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.TimeZone
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -65,7 +64,7 @@ private val expectedResponse =
         phoneNumber = "1-800-555-1234",
         email = "customerservice@example.com",
         feedContactEmail = "datafeed@example.com",
-        timezone = TimeZone.of("America/Chicago"),
+        timezone = "America/Chicago",
         licenseUrl = "https://www.example.com/data-license.html",
         rentalApps =
           RentalAppUris(

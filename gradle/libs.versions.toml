@@ -2,9 +2,8 @@
 kotlin = "2.4.10"
 kotlinx-io = "0.9.1"
 kotlinx-kover = "0.9.9"
-# 0.8.0 deprecates TimeZone serialization used by public models; zoneinfo matches 0.7.1.
-kotlinx-datetime = "0.7.1"
-kotlinx-datetime-zoneinfo = "2026b-spi.0.7.1"
+kotlinx-datetime = "0.8.0"
+kotlinx-datetime-zoneinfo = "2026c-spi.0.8.0"
 kotlinx-coroutines = "1.11.0"
 kotlinx-serialization = "1.11.0"
 vanniktech-publish = "0.37.0"
