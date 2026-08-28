@@ -10,11 +10,10 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.protobuf.ProtoNumber
 
 /**
- * Decodes proto2 enums so an unrecognized number does not abort the message.
+ * Fallback for proto2 enums that reach kotlinx after unknown occurrences are stripped.
  *
- * Official proto2 treats an unknown enum occurrence as an unknown field: it does not overwrite a
- * previously recognized value, and an unknown-only field stays at the property default. Numeric
- * varint handling is protobuf-only; other formats keep the generated enum serializer.
+ * Unknown numbers become [fallback] or null. There is no shared decode session; last-recognized
+ * preservation happens by dropping unknown varints from the wire before decode.
  */
 internal fun <T : Enum<T>> proto2EnumSerializer(
   generated: KSerializer<T>,
@@ -31,12 +30,7 @@ internal fun <T : Enum<T>> proto2EnumSerializer(
 
     override fun deserialize(decoder: Decoder): T {
       if (!decoder.isProtobuf()) return generated.deserialize(decoder)
-      val known = byNumber[decoder.decodeInt()]
-      return if (known != null) {
-        Proto2EnumDecodeSession.remember(decoder, this, known)
-      } else {
-        Proto2EnumDecodeSession.previous(decoder, this) ?: fallback
-      }
+      return byNumber[decoder.decodeInt()] ?: fallback
     }
   }
 }
@@ -55,12 +49,7 @@ internal fun <T : Enum<T>> proto2NullableEnumSerializer(
 
     override fun deserialize(decoder: Decoder): T? {
       if (!decoder.isProtobuf()) return generated.deserialize(decoder)
-      val known = byNumber[decoder.decodeInt()]
-      return if (known != null) {
-        Proto2EnumDecodeSession.remember(decoder, this, known)
-      } else {
-        Proto2EnumDecodeSession.previous(decoder, this)
-      }
+      return byNumber[decoder.decodeInt()]
     }
   }
 }
@@ -83,30 +72,6 @@ private fun <T : Enum<T>> protoNumberMap(generated: KSerializer<T>, values: List
 }
 
 private fun Decoder.isProtobuf(): Boolean = this::class.simpleName.orEmpty().contains("Protobuf")
-
-internal object Proto2EnumDecodeSession {
-  private val lastKnown = mutableListOf<LastKnown>()
-
-  fun <T> remember(decoder: Decoder, serializer: Any, value: T): T {
-    val existing = lastKnown.indexOfFirst { it.decoder === decoder && it.serializer === serializer }
-    if (existing >= 0) {
-      lastKnown[existing] = LastKnown(decoder, serializer, value)
-    } else {
-      lastKnown += LastKnown(decoder, serializer, value)
-    }
-    return value
-  }
-
-  @Suppress("UNCHECKED_CAST")
-  fun <T> previous(decoder: Decoder, serializer: Any): T? =
-    lastKnown.firstOrNull { it.decoder === decoder && it.serializer === serializer }?.value as T?
-
-  fun clear() {
-    lastKnown.clear()
-  }
-
-  private class LastKnown(val decoder: Decoder, val serializer: Any, val value: Any?)
-}
 
 internal object IncrementalitySerializer :
   KSerializer<FeedHeader.Incrementality> by proto2EnumSerializer(

@@ -10,13 +10,8 @@ public object GtfsRealtimeProto {
   private val protoBuf: ProtoBuf = ProtoBuf { encodeDefaults = false }
 
   /** Decodes a GTFS Realtime feed message from protobuf bytes. */
-  public fun decodeFeedMessage(bytes: ByteArray): FeedMessage {
-    try {
-      return protoBuf.decodeFromByteArray(FeedMessage.serializer(), bytes)
-    } finally {
-      Proto2EnumDecodeSession.clear()
-    }
-  }
+  public fun decodeFeedMessage(bytes: ByteArray): FeedMessage =
+    protoBuf.decodeFromByteArray(FeedMessage.serializer(), Proto2UnknownEnumStripper.strip(bytes))
 
   /** Encodes a GTFS Realtime feed message to protobuf bytes. */
   public fun encodeFeedMessage(feedMessage: FeedMessage): ByteArray =
