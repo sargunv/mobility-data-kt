@@ -169,6 +169,6 @@ class ZonesTest {
         .trimIndent()
 
     val decoded = GofsJson.decodeFromString<GofsFeedResponse<Zones>>(json)
-    assertEquals(null, decoded.data.zones.features.single().properties?.name)
+    assertEquals(null, decoded.data.zones.features.single().properties.name)
   }
 }
