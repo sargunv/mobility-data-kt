@@ -4,48 +4,65 @@ on:
     push:
         branches: [main]
     pull_request:
+    workflow_dispatch:
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 permissions:
     contents: read
 
 jobs:
     build:
+        timeout-minutes: 30
         runs-on: ubuntu-latest
         steps:
             - uses: nschloe/action-cached-lfs-checkout@385a8ecc719e50b8c71af6ab01a624b486b7c3bc # v1.2.5
-              with:
-                  fetch-depth: 0
-            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+            - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
             - run: ./gradlew build
 
     build-docs:
+        timeout-minutes: 30
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
               with:
+                  # .mise/bin/version-args reads the release tag off the checkout.
                   fetch-depth: 0
-                  fetch-tags: true
                   persist-credentials: false
-            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
-            - run: ./gradlew :mkdocsBuild
+            - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+            - run: mise run build:docs
             - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
               with:
                   path: build/mkdocs
 
     check-format:
+        timeout-minutes: 30
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
               with:
-                  fetch-depth: 0
-                  fetch-tags: true
                   persist-credentials: false
-            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+            - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
             - run: mise run check
 
-    # stub to use as a "required" check on github
+    # Branch protection requires this job. always() still runs it after a needed
+    # job fails; GitHub otherwise skips it and treats that skip as a passing check.
     all-good:
+        if: ${{ always() }}
         needs: [build, check-format, build-docs]
+        timeout-minutes: 5
         runs-on: ubuntu-latest
         steps:
-            - run: echo 'All checks passed!'
+            - name: Check that every needed job succeeded
+              env:
+                  RESULTS: ${{ join(needs.*.result, ', ') }}
+                  ANY_BAD: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
+              run: |
+                  echo "needed job results: ${RESULTS}"
+                  if [ "${ANY_BAD}" = true ]; then
+                    echo "a needed job did not succeed"
+                    exit 1
+                  fi
+                  echo 'All checks passed!'

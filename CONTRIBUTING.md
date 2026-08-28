@@ -1,20 +1,28 @@
-## Git-LFS
-
-This project uses Git-LFS to manage sample datasets used in tests. Make sure that you have
-[installed and configured Git-LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
-before cloning the repo.
-
 ## Dev Setup
 
-This project uses [mise](https://mise.jdx.dev/) to manage tools and tasks. After cloning the repo,
-install all required tools:
+This project uses [mise](https://mise.jdx.dev/) to manage tools and tasks. Install mise, then from
+the repo root install all required tools:
 
 ```sh
 mise install
 ```
 
-This installs the correct versions of Java, dprint, hk, pkl, and ktfmt, and runs `hk install --mise`
-to set up the pre-commit hook.
+This installs the pinned versions of Java, dprint, hk, pkl, ktfmt, and Git-LFS, and runs
+`hk install --mise` to set up the pre-commit hook.
+
+## Git-LFS
+
+This project uses [Git-LFS](https://git-lfs.com/) to manage the sample datasets used in tests.
+Git-LFS is provided by mise, so you don't need to install it on your host separately. The datasets
+are fetched automatically by a [mise deps](https://mise.jdx.dev/dev-tools/deps.html) provider before
+the first `mise run`/`mise exec`; you can also fetch them on demand:
+
+```sh
+mise deps
+```
+
+If you cloned before running `mise install`, the sample files start out as Git-LFS pointer files;
+running the command above materializes their contents.
 
 ## IDE Setup
 

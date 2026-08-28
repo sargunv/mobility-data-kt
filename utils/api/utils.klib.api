@@ -147,6 +147,14 @@ final object dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer 
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlinx.datetime/Month) // dev.sargunv.mobilitydata.utils.serialization/MonthNumberSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlinx.datetime.Month){}[0]
 }
 
+final object dev.sargunv.mobilitydata.utils.serialization/OsmOpeningHoursSerializer : kotlinx.serialization/KSerializer<de.westnordost.osm_opening_hours.model/OpeningHours> { // dev.sargunv.mobilitydata.utils.serialization/OsmOpeningHoursSerializer|null[0]
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/OsmOpeningHoursSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/OsmOpeningHoursSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): de.westnordost.osm_opening_hours.model/OpeningHours // dev.sargunv.mobilitydata.utils.serialization/OsmOpeningHoursSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, de.westnordost.osm_opening_hours.model/OpeningHours) // dev.sargunv.mobilitydata.utils.serialization/OsmOpeningHoursSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;de.westnordost.osm_opening_hours.model.OpeningHours){}[0]
+}
+
 final object dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/RgbColor> { // dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer|null[0]
     final val descriptor // dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer.descriptor|{}descriptor[0]
         final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/RgbColorCodeSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]

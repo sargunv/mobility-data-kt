@@ -1,18 +1,45 @@
+# https://mise.jdx.dev
+min_version = "2026.7.15"
+
 [settings]
 experimental = true
 pin = true
+lockfile = true
+minimum_release_age = "3d"
 
 [hooks]
 postinstall = ["hk install --mise"]
 
 [tools]
-java = "21.0.2"
-dprint = "0.53.2"
-hk = "1.40.0"
-pkl = "0.30.2"
-xcodes = "1.6.2"
+"core:java" = "21.0.2"
+"aqua:dprint/dprint" = "0.53.2"
+"aqua:jdx/hk" = "1.40.0"
+"aqua:apple/pkl" = "0.30.2"
 "aqua:facebook/ktfmt" = "0.62"
-python = "3.14"
+"core:python" = "3.14"
+"aqua:git-lfs/git-lfs" = "3.7.1"
+
+# For tooling outside Gradle (also provides npm for the npm: backend below);
+# Kotlin/JS brings its own Node via Gradle.
+"core:node" = "24.19.0"
+"npm:actions-up" = "1.18.0"
+
+# The CLI only; Xcode itself is installed via the xcode:* tasks. macOS-only.
+"aqua:XcodesOrg/xcodes" = { version = "1.6.2", os = ["macos"] }
+
+# Fetch the Git-LFS sample datasets used by tests. Runs automatically before
+# `mise run`/`mise exec`. Freshness is keyed on the working-tree contents of
+# `sample-data`, so a fresh checkout (where the files are still LFS pointers)
+# is detected as stale and materialized, while an already-materialized tree is
+# left untouched.
+[deps.git-lfs]
+auto = true
+sources = ["sample-data/**/*"]
+description = "Fetch the Git-LFS sample datasets used by tests"
+run = """
+git lfs install --local --skip-repo
+git lfs pull
+"""
 
 [tasks.build]
 description = "Build and check all targets"
@@ -40,7 +67,28 @@ depends = ["test:jvm", "test:jsnode", "test:wasmjsnode", "test:native"]
 
 [tasks.docs]
 description = "Serve documentation locally"
-run = "./gradlew :mkdocsServe"
+run = ".mise/bin/gradle-with-version build :mkdocsServe"
+
+[tasks."build:docs"]
+description = "Build the documentation site and the Dokka API reference"
+run = ".mise/bin/gradle-with-version build :mkdocsBuild"
+
+[tasks."publish:snapshot"]
+description = "Publish a snapshot build to Maven Central."
+run = ".mise/bin/gradle-with-version snapshot publishToMavenCentral"
+
+[tasks."publish:release"]
+description = "Publish and release the current tag to Maven Central."
+run = ".mise/bin/gradle-with-version release publishAndReleaseToMavenCentral --no-configuration-cache"
+
+[tasks.version]
+description = "Print the version properties this checkout builds with."
+usage = '''
+arg "[mode]" default="build" {
+  choices "build" "snapshot" "release"
+}
+'''
+run = '.mise/bin/version-args "$usage_mode"'
 
 [tasks."update:gtfs-realtime:fixtures"]
 description = "Refresh checked-in GTFS Realtime protobuf fixtures from public feeds"
@@ -57,6 +105,10 @@ curl -fsSL 'https://gtfsr.tri-rail.com/download.aspx?file=position_updates.pb' \
 curl -fsSL 'https://gtfsr.tri-rail.com/download.aspx?file=alerts.pb' \
   -o sample-data/gtfs-realtime/tri-rail/alerts.pb
 """
+
+[tasks.actions-up]
+description = "Update and pin GitHub Actions steps."
+run = "actions-up"
 
 [tasks."xcode:select"]
 description = "Install and select the pinned Xcode version on macOS"

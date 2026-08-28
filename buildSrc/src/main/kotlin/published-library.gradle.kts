@@ -11,11 +11,7 @@ plugins {
 
 group = "dev.sargunv.mobility-data"
 
-if (providers.gradleProperty("disableSemver").orNull == "true") {
-  version = "0.0.0-dev"
-} else {
-  pluginManager.apply("semver")
-}
+version = providers.gradleProperty("mobilityDataVersion").get()
 
 kotlin {
   explicitApi()
@@ -40,12 +36,20 @@ dokka {
     configureEach {
       includes.from("MODULE.md")
       sourceLink {
-        remoteUrl("https://github.com/sargunv/mobility-data-kt/tree/v${project.version}/")
+        // Dokka appends the source path with a leading slash.
+        val sourceRef = providers.gradleProperty("mobilityDataSourceRef").get()
+        remoteUrl("https://github.com/sargunv/mobility-data-kt/tree/$sourceRef")
         localDirectory = rootDir
       }
       externalDocumentationLinks {
         create("kotlinx-serialization") { url("https://kotlinlang.org/api/kotlinx.serialization/") }
         create("ktor") { url("https://api.ktor.io") }
+        create("osm-opening-hours") {
+          url("https://westnordost.github.io/osm-opening-hours/")
+          packageListUrl(
+            "https://westnordost.github.io/osm-opening-hours/-o-s-m%20-opening%20-hours/package-list"
+          )
+        }
       }
     }
   }

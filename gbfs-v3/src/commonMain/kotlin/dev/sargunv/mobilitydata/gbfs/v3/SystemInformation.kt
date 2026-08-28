@@ -1,14 +1,15 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import de.westnordost.osm_opening_hours.model.OpeningHours
 import dev.sargunv.mobilitydata.utils.ExtendedLocalDate
 import dev.sargunv.mobilitydata.utils.LanguageCode
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.LocalizedUrl
-import dev.sargunv.mobilitydata.utils.OsmOpeningHours
 import dev.sargunv.mobilitydata.utils.RgbColorCode
 import dev.sargunv.mobilitydata.utils.TimeZoneId
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
+import dev.sargunv.mobilitydata.utils.serialization.OsmOpeningHoursSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -32,8 +33,13 @@ public data class SystemInformation(
   /** Name of the system to be displayed to customers. */
   public val name: LocalizedText,
 
-  /** Hours and dates of operation for the system. */
-  @SerialName("opening_hours") public val openingHours: OsmOpeningHours,
+  /**
+   * Hours and dates of operation for the system, parsed from the
+   * [OSM opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours) format.
+   */
+  @SerialName("opening_hours")
+  @Serializable(with = OsmOpeningHoursSerializer::class)
+  public val openingHours: OpeningHours,
 
   /** Abbreviation for the system. */
   @SerialName("short_name") public val shortName: LocalizedText? = null,

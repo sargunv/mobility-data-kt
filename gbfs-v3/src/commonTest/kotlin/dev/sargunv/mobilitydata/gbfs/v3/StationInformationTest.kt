@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import de.westnordost.osm_opening_hours.parser.toOpeningHours
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -29,6 +30,7 @@ private val physicalJsonContent = // language=JSON
           ],
           "lat": 12.345678,
           "lon": 45.678901,
+          "station_opening_hours": "Mo-Fr 06:00-22:00",
           "parking_type": "underground_parking",
           "parking_hoop": false,
           "contact_phone": "+33109874321",
@@ -61,6 +63,7 @@ private val physicalExpectedResponse =
               name = mapOf("en" to "Parking garage A"),
               lat = 12.345678,
               lon = 45.678901,
+              stationOpeningHours = "Mo-Fr 06:00-22:00".toOpeningHours(lenient = true),
               parkingType = ParkingType.UndergroundParking,
               parkingHoop = false,
               contactPhone = "+33109874321",
