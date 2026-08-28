@@ -3,6 +3,7 @@
 package dev.sargunv.mobilitydata.gtfs.realtime
 
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class AlertTest {
   @Test
@@ -163,5 +164,45 @@ class AlertTest {
       )
 
     assertFeedRoundTrips(feed)
+  }
+
+  @Test
+  fun decodesSpecialEventCauseFromVarint13() {
+    // Minimal FeedMessage with Alert.cause encoded as protobuf varint 13 (SPECIAL_EVENT).
+    // header.gtfs_realtime_version = "2.0"; entity.id = "e1"; alert.cause = 13
+    val payload =
+      byteArrayOf(
+        0x0A,
+        0x05,
+        0x0A,
+        0x03,
+        0x32,
+        0x2E,
+        0x30,
+        0x12,
+        0x08,
+        0x0A,
+        0x02,
+        0x65,
+        0x31,
+        0x2A,
+        0x02,
+        0x30,
+        0x0D,
+      )
+
+    val decoded = GtfsRealtimeProto.decodeFeedMessage(payload)
+    assertEquals(Alert.Cause.SpecialEvent, decoded.entity.single().alert!!.cause)
+  }
+
+  @Test
+  fun roundTripsSpecialEventCause() {
+    assertFeedRoundTrips(
+      FeedMessage(
+        header = FeedHeader(gtfsRealtimeVersion = "2.0"),
+        entity =
+          listOf(FeedEntity(id = "special-event", alert = Alert(cause = Alert.Cause.SpecialEvent))),
+      )
+    )
   }
 }
