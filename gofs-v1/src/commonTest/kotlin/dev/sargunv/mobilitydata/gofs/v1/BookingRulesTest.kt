@@ -21,7 +21,6 @@ private val jsonContent = // language=JSON
       "booking_rules": [
         {
           "from_zone_ids": ["zoneA"],
-          "to_zone_ids": null,
           "booking_type": 1,
           "prior_notice_duration_min": 30,
           "prior_notice_duration_max": 180
@@ -79,5 +78,32 @@ class BookingRulesTest {
   fun decode() {
     val decodedResponse = GofsJson.decodeFromString<GofsFeedResponse<BookingRules>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
+  }
+
+  @Test
+  fun decodeExplicitNullToZoneIds() {
+    val json = // language=JSON
+      """
+      {
+        "last_updated": 1609866247,
+        "ttl": 86400,
+        "version": "1.0",
+        "data": {
+          "booking_rules": [
+            {
+              "from_zone_ids": ["zoneA"],
+              "to_zone_ids": null,
+              "booking_type": 1,
+              "prior_notice_duration_min": 30,
+              "prior_notice_duration_max": 180
+            }
+          ]
+        }
+      }
+      """
+        .trimIndent()
+
+    val decoded = GofsJson.decodeFromString<GofsFeedResponse<BookingRules>>(json)
+    assertEquals(null, decoded.data.bookingRules.single().toZoneIds)
   }
 }
