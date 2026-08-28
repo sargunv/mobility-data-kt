@@ -1,8 +1,3 @@
-public final class dev/sargunv/mobilitydata/utils/OsmOpeningHoursKt {
-	public static final fun OsmOpeningHours (Ljava/lang/String;Z)Lde/westnordost/osm_opening_hours/model/OpeningHours;
-	public static synthetic fun OsmOpeningHours$default (Ljava/lang/String;ZILjava/lang/Object;)Lde/westnordost/osm_opening_hours/model/OpeningHours;
-}
-
 public final class dev/sargunv/mobilitydata/utils/ResultKt {
 	public static final fun suspendRunCatching (Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;
 }

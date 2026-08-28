@@ -203,5 +203,4 @@ final object dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Duration) // dev.sargunv.mobilitydata.utils.serialization/WholeSecondsSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Duration){}[0]
 }
 
-final fun dev.sargunv.mobilitydata.utils/OsmOpeningHours(kotlin/String, kotlin/Boolean = ...): de.westnordost.osm_opening_hours.model/OpeningHours // dev.sargunv.mobilitydata.utils/OsmOpeningHours|OsmOpeningHours(kotlin.String;kotlin.Boolean){}[0]
 final inline fun <#A: kotlin/Any?> dev.sargunv.mobilitydata.utils/suspendRunCatching(kotlin/Function0<#A>): kotlin/Result<#A> // dev.sargunv.mobilitydata.utils/suspendRunCatching|suspendRunCatching(kotlin.Function0<0:0>){0§<kotlin.Any?>}[0]
