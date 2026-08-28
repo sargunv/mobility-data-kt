@@ -43,6 +43,10 @@ public final class dev/sargunv/mobilitydata/utils/Decimal$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class dev/sargunv/mobilitydata/utils/I18nKt {
+	public static final fun getDefaultFractionDigits (Ljava/lang/String;)Ljava/lang/Integer;
+}
+
 public final class dev/sargunv/mobilitydata/utils/ResultKt {
 	public static final fun suspendRunCatching (Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;
 }

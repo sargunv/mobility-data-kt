@@ -3,8 +3,10 @@ package dev.sargunv.mobilitydata.utils.serialization
 import dev.sargunv.mobilitydata.utils.Decimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 import kotlin.test.assertFalse
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.SerializationException
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -49,15 +51,31 @@ class DecimalSerializerTest {
   }
 
   @Test
-  fun jsonAcceptsNumericAndStringTokens() {
+  fun jsonAcceptsNumericTokensAndRejectsStrings() {
     assertEquals(
       TestData(Decimal.parse("3.1")),
       json.decodeFromString(TestData.serializer(), """{"amount":3.1}"""),
     )
-    assertEquals(
-      TestData(Decimal.parse("3.1")),
-      json.decodeFromString(TestData.serializer(), """{"amount":"3.1"}"""),
-    )
+    assertFailsWith<SerializationException> {
+      json.decodeFromString(TestData.serializer(), """{"amount":"3.1"}""")
+    }
+  }
+
+  @Test
+  fun jsonDecodesExponentFormExactly() {
+    val cases =
+      listOf(
+        "1e-2" to "0.01",
+        "1E-2" to "0.01",
+        "123e-9" to "0.000000123",
+        "-1.5e+1" to "-15",
+        "1e3" to "1000",
+      )
+    for ((token, canonical) in cases) {
+      val decoded = json.decodeFromString(TestData.serializer(), """{"amount":$token}""")
+      assertEquals(Decimal.parse(canonical), decoded.amount, token)
+      assertEquals(canonical, decoded.amount.toString(), token)
+    }
   }
 
   @Test

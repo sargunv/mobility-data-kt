@@ -24,6 +24,19 @@ class DecimalParseTest {
         "00012.3400" to "12.34",
         "1.2300000000" to "1.23",
         "1.000000000000000000" to "1",
+        "1e3" to "1000",
+        "1E3" to "1000",
+        "1e+2" to "100",
+        "1e-2" to "0.01",
+        "1E-2" to "0.01",
+        "123e-9" to "0.000000123",
+        "1.23e2" to "123",
+        "12.3e-1" to "1.23",
+        "-1e-2" to "-0.01",
+        "-1.5E+1" to "-15",
+        "1.0e-9" to "0.000000001",
+        "1e01" to "10",
+        "9e9" to "9000000000",
       )
     for ((input, canonical) in cases) {
       assertEquals(canonical, Decimal.parse(input).toString(), input)
@@ -46,8 +59,11 @@ class DecimalParseTest {
         "NaN",
         "Infinity",
         "-Infinity",
-        "1e3",
-        "1E3",
+        "1e",
+        "1e+",
+        "1e-",
+        "e3",
+        "1e1.5",
       )
     for (input in cases) {
       assertFailsWith<NumberFormatException>(input) { Decimal.parse(input) }
@@ -57,7 +73,18 @@ class DecimalParseTest {
 
   @Test
   fun rejectsExcessPrecision() {
-    val cases = listOf("0.0000000001", "1.1234567891", "1.2300000001")
+    val cases =
+      listOf("0.0000000001", "1.1234567891", "1.2300000001", "1e-10", "123e-10", "1.23e-8")
+    for (input in cases) {
+      assertFailsWith<ArithmeticException>(input) { Decimal.parse(input) }
+      assertNull(Decimal.parseOrNull(input), input)
+    }
+  }
+
+  @Test
+  fun rejectsExponentOverflow() {
+    val cases =
+      listOf("9223372036.854775807e1", "-9223372036.854775808e1", "1e10", "10e9", "1e40", "1e41")
     for (input in cases) {
       assertFailsWith<ArithmeticException>(input) { Decimal.parse(input) }
       assertNull(Decimal.parseOrNull(input), input)

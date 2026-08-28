@@ -184,9 +184,10 @@ public value class Decimal private constructor(private val value: Long) : Compar
     /**
      * Parses ordinary decimal text into a [Decimal].
      *
-     * Accepted syntax is an optional leading `-`, one or more integer digits, and an optional
-     * decimal point followed by one or more fractional digits. Leading `+`, scientific notation,
-     * and forms such as `.5` or `1.` are rejected.
+     * Accepted syntax is an optional leading `-`, one or more integer digits, an optional decimal
+     * point followed by one or more fractional digits, and an optional JSON-style exponent (`e` or
+     * `E`, optional `+`/`-`, and one or more digits). Leading `+` on the number and forms such as
+     * `.5` or `1.` are rejected.
      *
      * Throws [NumberFormatException] for malformed syntax and [ArithmeticException] for excess
      * precision or overflow.
@@ -266,10 +267,63 @@ private fun parseDecimal(value: String): Decimal {
     }
   }
 
+  repeat(DECIMAL_SCALE - fractionDigits) { scaled = multiplyExact(scaled, 10L) }
+
+  if (index < value.length && (value[index] == 'e' || value[index] == 'E')) {
+    index++
+    if (index >= value.length) {
+      throw NumberFormatException("Invalid decimal: $value")
+    }
+    var exponentNegative = false
+    when (value[index]) {
+      '-' -> {
+        exponentNegative = true
+        index++
+      }
+      '+' -> index++
+    }
+    if (index >= value.length || value[index] !in '0'..'9') {
+      throw NumberFormatException("Invalid decimal: $value")
+    }
+    var exponent = 0L
+    while (index < value.length && value[index] in '0'..'9') {
+      val digit = (value[index] - '0').toLong()
+      exponent = addExact(multiplyExact(exponent, 10L), digit)
+      index++
+    }
+    scaled = applyExponent(scaled, if (exponentNegative) negateExact(exponent) else exponent)
+  }
+
   if (index != value.length) {
     throw NumberFormatException("Invalid decimal: $value")
   }
 
-  repeat(DECIMAL_SCALE - fractionDigits) { scaled = multiplyExact(scaled, 10L) }
   return Decimal.fromScaled(scaled)
+}
+
+private const val MAX_EXPONENT_SHIFT: Long = 40L
+
+private fun applyExponent(scaled: Long, exponent: Long): Long {
+  if (exponent == 0L || scaled == 0L) return scaled
+  if (exponent > MAX_EXPONENT_SHIFT || exponent < -MAX_EXPONENT_SHIFT) {
+    throw ArithmeticException("Decimal exponent is out of range")
+  }
+  var result = scaled
+  if (exponent > 0L) {
+    var remaining = exponent
+    while (remaining > 0L) {
+      result = multiplyExact(result, 10L)
+      remaining--
+    }
+    return result
+  }
+  var remaining = -exponent
+  while (remaining > 0L) {
+    if (result % 10L != 0L) {
+      throw ArithmeticException("Decimal exponent requires more than 9 fractional digits")
+    }
+    result /= 10L
+    remaining--
+  }
+  return result
 }

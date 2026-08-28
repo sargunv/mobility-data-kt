@@ -9,8 +9,11 @@ import kotlinx.serialization.Serializable
  * Describes the range of fares available for purchase by riders.
  *
  * This class represents a record in the fare_products.txt file.
+ *
+ * On encode, [amount] is written with the ISO 4217 minor-unit scale of [currency]. Decode accepts
+ * any exact [Decimal] representation.
  */
-@Serializable
+@Serializable(with = FareProductSerializer::class)
 public data class FareProduct(
   /** Identifies a fare product or set of fare products. */
   @SerialName("fare_product_id") public val fareProductId: String,
