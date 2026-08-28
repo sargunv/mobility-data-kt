@@ -23,11 +23,11 @@ jobs:
             name: maven-central
             url: https://central.sonatype.com/namespace/dev.sargunv.mobility-data
         steps:
-            - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
               with:
                   fetch-depth: 0
                   fetch-tags: true
-            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+            - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
             - run: |
                   ./gradlew publishAndReleaseToMavenCentral -Psemver.stage=final -Psemver.scope=${{ github.event.inputs.scope }}
               env:
@@ -49,11 +49,11 @@ jobs:
             name: github-pages
             url: ${{ steps.deploy-pages.outputs.page_url }}
         steps:
-            - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
               with:
                   fetch-depth: 0
                   fetch-tags: true
-            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+            - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
             - run: |
                   ./gradlew :mkdocsBuild -Psemver.stage=final -Psemver.scope=${{ github.event.inputs.scope }}
             - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
@@ -68,11 +68,11 @@ jobs:
         permissions:
             contents: write
         steps:
-            - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
               with:
                   fetch-depth: 0
                   fetch-tags: true
-            - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+            - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
             - run: |
                   ./gradlew :createSemverTag -Psemver.stage=final -Psemver.scope=${{ github.event.inputs.scope }}
             - run: git push --follow-tags
