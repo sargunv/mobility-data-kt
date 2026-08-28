@@ -195,6 +195,7 @@ class EnumInteropTest {
         GtfsRealtime.Alert.Cause.CONSTRUCTION to Alert.Cause.Construction,
         GtfsRealtime.Alert.Cause.POLICE_ACTIVITY to Alert.Cause.PoliceActivity,
         GtfsRealtime.Alert.Cause.MEDICAL_EMERGENCY to Alert.Cause.MedicalEmergency,
+        GtfsRealtime.Alert.Cause.SPECIAL_EVENT to Alert.Cause.SpecialEvent,
       )
 
     mapping.forEach { (official, expected) ->
