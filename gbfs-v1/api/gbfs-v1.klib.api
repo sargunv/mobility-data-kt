@@ -218,7 +218,7 @@ final class dev.sargunv.mobilitydata.gbfs.v1/FreeBikeStatus : dev.sargunv.mobili
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v1/PricingPlan { // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan|null[0]
-    constructor <init>(kotlin/String, kotlin/String? = ..., kotlin/String, kotlin/String, kotlin/Double, kotlin/Boolean, kotlin/String) // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.<init>|<init>(kotlin.String;kotlin.String?;kotlin.String;kotlin.String;kotlin.Double;kotlin.Boolean;kotlin.String){}[0]
+    constructor <init>(kotlin/String, kotlin/String? = ..., kotlin/String, kotlin/String, dev.sargunv.mobilitydata.utils/Decimal, kotlin/Boolean, kotlin/String) // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.<init>|<init>(kotlin.String;kotlin.String?;kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.Decimal;kotlin.Boolean;kotlin.String){}[0]
 
     final val currency // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.currency|{}currency[0]
         final fun <get-currency>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.currency.<get-currency>|<get-currency>(){}[0]
@@ -231,7 +231,7 @@ final class dev.sargunv.mobilitydata.gbfs.v1/PricingPlan { // dev.sargunv.mobili
     final val planId // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.planId|{}planId[0]
         final fun <get-planId>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.planId.<get-planId>|<get-planId>(){}[0]
     final val price // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.price|{}price[0]
-        final fun <get-price>(): kotlin/Double // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.price.<get-price>|<get-price>(){}[0]
+        final fun <get-price>(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.price.<get-price>|<get-price>(){}[0]
     final val url // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.url|{}url[0]
         final fun <get-url>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.url.<get-url>|<get-url>(){}[0]
 
@@ -239,10 +239,10 @@ final class dev.sargunv.mobilitydata.gbfs.v1/PricingPlan { // dev.sargunv.mobili
     final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.component2|component2(){}[0]
     final fun component3(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.component3|component3(){}[0]
     final fun component4(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.component4|component4(){}[0]
-    final fun component5(): kotlin/Double // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.component5|component5(){}[0]
+    final fun component5(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.component5|component5(){}[0]
     final fun component6(): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.component6|component6(){}[0]
     final fun component7(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.component7|component7(){}[0]
-    final fun copy(kotlin/String = ..., kotlin/String? = ..., kotlin/String = ..., kotlin/String = ..., kotlin/Double = ..., kotlin/Boolean = ..., kotlin/String = ...): dev.sargunv.mobilitydata.gbfs.v1/PricingPlan // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.copy|copy(kotlin.String;kotlin.String?;kotlin.String;kotlin.String;kotlin.Double;kotlin.Boolean;kotlin.String){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String? = ..., kotlin/String = ..., kotlin/String = ..., dev.sargunv.mobilitydata.utils/Decimal = ..., kotlin/Boolean = ..., kotlin/String = ...): dev.sargunv.mobilitydata.gbfs.v1/PricingPlan // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.copy|copy(kotlin.String;kotlin.String?;kotlin.String;kotlin.String;dev.sargunv.mobilitydata.utils.Decimal;kotlin.Boolean;kotlin.String){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/PricingPlan.toString|toString(){}[0]

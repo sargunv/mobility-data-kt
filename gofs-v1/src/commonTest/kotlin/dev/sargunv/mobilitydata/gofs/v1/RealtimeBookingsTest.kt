@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
+import dev.sargunv.mobilitydata.utils.Decimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
@@ -65,7 +66,7 @@ private val expectedResponse =
               brandId = "regular_ride",
               waitTime = 300.seconds,
               travelTime = 300.seconds,
-              travelCost = 30.1,
+              travelCost = Decimal.parse("30.1"),
               travelCostCurrency = "CAD",
               bookingDetail =
                 BookingDetail(
@@ -80,7 +81,7 @@ private val expectedResponse =
               brandId = "large_ride",
               waitTime = 450.seconds,
               travelTime = 300.seconds,
-              travelCost = 45.1,
+              travelCost = Decimal.parse("45.1"),
               travelCostCurrency = "CAD",
               bookingDetail =
                 BookingDetail(

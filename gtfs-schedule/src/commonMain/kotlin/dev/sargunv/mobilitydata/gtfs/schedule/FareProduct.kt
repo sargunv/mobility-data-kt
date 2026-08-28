@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
+import dev.sargunv.mobilitydata.utils.Decimal
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -24,7 +25,7 @@ public data class FareProduct(
   @SerialName("fare_media_id") public val fareMediaId: String? = null,
 
   /** The cost of the fare product. May be negative to represent transfer discounts. */
-  @SerialName("amount") public val amount: Double,
+  @SerialName("amount") public val amount: Decimal,
 
   /** The currency of the cost of the fare product. */
   @SerialName("currency") public val currency: CurrencyCode,

@@ -311,23 +311,23 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/DurationLimitType$Comp
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/FareAttribute {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/FareAttribute$Companion;
-	public synthetic fun <init> (Ljava/lang/String;DLjava/lang/String;ILjava/lang/Integer;Ljava/lang/String;Lkotlin/time/Duration;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;DLjava/lang/String;ILjava/lang/Integer;Ljava/lang/String;Lkotlin/time/Duration;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;JLjava/lang/String;ILjava/lang/Integer;Ljava/lang/String;Lkotlin/time/Duration;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;JLjava/lang/String;ILjava/lang/Integer;Ljava/lang/String;Lkotlin/time/Duration;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
-	public final fun component2 ()D
+	public final fun component2-OWyw9kc ()J
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4-FS_cSZ4 ()I
 	public final fun component5 ()Ljava/lang/Integer;
 	public final fun component6 ()Ljava/lang/String;
 	public final fun component7-FghU774 ()Lkotlin/time/Duration;
-	public final fun copy-g2cuvtA (Ljava/lang/String;DLjava/lang/String;ILjava/lang/Integer;Ljava/lang/String;Lkotlin/time/Duration;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareAttribute;
-	public static synthetic fun copy-g2cuvtA$default (Ldev/sargunv/mobilitydata/gtfs/schedule/FareAttribute;Ljava/lang/String;DLjava/lang/String;ILjava/lang/Integer;Ljava/lang/String;Lkotlin/time/Duration;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareAttribute;
+	public final fun copy-vWZXKa8 (Ljava/lang/String;JLjava/lang/String;ILjava/lang/Integer;Ljava/lang/String;Lkotlin/time/Duration;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareAttribute;
+	public static synthetic fun copy-vWZXKa8$default (Ldev/sargunv/mobilitydata/gtfs/schedule/FareAttribute;Ljava/lang/String;JLjava/lang/String;ILjava/lang/Integer;Ljava/lang/String;Lkotlin/time/Duration;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareAttribute;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAgencyId ()Ljava/lang/String;
 	public final fun getCurrencyType ()Ljava/lang/String;
 	public final fun getFareId ()Ljava/lang/String;
 	public final fun getPaymentMethod-FS_cSZ4 ()I
-	public final fun getPrice ()D
+	public final fun getPrice-OWyw9kc ()J
 	public final fun getTransferDuration-FghU774 ()Lkotlin/time/Duration;
 	public final fun getTransfers ()Ljava/lang/Integer;
 	public fun hashCode ()I
@@ -493,18 +493,18 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/FareMediaType$Companio
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/FareProduct {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/FareProduct$Companion;
-	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;DLjava/lang/String;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;DLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()Ljava/lang/String;
-	public final fun component5 ()D
+	public final fun component5-OWyw9kc ()J
 	public final fun component6 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;DLjava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareProduct;
-	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gtfs/schedule/FareProduct;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;DLjava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareProduct;
+	public final fun copy-Wv03aRg (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareProduct;
+	public static synthetic fun copy-Wv03aRg$default (Ldev/sargunv/mobilitydata/gtfs/schedule/FareProduct;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/FareProduct;
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getAmount ()D
+	public final fun getAmount-OWyw9kc ()J
 	public final fun getCurrency ()Ljava/lang/String;
 	public final fun getFareMediaId ()Ljava/lang/String;
 	public final fun getFareProductId ()Ljava/lang/String;

@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
+import dev.sargunv.mobilitydata.utils.Decimal
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -71,5 +72,5 @@ public data class FareEntry(
    */
   public val end: Int? = null,
   /** The fare cost per each unit of the parent key. */
-  public val amount: Double? = null,
+  public val amount: Decimal? = null,
 )

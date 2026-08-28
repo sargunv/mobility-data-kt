@@ -374,10 +374,10 @@ final class dev.sargunv.mobilitydata.gofs.v1/Fare { // dev.sargunv.mobilitydata.
 }
 
 final class dev.sargunv.mobilitydata.gofs.v1/FareEntry { // dev.sargunv.mobilitydata.gofs.v1/FareEntry|null[0]
-    constructor <init>(kotlin/Double? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Double? = ...) // dev.sargunv.mobilitydata.gofs.v1/FareEntry.<init>|<init>(kotlin.Double?;kotlin.Int?;kotlin.Int?;kotlin.Double?){}[0]
+    constructor <init>(kotlin/Double? = ..., kotlin/Int? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.utils/Decimal? = ...) // dev.sargunv.mobilitydata.gofs.v1/FareEntry.<init>|<init>(kotlin.Double?;kotlin.Int?;kotlin.Int?;dev.sargunv.mobilitydata.utils.Decimal?){}[0]
 
     final val amount // dev.sargunv.mobilitydata.gofs.v1/FareEntry.amount|{}amount[0]
-        final fun <get-amount>(): kotlin/Double? // dev.sargunv.mobilitydata.gofs.v1/FareEntry.amount.<get-amount>|<get-amount>(){}[0]
+        final fun <get-amount>(): dev.sargunv.mobilitydata.utils/Decimal? // dev.sargunv.mobilitydata.gofs.v1/FareEntry.amount.<get-amount>|<get-amount>(){}[0]
     final val end // dev.sargunv.mobilitydata.gofs.v1/FareEntry.end|{}end[0]
         final fun <get-end>(): kotlin/Int? // dev.sargunv.mobilitydata.gofs.v1/FareEntry.end.<get-end>|<get-end>(){}[0]
     final val interval // dev.sargunv.mobilitydata.gofs.v1/FareEntry.interval|{}interval[0]
@@ -388,8 +388,8 @@ final class dev.sargunv.mobilitydata.gofs.v1/FareEntry { // dev.sargunv.mobility
     final fun component1(): kotlin/Double? // dev.sargunv.mobilitydata.gofs.v1/FareEntry.component1|component1(){}[0]
     final fun component2(): kotlin/Int? // dev.sargunv.mobilitydata.gofs.v1/FareEntry.component2|component2(){}[0]
     final fun component3(): kotlin/Int? // dev.sargunv.mobilitydata.gofs.v1/FareEntry.component3|component3(){}[0]
-    final fun component4(): kotlin/Double? // dev.sargunv.mobilitydata.gofs.v1/FareEntry.component4|component4(){}[0]
-    final fun copy(kotlin/Double? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Double? = ...): dev.sargunv.mobilitydata.gofs.v1/FareEntry // dev.sargunv.mobilitydata.gofs.v1/FareEntry.copy|copy(kotlin.Double?;kotlin.Int?;kotlin.Int?;kotlin.Double?){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.utils/Decimal? // dev.sargunv.mobilitydata.gofs.v1/FareEntry.component4|component4(){}[0]
+    final fun copy(kotlin/Double? = ..., kotlin/Int? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.utils/Decimal? = ...): dev.sargunv.mobilitydata.gofs.v1/FareEntry // dev.sargunv.mobilitydata.gofs.v1/FareEntry.copy|copy(kotlin.Double?;kotlin.Int?;kotlin.Int?;dev.sargunv.mobilitydata.utils.Decimal?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/FareEntry.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/FareEntry.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/FareEntry.toString|toString(){}[0]
@@ -547,14 +547,14 @@ final class dev.sargunv.mobilitydata.gofs.v1/OperatingRules : dev.sargunv.mobili
 }
 
 final class dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking { // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking|null[0]
-    constructor <init>(kotlin/String, kotlin.time/Duration, kotlin.time/Duration? = ..., kotlin/Double? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gofs.v1/BookingDetail? = ...) // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.<init>|<init>(kotlin.String;kotlin.time.Duration;kotlin.time.Duration?;kotlin.Double?;kotlin.String?;dev.sargunv.mobilitydata.gofs.v1.BookingDetail?){}[0]
+    constructor <init>(kotlin/String, kotlin.time/Duration, kotlin.time/Duration? = ..., dev.sargunv.mobilitydata.utils/Decimal? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gofs.v1/BookingDetail? = ...) // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.<init>|<init>(kotlin.String;kotlin.time.Duration;kotlin.time.Duration?;dev.sargunv.mobilitydata.utils.Decimal?;kotlin.String?;dev.sargunv.mobilitydata.gofs.v1.BookingDetail?){}[0]
 
     final val bookingDetail // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.bookingDetail|{}bookingDetail[0]
         final fun <get-bookingDetail>(): dev.sargunv.mobilitydata.gofs.v1/BookingDetail? // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.bookingDetail.<get-bookingDetail>|<get-bookingDetail>(){}[0]
     final val brandId // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.brandId|{}brandId[0]
         final fun <get-brandId>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.brandId.<get-brandId>|<get-brandId>(){}[0]
     final val travelCost // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.travelCost|{}travelCost[0]
-        final fun <get-travelCost>(): kotlin/Double? // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.travelCost.<get-travelCost>|<get-travelCost>(){}[0]
+        final fun <get-travelCost>(): dev.sargunv.mobilitydata.utils/Decimal? // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.travelCost.<get-travelCost>|<get-travelCost>(){}[0]
     final val travelCostCurrency // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.travelCostCurrency|{}travelCostCurrency[0]
         final fun <get-travelCostCurrency>(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.travelCostCurrency.<get-travelCostCurrency>|<get-travelCostCurrency>(){}[0]
     final val travelTime // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.travelTime|{}travelTime[0]
@@ -565,10 +565,10 @@ final class dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking { // dev.sargunv.mo
     final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.component1|component1(){}[0]
     final fun component2(): kotlin.time/Duration // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.component2|component2(){}[0]
     final fun component3(): kotlin.time/Duration? // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.component3|component3(){}[0]
-    final fun component4(): kotlin/Double? // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.component4|component4(){}[0]
+    final fun component4(): dev.sargunv.mobilitydata.utils/Decimal? // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.component4|component4(){}[0]
     final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.component5|component5(){}[0]
     final fun component6(): dev.sargunv.mobilitydata.gofs.v1/BookingDetail? // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.component6|component6(){}[0]
-    final fun copy(kotlin/String = ..., kotlin.time/Duration = ..., kotlin.time/Duration? = ..., kotlin/Double? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gofs.v1/BookingDetail? = ...): dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.copy|copy(kotlin.String;kotlin.time.Duration;kotlin.time.Duration?;kotlin.Double?;kotlin.String?;dev.sargunv.mobilitydata.gofs.v1.BookingDetail?){}[0]
+    final fun copy(kotlin/String = ..., kotlin.time/Duration = ..., kotlin.time/Duration? = ..., dev.sargunv.mobilitydata.utils/Decimal? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gofs.v1/BookingDetail? = ...): dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.copy|copy(kotlin.String;kotlin.time.Duration;kotlin.time.Duration?;dev.sargunv.mobilitydata.utils.Decimal?;kotlin.String?;dev.sargunv.mobilitydata.gofs.v1.BookingDetail?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/RealtimeBooking.toString|toString(){}[0]

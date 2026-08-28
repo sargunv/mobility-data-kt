@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
+import dev.sargunv.mobilitydata.utils.Decimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
@@ -63,14 +64,19 @@ private val expectedResponse1 =
               planId = "plan2",
               name = "One-Way",
               currency = "USD",
-              price = 2.1,
+              price = Decimal.parse("2.1"),
               isTaxable = false,
               description = "Includes 10km, overage fees apply after 10km.",
               perKmPricing =
                 listOf(
-                  PricingInterval(start = 10, rate = 1.1, interval = 1, end = 25),
-                  PricingInterval(start = 25, rate = 0.5, interval = 1, end = null),
-                  PricingInterval(start = 25, rate = 3.1, interval = 5, end = null),
+                  PricingInterval(start = 10, rate = Decimal.parse("1.1"), interval = 1, end = 25),
+                  PricingInterval(
+                    start = 25,
+                    rate = Decimal.parse("0.5"),
+                    interval = 1,
+                    end = null,
+                  ),
+                  PricingInterval(start = 25, rate = Decimal.parse("3.1"), interval = 5, end = null),
                 ),
             )
           )
@@ -127,13 +133,17 @@ private val expectedResponse2 =
               planId = "plan3",
               name = "Simple Rate",
               currency = "CAD",
-              price = 3.1,
+              price = Decimal.parse("3.1"),
               isTaxable = true,
               description = "$3 unlock fee, $0.25 per kilometer and 0.50 per minute.",
               perKmPricing =
-                listOf(PricingInterval(start = 0, rate = 0.25, interval = 1, end = null)),
+                listOf(
+                  PricingInterval(start = 0, rate = Decimal.parse("0.25"), interval = 1, end = null)
+                ),
               perMinPricing =
-                listOf(PricingInterval(start = 0, rate = 0.5, interval = 1, end = null)),
+                listOf(
+                  PricingInterval(start = 0, rate = Decimal.parse("0.5"), interval = 1, end = null)
+                ),
             )
           )
       ),
@@ -189,7 +199,7 @@ class SystemPricingPlansTest {
         planId = "",
         name = "",
         currency = "",
-        price = 3.1,
+        price = Decimal.parse("3.1"),
         isTaxable = false,
         description = "",
       ),

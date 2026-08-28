@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
+import dev.sargunv.mobilitydata.utils.Decimal
 import dev.sargunv.mobilitydata.utils.WholeSeconds
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
@@ -17,7 +18,7 @@ public data class FareAttribute(
   @SerialName("fare_id") public val fareId: String,
 
   /** Fare price, in the unit specified by currency_type. */
-  @SerialName("price") public val price: Double,
+  @SerialName("price") public val price: Decimal,
 
   /** Currency used to pay the fare. */
   @SerialName("currency_type") public val currencyType: CurrencyCode,

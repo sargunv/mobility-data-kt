@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
+import dev.sargunv.mobilitydata.utils.Decimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -18,7 +19,7 @@ private val expected =
       fareProductName = "Single Ride",
       riderCategoryId = null,
       fareMediaId = null,
-      amount = 2.75,
+      amount = Decimal.parse("2.75"),
       currency = "USD",
     ),
     FareProduct(
@@ -26,7 +27,7 @@ private val expected =
       fareProductName = "Senior Discount",
       riderCategoryId = "senior",
       fareMediaId = "clipper",
-      amount = 1.35,
+      amount = Decimal.parse("1.35"),
       currency = "USD",
     ),
   )

@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
+import dev.sargunv.mobilitydata.utils.Decimal
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.WholeSeconds
@@ -39,7 +40,7 @@ public data class RealtimeBooking(
    * The estimated fare cost of the trip from the pickup to dropoff location. Cannot be provided if
    * a drop off location is not provided.
    */
-  @SerialName("travel_cost") public val travelCost: Double? = null,
+  @SerialName("travel_cost") public val travelCost: Decimal? = null,
   /** Currency of the estimated travel cost. Required if estimated_travel_cost is provided. */
   @SerialName("travel_cost_currency") public val travelCostCurrency: CurrencyCode? = null,
   /** Optionally, an object with real time booking details can be provided. */
