@@ -72,6 +72,62 @@ class EnumInteropTest {
   }
 
   @Test
+  fun tripDescriptorScheduleRelationshipPresence() {
+    val absent =
+      decodeTripUpdate(
+        GtfsRealtime.TripUpdate.newBuilder()
+          .setTrip(GtfsRealtime.TripDescriptor.newBuilder().setTripId("t1").build())
+      )
+    assertEquals(null, absent.trip.scheduleRelationship)
+
+    val explicitScheduled =
+      decodeTripUpdate(
+        GtfsRealtime.TripUpdate.newBuilder()
+          .setTrip(
+            GtfsRealtime.TripDescriptor.newBuilder()
+              .setTripId("t1")
+              .setScheduleRelationship(GtfsRealtime.TripDescriptor.ScheduleRelationship.SCHEDULED)
+              .build()
+          )
+      )
+    assertEquals(
+      TripDescriptor.ScheduleRelationship.Scheduled,
+      explicitScheduled.trip.scheduleRelationship,
+    )
+  }
+
+  @Test
+  fun tripDescriptorScheduleRelationshipEncodePresence() {
+    fun encodeTrip(descriptor: TripDescriptor): GtfsRealtime.TripDescriptor {
+      val feed =
+        FeedMessage(
+          header = FeedHeader(gtfsRealtimeVersion = "2.0"),
+          entity = listOf(FeedEntity(id = "e1", tripUpdate = TripUpdate(trip = descriptor))),
+        )
+      return GtfsRealtime.FeedMessage.parseFrom(GtfsRealtimeProto.encodeFeedMessage(feed))
+        .getEntity(0)
+        .tripUpdate
+        .trip
+    }
+
+    val omitted = encodeTrip(TripDescriptor(tripId = "t1"))
+    assertEquals(false, omitted.hasScheduleRelationship())
+
+    val scheduled =
+      encodeTrip(
+        TripDescriptor(
+          tripId = "t1",
+          scheduleRelationship = TripDescriptor.ScheduleRelationship.Scheduled,
+        )
+      )
+    assertEquals(true, scheduled.hasScheduleRelationship())
+    assertEquals(
+      GtfsRealtime.TripDescriptor.ScheduleRelationship.SCHEDULED,
+      scheduled.scheduleRelationship,
+    )
+  }
+
+  @Test
   fun stopTimeUpdateScheduleRelationship() {
     val mapping =
       mapOf(

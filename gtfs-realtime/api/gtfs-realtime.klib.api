@@ -672,7 +672,7 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/TranslatedString { // dev.sar
 }
 
 final class dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor { // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor|null[0]
-    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.Int?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ScheduleRelationship;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ModifiedTripSelector?){}[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector? = ...) // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.Int?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ScheduleRelationship?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ModifiedTripSelector?){}[0]
 
     final val directionId // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.directionId|{}directionId[0]
         final fun <get-directionId>(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.directionId.<get-directionId>|<get-directionId>(){}[0]
@@ -681,7 +681,7 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor { // dev.sargu
     final val routeId // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.routeId|{}routeId[0]
         final fun <get-routeId>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.routeId.<get-routeId>|<get-routeId>(){}[0]
     final val scheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.scheduleRelationship|{}scheduleRelationship[0]
-        final fun <get-scheduleRelationship>(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.scheduleRelationship.<get-scheduleRelationship>|<get-scheduleRelationship>(){}[0]
+        final fun <get-scheduleRelationship>(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.scheduleRelationship.<get-scheduleRelationship>|<get-scheduleRelationship>(){}[0]
     final val startDate // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.startDate|{}startDate[0]
         final fun <get-startDate>(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.startDate.<get-startDate>|<get-startDate>(){}[0]
     final val startTime // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.startTime|{}startTime[0]
@@ -694,9 +694,9 @@ final class dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor { // dev.sargu
     final fun component3(): kotlin/Int? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component3|component3(){}[0]
     final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component4|component4(){}[0]
     final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component5|component5(){}[0]
-    final fun component6(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component6|component6(){}[0]
+    final fun component6(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component6|component6(){}[0]
     final fun component7(): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector? // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.component7|component7(){}[0]
-    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.copy|copy(kotlin.String?;kotlin.String?;kotlin.Int?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ScheduleRelationship;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ModifiedTripSelector?){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin/String? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ScheduleRelationship? = ..., dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.ModifiedTripSelector? = ...): dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.copy|copy(kotlin.String?;kotlin.String?;kotlin.Int?;kotlin.String?;kotlin.String?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ScheduleRelationship?;dev.sargunv.mobilitydata.gtfs.realtime.TripDescriptor.ModifiedTripSelector?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.realtime/TripDescriptor.toString|toString(){}[0]

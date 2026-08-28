@@ -121,8 +121,7 @@ public data class TripDescriptor(
   /** Service date in YYYYMMDD format. */
   @ProtoNumber(3) public val startDate: String? = null,
   /** Relationship between this trip and the static schedule. */
-  @ProtoNumber(4)
-  public val scheduleRelationship: ScheduleRelationship = ScheduleRelationship.Scheduled,
+  @ProtoNumber(4) public val scheduleRelationship: ScheduleRelationship? = null,
   /** Reference to a modified trip, if applicable. */
   @ProtoNumber(7) public val modifiedTrip: ModifiedTripSelector? = null,
 ) {

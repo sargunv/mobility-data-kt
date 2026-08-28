@@ -1,6 +1,8 @@
 package dev.sargunv.mobilitydata.gtfs.realtime
 
 import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNull
 
 class TripUpdateTest {
   @Test
@@ -84,5 +86,67 @@ class TripUpdateTest {
       )
 
     assertFeedRoundTrips(feed)
+  }
+
+  @Test
+  fun distinguishesAbsentAndExplicitScheduled() {
+    val absentFeed =
+      FeedMessage(
+        header = FeedHeader(gtfsRealtimeVersion = "2.0"),
+        entity =
+          listOf(
+            FeedEntity(
+              id = "absent",
+              tripUpdate = TripUpdate(trip = TripDescriptor(tripId = "trip-absent")),
+            )
+          ),
+      )
+    assertFeedRoundTrips(absentFeed)
+    assertNull(absentFeed.entity.single().tripUpdate?.trip?.scheduleRelationship)
+
+    val scheduledFeed =
+      FeedMessage(
+        header = FeedHeader(gtfsRealtimeVersion = "2.0"),
+        entity =
+          listOf(
+            FeedEntity(
+              id = "scheduled",
+              tripUpdate =
+                TripUpdate(
+                  trip =
+                    TripDescriptor(
+                      tripId = "trip-scheduled",
+                      scheduleRelationship = TripDescriptor.ScheduleRelationship.Scheduled,
+                    )
+                ),
+            )
+          ),
+      )
+    assertFeedRoundTrips(scheduledFeed)
+    assertEquals(
+      TripDescriptor.ScheduleRelationship.Scheduled,
+      scheduledFeed.entity.single().tripUpdate?.trip?.scheduleRelationship,
+    )
+
+    val encodedAbsent = GtfsRealtimeProto.encodeFeedMessage(absentFeed)
+    val encodedScheduled = GtfsRealtimeProto.encodeFeedMessage(scheduledFeed)
+    assertEquals(
+      null,
+      GtfsRealtimeProto.decodeFeedMessage(encodedAbsent)
+        .entity
+        .single()
+        .tripUpdate
+        ?.trip
+        ?.scheduleRelationship,
+    )
+    assertEquals(
+      TripDescriptor.ScheduleRelationship.Scheduled,
+      GtfsRealtimeProto.decodeFeedMessage(encodedScheduled)
+        .entity
+        .single()
+        .tripUpdate
+        ?.trip
+        ?.scheduleRelationship,
+    )
   }
 }
