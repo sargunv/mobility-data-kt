@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.ServiceTime
+import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.WholeMinutes
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
@@ -90,9 +91,9 @@ public data class BookingRule(
   /** Phone number to call to make the booking request. */
   @SerialName("phone_number") public val phoneNumber: String? = null,
   /** URL providing information about the booking rule. */
-  @SerialName("info_url") public val infoUrl: String? = null,
+  @SerialName("info_url") public val infoUrl: Url? = null,
   /** URL to an online interface or app where the booking request can be made. */
-  @SerialName("booking_url") public val bookingUrl: String? = null,
+  @SerialName("booking_url") public val bookingUrl: Url? = null,
 )
 
 /**
