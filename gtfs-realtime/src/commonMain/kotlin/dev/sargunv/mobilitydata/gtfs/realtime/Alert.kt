@@ -9,8 +9,26 @@ import kotlinx.serialization.protobuf.ProtoNumber
 /** A service alert in the realtime feed. */
 @Serializable
 public data class Alert(
-  /** Time ranges when riders should see this alert. */
-  @ProtoNumber(1) public val activePeriod: List<TimeRange> = emptyList(),
+  /**
+   * Time when the alert should be shown to the user. If missing, the alert will be shown as long as
+   * it appears in the feed. If multiple ranges are given, the alert will be shown during all of
+   * them. Should not be used - for backwards-compatibility only.
+   */
+  @Deprecated("Use communicationPeriod and/or impactPeriod instead")
+  @ProtoNumber(1)
+  public val activePeriod: List<TimeRange> = emptyList(),
+  /**
+   * Time when the alert should be shown to the user strictly for informative reasons. If missing,
+   * the consuming application can decide when it's appropriate to be shown. If multiple ranges are
+   * given, the alert will be shown during all of them.
+   */
+  @ProtoNumber(2) public val communicationPeriod: List<TimeRange> = emptyList(),
+  /**
+   * Time when the services are affected by the alert. If [communicationPeriod] is specified, every
+   * time interval in [impactPeriod] must be fully contained within at least one time interval of
+   * [communicationPeriod].
+   */
+  @ProtoNumber(3) public val impactPeriod: List<TimeRange> = emptyList(),
   /** GTFS entities affected by this alert. */
   @ProtoNumber(5) public val informedEntity: List<EntitySelector> = emptyList(),
   /** Root cause of the service disruption. */
