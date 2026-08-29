@@ -97,7 +97,7 @@ public data class RentalAppPlatformUris(
    * URI where the rental app can be downloaded from.
    *
    * Typically this will be a URI to an app store. REQUIRED if a rental_uris field is populated for
-   * this platform, otherwise optional.
+   * this platform.
    */
   @SerialName("store_uri") public val storeUri: Uri? = null,
 
@@ -106,7 +106,7 @@ public data class RentalAppPlatformUris(
    *
    * This intent is used by viewing apps to prioritize rental apps for a particular user based on
    * whether they already have a particular rental app installed. REQUIRED if a rental_uris field is
-   * populated for this platform, otherwise optional.
+   * populated for this platform.
    */
   @SerialName("discovery_uri") public val discoveryUri: Uri? = null,
 )
