@@ -117,8 +117,8 @@ private constructor(
  * Indicates continuous pickup or drop off behavior.
  *
  * Empty-value meaning is field-specific: on [Route], empty is
- * [ContinuousPickupDropOff.NoContinuous]; on [StopTime], empty inherits from the route and must not
- * be treated as [ContinuousPickupDropOff.NoContinuous].
+ * [ContinuousPickupDropOff.NoContinuous]; on [StopTime], empty inherits the route value and must
+ * not default independently.
  */
 @Serializable
 @JvmInline
