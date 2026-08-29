@@ -30,6 +30,12 @@ class AgencyTest {
   }
 
   @Test
+  fun decodeStripsUtf8BomFromFirstHeader() {
+    val decoded = GtfsCsv.decodeFromString<Agency>("\uFEFF$csvContent")
+    assertEquals(expected, decoded)
+  }
+
+  @Test
   fun unknownTimezoneIdIsPreserved() {
     val csv = // language=CSV
       """

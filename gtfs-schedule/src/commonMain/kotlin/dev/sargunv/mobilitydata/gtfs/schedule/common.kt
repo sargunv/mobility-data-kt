@@ -2,8 +2,16 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.kotlindsv.Csv
 import dev.sargunv.kotlindsv.DsvFormat
+import dev.sargunv.kotlindsv.DsvNamingStrategy
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.Serializable
+
+/** Strips a leading UTF-8 BOM (U+FEFF) from incoming CSV column names. */
+private object StripUtf8Bom : DsvNamingStrategy {
+  override fun fromDsvName(name: String): String = name.removePrefix("\uFEFF")
+
+  override fun toDsvName(name: String): String = name
+}
 
 /** Preconfigured CSV format for GTFS .txt files. */
 public val GtfsCsv: DsvFormat =
@@ -12,6 +20,7 @@ public val GtfsCsv: DsvFormat =
     ignoreUnknownKeys = true,
     writeEnumsByName = false,
     treatMissingColumnsAsNull = true,
+    namingStrategy = StripUtf8Bom,
   )
 
 /**
