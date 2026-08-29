@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gbfs.v3
 
 import de.westnordost.osm_opening_hours.model.OpeningHours
 import dev.sargunv.mobilitydata.utils.LocalizedText
+import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.serialization.OsmOpeningHoursSerializer
 import kotlin.jvm.JvmInline
@@ -236,7 +237,7 @@ public data class RentalUris(
    * This URI SHOULD be a deep link specific to this station or vehicle. Android App Links are
    * preferred.
    */
-  public val android: Url? = null,
+  public val android: Uri? = null,
 
   /**
    * URI that can be used on iOS to launch the rental app.
@@ -244,7 +245,7 @@ public data class RentalUris(
    * This URI SHOULD be a deep link specific to this station or vehicle. iOS Universal Links are
    * preferred.
    */
-  public val ios: Url? = null,
+  public val ios: Uri? = null,
 
   /**
    * URL that can be used by a web browser to show more information about renting.
