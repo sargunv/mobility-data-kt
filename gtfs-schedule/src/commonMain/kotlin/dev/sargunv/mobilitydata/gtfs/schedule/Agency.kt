@@ -32,8 +32,8 @@ public data class Agency(
   @SerialName("agency_phone") public val agencyPhone: String? = null,
 
   /**
-   * URL of a web page where a rider can purchase tickets or other fare instruments for that
-   * agency, or a web page containing information about that agency's fares.
+   * URL of a web page where a rider can purchase tickets or other fare instruments for that agency,
+   * or a web page containing information about that agency's fares.
    */
   @SerialName("agency_fare_url") public val agencyFareUrl: Url? = null,
 
