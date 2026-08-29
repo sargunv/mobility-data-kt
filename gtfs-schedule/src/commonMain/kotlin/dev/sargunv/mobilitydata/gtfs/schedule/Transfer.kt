@@ -53,7 +53,7 @@ public data class Transfer(
 
   /**
    * Amount of time, in seconds, that must be available to permit a transfer between routes at the
-   * specified stops.
+   * specified stops. Required if [transferType] is [TransferType.MinimumTime] (`2`).
    */
   @SerialName("min_transfer_time") public val minTransferTime: WholeSeconds? = null,
 )
