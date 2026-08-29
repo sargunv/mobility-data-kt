@@ -111,4 +111,30 @@ class TripTest {
     val decoded = GtfsCsv.decodeFromString<Trip>(csvContent)
     assertEquals(expected, decoded)
   }
+
+  @Test
+  fun decodeSafeDurationFields() {
+    val csv = // language=CSV
+      """
+      trip_id,route_id,service_id,safe_duration_factor,safe_duration_offset
+      FLEX1,FLEX,FULLW,1.5,120
+      FLEX2,FLEX,FULLW,,
+      """
+        .trimIndent()
+
+    val decoded = GtfsCsv.decodeFromString<Trip>(csv)
+    assertEquals(
+      listOf(
+        Trip(
+          tripId = "FLEX1",
+          routeId = "FLEX",
+          serviceId = "FULLW",
+          safeDurationFactor = 1.5,
+          safeDurationOffset = 120.0,
+        ),
+        Trip(tripId = "FLEX2", routeId = "FLEX", serviceId = "FULLW"),
+      ),
+      decoded,
+    )
+  }
 }

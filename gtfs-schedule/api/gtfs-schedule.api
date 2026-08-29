@@ -1743,11 +1743,13 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/TriState$Companion {
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Trip {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/Trip$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ljava/lang/Double;Ljava/lang/Double;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ljava/lang/Double;Ljava/lang/Double;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component10-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun component11-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
+	public final fun component12 ()Ljava/lang/Double;
+	public final fun component13 ()Ljava/lang/Double;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()Ljava/lang/String;
@@ -1756,14 +1758,16 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/Trip {
 	public final fun component7 ()Ljava/lang/String;
 	public final fun component8 ()Ljava/lang/String;
 	public final fun component9-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
-	public final fun copy-5hJLgoE (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;)Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;
-	public static synthetic fun copy-5hJLgoE$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;
+	public final fun copy-zzA30N0 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ljava/lang/Double;Ljava/lang/Double;)Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;
+	public static synthetic fun copy-zzA30N0$default (Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;Ljava/lang/Double;Ljava/lang/Double;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gtfs/schedule/Trip;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getBikesAllowed-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun getBlockId ()Ljava/lang/String;
 	public final fun getCarsAllowed-EBxYX0o ()Ldev/sargunv/mobilitydata/gtfs/schedule/TriState;
 	public final fun getDirectionId--4gII_U ()Ldev/sargunv/mobilitydata/gtfs/schedule/DirectionId;
 	public final fun getRouteId ()Ljava/lang/String;
+	public final fun getSafeDurationFactor ()Ljava/lang/Double;
+	public final fun getSafeDurationOffset ()Ljava/lang/Double;
 	public final fun getServiceId ()Ljava/lang/String;
 	public final fun getShapeId ()Ljava/lang/String;
 	public final fun getTripHeadsign ()Ljava/lang/String;
