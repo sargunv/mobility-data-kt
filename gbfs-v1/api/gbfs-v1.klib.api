@@ -1101,6 +1101,8 @@ final value class dev.sargunv.mobilitydata.gbfs.v1/FeedType { // dev.sargunv.mob
             final fun <get-SystemHours>(): dev.sargunv.mobilitydata.gbfs.v1/FeedType // dev.sargunv.mobilitydata.gbfs.v1/FeedType.Companion.SystemHours.<get-SystemHours>|<get-SystemHours>(){}[0]
         final val SystemInformation // dev.sargunv.mobilitydata.gbfs.v1/FeedType.Companion.SystemInformation|{}SystemInformation[0]
             final fun <get-SystemInformation>(): dev.sargunv.mobilitydata.gbfs.v1/FeedType // dev.sargunv.mobilitydata.gbfs.v1/FeedType.Companion.SystemInformation.<get-SystemInformation>|<get-SystemInformation>(){}[0]
+        final val SystemManifest // dev.sargunv.mobilitydata.gbfs.v1/FeedType.Companion.SystemManifest|{}SystemManifest[0]
+            final fun <get-SystemManifest>(): dev.sargunv.mobilitydata.gbfs.v1/FeedType // dev.sargunv.mobilitydata.gbfs.v1/FeedType.Companion.SystemManifest.<get-SystemManifest>|<get-SystemManifest>(){}[0]
         final val SystemPricingPlans // dev.sargunv.mobilitydata.gbfs.v1/FeedType.Companion.SystemPricingPlans|{}SystemPricingPlans[0]
             final fun <get-SystemPricingPlans>(): dev.sargunv.mobilitydata.gbfs.v1/FeedType // dev.sargunv.mobilitydata.gbfs.v1/FeedType.Companion.SystemPricingPlans.<get-SystemPricingPlans>|<get-SystemPricingPlans>(){}[0]
         final val SystemRegions // dev.sargunv.mobilitydata.gbfs.v1/FeedType.Companion.SystemRegions|{}SystemRegions[0]
