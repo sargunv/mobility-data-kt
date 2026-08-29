@@ -45,10 +45,20 @@ public data class Route(
    */
   @SerialName("route_sort_order") public val routeSortOrder: Int? = null,
 
-  /** Indicates continuous pickup behavior. */
+  /**
+   * Indicates continuous pickup behavior along the route.
+   *
+   * Empty or omitted is equivalent to [ContinuousPickupDropOff.NoContinuous] (`1`). Values may be
+   * overridden per stop time. Decode leaves empty cells as `null`; apply this default in consumers.
+   */
   @SerialName("continuous_pickup") public val continuousPickup: ContinuousPickupDropOff? = null,
 
-  /** Indicates continuous drop off behavior. */
+  /**
+   * Indicates continuous drop off behavior along the route.
+   *
+   * Empty or omitted is equivalent to [ContinuousPickupDropOff.NoContinuous] (`1`). Values may be
+   * overridden per stop time. Decode leaves empty cells as `null`; apply this default in consumers.
+   */
   @SerialName("continuous_drop_off") public val continuousDropOff: ContinuousPickupDropOff? = null,
 
   /** Network ID to which a route belongs. */
@@ -103,7 +113,13 @@ private constructor(
   }
 }
 
-/** Indicates continuous pickup or drop off behavior. */
+/**
+ * Indicates continuous pickup or drop off behavior.
+ *
+ * Empty-value meaning is field-specific: on [Route], empty is
+ * [ContinuousPickupDropOff.NoContinuous]; on [StopTime], empty inherits from the route and must not
+ * be treated as [ContinuousPickupDropOff.NoContinuous].
+ */
 @Serializable
 @JvmInline
 public value class ContinuousPickupDropOff
