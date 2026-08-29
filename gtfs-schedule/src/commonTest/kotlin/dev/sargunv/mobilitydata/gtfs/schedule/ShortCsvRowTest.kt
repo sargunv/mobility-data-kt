@@ -42,6 +42,7 @@ class ShortCsvRowTest {
 
     val source = Buffer().apply { writeString(csv) }
     val decoded = GtfsCsv.decodeFromSource<FeedInfo>(source).single()
+    assertEquals(GtfsCsv.decodeFromString<FeedInfo>(csv).single(), decoded)
     assertEquals("Demo Publisher", decoded.feedPublisherName)
     assertEquals("https://example.com", decoded.feedPublisherUrl)
     assertEquals("en", decoded.feedLang)
