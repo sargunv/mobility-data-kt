@@ -18,8 +18,12 @@ public data class RiderCategory(
   /** Name of the rider category. */
   @SerialName("rider_category_name") public val riderCategoryName: String,
 
-  /** Indicates if this rider category is the default. */
-  @SerialName("is_default_fare_category") public val isDefaultFareCategory: IntBoolean,
+  /**
+   * Indicates if this rider category is the default fare category displayed to riders.
+   *
+   * `1` means this category is the default. `0` or empty means it is not; empty decodes as null.
+   */
+  @SerialName("is_default_fare_category") public val isDefaultFareCategory: IntBoolean? = null,
 
   /** URL describing the eligibility requirements for the rider category. */
   @SerialName("eligibility_url") public val eligibilityUrl: Url? = null,
