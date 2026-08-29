@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v2.serialization
 
 import kotlinx.serialization.KSerializer
+import kotlinx.serialization.SerializationException
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
@@ -20,6 +21,14 @@ internal object JsonNumberAsIntSerializer : KSerializer<Int> {
   override fun deserialize(decoder: Decoder): Int {
     val jsonDecoder = decoder as? JsonDecoder ?: return decoder.decodeInt()
     val primitive = jsonDecoder.decodeJsonElement().jsonPrimitive
-    return primitive.intOrNull ?: primitive.double.toInt()
+    primitive.intOrNull?.let {
+      return it
+    }
+    val number = primitive.double
+    val asInt = number.toInt()
+    if (asInt.toDouble() != number) {
+      throw SerializationException("Expected an integer, got ${primitive.content}")
+    }
+    return asInt
   }
 }

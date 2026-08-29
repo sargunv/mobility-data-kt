@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gbfs.v2
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFails
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
@@ -210,5 +211,15 @@ class StationInformationTest {
     val station = decoded.data.stations.single()
     assertEquals(mapOf("abc123" to 8, "def456" to 8), station.vehicleCapacity)
     assertEquals(mapOf("abc123" to 4, "def456" to 4), station.vehicleTypeCapacity)
+
+    fun capacityJson(value: String) =
+      """{"last_updated":1640887163,"ttl":0,"version":"2.3","data":{"stations":[{"station_id":"s","name":"n","lat":0.0,"lon":0.0,"vehicle_capacity":{"x":$value}}]}}"""
+
+    assertFails {
+      GbfsJson.decodeFromString<GbfsFeedResponse<StationInformation>>(capacityJson("8.5"))
+    }
+    assertFails {
+      GbfsJson.decodeFromString<GbfsFeedResponse<StationInformation>>(capacityJson("2147483648"))
+    }
   }
 }
