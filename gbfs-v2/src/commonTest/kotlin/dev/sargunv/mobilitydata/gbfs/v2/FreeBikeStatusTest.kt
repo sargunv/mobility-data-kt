@@ -195,4 +195,37 @@ class FreeBikeStatusTest {
       GbfsJson.decodeFromString<GbfsFeedResponse<FreeBikeStatus>>(micromobilityJsonContent)
     assertEquals(micromobilityExpectedResponse, decodedResponse)
   }
+
+  @Test
+  fun decodeCustomSchemeRentalUris() {
+    val json = // language=JSON
+      """
+      {
+          "last_updated": 1640887163,
+          "ttl": 0,
+          "version": "2.3",
+          "data": {
+              "bikes": [
+                  {
+                      "bike_id": "973a5c94-c288-4a2b-afa6-de8aeb6ae2e5",
+                      "lat": 12.34,
+                      "lon": 56.78,
+                      "is_reserved": false,
+                      "is_disabled": false,
+                      "rental_uris": {
+                          "android": "com.example.android://open.example.app/app?sid=1234567890",
+                          "ios": "com.example.ios://open.example.app/app?sid=1234567890"
+                      }
+                  }
+              ]
+          }
+      }
+      """
+        .trimIndent()
+
+    val decoded = GbfsJson.decodeFromString<GbfsFeedResponse<FreeBikeStatus>>(json)
+    val rentalUris = decoded.data.bikes.single().rentalUris
+    assertEquals("com.example.android://open.example.app/app?sid=1234567890", rentalUris?.android)
+    assertEquals("com.example.ios://open.example.app/app?sid=1234567890", rentalUris?.ios)
+  }
 }
