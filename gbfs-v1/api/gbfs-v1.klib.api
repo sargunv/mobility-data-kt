@@ -291,16 +291,16 @@ final class dev.sargunv.mobilitydata.gbfs.v1/Region { // dev.sargunv.mobilitydat
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris { // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris|null[0]
-    constructor <init>(kotlin/String, kotlin/String) // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.<init>|<init>(kotlin.String;kotlin.String){}[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.<init>|<init>(kotlin.String?;kotlin.String?){}[0]
 
     final val discoveryUri // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.discoveryUri|{}discoveryUri[0]
-        final fun <get-discoveryUri>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.discoveryUri.<get-discoveryUri>|<get-discoveryUri>(){}[0]
+        final fun <get-discoveryUri>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.discoveryUri.<get-discoveryUri>|<get-discoveryUri>(){}[0]
     final val storeUri // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.storeUri|{}storeUri[0]
-        final fun <get-storeUri>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.storeUri.<get-storeUri>|<get-storeUri>(){}[0]
+        final fun <get-storeUri>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.storeUri.<get-storeUri>|<get-storeUri>(){}[0]
 
-    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.component1|component1(){}[0]
-    final fun component2(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.component2|component2(){}[0]
-    final fun copy(kotlin/String = ..., kotlin/String = ...): dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.copy|copy(kotlin.String;kotlin.String){}[0]
+    final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.component2|component2(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.copy|copy(kotlin.String?;kotlin.String?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v1/RentalAppPlatformUris.toString|toString(){}[0]
