@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
+import dev.sargunv.mobilitydata.gbfs.v2.serialization.JsonNumberAsIntSerializer
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
@@ -120,14 +121,20 @@ public data class Station(
    * vehicle_type_id and the value is a number representing the total number of vehicles of this
    * type that can park within the virtual station.
    */
-  @SerialName("vehicle_capacity") public val vehicleCapacity: Map<String, Int>? = null,
+  @SerialName("vehicle_capacity")
+  public val vehicleCapacity:
+    Map<String, @Serializable(with = JsonNumberAsIntSerializer::class) Int>? =
+    null,
 
   /**
    * An object describing the docking capacity of a station where each key is a vehicle_type_id and
    * the value is a number representing the total docking points installed at this station for the
    * specified vehicle type.
    */
-  @SerialName("vehicle_type_capacity") public val vehicleTypeCapacity: Map<String, Int>? = null,
+  @SerialName("vehicle_type_capacity")
+  public val vehicleTypeCapacity:
+    Map<String, @Serializable(with = JsonNumberAsIntSerializer::class) Int>? =
+    null,
 
   /**
    * Are valet services provided at this station?
