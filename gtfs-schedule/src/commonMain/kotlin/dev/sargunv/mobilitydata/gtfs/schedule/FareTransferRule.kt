@@ -8,7 +8,8 @@ import kotlinx.serialization.Serializable
 /**
  * Fare rules for transfers between legs of travel.
  *
- * This class represents a record in the fare_transfer_rules.txt file.
+ * This class represents a record in the fare_transfer_rules.txt file. A fare transfer rule defined
+ * from [fromLegGroupId] to [toLegGroupId] does not apply in the reverse direction.
  */
 @Serializable
 public data class FareTransferRule(
