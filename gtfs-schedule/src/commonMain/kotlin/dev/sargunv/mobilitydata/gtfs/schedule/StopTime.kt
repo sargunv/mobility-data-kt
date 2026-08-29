@@ -21,8 +21,10 @@ public data class StopTime(
   /** Departure time from a specific stop for a specific trip on a route. */
   @SerialName("departure_time") public val departureTime: ServiceTime? = null,
 
-  /** Identifies the serviced stop. */
-  @SerialName("stop_id") public val stopId: String,
+  /**
+   * Identifies the serviced stop. Required unless `location_group_id` or `location_id` is defined.
+   */
+  @SerialName("stop_id") public val stopId: String? = null,
 
   /**
    * Identifies the serviced location group that indicates groups of stops where riders may request
