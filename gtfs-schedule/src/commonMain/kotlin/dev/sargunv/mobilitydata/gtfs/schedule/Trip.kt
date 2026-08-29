@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
+import dev.sargunv.mobilitydata.utils.Seconds
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -44,6 +45,14 @@ public data class Trip(
 
   /** Indicates whether cars are allowed. */
   @SerialName("cars_allowed") public val carsAllowed: TriState? = null,
+
+  /** Multiplier applied to travel time estimates calculated for on-demand trips. */
+  @SerialName("safe_duration_factor") public val safeDurationFactor: Double? = null,
+
+  /**
+   * Fixed offset value in seconds applied to travel time estimates calculated for on-demand trips.
+   */
+  @SerialName("safe_duration_offset") public val safeDurationOffset: Seconds? = null,
 )
 
 /** Indicates the direction of travel for a trip. */

@@ -281,6 +281,15 @@ public final class dev/sargunv/mobilitydata/utils/serialization/RgbColorTripletS
 	public fun serialize-qFY5WMg (Lkotlinx/serialization/encoding/Encoder;I)V
 }
 
+public final class dev/sargunv/mobilitydata/utils/serialization/SecondsSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/SecondsSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize-5sfh64U (Lkotlinx/serialization/encoding/Decoder;)J
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun serialize-HG0u8IE (Lkotlinx/serialization/encoding/Encoder;J)V
+}
+
 public final class dev/sargunv/mobilitydata/utils/serialization/ServiceTimeSerializer : kotlinx/serialization/KSerializer {
 	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/ServiceTimeSerializer;
 	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/utils/ServiceTime;

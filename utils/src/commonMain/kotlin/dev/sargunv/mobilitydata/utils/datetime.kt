@@ -4,6 +4,7 @@ import dev.sargunv.mobilitydata.utils.serialization.AbbreviatedWeekdaySerializer
 import dev.sargunv.mobilitydata.utils.serialization.EpochSecondsSerializer
 import dev.sargunv.mobilitydata.utils.serialization.IsoBasicLocalDateSerializer
 import dev.sargunv.mobilitydata.utils.serialization.MonthNumberSerializer
+import dev.sargunv.mobilitydata.utils.serialization.SecondsSerializer
 import dev.sargunv.mobilitydata.utils.serialization.WholeMinutesSerializer
 import dev.sargunv.mobilitydata.utils.serialization.WholeSecondsSerializer
 import kotlin.time.Duration
@@ -42,6 +43,14 @@ public typealias WholeMinutes = @Serializable(with = WholeMinutesSerializer::cla
 
 /** Duration as an integer of seconds. */
 public typealias WholeSeconds = @Serializable(with = WholeSecondsSerializer::class) Duration
+
+/**
+ * Duration as a number of seconds, including fractions.
+ *
+ * Unlike [WholeSeconds], fractional values are preserved. Use this for GTFS fields typed as Float
+ * seconds.
+ */
+public typealias Seconds = @Serializable(with = SecondsSerializer::class) Duration
 
 /** Month of the year as a number from 1 to 12. */
 public typealias MonthNumber = @Serializable(with = MonthNumberSerializer::class) Month
