@@ -204,6 +204,7 @@ class VehicleStatusTest {
   }
 
   @Test
+  @OptIn(ExperimentalTime::class)
   fun encodePreservesTimestampFractionsAndDropsDatetimeFractions() {
     val vehicle =
       Vehicle(
