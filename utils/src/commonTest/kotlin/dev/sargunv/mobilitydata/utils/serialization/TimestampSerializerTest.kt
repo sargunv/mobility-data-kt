@@ -88,8 +88,19 @@ class TimestampSerializerTest {
   }
 
   @Test
+  fun testSerializePreservesFractionalSeconds() {
+    val instant = Instant.parse("2021-05-17T15:00:00.500Z")
+    val timestamp = Timestamp(instant, UtcOffset.ZERO)
+    val testData = TestData(timestamp)
+
+    val jsonElement = json.encodeToJsonElement(TestData.serializer(), testData)
+    val timestampValue = jsonElement.jsonObject["timestamp"]!!.jsonPrimitive
+
+    assertEquals("2021-05-17T15:00:00.5Z", timestampValue.content)
+  }
+
+  @Test
   fun testDeserializeTimestampWithSpaceSeparator() {
-    // Test that timestamps with space instead of 'T' are accepted (common in some feeds)
     val jsonString = """{"timestamp":"2025-10-21 04:14:56.870533+00:00"}"""
 
     val result = json.decodeFromString(TestData.serializer(), jsonString)

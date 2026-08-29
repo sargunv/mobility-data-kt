@@ -3,11 +3,14 @@ package dev.sargunv.mobilitydata.gbfs.v3
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 
 private val carsharingJsonContent = // language=JSON
   """
@@ -198,5 +201,21 @@ class VehicleStatusTest {
     val decodedResponse =
       GbfsJson.decodeFromString<GbfsFeedResponse<VehicleStatus>>(micromobilityJsonContent)
     assertEquals(micromobilityExpectedResponse, decodedResponse)
+  }
+
+  @Test
+  @OptIn(ExperimentalTime::class)
+  fun encodePreservesTimestampFractionsAndDropsDatetimeFractions() {
+    val vehicle =
+      Vehicle(
+        vehicleId = "v",
+        isReserved = false,
+        isDisabled = false,
+        lastReported = Timestamp.parse("2023-07-17T13:34:13.500+02:00"),
+        availableUntil = Timestamp.parse("2021-05-17T15:00:00.500Z"),
+      )
+    val encoded = GbfsJson.encodeToJsonElement(vehicle).jsonObject
+    assertTrue('.' in encoded.getValue("last_reported").jsonPrimitive.content)
+    assertEquals("2021-05-17T15:00:00Z", encoded.getValue("available_until").jsonPrimitive.content)
   }
 }

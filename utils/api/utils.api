@@ -155,6 +155,15 @@ public final class dev/sargunv/mobilitydata/utils/serialization/AbbreviatedWeekd
 	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lkotlinx/datetime/DayOfWeek;)V
 }
 
+public final class dev/sargunv/mobilitydata/utils/serialization/DatetimeSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/DatetimeSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/utils/Timestamp;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/utils/Timestamp;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
 public final class dev/sargunv/mobilitydata/utils/serialization/DecimalSerializer : kotlinx/serialization/KSerializer {
 	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/DecimalSerializer;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
