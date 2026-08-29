@@ -59,10 +59,20 @@ public data class StopTime(
   /** Indicates drop off method. */
   @SerialName("drop_off_type") public val dropOffType: PickupDropoff? = null,
 
-  /** Indicates continuous pickup behavior. */
+  /**
+   * Indicates continuous pickup behavior from this stop time to the next.
+   *
+   * If populated, overrides [Route.continuousPickup]. Empty or omitted inherits the route value and
+   * must not default independently; an empty route is [ContinuousPickupDropOff.NoContinuous].
+   */
   @SerialName("continuous_pickup") public val continuousPickup: ContinuousPickupDropOff? = null,
 
-  /** Indicates continuous drop off behavior. */
+  /**
+   * Indicates continuous drop off behavior from this stop time to the next.
+   *
+   * If populated, overrides [Route.continuousDropOff]. Empty or omitted inherits the route value
+   * and must not default independently; an empty route is [ContinuousPickupDropOff.NoContinuous].
+   */
   @SerialName("continuous_drop_off") public val continuousDropOff: ContinuousPickupDropOff? = null,
 
   /** Distance traveled along the shape from the first stop to the stop in this record. */

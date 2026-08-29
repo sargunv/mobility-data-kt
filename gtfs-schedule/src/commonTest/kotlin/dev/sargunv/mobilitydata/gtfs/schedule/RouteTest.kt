@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNull
 
 private val csvContent = // language=CSV
   """
@@ -58,5 +59,25 @@ class RouteTest {
   fun decode() {
     val decoded = GtfsCsv.decodeFromString<Route>(csvContent)
     assertEquals(expected, decoded)
+  }
+
+  @Test
+  fun emptyContinuousPickupAndDropOffDecodeAsNull() {
+    val csv = // language=CSV
+      """
+      route_id,route_type,continuous_pickup,continuous_drop_off
+      EMPTY,3,,
+      EXPLICIT,3,1,1
+      CONTINUOUS,3,0,2
+      """
+        .trimIndent()
+
+    val decoded = GtfsCsv.decodeFromString<Route>(csv)
+    assertNull(decoded[0].continuousPickup)
+    assertNull(decoded[0].continuousDropOff)
+    assertEquals(ContinuousPickupDropOff.NoContinuous, decoded[1].continuousPickup)
+    assertEquals(ContinuousPickupDropOff.NoContinuous, decoded[1].continuousDropOff)
+    assertEquals(ContinuousPickupDropOff.Continuous, decoded[2].continuousPickup)
+    assertEquals(ContinuousPickupDropOff.PhoneAgency, decoded[2].continuousDropOff)
   }
 }
