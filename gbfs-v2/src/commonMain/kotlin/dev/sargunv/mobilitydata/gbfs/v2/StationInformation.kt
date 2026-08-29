@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.gbfs.v2.serialization.JsonNumberAsIntSerializer
+import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
@@ -226,7 +227,7 @@ public data class RentalUris(
    * This URI SHOULD be a deep link specific to this station or vehicle. Android App Links are
    * preferred.
    */
-  public val android: Url? = null,
+  public val android: Uri? = null,
 
   /**
    * URI that can be used on iOS to launch the rental app.
@@ -234,7 +235,7 @@ public data class RentalUris(
    * This URI SHOULD be a deep link specific to this station or vehicle. iOS Universal Links are
    * preferred.
    */
-  public val ios: Url? = null,
+  public val ios: Uri? = null,
 
   /**
    * URL that can be used by a web browser to show more information about renting.

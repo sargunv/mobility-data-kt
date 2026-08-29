@@ -120,4 +120,37 @@ class SystemInformationTest {
       GbfsJson.decodeFromString<GbfsFeedResponse<SystemInformation>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
   }
+
+  @Test
+  fun decodeDiscoveryOnlyRentalApps() {
+    val json = // language=JSON
+      """
+      {
+          "last_updated": 1640887163,
+          "ttl": 1800,
+          "version": "2.3",
+          "data": {
+              "system_id": "example_cityname",
+              "language": "en",
+              "name": "Example Bike Rental",
+              "timezone": "America/Chicago",
+              "rental_apps": {
+                  "android": {
+                      "discovery_uri": "com.example.android://"
+                  },
+                  "ios": {
+                      "discovery_uri": "com.example.ios://"
+                  }
+              }
+          }
+      }
+      """
+        .trimIndent()
+
+    val decoded = GbfsJson.decodeFromString<GbfsFeedResponse<SystemInformation>>(json)
+    assertEquals("com.example.android://", decoded.data.rentalApps?.android?.discoveryUri)
+    assertEquals("com.example.ios://", decoded.data.rentalApps?.ios?.discoveryUri)
+    assertEquals(null, decoded.data.rentalApps?.android?.storeUri)
+    assertEquals(null, decoded.data.rentalApps?.ios?.storeUri)
+  }
 }
