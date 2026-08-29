@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.time.Duration.Companion.seconds
 
 private val csvContent = // language=CSV
   """
@@ -118,7 +119,8 @@ class TripTest {
       """
       trip_id,route_id,service_id,safe_duration_factor,safe_duration_offset
       FLEX1,FLEX,FULLW,1.5,120
-      FLEX2,FLEX,FULLW,,
+      FLEX2,FLEX,FULLW,1.25,90.5
+      FLEX3,FLEX,FULLW,,
       """
         .trimIndent()
 
@@ -130,9 +132,16 @@ class TripTest {
           routeId = "FLEX",
           serviceId = "FULLW",
           safeDurationFactor = 1.5,
-          safeDurationOffset = 120.0,
+          safeDurationOffset = 120.seconds,
         ),
-        Trip(tripId = "FLEX2", routeId = "FLEX", serviceId = "FULLW"),
+        Trip(
+          tripId = "FLEX2",
+          routeId = "FLEX",
+          serviceId = "FULLW",
+          safeDurationFactor = 1.25,
+          safeDurationOffset = 90.5.seconds,
+        ),
+        Trip(tripId = "FLEX3", routeId = "FLEX", serviceId = "FULLW"),
       ),
       decoded,
     )

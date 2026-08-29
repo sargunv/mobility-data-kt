@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
+import dev.sargunv.mobilitydata.utils.Seconds
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -51,7 +52,7 @@ public data class Trip(
   /**
    * Fixed offset value in seconds applied to travel time estimates calculated for on-demand trips.
    */
-  @SerialName("safe_duration_offset") public val safeDurationOffset: Double? = null,
+  @SerialName("safe_duration_offset") public val safeDurationOffset: Seconds? = null,
 )
 
 /** Indicates the direction of travel for a trip. */
