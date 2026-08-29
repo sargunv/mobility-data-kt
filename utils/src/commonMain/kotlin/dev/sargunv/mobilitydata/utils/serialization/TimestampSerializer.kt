@@ -2,7 +2,6 @@ package dev.sargunv.mobilitydata.utils.serialization
 
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
 import kotlinx.datetime.format
 import kotlinx.datetime.format.DateTimeComponents
 import kotlinx.datetime.format.DateTimeComponents.Formats.ISO_DATE_TIME_OFFSET
@@ -26,15 +25,11 @@ public object TimestampSerializer : KSerializer<Timestamp> {
 
   override val descriptor: SerialDescriptor = delegate.descriptor
 
-  override fun serialize(encoder: Encoder, value: Timestamp) {
-    val wholeSeconds = Instant.fromEpochSeconds(value.instant.epochSeconds)
-    delegate.serialize(encoder, wholeSeconds.format(ISO_DATE_TIME_OFFSET, value.offset))
-  }
+  override fun serialize(encoder: Encoder, value: Timestamp): Unit =
+    delegate.serialize(encoder, value.instant.format(ISO_DATE_TIME_OFFSET, value.offset))
 
   override fun deserialize(decoder: Decoder): Timestamp {
     val str = delegate.deserialize(decoder)
-    // Normalize the input by replacing space with 'T' to accept both formats
-    // RFC3339 uses 'T' but some feeds use space instead
     val normalizedStr = str.replace(Regex("""^(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2})"""), "$1T$2")
     val components = DateTimeComponents.parse(normalizedStr, ISO_DATE_TIME_OFFSET)
     val offset = components.toUtcOffset()

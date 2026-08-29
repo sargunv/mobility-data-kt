@@ -2,6 +2,7 @@ package dev.sargunv.mobilitydata.gbfs.v2
 
 import dev.sargunv.mobilitydata.utils.EpochSeconds
 import dev.sargunv.mobilitydata.utils.Timestamp
+import dev.sargunv.mobilitydata.utils.serialization.DatetimeSerializer
 import kotlin.jvm.JvmInline
 import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
@@ -138,7 +139,9 @@ public data class Bike(
    * published by carsharing or other mobility systems where vehicles can be booked in advance for
    * future travel.
    */
-  @SerialName("available_until") public val availableUntil: Timestamp? = null,
+  @SerialName("available_until")
+  @Serializable(with = DatetimeSerializer::class)
+  public val availableUntil: Timestamp? = null,
 )
 
 /**
