@@ -66,6 +66,46 @@ private val expectedResponse =
       ),
   )
 
+private val gbfsFeedNameJson = // language=JSON
+  """
+  {
+      "last_updated": 1640887163,
+      "ttl": 0,
+      "version": "2.3",
+      "data": {
+          "en": {
+              "feeds": [
+                  {
+                      "name": "gbfs",
+                      "url": "https://www.example.com/gbfs/1/en/gbfs"
+                  },
+                  {
+                      "name": "system_information",
+                      "url": "https://www.example.com/gbfs/1/en/system_information"
+                  }
+              ]
+          }
+      }
+  }
+  """
+    .trimIndent()
+
+@OptIn(ExperimentalTime::class)
+private val gbfsFeedNameResponse =
+  GbfsFeedResponse(
+    lastUpdated = Instant.fromEpochSeconds(1640887163),
+    ttl = 0.seconds,
+    version = "2.3",
+    data =
+      SystemManifest(
+        "en" to
+          Service(
+            FeedType.SystemManifest to "https://www.example.com/gbfs/1/en/gbfs",
+            FeedType.SystemInformation to "https://www.example.com/gbfs/1/en/system_information",
+          )
+      ),
+  )
+
 class SystemManifestTest {
   @Test
   fun encode() {
@@ -78,5 +118,20 @@ class SystemManifestTest {
   fun decode() {
     val decodedResponse = GbfsJson.decodeFromString<GbfsFeedResponse<SystemManifest>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
+  }
+
+  @Test
+  fun encodeGbfsFeedName() {
+    val expectedJson = Json.decodeFromString<JsonElement>(gbfsFeedNameJson)
+    val encodedJson = GbfsJson.encodeToJsonElement(gbfsFeedNameResponse)
+    assertEquals(expectedJson, encodedJson)
+  }
+
+  @Test
+  fun decodeGbfsFeedName() {
+    val decodedResponse =
+      GbfsJson.decodeFromString<GbfsFeedResponse<SystemManifest>>(gbfsFeedNameJson)
+    assertEquals(gbfsFeedNameResponse, decodedResponse)
+    assertEquals("gbfs", FeedType.SystemManifest.value)
   }
 }

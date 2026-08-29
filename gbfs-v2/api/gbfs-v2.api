@@ -262,6 +262,7 @@ public final class dev/sargunv/mobilitydata/gbfs/v2/FeedType$Companion {
 	public final fun getSystemCalendar-4rwYXnc ()Ljava/lang/String;
 	public final fun getSystemHours-4rwYXnc ()Ljava/lang/String;
 	public final fun getSystemInformation-4rwYXnc ()Ljava/lang/String;
+	public final fun getSystemManifest-4rwYXnc ()Ljava/lang/String;
 	public final fun getSystemPricingPlans-4rwYXnc ()Ljava/lang/String;
 	public final fun getSystemRegions-4rwYXnc ()Ljava/lang/String;
 	public final fun getVehicleTypes-4rwYXnc ()Ljava/lang/String;
