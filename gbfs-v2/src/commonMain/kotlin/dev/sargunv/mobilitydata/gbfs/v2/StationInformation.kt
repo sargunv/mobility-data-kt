@@ -121,7 +121,8 @@ public data class Station(
    * type that can park within the virtual station.
    */
   @SerialName("vehicle_capacity")
-  public val vehicleCapacity: Map<String, @Serializable(with = JsonNumberAsIntSerializer::class) Int>? =
+  public val vehicleCapacity:
+    Map<String, @Serializable(with = JsonNumberAsIntSerializer::class) Int>? =
     null,
 
   /**
