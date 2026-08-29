@@ -13,8 +13,6 @@ import kotlinx.serialization.Serializable
  * OPTIONAL for station based (docked) vehicles. Not supported for free floating (dockless)
  * vehicles. Useful for systems that allow vehicles to be reserved in advance. Data returned SHOULD
  * be as close to realtime as possible, but in no case should it be more than 5 minutes out-of-date.
- *
- * GBFS 3.1-RC.
  */
 @ExperimentalMobilityDataApi
 @Serializable

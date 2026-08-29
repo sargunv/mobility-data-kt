@@ -3,9 +3,7 @@ package dev.sargunv.mobilitydata.utils
 /**
  * Marks APIs that model a specification that is not the Current Version.
  *
- * Apply this to types and members that track a prerelease or release-candidate spec. When that spec
- * is promoted, remove the annotation from surviving declarations. Deprecate this marker and retain
- * it until the next major version so callers that already opted in keep compiling.
+ * Apply this to types and members that track a prerelease or release-candidate spec.
  */
 @RequiresOptIn(
   message =

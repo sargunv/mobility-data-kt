@@ -166,11 +166,7 @@ public data class Station(
   /** Contains rental URIs for Android, iOS, and web. */
   @SerialName("rental_uris") public val rentalUris: RentalUris? = null,
 
-  /**
-   * City where the station is located.
-   *
-   * GBFS 3.1-RC.
-   */
+  /** City where the station is located. */
   @SerialName("city") @property:ExperimentalMobilityDataApi public val city: String? = null,
 )
 

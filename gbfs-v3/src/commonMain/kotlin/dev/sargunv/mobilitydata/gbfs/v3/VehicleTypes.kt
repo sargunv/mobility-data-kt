@@ -148,11 +148,7 @@ public data class VehicleType(
    */
   @SerialName("pricing_plan_ids") public val pricingPlanIds: List<String>? = null,
 
-  /**
-   * Minimum age required to use this vehicle.
-   *
-   * GBFS 3.1-RC.
-   */
+  /** Minimum age required to use this vehicle. */
   @SerialName("min_age") @property:ExperimentalMobilityDataApi public val minAge: Int? = null,
 )
 

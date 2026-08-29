@@ -64,11 +64,7 @@ public value class FeedType(
     /** The geofencing_zones.json file with geofencing zones. */
     public val GeofencingZones: FeedType = FeedType("geofencing_zones")
 
-    /**
-     * The vehicle_availability.json file with future vehicle availability.
-     *
-     * GBFS 3.1-RC.
-     */
+    /** The vehicle_availability.json file with future vehicle availability. */
     @ExperimentalMobilityDataApi
     public val VehicleAvailability: FeedType = FeedType("vehicle_availability")
   }
