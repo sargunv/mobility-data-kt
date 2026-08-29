@@ -7,6 +7,7 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.fullPath
 import io.ktor.http.headersOf
 import kotlin.test.Test
+import kotlin.test.assertEquals
 import kotlinx.coroutines.test.runTest
 import kotlinx.io.buffered
 import kotlinx.io.files.FileNotFoundException
@@ -74,6 +75,10 @@ class ProducerTest {
 
     val manifest = client.getSystemManifest("gbfs.json").getOrThrow()
     val service = manifest.data.getService("en")
+    assertEquals(
+      "https://gbfs.bcycle.com/bcycle_rtcbikeshare/gbfs.json",
+      service.feeds.getValue(FeedType.SystemManifest),
+    )
 
     context(service) {
       client.getSystemInformation().getOrThrow()
