@@ -297,7 +297,7 @@ public value class VehicleReturnConstraint(
      * The vehicle has to be returned to the same station from which it was initially rented.
      *
      * Note that a specific station can be assigned to the vehicle in vehicle_status.json using
-     * home_station.
+     * home_station_id.
      */
     public val RoundtripStation: VehicleReturnConstraint =
       VehicleReturnConstraint("roundtrip_station")

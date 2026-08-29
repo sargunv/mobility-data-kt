@@ -32,6 +32,19 @@ private val jsonContent30 = // language=JSON
               "url": "https://berlin.example.com/gbfs/3/gbfs"
             }
           ]
+        },
+        {
+          "system_id": "example_paris",
+          "versions": [
+            {
+              "version": "2.0",
+              "url": "https://paris.example.com/gbfs/2/gbfs"
+            },
+            {
+              "version": "3.0",
+              "url": "https://paris.example.com/gbfs/3/gbfs"
+            }
+          ]
         }
       ]
     }
@@ -56,7 +69,15 @@ private val expectedResponse30 =
                   VersionInfo(version = "2.0", url = "https://berlin.example.com/gbfs/2/gbfs"),
                   VersionInfo(version = "3.0", url = "https://berlin.example.com/gbfs/3/gbfs"),
                 ),
-            )
+            ),
+            Dataset(
+              systemId = "example_paris",
+              versions =
+                listOf(
+                  VersionInfo(version = "2.0", url = "https://paris.example.com/gbfs/2/gbfs"),
+                  VersionInfo(version = "3.0", url = "https://paris.example.com/gbfs/3/gbfs"),
+                ),
+            ),
           )
       ),
   )
