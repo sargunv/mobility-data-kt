@@ -26,19 +26,19 @@ public data class BookingRule(
   /** Maximum number of minutes before travel to make the request. */
   @SerialName("prior_notice_duration_max") public val priorNoticeDurationMax: WholeMinutes? = null,
 
-  /** Latest time on the day prior to travel to make the booking request. */
+  /** Last day before travel to make the booking request. */
   @SerialName("prior_notice_last_day") public val priorNoticeLastDay: Int? = null,
 
-  /** Latest time on the service day to make the booking request. */
+  /** Last time on the last day before travel to make the booking request. */
   @SerialName("prior_notice_last_time") public val priorNoticeLastTime: ServiceTime? = null,
 
-  /** Latest time on the day prior to the service day to make the booking request. */
+  /** Earliest day before travel to make the booking request. */
   @SerialName("prior_notice_start_day") public val priorNoticeStartDay: Int? = null,
 
-  /** Earliest time on the service day to make the booking request. */
+  /** Earliest time on the earliest day before travel to make the booking request. */
   @SerialName("prior_notice_start_time") public val priorNoticeStartTime: ServiceTime? = null,
 
-  /** Service days relative to the day of travel to make the request by. */
+  /** Service days on which prior_notice_last_day or prior_notice_start_day are counted. */
   @SerialName("prior_notice_service_id") public val priorNoticeServiceId: String? = null,
 
   /** Message to riders utilizing service at a stop. */

@@ -66,7 +66,7 @@ public data class StopTime(
   /** Distance traveled along the shape from the first stop to the stop in this record. */
   @SerialName("shape_dist_traveled") public val shapeDistTraveled: Double? = null,
 
-  /** Indicates whether a rider can board or alight at this stop. */
+  /** Indicates if arrival and departure times for this stop are exact or approximate. */
   @SerialName("timepoint") public val timepoint: Timepoint? = null,
 
   /** Identifies the boarding booking rule at this stop time. */
@@ -100,7 +100,7 @@ private constructor(
   }
 }
 
-/** Indicates whether a rider can board the transit vehicle at this stop. */
+/** Indicates if arrival and departure times for a stop are exact or approximate. */
 @Serializable
 @JvmInline
 public value class Timepoint
