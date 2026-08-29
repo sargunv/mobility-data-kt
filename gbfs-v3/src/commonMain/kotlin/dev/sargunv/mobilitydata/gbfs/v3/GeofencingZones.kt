@@ -75,20 +75,20 @@ public data class GeofencingZoneRule(
   @SerialName("vehicle_type_ids") public val vehicleTypeIds: List<String>? = null,
 
   /**
-   * Is the undocked ("free floating") ride allowed to start in this zone?
+   * Is the ride allowed to start in this zone?
    *
    * REQUIRED if rules array is defined.
-   * - `true` - Undocked ("free floating") ride can start in this zone.
-   * - `false` - Undocked ("free floating") ride cannot start or end in this zone.
+   * - `true` - Ride can start in this zone.
+   * - `false` - Ride cannot start in this zone.
    */
   @SerialName("ride_start_allowed") public val rideStartAllowed: Boolean,
 
   /**
-   * Is the undocked ("free floating") ride allowed to end in this zone?
+   * Is the ride allowed to end in this zone?
    *
    * REQUIRED if rules array is defined.
-   * - `true` - Undocked ("free floating") ride can end in this zone.
-   * - `false` - Undocked ("free floating") ride cannot end in this zone.
+   * - `true` - Ride can end in this zone.
+   * - `false` - Ride cannot end in this zone.
    */
   @SerialName("ride_end_allowed") public val rideEndAllowed: Boolean,
 
