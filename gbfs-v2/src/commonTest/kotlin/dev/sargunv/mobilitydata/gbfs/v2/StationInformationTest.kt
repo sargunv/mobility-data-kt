@@ -175,4 +175,40 @@ class StationInformationTest {
       GbfsJson.decodeFromString<GbfsFeedResponse<StationInformation>>(virtualJsonContent)
     assertEquals(virtualExpectedResponse, decodedResponse)
   }
+
+  @Test
+  fun decodeVehicleCapacityJsonNumber() {
+    val json = // language=JSON
+      """
+      {
+          "last_updated": 1640887163,
+          "ttl": 0,
+          "version": "2.3",
+          "data": {
+              "stations": [
+                  {
+                      "station_id": "station12",
+                      "name": "SE Belmont & SE 10 th",
+                      "lat": 45.516445,
+                      "lon": -122.655775,
+                      "vehicle_capacity": {
+                          "abc123": 8.0,
+                          "def456": 8
+                      },
+                      "vehicle_type_capacity": {
+                          "abc123": 4.0,
+                          "def456": 4
+                      }
+                  }
+              ]
+          }
+      }
+      """
+        .trimIndent()
+
+    val decoded = GbfsJson.decodeFromString<GbfsFeedResponse<StationInformation>>(json)
+    val station = decoded.data.stations.single()
+    assertEquals(mapOf("abc123" to 8, "def456" to 8), station.vehicleCapacity)
+    assertEquals(mapOf("abc123" to 4, "def456" to 4), station.vehicleTypeCapacity)
+  }
 }
