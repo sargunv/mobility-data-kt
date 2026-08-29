@@ -1885,5 +1885,16 @@ final value class dev.sargunv.mobilitydata.gtfs.schedule/TriState { // dev.sargu
     }
 }
 
-final val dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv|{}GtfsCsv[0]
-    final fun <get-GtfsCsv>(): dev.sargunv.kotlindsv/DsvFormat // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.<get-GtfsCsv>|<get-GtfsCsv>(){}[0]
+final object dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv { // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv|null[0]
+    final val format // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.format|{}format[0]
+        final fun <get-format>(): dev.sargunv.kotlindsv/DsvFormat // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.format.<get-format>|<get-format>(){}[0]
+
+    final fun <#A1: kotlin/Any?> decodeFromSource(kotlinx.io/Source, kotlinx.serialization/DeserializationStrategy<#A1>): kotlin.sequences/Sequence<#A1> // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.decodeFromSource|decodeFromSource(kotlinx.io.Source;kotlinx.serialization.DeserializationStrategy<0:0>){0§<kotlin.Any?>}[0]
+    final fun <#A1: kotlin/Any?> decodeFromString(kotlinx.serialization/DeserializationStrategy<#A1>, kotlin/String): kotlin.collections/List<#A1> // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.decodeFromString|decodeFromString(kotlinx.serialization.DeserializationStrategy<0:0>;kotlin.String){0§<kotlin.Any?>}[0]
+    final fun <#A1: kotlin/Any?> encodeToSink(kotlinx.serialization/SerializationStrategy<#A1>, kotlin.sequences/Sequence<#A1>, kotlinx.io/Sink) // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.encodeToSink|encodeToSink(kotlinx.serialization.SerializationStrategy<0:0>;kotlin.sequences.Sequence<0:0>;kotlinx.io.Sink){0§<kotlin.Any?>}[0]
+    final fun <#A1: kotlin/Any?> encodeToString(kotlinx.serialization/SerializationStrategy<#A1>, kotlin.collections/List<#A1>): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.encodeToString|encodeToString(kotlinx.serialization.SerializationStrategy<0:0>;kotlin.collections.List<0:0>){0§<kotlin.Any?>}[0]
+    final inline fun <#A1: reified kotlin/Any?> decodeFromSource(kotlinx.io/Source): kotlin.sequences/Sequence<#A1> // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.decodeFromSource|decodeFromSource(kotlinx.io.Source){0§<kotlin.Any?>}[0]
+    final inline fun <#A1: reified kotlin/Any?> decodeFromString(kotlin/String): kotlin.collections/List<#A1> // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.decodeFromString|decodeFromString(kotlin.String){0§<kotlin.Any?>}[0]
+    final inline fun <#A1: reified kotlin/Any?> encodeToSink(kotlin.sequences/Sequence<#A1>, kotlinx.io/Sink) // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.encodeToSink|encodeToSink(kotlin.sequences.Sequence<0:0>;kotlinx.io.Sink){0§<kotlin.Any?>}[0]
+    final inline fun <#A1: reified kotlin/Any?> encodeToString(kotlin.collections/List<#A1>): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/GtfsCsv.encodeToString|encodeToString(kotlin.collections.List<0:0>){0§<kotlin.Any?>}[0]
+}

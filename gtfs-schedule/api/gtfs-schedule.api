@@ -208,10 +208,6 @@ public final class dev/sargunv/mobilitydata/gtfs/schedule/BookingType$Companion 
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
-public final class dev/sargunv/mobilitydata/gtfs/schedule/CommonKt {
-	public static final fun getGtfsCsv ()Ldev/sargunv/kotlindsv/DsvFormat;
-}
-
 public final class dev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff {
 	public static final field Companion Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff$Companion;
 	public static final synthetic fun box-impl (I)Ldev/sargunv/mobilitydata/gtfs/schedule/ContinuousPickupDropOff;
@@ -704,6 +700,15 @@ public final synthetic class dev/sargunv/mobilitydata/gtfs/schedule/Frequency$$s
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Frequency$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gtfs/schedule/GtfsCsv {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gtfs/schedule/GtfsCsv;
+	public final fun decodeFromSource (Lkotlinx/io/Source;Lkotlinx/serialization/DeserializationStrategy;)Lkotlin/sequences/Sequence;
+	public final fun decodeFromString (Lkotlinx/serialization/DeserializationStrategy;Ljava/lang/String;)Ljava/util/List;
+	public final fun encodeToSink (Lkotlinx/serialization/SerializationStrategy;Lkotlin/sequences/Sequence;Lkotlinx/io/Sink;)V
+	public final fun encodeToString (Lkotlinx/serialization/SerializationStrategy;Ljava/util/List;)Ljava/lang/String;
+	public final fun getFormat ()Ldev/sargunv/kotlindsv/DsvFormat;
 }
 
 public final class dev/sargunv/mobilitydata/gtfs/schedule/Level {
