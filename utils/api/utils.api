@@ -43,6 +43,28 @@ public final class dev/sargunv/mobilitydata/utils/Decimal$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class dev/sargunv/mobilitydata/utils/GtfsLocalTime : java/lang/Comparable {
+	public static final field Companion Ldev/sargunv/mobilitydata/utils/GtfsLocalTime$Companion;
+	public fun <init> (III)V
+	public fun compareTo (Ldev/sargunv/mobilitydata/utils/GtfsLocalTime;)I
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun copy (III)Ldev/sargunv/mobilitydata/utils/GtfsLocalTime;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/utils/GtfsLocalTime;IIIILjava/lang/Object;)Ldev/sargunv/mobilitydata/utils/GtfsLocalTime;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHours ()I
+	public final fun getMinutes ()I
+	public final fun getSeconds ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/sargunv/mobilitydata/utils/GtfsLocalTime$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/utils/I18nKt {
 	public static final fun getDefaultFractionDigits (Ljava/lang/String;)Ljava/lang/Integer;
 }
@@ -149,6 +171,15 @@ public final class dev/sargunv/mobilitydata/utils/serialization/EpochSecondsSeri
 	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lkotlin/time/Instant;)V
+}
+
+public final class dev/sargunv/mobilitydata/utils/serialization/GtfsLocalTimeSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/GtfsLocalTimeSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/utils/GtfsLocalTime;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/utils/GtfsLocalTime;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 }
 
 public final class dev/sargunv/mobilitydata/utils/serialization/IntBooleanSerializer : kotlinx/serialization/KSerializer {

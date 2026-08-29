@@ -1206,22 +1206,22 @@ final class dev.sargunv.mobilitydata.gtfs.schedule/StopTime { // dev.sargunv.mob
 }
 
 final class dev.sargunv.mobilitydata.gtfs.schedule/Timeframe { // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe|null[0]
-    constructor <init>(kotlin/String, dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin/String) // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.<init>|<init>(kotlin.String;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.String){}[0]
+    constructor <init>(kotlin/String, dev.sargunv.mobilitydata.utils/GtfsLocalTime? = ..., dev.sargunv.mobilitydata.utils/GtfsLocalTime? = ..., kotlin/String) // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.<init>|<init>(kotlin.String;dev.sargunv.mobilitydata.utils.GtfsLocalTime?;dev.sargunv.mobilitydata.utils.GtfsLocalTime?;kotlin.String){}[0]
 
     final val endTime // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.endTime|{}endTime[0]
-        final fun <get-endTime>(): dev.sargunv.mobilitydata.utils/ServiceTime? // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.endTime.<get-endTime>|<get-endTime>(){}[0]
+        final fun <get-endTime>(): dev.sargunv.mobilitydata.utils/GtfsLocalTime? // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.endTime.<get-endTime>|<get-endTime>(){}[0]
     final val serviceId // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.serviceId|{}serviceId[0]
         final fun <get-serviceId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.serviceId.<get-serviceId>|<get-serviceId>(){}[0]
     final val startTime // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.startTime|{}startTime[0]
-        final fun <get-startTime>(): dev.sargunv.mobilitydata.utils/ServiceTime? // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.startTime.<get-startTime>|<get-startTime>(){}[0]
+        final fun <get-startTime>(): dev.sargunv.mobilitydata.utils/GtfsLocalTime? // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.startTime.<get-startTime>|<get-startTime>(){}[0]
     final val timeframeGroupId // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.timeframeGroupId|{}timeframeGroupId[0]
         final fun <get-timeframeGroupId>(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.timeframeGroupId.<get-timeframeGroupId>|<get-timeframeGroupId>(){}[0]
 
     final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.component1|component1(){}[0]
-    final fun component2(): dev.sargunv.mobilitydata.utils/ServiceTime? // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.component2|component2(){}[0]
-    final fun component3(): dev.sargunv.mobilitydata.utils/ServiceTime? // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.component3|component3(){}[0]
+    final fun component2(): dev.sargunv.mobilitydata.utils/GtfsLocalTime? // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.component2|component2(){}[0]
+    final fun component3(): dev.sargunv.mobilitydata.utils/GtfsLocalTime? // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.component3|component3(){}[0]
     final fun component4(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.component4|component4(){}[0]
-    final fun copy(kotlin/String = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., dev.sargunv.mobilitydata.utils/ServiceTime? = ..., kotlin/String = ...): dev.sargunv.mobilitydata.gtfs.schedule/Timeframe // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.copy|copy(kotlin.String;dev.sargunv.mobilitydata.utils.ServiceTime?;dev.sargunv.mobilitydata.utils.ServiceTime?;kotlin.String){}[0]
+    final fun copy(kotlin/String = ..., dev.sargunv.mobilitydata.utils/GtfsLocalTime? = ..., dev.sargunv.mobilitydata.utils/GtfsLocalTime? = ..., kotlin/String = ...): dev.sargunv.mobilitydata.gtfs.schedule/Timeframe // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.copy|copy(kotlin.String;dev.sargunv.mobilitydata.utils.GtfsLocalTime?;dev.sargunv.mobilitydata.utils.GtfsLocalTime?;kotlin.String){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gtfs.schedule/Timeframe.toString|toString(){}[0]
