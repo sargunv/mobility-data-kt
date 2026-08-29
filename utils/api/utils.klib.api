@@ -162,6 +162,14 @@ final object dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySeri
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlinx.datetime/DayOfWeek) // dev.sargunv.mobilitydata.utils.serialization/AbbreviatedWeekdaySerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlinx.datetime.DayOfWeek){}[0]
 }
 
+final object dev.sargunv.mobilitydata.utils.serialization/DatetimeSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/Timestamp> { // dev.sargunv.mobilitydata.utils.serialization/DatetimeSerializer|null[0]
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/DatetimeSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/DatetimeSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.utils/Timestamp // dev.sargunv.mobilitydata.utils.serialization/DatetimeSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.utils/Timestamp) // dev.sargunv.mobilitydata.utils.serialization/DatetimeSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.utils.Timestamp){}[0]
+}
+
 final object dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/Decimal> { // dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer|null[0]
     final val descriptor // dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer.descriptor|{}descriptor[0]
         final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/DecimalSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
