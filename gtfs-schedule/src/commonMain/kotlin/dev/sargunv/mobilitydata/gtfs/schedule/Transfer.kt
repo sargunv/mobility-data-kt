@@ -14,13 +14,15 @@ import kotlinx.serialization.Serializable
 public data class Transfer(
   /**
    * Identifies a stop or station where a connection between routes begins. If this field refers to
-   * a station, the transfer rule applies to all its child stops.
+   * a station, the transfer rule applies to all its child stops. Required if [transferType] is
+   * empty, `0`, `1`, `2`, or `3`; optional if [transferType] is `4` or `5`.
    */
   @SerialName("from_stop_id") public val fromStopId: String? = null,
 
   /**
    * Identifies a stop or station where a connection between routes ends. If this field refers to a
-   * station, the transfer rule applies to all child stops.
+   * station, the transfer rule applies to all child stops. Required if [transferType] is empty,
+   * `0`, `1`, `2`, or `3`; optional if [transferType] is `4` or `5`.
    */
   @SerialName("to_stop_id") public val toStopId: String? = null,
 
