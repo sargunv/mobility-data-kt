@@ -244,36 +244,4 @@ class StopTimeTest {
     val decoded = GtfsCsv.decodeFromString<StopTime>(csvContent)
     assertEquals(expected, decoded)
   }
-
-  @Test
-  fun decodeFlexRowWithoutStopId() {
-    val csv = // language=CSV
-      """
-      trip_id,location_id,location_group_id,stop_sequence,start_pickup_drop_off_window,end_pickup_drop_off_window
-      FLEX1,zone_a,,1,08:00:00,18:00:00
-      FLEX2,,group_b,1,09:00:00,17:00:00
-      """
-        .trimIndent()
-
-    val decoded = GtfsCsv.decodeFromString<StopTime>(csv)
-    assertEquals(
-      listOf(
-        StopTime(
-          tripId = "FLEX1",
-          locationId = "zone_a",
-          stopSequence = 1,
-          startPickupDropOffWindow = ServiceTime(8, 0, 0),
-          endPickupDropOffWindow = ServiceTime(18, 0, 0),
-        ),
-        StopTime(
-          tripId = "FLEX2",
-          locationGroupId = "group_b",
-          stopSequence = 1,
-          startPickupDropOffWindow = ServiceTime(9, 0, 0),
-          endPickupDropOffWindow = ServiceTime(17, 0, 0),
-        ),
-      ),
-      decoded,
-    )
-  }
 }

@@ -21,10 +21,8 @@ public data class StopTime(
   /** Departure time from a specific stop for a specific trip on a route. */
   @SerialName("departure_time") public val departureTime: ServiceTime? = null,
 
-  /**
-   * Identifies the serviced stop. Required unless `location_group_id` or `location_id` is defined.
-   */
-  @SerialName("stop_id") public val stopId: String? = null,
+  /** Identifies the serviced stop. */
+  @SerialName("stop_id") public val stopId: String,
 
   /**
    * Identifies the serviced location group that indicates groups of stops where riders may request
@@ -68,7 +66,7 @@ public data class StopTime(
   /** Distance traveled along the shape from the first stop to the stop in this record. */
   @SerialName("shape_dist_traveled") public val shapeDistTraveled: Double? = null,
 
-  /** Indicates if arrival and departure times for this stop are exact or approximate. */
+  /** Indicates whether a rider can board or alight at this stop. */
   @SerialName("timepoint") public val timepoint: Timepoint? = null,
 
   /** Identifies the boarding booking rule at this stop time. */
@@ -102,7 +100,7 @@ private constructor(
   }
 }
 
-/** Indicates if arrival and departure times for a stop are exact or approximate. */
+/** Indicates whether a rider can board the transit vehicle at this stop. */
 @Serializable
 @JvmInline
 public value class Timepoint

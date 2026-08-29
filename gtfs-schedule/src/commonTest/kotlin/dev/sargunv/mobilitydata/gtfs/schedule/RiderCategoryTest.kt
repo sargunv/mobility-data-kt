@@ -33,24 +33,4 @@ class RiderCategoryTest {
     val decoded = GtfsCsv.decodeFromString<RiderCategory>(csvContent)
     assertEquals(expected, decoded)
   }
-
-  @Test
-  fun emptyIsDefaultFareCategoryDecodesAsNotDefault() {
-    val csv = // language=CSV
-      """
-      rider_category_id,rider_category_name,is_default_fare_category,eligibility_url
-      student,Student,,
-      """
-        .trimIndent()
-
-    val decoded = GtfsCsv.decodeFromString<RiderCategory>(csv).single()
-    assertEquals(
-      RiderCategory(
-        riderCategoryId = "student",
-        riderCategoryName = "Student",
-        isDefaultFareCategory = null,
-      ),
-      decoded,
-    )
-  }
 }

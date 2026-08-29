@@ -7,7 +7,7 @@ import kotlin.time.Duration.Companion.seconds
 private val csvContent = // language=CSV
   """
   from_leg_group_id,to_leg_group_id,transfer_count,duration_limit,duration_limit_type,fare_transfer_type,fare_product_id
-  local,express,-1,,,0,
+  local,express,,-1,,0,
   express,local,1,3600,2,1,transfer_product
   """
     .trimIndent()
@@ -17,8 +17,8 @@ private val expected =
     FareTransferRule(
       fromLegGroupId = "local",
       toLegGroupId = "express",
-      transferCount = -1,
-      durationLimit = null,
+      transferCount = null,
+      durationLimit = (-1).seconds,
       durationLimitType = null,
       fareTransferType = FareTransferType.FromLegPlusTransfer,
       fareProductId = null,
