@@ -57,6 +57,9 @@ public value class FeedType(
 ) {
   /** Companion object containing predefined feed type constants. */
   public companion object {
+    /** The gbfs.json auto-discovery file that links to all other feeds. */
+    public val SystemManifest: FeedType = FeedType("gbfs")
+
     /** The gbfs_versions.json file listing available GBFS versions. */
     public val VersionManifest: FeedType = FeedType("gbfs_versions")
 
