@@ -1,9 +1,11 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.Decimal
+import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlinx.serialization.json.Json
@@ -175,6 +177,122 @@ private val expectedResponse2 =
       ),
   )
 
+private val jsonContentReservation = // language=JSON
+  """
+  {
+    "last_updated": "2023-07-17T13:34:13+02:00",
+    "ttl": 0,
+    "version": "3.1-RC",
+    "data": {
+      "plans": [
+        {
+          "plan_id": "plan2",
+          "name": [
+            {
+              "text": "One-Way",
+              "language": "en"
+            }
+          ],
+          "currency": "USD",
+          "price": 2.01,
+          "reservation_price_per_min": 0.15,
+          "is_taxable": false,
+          "description": [
+            {
+              "text": "Includes 10km, overage fees apply after 10km.",
+              "language": "en"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  """
+    .trimIndent()
+
+@OptIn(ExperimentalMobilityDataApi::class, ExperimentalTime::class)
+private val expectedResponseReservation =
+  GbfsFeedResponse(
+    lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
+    ttl = 0.seconds,
+    version = "3.1-RC",
+    data =
+      SystemPricingPlans(
+        plans =
+          listOf(
+            PricingPlan(
+              planId = "plan2",
+              name = mapOf("en" to "One-Way"),
+              currency = "USD",
+              price = Decimal.parse("2.01"),
+              reservationPricePerMin = Decimal.parse("0.15"),
+              isTaxable = false,
+              description = mapOf("en" to "Includes 10km, overage fees apply after 10km."),
+            )
+          )
+      ),
+  )
+
+private val jsonContentFareCapping = // language=JSON
+  """
+  {
+    "last_updated": "2023-07-17T13:34:13+02:00",
+    "ttl": 0,
+    "version": "3.1-RC",
+    "data": {
+      "plans": [
+        {
+          "plan_id": "plan3",
+          "name": [
+            {
+              "text": "Simple Rate",
+              "language": "en"
+            }
+          ],
+          "currency": "CAD",
+          "price": 3.01,
+          "is_taxable": true,
+          "description": [
+            {
+              "text": "$3 unlock fee, $0.25 per kilometer and 0.50 per minute.",
+              "language": "en"
+            }
+          ],
+          "fare_capping": {
+            "duration": 720,
+            "price": 15
+          }
+        }
+      ]
+    }
+  }
+  """
+    .trimIndent()
+
+@OptIn(ExperimentalMobilityDataApi::class, ExperimentalTime::class)
+private val expectedResponseFareCapping =
+  GbfsFeedResponse(
+    lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
+    ttl = 0.seconds,
+    version = "3.1-RC",
+    data =
+      SystemPricingPlans(
+        plans =
+          listOf(
+            PricingPlan(
+              planId = "plan3",
+              name = mapOf("en" to "Simple Rate"),
+              currency = "CAD",
+              price = Decimal.parse("3.01"),
+              isTaxable = true,
+              description =
+                mapOf("en" to "$3 unlock fee, $0.25 per kilometer and 0.50 per minute."),
+              fareCapping = FareCapping(duration = 720.minutes, price = Decimal.parse("15")),
+            )
+          )
+      ),
+  )
+
 class SystemPricingPlansTest {
   @Test
   fun encode1() {
@@ -202,5 +320,33 @@ class SystemPricingPlansTest {
     val decodedResponse =
       GbfsJson.decodeFromString<GbfsFeedResponse<SystemPricingPlans>>(jsonContent2)
     assertEquals(expectedResponse2, decodedResponse)
+  }
+
+  @Test
+  fun encodeReservation() {
+    val expectedJson = Json.decodeFromString<JsonElement>(jsonContentReservation)
+    val encodedJson = GbfsJson.encodeToJsonElement(expectedResponseReservation)
+    assertEquals(expectedJson, encodedJson)
+  }
+
+  @Test
+  fun decodeReservation() {
+    val decodedResponse =
+      GbfsJson.decodeFromString<GbfsFeedResponse<SystemPricingPlans>>(jsonContentReservation)
+    assertEquals(expectedResponseReservation, decodedResponse)
+  }
+
+  @Test
+  fun encodeFareCapping() {
+    val expectedJson = Json.decodeFromString<JsonElement>(jsonContentFareCapping)
+    val encodedJson = GbfsJson.encodeToJsonElement(expectedResponseFareCapping)
+    assertEquals(expectedJson, encodedJson)
+  }
+
+  @Test
+  fun decodeFareCapping() {
+    val decodedResponse =
+      GbfsJson.decodeFromString<GbfsFeedResponse<SystemPricingPlans>>(jsonContentFareCapping)
+    assertEquals(expectedResponseFareCapping, decodedResponse)
   }
 }

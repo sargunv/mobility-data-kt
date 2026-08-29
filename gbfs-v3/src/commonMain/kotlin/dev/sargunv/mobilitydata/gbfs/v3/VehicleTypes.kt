@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.CountryCode
+import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.ExtendedLocalDate
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.Url
@@ -146,6 +147,13 @@ public data class VehicleType(
    * system_pricing_plans.json that apply to a single vehicle type.
    */
   @SerialName("pricing_plan_ids") public val pricingPlanIds: List<String>? = null,
+
+  /**
+   * Minimum age required to use this vehicle.
+   *
+   * GBFS 3.1-RC.
+   */
+  @SerialName("min_age") @property:ExperimentalMobilityDataApi public val minAge: Int? = null,
 )
 
 /** The vehicle's general form factor. */

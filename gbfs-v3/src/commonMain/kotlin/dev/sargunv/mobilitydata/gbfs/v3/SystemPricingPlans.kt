@@ -2,8 +2,10 @@ package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.CurrencyCode
 import dev.sargunv.mobilitydata.utils.Decimal
+import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.Url
+import dev.sargunv.mobilitydata.utils.WholeMinutes
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -85,6 +87,53 @@ public data class PricingPlan(
    * If this field is empty, it means there is no surge pricing in effect.
    */
   @SerialName("surge_pricing") public val surgePricing: Boolean? = null,
+
+  /**
+   * The cost, described as a per minute rate, to reserve the vehicle prior to beginning a rental.
+   *
+   * GBFS 3.1-RC. Charged for each minute of the reservation until the rental is initiated, or until
+   * `default_reserve_time` elapses, whichever comes first. MUST NOT be combined in a single pricing
+   * plan with [reservationPriceFlatRate].
+   */
+  @SerialName("reservation_price_per_min")
+  @property:ExperimentalMobilityDataApi
+  public val reservationPricePerMin: Decimal? = null,
+
+  /**
+   * The cost, described as a flat rate, to reserve the vehicle prior to beginning a rental.
+   *
+   * GBFS 3.1-RC. Charged once to reserve the vehicle for the duration of `default_reserve_time`.
+   * MUST NOT be combined in a single pricing plan with [reservationPricePerMin].
+   */
+  @SerialName("reservation_price_flat_rate")
+  @property:ExperimentalMobilityDataApi
+  public val reservationPriceFlatRate: Decimal? = null,
+
+  /**
+   * A capped fare once a price threshold has been spent within a timeframe.
+   *
+   * GBFS 3.1-RC. The same fare cap applies to each subsequent timeframe. For example, a fare capped
+   * at 15.00 CAD per 12-hour period.
+   */
+  @SerialName("fare_capping")
+  @property:ExperimentalMobilityDataApi
+  public val fareCapping: FareCapping? = null,
+)
+
+/**
+ * A fare cap that applies once a price threshold has been spent within a timeframe.
+ *
+ * GBFS 3.1-RC. The same cap applies to each subsequent timeframe.
+ */
+@Serializable
+public data class FareCapping
+@ExperimentalMobilityDataApi
+public constructor(
+  /** Amount of time in minutes during which the fare is capped. */
+  @property:ExperimentalMobilityDataApi public val duration: WholeMinutes,
+
+  /** The maximum fare threshold for the current timeframe, in the unit specified by `currency`. */
+  @property:ExperimentalMobilityDataApi public val price: Decimal,
 )
 
 /** A pricing interval defining a rate that is charged over a specific range of distance or time. */

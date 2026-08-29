@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -260,6 +261,46 @@ private val expectedResponse =
       ),
   )
 
+private val minAgeJsonContent = // language=JSON
+  """
+  {
+    "last_updated": "2023-07-17T13:34:13+02:00",
+    "ttl": 0,
+    "version": "3.1-RC",
+    "data": {
+      "vehicle_types": [
+        {
+          "vehicle_type_id": "abc123",
+          "form_factor": "bicycle",
+          "propulsion_type": "human",
+          "min_age": 16
+        }
+      ]
+    }
+  }
+  """
+    .trimIndent()
+
+@OptIn(ExperimentalMobilityDataApi::class, ExperimentalTime::class)
+private val minAgeExpectedResponse =
+  GbfsFeedResponse(
+    lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
+    ttl = 0.seconds,
+    version = "3.1-RC",
+    data =
+      VehicleTypes(
+        vehicleTypes =
+          listOf(
+            VehicleType(
+              vehicleTypeId = "abc123",
+              formFactor = VehicleFormFactor.Bicycle,
+              propulsionType = VehiclePropulsionType.Human,
+              minAge = 16,
+            )
+          )
+      ),
+  )
+
 class VehicleTypesTest {
   @Test
   fun encode() {
@@ -272,5 +313,19 @@ class VehicleTypesTest {
   fun decode() {
     val decodedResponse = GbfsJson.decodeFromString<GbfsFeedResponse<VehicleTypes>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
+  }
+
+  @Test
+  fun encodeMinAge() {
+    val expectedJson = Json.decodeFromString<JsonElement>(minAgeJsonContent)
+    val encodedJson = GbfsJson.encodeToJsonElement(minAgeExpectedResponse)
+    assertEquals(expectedJson, encodedJson)
+  }
+
+  @Test
+  fun decodeMinAge() {
+    val decodedResponse =
+      GbfsJson.decodeFromString<GbfsFeedResponse<VehicleTypes>>(minAgeJsonContent)
+    assertEquals(minAgeExpectedResponse, decodedResponse)
   }
 }
