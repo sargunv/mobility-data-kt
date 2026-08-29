@@ -34,6 +34,30 @@ abstract class <#A: kotlin.collections/Map.Entry<#B, #C>, #B: kotlin/Any?, #C: k
     open fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.collections/Map<#B, #C>) // dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.collections.Map<1:1,1:2>){}[0]
 }
 
+final class dev.sargunv.mobilitydata.utils/GtfsLocalTime : kotlin/Comparable<dev.sargunv.mobilitydata.utils/GtfsLocalTime> { // dev.sargunv.mobilitydata.utils/GtfsLocalTime|null[0]
+    constructor <init>(kotlin/Int, kotlin/Int, kotlin/Int) // dev.sargunv.mobilitydata.utils/GtfsLocalTime.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.Int){}[0]
+
+    final val hours // dev.sargunv.mobilitydata.utils/GtfsLocalTime.hours|{}hours[0]
+        final fun <get-hours>(): kotlin/Int // dev.sargunv.mobilitydata.utils/GtfsLocalTime.hours.<get-hours>|<get-hours>(){}[0]
+    final val minutes // dev.sargunv.mobilitydata.utils/GtfsLocalTime.minutes|{}minutes[0]
+        final fun <get-minutes>(): kotlin/Int // dev.sargunv.mobilitydata.utils/GtfsLocalTime.minutes.<get-minutes>|<get-minutes>(){}[0]
+    final val seconds // dev.sargunv.mobilitydata.utils/GtfsLocalTime.seconds|{}seconds[0]
+        final fun <get-seconds>(): kotlin/Int // dev.sargunv.mobilitydata.utils/GtfsLocalTime.seconds.<get-seconds>|<get-seconds>(){}[0]
+
+    final fun compareTo(dev.sargunv.mobilitydata.utils/GtfsLocalTime): kotlin/Int // dev.sargunv.mobilitydata.utils/GtfsLocalTime.compareTo|compareTo(dev.sargunv.mobilitydata.utils.GtfsLocalTime){}[0]
+    final fun component1(): kotlin/Int // dev.sargunv.mobilitydata.utils/GtfsLocalTime.component1|component1(){}[0]
+    final fun component2(): kotlin/Int // dev.sargunv.mobilitydata.utils/GtfsLocalTime.component2|component2(){}[0]
+    final fun component3(): kotlin/Int // dev.sargunv.mobilitydata.utils/GtfsLocalTime.component3|component3(){}[0]
+    final fun copy(kotlin/Int = ..., kotlin/Int = ..., kotlin/Int = ...): dev.sargunv.mobilitydata.utils/GtfsLocalTime // dev.sargunv.mobilitydata.utils/GtfsLocalTime.copy|copy(kotlin.Int;kotlin.Int;kotlin.Int){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.utils/GtfsLocalTime.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.utils/GtfsLocalTime.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.utils/GtfsLocalTime.toString|toString(){}[0]
+
+    final object Companion { // dev.sargunv.mobilitydata.utils/GtfsLocalTime.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/GtfsLocalTime> // dev.sargunv.mobilitydata.utils/GtfsLocalTime.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class dev.sargunv.mobilitydata.utils/ServiceTime : kotlin/Comparable<dev.sargunv.mobilitydata.utils/ServiceTime> { // dev.sargunv.mobilitydata.utils/ServiceTime|null[0]
     constructor <init>(kotlin/Int, kotlin/Int, kotlin/Int) // dev.sargunv.mobilitydata.utils/ServiceTime.<init>|<init>(kotlin.Int;kotlin.Int;kotlin.Int){}[0]
 
@@ -152,6 +176,14 @@ final object dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer
 
     final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlin.time/Instant // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin.time/Instant) // dev.sargunv.mobilitydata.utils.serialization/EpochSecondsSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.time.Instant){}[0]
+}
+
+final object dev.sargunv.mobilitydata.utils.serialization/GtfsLocalTimeSerializer : kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.utils/GtfsLocalTime> { // dev.sargunv.mobilitydata.utils.serialization/GtfsLocalTimeSerializer|null[0]
+    final val descriptor // dev.sargunv.mobilitydata.utils.serialization/GtfsLocalTimeSerializer.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.utils.serialization/GtfsLocalTimeSerializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.utils/GtfsLocalTime // dev.sargunv.mobilitydata.utils.serialization/GtfsLocalTimeSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+    final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.utils/GtfsLocalTime) // dev.sargunv.mobilitydata.utils.serialization/GtfsLocalTimeSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.utils.GtfsLocalTime){}[0]
 }
 
 final object dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer : kotlinx.serialization/KSerializer<kotlin/Boolean> { // dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer|null[0]
