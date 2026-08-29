@@ -6,6 +6,10 @@
 // - Show declarations: true
 
 // Library unique name: <dev.sargunv.mobility-data:utils>
+open annotation class dev.sargunv.mobilitydata.utils/ExperimentalMobilityDataApi : kotlin/Annotation { // dev.sargunv.mobilitydata.utils/ExperimentalMobilityDataApi|null[0]
+    constructor <init>() // dev.sargunv.mobilitydata.utils/ExperimentalMobilityDataApi.<init>|<init>(){}[0]
+}
+
 final enum class dev.sargunv.mobilitydata.utils/RoundingMode : kotlin/Enum<dev.sargunv.mobilitydata.utils/RoundingMode> { // dev.sargunv.mobilitydata.utils/RoundingMode|null[0]
     enum entry CEILING // dev.sargunv.mobilitydata.utils/RoundingMode.CEILING|null[0]
     enum entry DOWN // dev.sargunv.mobilitydata.utils/RoundingMode.DOWN|null[0]

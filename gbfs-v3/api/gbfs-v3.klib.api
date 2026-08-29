@@ -232,8 +232,12 @@ final class dev.sargunv.mobilitydata.gbfs.v3/CountBySingleVehicleType { // dev.s
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v3/Dataset { // dev.sargunv.mobilitydata.gbfs.v3/Dataset|null[0]
-    constructor <init>(kotlin/String, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VersionInfo>) // dev.sargunv.mobilitydata.gbfs.v3/Dataset.<init>|<init>(kotlin.String;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VersionInfo>){}[0]
+    constructor <init>(kotlin/String, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VersionInfo>, org.maplibre.spatialk.geojson/MultiPolygon? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gbfs.v3/Dataset.<init>|<init>(kotlin.String;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VersionInfo>;org.maplibre.spatialk.geojson.MultiPolygon?;kotlin.String?){}[0]
 
+    final val area // dev.sargunv.mobilitydata.gbfs.v3/Dataset.area|{}area[0]
+        final fun <get-area>(): org.maplibre.spatialk.geojson/MultiPolygon? // dev.sargunv.mobilitydata.gbfs.v3/Dataset.area.<get-area>|<get-area>(){}[0]
+    final val countryCode // dev.sargunv.mobilitydata.gbfs.v3/Dataset.countryCode|{}countryCode[0]
+        final fun <get-countryCode>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/Dataset.countryCode.<get-countryCode>|<get-countryCode>(){}[0]
     final val systemId // dev.sargunv.mobilitydata.gbfs.v3/Dataset.systemId|{}systemId[0]
         final fun <get-systemId>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/Dataset.systemId.<get-systemId>|<get-systemId>(){}[0]
     final val versions // dev.sargunv.mobilitydata.gbfs.v3/Dataset.versions|{}versions[0]
@@ -241,7 +245,9 @@ final class dev.sargunv.mobilitydata.gbfs.v3/Dataset { // dev.sargunv.mobilityda
 
     final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/Dataset.component1|component1(){}[0]
     final fun component2(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VersionInfo> // dev.sargunv.mobilitydata.gbfs.v3/Dataset.component2|component2(){}[0]
-    final fun copy(kotlin/String = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VersionInfo> = ...): dev.sargunv.mobilitydata.gbfs.v3/Dataset // dev.sargunv.mobilitydata.gbfs.v3/Dataset.copy|copy(kotlin.String;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VersionInfo>){}[0]
+    final fun component3(): org.maplibre.spatialk.geojson/MultiPolygon? // dev.sargunv.mobilitydata.gbfs.v3/Dataset.component3|component3(){}[0]
+    final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/Dataset.component4|component4(){}[0]
+    final fun copy(kotlin/String = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VersionInfo> = ..., org.maplibre.spatialk.geojson/MultiPolygon? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gbfs.v3/Dataset // dev.sargunv.mobilitydata.gbfs.v3/Dataset.copy|copy(kotlin.String;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VersionInfo>;org.maplibre.spatialk.geojson.MultiPolygon?;kotlin.String?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/Dataset.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/Dataset.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/Dataset.toString|toString(){}[0]
@@ -331,6 +337,35 @@ final class dev.sargunv.mobilitydata.gbfs.v3/EcoLabel { // dev.sargunv.mobilityd
 
     final object Companion { // dev.sargunv.mobilitydata.gbfs.v3/EcoLabel.Companion|null[0]
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v3/EcoLabel> // dev.sargunv.mobilitydata.gbfs.v3/EcoLabel.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gbfs.v3/FareCapping { // dev.sargunv.mobilitydata.gbfs.v3/FareCapping|null[0]
+    constructor <init>(kotlin.time/Duration, dev.sargunv.mobilitydata.utils/Decimal) // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.<init>|<init>(kotlin.time.Duration;dev.sargunv.mobilitydata.utils.Decimal){}[0]
+
+    final val duration // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.duration|{}duration[0]
+        final fun <get-duration>(): kotlin.time/Duration // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.duration.<get-duration>|<get-duration>(){}[0]
+    final val price // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.price|{}price[0]
+        final fun <get-price>(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.price.<get-price>|<get-price>(){}[0]
+
+    final fun component1(): kotlin.time/Duration // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.component1|component1(){}[0]
+    final fun component2(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.component2|component2(){}[0]
+    final fun copy(kotlin.time/Duration = ..., dev.sargunv.mobilitydata.utils/Decimal = ...): dev.sargunv.mobilitydata.gbfs.v3/FareCapping // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.copy|copy(kotlin.time.Duration;dev.sargunv.mobilitydata.utils.Decimal){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v3/FareCapping> { // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gbfs.v3/FareCapping // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gbfs.v3/FareCapping) // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gbfs.v3.FareCapping){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v3/FareCapping> // dev.sargunv.mobilitydata.gbfs.v3/FareCapping.Companion.serializer|serializer(){}[0]
     }
 }
 
@@ -481,12 +516,14 @@ final class dev.sargunv.mobilitydata.gbfs.v3/PricingInterval { // dev.sargunv.mo
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v3/PricingPlan { // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan|null[0]
-    constructor <init>(kotlin/String, kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>, kotlin/String, dev.sargunv.mobilitydata.utils/Decimal, kotlin/Boolean, kotlin.collections/Map<kotlin/String, kotlin/String>, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? = ..., kotlin/Boolean? = ...) // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.<init>|<init>(kotlin.String;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.String;dev.sargunv.mobilitydata.utils.Decimal;kotlin.Boolean;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.PricingInterval>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.PricingInterval>?;kotlin.Boolean?){}[0]
+    constructor <init>(kotlin/String, kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>, kotlin/String, dev.sargunv.mobilitydata.utils/Decimal, kotlin/Boolean, kotlin.collections/Map<kotlin/String, kotlin/String>, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? = ..., kotlin/Boolean? = ..., dev.sargunv.mobilitydata.utils/Decimal? = ..., dev.sargunv.mobilitydata.utils/Decimal? = ..., dev.sargunv.mobilitydata.gbfs.v3/FareCapping? = ...) // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.<init>|<init>(kotlin.String;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.String;dev.sargunv.mobilitydata.utils.Decimal;kotlin.Boolean;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.PricingInterval>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.PricingInterval>?;kotlin.Boolean?;dev.sargunv.mobilitydata.utils.Decimal?;dev.sargunv.mobilitydata.utils.Decimal?;dev.sargunv.mobilitydata.gbfs.v3.FareCapping?){}[0]
 
     final val currency // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.currency|{}currency[0]
         final fun <get-currency>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.currency.<get-currency>|<get-currency>(){}[0]
     final val description // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.description|{}description[0]
         final fun <get-description>(): kotlin.collections/Map<kotlin/String, kotlin/String> // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.description.<get-description>|<get-description>(){}[0]
+    final val fareCapping // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.fareCapping|{}fareCapping[0]
+        final fun <get-fareCapping>(): dev.sargunv.mobilitydata.gbfs.v3/FareCapping? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.fareCapping.<get-fareCapping>|<get-fareCapping>(){}[0]
     final val isTaxable // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.isTaxable|{}isTaxable[0]
         final fun <get-isTaxable>(): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.isTaxable.<get-isTaxable>|<get-isTaxable>(){}[0]
     final val name // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.name|{}name[0]
@@ -499,6 +536,10 @@ final class dev.sargunv.mobilitydata.gbfs.v3/PricingPlan { // dev.sargunv.mobili
         final fun <get-planId>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.planId.<get-planId>|<get-planId>(){}[0]
     final val price // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.price|{}price[0]
         final fun <get-price>(): dev.sargunv.mobilitydata.utils/Decimal // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.price.<get-price>|<get-price>(){}[0]
+    final val reservationPriceFlatRate // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.reservationPriceFlatRate|{}reservationPriceFlatRate[0]
+        final fun <get-reservationPriceFlatRate>(): dev.sargunv.mobilitydata.utils/Decimal? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.reservationPriceFlatRate.<get-reservationPriceFlatRate>|<get-reservationPriceFlatRate>(){}[0]
+    final val reservationPricePerMin // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.reservationPricePerMin|{}reservationPricePerMin[0]
+        final fun <get-reservationPricePerMin>(): dev.sargunv.mobilitydata.utils/Decimal? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.reservationPricePerMin.<get-reservationPricePerMin>|<get-reservationPricePerMin>(){}[0]
     final val surgePricing // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.surgePricing|{}surgePricing[0]
         final fun <get-surgePricing>(): kotlin/Boolean? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.surgePricing.<get-surgePricing>|<get-surgePricing>(){}[0]
     final val url // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.url|{}url[0]
@@ -506,6 +547,9 @@ final class dev.sargunv.mobilitydata.gbfs.v3/PricingPlan { // dev.sargunv.mobili
 
     final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component1|component1(){}[0]
     final fun component10(): kotlin/Boolean? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component10|component10(){}[0]
+    final fun component11(): dev.sargunv.mobilitydata.utils/Decimal? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component11|component11(){}[0]
+    final fun component12(): dev.sargunv.mobilitydata.utils/Decimal? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component12|component12(){}[0]
+    final fun component13(): dev.sargunv.mobilitydata.gbfs.v3/FareCapping? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component13|component13(){}[0]
     final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component2|component2(){}[0]
     final fun component3(): kotlin.collections/Map<kotlin/String, kotlin/String> // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component3|component3(){}[0]
     final fun component4(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component4|component4(){}[0]
@@ -514,7 +558,7 @@ final class dev.sargunv.mobilitydata.gbfs.v3/PricingPlan { // dev.sargunv.mobili
     final fun component7(): kotlin.collections/Map<kotlin/String, kotlin/String> // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component7|component7(){}[0]
     final fun component8(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component8|component8(){}[0]
     final fun component9(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.component9|component9(){}[0]
-    final fun copy(kotlin/String = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ..., kotlin/String = ..., dev.sargunv.mobilitydata.utils/Decimal = ..., kotlin/Boolean = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? = ..., kotlin/Boolean? = ...): dev.sargunv.mobilitydata.gbfs.v3/PricingPlan // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.copy|copy(kotlin.String;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.String;dev.sargunv.mobilitydata.utils.Decimal;kotlin.Boolean;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.PricingInterval>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.PricingInterval>?;kotlin.Boolean?){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ..., kotlin/String = ..., dev.sargunv.mobilitydata.utils/Decimal = ..., kotlin/Boolean = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/PricingInterval>? = ..., kotlin/Boolean? = ..., dev.sargunv.mobilitydata.utils/Decimal? = ..., dev.sargunv.mobilitydata.utils/Decimal? = ..., dev.sargunv.mobilitydata.gbfs.v3/FareCapping? = ...): dev.sargunv.mobilitydata.gbfs.v3/PricingPlan // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.copy|copy(kotlin.String;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.String;dev.sargunv.mobilitydata.utils.Decimal;kotlin.Boolean;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.PricingInterval>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.PricingInterval>?;kotlin.Boolean?;dev.sargunv.mobilitydata.utils.Decimal?;dev.sargunv.mobilitydata.utils.Decimal?;dev.sargunv.mobilitydata.gbfs.v3.FareCapping?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/PricingPlan.toString|toString(){}[0]
@@ -697,12 +741,14 @@ final class dev.sargunv.mobilitydata.gbfs.v3/ServiceManifest : dev.sargunv.mobil
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v3/Station { // dev.sargunv.mobilitydata.gbfs.v3/Station|null[0]
-    constructor <init>(kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String>, kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/Double, kotlin/Double, kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., de.westnordost.osm_opening_hours.model/OpeningHours? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/RentalMethod>? = ..., kotlin/Boolean? = ..., org.maplibre.spatialk.geojson/MultiPolygon? = ..., dev.sargunv.mobilitydata.gbfs.v3/ParkingType? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/CountByMultipleVehicleTypes>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/CountByMultipleVehicleTypes>? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., dev.sargunv.mobilitydata.gbfs.v3/RentalUris? = ...) // dev.sargunv.mobilitydata.gbfs.v3/Station.<init>|<init>(kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.Double;kotlin.Double;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;de.westnordost.osm_opening_hours.model.OpeningHours?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.RentalMethod>?;kotlin.Boolean?;org.maplibre.spatialk.geojson.MultiPolygon?;dev.sargunv.mobilitydata.gbfs.v3.ParkingType?;kotlin.Boolean?;kotlin.String?;kotlin.Int?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.CountByMultipleVehicleTypes>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.CountByMultipleVehicleTypes>?;kotlin.Boolean?;kotlin.Boolean?;dev.sargunv.mobilitydata.gbfs.v3.RentalUris?){}[0]
+    constructor <init>(kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String>, kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/Double, kotlin/Double, kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., de.westnordost.osm_opening_hours.model/OpeningHours? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/RentalMethod>? = ..., kotlin/Boolean? = ..., org.maplibre.spatialk.geojson/MultiPolygon? = ..., dev.sargunv.mobilitydata.gbfs.v3/ParkingType? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/CountByMultipleVehicleTypes>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/CountByMultipleVehicleTypes>? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., dev.sargunv.mobilitydata.gbfs.v3/RentalUris? = ..., kotlin/String? = ...) // dev.sargunv.mobilitydata.gbfs.v3/Station.<init>|<init>(kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.Double;kotlin.Double;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;de.westnordost.osm_opening_hours.model.OpeningHours?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.RentalMethod>?;kotlin.Boolean?;org.maplibre.spatialk.geojson.MultiPolygon?;dev.sargunv.mobilitydata.gbfs.v3.ParkingType?;kotlin.Boolean?;kotlin.String?;kotlin.Int?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.CountByMultipleVehicleTypes>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.CountByMultipleVehicleTypes>?;kotlin.Boolean?;kotlin.Boolean?;dev.sargunv.mobilitydata.gbfs.v3.RentalUris?;kotlin.String?){}[0]
 
     final val address // dev.sargunv.mobilitydata.gbfs.v3/Station.address|{}address[0]
         final fun <get-address>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/Station.address.<get-address>|<get-address>(){}[0]
     final val capacity // dev.sargunv.mobilitydata.gbfs.v3/Station.capacity|{}capacity[0]
         final fun <get-capacity>(): kotlin/Int? // dev.sargunv.mobilitydata.gbfs.v3/Station.capacity.<get-capacity>|<get-capacity>(){}[0]
+    final val city // dev.sargunv.mobilitydata.gbfs.v3/Station.city|{}city[0]
+        final fun <get-city>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/Station.city.<get-city>|<get-city>(){}[0]
     final val contactPhone // dev.sargunv.mobilitydata.gbfs.v3/Station.contactPhone|{}contactPhone[0]
         final fun <get-contactPhone>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/Station.contactPhone.<get-contactPhone>|<get-contactPhone>(){}[0]
     final val crossStreet // dev.sargunv.mobilitydata.gbfs.v3/Station.crossStreet|{}crossStreet[0]
@@ -759,6 +805,7 @@ final class dev.sargunv.mobilitydata.gbfs.v3/Station { // dev.sargunv.mobilityda
     final fun component20(): kotlin/Boolean? // dev.sargunv.mobilitydata.gbfs.v3/Station.component20|component20(){}[0]
     final fun component21(): kotlin/Boolean? // dev.sargunv.mobilitydata.gbfs.v3/Station.component21|component21(){}[0]
     final fun component22(): dev.sargunv.mobilitydata.gbfs.v3/RentalUris? // dev.sargunv.mobilitydata.gbfs.v3/Station.component22|component22(){}[0]
+    final fun component23(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/Station.component23|component23(){}[0]
     final fun component3(): kotlin.collections/Map<kotlin/String, kotlin/String>? // dev.sargunv.mobilitydata.gbfs.v3/Station.component3|component3(){}[0]
     final fun component4(): kotlin/Double // dev.sargunv.mobilitydata.gbfs.v3/Station.component4|component4(){}[0]
     final fun component5(): kotlin/Double // dev.sargunv.mobilitydata.gbfs.v3/Station.component5|component5(){}[0]
@@ -766,7 +813,7 @@ final class dev.sargunv.mobilitydata.gbfs.v3/Station { // dev.sargunv.mobilityda
     final fun component7(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/Station.component7|component7(){}[0]
     final fun component8(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/Station.component8|component8(){}[0]
     final fun component9(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/Station.component9|component9(){}[0]
-    final fun copy(kotlin/String = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/Double = ..., kotlin/Double = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., de.westnordost.osm_opening_hours.model/OpeningHours? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/RentalMethod>? = ..., kotlin/Boolean? = ..., org.maplibre.spatialk.geojson/MultiPolygon? = ..., dev.sargunv.mobilitydata.gbfs.v3/ParkingType? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/CountByMultipleVehicleTypes>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/CountByMultipleVehicleTypes>? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., dev.sargunv.mobilitydata.gbfs.v3/RentalUris? = ...): dev.sargunv.mobilitydata.gbfs.v3/Station // dev.sargunv.mobilitydata.gbfs.v3/Station.copy|copy(kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.Double;kotlin.Double;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;de.westnordost.osm_opening_hours.model.OpeningHours?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.RentalMethod>?;kotlin.Boolean?;org.maplibre.spatialk.geojson.MultiPolygon?;dev.sargunv.mobilitydata.gbfs.v3.ParkingType?;kotlin.Boolean?;kotlin.String?;kotlin.Int?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.CountByMultipleVehicleTypes>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.CountByMultipleVehicleTypes>?;kotlin.Boolean?;kotlin.Boolean?;dev.sargunv.mobilitydata.gbfs.v3.RentalUris?){}[0]
+    final fun copy(kotlin/String = ..., kotlin.collections/Map<kotlin/String, kotlin/String> = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/Double = ..., kotlin/Double = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., de.westnordost.osm_opening_hours.model/OpeningHours? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/RentalMethod>? = ..., kotlin/Boolean? = ..., org.maplibre.spatialk.geojson/MultiPolygon? = ..., dev.sargunv.mobilitydata.gbfs.v3/ParkingType? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/Int? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/CountByMultipleVehicleTypes>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/CountByMultipleVehicleTypes>? = ..., kotlin/Boolean? = ..., kotlin/Boolean? = ..., dev.sargunv.mobilitydata.gbfs.v3/RentalUris? = ..., kotlin/String? = ...): dev.sargunv.mobilitydata.gbfs.v3/Station // dev.sargunv.mobilitydata.gbfs.v3/Station.copy|copy(kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.Double;kotlin.Double;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.String?;de.westnordost.osm_opening_hours.model.OpeningHours?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.RentalMethod>?;kotlin.Boolean?;org.maplibre.spatialk.geojson.MultiPolygon?;dev.sargunv.mobilitydata.gbfs.v3.ParkingType?;kotlin.Boolean?;kotlin.String?;kotlin.Int?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.CountByMultipleVehicleTypes>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.CountByMultipleVehicleTypes>?;kotlin.Boolean?;kotlin.Boolean?;dev.sargunv.mobilitydata.gbfs.v3.RentalUris?;kotlin.String?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/Station.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/Station.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/Station.toString|toString(){}[0]
@@ -1247,6 +1294,121 @@ final class dev.sargunv.mobilitydata.gbfs.v3/VehicleAssets { // dev.sargunv.mobi
     }
 }
 
+final class dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability : dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedData, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> { // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability|null[0]
+    constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry>) // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilityEntry>){}[0]
+
+    final val size // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.size|{}size[0]
+        final fun <get-size>(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.size.<get-size>|<get-size>(){}[0]
+    final val vehicles // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.vehicles|{}vehicles[0]
+        final fun <get-vehicles>(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.vehicles.<get-vehicles>|<get-vehicles>(){}[0]
+
+    final fun component1(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.component1|component1(){}[0]
+    final fun contains(dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.contains|contains(dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilityEntry){}[0]
+    final fun containsAll(kotlin.collections/Collection<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry>): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.containsAll|containsAll(kotlin.collections.Collection<dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilityEntry>){}[0]
+    final fun copy(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> = ...): dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.copy|copy(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilityEntry>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.equals|equals(kotlin.Any?){}[0]
+    final fun get(kotlin/Int): dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.get|get(kotlin.Int){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.hashCode|hashCode(){}[0]
+    final fun indexOf(dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.indexOf|indexOf(dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilityEntry){}[0]
+    final fun isEmpty(): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.isEmpty|isEmpty(){}[0]
+    final fun iterator(): kotlin.collections/Iterator<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.iterator|iterator(){}[0]
+    final fun lastIndexOf(dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.lastIndexOf|lastIndexOf(dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilityEntry){}[0]
+    final fun listIterator(): kotlin.collections/ListIterator<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.listIterator|listIterator(){}[0]
+    final fun listIterator(kotlin/Int): kotlin.collections/ListIterator<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.listIterator|listIterator(kotlin.Int){}[0]
+    final fun subList(kotlin/Int, kotlin/Int): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.subList|subList(kotlin.Int;kotlin.Int){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability> { // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability) // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailability){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.Companion.serializer|serializer(){}[0]
+    }
+
+    // Targets: [js]
+    final fun asJsReadonlyArrayView(): kotlin.js.collections/JsReadonlyArray<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability.asJsReadonlyArrayView|asJsReadonlyArrayView(){}[0]
+}
+
+final class dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry { // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry|null[0]
+    constructor <init>(kotlin/String, kotlin/String? = ..., kotlin/String, kotlin/String? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleEquipment>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot>) // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.<init>|<init>(kotlin.String;kotlin.String?;kotlin.String;kotlin.String?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleEquipment>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilitySlot>){}[0]
+
+    final val availabilities // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.availabilities|{}availabilities[0]
+        final fun <get-availabilities>(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.availabilities.<get-availabilities>|<get-availabilities>(){}[0]
+    final val pricingPlanId // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.pricingPlanId|{}pricingPlanId[0]
+        final fun <get-pricingPlanId>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.pricingPlanId.<get-pricingPlanId>|<get-pricingPlanId>(){}[0]
+    final val stationId // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.stationId|{}stationId[0]
+        final fun <get-stationId>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.stationId.<get-stationId>|<get-stationId>(){}[0]
+    final val vehicleEquipment // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.vehicleEquipment|{}vehicleEquipment[0]
+        final fun <get-vehicleEquipment>(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleEquipment>? // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.vehicleEquipment.<get-vehicleEquipment>|<get-vehicleEquipment>(){}[0]
+    final val vehicleId // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.vehicleId|{}vehicleId[0]
+        final fun <get-vehicleId>(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.vehicleId.<get-vehicleId>|<get-vehicleId>(){}[0]
+    final val vehicleTypeId // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.vehicleTypeId|{}vehicleTypeId[0]
+        final fun <get-vehicleTypeId>(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.vehicleTypeId.<get-vehicleTypeId>|<get-vehicleTypeId>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.component1|component1(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.component2|component2(){}[0]
+    final fun component3(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.component3|component3(){}[0]
+    final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.component4|component4(){}[0]
+    final fun component5(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleEquipment>? // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.component5|component5(){}[0]
+    final fun component6(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.component6|component6(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String? = ..., kotlin/String = ..., kotlin/String? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleEquipment>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot> = ...): dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.copy|copy(kotlin.String;kotlin.String?;kotlin.String;kotlin.String?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleEquipment>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilitySlot>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> { // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry) // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilityEntry){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilityEntry.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot { // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot|null[0]
+    constructor <init>(dev.sargunv.mobilitydata.utils/Timestamp, dev.sargunv.mobilitydata.utils/Timestamp? = ...) // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.<init>|<init>(dev.sargunv.mobilitydata.utils.Timestamp;dev.sargunv.mobilitydata.utils.Timestamp?){}[0]
+
+    final val from // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.from|{}from[0]
+        final fun <get-from>(): dev.sargunv.mobilitydata.utils/Timestamp // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.from.<get-from>|<get-from>(){}[0]
+    final val until // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.until|{}until[0]
+        final fun <get-until>(): dev.sargunv.mobilitydata.utils/Timestamp? // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.until.<get-until>|<get-until>(){}[0]
+
+    final fun component1(): dev.sargunv.mobilitydata.utils/Timestamp // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.component1|component1(){}[0]
+    final fun component2(): dev.sargunv.mobilitydata.utils/Timestamp? // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.component2|component2(){}[0]
+    final fun copy(dev.sargunv.mobilitydata.utils/Timestamp = ..., dev.sargunv.mobilitydata.utils/Timestamp? = ...): dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.copy|copy(dev.sargunv.mobilitydata.utils.Timestamp;dev.sargunv.mobilitydata.utils.Timestamp?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot> { // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot) // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gbfs.v3.VehicleAvailabilitySlot){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot> // dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailabilitySlot.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class dev.sargunv.mobilitydata.gbfs.v3/VehicleStatus : dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedData, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/Vehicle> { // dev.sargunv.mobilitydata.gbfs.v3/VehicleStatus|null[0]
     constructor <init>(kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/Vehicle>) // dev.sargunv.mobilitydata.gbfs.v3/VehicleStatus.<init>|<init>(kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.Vehicle>){}[0]
 
@@ -1291,7 +1453,7 @@ final class dev.sargunv.mobilitydata.gbfs.v3/VehicleStatus : dev.sargunv.mobilit
 }
 
 final class dev.sargunv.mobilitydata.gbfs.v3/VehicleType { // dev.sargunv.mobilitydata.gbfs.v3/VehicleType|null[0]
-    constructor <init>(kotlin/String, dev.sargunv.mobilitydata.gbfs.v3/VehicleFormFactor, kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehiclePropulsionType, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/EcoLabel>? = ..., kotlin/Double? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAccessory>? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin.time/Duration? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleReturnConstraint? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleAssets? = ..., kotlin/String? = ..., kotlin.collections/List<kotlin/String>? = ...) // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.<init>|<init>(kotlin.String;dev.sargunv.mobilitydata.gbfs.v3.VehicleFormFactor;kotlin.Int?;kotlin.Int?;kotlin.Int?;dev.sargunv.mobilitydata.gbfs.v3.VehiclePropulsionType;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.EcoLabel>?;kotlin.Double?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleAccessory>?;kotlin.Int?;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.time.Duration?;dev.sargunv.mobilitydata.gbfs.v3.VehicleReturnConstraint?;dev.sargunv.mobilitydata.gbfs.v3.VehicleAssets?;kotlin.String?;kotlin.collections.List<kotlin.String>?){}[0]
+    constructor <init>(kotlin/String, dev.sargunv.mobilitydata.gbfs.v3/VehicleFormFactor, kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehiclePropulsionType, kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/EcoLabel>? = ..., kotlin/Double? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAccessory>? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin.time/Duration? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleReturnConstraint? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleAssets? = ..., kotlin/String? = ..., kotlin.collections/List<kotlin/String>? = ..., kotlin/Int? = ...) // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.<init>|<init>(kotlin.String;dev.sargunv.mobilitydata.gbfs.v3.VehicleFormFactor;kotlin.Int?;kotlin.Int?;kotlin.Int?;dev.sargunv.mobilitydata.gbfs.v3.VehiclePropulsionType;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.EcoLabel>?;kotlin.Double?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleAccessory>?;kotlin.Int?;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.time.Duration?;dev.sargunv.mobilitydata.gbfs.v3.VehicleReturnConstraint?;dev.sargunv.mobilitydata.gbfs.v3.VehicleAssets?;kotlin.String?;kotlin.collections.List<kotlin.String>?;kotlin.Int?){}[0]
 
     final val cargoLoadCapacity // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.cargoLoadCapacity|{}cargoLoadCapacity[0]
         final fun <get-cargoLoadCapacity>(): kotlin/Int? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.cargoLoadCapacity.<get-cargoLoadCapacity>|<get-cargoLoadCapacity>(){}[0]
@@ -1317,6 +1479,8 @@ final class dev.sargunv.mobilitydata.gbfs.v3/VehicleType { // dev.sargunv.mobili
         final fun <get-maxPermittedSpeed>(): kotlin/Int? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.maxPermittedSpeed.<get-maxPermittedSpeed>|<get-maxPermittedSpeed>(){}[0]
     final val maxRangeMeters // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.maxRangeMeters|{}maxRangeMeters[0]
         final fun <get-maxRangeMeters>(): kotlin/Double? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.maxRangeMeters.<get-maxRangeMeters>|<get-maxRangeMeters>(){}[0]
+    final val minAge // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.minAge|{}minAge[0]
+        final fun <get-minAge>(): kotlin/Int? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.minAge.<get-minAge>|<get-minAge>(){}[0]
     final val model // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.model|{}model[0]
         final fun <get-model>(): kotlin.collections/Map<kotlin/String, kotlin/String>? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.model.<get-model>|<get-model>(){}[0]
     final val name // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.name|{}name[0]
@@ -1359,6 +1523,7 @@ final class dev.sargunv.mobilitydata.gbfs.v3/VehicleType { // dev.sargunv.mobili
     final fun component22(): dev.sargunv.mobilitydata.gbfs.v3/VehicleAssets? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component22|component22(){}[0]
     final fun component23(): kotlin/String? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component23|component23(){}[0]
     final fun component24(): kotlin.collections/List<kotlin/String>? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component24|component24(){}[0]
+    final fun component25(): kotlin/Int? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component25|component25(){}[0]
     final fun component3(): kotlin/Int? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component3|component3(){}[0]
     final fun component4(): kotlin/Int? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component4|component4(){}[0]
     final fun component5(): kotlin/Int? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component5|component5(){}[0]
@@ -1366,7 +1531,7 @@ final class dev.sargunv.mobilitydata.gbfs.v3/VehicleType { // dev.sargunv.mobili
     final fun component7(): kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/EcoLabel>? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component7|component7(){}[0]
     final fun component8(): kotlin/Double? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component8|component8(){}[0]
     final fun component9(): kotlin.collections/Map<kotlin/String, kotlin/String>? // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.component9|component9(){}[0]
-    final fun copy(kotlin/String = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleFormFactor = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehiclePropulsionType = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/EcoLabel>? = ..., kotlin/Double? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAccessory>? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin.time/Duration? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleReturnConstraint? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleAssets? = ..., kotlin/String? = ..., kotlin.collections/List<kotlin/String>? = ...): dev.sargunv.mobilitydata.gbfs.v3/VehicleType // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.copy|copy(kotlin.String;dev.sargunv.mobilitydata.gbfs.v3.VehicleFormFactor;kotlin.Int?;kotlin.Int?;kotlin.Int?;dev.sargunv.mobilitydata.gbfs.v3.VehiclePropulsionType;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.EcoLabel>?;kotlin.Double?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleAccessory>?;kotlin.Int?;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.time.Duration?;dev.sargunv.mobilitydata.gbfs.v3.VehicleReturnConstraint?;dev.sargunv.mobilitydata.gbfs.v3.VehicleAssets?;kotlin.String?;kotlin.collections.List<kotlin.String>?){}[0]
+    final fun copy(kotlin/String = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleFormFactor = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehiclePropulsionType = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/EcoLabel>? = ..., kotlin/Double? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.gbfs.v3/VehicleAccessory>? = ..., kotlin/Int? = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin/Int? = ..., kotlin.time/Duration? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleReturnConstraint? = ..., dev.sargunv.mobilitydata.gbfs.v3/VehicleAssets? = ..., kotlin/String? = ..., kotlin.collections/List<kotlin/String>? = ..., kotlin/Int? = ...): dev.sargunv.mobilitydata.gbfs.v3/VehicleType // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.copy|copy(kotlin.String;dev.sargunv.mobilitydata.gbfs.v3.VehicleFormFactor;kotlin.Int?;kotlin.Int?;kotlin.Int?;dev.sargunv.mobilitydata.gbfs.v3.VehiclePropulsionType;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.EcoLabel>?;kotlin.Double?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.List<dev.sargunv.mobilitydata.gbfs.v3.VehicleAccessory>?;kotlin.Int?;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.Int?;kotlin.Int?;kotlin.Int?;kotlin.time.Duration?;dev.sargunv.mobilitydata.gbfs.v3.VehicleReturnConstraint?;dev.sargunv.mobilitydata.gbfs.v3.VehicleAssets?;kotlin.String?;kotlin.collections.List<kotlin.String>?;kotlin.Int?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v3/VehicleType.toString|toString(){}[0]
@@ -1569,6 +1734,8 @@ final value class dev.sargunv.mobilitydata.gbfs.v3/FeedType { // dev.sargunv.mob
             final fun <get-SystemPricingPlans>(): dev.sargunv.mobilitydata.gbfs.v3/FeedType // dev.sargunv.mobilitydata.gbfs.v3/FeedType.Companion.SystemPricingPlans.<get-SystemPricingPlans>|<get-SystemPricingPlans>(){}[0]
         final val SystemRegions // dev.sargunv.mobilitydata.gbfs.v3/FeedType.Companion.SystemRegions|{}SystemRegions[0]
             final fun <get-SystemRegions>(): dev.sargunv.mobilitydata.gbfs.v3/FeedType // dev.sargunv.mobilitydata.gbfs.v3/FeedType.Companion.SystemRegions.<get-SystemRegions>|<get-SystemRegions>(){}[0]
+        final val VehicleAvailability // dev.sargunv.mobilitydata.gbfs.v3/FeedType.Companion.VehicleAvailability|{}VehicleAvailability[0]
+            final fun <get-VehicleAvailability>(): dev.sargunv.mobilitydata.gbfs.v3/FeedType // dev.sargunv.mobilitydata.gbfs.v3/FeedType.Companion.VehicleAvailability.<get-VehicleAvailability>|<get-VehicleAvailability>(){}[0]
         final val VehicleStatus // dev.sargunv.mobilitydata.gbfs.v3/FeedType.Companion.VehicleStatus|{}VehicleStatus[0]
             final fun <get-VehicleStatus>(): dev.sargunv.mobilitydata.gbfs.v3/FeedType // dev.sargunv.mobilitydata.gbfs.v3/FeedType.Companion.VehicleStatus.<get-VehicleStatus>|<get-VehicleStatus>(){}[0]
         final val VehicleTypes // dev.sargunv.mobilitydata.gbfs.v3/FeedType.Companion.VehicleTypes|{}VehicleTypes[0]
@@ -1865,6 +2032,7 @@ final class dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client : kotlin/AutoCloseable
     final suspend fun (context(dev.sargunv.mobilitydata.gbfs.v3/ServiceManifest)).getSystemInformation(): kotlin/Result<dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v3/SystemInformation>> // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.getSystemInformation|getSystemInformation(dev.sargunv.mobilitydata.gbfs.v3.ServiceManifest)(){}[0]
     final suspend fun (context(dev.sargunv.mobilitydata.gbfs.v3/ServiceManifest)).getSystemPricingPlans(): kotlin/Result<dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v3/SystemPricingPlans>> // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.getSystemPricingPlans|getSystemPricingPlans(dev.sargunv.mobilitydata.gbfs.v3.ServiceManifest)(){}[0]
     final suspend fun (context(dev.sargunv.mobilitydata.gbfs.v3/ServiceManifest)).getSystemRegions(): kotlin/Result<dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v3/SystemRegions>> // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.getSystemRegions|getSystemRegions(dev.sargunv.mobilitydata.gbfs.v3.ServiceManifest)(){}[0]
+    final suspend fun (context(dev.sargunv.mobilitydata.gbfs.v3/ServiceManifest)).getVehicleAvailability(): kotlin/Result<dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v3/VehicleAvailability>> // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.getVehicleAvailability|getVehicleAvailability(dev.sargunv.mobilitydata.gbfs.v3.ServiceManifest)(){}[0]
     final suspend fun (context(dev.sargunv.mobilitydata.gbfs.v3/ServiceManifest)).getVehicleStatus(): kotlin/Result<dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v3/VehicleStatus>> // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.getVehicleStatus|getVehicleStatus(dev.sargunv.mobilitydata.gbfs.v3.ServiceManifest)(){}[0]
     final suspend fun (context(dev.sargunv.mobilitydata.gbfs.v3/ServiceManifest)).getVehicleTypes(): kotlin/Result<dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v3/VehicleTypes>> // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.getVehicleTypes|getVehicleTypes(dev.sargunv.mobilitydata.gbfs.v3.ServiceManifest)(){}[0]
     final suspend fun (context(dev.sargunv.mobilitydata.gbfs.v3/ServiceManifest)).getVersionManifest(): kotlin/Result<dev.sargunv.mobilitydata.gbfs.v3/GbfsFeedResponse<dev.sargunv.mobilitydata.gbfs.v3/VersionManifest>> // dev.sargunv.mobilitydata.gbfs.v3/GbfsV3Client.getVersionManifest|getVersionManifest(dev.sargunv.mobilitydata.gbfs.v3.ServiceManifest)(){}[0]

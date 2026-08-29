@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
+import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.Url
 import dev.sargunv.mobilitydata.utils.suspendRunCatching
 import io.ktor.client.HttpClient
@@ -138,6 +139,24 @@ public class GbfsV3Client internal constructor(private val httpClient: HttpClien
   public suspend fun getVehicleStatus(): Result<GbfsFeedResponse<VehicleStatus>> =
     suspendRunCatching {
       getFeedResponse<VehicleStatus>(service.feeds.getValue(FeedType.VehicleStatus)).getOrThrow()
+    }
+
+  /**
+   * Fetches future availability of vehicles that can be reserved in advance.
+   *
+   * GBFS 3.1-RC. This feed is optional for station-based vehicles and is not used for free-floating
+   * vehicles.
+   *
+   * @param [service] The GBFS service containing feed URLs
+   * @return Result wrapping response containing vehicle availability slots, or an error
+   */
+  @ExperimentalMobilityDataApi
+  @OptIn(ExperimentalMobilityDataApi::class)
+  context(service: ServiceManifest)
+  public suspend fun getVehicleAvailability(): Result<GbfsFeedResponse<VehicleAvailability>> =
+    suspendRunCatching {
+      getFeedResponse<VehicleAvailability>(service.feeds.getValue(FeedType.VehicleAvailability))
+        .getOrThrow()
     }
 
   /**

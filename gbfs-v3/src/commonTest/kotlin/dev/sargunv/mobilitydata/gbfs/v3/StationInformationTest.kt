@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
 import de.westnordost.osm_opening_hours.parser.toOpeningHours
+import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -175,6 +176,53 @@ private val virtualExpectedResponse =
       ),
   )
 
+private val cityJsonContent = // language=JSON
+  """
+  {
+    "last_updated": "2023-07-17T13:34:13+02:00",
+    "ttl": 0,
+    "version": "3.1-RC",
+    "data": {
+      "stations": [
+        {
+          "station_id": "station12",
+          "name": [
+            {
+              "text": "SE Belmont & SE 10th",
+              "language": "en"
+            }
+          ],
+          "lat": 45.516445,
+          "lon": -122.655775,
+          "city": "Portland"
+        }
+      ]
+    }
+  }
+  """
+    .trimIndent()
+
+@OptIn(ExperimentalMobilityDataApi::class, ExperimentalTime::class)
+private val cityExpectedResponse =
+  GbfsFeedResponse(
+    lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
+    ttl = 0.seconds,
+    version = "3.1-RC",
+    data =
+      StationInformation(
+        stations =
+          listOf(
+            Station(
+              stationId = "station12",
+              name = mapOf("en" to "SE Belmont & SE 10th"),
+              lat = 45.516445,
+              lon = -122.655775,
+              city = "Portland",
+            )
+          )
+      ),
+  )
+
 class StationInformationTest {
   @Test
   fun encodePhysical() {
@@ -202,5 +250,19 @@ class StationInformationTest {
     val decodedResponse =
       GbfsJson.decodeFromString<GbfsFeedResponse<StationInformation>>(virtualJsonContent)
     assertEquals(virtualExpectedResponse, decodedResponse)
+  }
+
+  @Test
+  fun encodeCity() {
+    val expectedJson = Json.decodeFromString<JsonElement>(cityJsonContent)
+    val encodedJson = GbfsJson.encodeToJsonElement(cityExpectedResponse)
+    assertEquals(expectedJson, encodedJson)
+  }
+
+  @Test
+  fun decodeCity() {
+    val decodedResponse =
+      GbfsJson.decodeFromString<GbfsFeedResponse<StationInformation>>(cityJsonContent)
+    assertEquals(cityExpectedResponse, decodedResponse)
   }
 }

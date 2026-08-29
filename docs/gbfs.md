@@ -10,7 +10,8 @@ and other shared mobility services.
 
 - `gbfs-v1`: Implementation of the GBFS v1.1 specification.
 - `gbfs-v2`: Implementation of the GBFS v2.3 specification.
-- `gbfs-v3`: Implementation of the GBFS v3.0 specification.
+- `gbfs-v3`: Implementation of the GBFS v3.0 specification. The module also optionally decodes GBFS
+  3.1-RC fields behind `ExperimentalMobilityDataApi`.
 
 ## Features
 

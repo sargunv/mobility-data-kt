@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.gbfs.v3.serialization.FeedDiscoverySerializer
+import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
 import kotlinx.serialization.Serializable
@@ -62,5 +63,9 @@ public value class FeedType(
 
     /** The geofencing_zones.json file with geofencing zones. */
     public val GeofencingZones: FeedType = FeedType("geofencing_zones")
+
+    /** The vehicle_availability.json file with future vehicle availability. */
+    @ExperimentalMobilityDataApi
+    public val VehicleAvailability: FeedType = FeedType("vehicle_availability")
   }
 }

@@ -43,6 +43,9 @@ public final class dev/sargunv/mobilitydata/utils/Decimal$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public abstract interface annotation class dev/sargunv/mobilitydata/utils/ExperimentalMobilityDataApi : java/lang/annotation/Annotation {
+}
+
 public final class dev/sargunv/mobilitydata/utils/GtfsLocalTime : java/lang/Comparable {
 	public static final field Companion Ldev/sargunv/mobilitydata/utils/GtfsLocalTime$Companion;
 	public fun <init> (III)V

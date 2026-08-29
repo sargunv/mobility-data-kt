@@ -1,6 +1,7 @@
 package dev.sargunv.mobilitydata.gbfs.v3
 
 import de.westnordost.osm_opening_hours.model.OpeningHours
+import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.Uri
 import dev.sargunv.mobilitydata.utils.Url
@@ -165,6 +166,9 @@ public data class Station(
 
   /** Contains rental URIs for Android, iOS, and web. */
   @SerialName("rental_uris") public val rentalUris: RentalUris? = null,
+
+  /** City where the station is located. */
+  @SerialName("city") @property:ExperimentalMobilityDataApi public val city: String? = null,
 )
 
 /** Payment methods accepted at a station. */
