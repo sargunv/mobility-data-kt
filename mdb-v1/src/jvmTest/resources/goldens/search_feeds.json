@@ -1,0 +1,262 @@
+{
+    "total": 320,
+    "results": [
+        {
+            "id": "mdb-3486",
+            "data_type": "gtfs_rt",
+            "status": "active",
+            "created_at": "2026-08-17T21:18:02.031773Z",
+            "official": true,
+            "seasonal": false,
+            "external_ids": [{ "external_id": "3486", "source": "mdb" }],
+            "provider": "FlexCom Kommunikációs Kft.",
+            "feed_name": "Orosháza Bus",
+            "note": "",
+            "feed_contact_email": "",
+            "source_info": {
+                "producer_url": "https://gtfs.gpspositions.net/storage/realtime/OROSH_V_ONK/trip_updates.pb",
+                "is_producer_url_unstable": null,
+                "authentication_type": 0,
+                "authentication_info_url": "",
+                "api_key_parameter_name": "",
+                "license_url": "",
+                "license_id": null,
+                "license_is_spdx": null,
+                "license_notes": null,
+                "license_tags": []
+            },
+            "redirects": null,
+            "locations": [
+                {
+                    "country_code": "HU",
+                    "country": "Hungary",
+                    "subdivision_name": "Békés",
+                    "municipality": "Orosháza"
+                }
+            ],
+            "latest_dataset": null,
+            "entity_types": ["tu"],
+            "versions": null,
+            "feed_references": ["mdb-3482"],
+            "reliability_seal": null
+        },
+        {
+            "id": "mdb-3485",
+            "data_type": "gtfs_rt",
+            "status": "active",
+            "created_at": "2026-08-17T21:18:01.587897Z",
+            "official": true,
+            "seasonal": false,
+            "external_ids": [{ "external_id": "3485", "source": "mdb" }],
+            "provider": "FlexCom Kommunikációs Kft.",
+            "feed_name": "Orosháza Bus",
+            "note": "",
+            "feed_contact_email": "",
+            "source_info": {
+                "producer_url": "https://gtfs.gpspositions.net/storage/realtime/OROSH_V_ONK/service_alerts.pb",
+                "is_producer_url_unstable": null,
+                "authentication_type": 0,
+                "authentication_info_url": "",
+                "api_key_parameter_name": "",
+                "license_url": "",
+                "license_id": null,
+                "license_is_spdx": null,
+                "license_notes": null,
+                "license_tags": []
+            },
+            "redirects": null,
+            "locations": [
+                {
+                    "country_code": "HU",
+                    "country": "Hungary",
+                    "subdivision_name": "Békés",
+                    "municipality": "Orosháza"
+                }
+            ],
+            "latest_dataset": null,
+            "entity_types": ["sa"],
+            "versions": null,
+            "feed_references": ["mdb-3482"],
+            "reliability_seal": null
+        },
+        {
+            "id": "mdb-3484",
+            "data_type": "gtfs_rt",
+            "status": "active",
+            "created_at": "2026-08-17T21:18:01.144629Z",
+            "official": true,
+            "seasonal": false,
+            "external_ids": [{ "external_id": "3484", "source": "mdb" }],
+            "provider": "FlexCom Kommunikációs Kft.",
+            "feed_name": "Orosháza Bus",
+            "note": "",
+            "feed_contact_email": "",
+            "source_info": {
+                "producer_url": "https://gtfs.gpspositions.net/storage/realtime/OROSH_V_ONK/vehicle_positions.pb",
+                "is_producer_url_unstable": null,
+                "authentication_type": 0,
+                "authentication_info_url": "",
+                "api_key_parameter_name": "",
+                "license_url": "",
+                "license_id": null,
+                "license_is_spdx": null,
+                "license_notes": null,
+                "license_tags": []
+            },
+            "redirects": null,
+            "locations": [
+                {
+                    "country_code": "HU",
+                    "country": "Hungary",
+                    "subdivision_name": "Békés",
+                    "municipality": "Orosháza"
+                }
+            ],
+            "latest_dataset": null,
+            "entity_types": ["vp"],
+            "versions": null,
+            "feed_references": ["mdb-3482"],
+            "reliability_seal": null
+        },
+        {
+            "id": "mdb-3482",
+            "data_type": "gtfs",
+            "status": "active",
+            "created_at": "2026-08-17T21:18:00.256616Z",
+            "official": true,
+            "seasonal": false,
+            "external_ids": [{ "external_id": "3482", "source": "mdb" }],
+            "provider": "FlexCom Kommunikációs Kft.",
+            "feed_name": "Orosháza Bus",
+            "note": "",
+            "feed_contact_email": "",
+            "source_info": {
+                "producer_url": "https://gtfs.gpspositions.net/storage/exports/OROSH_V_ONK/gtfs_latest.zip",
+                "is_producer_url_unstable": null,
+                "authentication_type": 0,
+                "authentication_info_url": "",
+                "api_key_parameter_name": "",
+                "license_url": "",
+                "license_id": null,
+                "license_is_spdx": null,
+                "license_notes": null,
+                "license_tags": []
+            },
+            "redirects": null,
+            "locations": [
+                {
+                    "country_code": "HU",
+                    "country": "Hungary",
+                    "subdivision_name": "Békés",
+                    "municipality": "Orosháza"
+                }
+            ],
+            "latest_dataset": {
+                "id": "mdb-3482-202608300039",
+                "hosted_url": "https://files.mobilitydatabase.org/mdb-3482/mdb-3482-202608300039/mdb-3482-202608300039.zip",
+                "bounding_box": null,
+                "downloaded_at": "2026-08-30T00:39:08.185263Z",
+                "hash": "57773b7648a34990c51c5e5e6201d12bb38b365b82393d182c9e219089b3e2a4",
+                "hash_md5": null,
+                "service_date_range_start": "2026-01-04T23:00:00Z",
+                "service_date_range_end": "2026-12-31T22:59:00Z",
+                "agency_timezone": "Europe/Budapest",
+                "zipped_folder_size_mb": null,
+                "unzipped_folder_size_mb": null,
+                "validation_report": {
+                    "features": ["Feed Information", "Headsigns", "Route Colors", "Shapes"],
+                    "total_error": 0,
+                    "total_warning": 0,
+                    "total_info": 1,
+                    "unique_error_count": 0,
+                    "unique_warning_count": 0,
+                    "unique_info_count": 1
+                }
+            },
+            "entity_types": null,
+            "versions": null,
+            "feed_references": null,
+            "reliability_seal": {
+                "has_seal": true,
+                "earned_at": "2026-08-27T04:00:12.271144Z",
+                "lost_at": null,
+                "evaluated_at": "2026-08-30T04:00:16.270320Z",
+                "on_probation": false,
+                "probation_ends_at": null
+            }
+        },
+        {
+            "id": "mdb-3477",
+            "data_type": "gtfs",
+            "status": "active",
+            "created_at": "2026-08-17T21:17:58.100716Z",
+            "official": false,
+            "seasonal": false,
+            "external_ids": [{ "external_id": "3477", "source": "mdb" }],
+            "provider": "Lodz Suburban & Regional Bus",
+            "feed_name": "",
+            "note": "",
+            "feed_contact_email": "",
+            "source_info": {
+                "producer_url": "https://raw.githubusercontent.com/qbx-tt/gtfs-lodz-suburban/main/gtfs-lodz-suburban.zip",
+                "is_producer_url_unstable": null,
+                "authentication_type": 0,
+                "authentication_info_url": "",
+                "api_key_parameter_name": "",
+                "license_url": "",
+                "license_id": null,
+                "license_is_spdx": null,
+                "license_notes": null,
+                "license_tags": []
+            },
+            "redirects": null,
+            "locations": [
+                {
+                    "country_code": "PL",
+                    "country": "Poland",
+                    "subdivision_name": "Łódź Voivodeship",
+                    "municipality": "Łódź"
+                },
+                {
+                    "country_code": "PL",
+                    "country": "Poland",
+                    "subdivision_name": "Łódź Voivodeship",
+                    "municipality": "County Lodzki"
+                }
+            ],
+            "latest_dataset": {
+                "id": "mdb-3477-202608260046",
+                "hosted_url": "https://files.mobilitydatabase.org/mdb-3477/mdb-3477-202608260046/mdb-3477-202608260046.zip",
+                "bounding_box": null,
+                "downloaded_at": "2026-08-26T00:46:22.737610Z",
+                "hash": "b82eff07e04d8056839d72f02a8c8f46791739e92aaa60dc9f2700dfce094690",
+                "hash_md5": null,
+                "service_date_range_start": "2026-07-31T22:00:00Z",
+                "service_date_range_end": "2027-12-31T22:59:00Z",
+                "agency_timezone": "Europe/Warsaw",
+                "zipped_folder_size_mb": null,
+                "unzipped_folder_size_mb": null,
+                "validation_report": {
+                    "features": ["Feed Information", "Headsigns"],
+                    "total_error": 0,
+                    "total_warning": 214,
+                    "total_info": 0,
+                    "unique_error_count": 0,
+                    "unique_warning_count": 1,
+                    "unique_info_count": 0
+                }
+            },
+            "entity_types": null,
+            "versions": null,
+            "feed_references": null,
+            "reliability_seal": {
+                "has_seal": false,
+                "earned_at": null,
+                "lost_at": null,
+                "evaluated_at": "2026-08-30T04:00:16.270320Z",
+                "on_probation": false,
+                "probation_ends_at": null
+            }
+        }
+    ]
+}

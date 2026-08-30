@@ -1,0 +1,63 @@
+[
+    {
+        "id": "0BSD",
+        "type": "standard",
+        "is_spdx": true,
+        "name": "BSD Zero Clause License",
+        "url": "https://opensource.org/licenses/0BSD",
+        "description": null,
+        "created_at": "2025-11-19T21:57:02.217375",
+        "updated_at": "2026-05-21T20:47:32.906877",
+        "license_tags": [
+            "copyleft:none",
+            "domain:content",
+            "domain:data",
+            "license:public-domain",
+            "spdx:osi-approved"
+        ]
+    },
+    {
+        "id": "3D-Slicer-1.0",
+        "type": "standard",
+        "is_spdx": true,
+        "name": "3D Slicer License v1.0",
+        "url": "https://github.com/Slicer/Slicer/blob/main/License.txt",
+        "description": null,
+        "created_at": "2025-11-19T21:57:02.223643",
+        "updated_at": "2026-05-21T20:47:32.925402",
+        "license_tags": ["domain:software", "license:open-source"]
+    },
+    {
+        "id": "AAL",
+        "type": "standard",
+        "is_spdx": true,
+        "name": "Attribution Assurance License",
+        "url": "https://opensource.org/licenses/attribution",
+        "description": null,
+        "created_at": "2025-11-19T21:57:02.226020",
+        "updated_at": "2026-05-21T20:47:32.939622",
+        "license_tags": ["domain:software", "license:open-source", "spdx:osi-approved"]
+    },
+    {
+        "id": "Abstyles",
+        "type": "standard",
+        "is_spdx": true,
+        "name": "Abstyles License",
+        "url": "https://fedoraproject.org/wiki/Licensing/Abstyles",
+        "description": null,
+        "created_at": "2025-11-19T21:57:02.297906",
+        "updated_at": "2026-05-21T20:47:33.418110",
+        "license_tags": ["domain:software", "license:open-source"]
+    },
+    {
+        "id": "AdaCore-doc",
+        "type": "standard",
+        "is_spdx": true,
+        "name": "AdaCore Doc License",
+        "url": "https://github.com/AdaCore/xmlada/blob/master/docs/index.rst",
+        "description": null,
+        "created_at": "2025-11-19T21:57:02.300255",
+        "updated_at": "2026-05-21T20:47:33.433537",
+        "license_tags": ["domain:software", "license:open-source"]
+    }
+]

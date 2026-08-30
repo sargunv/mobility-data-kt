@@ -1,0 +1,58 @@
+[
+    { "file": "tokens_access.json", "decode_as": "AccessToken", "status": 200, "bytes": 112 },
+    { "file": "get_feeds.json", "decode_as": "List<Feed>", "status": 200, "bytes": 8378 },
+    { "file": "get_gtfs_feeds.json", "decode_as": "List<Feed.Gtfs>", "status": 200, "bytes": 7035 },
+    {
+        "file": "get_gtfs_rt_feeds.json",
+        "decode_as": "List<Feed.GtfsRt>",
+        "status": 200,
+        "bytes": 2207
+    },
+    { "file": "get_gbfs_feeds.json", "decode_as": "List<Feed.Gbfs>", "status": 200, "bytes": 6191 },
+    { "file": "get_feed_gtfs.json", "decode_as": "Feed", "status": 200, "bytes": 952 },
+    { "file": "get_gtfs_feed.json", "decode_as": "Feed.Gtfs", "status": 200, "bytes": 3046 },
+    {
+        "file": "get_gtfs_feed_datasets.json",
+        "decode_as": "List<GtfsDataset>",
+        "status": 200,
+        "bytes": 2669
+    },
+    {
+        "file": "get_gtfs_feed_gtfs_rt_feeds.json",
+        "decode_as": "List<Feed.GtfsRt>",
+        "status": 200,
+        "bytes": 3
+    },
+    {
+        "file": "get_gtfs_feed_availability.json",
+        "decode_as": "GtfsFeedAvailabilityResponse",
+        "status": 200,
+        "bytes": 1074
+    },
+    {
+        "file": "get_gtfs_feed_reliability.json",
+        "decode_as": "FeedReliabilityReport",
+        "status": 200,
+        "bytes": 2057
+    },
+    { "file": "get_dataset_gtfs.json", "decode_as": "GtfsDataset", "status": 200, "bytes": 1260 },
+    { "file": "get_feed_gtfs_rt.json", "decode_as": "Feed", "status": 200, "bytes": 782 },
+    { "file": "get_gtfs_rt_feed.json", "decode_as": "Feed.GtfsRt", "status": 200, "bytes": 1013 },
+    { "file": "get_feed_gbfs.json", "decode_as": "Feed", "status": 200, "bytes": 1039 },
+    { "file": "get_gbfs_feed.json", "decode_as": "Feed.Gbfs", "status": 200, "bytes": 26336 },
+    { "file": "get_metadata.json", "decode_as": "Metadata", "status": 200, "bytes": 88 },
+    {
+        "file": "search_feeds.json",
+        "decode_as": "SearchFeedsResponse",
+        "status": 200,
+        "bytes": 8865
+    },
+    {
+        "file": "get_locations.json",
+        "decode_as": "LocationSearchResponse",
+        "status": 200,
+        "bytes": 34
+    },
+    { "file": "get_licenses.json", "decode_as": "List<License>", "status": 200, "bytes": 1997 },
+    { "file": "get_license.json", "decode_as": "License", "status": 200, "bytes": 1539 }
+]

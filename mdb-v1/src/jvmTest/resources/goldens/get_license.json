@@ -1,0 +1,55 @@
+{
+    "id": "0BSD",
+    "type": "standard",
+    "is_spdx": true,
+    "name": "BSD Zero Clause License",
+    "url": "https://opensource.org/licenses/0BSD",
+    "description": null,
+    "created_at": "2025-11-19T21:57:02.217375",
+    "updated_at": "2026-05-21T20:47:32.906877",
+    "license_tags": [
+        "copyleft:none",
+        "domain:content",
+        "domain:data",
+        "license:public-domain",
+        "spdx:osi-approved"
+    ],
+    "license_rules": [
+        {
+            "name": "commercial-use",
+            "label": "Commercial use",
+            "description": "This license allows the software or data to be used for commercial purposes.",
+            "type": "permission"
+        },
+        {
+            "name": "modifications",
+            "label": "Modification",
+            "description": "This license allows the software or content to be modified.",
+            "type": "permission"
+        },
+        {
+            "name": "distribution",
+            "label": "Distribution",
+            "description": "This license allows the software or content to be redistributed.",
+            "type": "permission"
+        },
+        {
+            "name": "private-use",
+            "label": "Private use",
+            "description": "This license allows private use and modification.",
+            "type": "permission"
+        },
+        {
+            "name": "liability",
+            "label": "Liability disclaimer",
+            "description": "The license includes a limitation of liability.",
+            "type": "limitation"
+        },
+        {
+            "name": "warranty",
+            "label": "No warranty",
+            "description": "The license explicitly states that no warranty is provided.",
+            "type": "limitation"
+        }
+    ]
+}

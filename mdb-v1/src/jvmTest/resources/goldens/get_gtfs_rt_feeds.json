@@ -1,0 +1,78 @@
+[
+    {
+        "id": "mdb-1561",
+        "data_type": "gtfs_rt",
+        "created_at": "2024-02-08T00:00:00Z",
+        "external_ids": [{ "external_id": "1561", "source": "mdb" }],
+        "provider": "London Transit Commission",
+        "feed_contact_email": "",
+        "source_info": {
+            "producer_url": "http://gtfs.ltconline.ca/Vehicle/VehiclePositions.pb",
+            "is_producer_url_unstable": null,
+            "authentication_type": 0,
+            "authentication_info_url": "",
+            "api_key_parameter_name": "",
+            "license_url": "",
+            "license_id": null,
+            "license_is_spdx": null,
+            "license_notes": null,
+            "license_tags": null
+        },
+        "redirects": [],
+        "status": "active",
+        "official": null,
+        "official_updated_at": null,
+        "seasonal": false,
+        "feed_name": "",
+        "note": "",
+        "related_links": [],
+        "entity_types": ["vp"],
+        "feed_references": ["mdb-2"],
+        "locations": [
+            {
+                "country_code": "CA",
+                "country": "Canada",
+                "subdivision_name": "Ontario",
+                "municipality": "London"
+            }
+        ]
+    },
+    {
+        "id": "mdb-1562",
+        "data_type": "gtfs_rt",
+        "created_at": "2024-02-08T00:00:00Z",
+        "external_ids": [{ "external_id": "1562", "source": "mdb" }],
+        "provider": "London Transit Commission",
+        "feed_contact_email": "",
+        "source_info": {
+            "producer_url": "http://gtfs.ltconline.ca/Alert/Alerts.pb",
+            "is_producer_url_unstable": null,
+            "authentication_type": 0,
+            "authentication_info_url": "",
+            "api_key_parameter_name": "",
+            "license_url": "",
+            "license_id": null,
+            "license_is_spdx": null,
+            "license_notes": null,
+            "license_tags": null
+        },
+        "redirects": [],
+        "status": "active",
+        "official": null,
+        "official_updated_at": null,
+        "seasonal": false,
+        "feed_name": "",
+        "note": "",
+        "related_links": [],
+        "entity_types": ["sa"],
+        "feed_references": ["mdb-2"],
+        "locations": [
+            {
+                "country_code": "CA",
+                "country": "Canada",
+                "subdivision_name": "Ontario",
+                "municipality": "London"
+            }
+        ]
+    }
+]

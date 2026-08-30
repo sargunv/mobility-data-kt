@@ -1,0 +1,77 @@
+{
+    "feed_id": "mdb-195",
+    "has_seal": true,
+    "earned_at": "2026-08-27T04:00:08.316899Z",
+    "lost_at": null,
+    "evaluated_at": "2026-08-30T04:00:12.267356Z",
+    "on_probation": false,
+    "probation_ends_at": null,
+    "criteria": [
+        {
+            "criterion": "official",
+            "status": "pass",
+            "in_grace_period": false,
+            "grace_period_ends_at": null,
+            "on_probation": false,
+            "probation_ends_at": null,
+            "evaluated_at": "2026-08-30T04:00:12.267356Z",
+            "first_failure_at": null,
+            "last_failure_at": null
+        },
+        {
+            "criterion": "stable",
+            "status": "never_evaluated",
+            "in_grace_period": false,
+            "grace_period_ends_at": null,
+            "on_probation": false,
+            "probation_ends_at": null,
+            "evaluated_at": null,
+            "first_failure_at": null,
+            "last_failure_at": null
+        },
+        {
+            "criterion": "available",
+            "status": "never_evaluated",
+            "in_grace_period": false,
+            "grace_period_ends_at": null,
+            "on_probation": false,
+            "probation_ends_at": null,
+            "evaluated_at": null,
+            "first_failure_at": null,
+            "last_failure_at": null
+        },
+        {
+            "criterion": "compliant",
+            "status": "never_evaluated",
+            "in_grace_period": false,
+            "grace_period_ends_at": null,
+            "on_probation": false,
+            "probation_ends_at": null,
+            "evaluated_at": null,
+            "first_failure_at": null,
+            "last_failure_at": null
+        },
+        {
+            "criterion": "fresh_coverage",
+            "status": "never_evaluated",
+            "in_grace_period": false,
+            "grace_period_ends_at": null,
+            "on_probation": false,
+            "probation_ends_at": null,
+            "evaluated_at": null,
+            "first_failure_at": null,
+            "last_failure_at": null
+        },
+        {
+            "criterion": "fresh_continuous",
+            "status": "never_evaluated",
+            "in_grace_period": false,
+            "grace_period_ends_at": null,
+            "on_probation": false,
+            "probation_ends_at": null,
+            "evaluated_at": null,
+            "first_failure_at": null,
+            "last_failure_at": null
+        }
+    ]
+}
