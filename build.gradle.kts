@@ -67,4 +67,7 @@ dependencies {
 
   dokka(project(":gtfs-realtime"))
   kover(project(":gtfs-realtime"))
+
+  dokka(project(":mdb-v1"))
+  kover(project(":mdb-v1"))
 }

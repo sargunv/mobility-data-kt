@@ -4,7 +4,14 @@
     "indentWidth": 2,
     "useTabs": false,
     "newLineKind": "lf",
-    "excludes": ["**/build", "**/.gradle", "kotlin-js-store", "**/*.api", "sample-data"],
+    "excludes": [
+        "**/build",
+        "**/.gradle",
+        "kotlin-js-store",
+        "**/*.api",
+        "sample-data",
+        "mdb-v1/specs"
+    ],
     "json": { "indentWidth": 4, "preferSingleLine": true },
     "markdown": { "textWrap": "always" },
     "toml": {},

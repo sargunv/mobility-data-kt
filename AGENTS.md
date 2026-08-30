@@ -10,6 +10,7 @@ GBFS, and GOFS). Each module is a distinct library published to Maven Central.
 - `gofs-v1` — General On-Demand Feed Specification client
 - `gtfs-schedule` — GTFS Schedule (static) support
 - `gtfs-realtime` — GTFS Realtime protobuf types (see invariants below)
+- `mdb-v1` — Mobility Database Catalog API client (pinned OpenAPI in `mdb-v1/specs`)
 - `sample-data` — Git-LFS-tracked feed fixtures used by tests
 - `docs` — MkDocs documentation site
 
