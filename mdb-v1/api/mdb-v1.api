@@ -282,15 +282,20 @@ public final class dev/sargunv/mobilitydata/mdb/v1/ExternalId$Companion {
 
 public abstract class dev/sargunv/mobilitydata/mdb/v1/Feed {
 	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Feed$Companion;
-	public synthetic fun <init> (ILkotlinx/serialization/internal/SerializationConstructorMarker;)V
 	public abstract fun getCreatedAt ()Lkotlin/time/Instant;
 	public abstract fun getExternalIds ()Ljava/util/List;
 	public abstract fun getFeedContactEmail ()Ljava/lang/String;
+	public abstract fun getFeedName ()Ljava/lang/String;
 	public abstract fun getId-eslMtGk ()Ljava/lang/String;
+	public abstract fun getNote ()Ljava/lang/String;
+	public abstract fun getOfficial ()Ljava/lang/Boolean;
+	public abstract fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
 	public abstract fun getProvider ()Ljava/lang/String;
 	public abstract fun getRedirects ()Ljava/util/List;
+	public abstract fun getRelatedLinks ()Ljava/util/List;
+	public abstract fun getSeasonal ()Ljava/lang/Boolean;
 	public abstract fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
-	public static final synthetic fun write$Self (Ldev/sargunv/mobilitydata/mdb/v1/Feed;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+	public abstract fun getStatus-1zNf4I4 ()Ljava/lang/String;
 }
 
 public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Companion {
@@ -299,35 +304,49 @@ public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Companion {
 
 public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs : dev/sargunv/mobilitydata/mdb/v1/Feed {
 	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs$Companion;
-	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1-eslMtGk ()Ljava/lang/String;
-	public final fun component10 ()Ljava/lang/String;
-	public final fun component11 ()Ljava/util/List;
-	public final fun component12 ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
-	public final fun component13 ()Lkotlin/time/Instant;
+	public final fun component10 ()Lkotlin/time/Instant;
+	public final fun component11 ()Ljava/lang/Boolean;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component13 ()Ljava/lang/String;
+	public final fun component14 ()Ljava/util/List;
+	public final fun component15 ()Ljava/util/List;
+	public final fun component16 ()Ljava/lang/String;
+	public final fun component17 ()Ljava/lang/String;
+	public final fun component18 ()Ljava/util/List;
+	public final fun component19 ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
 	public final fun component2 ()Lkotlin/time/Instant;
+	public final fun component20 ()Lkotlin/time/Instant;
 	public final fun component3 ()Ljava/util/List;
 	public final fun component4 ()Ljava/lang/String;
 	public final fun component5 ()Ljava/lang/String;
 	public final fun component6 ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
 	public final fun component7 ()Ljava/util/List;
-	public final fun component8 ()Ljava/util/List;
-	public final fun component9 ()Ljava/lang/String;
-	public final fun copy-wJk6O18 (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;
-	public static synthetic fun copy-wJk6O18$default (Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;
+	public final fun component8-1zNf4I4 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/Boolean;
+	public final fun copy-AyI5Jd0 (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;
+	public static synthetic fun copy-AyI5Jd0$default (Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getBoundingBox ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
 	public final fun getBoundingBoxGeneratedAt ()Lkotlin/time/Instant;
 	public fun getCreatedAt ()Lkotlin/time/Instant;
 	public fun getExternalIds ()Ljava/util/List;
 	public fun getFeedContactEmail ()Ljava/lang/String;
+	public fun getFeedName ()Ljava/lang/String;
 	public fun getId-eslMtGk ()Ljava/lang/String;
 	public final fun getLocations ()Ljava/util/List;
+	public fun getNote ()Ljava/lang/String;
+	public fun getOfficial ()Ljava/lang/Boolean;
+	public fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
 	public fun getProvider ()Ljava/lang/String;
 	public final fun getProviderUrl ()Ljava/lang/String;
 	public fun getRedirects ()Ljava/util/List;
+	public fun getRelatedLinks ()Ljava/util/List;
+	public fun getSeasonal ()Ljava/lang/Boolean;
 	public fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public fun getStatus-1zNf4I4 ()Ljava/lang/String;
 	public final fun getSystemId ()Ljava/lang/String;
 	public final fun getVersions ()Ljava/util/List;
 	public fun hashCode ()I
@@ -379,20 +398,20 @@ public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs : dev/sargunv/mobil
 	public fun getCreatedAt ()Lkotlin/time/Instant;
 	public fun getExternalIds ()Ljava/util/List;
 	public fun getFeedContactEmail ()Ljava/lang/String;
-	public final fun getFeedName ()Ljava/lang/String;
+	public fun getFeedName ()Ljava/lang/String;
 	public fun getId-eslMtGk ()Ljava/lang/String;
 	public final fun getLatestDataset ()Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;
 	public final fun getLocations ()Ljava/util/List;
-	public final fun getNote ()Ljava/lang/String;
-	public final fun getOfficial ()Ljava/lang/Boolean;
-	public final fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
+	public fun getNote ()Ljava/lang/String;
+	public fun getOfficial ()Ljava/lang/Boolean;
+	public fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
 	public fun getProvider ()Ljava/lang/String;
 	public fun getRedirects ()Ljava/util/List;
-	public final fun getRelatedLinks ()Ljava/util/List;
+	public fun getRelatedLinks ()Ljava/util/List;
 	public final fun getReliabilitySeal ()Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;
-	public final fun getSeasonal ()Ljava/lang/Boolean;
+	public fun getSeasonal ()Ljava/lang/Boolean;
 	public fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
-	public final fun getStatus-1zNf4I4 ()Ljava/lang/String;
+	public fun getStatus-1zNf4I4 ()Ljava/lang/String;
 	public final fun getVisualizationDatasetId ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
@@ -441,19 +460,19 @@ public final class dev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt : dev/sargunv/mob
 	public final fun getEntityTypes ()Ljava/util/List;
 	public fun getExternalIds ()Ljava/util/List;
 	public fun getFeedContactEmail ()Ljava/lang/String;
-	public final fun getFeedName ()Ljava/lang/String;
+	public fun getFeedName ()Ljava/lang/String;
 	public final fun getFeedReferences ()Ljava/util/List;
 	public fun getId-eslMtGk ()Ljava/lang/String;
 	public final fun getLocations ()Ljava/util/List;
-	public final fun getNote ()Ljava/lang/String;
-	public final fun getOfficial ()Ljava/lang/Boolean;
-	public final fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
+	public fun getNote ()Ljava/lang/String;
+	public fun getOfficial ()Ljava/lang/Boolean;
+	public fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
 	public fun getProvider ()Ljava/lang/String;
 	public fun getRedirects ()Ljava/util/List;
-	public final fun getRelatedLinks ()Ljava/util/List;
-	public final fun getSeasonal ()Ljava/lang/Boolean;
+	public fun getRelatedLinks ()Ljava/util/List;
+	public fun getSeasonal ()Ljava/lang/Boolean;
 	public fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
-	public final fun getStatus-1zNf4I4 ()Ljava/lang/String;
+	public fun getStatus-1zNf4I4 ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
 }
@@ -470,6 +489,62 @@ public final synthetic class dev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt$$serial
 }
 
 public final class dev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Unknown : dev/sargunv/mobilitydata/mdb/v1/Feed {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/Boolean;
+	public final fun component11 ()Lkotlin/time/Instant;
+	public final fun component12 ()Ljava/lang/Boolean;
+	public final fun component13 ()Ljava/lang/String;
+	public final fun component14 ()Ljava/lang/String;
+	public final fun component15 ()Ljava/util/List;
+	public final fun component2-eslMtGk ()Ljava/lang/String;
+	public final fun component3 ()Lkotlin/time/Instant;
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public final fun component8 ()Ljava/util/List;
+	public final fun component9-1zNf4I4 ()Ljava/lang/String;
+	public final fun copy-6zKi6eI (Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;
+	public static synthetic fun copy-6zKi6eI$default (Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getCreatedAt ()Lkotlin/time/Instant;
+	public final fun getDataType ()Ljava/lang/String;
+	public fun getExternalIds ()Ljava/util/List;
+	public fun getFeedContactEmail ()Ljava/lang/String;
+	public fun getFeedName ()Ljava/lang/String;
+	public fun getId-eslMtGk ()Ljava/lang/String;
+	public fun getNote ()Ljava/lang/String;
+	public fun getOfficial ()Ljava/lang/Boolean;
+	public fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
+	public fun getProvider ()Ljava/lang/String;
+	public fun getRedirects ()Ljava/util/List;
+	public fun getRelatedLinks ()Ljava/util/List;
+	public fun getSeasonal ()Ljava/lang/Boolean;
+	public fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public fun getStatus-1zNf4I4 ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/Feed$Unknown$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Unknown$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
