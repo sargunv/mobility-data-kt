@@ -26,7 +26,7 @@ public data class SearchFeedItem(
   /** Whether the feed is official. */
   public val official: Boolean? = null,
   /** Whether the feed only covers a recurring season. */
-  public val seasonal: Boolean? = null,
+  public val seasonal: Boolean? = false,
   /** External identifiers. */
   @SerialName("external_ids") public val externalIds: List<ExternalId>? = null,
   /** Transit provider name. */
