@@ -1,5 +1,6 @@
 // Klib ABI Dump
 // Targets: [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, mingwX64, tvosArm64, tvosSimulatorArm64, wasmJs, wasmWasi, watchosArm32, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64]
+// Alias: native => [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, linuxArm64, linuxX64, macosArm64, mingwX64, tvosArm64, tvosSimulatorArm64, watchosArm32, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64]
 // Rendering settings:
 // - Signature version: 2
 // - Show manifest properties: true
@@ -1365,3 +1366,76 @@ final object dev.sargunv.mobilitydata.mdb.v1/IsoDateTimeSerializer : kotlinx.ser
 
 final val dev.sargunv.mobilitydata.mdb.v1/MdbJson // dev.sargunv.mobilitydata.mdb.v1/MdbJson|{}MdbJson[0]
     final fun <get-MdbJson>(): kotlinx.serialization.json/Json // dev.sargunv.mobilitydata.mdb.v1/MdbJson.<get-MdbJson>|<get-MdbJson>(){}[0]
+
+// Targets: [js, native, wasmJs]
+final class dev.sargunv.mobilitydata.mdb.v1/FeedQuery { // dev.sargunv.mobilitydata.mdb.v1/FeedQuery|null[0]
+    constructor <init>(kotlin/Int? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.mdb.v1/FeedStatus? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/Boolean? = ...) // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.<init>|<init>(kotlin.Int?;kotlin.Int?;dev.sargunv.mobilitydata.mdb.v1.FeedStatus?;kotlin.String?;kotlin.String?;kotlin.Boolean?){}[0]
+
+    final val isOfficial // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.isOfficial|{}isOfficial[0]
+        final fun <get-isOfficial>(): kotlin/Boolean? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.isOfficial.<get-isOfficial>|<get-isOfficial>(){}[0]
+    final val limit // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.limit|{}limit[0]
+        final fun <get-limit>(): kotlin/Int? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.limit.<get-limit>|<get-limit>(){}[0]
+    final val offset // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.offset|{}offset[0]
+        final fun <get-offset>(): kotlin/Int? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.offset.<get-offset>|<get-offset>(){}[0]
+    final val producerUrl // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.producerUrl|{}producerUrl[0]
+        final fun <get-producerUrl>(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.producerUrl.<get-producerUrl>|<get-producerUrl>(){}[0]
+    final val provider // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.provider|{}provider[0]
+        final fun <get-provider>(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.provider.<get-provider>|<get-provider>(){}[0]
+    final val status // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.status|{}status[0]
+        final fun <get-status>(): dev.sargunv.mobilitydata.mdb.v1/FeedStatus? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.status.<get-status>|<get-status>(){}[0]
+
+    final fun component1(): kotlin/Int? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.component1|component1(){}[0]
+    final fun component2(): kotlin/Int? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.component2|component2(){}[0]
+    final fun component3(): dev.sargunv.mobilitydata.mdb.v1/FeedStatus? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.component3|component3(){}[0]
+    final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.component4|component4(){}[0]
+    final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.component5|component5(){}[0]
+    final fun component6(): kotlin/Boolean? // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.component6|component6(){}[0]
+    final fun copy(kotlin/Int? = ..., kotlin/Int? = ..., dev.sargunv.mobilitydata.mdb.v1/FeedStatus? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/Boolean? = ...): dev.sargunv.mobilitydata.mdb.v1/FeedQuery // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.copy|copy(kotlin.Int?;kotlin.Int?;dev.sargunv.mobilitydata.mdb.v1.FeedStatus?;kotlin.String?;kotlin.String?;kotlin.Boolean?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/FeedQuery.toString|toString(){}[0]
+}
+
+// Targets: [js, native, wasmJs]
+final class dev.sargunv.mobilitydata.mdb.v1/MdbV1Client : kotlin/AutoCloseable { // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client|null[0]
+    constructor <init>(dev.sargunv.mobilitydata.mdb.v1/CatalogAuth, kotlin/String = ..., kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.<init>|<init>(dev.sargunv.mobilitydata.mdb.v1.CatalogAuth;kotlin.String;kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
+    constructor <init>(io.ktor.client.engine/HttpClientEngine, dev.sargunv.mobilitydata.mdb.v1/CatalogAuth, kotlin/String = ..., kotlin/Function1<io.ktor.client/HttpClientConfig<*>, kotlin/Unit> = ...) // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.<init>|<init>(io.ktor.client.engine.HttpClientEngine;dev.sargunv.mobilitydata.mdb.v1.CatalogAuth;kotlin.String;kotlin.Function1<io.ktor.client.HttpClientConfig<*>,kotlin.Unit>){}[0]
+
+    final fun close() // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.close|close(){}[0]
+    final suspend fun getFeed(dev.sargunv.mobilitydata.mdb.v1/FeedId): kotlin/Result<dev.sargunv.mobilitydata.mdb.v1/Feed> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getFeed|getFeed(dev.sargunv.mobilitydata.mdb.v1.FeedId){}[0]
+    final suspend fun getFeeds(dev.sargunv.mobilitydata.mdb.v1/FeedQuery = ...): kotlin/Result<kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/Feed>> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getFeeds|getFeeds(dev.sargunv.mobilitydata.mdb.v1.FeedQuery){}[0]
+
+    final object Companion { // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.Companion|null[0]
+        final const val DefaultBaseUrl // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.Companion.DefaultBaseUrl|{}DefaultBaseUrl[0]
+            final fun <get-DefaultBaseUrl>(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.Companion.DefaultBaseUrl.<get-DefaultBaseUrl>|<get-DefaultBaseUrl>(){}[0]
+    }
+}
+
+// Targets: [js, native, wasmJs]
+sealed class dev.sargunv.mobilitydata.mdb.v1/CatalogAuth { // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth|null[0]
+    final class Access : dev.sargunv.mobilitydata.mdb.v1/CatalogAuth { // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access|null[0]
+        constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access.<init>|<init>(kotlin.String){}[0]
+
+        final val accessToken // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access.accessToken|{}accessToken[0]
+            final fun <get-accessToken>(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access.accessToken.<get-accessToken>|<get-accessToken>(){}[0]
+
+        final fun component1(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Access.toString|toString(){}[0]
+    }
+
+    final class Refresh : dev.sargunv.mobilitydata.mdb.v1/CatalogAuth { // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh|null[0]
+        constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh.<init>|<init>(kotlin.String){}[0]
+
+        final val refreshToken // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh.refreshToken|{}refreshToken[0]
+            final fun <get-refreshToken>(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh.refreshToken.<get-refreshToken>|<get-refreshToken>(){}[0]
+
+        final fun component1(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/CatalogAuth.Refresh.toString|toString(){}[0]
+    }
+}
