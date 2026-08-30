@@ -36,8 +36,9 @@ class QueryEncodingTest {
       .getOrThrow()
     assertEquals("5", seen["limit"])
     assertEquals("true", seen["is_official"])
-    assertEquals("33.5,34.5", seen["dataset_latitudes"])
-    assertEquals("-119.0,-118.0", seen["dataset_longitudes"])
+    // JS Double.toString() drops a trailing .0; compare the numbers, not the wire text.
+    assertEquals(listOf(33.5, 34.5), csvDoubles(seen["dataset_latitudes"]))
+    assertEquals(listOf(-119.0, -118.0), csvDoubles(seen["dataset_longitudes"]))
     assertEquals("partially_enclosed", seen["bounding_filter_method"])
     assertNull(seen["entity_types"])
     assertNull(seen["system_id"])
@@ -157,3 +158,6 @@ class QueryEncodingTest {
     return MdbV1Client(engine, CatalogAuth.Access("access-1"))
   }
 }
+
+private fun csvDoubles(value: String?): List<Double> =
+  value.orEmpty().split(",").filter { it.isNotEmpty() }.map { it.toDouble() }
