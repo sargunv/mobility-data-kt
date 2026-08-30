@@ -9,18 +9,25 @@ import kotlinx.serialization.Serializable
 public data class FeedReliabilityReport(
   /** Catalog id of the GTFS feed. */
   @SerialName("feed_id") public val feedId: FeedId? = null,
+
   /** Whether the feed currently holds the seal. */
   @SerialName("has_seal") public val hasSeal: Boolean? = null,
+
   /** Instant the feed most recently earned the seal. */
   @SerialName("earned_at") public val earnedAt: IsoDateTime? = null,
+
   /** Instant the feed most recently lost the seal. */
   @SerialName("lost_at") public val lostAt: IsoDateTime? = null,
+
   /** Instant the criteria were last evaluated. */
   @SerialName("evaluated_at") public val evaluatedAt: IsoDateTime? = null,
+
   /** Whether at least one criterion is serving probation. */
   @SerialName("on_probation") public val onProbation: Boolean? = null,
+
   /** Earliest instant the feed could regain the seal. */
   @SerialName("probation_ends_at") public val probationEndsAt: IsoDateTime? = null,
+
   /** One entry per criterion, always all six. */
   public val criteria: List<ReliabilityCriterion>? = null,
 )
@@ -30,20 +37,28 @@ public data class FeedReliabilityReport(
 public data class ReliabilityCriterion(
   /** Which criterion this entry describes. */
   public val criterion: ReliabilityCriterionId? = null,
+
   /** Verdict at the last evaluation, with no grace period applied. */
   public val status: ReliabilityCriterionStatus? = null,
+
   /** Whether a failing check is still inside the grace period. */
   @SerialName("in_grace_period") public val inGracePeriod: Boolean? = null,
+
   /** Instant the grace period expires. */
   @SerialName("grace_period_ends_at") public val gracePeriodEndsAt: IsoDateTime? = null,
+
   /** Whether this criterion is serving probation. */
   @SerialName("on_probation") public val onProbation: Boolean? = null,
+
   /** Instant this criterion finishes probation. */
   @SerialName("probation_ends_at") public val probationEndsAt: IsoDateTime? = null,
+
   /** Instant this criterion was last evaluated. */
   @SerialName("evaluated_at") public val evaluatedAt: IsoDateTime? = null,
+
   /** Start of the current run of failing checks. */
   @SerialName("first_failure_at") public val firstFailureAt: IsoDateTime? = null,
+
   /** Most recent failing check. */
   @SerialName("last_failure_at") public val lastFailureAt: IsoDateTime? = null,
 )
