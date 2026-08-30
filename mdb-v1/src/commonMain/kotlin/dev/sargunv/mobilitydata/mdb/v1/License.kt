@@ -91,7 +91,7 @@ public data class MatchingLicense(
   /** Source that produced the match. */
   @SerialName("matched_source") public val matchedSource: String? = null,
 
-  /** Extra context about the match. */
+  /** Matcher notes such as version normalization or a detected locale. */
   public val notes: String? = null,
 
   /** Regional or jurisdictional variant id. */

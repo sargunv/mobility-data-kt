@@ -19,7 +19,7 @@ public data class SearchFeedItem(
   /** Catalog feed id. */
   public val id: FeedId? = null,
 
-  /** `gtfs`, `gtfs_rt`, or `gbfs`. */
+  /** Discriminator for this mixed search row. */
   @SerialName("data_type") public val dataType: FeedDataType? = null,
 
   /** Publication status. */
