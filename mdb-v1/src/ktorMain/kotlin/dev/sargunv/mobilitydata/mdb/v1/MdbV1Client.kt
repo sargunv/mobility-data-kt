@@ -214,7 +214,8 @@ internal constructor(
    * @param id License id, often an SPDX id
    * @return The license, or an error
    */
-  public suspend fun getLicense(id: String): Result<License> = catalogGet("v1", "licenses", id)
+  public suspend fun getLicense(id: String): Result<LicenseWithRules> =
+    catalogGet("v1", "licenses", id)
 
   /**
    * Resolves a license URL to catalog licenses.
@@ -258,8 +259,8 @@ internal constructor(
   ): Result<T> = withCatalogAuth { getOnce<T>(pathSegments, query) }
 
   private suspend inline fun <reified T, reified B> catalogPost(
-    body: B,
     vararg pathSegments: String,
+    body: B,
   ): Result<T> = withCatalogAuth { postOnce<T, B>(pathSegments, body) }
 
   private suspend inline fun <reified T> withCatalogAuth(

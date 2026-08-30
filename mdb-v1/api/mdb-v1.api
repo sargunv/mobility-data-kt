@@ -1128,10 +1128,9 @@ public final class dev/sargunv/mobilitydata/mdb/v1/LatestDataset$Companion {
 public final class dev/sargunv/mobilitydata/mdb/v1/License {
 	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/License$Companion;
 	public fun <init> ()V
-	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;)V
-	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
-	public final fun component10 ()Ljava/util/List;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/Boolean;
 	public final fun component4 ()Ljava/lang/String;
@@ -1140,13 +1139,12 @@ public final class dev/sargunv/mobilitydata/mdb/v1/License {
 	public final fun component7 ()Lkotlin/time/Instant;
 	public final fun component8 ()Lkotlin/time/Instant;
 	public final fun component9 ()Ljava/util/List;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;)Ldev/sargunv/mobilitydata/mdb/v1/License;
-	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/License;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/License;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;)Ldev/sargunv/mobilitydata/mdb/v1/License;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/License;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/License;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCreatedAt ()Lkotlin/time/Instant;
 	public final fun getDescription ()Ljava/lang/String;
 	public final fun getId ()Ljava/lang/String;
-	public final fun getLicenseRules ()Ljava/util/List;
 	public final fun getLicenseTags ()Ljava/util/List;
 	public final fun getName ()Ljava/lang/String;
 	public final fun getType ()Ljava/lang/String;
@@ -1311,6 +1309,53 @@ public final class dev/sargunv/mobilitydata/mdb/v1/LicenseRuleType$Companion {
 	public final fun getCondition-jFehA4Y ()Ljava/lang/String;
 	public final fun getLimitation-jFehA4Y ()Ljava/lang/String;
 	public final fun getPermission-jFehA4Y ()Ljava/lang/String;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LicenseWithRules {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/LicenseWithRules$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Boolean;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Lkotlin/time/Instant;
+	public final fun component8 ()Lkotlin/time/Instant;
+	public final fun component9 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;)Ldev/sargunv/mobilitydata/mdb/v1/LicenseWithRules;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/LicenseWithRules;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/LicenseWithRules;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCreatedAt ()Lkotlin/time/Instant;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLicenseRules ()Ljava/util/List;
+	public final fun getLicenseTags ()Ljava/util/List;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getType ()Ljava/lang/String;
+	public final fun getUpdatedAt ()Lkotlin/time/Instant;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isSpdx ()Ljava/lang/Boolean;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/LicenseWithRules$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/LicenseWithRules$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/LicenseWithRules;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/LicenseWithRules;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LicenseWithRules$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 

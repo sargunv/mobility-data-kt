@@ -573,7 +573,7 @@ final class dev.sargunv.mobilitydata.mdb.v1/LatestDataset { // dev.sargunv.mobil
 }
 
 final class dev.sargunv.mobilitydata.mdb.v1/License { // dev.sargunv.mobilitydata.mdb.v1/License|null[0]
-    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin.time/Instant? = ..., kotlin.time/Instant? = ..., kotlin.collections/List<kotlin/String>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/LicenseRule>? = ...) // dev.sargunv.mobilitydata.mdb.v1/License.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.Boolean?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.time.Instant?;kotlin.time.Instant?;kotlin.collections.List<kotlin.String>?;kotlin.collections.List<dev.sargunv.mobilitydata.mdb.v1.LicenseRule>?){}[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin.time/Instant? = ..., kotlin.time/Instant? = ..., kotlin.collections/List<kotlin/String>? = ...) // dev.sargunv.mobilitydata.mdb.v1/License.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.Boolean?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.time.Instant?;kotlin.time.Instant?;kotlin.collections.List<kotlin.String>?){}[0]
 
     final val createdAt // dev.sargunv.mobilitydata.mdb.v1/License.createdAt|{}createdAt[0]
         final fun <get-createdAt>(): kotlin.time/Instant? // dev.sargunv.mobilitydata.mdb.v1/License.createdAt.<get-createdAt>|<get-createdAt>(){}[0]
@@ -583,8 +583,6 @@ final class dev.sargunv.mobilitydata.mdb.v1/License { // dev.sargunv.mobilitydat
         final fun <get-id>(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/License.id.<get-id>|<get-id>(){}[0]
     final val isSpdx // dev.sargunv.mobilitydata.mdb.v1/License.isSpdx|{}isSpdx[0]
         final fun <get-isSpdx>(): kotlin/Boolean? // dev.sargunv.mobilitydata.mdb.v1/License.isSpdx.<get-isSpdx>|<get-isSpdx>(){}[0]
-    final val licenseRules // dev.sargunv.mobilitydata.mdb.v1/License.licenseRules|{}licenseRules[0]
-        final fun <get-licenseRules>(): kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/LicenseRule>? // dev.sargunv.mobilitydata.mdb.v1/License.licenseRules.<get-licenseRules>|<get-licenseRules>(){}[0]
     final val licenseTags // dev.sargunv.mobilitydata.mdb.v1/License.licenseTags|{}licenseTags[0]
         final fun <get-licenseTags>(): kotlin.collections/List<kotlin/String>? // dev.sargunv.mobilitydata.mdb.v1/License.licenseTags.<get-licenseTags>|<get-licenseTags>(){}[0]
     final val name // dev.sargunv.mobilitydata.mdb.v1/License.name|{}name[0]
@@ -597,7 +595,6 @@ final class dev.sargunv.mobilitydata.mdb.v1/License { // dev.sargunv.mobilitydat
         final fun <get-url>(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/License.url.<get-url>|<get-url>(){}[0]
 
     final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/License.component1|component1(){}[0]
-    final fun component10(): kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/LicenseRule>? // dev.sargunv.mobilitydata.mdb.v1/License.component10|component10(){}[0]
     final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/License.component2|component2(){}[0]
     final fun component3(): kotlin/Boolean? // dev.sargunv.mobilitydata.mdb.v1/License.component3|component3(){}[0]
     final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/License.component4|component4(){}[0]
@@ -606,7 +603,7 @@ final class dev.sargunv.mobilitydata.mdb.v1/License { // dev.sargunv.mobilitydat
     final fun component7(): kotlin.time/Instant? // dev.sargunv.mobilitydata.mdb.v1/License.component7|component7(){}[0]
     final fun component8(): kotlin.time/Instant? // dev.sargunv.mobilitydata.mdb.v1/License.component8|component8(){}[0]
     final fun component9(): kotlin.collections/List<kotlin/String>? // dev.sargunv.mobilitydata.mdb.v1/License.component9|component9(){}[0]
-    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin.time/Instant? = ..., kotlin.time/Instant? = ..., kotlin.collections/List<kotlin/String>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/LicenseRule>? = ...): dev.sargunv.mobilitydata.mdb.v1/License // dev.sargunv.mobilitydata.mdb.v1/License.copy|copy(kotlin.String?;kotlin.String?;kotlin.Boolean?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.time.Instant?;kotlin.time.Instant?;kotlin.collections.List<kotlin.String>?;kotlin.collections.List<dev.sargunv.mobilitydata.mdb.v1.LicenseRule>?){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin.time/Instant? = ..., kotlin.time/Instant? = ..., kotlin.collections/List<kotlin/String>? = ...): dev.sargunv.mobilitydata.mdb.v1/License // dev.sargunv.mobilitydata.mdb.v1/License.copy|copy(kotlin.String?;kotlin.String?;kotlin.Boolean?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.time.Instant?;kotlin.time.Instant?;kotlin.collections.List<kotlin.String>?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.mdb.v1/License.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.mdb.v1/License.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/License.toString|toString(){}[0]
@@ -685,6 +682,61 @@ final class dev.sargunv.mobilitydata.mdb.v1/LicenseRule { // dev.sargunv.mobilit
 
     final object Companion { // dev.sargunv.mobilitydata.mdb.v1/LicenseRule.Companion|null[0]
         final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.mdb.v1/LicenseRule> // dev.sargunv.mobilitydata.mdb.v1/LicenseRule.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules { // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules|null[0]
+    constructor <init>(kotlin/String? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin.time/Instant? = ..., kotlin.time/Instant? = ..., kotlin.collections/List<kotlin/String>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/LicenseRule>? = ...) // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.<init>|<init>(kotlin.String?;kotlin.String?;kotlin.Boolean?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.time.Instant?;kotlin.time.Instant?;kotlin.collections.List<kotlin.String>?;kotlin.collections.List<dev.sargunv.mobilitydata.mdb.v1.LicenseRule>?){}[0]
+
+    final val createdAt // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.createdAt|{}createdAt[0]
+        final fun <get-createdAt>(): kotlin.time/Instant? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.createdAt.<get-createdAt>|<get-createdAt>(){}[0]
+    final val description // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.description|{}description[0]
+        final fun <get-description>(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.description.<get-description>|<get-description>(){}[0]
+    final val id // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.id|{}id[0]
+        final fun <get-id>(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.id.<get-id>|<get-id>(){}[0]
+    final val isSpdx // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.isSpdx|{}isSpdx[0]
+        final fun <get-isSpdx>(): kotlin/Boolean? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.isSpdx.<get-isSpdx>|<get-isSpdx>(){}[0]
+    final val licenseRules // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.licenseRules|{}licenseRules[0]
+        final fun <get-licenseRules>(): kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/LicenseRule>? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.licenseRules.<get-licenseRules>|<get-licenseRules>(){}[0]
+    final val licenseTags // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.licenseTags|{}licenseTags[0]
+        final fun <get-licenseTags>(): kotlin.collections/List<kotlin/String>? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.licenseTags.<get-licenseTags>|<get-licenseTags>(){}[0]
+    final val name // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.name|{}name[0]
+        final fun <get-name>(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.name.<get-name>|<get-name>(){}[0]
+    final val type // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.type|{}type[0]
+        final fun <get-type>(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.type.<get-type>|<get-type>(){}[0]
+    final val updatedAt // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.updatedAt|{}updatedAt[0]
+        final fun <get-updatedAt>(): kotlin.time/Instant? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.updatedAt.<get-updatedAt>|<get-updatedAt>(){}[0]
+    final val url // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.url|{}url[0]
+        final fun <get-url>(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.url.<get-url>|<get-url>(){}[0]
+
+    final fun component1(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component1|component1(){}[0]
+    final fun component10(): kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/LicenseRule>? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component10|component10(){}[0]
+    final fun component2(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component2|component2(){}[0]
+    final fun component3(): kotlin/Boolean? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component3|component3(){}[0]
+    final fun component4(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component4|component4(){}[0]
+    final fun component5(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component5|component5(){}[0]
+    final fun component6(): kotlin/String? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component6|component6(){}[0]
+    final fun component7(): kotlin.time/Instant? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component7|component7(){}[0]
+    final fun component8(): kotlin.time/Instant? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component8|component8(){}[0]
+    final fun component9(): kotlin.collections/List<kotlin/String>? // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.component9|component9(){}[0]
+    final fun copy(kotlin/String? = ..., kotlin/String? = ..., kotlin/Boolean? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin/String? = ..., kotlin.time/Instant? = ..., kotlin.time/Instant? = ..., kotlin.collections/List<kotlin/String>? = ..., kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/LicenseRule>? = ...): dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.copy|copy(kotlin.String?;kotlin.String?;kotlin.Boolean?;kotlin.String?;kotlin.String?;kotlin.String?;kotlin.time.Instant?;kotlin.time.Instant?;kotlin.collections.List<kotlin.String>?;kotlin.collections.List<dev.sargunv.mobilitydata.mdb.v1.LicenseRule>?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules> { // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules) // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.mdb.v1.LicenseWithRules){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.Companion|null[0]
+        final val $childSerializers // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules> // dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules.Companion.serializer|serializer(){}[0]
     }
 }
 
@@ -2191,7 +2243,7 @@ final class dev.sargunv.mobilitydata.mdb.v1/MdbV1Client : kotlin/AutoCloseable {
     final suspend fun getGtfsFeeds(dev.sargunv.mobilitydata.mdb.v1/GtfsFeedQuery = ...): kotlin/Result<kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/Feed.Gtfs>> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getGtfsFeeds|getGtfsFeeds(dev.sargunv.mobilitydata.mdb.v1.GtfsFeedQuery){}[0]
     final suspend fun getGtfsRtFeed(dev.sargunv.mobilitydata.mdb.v1/FeedId): kotlin/Result<dev.sargunv.mobilitydata.mdb.v1/Feed.GtfsRt> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getGtfsRtFeed|getGtfsRtFeed(dev.sargunv.mobilitydata.mdb.v1.FeedId){}[0]
     final suspend fun getGtfsRtFeeds(dev.sargunv.mobilitydata.mdb.v1/GtfsRtFeedQuery = ...): kotlin/Result<kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/Feed.GtfsRt>> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getGtfsRtFeeds|getGtfsRtFeeds(dev.sargunv.mobilitydata.mdb.v1.GtfsRtFeedQuery){}[0]
-    final suspend fun getLicense(kotlin/String): kotlin/Result<dev.sargunv.mobilitydata.mdb.v1/License> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getLicense|getLicense(kotlin.String){}[0]
+    final suspend fun getLicense(kotlin/String): kotlin/Result<dev.sargunv.mobilitydata.mdb.v1/LicenseWithRules> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getLicense|getLicense(kotlin.String){}[0]
     final suspend fun getLicenses(dev.sargunv.mobilitydata.mdb.v1/LicenseQuery = ...): kotlin/Result<kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/License>> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getLicenses|getLicenses(dev.sargunv.mobilitydata.mdb.v1.LicenseQuery){}[0]
     final suspend fun getLocations(dev.sargunv.mobilitydata.mdb.v1/LocationQuery = ...): kotlin/Result<dev.sargunv.mobilitydata.mdb.v1/LocationSearchResponse> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getLocations|getLocations(dev.sargunv.mobilitydata.mdb.v1.LocationQuery){}[0]
     final suspend fun getMatchingLicenses(dev.sargunv.mobilitydata.mdb.v1/LicenseMatchRequest): kotlin/Result<kotlin.collections/List<dev.sargunv.mobilitydata.mdb.v1/MatchingLicense>> // dev.sargunv.mobilitydata.mdb.v1/MdbV1Client.getMatchingLicenses|getMatchingLicenses(dev.sargunv.mobilitydata.mdb.v1.LicenseMatchRequest){}[0]
