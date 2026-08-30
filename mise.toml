@@ -46,9 +46,11 @@ hooks_dir="$(git rev-parse --path-format=absolute --git-dir)/hooks"
 git lfs install --local --skip-repo
 git -c core.hooksPath="$hooks_dir" lfs install --local || true
 git lfs pull
-git status --porcelain -z -- sample-data | while IFS= read -r -d '' entry; do
-  [ "${entry:0:2}" = " M" ] || continue
-  path="${entry:3}"
+git status --porcelain -- sample-data | while IFS= read -r entry; do
+  case "$entry" in
+    " M "*) path="${entry# M }" ;;
+    *) continue ;;
+  esac
   [ -z "$(git diff -- "$path")" ] || continue
   git add --renormalize -- "$path"
 done
