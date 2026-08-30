@@ -1,0 +1,13 @@
+[{
+    "license_id": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/deed.nl",
+    "normalized_url": "creativecommons.org/licenses/by/4.0/deed.nl",
+    "match_type": "heuristic",
+    "confidence": 0.99,
+    "spdx_id": "CC-BY-4.0",
+    "matched_name": "CC-BY-4.0",
+    "matched_catalog_url": null,
+    "matched_source": "cc-resolver",
+    "notes": null,
+    "regional_id": null
+}]
