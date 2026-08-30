@@ -14,7 +14,7 @@ class SearchTest {
   @Test
   fun searchFeedsDecodesEnvelope() = runTest {
     val engine = MockEngine { request ->
-      assertEquals("/v1/search?search_query=dash&limit=1", request.url.fullPath)
+      assertEquals("/v1/search?limit=1&search_query=dash", request.url.fullPath)
       respond(
         """
         {
@@ -34,6 +34,7 @@ class SearchTest {
     val page = client.searchFeeds(SearchFeedsQuery(searchQuery = "dash", limit = 1)).getOrThrow()
     assertEquals(1, page.total)
     assertEquals(FeedId("mdb-1210"), page.results?.single()?.id)
+    assertEquals(FeedDataType.Gtfs, page.results?.single()?.dataType)
     client.close()
   }
 

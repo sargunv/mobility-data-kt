@@ -155,9 +155,20 @@ class CatalogTypesSerializationTest {
   }
 
   @Test
+  fun decodeMatchingLicense() {
+    val json =
+      """{"license_id":"CC-BY-4.0","match_type":"heuristic","confidence":0.99,"spdx_id":"CC-BY-4.0"}"""
+    val decoded = MdbJson.decodeFromString<MatchingLicense>(json)
+    assertEquals("CC-BY-4.0", decoded.licenseId)
+    assertEquals(LicenseMatchType.Heuristic, decoded.matchType)
+    assertEquals(0.99, decoded.confidence)
+  }
+
+  @Test
   fun decodeOmittedSearchSeasonalIsFalse() {
     val json = """{"id":"mdb-1","data_type":"gtfs"}"""
     val decoded = MdbJson.decodeFromString<SearchFeedItem>(json)
     assertEquals(false, decoded.seasonal)
+    assertEquals(FeedDataType.Gtfs, decoded.dataType)
   }
 }

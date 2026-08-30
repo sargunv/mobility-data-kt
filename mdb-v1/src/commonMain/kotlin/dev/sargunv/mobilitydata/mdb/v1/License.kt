@@ -54,6 +54,70 @@ public data class LicenseRule(
   public val type: LicenseRuleType? = null,
 )
 
+/** Request body for `POST /v1/licenses:match`. */
+@Serializable
+public data class LicenseMatchRequest(
+  /** License URL to resolve against the catalog. */
+  @SerialName("license_url") public val licenseUrl: String
+)
+
+/** One catalog license that matched a submitted URL. */
+@Serializable
+public data class MatchingLicense(
+  /** Catalog license id, often an SPDX id. */
+  @SerialName("license_id") public val licenseId: String? = null,
+
+  /** License URL submitted for matching. */
+  @SerialName("license_url") public val licenseUrl: String? = null,
+
+  /** Normalized form of [licenseUrl]. */
+  @SerialName("normalized_url") public val normalizedUrl: String? = null,
+
+  /** How the catalog matched the URL. */
+  @SerialName("match_type") public val matchType: LicenseMatchType? = null,
+
+  /** Match confidence from 0.0 to 1.0. */
+  public val confidence: Double? = null,
+
+  /** SPDX identifier when the match resolved to one. */
+  @SerialName("spdx_id") public val spdxId: String? = null,
+
+  /** User-facing name of the matched license. */
+  @SerialName("matched_name") public val matchedName: String? = null,
+
+  /** Canonical catalog URL for the matched license. */
+  @SerialName("matched_catalog_url") public val matchedCatalogUrl: String? = null,
+
+  /** Source that produced the match. */
+  @SerialName("matched_source") public val matchedSource: String? = null,
+
+  /** Extra context about the match. */
+  public val notes: String? = null,
+
+  /** Regional or jurisdictional variant id. */
+  @SerialName("regional_id") public val regionalId: String? = null,
+)
+
+/** Kind of license URL match. */
+@Serializable
+@JvmInline
+public value class LicenseMatchType(
+  /** Wire value. */
+  public val value: String
+) {
+  /** Named constants for [LicenseMatchType]. */
+  public companion object {
+    /** Direct match in the catalog. */
+    public val Exact: LicenseMatchType = LicenseMatchType("exact")
+
+    /** Pattern-based match such as a Creative Commons resolver. */
+    public val Heuristic: LicenseMatchType = LicenseMatchType("heuristic")
+
+    /** Similarity match against licenses on the same host. */
+    public val Fuzzy: LicenseMatchType = LicenseMatchType("fuzzy")
+  }
+}
+
 /** Kind of [LicenseRule]. */
 @Serializable
 @JvmInline

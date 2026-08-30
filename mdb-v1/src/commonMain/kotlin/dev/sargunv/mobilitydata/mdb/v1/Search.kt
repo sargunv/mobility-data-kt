@@ -20,7 +20,7 @@ public data class SearchFeedItem(
   public val id: FeedId? = null,
 
   /** `gtfs`, `gtfs_rt`, or `gbfs`. */
-  @SerialName("data_type") public val dataType: String? = null,
+  @SerialName("data_type") public val dataType: FeedDataType? = null,
 
   /** Publication status. */
   public val status: FeedStatus? = null,

@@ -4,6 +4,7 @@ import io.ktor.client.engine.mock.MockEngine
 import io.ktor.client.engine.mock.respond
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
+import io.ktor.http.content.TextContent
 import io.ktor.http.encodedPath
 import io.ktor.http.fullPath
 import io.ktor.http.headersOf
@@ -87,6 +88,36 @@ class DatasetsTest {
     assertEquals(listOf("/v1/licenses", "/v1/licenses/0BSD"), paths)
     assertEquals("0BSD", licenses.single().id)
     assertEquals(1, license.licenseRules?.size)
+    client.close()
+  }
+
+  @Test
+  fun getMatchingLicensesPostsUrl() = runTest {
+    var method = ""
+    var path = ""
+    var body = ""
+    val engine = MockEngine { request ->
+      method = request.method.value
+      path = request.url.encodedPath
+      body = (request.body as TextContent).text
+      respond(
+        """[{"license_id":"CC-BY-4.0","match_type":"heuristic","confidence":0.99}]""",
+        HttpStatusCode.OK,
+        headersOf(HttpHeaders.ContentType, "application/json"),
+      )
+    }
+    val client = MdbV1Client(engine, CatalogAuth.Access("access-1"))
+    val matches =
+      client
+        .getMatchingLicenses(
+          LicenseMatchRequest("https://creativecommons.org/licenses/by/4.0/deed.nl")
+        )
+        .getOrThrow()
+    assertEquals("POST", method)
+    assertEquals("/v1/licenses:match", path)
+    assertEquals("""{"license_url":"https://creativecommons.org/licenses/by/4.0/deed.nl"}""", body)
+    assertEquals("CC-BY-4.0", matches.single().licenseId)
+    assertEquals(LicenseMatchType.Heuristic, matches.single().matchType)
     client.close()
   }
 
