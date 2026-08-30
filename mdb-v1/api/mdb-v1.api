@@ -1,0 +1,1242 @@
+public final class dev/sargunv/mobilitydata/mdb/v1/AccessToken {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/AccessToken$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lkotlin/time/Instant;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Lkotlin/time/Instant;Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/AccessToken;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/AccessToken;Ljava/lang/String;Lkotlin/time/Instant;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/AccessToken;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAccessToken ()Ljava/lang/String;
+	public final fun getExpirationDatetimeUtc ()Lkotlin/time/Instant;
+	public final fun getTokenType ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/AccessToken$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/AccessToken$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/AccessToken;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/AccessToken;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/AccessToken$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRefreshToken ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/AccessTokenRequest$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/BoundingBox {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;)V
+	public synthetic fun <init> (Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Double;
+	public final fun component2 ()Ljava/lang/Double;
+	public final fun component3 ()Ljava/lang/Double;
+	public final fun component4 ()Ljava/lang/Double;
+	public final fun copy (Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;)Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaximumLatitude ()Ljava/lang/Double;
+	public final fun getMaximumLongitude ()Ljava/lang/Double;
+	public final fun getMinimumLatitude ()Ljava/lang/Double;
+	public final fun getMinimumLongitude ()Ljava/lang/Double;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/BoundingBox$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/BoundingBox$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/ExternalId {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/ExternalId$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/ExternalId;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/ExternalId;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/ExternalId;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExternalId ()Ljava/lang/String;
+	public final fun getSource ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/ExternalId$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/ExternalId$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/ExternalId;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/ExternalId;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/ExternalId$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public abstract class dev/sargunv/mobilitydata/mdb/v1/Feed {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Feed$Companion;
+	public abstract fun getCreatedAt ()Lkotlin/time/Instant;
+	public abstract fun getExternalIds ()Ljava/util/List;
+	public abstract fun getFeedContactEmail ()Ljava/lang/String;
+	public abstract fun getFeedName ()Ljava/lang/String;
+	public abstract fun getId-eslMtGk ()Ljava/lang/String;
+	public abstract fun getNote ()Ljava/lang/String;
+	public abstract fun getOfficial ()Ljava/lang/Boolean;
+	public abstract fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
+	public abstract fun getProvider ()Ljava/lang/String;
+	public abstract fun getRedirects ()Ljava/util/List;
+	public abstract fun getRelatedLinks ()Ljava/util/List;
+	public abstract fun getSeasonal ()Ljava/lang/Boolean;
+	public abstract fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public abstract fun getStatus-1zNf4I4 ()Ljava/lang/String;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs : dev/sargunv/mobilitydata/mdb/v1/Feed {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-eslMtGk ()Ljava/lang/String;
+	public final fun component10 ()Lkotlin/time/Instant;
+	public final fun component11 ()Ljava/lang/Boolean;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component13 ()Ljava/lang/String;
+	public final fun component14 ()Ljava/util/List;
+	public final fun component15 ()Ljava/util/List;
+	public final fun component16 ()Ljava/lang/String;
+	public final fun component17 ()Ljava/lang/String;
+	public final fun component18 ()Ljava/util/List;
+	public final fun component19 ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public final fun component2 ()Lkotlin/time/Instant;
+	public final fun component20 ()Lkotlin/time/Instant;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8-1zNf4I4 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/Boolean;
+	public final fun copy-AyI5Jd0 (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;
+	public static synthetic fun copy-AyI5Jd0$default (Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBoundingBox ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public final fun getBoundingBoxGeneratedAt ()Lkotlin/time/Instant;
+	public fun getCreatedAt ()Lkotlin/time/Instant;
+	public fun getExternalIds ()Ljava/util/List;
+	public fun getFeedContactEmail ()Ljava/lang/String;
+	public fun getFeedName ()Ljava/lang/String;
+	public fun getId-eslMtGk ()Ljava/lang/String;
+	public final fun getLocations ()Ljava/util/List;
+	public fun getNote ()Ljava/lang/String;
+	public fun getOfficial ()Ljava/lang/Boolean;
+	public fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
+	public fun getProvider ()Ljava/lang/String;
+	public final fun getProviderUrl ()Ljava/lang/String;
+	public fun getRedirects ()Ljava/util/List;
+	public fun getRelatedLinks ()Ljava/util/List;
+	public fun getSeasonal ()Ljava/lang/Boolean;
+	public fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public fun getStatus-1zNf4I4 ()Ljava/lang/String;
+	public final fun getSystemId ()Ljava/lang/String;
+	public final fun getVersions ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Gbfs$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs : dev/sargunv/mobilitydata/mdb/v1/Feed {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-eslMtGk ()Ljava/lang/String;
+	public final fun component10 ()Lkotlin/time/Instant;
+	public final fun component11 ()Ljava/lang/Boolean;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component13 ()Ljava/lang/String;
+	public final fun component14 ()Ljava/util/List;
+	public final fun component15 ()Ljava/util/List;
+	public final fun component16 ()Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;
+	public final fun component17 ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public final fun component18 ()Ljava/lang/String;
+	public final fun component19 ()Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;
+	public final fun component2 ()Lkotlin/time/Instant;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8-1zNf4I4 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/Boolean;
+	public final fun copy-ZWZrFFg (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs;
+	public static synthetic fun copy-ZWZrFFg$default (Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBoundingBox ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public fun getCreatedAt ()Lkotlin/time/Instant;
+	public fun getExternalIds ()Ljava/util/List;
+	public fun getFeedContactEmail ()Ljava/lang/String;
+	public fun getFeedName ()Ljava/lang/String;
+	public fun getId-eslMtGk ()Ljava/lang/String;
+	public final fun getLatestDataset ()Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;
+	public final fun getLocations ()Ljava/util/List;
+	public fun getNote ()Ljava/lang/String;
+	public fun getOfficial ()Ljava/lang/Boolean;
+	public fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
+	public fun getProvider ()Ljava/lang/String;
+	public fun getRedirects ()Ljava/util/List;
+	public fun getRelatedLinks ()Ljava/util/List;
+	public final fun getReliabilitySeal ()Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;
+	public fun getSeasonal ()Ljava/lang/Boolean;
+	public fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public fun getStatus-1zNf4I4 ()Ljava/lang/String;
+	public final fun getVisualizationDatasetId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Gtfs$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt : dev/sargunv/mobilitydata/mdb/v1/Feed {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-eslMtGk ()Ljava/lang/String;
+	public final fun component10 ()Lkotlin/time/Instant;
+	public final fun component11 ()Ljava/lang/Boolean;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component13 ()Ljava/lang/String;
+	public final fun component14 ()Ljava/util/List;
+	public final fun component15 ()Ljava/util/List;
+	public final fun component16 ()Ljava/util/List;
+	public final fun component17 ()Ljava/util/List;
+	public final fun component2 ()Lkotlin/time/Instant;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8-1zNf4I4 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/Boolean;
+	public final fun copy-4lXJpcQ (Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt;
+	public static synthetic fun copy-4lXJpcQ$default (Ldev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getCreatedAt ()Lkotlin/time/Instant;
+	public final fun getEntityTypes ()Ljava/util/List;
+	public fun getExternalIds ()Ljava/util/List;
+	public fun getFeedContactEmail ()Ljava/lang/String;
+	public fun getFeedName ()Ljava/lang/String;
+	public final fun getFeedReferences ()Ljava/util/List;
+	public fun getId-eslMtGk ()Ljava/lang/String;
+	public final fun getLocations ()Ljava/util/List;
+	public fun getNote ()Ljava/lang/String;
+	public fun getOfficial ()Ljava/lang/Boolean;
+	public fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
+	public fun getProvider ()Ljava/lang/String;
+	public fun getRedirects ()Ljava/util/List;
+	public fun getRelatedLinks ()Ljava/util/List;
+	public fun getSeasonal ()Ljava/lang/Boolean;
+	public fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public fun getStatus-1zNf4I4 ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$GtfsRt$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Unknown : dev/sargunv/mobilitydata/mdb/v1/Feed {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/Boolean;
+	public final fun component11 ()Lkotlin/time/Instant;
+	public final fun component12 ()Ljava/lang/Boolean;
+	public final fun component13 ()Ljava/lang/String;
+	public final fun component14 ()Ljava/lang/String;
+	public final fun component15 ()Ljava/util/List;
+	public final fun component2-eslMtGk ()Ljava/lang/String;
+	public final fun component3 ()Lkotlin/time/Instant;
+	public final fun component4 ()Ljava/util/List;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public final fun component8 ()Ljava/util/List;
+	public final fun component9-1zNf4I4 ()Ljava/lang/String;
+	public final fun copy-6zKi6eI (Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;
+	public static synthetic fun copy-6zKi6eI$default (Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Lkotlin/time/Instant;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getCreatedAt ()Lkotlin/time/Instant;
+	public final fun getDataType ()Ljava/lang/String;
+	public fun getExternalIds ()Ljava/util/List;
+	public fun getFeedContactEmail ()Ljava/lang/String;
+	public fun getFeedName ()Ljava/lang/String;
+	public fun getId-eslMtGk ()Ljava/lang/String;
+	public fun getNote ()Ljava/lang/String;
+	public fun getOfficial ()Ljava/lang/Boolean;
+	public fun getOfficialUpdatedAt ()Lkotlin/time/Instant;
+	public fun getProvider ()Ljava/lang/String;
+	public fun getRedirects ()Ljava/util/List;
+	public fun getRelatedLinks ()Ljava/util/List;
+	public fun getSeasonal ()Ljava/lang/Boolean;
+	public fun getSourceInfo ()Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public fun getStatus-1zNf4I4 ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/Feed$Unknown$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/Feed$Unknown;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Feed$Unknown$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/FeedId {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/FeedId$Companion;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/FeedId;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/FeedId$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/FeedId$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-3mtEnFQ (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-tfd9Q6U (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/FeedId$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Lkotlin/time/Instant;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;)Ldev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCode ()Ljava/lang/String;
+	public final fun getCreatedAt ()Lkotlin/time/Instant;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/FeedRelatedLink$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Boolean;Lkotlin/time/Instant;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/Boolean;Lkotlin/time/Instant;)V
+	public synthetic fun <init> (Ljava/lang/Boolean;Lkotlin/time/Instant;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/Boolean;Lkotlin/time/Instant;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Boolean;
+	public final fun component2 ()Lkotlin/time/Instant;
+	public final fun component3 ()Lkotlin/time/Instant;
+	public final fun component4 ()Lkotlin/time/Instant;
+	public final fun component5 ()Ljava/lang/Boolean;
+	public final fun component6 ()Lkotlin/time/Instant;
+	public final fun copy (Ljava/lang/Boolean;Lkotlin/time/Instant;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/Boolean;Lkotlin/time/Instant;)Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;Ljava/lang/Boolean;Lkotlin/time/Instant;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/Boolean;Lkotlin/time/Instant;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEarnedAt ()Lkotlin/time/Instant;
+	public final fun getEvaluatedAt ()Lkotlin/time/Instant;
+	public final fun getHasSeal ()Ljava/lang/Boolean;
+	public final fun getLostAt ()Lkotlin/time/Instant;
+	public final fun getOnProbation ()Ljava/lang/Boolean;
+	public final fun getProbationEndsAt ()Lkotlin/time/Instant;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/FeedReliabilitySummary$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/FeedStatus {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/FeedStatus$Companion;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/FeedStatus;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/FeedStatus$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/FeedStatus$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-amIiqhs (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-kWUVsH0 (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/FeedStatus$Companion {
+	public final fun getActive-0-3-x3M ()Ljava/lang/String;
+	public final fun getDeprecated-0-3-x3M ()Ljava/lang/String;
+	public final fun getDevelopment-0-3-x3M ()Ljava/lang/String;
+	public final fun getFuture-0-3-x3M ()Ljava/lang/String;
+	public final fun getInactive-0-3-x3M ()Ljava/lang/String;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/Boolean;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLanguage ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isFeature ()Ljava/lang/Boolean;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GbfsEndpoint$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport$Companion;
+	public fun <init> ()V
+	public fun <init> (Lkotlin/time/Instant;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Lkotlin/time/Instant;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lkotlin/time/Instant;
+	public final fun component2 ()Ljava/lang/Integer;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Lkotlin/time/Instant;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;Lkotlin/time/Instant;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getReportSummaryUrl ()Ljava/lang/String;
+	public final fun getTotalError ()Ljava/lang/Integer;
+	public final fun getValidatedAt ()Lkotlin/time/Instant;
+	public final fun getValidatorVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GbfsVersion {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersion$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lkotlin/time/Instant;
+	public final fun component3 ()Lkotlin/time/Instant;
+	public final fun component4-GV0kOmo ()Ljava/lang/String;
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;
+	public final fun copy-7SD-v1M (Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersion;
+	public static synthetic fun copy-7SD-v1M$default (Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersion;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/util/List;Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersion;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCreatedAt ()Lkotlin/time/Instant;
+	public final fun getEndpoints ()Ljava/util/List;
+	public final fun getLastUpdatedAt ()Lkotlin/time/Instant;
+	public final fun getLatestValidationReport ()Ldev/sargunv/mobilitydata/mdb/v1/GbfsValidationReport;
+	public final fun getSource-GV0kOmo ()Ljava/lang/String;
+	public final fun getVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/GbfsVersion$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersion$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersion;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersion;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GbfsVersion$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GbfsVersionSource {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersionSource$Companion;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersionSource;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/GbfsVersionSource$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/GbfsVersionSource$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-PtyuqyM (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-YDdz7OE (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GbfsVersionSource$Companion {
+	public final fun getAutodiscovery-iPVdLY4 ()Ljava/lang/String;
+	public final fun getGbfsVersions-iPVdLY4 ()Ljava/lang/String;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GtfsDataset {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/GtfsDataset$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Lkotlin/time/Instant;
+	public final fun component11 ()Lkotlin/time/Instant;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component13 ()Ljava/lang/Double;
+	public final fun component14 ()Ljava/lang/Double;
+	public final fun component2-eslMtGk ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Lkotlin/time/Instant;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public final fun component9 ()Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;
+	public final fun copy-pRaWaXI (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;)Ldev/sargunv/mobilitydata/mdb/v1/GtfsDataset;
+	public static synthetic fun copy-pRaWaXI$default (Ldev/sargunv/mobilitydata/mdb/v1/GtfsDataset;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/GtfsDataset;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAgencyTimezone ()Ljava/lang/String;
+	public final fun getBoundingBox ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public final fun getDownloadedAt ()Lkotlin/time/Instant;
+	public final fun getFeedId-eslMtGk ()Ljava/lang/String;
+	public final fun getHash ()Ljava/lang/String;
+	public final fun getHashMd5 ()Ljava/lang/String;
+	public final fun getHostedUrl ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getNote ()Ljava/lang/String;
+	public final fun getServiceDateRangeEnd ()Lkotlin/time/Instant;
+	public final fun getServiceDateRangeStart ()Lkotlin/time/Instant;
+	public final fun getUnzippedFolderSizeMb ()Ljava/lang/Double;
+	public final fun getValidationReport ()Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;
+	public final fun getZippedFolderSizeMb ()Ljava/lang/Double;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/GtfsDataset$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/GtfsDataset$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/GtfsDataset;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/GtfsDataset;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/GtfsDataset$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/IsoDateTimeSerializer : kotlinx/serialization/KSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/IsoDateTimeSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lkotlin/time/Instant;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lkotlin/time/Instant;)V
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LatestDataset {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/Double;
+	public final fun component11 ()Ljava/lang/Double;
+	public final fun component12 ()Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public final fun component4 ()Lkotlin/time/Instant;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Lkotlin/time/Instant;
+	public final fun component8 ()Lkotlin/time/Instant;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;)Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;Ljava/lang/String;Ljava/lang/String;Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAgencyTimezone ()Ljava/lang/String;
+	public final fun getBoundingBox ()Ldev/sargunv/mobilitydata/mdb/v1/BoundingBox;
+	public final fun getDownloadedAt ()Lkotlin/time/Instant;
+	public final fun getHash ()Ljava/lang/String;
+	public final fun getHashMd5 ()Ljava/lang/String;
+	public final fun getHostedUrl ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getServiceDateRangeEnd ()Lkotlin/time/Instant;
+	public final fun getServiceDateRangeStart ()Lkotlin/time/Instant;
+	public final fun getUnzippedFolderSizeMb ()Ljava/lang/Double;
+	public final fun getValidationReport ()Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;
+	public final fun getZippedFolderSizeMb ()Ljava/lang/Double;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/LatestDataset$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/LatestDataset;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LatestDataset$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/License {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/License$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Boolean;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Lkotlin/time/Instant;
+	public final fun component8 ()Lkotlin/time/Instant;
+	public final fun component9 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;)Ldev/sargunv/mobilitydata/mdb/v1/License;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/License;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/time/Instant;Lkotlin/time/Instant;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/License;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCreatedAt ()Lkotlin/time/Instant;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLicenseRules ()Ljava/util/List;
+	public final fun getLicenseTags ()Ljava/util/List;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getType ()Ljava/lang/String;
+	public final fun getUpdatedAt ()Lkotlin/time/Instant;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isSpdx ()Ljava/lang/Boolean;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/License$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/License$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/License;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/License;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/License$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LicenseRule {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/LicenseRule$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4-E11_28g ()Ljava/lang/String;
+	public final fun copy-fcIbkt4 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/LicenseRule;
+	public static synthetic fun copy-fcIbkt4$default (Ldev/sargunv/mobilitydata/mdb/v1/LicenseRule;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/LicenseRule;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getType-E11_28g ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/LicenseRule$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/LicenseRule$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/LicenseRule;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/LicenseRule;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LicenseRule$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LicenseRuleType {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/LicenseRuleType$Companion;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/LicenseRuleType;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/LicenseRuleType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/LicenseRuleType$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-enYe66I (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-XdlTQ1g (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LicenseRuleType$Companion {
+	public final fun getCondition-jFehA4Y ()Ljava/lang/String;
+	public final fun getLimitation-jFehA4Y ()Ljava/lang/String;
+	public final fun getPermission-jFehA4Y ()Ljava/lang/String;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Location {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Location$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/Location;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/Location;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Location;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCountry ()Ljava/lang/String;
+	public final fun getCountryCode ()Ljava/lang/String;
+	public final fun getMunicipality ()Ljava/lang/String;
+	public final fun getSubdivisionName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/Location$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/Location$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/Location;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/Location;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Location$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/Integer;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/Integer;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Integer;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/lang/Integer;Ljava/util/List;)Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse;Ljava/lang/Integer;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getResults ()Ljava/util/List;
+	public final fun getTotal ()Ljava/lang/Integer;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LocationSearchResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LocationSearchResult {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResult$Companion;
+	public synthetic fun <init> (Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Integer;
+	public final fun component10 ()Ljava/util/List;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/Integer;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5-CGVm8vI ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy-BXDG4qc (Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResult;
+	public static synthetic fun copy-BXDG4qc$default (Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResult;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAltName ()Ljava/lang/String;
+	public final fun getCountryCode ()Ljava/lang/String;
+	public final fun getCountryName ()Ljava/lang/String;
+	public final fun getDisplayName ()Ljava/lang/String;
+	public final fun getLocationId ()Ljava/lang/Integer;
+	public final fun getLocationType-CGVm8vI ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getParentLocationId ()Ljava/lang/Integer;
+	public final fun getPathNames ()Ljava/util/List;
+	public final fun getSubdivisionCode ()Ljava/lang/String;
+	public final fun getSubdivisionName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/LocationSearchResult$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResult$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResult;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/LocationSearchResult;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LocationSearchResult$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LocationType {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/LocationType$Companion;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/LocationType;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/LocationType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/LocationType$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-w_3I4fE (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-U17LAmI (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/LocationType$Companion {
+	public final fun getCountry-37ILyvM ()Ljava/lang/String;
+	public final fun getMunicipality-37ILyvM ()Ljava/lang/String;
+	public final fun getSubdivision-37ILyvM ()Ljava/lang/String;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/MdbJsonKt {
+	public static final fun getMdbJson ()Lkotlinx/serialization/json/Json;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Metadata {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Metadata$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/Metadata;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/Metadata;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Metadata;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCommitHash ()Ljava/lang/String;
+	public final fun getVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/Metadata$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/Metadata$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/Metadata;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/Metadata;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Metadata$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/RealtimeEntityType {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/RealtimeEntityType$Companion;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/RealtimeEntityType;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/RealtimeEntityType$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/RealtimeEntityType$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun deserialize-cEH6__I (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/String;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public final fun serialize-XAo1d6U (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/String;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/RealtimeEntityType$Companion {
+	public final fun getServiceAlerts-ldeJdVs ()Ljava/lang/String;
+	public final fun getTripUpdates-ldeJdVs ()Ljava/lang/String;
+	public final fun getVehiclePositions-ldeJdVs ()Ljava/lang/String;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Redirect {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/Redirect$Companion;
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-eslMtGk ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy-ng-Yeko (Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/Redirect;
+	public static synthetic fun copy-ng-Yeko$default (Ldev/sargunv/mobilitydata/mdb/v1/Redirect;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/Redirect;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getComment ()Ljava/lang/String;
+	public final fun getTargetId-eslMtGk ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/Redirect$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/Redirect$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/Redirect;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/Redirect;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/Redirect$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/SourceInfo {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/Boolean;
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/Boolean;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/util/List;)Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getApiKeyParameterName ()Ljava/lang/String;
+	public final fun getAuthenticationInfoUrl ()Ljava/lang/String;
+	public final fun getAuthenticationType ()Ljava/lang/Integer;
+	public final fun getLicenseId ()Ljava/lang/String;
+	public final fun getLicenseIsSpdx ()Ljava/lang/Boolean;
+	public final fun getLicenseNotes ()Ljava/lang/String;
+	public final fun getLicenseTags ()Ljava/util/List;
+	public final fun getLicenseUrl ()Ljava/lang/String;
+	public final fun getProducerUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isProducerUrlUnstable ()Ljava/lang/Boolean;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/SourceInfo$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/SourceInfo;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/SourceInfo$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/ValidationReport {
+	public static final field Companion Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport$Companion;
+	public fun <init> ()V
+	public fun <init> (Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lkotlin/time/Instant;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/Integer;
+	public final fun component5 ()Ljava/lang/Integer;
+	public final fun component6 ()Ljava/lang/Integer;
+	public final fun component7 ()Ljava/lang/Integer;
+	public final fun component8 ()Ljava/lang/Integer;
+	public final fun component9 ()Ljava/lang/Integer;
+	public final fun copy (Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;Lkotlin/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFeatures ()Ljava/util/List;
+	public final fun getTotalError ()Ljava/lang/Integer;
+	public final fun getTotalInfo ()Ljava/lang/Integer;
+	public final fun getTotalWarning ()Ljava/lang/Integer;
+	public final fun getUniqueErrorCount ()Ljava/lang/Integer;
+	public final fun getUniqueInfoCount ()Ljava/lang/Integer;
+	public final fun getUniqueWarningCount ()Ljava/lang/Integer;
+	public final fun getUrlHtml ()Ljava/lang/String;
+	public final fun getUrlJson ()Ljava/lang/String;
+	public final fun getValidatedAt ()Lkotlin/time/Instant;
+	public final fun getValidatorVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/mdb/v1/ValidationReport$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/mdb/v1/ValidationReport;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/mdb/v1/ValidationReport$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
