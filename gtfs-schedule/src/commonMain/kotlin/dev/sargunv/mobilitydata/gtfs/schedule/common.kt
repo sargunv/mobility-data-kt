@@ -16,13 +16,14 @@ import kotlinx.serialization.serializer
  * Decode accepts producer rows that omit trailing empty optional fields. RFC 4180 says each record
  * should have the same field count, and GTFS File Requirements cite RFC 4180 for quoting; accepting
  * short rows is producer interoperability rather than a hard GTFS requirement. Present cells stay
- * aligned with the header, and required fields that are omitted still fail during typed decode.
+ * aligned with the header, extra cells past the header are dropped, and required fields that are
+ * omitted still fail during typed decode. A leading UTF-8 BOM is ignored.
  */
 public object GtfsCsv {
-  /** Underlying kotlin-dsv format used after short rows are normalized. */
+  /** Underlying kotlin-dsv format used for GTFS .txt files. */
   public val format: DsvFormat =
     DsvFormat(
-      scheme = Csv.scheme.copy(skipEmptyLines = true),
+      scheme = Csv.scheme.copy(skipEmptyLines = true, allowJaggedRows = true),
       ignoreUnknownKeys = true,
       writeEnumsByName = false,
       treatMissingColumnsAsNull = true,
@@ -36,7 +37,7 @@ public object GtfsCsv {
   public fun <T> decodeFromString(
     deserializer: DeserializationStrategy<T>,
     string: String,
-  ): List<T> = format.decodeFromString(deserializer, padOmittedTrailingCsvFields(string))
+  ): List<T> = format.decodeFromString(deserializer, string)
 
   /** Lazily decodes values of [T] from a UTF-8 GTFS CSV [source]. */
   public inline fun <reified T> decodeFromSource(source: Source): Sequence<T> =
@@ -46,8 +47,7 @@ public object GtfsCsv {
   public fun <T> decodeFromSource(
     source: Source,
     deserializer: DeserializationStrategy<T>,
-  ): Sequence<T> =
-    format.decodeFromSource(source.withPaddedOmittedTrailingCsvFields(), deserializer)
+  ): Sequence<T> = format.decodeFromSource(source, deserializer)
 
   /** Encodes [value] to a GTFS CSV string. */
   public inline fun <reified T> encodeToString(value: List<T>): String =
