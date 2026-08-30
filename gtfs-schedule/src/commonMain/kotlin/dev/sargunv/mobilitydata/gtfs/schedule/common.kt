@@ -11,16 +11,13 @@ import kotlinx.serialization.SerializationStrategy
 import kotlinx.serialization.serializer
 
 /**
- * Preconfigured CSV codec for GTFS .txt files.
+ * Codec for GTFS `.txt` files.
  *
- * Decode accepts producer rows that omit trailing empty optional fields. RFC 4180 says each record
- * should have the same field count, and GTFS File Requirements cite RFC 4180 for quoting; accepting
- * short rows is producer interoperability rather than a hard GTFS requirement. Present cells stay
- * aligned with the header, extra cells past the header are dropped, and required fields that are
- * omitted still fail during typed decode. A leading UTF-8 BOM is ignored.
+ * Feeds often omit trailing optional fields or ship a BOM. Decode accepts both. Extra cells past
+ * the header are dropped.
  */
 public object GtfsCsv {
-  /** Underlying kotlin-dsv format used for GTFS .txt files. */
+  /** Serialization format for GTFS `.txt` files. */
   public val format: DsvFormat =
     DsvFormat(
       scheme = Csv.scheme.copy(skipEmptyLines = true, allowJaggedRows = true),
@@ -29,40 +26,40 @@ public object GtfsCsv {
       treatMissingColumnsAsNull = true,
     )
 
-  /** Decodes a list of [T] from a GTFS CSV string. */
+  /** Decodes records of [T] from [string]. */
   public inline fun <reified T> decodeFromString(string: String): List<T> =
     decodeFromString(serializer(), string)
 
-  /** Decodes a list of values from a GTFS CSV string using [deserializer]. */
+  /** Decodes records from [string] using [deserializer]. */
   public fun <T> decodeFromString(
     deserializer: DeserializationStrategy<T>,
     string: String,
   ): List<T> = format.decodeFromString(deserializer, string)
 
-  /** Lazily decodes values of [T] from a UTF-8 GTFS CSV [source]. */
+  /** Lazily decodes records of [T] from [source]. */
   public inline fun <reified T> decodeFromSource(source: Source): Sequence<T> =
     decodeFromSource(source, serializer())
 
-  /** Lazily decodes values from a UTF-8 GTFS CSV [source] using [deserializer]. */
+  /** Lazily decodes records from [source] using [deserializer]. */
   public fun <T> decodeFromSource(
     source: Source,
     deserializer: DeserializationStrategy<T>,
   ): Sequence<T> = format.decodeFromSource(source, deserializer)
 
-  /** Encodes [value] to a GTFS CSV string. */
+  /** Encodes [value] to a `.txt` string. */
   public inline fun <reified T> encodeToString(value: List<T>): String =
     format.encodeToString(value)
 
-  /** Encodes [value] to a GTFS CSV string using [serializer]. */
+  /** Encodes [value] to a `.txt` string using [serializer]. */
   public fun <T> encodeToString(serializer: SerializationStrategy<T>, value: List<T>): String =
     format.encodeToString(serializer, value)
 
-  /** Encodes [sequence] to [sink] as UTF-8 GTFS CSV. */
+  /** Encodes [sequence] to [sink]. */
   public inline fun <reified T> encodeToSink(sequence: Sequence<T>, sink: Sink) {
     format.encodeToSink(sequence, sink)
   }
 
-  /** Encodes [sequence] to [sink] as UTF-8 GTFS CSV using [serializer]. */
+  /** Encodes [sequence] to [sink] using [serializer]. */
   public fun <T> encodeToSink(
     serializer: SerializationStrategy<T>,
     sequence: Sequence<T>,
