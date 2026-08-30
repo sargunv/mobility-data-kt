@@ -10,6 +10,9 @@ import io.ktor.http.headersOf
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.runTest
 
 class TokenRefreshTest {
@@ -101,6 +104,80 @@ class TokenRefreshTest {
     val client = MdbV1Client(engine, CatalogAuth.Refresh("refresh-1"))
     client.getFeeds().getOrThrow()
     assertEquals(listOf("/v1/tokens/access", "/v1/feeds", "/v1/tokens/access", "/v1/feeds"), paths)
+    client.close()
+  }
+
+  @Test
+  fun concurrentFirstCallsShareOneTokenRefresh() = runTest {
+    val engine = MockEngine { request ->
+      when {
+        request.url.fullPath.endsWith("/v1/tokens/access") -> {
+          delay(50)
+          respond(
+            """{"access_token":"access-1","token_type":"Bearer"}""",
+            HttpStatusCode.OK,
+            headersOf(HttpHeaders.ContentType, "application/json"),
+          )
+        }
+        else ->
+          respond(
+            """[]""",
+            HttpStatusCode.OK,
+            headersOf(HttpHeaders.ContentType, "application/json"),
+          )
+      }
+    }
+
+    val client = MdbV1Client(engine, CatalogAuth.Refresh("refresh-1"))
+    coroutineScope {
+      launch { client.getFeeds().getOrThrow() }
+      launch { client.getFeeds().getOrThrow() }
+    }
+    val tokenPosts = engine.requestHistory.count { it.url.fullPath.endsWith("/v1/tokens/access") }
+    assertEquals(1, tokenPosts)
+    client.close()
+  }
+
+  @Test
+  fun concurrentUnauthorizedRefreshOnce() = runTest {
+    val issued = mutableListOf<String>()
+    var feedGets = 0
+    val engine = MockEngine { request ->
+      when {
+        request.url.fullPath.endsWith("/v1/tokens/access") -> {
+          delay(50)
+          val token = if (issued.isEmpty()) "stale" else "fresh"
+          issued += token
+          respond(
+            """{"access_token":"$token","token_type":"Bearer"}""",
+            HttpStatusCode.OK,
+            headersOf(HttpHeaders.ContentType, "application/json"),
+          )
+        }
+        else -> {
+          feedGets += 1
+          val bearer = request.headers[HttpHeaders.Authorization]
+          if (feedGets > 1 && bearer == "Bearer stale") {
+            respond("invalid token", HttpStatusCode.Unauthorized)
+          } else {
+            respond(
+              """[]""",
+              HttpStatusCode.OK,
+              headersOf(HttpHeaders.ContentType, "application/json"),
+            )
+          }
+        }
+      }
+    }
+
+    val client = MdbV1Client(engine, CatalogAuth.Refresh("refresh-1"))
+    client.getFeeds().getOrThrow()
+    coroutineScope {
+      launch { client.getFeeds().getOrThrow() }
+      launch { client.getFeeds().getOrThrow() }
+    }
+    val tokenPosts = engine.requestHistory.count { it.url.fullPath.endsWith("/v1/tokens/access") }
+    assertEquals(2, tokenPosts)
     client.close()
   }
 }

@@ -54,4 +54,21 @@ class GetFeedsTest {
     assertEquals(FeedId("mdb-1210"), feed.id)
     client.close()
   }
+
+  @Test
+  fun getFeedKeepsSlashInIdAsOneSegment() = runTest {
+    val engine = MockEngine { request ->
+      assertEquals("/v1/feeds/mdb-1%2Fextra", request.url.encodedPath)
+      respond(
+        """{"id":"mdb-1/extra","data_type":"gtfs","provider":"LADOT"}""",
+        HttpStatusCode.OK,
+        headersOf(HttpHeaders.ContentType, "application/json"),
+      )
+    }
+
+    val client = MdbV1Client(engine, CatalogAuth.Access("access-1"))
+    val feed = client.getFeed(FeedId("mdb-1/extra")).getOrThrow()
+    assertEquals(FeedId("mdb-1/extra"), feed.id)
+    client.close()
+  }
 }

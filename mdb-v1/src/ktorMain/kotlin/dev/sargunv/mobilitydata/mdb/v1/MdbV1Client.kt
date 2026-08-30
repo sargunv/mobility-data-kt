@@ -21,6 +21,8 @@ import io.ktor.http.appendPathSegments
 import io.ktor.http.contentType
 import io.ktor.http.takeFrom
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 
 /** HTTP client for the Mobility Database Catalog API v1. */
 public class MdbV1Client
@@ -29,6 +31,7 @@ internal constructor(
   private val auth: CatalogAuth,
   private val baseUrl: String,
 ) : AutoCloseable {
+  private val tokenMutex = Mutex()
   private var accessToken: String? =
     when (auth) {
       is CatalogAuth.Access -> auth.accessToken
@@ -73,7 +76,7 @@ internal constructor(
    * @return The page of feeds, or an error
    */
   public suspend fun getFeeds(query: FeedQuery = FeedQuery()): Result<List<Feed>> =
-    catalogGet("v1/feeds") { appendFeedQuery(query) }
+    catalogGet("v1", "feeds") { appendFeedQuery(query) }
 
   /**
    * Fetches one feed by catalog id.
@@ -81,23 +84,21 @@ internal constructor(
    * @param id Catalog feed id, such as `mdb-1210`
    * @return The feed, or an error
    */
-  public suspend fun getFeed(id: FeedId): Result<Feed> = catalogGet("v1/feeds/${id.value}")
+  public suspend fun getFeed(id: FeedId): Result<Feed> = catalogGet("v1", "feeds", id.value)
 
   override fun close(): Unit = httpClient.close()
 
   private suspend inline fun <reified T> catalogGet(
-    path: String,
+    vararg pathSegments: String,
     crossinline query: URLBuilder.() -> Unit = {},
   ): Result<T> = suspendRunCatching {
-    if (accessToken == null && auth is CatalogAuth.Refresh) {
-      refreshAccessToken()
-    }
+    val tokenAtStart = ensureAccessToken()
     try {
-      getOnce<T>(path, query)
+      getOnce<T>(pathSegments, query)
     } catch (e: ClientRequestException) {
       if (e.response.status == HttpStatusCode.Unauthorized && auth is CatalogAuth.Refresh) {
-        refreshAccessToken()
-        getOnce<T>(path, query)
+        refreshAccessTokenIfStale(tokenAtStart)
+        getOnce<T>(pathSegments, query)
       } else {
         throw e
       }
@@ -105,7 +106,7 @@ internal constructor(
   }
 
   private suspend inline fun <reified T> getOnce(
-    path: String,
+    pathSegments: Array<out String>,
     crossinline query: URLBuilder.() -> Unit,
   ): T =
     httpClient
@@ -113,14 +114,35 @@ internal constructor(
         method = HttpMethod.Get
         url {
           takeFrom(baseUrl)
-          appendPathSegments(path.split("/"))
+          appendPathSegments(pathSegments.toList(), encodeSlash = true)
           query()
         }
         accessToken?.let { header(HttpHeaders.Authorization, "Bearer $it") }
       }
       .body()
 
-  private suspend fun refreshAccessToken() {
+  private suspend fun ensureAccessToken(): String? {
+    accessToken?.let {
+      return it
+    }
+    if (auth !is CatalogAuth.Refresh) return null
+    return tokenMutex.withLock {
+      accessToken?.let {
+        return it
+      }
+      fetchNewAccessToken()
+    }
+  }
+
+  private suspend fun refreshAccessTokenIfStale(staleToken: String?) {
+    if (auth !is CatalogAuth.Refresh) return
+    tokenMutex.withLock {
+      if (accessToken != staleToken) return
+      fetchNewAccessToken()
+    }
+  }
+
+  private suspend fun fetchNewAccessToken(): String {
     val refreshToken = (auth as CatalogAuth.Refresh).refreshToken
     val token =
       httpClient
@@ -133,7 +155,9 @@ internal constructor(
           setBody(AccessTokenRequest(refreshToken))
         }
         .body<AccessToken>()
-    accessToken = token.accessToken ?: error("catalog token response missing access_token")
+    val access = token.accessToken ?: error("catalog token response missing access_token")
+    accessToken = access
+    return access
   }
 
   /** Named constants for [MdbV1Client]. */
