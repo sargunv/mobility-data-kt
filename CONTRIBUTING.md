@@ -21,8 +21,7 @@ the first `mise run`/`mise exec`; you can also fetch them on demand:
 mise deps
 ```
 
-If you cloned before running `mise install`, the sample files start out as Git-LFS pointer files;
-running the command above materializes their contents.
+A fresh clone keeps `sample-data` as Git-LFS pointers until that fetch runs.
 
 ## IDE Setup
 
