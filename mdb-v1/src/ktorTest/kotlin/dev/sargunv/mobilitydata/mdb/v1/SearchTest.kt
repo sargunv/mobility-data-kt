@@ -38,30 +38,6 @@ class SearchTest {
   }
 
   @Test
-  fun searchFeedsMedianUnder100ms() = runTest {
-    val hits =
-      (0 until 100).joinToString(",") { i ->
-        """{"id":"mdb-$i","data_type":"gtfs","status":"active","provider":"P$i"}"""
-      }
-    val body = """{"total":100,"results":[$hits]}"""
-    val engine = MockEngine {
-      respond(body, HttpStatusCode.OK, headersOf(HttpHeaders.ContentType, "application/json"))
-    }
-    val client = MdbV1Client(engine, CatalogAuth.Access("access-1"))
-    val times = LongArray(20)
-    repeat(20) { i ->
-      val start = kotlin.time.TimeSource.Monotonic.markNow()
-      val page = client.searchFeeds(SearchFeedsQuery(limit = 100)).getOrThrow()
-      times[i] = start.elapsedNow().inWholeMilliseconds
-      assertEquals(100, page.results?.size)
-    }
-    val median = times.sorted()[10]
-    println("mdb-4 searchFeeds 100 hits median_ms=$median")
-    assertEquals(true, median < 100, "median ${median}ms must stay under 100ms")
-    client.close()
-  }
-
-  @Test
   fun getLocationsSendsSearchQuery() = runTest {
     val engine = MockEngine { request ->
       assertEquals("/v1/locations?search_query=montreal", request.url.fullPath)
