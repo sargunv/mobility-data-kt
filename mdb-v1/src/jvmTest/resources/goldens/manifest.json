@@ -21,7 +21,7 @@
         "file": "get_gtfs_feed_gtfs_rt_feeds.json",
         "decode_as": "List<Feed.GtfsRt>",
         "status": 200,
-        "bytes": 3
+        "bytes": 3313
     },
     {
         "file": "get_gtfs_feed_availability.json",
@@ -51,7 +51,7 @@
         "file": "get_locations.json",
         "decode_as": "LocationSearchResponse",
         "status": 200,
-        "bytes": 34
+        "bytes": 1872
     },
     { "file": "get_licenses.json", "decode_as": "List<License>", "status": 200, "bytes": 1997 },
     { "file": "get_license.json", "decode_as": "License", "status": 200, "bytes": 1539 }

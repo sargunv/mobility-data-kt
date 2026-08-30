@@ -1,1 +1,70 @@
-{ "total": 0, "results": [] }
+{
+    "total": 224,
+    "results": [
+        {
+            "location_id": 303427,
+            "parent_location_id": null,
+            "name": "Afghanistan",
+            "alt_name": null,
+            "location_type": "country",
+            "country_name": "Afghanistan",
+            "country_code": "AF",
+            "subdivision_name": null,
+            "subdivision_code": null,
+            "path_names": ["Afghanistan"],
+            "display_name": "Afghanistan"
+        },
+        {
+            "location_id": 53292,
+            "parent_location_id": null,
+            "name": "Albania",
+            "alt_name": null,
+            "location_type": "country",
+            "country_name": "Albania",
+            "country_code": "AL",
+            "subdivision_name": null,
+            "subdivision_code": null,
+            "path_names": ["Albania"],
+            "display_name": "Albania"
+        },
+        {
+            "location_id": 192756,
+            "parent_location_id": null,
+            "name": "Algeria",
+            "alt_name": null,
+            "location_type": "country",
+            "country_name": "Algeria",
+            "country_code": "DZ",
+            "subdivision_name": null,
+            "subdivision_code": null,
+            "path_names": ["Algeria"],
+            "display_name": "Algeria"
+        },
+        {
+            "location_id": 9407,
+            "parent_location_id": null,
+            "name": "Andorra",
+            "alt_name": null,
+            "location_type": "country",
+            "country_name": "Andorra",
+            "country_code": "AD",
+            "subdivision_name": null,
+            "subdivision_code": null,
+            "path_names": ["Andorra"],
+            "display_name": "Andorra"
+        },
+        {
+            "location_id": 195267,
+            "parent_location_id": null,
+            "name": "Angola",
+            "alt_name": null,
+            "location_type": "country",
+            "country_name": "Angola",
+            "country_code": "AO",
+            "subdivision_name": null,
+            "subdivision_code": null,
+            "path_names": ["Angola"],
+            "display_name": "Angola"
+        }
+    ]
+}
