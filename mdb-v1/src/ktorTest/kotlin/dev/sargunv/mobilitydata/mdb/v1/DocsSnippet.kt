@@ -17,6 +17,7 @@ class DocsSnippet {
           is Feed.Gtfs -> println("GTFS ${feed.id} ${feed.provider}")
           is Feed.GtfsRt -> println("GTFS-RT ${feed.id} ${feed.provider}")
           is Feed.Gbfs -> println("GBFS ${feed.id} ${feed.provider}")
+          is Feed.Unknown -> println("${feed.dataType} ${feed.id} ${feed.provider}")
         }
       }
     }
