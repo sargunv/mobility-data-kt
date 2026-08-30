@@ -156,6 +156,10 @@ xcodebuild -downloadPlatform tvOS
 xcodebuild -downloadPlatform watchOS
 """
 
+[tasks."check:mdb-spec"]
+description = "Fail when the pinned catalog YAML hashes disagree with pin.toml"
+run = "scripts/mdb-spec-check.sh"
+
 [tasks.check]
 description = "Run all linting and formatting checks"
 run = "hk check --all"

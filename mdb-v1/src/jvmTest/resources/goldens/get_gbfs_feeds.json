@@ -1,0 +1,184 @@
+[{
+    "id": "gbfs-159",
+    "data_type": "gbfs",
+    "created_at": "2026-01-12T17:00:02.007711Z",
+    "external_ids": [{ "external_id": "159", "source": "gbfs" }],
+    "provider": "Yoio Erfurt",
+    "feed_contact_email": "support@yourcar-carsharing.de",
+    "source_info": {
+        "producer_url": "https://yoio.rideatom.com/gbfs/159/v3.0/gbfs",
+        "is_producer_url_unstable": null,
+        "authentication_type": 0,
+        "authentication_info_url": null,
+        "api_key_parameter_name": null,
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_id": "CC-BY-4.0",
+        "license_is_spdx": true,
+        "license_notes": null,
+        "license_tags": [
+            "copyleft:none",
+            "domain:content",
+            "domain:data",
+            "family:CC",
+            "license:creative-commons",
+            "notes:attribution-required",
+            "spdx:fsf-free"
+        ]
+    },
+    "redirects": [],
+    "locations": [
+        {
+            "country_code": "DE",
+            "country": "Germany",
+            "subdivision_name": "Thuringia",
+            "municipality": "Erfurt"
+        }
+    ],
+    "system_id": "159",
+    "provider_url": "https://yoio.app/",
+    "versions": [
+        {
+            "version": "2.2",
+            "created_at": "2026-01-13T01:07:40.112707Z",
+            "last_updated_at": "2026-08-30T02:06:14.454839Z",
+            "source": "gbfs_versions",
+            "endpoints": [
+                {
+                    "name": "gbfs",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v2.2/gbfs",
+                    "language": "en",
+                    "is_feature": false
+                },
+                {
+                    "name": "gbfs_versions",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v2.2/gbfs_versions",
+                    "language": "en",
+                    "is_feature": true
+                },
+                {
+                    "name": "system_information",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v2.2/system_information",
+                    "language": "en",
+                    "is_feature": false
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v2.2/station_information",
+                    "language": "en",
+                    "is_feature": false
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v2.2/station_status",
+                    "language": "en",
+                    "is_feature": true
+                },
+                {
+                    "name": "free_bike_status",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v2.2/free_bike_status",
+                    "language": "en",
+                    "is_feature": true
+                },
+                {
+                    "name": "vehicle_types",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v2.2/vehicle_types",
+                    "language": "en",
+                    "is_feature": false
+                },
+                {
+                    "name": "system_pricing_plans",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v2.2/system_pricing_plans",
+                    "language": "en",
+                    "is_feature": false
+                },
+                {
+                    "name": "geofencing_zones",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v2.2/geofencing_zones",
+                    "language": "en",
+                    "is_feature": true
+                }
+            ],
+            "latest_validation_report": {
+                "validated_at": "2026-08-30T02:06:14.454839Z",
+                "total_error": 0,
+                "report_summary_url": "https://storage.googleapis.com/mobilitydata-gbfs-snapshots-prod/gbfs-159/2.2/report_summary_20260830020611.json",
+                "validator_version": "1.0.18"
+            }
+        },
+        {
+            "version": "3.0",
+            "created_at": "2026-01-13T01:07:40.112707Z",
+            "last_updated_at": "2026-08-30T02:06:14.454839Z",
+            "source": "autodiscovery",
+            "endpoints": [
+                {
+                    "name": "gbfs",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v3.0/gbfs",
+                    "language": null,
+                    "is_feature": false
+                },
+                {
+                    "name": "gbfs_versions",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v3.0/gbfs_versions",
+                    "language": null,
+                    "is_feature": true
+                },
+                {
+                    "name": "system_information",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v3.0/system_information",
+                    "language": null,
+                    "is_feature": false
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v3.0/station_information",
+                    "language": null,
+                    "is_feature": false
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v3.0/station_status",
+                    "language": null,
+                    "is_feature": true
+                },
+                {
+                    "name": "vehicle_status",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v3.0/vehicle_status",
+                    "language": null,
+                    "is_feature": true
+                },
+                {
+                    "name": "system_pricing_plans",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v3.0/system_pricing_plans",
+                    "language": null,
+                    "is_feature": true
+                },
+                {
+                    "name": "geofencing_zones",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v3.0/geofencing_zones",
+                    "language": null,
+                    "is_feature": true
+                },
+                {
+                    "name": "vehicle_types",
+                    "url": "https://yoio.rideatom.com/gbfs/159/v3.0/vehicle_types",
+                    "language": null,
+                    "is_feature": true
+                }
+            ],
+            "latest_validation_report": {
+                "validated_at": "2026-08-30T02:06:14.454839Z",
+                "total_error": 0,
+                "report_summary_url": "https://storage.googleapis.com/mobilitydata-gbfs-snapshots-prod/gbfs-159/3.0/report_summary_20260830020611.json",
+                "validator_version": "1.0.18"
+            }
+        }
+    ],
+    "bounding_box": {
+        "minimum_latitude": 50.94302,
+        "maximum_latitude": 51.024948,
+        "minimum_longitude": 10.988325,
+        "maximum_longitude": 11.087162
+    },
+    "bounding_box_generated_at": "2026-08-30T05:27:29.949675"
+}]

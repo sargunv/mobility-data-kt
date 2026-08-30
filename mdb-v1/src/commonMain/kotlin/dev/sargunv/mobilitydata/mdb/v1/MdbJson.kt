@@ -22,7 +22,11 @@ public val MdbJson: Json = Json {
 @OptIn(ExperimentalTime::class)
 public typealias IsoDateTime = @Serializable(with = IsoDateTimeSerializer::class) Instant
 
-/** Serializer for [Instant] that reads and writes ISO-8601 date-time strings. */
+/**
+ * Serializer for [Instant] that reads and writes ISO-8601 date-time strings.
+ *
+ * The catalog sometimes omits the offset. Those values are UTC.
+ */
 @OptIn(ExperimentalTime::class)
 public object IsoDateTimeSerializer : KSerializer<Instant> {
   private val delegate = String.serializer()
@@ -33,5 +37,14 @@ public object IsoDateTimeSerializer : KSerializer<Instant> {
     delegate.serialize(encoder, value.toString())
   }
 
-  override fun deserialize(decoder: Decoder): Instant = Instant.parse(delegate.deserialize(decoder))
+  override fun deserialize(decoder: Decoder): Instant =
+    Instant.parse(withUtcOffset(delegate.deserialize(decoder)))
+}
+
+private fun withUtcOffset(value: String): String {
+  val time = value.substringAfter('T', missingDelimiterValue = "")
+  if (time.endsWith("Z", ignoreCase = true) || time.contains('+') || time.contains('-')) {
+    return value
+  }
+  return "${value}Z"
 }

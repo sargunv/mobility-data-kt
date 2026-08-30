@@ -1,0 +1,1034 @@
+{
+    "id": "gbfs-zem_ch",
+    "data_type": "gbfs",
+    "created_at": "2024-08-22T13:21:34.147617Z",
+    "external_ids": [{ "external_id": "zem_ch", "source": "gbfs" }],
+    "provider": "2EM Car Sharing",
+    "feed_contact_email": "contact@2em.ch",
+    "source_info": {
+        "producer_url": "https://api.mobidata-bw.de/sharing/gbfs/v3/zem_ch/gbfs",
+        "is_producer_url_unstable": null,
+        "authentication_type": 0,
+        "authentication_info_url": null,
+        "api_key_parameter_name": null,
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_id": "CC-BY-4.0",
+        "license_is_spdx": true,
+        "license_notes": null,
+        "license_tags": [
+            "copyleft:none",
+            "domain:content",
+            "domain:data",
+            "family:CC",
+            "license:creative-commons",
+            "notes:attribution-required",
+            "spdx:fsf-free"
+        ]
+    },
+    "redirects": [],
+    "locations": [
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District de Lausanne"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Neuchâtel",
+            "municipality": "Neuchâtel"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Bülach"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Fribourg",
+            "municipality": "District de la Glâne"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Geneva"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Conthey"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District de Nyon"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District de la Riviera-Pays-d’Enhaut"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Meilen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District de Morges"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Bern",
+            "municipality": "Bernese Jura administrative district"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District de Lavaux-Oron"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Sierre"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Fribourg",
+            "municipality": "Sarine District"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District de l'Ouest lausannois"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Bern",
+            "municipality": "Biel/Bienne administrative district"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Martigny"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Val de Bagnes"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District du Gros-de-Vaud"
+        },
+        {
+            "country_code": "CA",
+            "country": "Canada",
+            "subdivision_name": "Quebec",
+            "municipality": "Sainte-Catherine"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Monthey"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Bern",
+            "municipality": "Bern-Mittelland administrative district"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Baden"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Fribourg",
+            "municipality": "See District"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District d'Aigle"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Brugg"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Schwyz",
+            "municipality": "Schwyz"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Bern",
+            "municipality": "Emmental administrative district"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District du Jura-Nord vaudois"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Uster"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Lucerne",
+            "municipality": "Lucerne"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Ticino",
+            "municipality": "Lugano"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "District Zurich"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Basel-Country",
+            "municipality": "Bezirk Liestal"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Thurgau",
+            "municipality": "Bezirk Frauenfeld"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Fribourg",
+            "municipality": "District de la Veveyse"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Basel-Country",
+            "municipality": "Bezirk Arlesheim"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Bern",
+            "municipality": "Thun administrative district"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Jura",
+            "municipality": "District des Franches-Montagnes"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Pfäffikon"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Bern",
+            "municipality": "Seeland administrative district"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Grisons",
+            "municipality": "Val Müstair"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Fribourg",
+            "municipality": "District de la Broye"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Winterthur"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Zurzach"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Horgen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Basel-City",
+            "municipality": "Basel-City"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "St. Gallen",
+            "municipality": "Wahlkreis Rorschach"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Schaffhausen",
+            "municipality": "Schaffhausen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Thurgau",
+            "municipality": "Bezirk Kreuzlingen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Dielsdorf"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Dietikon"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Fribourg",
+            "municipality": "Gruyère District"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Bezirk Solothurn"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Ticino",
+            "municipality": "Distretto di Leventina"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Rheinfelden"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Hinwil"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Uri",
+            "municipality": "Uri"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Lenzburg"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Glarus",
+            "municipality": "Glarus"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Bern",
+            "municipality": "Oberaargau administrative district"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zug",
+            "municipality": "Zug"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Muri"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Bern",
+            "municipality": "Frutigen-Niedersimmental administrative district"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Bremgarten"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Thurgau",
+            "municipality": "Bezirk Münchwilen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Kulm"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "District de la Broye-Vully"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Bezirk Olten"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Sion"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Schwyz",
+            "municipality": "Einsiedeln"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Grisons",
+            "municipality": "Imboden"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Ticino",
+            "municipality": "Distretto di Bellinzona"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Bezirk Dorneck"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "St. Gallen",
+            "municipality": "Wahlkreis St. Gallen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Aarau"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "St. Gallen",
+            "municipality": "Wahlkreis Werdenberg"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Saint-Maurice"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "St. Gallen",
+            "municipality": "Wahlkreis Sarganserland"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Bern",
+            "municipality": "Interlaken-Oberhasli administrative district"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Affoltern"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Thurgau",
+            "municipality": "Bezirk Weinfelden"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Fribourg",
+            "municipality": "Sensebezirk"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Grisons",
+            "municipality": "Ferrera"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Thurgau",
+            "municipality": "Bezirk Arbon"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Ticino",
+            "municipality": "Distretto di Locarno"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Zofingen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Ticino",
+            "municipality": "Distretto di Lugano"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Brig"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "St. Gallen",
+            "municipality": "Wahlkreis See-Gaster"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Schwyz",
+            "municipality": "Höfe"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Jura",
+            "municipality": "District de Delémont"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Bezirk Wasseramt"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Grisons",
+            "municipality": "Scuol"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Ticino",
+            "municipality": "Distretto di Vallemaggia"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Basel-Country",
+            "municipality": "Bezirk Sissach"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "St. Gallen",
+            "municipality": "Wahlkreis Rheintal"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Appenzell Innerrhoden",
+            "municipality": "Appenzell Innerrhoden"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Obwalden",
+            "municipality": "Obwalden"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Schwyz",
+            "municipality": "March"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Bezirk Gösgen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Visp"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "St. Gallen",
+            "municipality": "Wahlkreis Wil"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Bezirk Thierstein"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Grisons",
+            "municipality": "Landquart"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Grisons",
+            "municipality": "Plessur"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Aargau",
+            "municipality": "Bezirk Laufenburg"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Nidwalden",
+            "municipality": "Nidwalden"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Zurich",
+            "municipality": "Bezirk Andelfingen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Leuk"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Appenzell Ausserrhoden",
+            "municipality": "Hinterland"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Orsières"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Grisons",
+            "municipality": "Prättigau/Davos"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Neuchâtel",
+            "municipality": "La Chaux-de-Fonds"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Le Grand-Saconnex"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Thônex"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Meyrin"
+        },
+        {
+            "country_code": "FR",
+            "country": "France",
+            "subdivision_name": "Bourgogne-Franche-Comté",
+            "municipality": "Belfort"
+        },
+        {
+            "country_code": "FR",
+            "country": "France",
+            "subdivision_name": "Provence-Alpes-Côte d'Azur",
+            "municipality": "Mougins"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Puplinge"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Saint-Gingolph"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Troistorrents"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Basel-City",
+            "municipality": "Basel"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Vouvry"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Grisons",
+            "municipality": "Albula"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Basel-Country",
+            "municipality": "Allschwil"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Collex-Bossy"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Hofstetten-Flüh"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "Arzier"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Veyrier"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "Le Chenit"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "Gingins"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Neuchâtel",
+            "municipality": "Val-de-Travers"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Bardonnex"
+        },
+        {
+            "country_code": "FR",
+            "country": "France",
+            "subdivision_name": "Grand Est",
+            "municipality": "Saint-Louis"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Bellevue"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "Chavannes-de-Bogis"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Versoix"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "Sainte-Croix"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Bättwil"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Perly-Certoux"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "Commugny"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Satigny"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Vionnaz"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Salvan"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Neuchâtel",
+            "municipality": "Le Locle"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Vaud",
+            "municipality": "Vallorbe"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Anières"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Collombey-Muraz"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Bezirk Lebern"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Geneva",
+            "municipality": "Avully"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Appenzell Ausserrhoden",
+            "municipality": "Mittelland"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Wallis",
+            "municipality": "Evionnaz"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Ticino",
+            "municipality": "Bellinzona"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Solothurn",
+            "municipality": "Bezirk Gäu"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Basel-Country",
+            "municipality": "Bezirk Laufen"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "Neuchâtel",
+            "municipality": "La Brévine"
+        },
+        {
+            "country_code": "CH",
+            "country": "Switzerland",
+            "subdivision_name": "St. Gallen",
+            "municipality": "Wahlkreis Toggenburg"
+        }
+    ],
+    "system_id": "zem_ch",
+    "provider_url": "https://www.2em.ch",
+    "versions": [
+        {
+            "version": "3.0",
+            "created_at": "2026-03-13T00:00:43.119152Z",
+            "last_updated_at": "2026-08-30T01:07:43.100282Z",
+            "source": "autodiscovery",
+            "endpoints": [
+                {
+                    "name": "gbfs",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/zem_ch/gbfs",
+                    "language": null,
+                    "is_feature": false
+                },
+                {
+                    "name": "system_information",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/zem_ch/system_information",
+                    "language": null,
+                    "is_feature": false
+                },
+                {
+                    "name": "station_information",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/zem_ch/station_information",
+                    "language": null,
+                    "is_feature": false
+                },
+                {
+                    "name": "station_status",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/zem_ch/station_status",
+                    "language": null,
+                    "is_feature": true
+                },
+                {
+                    "name": "vehicle_types",
+                    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/zem_ch/vehicle_types",
+                    "language": null,
+                    "is_feature": true
+                }
+            ],
+            "latest_validation_report": {
+                "validated_at": "2026-08-30T01:07:43.100282Z",
+                "total_error": 1,
+                "report_summary_url": "https://storage.googleapis.com/mobilitydata-gbfs-snapshots-prod/gbfs-zem_ch/3.0/report_summary_20260830010740.json",
+                "validator_version": "1.0.18"
+            }
+        }
+    ],
+    "bounding_box": {
+        "minimum_latitude": 0.0,
+        "maximum_latitude": 47.698708,
+        "minimum_longitude": -73.551414,
+        "maximum_longitude": 10.369739
+    },
+    "bounding_box_generated_at": "2026-08-23T02:35:26.998944"
+}

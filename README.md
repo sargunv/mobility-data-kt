@@ -16,5 +16,6 @@ It implements clients for:
 - General Transit Feed Specification (GTFS)
 - General Bikeshare Feed Specification (GBFS)
 - General On-Demand Feed Specification (GOFS)
+- Mobility Database Catalog API
 
 See the [project site](https://code.sargunv.dev/mobility-data-kt/) for more info.

@@ -16,6 +16,12 @@ local allSteps = new Mapping<String, Step> {
     exclusive = true
   }
 
+  // Pin identity for the vendored Mobility Database Catalog OpenAPI.
+  ["mdb-spec"] {
+    glob = List("mdb-v1/specs/**")
+    check = "scripts/mdb-spec-check.sh"
+  }
+
   // generators
   ["abi-dump"] {
     glob = List("**/src/commonMain/kotlin/**/*.kt", "**/api/*.api", "**/api/*.klib.api")

@@ -1,0 +1,31 @@
+{
+    "id": "mdb-195",
+    "data_type": "gtfs",
+    "created_at": "2024-02-08T00:00:00Z",
+    "external_ids": [
+        { "external_id": "10-15-transit/936", "source": "transitfeeds" },
+        { "external_id": "195", "source": "mdb" }
+    ],
+    "provider": "10-15 Transit",
+    "feed_contact_email": "support+test+10-15transit-ia-us@trilliumtransit.com",
+    "source_info": {
+        "producer_url": "http://data.trilliumtransit.com/gtfs/10-15transit-ia-us/10-15transit-ia-us.zip",
+        "is_producer_url_unstable": null,
+        "authentication_type": 0,
+        "authentication_info_url": "",
+        "api_key_parameter_name": "",
+        "license_url": "",
+        "license_id": null,
+        "license_is_spdx": null,
+        "license_notes": null,
+        "license_tags": null
+    },
+    "redirects": [],
+    "status": "active",
+    "official": true,
+    "official_updated_at": "2025-01-22T20:19:42.509622",
+    "seasonal": false,
+    "feed_name": "",
+    "note": "",
+    "related_links": []
+}

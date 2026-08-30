@@ -10,7 +10,7 @@
         "kotlin-js-store",
         "**/*.api",
         "sample-data",
-        "mdb-v1/specs"
+        "mdb-v1/specs/*.yaml"
     ],
     "json": { "indentWidth": 4, "preferSingleLine": true },
     "markdown": { "textWrap": "always" },
