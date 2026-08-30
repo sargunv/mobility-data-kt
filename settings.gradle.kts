@@ -17,4 +17,5 @@ include(
   ":gofs-v1",
   ":gtfs-schedule",
   ":gtfs-realtime",
+  ":mdb-v1",
 )

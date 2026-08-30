@@ -1,0 +1,2235 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Mobility Database Catalog
+  description: |
+    API for the Mobility Database Catalog. See [https://mobilitydatabase.org/](https://mobilitydatabase.org/).
+
+    The Mobility Database API uses OAuth2 authentication.
+    To initiate a successful API request, an access token must be included as a bearer token in the HTTP header. Access tokens are valid for one hour. To obtain an access token, you&apos;ll first need a refresh token, which is long-lived and does not expire.
+  termsOfService: https://mobilitydatabase.org/terms-and-conditions
+  contact:
+    name: MobilityData
+    url: https://mobilitydata.org/
+    email: api@mobilitydata.org
+  license:
+    name: MobilityData License
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+  - url: https://api.mobilitydatabase.org/
+    description: Prod release environment
+  - url: https://api-qa.mobilitydatabase.org/
+    description: Pre-prod environment
+  - url: https://api-dev.mobilitydatabase.org/
+    description: Development environment
+  - url: http://localhost:8080/
+    description: Local development environment
+security:
+  - Authentication: []
+tags:
+  - name: feeds
+    description: Feeds of the Mobility Database
+  - name: datasets
+    description: Datasets of the Mobility Database
+  - name: metadata
+    description: Metadata about the API
+  - name: beta
+    description: Beta endpoints of the API.
+  - name: licenses
+    description: Licenses of the Mobility Database
+  - name: locations
+    description: Locations in the Mobility Database
+paths:
+  /v1/feeds:
+    get:
+      description: Get some (or all) feeds from the Mobility Database. The items are sorted by provider in alphabetical ascending order.
+      tags:
+        - feeds
+      operationId: getFeeds
+      parameters:
+        - $ref: '#/components/parameters/limit_query_param_feeds_endpoint'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/status'
+        - $ref: '#/components/parameters/provider'
+        - $ref: '#/components/parameters/producer_url'
+        - $ref: '#/components/parameters/is_official_query_param'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: |
+            Successful pull of the feeds common info.  This info has a reduced set of fields that are common to all types of feeds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Feeds'
+  /v1/feeds/{id}:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_path_param'
+    get:
+      description: Get the specified feed from the Mobility Database.
+      tags:
+        - feeds
+      operationId: getFeed
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: |
+            Successful pull of the feeds common info for the provided ID. This info has a reduced set of fields that are common to all types of feeds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Feed'
+  /v1/gtfs_feeds:
+    get:
+      description: Get some (or all) GTFS feeds from the Mobility Database.
+      tags:
+        - feeds
+      operationId: getGtfsFeeds
+      parameters:
+        - $ref: '#/components/parameters/limit_query_param_gtfs_feeds_endpoint'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/provider'
+        - $ref: '#/components/parameters/producer_url'
+        - $ref: '#/components/parameters/country_code'
+        - $ref: '#/components/parameters/subdivision_name'
+        - $ref: '#/components/parameters/municipality'
+        - $ref: '#/components/parameters/dataset_latitudes'
+        - $ref: '#/components/parameters/dataset_longitudes'
+        - $ref: '#/components/parameters/bounding_filter_method'
+        - $ref: '#/components/parameters/is_official_query_param'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the GTFS feeds info.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsFeeds'
+  /v1/gtfs_rt_feeds:
+    get:
+      description: Get some (or all) GTFS Realtime feeds from the Mobility Database.
+      tags:
+        - feeds
+      operationId: getGtfsRtFeeds
+      parameters:
+        - $ref: '#/components/parameters/limit_query_param_gtfs_rt_feeds_endpoint'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/provider'
+        - $ref: '#/components/parameters/producer_url'
+        - $ref: '#/components/parameters/entity_types'
+        - $ref: '#/components/parameters/country_code'
+        - $ref: '#/components/parameters/subdivision_name'
+        - $ref: '#/components/parameters/municipality'
+        - $ref: '#/components/parameters/is_official_query_param'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the GTFS Realtime feeds info.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsRTFeeds'
+  /v1/gbfs_feeds:
+    get:
+      description: Get GBFS feeds from the Mobility Database.
+      tags:
+        - feeds
+      operationId: getGbfsFeeds
+      parameters:
+        - $ref: '#/components/parameters/limit_query_param_gbfs_feeds_endpoint'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/provider'
+        - $ref: '#/components/parameters/producer_url'
+        - $ref: '#/components/parameters/country_code'
+        - $ref: '#/components/parameters/subdivision_name'
+        - $ref: '#/components/parameters/municipality'
+        - $ref: '#/components/parameters/system_id_param'
+        - $ref: '#/components/parameters/version_param'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the GBFS feeds info.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GbfsFeeds'
+  /v1/gtfs_feeds/{id}:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_path_param'
+    get:
+      description: Get the specified GTFS feed from the Mobility Database. Once a week, we check if the latest dataset has been updated and, if so, we update it in our system accordingly.
+      tags:
+        - feeds
+      operationId: getGtfsFeed
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the requested feed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsFeed'
+  /v1/gtfs_rt_feeds/{id}:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_path_param'
+    get:
+      description: Get the specified GTFS Realtime feed from the Mobility Database.
+      tags:
+        - feeds
+      operationId: getGtfsRtFeed
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the requested feed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsRTFeed'
+  /v1/gbfs_feeds/{id}:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_path_param'
+    get:
+      description: Get the specified GBFS feed from the Mobility Database.
+      tags:
+        - feeds
+      operationId: getGbfsFeed
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the requested feed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GbfsFeed'
+  /v1/gtfs_feeds/{id}/datasets:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_of_datasets_path_param'
+    get:
+      description: Get a list of datasets associated with a GTFS feed. Once a day, we check whether the latest dataset has changed; if it has, we update it in our system. The list is sorted from newest to oldest.
+      tags:
+        - feeds
+      operationId: getGtfsFeedDatasets
+      parameters:
+        - $ref: '#/components/parameters/latest_query_param'
+        - $ref: '#/components/parameters/limit_query_param_datasets_endpoint'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/downloaded_after'
+        - $ref: '#/components/parameters/downloaded_before'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the requested datasets.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsDatasets'
+  /v1/gtfs_feeds/{id}/gtfs_rt_feeds:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_path_param'
+    get:
+      description: Get a list of GTFS Realtime related to a GTFS feed.
+      tags:
+        - feeds
+      operationId: getGtfsFeedGtfsRtFeeds
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the GTFS Realtime feeds info related to a GTFS feed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsRTFeeds'
+  /v1/gtfs_feeds/{id}/availability:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_path_param'
+    get:
+      description: |
+        Returns historical availability checks for a GTFS feed, ordered by checked_at from oldest to newest. Availability is based on scheduled lightweight HTTP checks (HEAD or ranged GET requests) and does not download or validate the full GTFS dataset.
+      tags:
+        - feeds
+      operationId: getGtfsFeedAvailability
+      parameters:
+        - $ref: '#/components/parameters/availability_from'
+        - $ref: '#/components/parameters/availability_to'
+        - $ref: '#/components/parameters/limit_query_param_availability_endpoint'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/availability_sort'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Availability history for the GTFS feed, ordered by checked_at (newest first by default).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsFeedAvailabilityResponse'
+        '400':
+          description: Invalid request parameters.
+        '404':
+          description: GTFS feed not found.
+        '500':
+          description: Internal server error.
+  /v1/gtfs_feeds/{id}/reliability:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_path_param'
+    get:
+      description: |
+        Returns the Seal of Reliability breakdown for a GTFS feed: whether the feed currently holds the seal, and the verdict for each of the six criteria.
+      tags:
+        - feeds
+        - beta
+      operationId: getGtfsFeedReliability
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Seal of Reliability breakdown for the GTFS feed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeedReliabilityReport'
+        '404':
+          description: GTFS feed not found.
+        '500':
+          description: Internal server error.
+  /v1/datasets/gtfs/{id}:
+    get:
+      description: Get the specified dataset from the Mobility Database.
+      tags:
+        - datasets
+      operationId: getDatasetGtfs
+      parameters:
+        - $ref: '#/components/parameters/dataset_id_path_param'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the requested dataset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsDataset'
+  /v1/metadata:
+    get:
+      description: Get metadata about this API.
+      tags:
+        - metadata
+      operationId: getMetadata
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the metadata.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Metadata'
+  /v1/search:
+    get:
+      description: |
+        Search feeds on feed name, location and provider's information.
+        <br>
+        The current implementation leverages the text search functionalities from [PostgreSQL](https://www.postgresql.org/docs/current/textsearch-controls.html), in particulary `plainto_tsquery`.
+        <br><br>
+        Points to consider while using search endpoint:
+        <br>
+        - Operators are not currently supported. Operators are ignored as stop-words.
+        - Search is based on lexemes(English) and case insensitive. The search_text_query_param is parsed and normalized much as for to_tsvector, then the & (AND) tsquery operator is inserted between surviving words.
+        - The search will match all the lexemes with an AND operator. So, all lexemes must be present in the document.
+        - Our current implementation only creates English lexemes. We are currently considering adding support to more languages.
+        - The order of the words is not relevant for matching. The query __New York__ should give you the same results as __York New__.
+        <br><br>
+        Example:
+        <br>
+        Query: New York Transit
+        <br>
+        Search Executed: 'new' & york & 'transit'
+        <br>
+      operationId: searchFeeds
+      tags:
+        - search
+      parameters:
+        - $ref: '#/components/parameters/limit_query_param_search_endpoint'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/statuses'
+        - $ref: '#/components/parameters/feed_id_query_param'
+        - $ref: '#/components/parameters/data_type_query_param'
+        - $ref: '#/components/parameters/is_official_query_param'
+        - $ref: '#/components/parameters/has_seal_query_param'
+        - $ref: '#/components/parameters/version_query_param'
+        - $ref: '#/components/parameters/search_text_query_param'
+        - $ref: '#/components/parameters/feature'
+        - $ref: '#/components/parameters/license_ids'
+        - $ref: '#/components/parameters/license_is_spdx'
+        - $ref: '#/components/parameters/license_tags'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful search feeds using full-text search on feed, location and provider's information, potentially returning a mixed array of different entity types.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                    description: The total number of matching entities found regardless the limit and offset parameters.
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SearchFeedItemResult'
+        '403':
+          description: Filtering by Seal of Reliability status is not available to this caller.
+  /v1/locations:
+    get:
+      description: |
+        Search locations (countries, subdivisions and municipalities). Results can be filtered by a free-text query and narrowed to a specific country, subdivision or location type. Matches are ordered from the broadest area to the most specific, and by relevance within each level.
+      operationId: getLocations
+      tags:
+        - locations
+      parameters:
+        - $ref: '#/components/parameters/limit_query_param_locations_endpoint'
+        - $ref: '#/components/parameters/offset'
+        - name: search_query
+          in: query
+          description: |
+            Free-text search matched against the location name, alternate name and its full hierarchy (e.g. "Canada, Quebec, Montréal"). Matching is accent-insensitive and supports typeahead-style prefix matching, so "mon" matches "Montréal". When several words are provided, all of them must match.
+          schema:
+            type: string
+            example: montreal
+        - name: country_code
+          in: query
+          description: |
+            Limit results to locations contained within this country, given as its ISO 3166-1 alpha-2 code. Case-insensitive.
+          schema:
+            type: string
+            example: CA
+        - name: subdivision_code
+          in: query
+          description: |
+            Limit results to locations contained within this subdivision, given as its ISO 3166-2 code. Case-insensitive.
+          schema:
+            type: string
+            example: CA-QC
+        - name: location_type
+          in: query
+          description: |
+            Filter by the type of location:
+              * `country` - a sovereign country, identified by an ISO 3166-1 code.
+              * `subdivision` - a first-level subdivision (e.g. state or province), identified by an ISO 3166-2 code.
+              * `municipality` - a locality below the subdivision level (e.g. a city or town).
+          schema:
+            type: string
+            enum:
+              - country
+              - subdivision
+              - municipality
+            example: municipality
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful search of locations.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocationSearchResponse'
+  /v1/licenses:
+    get:
+      description: Get the list of all licenses in the DB.
+      tags:
+        - licenses
+      operationId: getLicenses
+      parameters:
+        - $ref: '#/components/parameters/limit_query_param_licenses_endpoint'
+        - $ref: '#/components/parameters/offset'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Successful pull of the licenses info.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Licenses'
+  /v1/licenses/{id}:
+    parameters:
+      - $ref: '#/components/parameters/license_id_path_param'
+    get:
+      description: Get the specified license from the Mobility Database, including the license rules.
+      tags:
+        - licenses
+      operationId: getLicense
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: |
+            Successful pull of the license info for the provided ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LicenseWithRules'
+  /v1/licenses:match:
+    post:
+      description: Get the list of matching licenses based on the provided license URL
+      tags:
+        - licenses
+      operationId: getMatchingLicenses
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        description: Payload containing the license URL to match against the database.
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - license_url
+              properties:
+                license_url:
+                  description: The license URL to resolve and match against the database.
+                  type: string
+                  format: url
+                  example: https://creativecommons.org/licenses/by/4.0/deed.nl
+      responses:
+        '200':
+          description: The list of matching licenses if any.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MatchingLicenses'
+components:
+  schemas:
+    Redirect:
+      type: object
+      properties:
+        target_id:
+          description: The feed ID that should be used in replacement of the current one.
+          type: string
+          example: mdb-10
+        comment:
+          description: A comment explaining the redirect.
+          type: string
+          example: Redirected because of a change of URL.
+    BasicFeed:
+      type: object
+      properties:
+        id:
+          description: Unique identifier used as a key for the feeds table.
+          type: string
+          example: mdb-1210
+        data_type:
+          type: string
+          enum:
+            - gtfs
+            - gtfs_rt
+            - gbfs
+          example: gtfs
+        created_at:
+          description: The date and time the feed was added to the database, in ISO 8601 date-time format.
+          type: string
+          example: '2023-07-10T22:06:00Z'
+          format: date-time
+        external_ids:
+          $ref: '#/components/schemas/ExternalIds'
+          description: |
+            The ID that can be use to find the feed data in an external or legacy database.
+            <ul>
+              <li><b>JBDA</b>: Automatically imported from http://docs.gtfs-data.jp/api.v2.html. Pattern is jbda-<organisation_id>-<feed_id>.</li>
+              <li><b>TDG</b>: Automatically imported from https://doc.transport.data.gouv.fr/outils/outils-disponibles-sur-le-pan/api. Pattern is tdg-<resource_id>.</li>
+              <li><b>NTD</b>: Automatically imported from https://www.transit.dot.gov/ntd/data-product/2023-annual-database-general-transit-feed-specification-gtfs-weblinks. Pattern is ntd-<ntd_id>.</li>
+              <li><b>TransitFeeds</b>: Automatically imported from old TransitFeeds website. Pattern is tfs-<feed_id>.</li>
+              <li><b>Transit.land</b>: Imported from https://www.transit.land/documentation/rest-api/feeds. Pattern is tld-<feed_id>.</li>
+            </ul>
+        provider:
+          description: A commonly used name for the transit provider included in the feed.
+          type: string
+          example: Los Angeles Department of Transportation (LADOT, DASH, Commuter Express)
+        feed_contact_email:
+          description: Use to contact the feed producer.
+          type: string
+          example: someEmail@ladotbus.com
+        source_info:
+          $ref: '#/components/schemas/SourceInfo'
+        redirects:
+          type: array
+          items:
+            $ref: '#/components/schemas/Redirect'
+    Feed:
+      allOf:
+        - $ref: '#/components/schemas/BasicFeed'
+        - type: object
+          discriminator:
+            propertyName: data_type
+            mapping:
+              gtfs: '#/components/schemas/GtfsFeed'
+              gtfs_rt: '#/components/schemas/GtfsRTFeed'
+          properties:
+            status:
+              description: |
+                Describes status of the Feed. Should be one of
+                  * `active` Feed should be used in public trip planners.
+                  * `deprecated` Feed is explicitly deprecated and should not be used in public trip planners.
+                  * `inactive` Feed hasn't been recently updated and should be used at risk of providing outdated information.
+                  * `development` Feed is being used for development purposes and should not be used in public trip planners.
+                  * `future` Feed is not yet active but will be in the future.
+              type: string
+              enum:
+                - active
+                - deprecated
+                - inactive
+                - development
+                - future
+              example: deprecated
+            official:
+              description: |
+                A boolean value indicating if the feed is official or not.  Official feeds are provided by the transit agency or a trusted source.
+              type: boolean
+              example: true
+            official_updated_at:
+              description: |
+                The date and time the official status was last updated, in ISO 8601 date-time format.
+              type: string
+              example: '2023-07-10T22:06:00Z'
+              format: date-time
+            seasonal:
+              description: |
+                Indicates whether the feed is seasonal, i.e. it only provides service during recurring periods of the year (for example a summer-only or winter-only service). Seasonal feeds are excluded from the rolling 7-day service coverage checks. Defaults to false when the feed has not been marked as seasonal.
+              type: boolean
+              default: false
+              example: true
+            feed_name:
+              description: |
+                An optional description of the data feed, e.g to specify if the data feed is an aggregate of  multiple providers, or which network is represented by the feed.
+              type: string
+              example: Bus
+            note:
+              description: A note to clarify complex use cases for consumers.
+              type: string
+            related_links:
+              description: |
+                A list of related links for the feed.
+              type: array
+              items:
+                $ref: '#/components/schemas/FeedRelatedLink'
+    FeedRelatedLink:
+      type: object
+      properties:
+        code:
+          description: |
+            A short code to identify the type of link.
+          type: string
+          example: next_1
+        description:
+          description: |
+            A description of the link.
+          type: string
+          example: The URL for a future feed version with an upcoming service period.
+        url:
+          description: |
+            The URL of the related link.
+          type: string
+          format: url
+        created_at:
+          description: |
+            The date and time the related link was created, in ISO 8601 date-time format.
+          type: string
+          example: '2023-07-10T22:06:00Z'
+          format: date-time
+    GtfsFeed:
+      allOf:
+        - $ref: '#/components/schemas/Feed'
+        - type: object
+          properties:
+            data_type:
+              type: string
+              enum:
+                - gtfs
+                - gtfs_rt
+                - gbfs
+              example: gtfs
+            locations:
+              $ref: '#/components/schemas/Locations'
+            latest_dataset:
+              $ref: '#/components/schemas/LatestDataset'
+            bounding_box:
+              $ref: '#/components/schemas/BoundingBox'
+            visualization_dataset_id:
+              description: |
+                The dataset ID of the dataset used to compute the visualization files.
+              type: string
+              example: mdb-1210-202402121801
+            reliability_seal:
+              $ref: '#/components/schemas/FeedReliabilitySummary'
+    GbfsFeed:
+      allOf:
+        - $ref: '#/components/schemas/BasicFeed'
+        - type: object
+          properties:
+            data_type:
+              type: string
+              enum:
+                - gtfs
+                - gtfs_rt
+                - gbfs
+              example: gbfs
+            locations:
+              $ref: '#/components/schemas/Locations'
+            system_id:
+              description: |
+                The system ID of the feed. This is a unique identifier for the system that the feed belongs to.
+              type: string
+              example: system-1234
+            provider_url:
+              description: |
+                The URL of the provider's website. This is the website of the organization that operates the system that the feed belongs to.
+              type: string
+              format: url
+              example: https://www.citybikenyc.com/
+            versions:
+              description: |
+                A list of GBFS versions that the feed supports. Each version is represented by its version number and a list of endpoints.
+              type: array
+              items:
+                $ref: '#/components/schemas/GbfsVersion'
+            bounding_box:
+              $ref: '#/components/schemas/BoundingBox'
+            bounding_box_generated_at:
+              description: The date and time the bounding box was generated, in ISO 8601 date-time format.
+              type: string
+              example: '2023-07-10T22:06:00Z'
+              format: date-time
+    GbfsVersion:
+      type: object
+      properties:
+        version:
+          description: |
+            The version of the GBFS specification that the feed is using.  This is a string that follows the semantic versioning format.
+          type: string
+          example: 2.3
+        created_at:
+          description: |
+            The date when the GBFS version was saved to the database.
+          type: string
+          format: date-time
+          example: '2023-07-10T22:06:00Z'
+        last_updated_at:
+          description: |
+            The date when the GBFS version was last updated in the database.
+          type: string
+          format: date-time
+          example: '2023-07-10T22:06:00Z'
+        source:
+          description: |
+            Indicates the origin of the version information. Possible values are:
+              * `autodiscovery`: Retrieved directly from the main GBFS autodiscovery URL.
+              * `gbfs_versions`: Retrieved from the `gbfs_versions` endpoint.
+          type: string
+          enum:
+            - autodiscovery
+            - gbfs_versions
+        endpoints:
+          description: |
+            A list of endpoints that are available in the version.
+          type: array
+          items:
+            $ref: '#/components/schemas/GbfsEndpoint'
+        latest_validation_report:
+          $ref: '#/components/schemas/GbfsValidationReport'
+    GbfsValidationReport:
+      type: object
+      description: |
+        A validation report of the GBFS feed.
+      properties:
+        validated_at:
+          description: |
+            The date and time the GBFS feed was validated, in ISO 8601 date-time format.
+          type: string
+          example: '2023-07-10T22:06:00Z'
+          format: date-time
+        total_error:
+          type: integer
+          example: 10
+          minimum: 0
+        report_summary_url:
+          description: |
+            The URL of the JSON report of the validation summary.
+          type: string
+          format: url
+          example: https://storage.googleapis.com/mobilitydata-datasets-prod/validation-reports/gbfs-1234-202402121801.json
+        validator_version:
+          description: |
+            The version of the validator used to validate the GBFS feed.
+          type: string
+          example: 1.0.13
+    GbfsEndpoint:
+      type: object
+      properties:
+        name:
+          description: |
+            The name of the endpoint. This is a human-readable name for the endpoint.
+          type: string
+          example: system_information
+        url:
+          description: |
+            The URL of the endpoint. This is the URL where the endpoint can be accessed.
+          type: string
+          format: url
+          example: https://gbfs.citibikenyc.com/gbfs/system_information.json
+        language:
+          description: |
+            The language of the endpoint. This is the language that the endpoint is available in for versions 2.3  and prior.
+          type: string
+          example: en
+        is_feature:
+          description: |
+            A boolean value indicating if the endpoint is a feature. A feature is defined as an optionnal endpoint.
+          type: boolean
+          example: false
+    GbfsFeeds:
+      type: array
+      items:
+        $ref: '#/components/schemas/GbfsFeed'
+    GtfsRTFeed:
+      allOf:
+        - $ref: '#/components/schemas/Feed'
+        - type: object
+          properties:
+            data_type:
+              type: string
+              enum:
+                - gtfs
+                - gtfs_rt
+                - gbfs
+              example: gtfs_rt
+            entity_types:
+              type: array
+              items:
+                type: string
+                enum:
+                  - vp
+                  - tu
+                  - sa
+                example: vp
+                description: |
+                  The type of realtime entry:
+                    * vp - vehicle positions
+                    * tu - trip updates
+                    * sa - service alerts
+            feed_references:
+              description: A list of the GTFS feeds that the real time source is associated with, represented by their MDB source IDs.
+              type: array
+              items:
+                type: string
+                example: mdb-20
+            locations:
+              $ref: '#/components/schemas/Locations'
+    SearchFeedItemResult:
+      type: object
+      required:
+        - id
+        - data_type
+        - status
+      properties:
+        id:
+          description: Unique identifier used as a key for the feeds table.
+          type: string
+          example: mdb-1210
+        data_type:
+          type: string
+          enum:
+            - gtfs
+            - gtfs_rt
+            - gbfs
+          example: gtfs
+        status:
+          description: |
+            Describes status of the Feed. Should be one of
+              * `active` Feed should be used in public trip planners.
+              * `deprecated` Feed is explicitly deprecated and should not be used in public trip planners.
+              * `inactive` Feed hasn't been recently updated and should be used at risk of providing outdated information.
+              * `development` Feed is being used for development purposes and should not be used in public trip planners.
+              * `future` Feed is not yet active but will be in the future.
+          type: string
+          enum:
+            - active
+            - deprecated
+            - inactive
+            - development
+            - future
+          example: deprecated
+        created_at:
+          description: The date and time the feed was added to the database, in ISO 8601 date-time format.
+          type: string
+          example: '2023-07-10T22:06:00Z'
+          format: date-time
+        official:
+          description: |
+            A boolean value indicating if the feed is official or not. Official feeds are provided by the transit agency or a trusted source.
+          type: boolean
+          example: true
+        seasonal:
+          description: |
+            Indicates whether the feed is seasonal, i.e. it only provides service during recurring periods of the year (for example a summer-only or winter-only service). Seasonal feeds are excluded from the rolling 7-day service coverage checks. Defaults to false when the feed has not been marked as seasonal.
+          type: boolean
+          default: false
+          example: true
+        external_ids:
+          $ref: '#/components/schemas/ExternalIds'
+          description: |
+            The ID that can be use to find the feed data in an external or legacy database.
+            <ul>
+              <li><b>JBDA</b>: Automatically imported from http://docs.gtfs-data.jp/api.v2.html. Pattern is jbda-<organisation_id>-<feed_id>.</li>
+              <li><b>TDG</b>: Automatically imported from https://doc.transport.data.gouv.fr/outils/outils-disponibles-sur-le-pan/api. Pattern is tdg-<resource_id>.</li>
+              <li><b>NTD</b>: Automatically imported from https://www.transit.dot.gov/ntd/data-product/2023-annual-database-general-transit-feed-specification-gtfs-weblinks. Pattern is ntd-<ntd_id>.</li>
+              <li><b>TransitFeeds</b>: Automatically imported from old TransitFeeds website. Pattern is tfs-<feed_id>.</li>
+              <li><b>Transit.land</b>: Imported from https://www.transit.land/documentation/rest-api/feeds. Pattern is tld-<feed_id>.</li>
+            </ul>
+        provider:
+          description: A commonly used name for the transit provider included in the feed.
+          type: string
+          example: Los Angeles Department of Transportation (LADOT, DASH, Commuter Express)
+        feed_name:
+          description: |
+            An optional description of the data feed, e.g to specify if the data feed is an aggregate of  multiple providers, or which network is represented by the feed.
+          type: string
+          example: Bus
+        note:
+          description: A note to clarify complex use cases for consumers.
+          type: string
+        feed_contact_email:
+          description: Use to contact the feed producer.
+          type: string
+          example: someEmail@ladotbus.com
+        source_info:
+          $ref: '#/components/schemas/SourceInfo'
+        redirects:
+          type: array
+          items:
+            $ref: '#/components/schemas/Redirect'
+        locations:
+          $ref: '#/components/schemas/Locations'
+        latest_dataset:
+          $ref: '#/components/schemas/LatestDataset'
+        entity_types:
+          type: array
+          items:
+            type: string
+            enum:
+              - vp
+              - tu
+              - sa
+            example: vp
+            description: |
+              The type of realtime entry:
+                * vp - vehicle positions
+                * tu - trip updates
+                * sa - service alerts
+        versions:
+          type: array
+          items:
+            type: string
+            example: 2.3
+          description: The supported versions of the GBFS feed.
+        feed_references:
+          description: A list of the GTFS feeds that the real time source is associated with, represented by their MDB source IDs.
+          type: array
+          items:
+            type: string
+            example: mdb-20
+        reliability_seal:
+          $ref: '#/components/schemas/FeedReliabilitySummary'
+    Feeds:
+      type: array
+      items:
+        $ref: '#/components/schemas/Feed'
+    GtfsFeeds:
+      type: array
+      items:
+        $ref: '#/components/schemas/GtfsFeed'
+    GtfsRTFeeds:
+      type: array
+      items:
+        $ref: '#/components/schemas/GtfsRTFeed'
+    FeedReliabilitySummary:
+      description: |
+        A summary of the feed's Seal of Reliability. `null` when the feed has never been evaluated.  Use `GET /v1/gtfs_feeds/{id}/reliability` for the per-criterion breakdown.
+      type: object
+      nullable: true
+      required:
+        - has_seal
+        - on_probation
+      properties:
+        has_seal:
+          description: |
+            Whether the feed currently holds the Seal of Reliability.
+          type: boolean
+          example: true
+        earned_at:
+          description: When the feed most recently earned the seal, in ISO 8601 date-time format.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-01-15T00:00:00Z'
+        lost_at:
+          description: When the feed most recently lost the seal, in ISO 8601 date-time format.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-07-20T04:00:00Z'
+        evaluated_at:
+          description: When the feed's criteria were last evaluated, in ISO 8601 date-time format.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-07-30T04:00:00Z'
+        on_probation:
+          description: |
+            Whether at least one criterion is serving probation - the six clean months a criterion must go through, with no failure, after a confirmed failure before it can count towards the seal again. While this is true the feed cannot hold the seal even if every criterion currently passes.
+          type: boolean
+          example: true
+        probation_ends_at:
+          description: |
+            The earliest date the feed could regain the seal, in ISO 8601 date-time format: the end of the longest-running probation across its criteria. `null` when no criterion is on probation, and also when the stored probation has already elapsed without the nightly job clearing it - a stale countdown is not served.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2027-01-16T00:00:00Z'
+    FeedReliabilityReport:
+      description: |
+        The full Seal of Reliability breakdown for a GTFS feed: the same summary as the embedded `reliability_seal` object, plus one entry per criterion. All six criteria are always returned, in a stable order, so a client can render them unconditionally.
+      type: object
+      required:
+        - feed_id
+        - has_seal
+        - on_probation
+        - criteria
+      properties:
+        feed_id:
+          description: Unique identifier of the GTFS feed.
+          type: string
+          example: mdb-1210
+        has_seal:
+          description: Whether the feed currently holds the Seal of Reliability.
+          type: boolean
+          example: false
+        earned_at:
+          description: When the feed most recently earned the seal, in ISO 8601 date-time format.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-01-15T00:00:00Z'
+        lost_at:
+          description: When the feed most recently lost the seal, in ISO 8601 date-time format.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-07-20T04:00:00Z'
+        evaluated_at:
+          description: When the feed's criteria were last evaluated, in ISO 8601 date-time format.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-07-30T04:00:00Z'
+        on_probation:
+          description: Whether at least one criterion is serving probation. See `FeedReliabilitySummary`.
+          type: boolean
+          example: false
+        probation_ends_at:
+          description: The earliest date the feed could regain the seal. See `FeedReliabilitySummary`.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2027-01-16T00:00:00Z'
+        criteria:
+          description: One entry per criterion, always all six, in a stable order.
+          type: array
+          items:
+            $ref: '#/components/schemas/ReliabilityCriterion'
+    ReliabilityCriterion:
+      description: |
+        One criterion's contribution to the Seal of Reliability.
+        `status` is the criterion's own check at the last evaluation, undebounced, so a criterion can read `fail` while the feed still holds the seal - that is the at-risk state, and `in_grace_period` distinguishes it from a confirmed failure. Conversely a criterion can read `pass` while `on_probation` is true, in which case it still does not count towards the seal. The three states a client renders are therefore: healthy (`pass`), at risk (`fail` with `in_grace_period`), and failing (`fail` without it) - with `on_probation` as an independent flag on top.
+      type: object
+      required:
+        - criterion
+        - status
+        - in_grace_period
+        - on_probation
+      properties:
+        criterion:
+          description: |
+            Which criterion this entry describes.
+              * `official` - the feed is provided by the agency or a trusted source.
+              * `stable` - the feed has a stable producer URL and a long enough track record.
+              * `available` - the feed URL responds to scheduled availability checks.
+              * `compliant` - the latest dataset validates with no errors.
+              * `fresh_coverage` - the latest dataset's service period extends far enough ahead.
+              * `fresh_continuous` - successive datasets cover service without gaps.
+          type: string
+          enum:
+            - official
+            - stable
+            - available
+            - compliant
+            - fresh_coverage
+            - fresh_continuous
+          example: compliant
+        status:
+          description: |
+            The criterion's verdict at the last evaluation, with no grace period applied.
+              * `pass` - the check passed.
+              * `fail` - the check failed. The seal is only withdrawn once the failure outlasts
+                the criterion's grace period, so check `in_grace_period` before presenting this
+                as a loss.
+              * `unknown` - the criterion was evaluated but its inputs were missing, so no verdict
+                could be reached this time. It is skipped when deciding the seal rather than counted
+                as a failure.
+              * `not_applicable` - the criterion does not apply to this feed (for example a
+                coverage criterion on a seasonal feed) and is withdrawn from the seal entirely.
+              * `never_evaluated` - the criterion has produced no verdict for this feed yet. It is
+                skipped when deciding the seal rather than counted as a failure.
+          type: string
+          enum:
+            - pass
+            - fail
+            - unknown
+            - not_applicable
+            - never_evaluated
+          example: fail
+        in_grace_period:
+          description: |
+            Whether a failing check is still inside the criterion's grace period, and so is not yet counting against the seal. Can only be true while `status` is `fail`, and is always false while `on_probation` is true, since a failure during probation restarts probation outright rather than being absorbed.
+          type: boolean
+          example: true
+        grace_period_ends_at:
+          description: |
+            When the grace period expires and the failure starts counting against the seal, in ISO 8601 date-time format. `null` unless `in_grace_period` is true, and also when the window has already elapsed without the nightly job acting on it.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-08-24T04:00:00Z'
+        on_probation:
+          description: |
+            Whether this criterion is serving the six clean months required after a confirmed failure. While true, the criterion does not count towards the seal whatever its `status`. Never true for `official` or `stable`, which are point-in-time state checks with no track record to rebuild.
+          type: boolean
+          example: false
+        probation_ends_at:
+          description: |
+            When this criterion finishes probation, in ISO 8601 date-time format. `null` when it is not on probation, and also when the window has already elapsed without the nightly job clearing it.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2027-01-16T00:00:00Z'
+        evaluated_at:
+          description: When this criterion was last evaluated, in ISO 8601 date-time format.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-07-30T04:00:00Z'
+        first_failure_at:
+          description: |
+            Start of the current run of failing checks, in ISO 8601 date-time format. `null` once the criterion passes again. This is what the grace period is measured from.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-07-25T04:00:00Z'
+        last_failure_at:
+          description: |
+            The most recent failing check, in ISO 8601 date-time format. Kept as history and never cleared, so it can be set on a criterion that currently passes.
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-07-30T04:00:00Z'
+    GtfsFeedAvailabilityResponse:
+      type: object
+      required:
+        - feed_id
+        - checks
+        - total
+        - offset
+        - limit
+      properties:
+        feed_id:
+          type: string
+          description: Unique identifier of the GTFS feed.
+          example: mdb-123
+        total:
+          type: integer
+          description: Total number of matching availability checks regardless of limit and offset.
+          example: 42
+        offset:
+          type: integer
+          description: Offset of the first returned item.
+          example: 0
+        limit:
+          type: integer
+          description: Maximum number of items returned.
+          example: 100
+        checks:
+          type: array
+          description: Availability checks matching the requested filters, ordered by checked_at from oldest to newest.
+          items:
+            $ref: '#/components/schemas/GtfsFeedAvailabilityCheck'
+    GtfsFeedAvailabilityCheck:
+      type: object
+      required:
+        - checked_at
+        - success
+        - request_method
+      properties:
+        checked_at:
+          type: string
+          format: date-time
+          description: Timestamp when the availability check was performed.
+          example: '2026-05-14T10:00:00Z'
+        success:
+          type: boolean
+          description: Whether the feed URL was reachable using the lightweight check.
+          example: true
+        request_method:
+          type: string
+          description: HTTP method used for the availability check.
+          enum:
+            - HEAD
+            - GET
+          example: HEAD
+        status_code:
+          type: integer
+          nullable: true
+          description: Final HTTP status code returned by the feed URL, when available.
+          example: 200
+        latency_ms:
+          type: number
+          format: double
+          nullable: true
+          description: Time taken to receive the response, in milliseconds.
+          example: 845.3
+        error_type:
+          type: string
+          nullable: true
+          description: Machine-readable error category when the check failed.
+          example: timeout
+    LatestDataset:
+      type: object
+      properties:
+        id:
+          description: Identifier of the latest dataset for this feed.
+          type: string
+          example: mdb-1210-202402121801
+        hosted_url:
+          description: |
+            As a convenience, the URL of the latest uploaded dataset hosted by MobilityData.  It should be the same URL as the one found in the latest dataset id dataset. An alternative way to find this is to use the latest dataset id to obtain the dataset and then use its hosted_url.
+          type: string
+          format: url
+          example: https://storage.googleapis.com/mobilitydata-datasets-prod/mdb-1210/mdb-1210-202402121801/mdb-1210-202402121801.zip
+        bounding_box:
+          $ref: '#/components/schemas/BoundingBox'
+        downloaded_at:
+          description: The date and time the dataset was downloaded from the producer, in ISO 8601 date-time format.
+          type: string
+          example: '2023-07-10T22:06:00Z'
+          format: date-time
+        hash:
+          description: SHA-256 hash of the dataset.
+          type: string
+          example: ad3805c4941cd37881ff40c342e831b5f5224f3d8a9a2ec3ac197d3652c78e42
+        hash_md5:
+          description: MD5 hash of the dataset.
+          type: string
+          example: 098f6bcd4621d373cade4e832627b4f6
+        service_date_range_start:
+          description: The start date of the service date range for the dataset in UTC. Timing starts at 00:00:00 of the day.
+          type: string
+          example: '2023-07-10T06:00:00Z'
+          format: date-time
+        service_date_range_end:
+          description: The start date of the service date range for the dataset in UTC. Timing ends at 23:59:59 of the day.
+          type: string
+          example: 2023-07-10T05:59:59+00Z
+          format: date-time
+        agency_timezone:
+          description: The timezone of the agency.
+          type: string
+          example: America/Los_Angeles
+        zipped_folder_size_mb:
+          description: The size of the zipped folder in MB.
+          type: number
+          example: 100.2
+        unzipped_folder_size_mb:
+          description: The size of the unzipped folder in MB.
+          type: number
+          example: 200.5
+        validation_report:
+          type: object
+          properties:
+            features:
+              description: List of GTFS features associated to the dataset. More information, https://gtfs.org/getting-started/features/overview
+              type: array
+              items:
+                type: string
+              example:
+                - Shapes
+                - Headsigns
+                - Wheelchair Accessibility
+            total_error:
+              type: integer
+              example: 10
+              minimum: 0
+            total_warning:
+              type: integer
+              example: 20
+              minimum: 0
+            total_info:
+              type: integer
+              example: 30
+              minimum: 0
+            unique_error_count:
+              type: integer
+              example: 1
+              minimum: 0
+            unique_warning_count:
+              type: integer
+              example: 2
+              minimum: 0
+            unique_info_count:
+              type: integer
+              example: 3
+              minimum: 0
+    ExternalIds:
+      type: array
+      description: |
+        The ID that can be use to find the feed data in an external or legacy database.
+        <ul>
+          <li><b>JBDA</b>: Automatically imported from http://docs.gtfs-data.jp/api.v2.html. Pattern is jbda-<organisation_id>-<feed_id>.</li>
+          <li><b>TDG</b>: Automatically imported from https://doc.transport.data.gouv.fr/outils/outils-disponibles-sur-le-pan/api. Pattern is tdg-<resource_id>.</li>
+          <li><b>NTD</b>: Automatically imported from https://www.transit.dot.gov/ntd/data-product/2023-annual-database-general-transit-feed-specification-gtfs-weblinks. Pattern is ntd-<ntd_id>.</li>
+          <li><b>TransitFeeds</b>: Automatically imported from old TransitFeeds website. Pattern is tfs-<feed_id>.</li>
+          <li><b>Transit.land</b>: Imported from https://www.transit.land/documentation/rest-api/feeds. Pattern is tld-<feed_id>.</li>
+        </ul>
+      items:
+        $ref: '#/components/schemas/ExternalId'
+    ExternalId:
+      type: object
+      properties:
+        external_id:
+          description: |
+            The ID that can be used to find the feed data in an external or legacy database.
+            <ul>
+              <li><b>JBDA</b>: Automatically imported from http://docs.gtfs-data.jp/api.v2.html. Pattern is jbda-<organisation_id>-<feed_id>.</li>
+              <li><b>TDG</b>: Automatically imported from https://doc.transport.data.gouv.fr/outils/outils-disponibles-sur-le-pan/api. Pattern is tdg-<resource_id>.</li>
+              <li><b>NTD</b>: Automatically imported from https://www.transit.dot.gov/ntd/data-product/2023-annual-database-general-transit-feed-specification-gtfs-weblinks. Pattern is ntd-<ntd_id>.</li>
+              <li><b>TransitFeeds</b>: Automatically imported from old TransitFeeds website. Pattern is tfs-<feed_id>.</li>
+              <li><b>Transit.land</b>: Imported from https://www.transit.land/documentation/rest-api/feeds. Pattern is tld-<feed_id>.</li>
+            </ul>
+          type: string
+          example: 1210
+        source:
+          description: The source of the external ID, e.g. the name of the database where the external ID can be used.
+          type: string
+          example: mdb
+    SourceInfo:
+      type: object
+      properties:
+        producer_url:
+          description: |
+            URL where the producer is providing the dataset. Refer to the authentication information to know how to access this URL.
+          type: string
+          format: url
+          example: https://ladotbus.com/gtfs
+        is_producer_url_unstable:
+          description: |
+            Indicates whether the `producer_url` is known to be unstable, i.e. it changes over time. This may be because the URL contains a date/time, or because the transit provider has communicated that it is not permanent (e.g. it is updated monthly).
+              * true - The producer URL is unstable and changes over time.
+              * false - The producer URL is stable and unchanging over time.
+              * null (default) - There is not enough information to determine the stability of the producer URL.
+          type: boolean
+          nullable: true
+          example: true
+        authentication_type:
+          description: |
+            Defines the type of authentication required to access the `producer_url`. Valid values for this field are:
+              * 0 or (empty) - No authentication required.
+              * 1 - The authentication requires an API key, which should be passed as value of the parameter api_key_parameter_name in the URL. Please visit URL in authentication_info_url for more information.
+              * 2 - The authentication requires an HTTP header, which should be passed as the value of the header api_key_parameter_name in the HTTP request.
+            When not provided, the authentication type is assumed to be 0.
+          type: integer
+          enum:
+            - 0
+            - 1
+            - 2
+          example: 2
+        authentication_info_url:
+          description: |
+            Contains a URL to a human-readable page describing how the authentication should be performed and how credentials can be created.  This field is required for `authentication_type=1` and `authentication_type=2`.
+          type: string
+          format: url
+          example: https://apidevelopers.ladottransit.com
+        api_key_parameter_name:
+          type: string
+          description: |
+            Defines the name of the parameter to pass in the URL to provide the API key. This field is required for `authentication_type=1` and `authentication_type=2`.
+          example: Ocp-Apim-Subscription-Key
+        license_url:
+          description: A URL where to find the license for the feed.
+          type: string
+          format: url
+          example: https://www.ladottransit.com/dla.html
+        license_id:
+          description: Id of the feed license that can be used to query the license endpoint.
+          type: string
+          example: 0BSD
+        license_is_spdx:
+          description: true if the license is SPDX. false if not.
+          type: boolean
+          example: true
+        license_notes:
+          description: Notes concerning the relation between the feed and the license.
+          type: string
+          example: Detected locale/jurisdiction port 'nl'. SPDX does not list ported CC licenses; using canonical ID.
+        license_tags:
+          description: List of taxonomy tags associated with the feed's license.
+          type: array
+          items:
+            type: string
+          example:
+            - family:ODC
+            - license:open-data-commons
+    Locations:
+      type: array
+      items:
+        $ref: '#/components/schemas/Location'
+    Location:
+      type: object
+      properties:
+        country_code:
+          description: |
+            ISO 3166-1 alpha-2 code designating the country where the system is located.  For a list of valid codes [see here](https://unece.org/trade/uncefact/unlocode-country-subdivisions-iso-3166-2).
+          type: string
+          example: US
+        country:
+          description: The english name of the country where the system is located.
+          type: string
+          example: United States
+        subdivision_name:
+          description: |
+            ISO 3166-2 english subdivision name designating the subdivision (e.g province, state, region) where the system is located.  For a list of valid names [see here](https://unece.org/trade/uncefact/unlocode-country-subdivisions-iso-3166-2).
+          type: string
+          example: California
+        municipality:
+          description: Primary municipality in english in which the transit system is located.
+          type: string
+          example: Los Angeles
+    LocationSearchResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: The total number of matching locations regardless of limit and offset.
+        results:
+          type: array
+          description: The page of matching locations, ordered from the broadest area to the most specific and by relevance within each level.
+          items:
+            $ref: '#/components/schemas/LocationSearchResult'
+    LocationSearchResult:
+      type: object
+      properties:
+        location_id:
+          type: integer
+          description: Stable location identifier.
+          example: 175905
+        parent_location_id:
+          type: integer
+          nullable: true
+          description: Stable identifier of the nearest containing location.
+          example: 161950
+        name:
+          type: string
+          nullable: true
+          description: The primary name of the location, in English when available.
+          example: Montréal
+        alt_name:
+          type: string
+          nullable: true
+          description: An alternate or local name for the location, when available.
+          example: City of Montréal
+        location_type:
+          type: string
+          description: |
+            The type of location: `country` (has an ISO 3166-1 code), `subdivision` (has an ISO 3166-2 code) or `municipality` (a locality below the subdivision level).
+          enum:
+            - country
+            - subdivision
+            - municipality
+          example: municipality
+        country_name:
+          type: string
+          nullable: true
+          description: The name of the country that contains this location.
+          example: Canada
+        country_code:
+          type: string
+          nullable: true
+          description: The ISO 3166-1 alpha-2 code of the country that contains this location.
+          example: CA
+        subdivision_name:
+          type: string
+          nullable: true
+          description: The name of the subdivision (e.g. state or province) that contains this location, when applicable.
+          example: Quebec
+        subdivision_code:
+          type: string
+          nullable: true
+          description: The ISO 3166-2 code of the subdivision that contains this location, when applicable.
+          example: CA-QC
+        path_names:
+          type: array
+          description: The ordered list of location names from the broadest containing area down to this location.
+          items:
+            type: string
+          example:
+            - Canada
+            - Quebec
+            - Montréal (region)
+            - Montréal
+        display_name:
+          type: string
+          nullable: true
+          description: A human-readable representation of the full location hierarchy, joined from the broadest area to this location.
+          example: Canada, Quebec, Montréal (region), Montréal
+    BasicDataset:
+      type: object
+      properties:
+        id:
+          description: Unique identifier used as a key for the datasets table.
+          type: string
+          example: mdb-10-202402080058
+        feed_id:
+          description: ID of the feed related to this dataset.
+          type: string
+          example: mdb-10
+    GtfsDataset:
+      allOf:
+        - $ref: '#/components/schemas/BasicDataset'
+        - type: object
+          properties:
+            hosted_url:
+              description: The URL of the dataset data as hosted by MobilityData. No authentication required.
+              type: string
+              example: https://storage.googleapis.com/storage/v1/b/mdb-latest/o/us-maine-casco-bay-lines-gtfs-1.zip?alt=media
+            note:
+              description: A note to clarify complex use cases for consumers.
+              type: string
+            downloaded_at:
+              description: The date and time the dataset was downloaded from the producer, in ISO 8601 date-time format.
+              type: string
+              example: '2023-07-10T22:06:00Z'
+              format: date-time
+            hash:
+              description: SHA-256 hash of the dataset.
+              type: string
+              example: 6497e85e34390b8b377130881f2f10ec29c18a80dd6005d504a2038cdd00aa71
+            hash_md5:
+              description: MD5 hash of the dataset.
+              type: string
+              example: 098f6bcd4621d373cade4e832627b4f6
+            bounding_box:
+              $ref: '#/components/schemas/BoundingBox'
+            validation_report:
+              $ref: '#/components/schemas/ValidationReport'
+            service_date_range_start:
+              description: The start date of the service date range for the dataset in UTC. Timing starts at 00:00:00 of the day.
+              type: string
+              example: '2023-07-10T06:00:00Z'
+              format: date-time
+            service_date_range_end:
+              description: The start date of the service date range for the dataset in UTC. Timing ends at 23:59:59 of the day.
+              type: string
+              example: 2023-07-10T05:59:59+00Z
+              format: date-time
+            agency_timezone:
+              description: The timezone of the agency.
+              type: string
+              example: America/Los_Angeles
+            zipped_folder_size_mb:
+              description: The size of the zipped folder in MB.
+              type: number
+              example: 100.2
+            unzipped_folder_size_mb:
+              description: The size of the unzipped folder in MB.
+              type: number
+              example: 200.5
+    BoundingBox:
+      description: Bounding box of the dataset when it was first added to the catalog.
+      type: object
+      properties:
+        minimum_latitude:
+          description: The minimum latitude for the dataset bounding box.
+          type: number
+          example: 33.721601
+        maximum_latitude:
+          description: The maximum latitude for the dataset bounding box.
+          type: number
+          example: 34.323077
+        minimum_longitude:
+          description: The minimum longitude for the dataset bounding box.
+          type: number
+          example: -118.882829
+        maximum_longitude:
+          description: The maximum longitude for the dataset bounding box.
+          type: number
+          example: -118.131748
+    GtfsDatasets:
+      type: array
+      items:
+        $ref: '#/components/schemas/GtfsDataset'
+    Metadata:
+      type: object
+      properties:
+        version:
+          type: string
+          example: 1.0.0
+        commit_hash:
+          type: string
+          example: 8635fdac4fbff025b4eaca6972fcc9504bc1552d
+    ValidationReport:
+      description: Validation report
+      type: object
+      properties:
+        validated_at:
+          description: The date and time the report was generated, in ISO 8601 date-time format.
+          type: string
+          example: '2023-07-10T22:06:00Z'
+          format: date-time
+        features:
+          description: List of GTFS features associated to the dataset. More information, https://gtfs.org/getting-started/features/overview
+          type: array
+          items:
+            type: string
+          example:
+            - Shapes
+            - Headsigns
+            - Wheelchair Accessibility
+        validator_version:
+          type: string
+          example: 4.2.0
+        total_error:
+          type: integer
+          example: 10
+          minimum: 0
+        total_warning:
+          type: integer
+          example: 20
+          minimum: 0
+        total_info:
+          type: integer
+          example: 30
+          minimum: 0
+        unique_error_count:
+          type: integer
+          example: 1
+          minimum: 0
+        unique_warning_count:
+          type: integer
+          example: 2
+          minimum: 0
+        unique_info_count:
+          type: integer
+          example: 3
+          minimum: 0
+        url_json:
+          type: string
+          format: url
+          description: JSON validation report URL
+          example: https://storage.googleapis.com/mobilitydata-datasets-dev/mdb-10/mdb-10-202312181718/mdb-10-202312181718-report-4_2_0.json
+        url_html:
+          type: string
+          format: url
+          description: HTML validation report URL
+          example: https://storage.googleapis.com/mobilitydata-datasets-dev/mdb-10/mdb-10-202312181718/mdb-10-202312181718-report-4_2_0.html
+    LicenseRule:
+      type: object
+      properties:
+        name:
+          description: Name of the rule.
+          type: string
+          example: commercial-use
+        label:
+          description: Label of the rule.
+          type: string
+          example: Commercial use
+        description:
+          description: Description of the rule.
+          type: string
+          example: This license allows the software or data to be used for commercial purposes.
+        type:
+          description: Type of rule.
+          type: string
+          enum:
+            - permission
+            - condition
+            - limitation
+    LicenseBase:
+      type: object
+      properties:
+        id:
+          description: Unique identifier for the license.
+          type: string
+          example: 0BSD
+        type:
+          type: string
+          description: The type of license.
+          example: standard
+        is_spdx:
+          type: boolean
+          description: true if license id spdx.
+        name:
+          type: string
+          description: The user facing name of the license.
+          example: BSD Zero Clause License
+        url:
+          description: A URL where to find the license for the feed.
+          type: string
+          format: url
+          example: https://www.ladottransit.com/dla.html
+        description:
+          type: string
+          description: The description of the license.
+          example: This is the 0BSD license.
+        created_at:
+          description: The date and time the license was added to the database, in ISO 8601 date-time format.
+          type: string
+          example: '2023-07-10T22:06:00Z'
+          format: date-time
+        updated_at:
+          description: The last date and time the license was updated in the database, in ISO 8601 date-time format.
+          type: string
+          example: '2023-07-10T22:06:00Z'
+          format: date-time
+        license_tags:
+          description: List of taxonomy tags associated with the license.
+          type: array
+          items:
+            type: string
+          example:
+            - family:ODC
+            - license:open-data-commons
+    LicenseWithRules:
+      allOf:
+        - $ref: '#/components/schemas/LicenseBase'
+        - type: object
+          properties:
+            license_rules:
+              type: array
+              items:
+                $ref: '#/components/schemas/LicenseRule'
+    Licenses:
+      type: array
+      items:
+        $ref: '#/components/schemas/LicenseBase'
+    MatchingLicense:
+      type: object
+      description: Matching a license
+      properties:
+        license_id:
+          description: Unique identifier for the license (typically SPDX ID)
+          type: string
+          example: CC-BY-4.0
+        license_url:
+          description: Original license URL provided for resolution
+          type: string
+          example: https://creativecommons.org/licenses/by/4.0/
+        normalized_url:
+          description: URL after normalization (lowercased, trimmed, protocol removed)
+          type: string
+          example: creativecommons.org/licenses/by/4.0
+        match_type:
+          description: |
+            Type of match performed. One of:
+              - 'exact': Direct match found in database
+              - 'heuristic': Matched via pattern-based rules (CC resolver, common patterns)
+              - 'fuzzy': Similarity-based match against same-host licenses
+          type: string
+          example: heuristic
+        confidence:
+          description: |
+            Match confidence score (0.0-1.0), examples:
+              - 1.0: Exact match
+              - 0.99: Creative Commons resolved
+              - 0.95: Pattern heuristic match
+              - 0.0-1.0: Fuzzy match score based on string similarity
+          type: number
+          example: 0.99
+        spdx_id:
+          description: SPDX License Identifier if matched (e.g., 'CC-BY-4.0', 'MIT')
+          type: string
+          example: CC-BY-4.0
+        matched_name:
+          description: Human-readable name of the matched license
+          type: string
+          example: Creative Commons Attribution 4.0 International
+        matched_catalog_url:
+          description: Canonical URL from the license catalog/database
+          type: string
+          example: https://creativecommons.org/licenses/by/4.0/legalcode
+        matched_source:
+          description: |
+            Source of the match. Examples:
+              - 'db.license': Exact match from database
+              - 'cc-resolver': Creative Commons license resolver
+              - 'pattern-heuristics': Generic pattern matching
+          type: string
+          example: cc-resolver
+        notes:
+          description: Additional context about the match (e.g., version normalization, locale detection)
+          type: string
+          example: Detected locale/jurisdiction port 'nl'. SPDX does not list ported CC licenses; using canonical ID.
+        regional_id:
+          description: |
+            Regional/jurisdictional variant identifier for ported licenses
+              (e.g., 'CC-BY-2.1-jp' for Japan-ported Creative Commons)
+          type: string
+          example: CC-BY-4.0-nl
+      example:
+        license_id: CC-BY-4.0
+        license_url: https://creativecommons.org/licenses/by/4.0/deed.nl
+        normalized_url: creativecommons.org/licenses/by/4.0
+        match_type: heuristic
+        confidence: 0.99
+        spdx_id: CC-BY-4.0
+        matched_name: Creative Commons Attribution 4.0 International
+        matched_catalog_url: https://creativecommons.org/licenses/by/4.0/legalcode
+        matched_source: cc-resolver
+        notes: Detected locale/jurisdiction port 'nl'. SPDX does not list ported CC licenses; using canonical ID.
+        regional_id: CC-BY-4.0-nl
+    MatchingLicenses:
+      description: List of MatchingLicense
+      type: array
+      items:
+        $ref: '#/components/schemas/MatchingLicense'
+  parameters:
+    status:
+      name: status
+      in: query
+      description: Filter feeds by their status. [Status definitions defined here](https://github.com/MobilityData/mobility-database-catalogs?tab=readme-ov-file#gtfs-schedule-schema)
+      required: false
+      schema:
+        type: string
+        enum:
+          - active
+          - deprecated
+          - inactive
+          - development
+          - future
+    statuses:
+      name: status
+      in: query
+      description: Filter feeds by their status. [Status definitions defined here](https://github.com/MobilityData/mobility-database-catalogs?tab=readme-ov-file#gtfs-schedule-schema)
+      required: false
+      style: form
+      explode: false
+      schema:
+        type: array
+        items:
+          type: string
+          enum:
+            - active
+            - deprecated
+            - inactive
+            - development
+            - future
+    feature:
+      name: feature
+      in: query
+      description: Filter feeds by their GTFS features. [GTFS features definitions defined here](https://gtfs.org/getting-started/features/overview)
+      required: false
+      style: form
+      explode: false
+      schema:
+        type: array
+        items:
+          type: string
+    license_ids:
+      name: license_ids
+      in: query
+      description: Comma separated list of license IDs to filter feeds by their license.
+      required: false
+      schema:
+        type: string
+        example: CC-BY-4.0,ODbL-1.0
+    license_is_spdx:
+      name: license_is_spdx
+      in: query
+      description: Filter feeds by whether their license is an SPDX license.
+      required: false
+      schema:
+        type: boolean
+    license_tags:
+      name: license_tags
+      in: query
+      description: Comma separated list of tags to filter feeds by their license tags.
+      required: false
+      schema:
+        type: string
+        example: family:ODC,license:open-data-commons
+    provider:
+      name: provider
+      in: query
+      description: List only feeds with the specified value. Can be a partial match. Case insensitive.
+      required: false
+      schema:
+        type: string
+        example: Los Angeles Department of Transportation (LADOT, DASH, Commuter Express)
+    producer_url:
+      name: producer_url
+      in: query
+      required: false
+      description: |
+        List only feeds with the specified value. Can be a partial match. Case insensitive.
+      schema:
+        type: string
+        format: url
+        example: https://ladotbus.com
+    entity_types:
+      name: entity_types
+      in: query
+      description: Filter feeds by their entity type. Expects a comma separated list of all types to fetch.
+      required: false
+      schema:
+        type: string
+        example: vp,sa,tu
+    country_code:
+      name: country_code
+      in: query
+      description: Filter feeds by their exact country code.
+      schema:
+        type: string
+        example: US
+    subdivision_name:
+      name: subdivision_name
+      in: query
+      description: List only feeds with the specified value. Can be a partial match. Case insensitive.
+      schema:
+        type: string
+        example: California
+    municipality:
+      name: municipality
+      in: query
+      description: List only feeds with the specified value. Can be a partial match. Case insensitive.
+      schema:
+        type: string
+        example: Los Angeles
+    downloaded_after:
+      name: downloaded_after
+      in: query
+      description: Filter feed datasets with downloaded date greater or equal to given date. Date should be in ISO 8601 date-time format.
+      schema:
+        type: string
+        format: date-time
+        example: 2023-07-00T22:06:00Z
+    downloaded_before:
+      name: downloaded_before
+      in: query
+      description: Filter feed datasets with downloaded date less or equal to given date. Date should be in ISO 8601 date-time format.
+      schema:
+        type: string
+        format: date-time
+        example: '2023-07-20T22:06:00Z'
+    dataset_latitudes:
+      name: dataset_latitudes
+      in: query
+      description: |
+        Specify the minimum and maximum latitudes of the bounding box to use for filtering.
+         <br>Filters by the bounding box of the `LatestDataset` for a feed.
+         <br>Must be specified alongside `dataset_longitudes`.
+      required: false
+      schema:
+        type: string
+        example: 33.5,34.5
+    dataset_longitudes:
+      name: dataset_longitudes
+      in: query
+      description: |
+        Specify the minimum and maximum longitudes of the bounding box to use for filtering. <br>Filters by the bounding box of the `LatestDataset` for a feed. <br>Must be specified alongside `dataset_latitudes`.
+      required: false
+      schema:
+        type: string
+        example: -118.0,-119.0
+    bounding_filter_method:
+      name: bounding_filter_method
+      in: query
+      required: false
+      schema:
+        type: string
+        enum:
+          - completely_enclosed
+          - partially_enclosed
+          - disjoint
+        default: completely_enclosed
+      description: |
+        Specify the filtering method to use with the dataset_latitudes and dataset_longitudes parameters.
+         * `completely_enclosed` - Get resources that are completely enclosed in the specified bounding box.
+         * `partially_enclosed` - Get resources that are partially enclosed in the specified bounding box.
+         * `disjoint` - Get resources that are completely outside the specified bounding box.
+      example: completely_enclosed
+    latest_query_param:
+      name: latest
+      in: query
+      description: If true, only return the latest dataset.
+      required: false
+      schema:
+        type: boolean
+        default: false
+    is_official_query_param:
+      name: is_official
+      in: query
+      description: If true, only return official feeds.
+      required: false
+      schema:
+        type: boolean
+        default: null
+    has_seal_query_param:
+      name: has_seal
+      in: query
+      description: |
+        If true, only return feeds that currently hold the Seal of Reliability; if false, only feeds without it. Viewing a feed's seal is public, but filtering the catalogue by it is granted per user and requires the `isSealFilterEnabled` feature flag - other callers receive a 403. To request access or learn more, contact us at api@mobilitydata.org.
+      required: false
+      schema:
+        type: boolean
+        default: null
+    limit_query_param_locations_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 100
+        default: 100
+        example: 10
+    limit_query_param_feeds_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 3500
+        default: 3500
+        example: 10
+    limit_query_param_gtfs_feeds_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 2500
+        default: 2500
+        example: 10
+    limit_query_param_gtfs_rt_feeds_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 1000
+        default: 1000
+        example: 10
+    limit_query_param_datasets_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 500
+        default: 500
+        example: 10
+    limit_query_param_search_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 3500
+        default: 3500
+        example: 10
+    limit_query_param_gbfs_feeds_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 500
+        default: 500
+        example: 10
+    limit_query_param_licenses_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 100
+        default: 100
+        example: 10
+    offset:
+      name: offset
+      in: query
+      description: Offset of the first item to return.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
+        example: 0
+    search_text_query_param:
+      name: search_query
+      in: query
+      description: General search query to match against transit provider, location, and feed name.
+      required: false
+      schema:
+        type: string
+    version_query_param:
+      name: version
+      in: query
+      description: Comma separated list of GBFS versions to filter by.
+      required: false
+      schema:
+        type: string
+        example: 2.0,2.1
+    data_type_query_param:
+      name: data_type
+      in: query
+      description: Comma separated list of data types to filter by. Valid values are gtfs, gtfs_rt and gbfs.
+      required: false
+      schema:
+        type: string
+        example: gtfs,gtfs_rt
+    feed_id_query_param:
+      name: feed_id
+      in: query
+      description: The feed ID of the requested feed.
+      required: false
+      schema:
+        type: string
+        example: mdb-1210
+    feed_id_path_param:
+      name: id
+      in: path
+      description: The feed ID of the requested feed.
+      required: true
+      schema:
+        type: string
+        example: mdb-1210
+    license_id_path_param:
+      name: id
+      in: path
+      description: The license ID of the requested license.
+      required: true
+      schema:
+        type: string
+        example: 0BSD
+    feed_id_of_datasets_path_param:
+      name: id
+      in: path
+      description: The ID of the feed for which to obtain datasets.
+      required: true
+      schema:
+        type: string
+        example: mdb-10
+    dataset_id_path_param:
+      name: id
+      in: path
+      description: The ID of the requested dataset.
+      required: true
+      schema:
+        type: string
+        example: mdb-1210-202402121801
+    system_id_param:
+      name: system_id
+      in: query
+      description: Filter feeds by their system ID. This is a unique identifier for the system that the feed belongs to.
+      required: false
+      schema:
+        type: string
+        example: system-1234
+    version_param:
+      name: version
+      in: query
+      description: Filter feeds by their supported GBFS version. This is a string that follows the semantic versioning format.
+      required: false
+      schema:
+        type: string
+        example: 2.3
+    limit_query_param_availability_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned. Maximum is 100.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 100
+        default: 100
+        example: 10
+    availability_from:
+      name: from
+      in: query
+      description: Return availability checks performed at or after this timestamp. Date should be in ISO 8601 date-time format.
+      required: false
+      schema:
+        type: string
+        format: date-time
+        example: '2026-04-01T00:00:00Z'
+    availability_to:
+      name: to
+      in: query
+      description: Return availability checks performed at or before this timestamp. Date should be in ISO 8601 date-time format.
+      required: false
+      schema:
+        type: string
+        format: date-time
+        example: '2026-05-01T00:00:00Z'
+    availability_sort:
+      name: sort
+      in: query
+      description: Sort order of results by checked_at. Use `desc` for newest first (default) or `asc` for oldest first.
+      required: false
+      schema:
+        type: string
+        enum:
+          - asc
+          - desc
+        default: desc
+        example: asc
+  securitySchemes:
+    Authentication:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
