@@ -34,8 +34,8 @@ postinstall = ["hk install --mise"]
 # left untouched.
 #
 # Pin hooksPath so LFS writes hooks next to hk, not into another manager's
-# hook dir. Re-checkout after pull so skip-smudge pointer stats do not look
-# dirty to hk's pre-commit stash.
+# hook dir. After pull, smudge-checkout so a skip-smudge clone is not dirty
+# to hk's pre-commit stash.
 [deps.git-lfs]
 auto = true
 sources = ["sample-data/**/*"]
