@@ -82,8 +82,10 @@ private val expectedLocation =
     subdivisionName = "Quebec",
   )
 
-private val expectedLicense =
-  License(
+private val expectedLicense = License(id = "0BSD", name = "BSD Zero Clause License", isSpdx = true)
+
+private val expectedLicenseWithRules =
+  LicenseWithRules(
     id = "0BSD",
     name = "BSD Zero Clause License",
     isSpdx = true,
@@ -141,16 +143,51 @@ class CatalogTypesSerializationTest {
   }
 
   @Test
-  fun encodeLicense() {
-    val expected = Json.decodeFromString<JsonElement>(licenseJson)
+  fun encodeLicenseOmitsRules() {
+    val expected =
+      Json.decodeFromString<JsonElement>(
+        """{"id":"0BSD","name":"BSD Zero Clause License","is_spdx":true}"""
+      )
     val encoded = MdbJson.encodeToJsonElement(expectedLicense)
     assertEquals(expected, encoded)
   }
 
   @Test
-  fun decodeLicense() {
-    val decoded = MdbJson.decodeFromString<License>(licenseJson)
+  fun decodeLicenseFromListRow() {
+    val json = """{"id":"0BSD","name":"BSD Zero Clause License","is_spdx":true}"""
+    val decoded = MdbJson.decodeFromString<License>(json)
     assertEquals(expectedLicense, decoded)
+  }
+
+  @Test
+  fun encodeLicenseWithRules() {
+    val expected = Json.decodeFromString<JsonElement>(licenseJson)
+    val encoded = MdbJson.encodeToJsonElement(expectedLicenseWithRules)
+    assertEquals(expected, encoded)
+  }
+
+  @Test
+  fun decodeLicenseWithRules() {
+    val decoded = MdbJson.decodeFromString<LicenseWithRules>(licenseJson)
+    assertEquals(expectedLicenseWithRules, decoded)
     assertEquals(1, decoded.licenseRules?.size)
+  }
+
+  @Test
+  fun decodeMatchingLicense() {
+    val json =
+      """{"license_id":"CC-BY-4.0","match_type":"heuristic","confidence":0.99,"spdx_id":"CC-BY-4.0"}"""
+    val decoded = MdbJson.decodeFromString<MatchingLicense>(json)
+    assertEquals("CC-BY-4.0", decoded.licenseId)
+    assertEquals(LicenseMatchType.Heuristic, decoded.matchType)
+    assertEquals(0.99, decoded.confidence)
+  }
+
+  @Test
+  fun decodeOmittedSearchSeasonalIsFalse() {
+    val json = """{"id":"mdb-1","data_type":"gtfs"}"""
+    val decoded = MdbJson.decodeFromString<SearchFeedItem>(json)
+    assertEquals(false, decoded.seasonal)
+    assertEquals(FeedDataType.Gtfs, decoded.dataType)
   }
 }
