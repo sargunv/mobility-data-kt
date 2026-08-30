@@ -52,7 +52,9 @@ private fun decodeGolden(decodeAs: String, body: String) {
     "SearchFeedsResponse" -> MdbJson.decodeFromString<SearchFeedsResponse>(body)
     "LocationSearchResponse" -> MdbJson.decodeFromString<LocationSearchResponse>(body)
     "List<License>" -> MdbJson.decodeFromString(ListSerializer(License.serializer()), body)
-    "License" -> MdbJson.decodeFromString<License>(body)
+    "LicenseWithRules" -> MdbJson.decodeFromString<LicenseWithRules>(body)
+    "List<MatchingLicense>" ->
+      MdbJson.decodeFromString(ListSerializer(MatchingLicense.serializer()), body)
     "GtfsFeedAvailabilityResponse" -> MdbJson.decodeFromString<GtfsFeedAvailabilityResponse>(body)
     "FeedReliabilityReport" -> MdbJson.decodeFromString<FeedReliabilityReport>(body)
     else -> error("unknown decode_as $decodeAs")

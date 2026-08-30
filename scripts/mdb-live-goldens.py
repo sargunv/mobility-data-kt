@@ -168,7 +168,14 @@ def main() -> int:
     license_id = first_id(licenses)
     if license_id:
         status, body = get(f"/v1/licenses/{license_id}")
-        write("get_license.json", body, status, "License", manifest)
+        write("get_license.json", body, status, "LicenseWithRules", manifest)
+    status, body = request(
+        "POST",
+        "/v1/licenses:match",
+        access,
+        {"license_url": "https://creativecommons.org/licenses/by/4.0/deed.nl"},
+    )
+    write("get_matching_licenses.json", body, status, "List<MatchingLicense>", manifest)
 
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     bad = [row for row in manifest if row["status"] != 200]

@@ -54,5 +54,5 @@
         "bytes": 1872
     },
     { "file": "get_licenses.json", "decode_as": "List<License>", "status": 200, "bytes": 1997 },
-    { "file": "get_license.json", "decode_as": "License", "status": 200, "bytes": 1539 }
+    { "file": "get_license.json", "decode_as": "LicenseWithRules", "status": 200, "bytes": 1539 }
 ]
