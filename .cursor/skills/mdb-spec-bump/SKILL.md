@@ -10,11 +10,12 @@ MobilityData/mobility-feed-api **release**, not `main` and not GitHub Pages.
 
 Pinned files:
 
+- `mdb-v1/specs/pin.toml` (`release`, `repository`, `[files]` SHA-256)
 - `mdb-v1/specs/DatabaseCatalogAPI.yaml`
 - `mdb-v1/specs/DatabaseCatalogTokenAPI.yaml`
-- `mdb-v1/specs/PIN.md`
 
-The current pin is release `v1.16.2`.
+Read the current tag from `release` in `pin.toml`. Do not copy a version out of this skill or the
+docs.
 
 ## Download the new pin
 
@@ -36,14 +37,21 @@ If both diffs are empty, stop. The pin is current.
 
 ## Replace the pin
 
-Copy the two YAML files into `mdb-v1/specs/`. Rewrite `PIN.md` with the new tag, the
-`gh release download` command, and:
+Copy the two YAML files into `mdb-v1/specs/`. Set `release` in `pin.toml` to the new tag. Set each
+`[files]` hash with Python, not `sha256sum` (that binary is missing on stock macOS):
 
 ```bash
-sha256sum mdb-v1/specs/DatabaseCatalogAPI.yaml mdb-v1/specs/DatabaseCatalogTokenAPI.yaml
+python3 - <<'PY'
+from hashlib import sha256
+from pathlib import Path
+for name in ("DatabaseCatalogAPI.yaml", "DatabaseCatalogTokenAPI.yaml"):
+    digest = sha256((Path("mdb-v1/specs") / name).read_bytes()).hexdigest()
+    print(f'{name} = "{digest}"')
+PY
 ```
 
-Do not reformat the YAML. `dprint.json` excludes `mdb-v1/specs`.
+Do not reformat the YAML. `dprint.json` excludes `mdb-v1/specs/*.yaml` so the pin hashes stay
+stable. `pin.toml` is formatted.
 
 Run `mise run check:mdb-spec`. It must exit 0.
 
@@ -60,8 +68,8 @@ Read the spec diff, then edit only the files that the delta touches.
 - Availability: `Availability.kt` and `MdbV1Client.getGtfsFeedAvailability`
 - Reliability: `Reliability.kt` and `MdbV1Client.getGtfsFeedReliability`
 - New list or get path: `MdbV1Client.kt` plus a query object in `FeedQuery.kt`
-- `GET /v1/gtfs_feeds/{id}/continuous_coverage` is on `main` and not in v1.16.2. Add it only after
-  the pin includes it.
+- `GET /v1/gtfs_feeds/{id}/continuous_coverage` is on `main` and not in the current pin. Add it only
+  after the pin includes it.
 - `POST /v1/licenses:match` stays out. It uses an undefined `ApiKeyAuth`.
 
 Keep `Feed` as a sealed class on `data_type`. GBFS still subclasses `Feed` even when the spec allOfs

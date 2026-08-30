@@ -157,7 +157,7 @@ xcodebuild -downloadPlatform watchOS
 """
 
 [tasks."check:mdb-spec"]
-description = "Fail when the pinned catalog YAML hashes disagree with PIN.md"
+description = "Fail when the pinned catalog YAML hashes disagree with pin.toml"
 run = "scripts/mdb-spec-check.sh"
 
 [tasks.check]

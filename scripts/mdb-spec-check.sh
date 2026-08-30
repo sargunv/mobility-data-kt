@@ -2,35 +2,42 @@
 set -euo pipefail
 
 root="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
-pin="$root/mdb-v1/specs/PIN.md"
-catalog="$root/mdb-v1/specs/DatabaseCatalogAPI.yaml"
-token="$root/mdb-v1/specs/DatabaseCatalogTokenAPI.yaml"
+exec python3 - "$root" <<'PY'
+import hashlib
+import sys
+import tomllib
+from pathlib import Path
 
-if [[ ! -f $pin || ! -f $catalog || ! -f $token ]]; then
-  echo "mdb-spec-check: missing pin or YAML under mdb-v1/specs" >&2
-  exit 1
-fi
+root = Path(sys.argv[1])
+pin_path = root / "mdb-v1" / "specs" / "pin.toml"
+specs = root / "mdb-v1" / "specs"
 
-expected_catalog="$(awk '/DatabaseCatalogAPI\.yaml$/{print $1; exit}' "$pin")"
-expected_token="$(awk '/DatabaseCatalogTokenAPI\.yaml$/{print $1; exit}' "$pin")"
-actual_catalog="$(sha256sum "$catalog" | awk '{print $1}')"
-actual_token="$(sha256sum "$token" | awk '{print $1}')"
+if not pin_path.is_file():
+    print("mdb-spec-check: missing mdb-v1/specs/pin.toml", file=sys.stderr)
+    sys.exit(1)
 
-status=0
-if [[ $expected_catalog != "$actual_catalog" ]]; then
-  echo "mdb-spec-check: DatabaseCatalogAPI.yaml SHA-256 does not match PIN.md" >&2
-  echo "  pin:  $expected_catalog" >&2
-  echo "  file: $actual_catalog" >&2
-  status=1
-fi
-if [[ $expected_token != "$actual_token" ]]; then
-  echo "mdb-spec-check: DatabaseCatalogTokenAPI.yaml SHA-256 does not match PIN.md" >&2
-  echo "  pin:  $expected_token" >&2
-  echo "  file: $actual_token" >&2
-  status=1
-fi
+pin = tomllib.loads(pin_path.read_text())
+files = pin.get("files")
+if not isinstance(files, dict) or not files:
+    print("mdb-spec-check: pin.toml has no [files] table", file=sys.stderr)
+    sys.exit(1)
 
-if [[ $status -eq 0 ]]; then
-  echo "mdb-spec-check: pin matches DatabaseCatalogAPI.yaml and DatabaseCatalogTokenAPI.yaml"
-fi
-exit "$status"
+status = 0
+for name, expected in files.items():
+    path = specs / name
+    if not path.is_file():
+        print(f"mdb-spec-check: missing {path}", file=sys.stderr)
+        status = 1
+        continue
+    actual = hashlib.sha256(path.read_bytes()).hexdigest()
+    if actual != expected:
+        print(f"mdb-spec-check: {name} SHA-256 does not match pin.toml", file=sys.stderr)
+        print(f"  pin:  {expected}", file=sys.stderr)
+        print(f"  file: {actual}", file=sys.stderr)
+        status = 1
+
+if status == 0:
+    release = pin.get("release", "unknown")
+    print(f"mdb-spec-check: pin.toml {release} matches {', '.join(files)}")
+sys.exit(status)
+PY

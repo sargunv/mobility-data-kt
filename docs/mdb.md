@@ -3,8 +3,8 @@
 The `mdb-v1` module is a client for the
 [Mobility Database Catalog API](https://mobilitydata.github.io/mobility-feed-api/SwaggerUI/index.html).
 
-The types are handwritten against the OpenAPI assets from MobilityData/mobility-feed-api release
-`v1.16.2`, pinned in `mdb-v1/specs`.
+The types are handwritten against the OpenAPI assets from the MobilityData/mobility-feed-api release
+named in `mdb-v1/specs/pin.toml`.
 
 ## Features
 
