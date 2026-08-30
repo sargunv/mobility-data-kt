@@ -118,6 +118,21 @@ class FeedSerializationTest {
   }
 
   @Test
+  fun decodeOffsetLessCreatedAtAsUtc() {
+    val json =
+      """
+      {
+        "id": "mdb-1",
+        "data_type": "gtfs",
+        "created_at": "2025-01-22T20:19:42.509622"
+      }
+      """
+        .trimIndent()
+    val decoded = MdbJson.decodeFromString<Feed>(json)
+    assertEquals(Instant.parse("2025-01-22T20:19:42.509622Z"), (decoded as Feed.Gtfs).createdAt)
+  }
+
+  @Test
   fun decodeIgnoresUnknownKeys() {
     val json =
       """
