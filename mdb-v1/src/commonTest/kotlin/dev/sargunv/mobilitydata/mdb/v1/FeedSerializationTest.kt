@@ -2,9 +2,7 @@ package dev.sargunv.mobilitydata.mdb.v1
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertFails
 import kotlin.test.assertIs
-import kotlin.test.assertTrue
 import kotlin.time.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -152,16 +150,62 @@ class FeedSerializationTest {
   }
 
   @Test
-  fun decodeUnknownDataTypeFails() {
+  fun decodeGbfsSharedFields() {
+    val json =
+      """
+      {
+        "id": "gbfs-zem_ch",
+        "data_type": "gbfs",
+        "status": "active",
+        "official": false,
+        "seasonal": false,
+        "related_links": [],
+        "system_id": "zem"
+      }
+      """
+        .trimIndent()
+    val decoded = MdbJson.decodeFromString<Feed>(json)
+    val gbfs = decoded as Feed.Gbfs
+    assertEquals(FeedId("gbfs-zem_ch"), gbfs.id)
+    assertEquals(FeedStatus.Active, gbfs.status)
+    assertEquals(false, gbfs.official)
+    assertEquals(false, gbfs.seasonal)
+    assertEquals(emptyList(), gbfs.relatedLinks)
+    assertEquals("zem", gbfs.systemId)
+  }
+
+  @Test
+  fun decodeUnknownDataType() {
     val json =
       """
       {
         "id": "mdb-1",
-        "data_type": "neptunian"
+        "data_type": "neptunian",
+        "status": "active"
       }
       """
         .trimIndent()
-    val error = assertFails { MdbJson.decodeFromString<Feed>(json) }
-    assertTrue(error is kotlinx.serialization.SerializationException)
+    val decoded = MdbJson.decodeFromString<Feed>(json)
+    val unknown = decoded as Feed.Unknown
+    assertEquals("neptunian", unknown.dataType)
+    assertEquals(FeedId("mdb-1"), unknown.id)
+    assertEquals(FeedStatus.Active, unknown.status)
+  }
+
+  @Test
+  fun encodeUnknownPreservesDataType() {
+    val expected =
+      Json.decodeFromString<JsonElement>(
+        """
+        {
+          "data_type": "neptunian",
+          "id": "mdb-1"
+        }
+        """
+          .trimIndent()
+      )
+    val encoded =
+      MdbJson.encodeToJsonElement<Feed>(Feed.Unknown(dataType = "neptunian", id = FeedId("mdb-1")))
+    assertEquals(expected, encoded)
   }
 }

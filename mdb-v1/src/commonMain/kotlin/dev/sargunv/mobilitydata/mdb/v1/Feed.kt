@@ -1,10 +1,8 @@
 package dev.sargunv.mobilitydata.mdb.v1
 
 import kotlin.jvm.JvmInline
-import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.JsonClassDiscriminator
 
 /** Catalog identifier for a feed, such as `mdb-1210`. */
 @Serializable
@@ -17,12 +15,10 @@ public value class FeedId(
 /**
  * A Mobility Database catalog feed.
  *
- * The catalog discriminator is `data_type`. GTFS and GTFS-RT extend the full feed object. GBFS
- * extends only the basic feed fields, so those extra properties stay off [Gbfs].
+ * The catalog discriminator is `data_type`. [Gtfs], [GtfsRt], and [Gbfs] share the fields below.
+ * [Unknown] holds those same fields when the discriminator is not one of those three values.
  */
-@OptIn(ExperimentalSerializationApi::class)
-@Serializable
-@JsonClassDiscriminator("data_type")
+@Serializable(with = FeedSerializer::class)
 public sealed class Feed {
   /** Unique catalog identifier. */
   public abstract val id: FeedId?
@@ -45,6 +41,27 @@ public sealed class Feed {
   /** Replacement feeds when this one should not be used. */
   public abstract val redirects: List<Redirect>?
 
+  /** Whether the feed is active, deprecated, inactive, in development, or future. */
+  public abstract val status: FeedStatus?
+
+  /** Whether the feed is provided by the agency or a trusted source. */
+  public abstract val official: Boolean?
+
+  /** Instant the official status was last updated. */
+  public abstract val officialUpdatedAt: IsoDateTime?
+
+  /** Whether the feed only covers a recurring season. Omitted values decode as `false`. */
+  public abstract val seasonal: Boolean?
+
+  /** Optional description of the data feed. */
+  public abstract val feedName: String?
+
+  /** Note that clarifies complex use cases. */
+  public abstract val note: String?
+
+  /** Related links for the feed. */
+  public abstract val relatedLinks: List<FeedRelatedLink>?
+
   /** A static GTFS feed. */
   @Serializable
   @SerialName("gtfs")
@@ -56,27 +73,13 @@ public sealed class Feed {
     @SerialName("feed_contact_email") override val feedContactEmail: String? = null,
     @SerialName("source_info") override val sourceInfo: SourceInfo? = null,
     override val redirects: List<Redirect>? = null,
-
-    /** Whether the feed is active, deprecated, inactive, in development, or future. */
-    public val status: FeedStatus? = null,
-
-    /** Whether the feed is provided by the agency or a trusted source. */
-    public val official: Boolean? = null,
-
-    /** Instant the official status was last updated. */
-    @SerialName("official_updated_at") public val officialUpdatedAt: IsoDateTime? = null,
-
-    /** Whether the feed only covers a recurring season. */
-    public val seasonal: Boolean? = false,
-
-    /** Optional description of the data feed. */
-    @SerialName("feed_name") public val feedName: String? = null,
-
-    /** Note that clarifies complex use cases. */
-    public val note: String? = null,
-
-    /** Related links for the feed. */
-    @SerialName("related_links") public val relatedLinks: List<FeedRelatedLink>? = null,
+    override val status: FeedStatus? = null,
+    override val official: Boolean? = null,
+    @SerialName("official_updated_at") override val officialUpdatedAt: IsoDateTime? = null,
+    override val seasonal: Boolean? = false,
+    @SerialName("feed_name") override val feedName: String? = null,
+    override val note: String? = null,
+    @SerialName("related_links") override val relatedLinks: List<FeedRelatedLink>? = null,
 
     /** Locations served by the feed. */
     public val locations: List<Location>? = null,
@@ -105,27 +108,13 @@ public sealed class Feed {
     @SerialName("feed_contact_email") override val feedContactEmail: String? = null,
     @SerialName("source_info") override val sourceInfo: SourceInfo? = null,
     override val redirects: List<Redirect>? = null,
-
-    /** Whether the feed is active, deprecated, inactive, in development, or future. */
-    public val status: FeedStatus? = null,
-
-    /** Whether the feed is provided by the agency or a trusted source. */
-    public val official: Boolean? = null,
-
-    /** Instant the official status was last updated. */
-    @SerialName("official_updated_at") public val officialUpdatedAt: IsoDateTime? = null,
-
-    /** Whether the feed only covers a recurring season. */
-    public val seasonal: Boolean? = false,
-
-    /** Optional description of the data feed. */
-    @SerialName("feed_name") public val feedName: String? = null,
-
-    /** Note that clarifies complex use cases. */
-    public val note: String? = null,
-
-    /** Related links for the feed. */
-    @SerialName("related_links") public val relatedLinks: List<FeedRelatedLink>? = null,
+    override val status: FeedStatus? = null,
+    override val official: Boolean? = null,
+    @SerialName("official_updated_at") override val officialUpdatedAt: IsoDateTime? = null,
+    override val seasonal: Boolean? = false,
+    @SerialName("feed_name") override val feedName: String? = null,
+    override val note: String? = null,
+    @SerialName("related_links") override val relatedLinks: List<FeedRelatedLink>? = null,
 
     /** Realtime entity types published by this feed. */
     @SerialName("entity_types") public val entityTypes: List<RealtimeEntityType>? = null,
@@ -148,6 +137,13 @@ public sealed class Feed {
     @SerialName("feed_contact_email") override val feedContactEmail: String? = null,
     @SerialName("source_info") override val sourceInfo: SourceInfo? = null,
     override val redirects: List<Redirect>? = null,
+    override val status: FeedStatus? = null,
+    override val official: Boolean? = null,
+    @SerialName("official_updated_at") override val officialUpdatedAt: IsoDateTime? = null,
+    override val seasonal: Boolean? = false,
+    @SerialName("feed_name") override val feedName: String? = null,
+    override val note: String? = null,
+    @SerialName("related_links") override val relatedLinks: List<FeedRelatedLink>? = null,
 
     /** Locations served by the feed. */
     public val locations: List<Location>? = null,
@@ -166,6 +162,31 @@ public sealed class Feed {
 
     /** Instant the bounding box was generated. */
     @SerialName("bounding_box_generated_at") public val boundingBoxGeneratedAt: IsoDateTime? = null,
+  ) : Feed()
+
+  /**
+   * A catalog row whose `data_type` is not `gtfs`, `gtfs_rt`, or `gbfs`.
+   *
+   * Extra properties on the wire are ignored. [dataType] is the raw discriminator.
+   */
+  @Serializable
+  public data class Unknown(
+    /** Wire `data_type` value. */
+    @SerialName("data_type") public val dataType: String = "unknown",
+    override val id: FeedId? = null,
+    @SerialName("created_at") override val createdAt: IsoDateTime? = null,
+    @SerialName("external_ids") override val externalIds: List<ExternalId>? = null,
+    override val provider: String? = null,
+    @SerialName("feed_contact_email") override val feedContactEmail: String? = null,
+    @SerialName("source_info") override val sourceInfo: SourceInfo? = null,
+    override val redirects: List<Redirect>? = null,
+    override val status: FeedStatus? = null,
+    override val official: Boolean? = null,
+    @SerialName("official_updated_at") override val officialUpdatedAt: IsoDateTime? = null,
+    override val seasonal: Boolean? = false,
+    @SerialName("feed_name") override val feedName: String? = null,
+    override val note: String? = null,
+    @SerialName("related_links") override val relatedLinks: List<FeedRelatedLink>? = null,
   ) : Feed()
 }
 
