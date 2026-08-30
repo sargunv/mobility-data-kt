@@ -21,10 +21,8 @@ the first `mise run`/`mise exec`; you can also fetch them on demand:
 mise deps
 ```
 
-If you cloned before running `mise install`, the sample files start out as Git-LFS pointer files;
-running the command above materializes their contents. The same provider installs the Git-LFS hooks
-into `.git/hooks` next to hk's pre-commit hook. It then refreshes the index so a skip-smudge
-checkout does not look like hundreds of unstaged fixture edits.
+If you cloned before running `mise install`, the files under `sample-data` are Git-LFS pointers. Run
+`mise deps` to fetch their contents.
 
 ## IDE Setup
 
