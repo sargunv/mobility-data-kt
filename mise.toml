@@ -27,16 +27,6 @@ postinstall = ["hk install --mise"]
 # The CLI only; Xcode itself is installed via the xcode:* tasks. macOS-only.
 "aqua:XcodesOrg/xcodes" = { version = "1.6.2", os = ["macos"] }
 
-# Fetch the Git-LFS sample datasets used by tests. Runs automatically before
-# `mise run`/`mise exec`. Freshness is keyed on the working-tree contents of
-# `sample-data`, so a fresh checkout (where the files are still LFS pointers)
-# is detected as stale and materialized, while an already-materialized tree is
-# left untouched.
-#
-# Install LFS hooks in this repo's git-dir, not core.hooksPath. After pull,
-# refresh index stats only on unstaged files whose cleaned content already
-# matches the index. A full renormalize plus restore --staged would drop
-# staged fixture edits.
 [deps.git-lfs]
 auto = true
 sources = ["sample-data/**/*"]
