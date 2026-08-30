@@ -1,10 +1,8 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
-import dev.sargunv.kotlindsv.DsvParseException
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFails
-import kotlin.test.assertFailsWith
 import kotlin.test.assertNull
 import kotlinx.io.Buffer
 import kotlinx.io.writeString
@@ -98,7 +96,7 @@ class ShortCsvRowTest {
   }
 
   @Test
-  fun decodeStillRejectsRowsWithExtraFields() {
+  fun decodeIgnoresExtraFieldsPastTheHeader() {
     val csv = // language=CSV
       """
       agency_id,agency_name,agency_url,agency_timezone
@@ -106,28 +104,37 @@ class ShortCsvRowTest {
       """
         .trimIndent()
 
-    assertFailsWith<DsvParseException> { GtfsCsv.decodeFromString<Agency>(csv) }
-  }
-}
-
-class CsvShortRowPaddingTest {
-  @Test
-  fun padsShortRowsToHeaderWidth() {
-    assertEquals("a,b,c\n1,2,", padOmittedTrailingCsvFields("a,b,c\n1,2"))
-    assertEquals("a,b,c\n1,2,3", padOmittedTrailingCsvFields("a,b,c\n1,2,3"))
-    assertEquals("a,b,c\n1,2,3\n4,,", padOmittedTrailingCsvFields("a,b,c\n1,2,3\n4"))
+    val decoded = GtfsCsv.decodeFromString<Agency>(csv).single()
+    assertEquals("DTA", decoded.agencyId)
+    assertEquals("America/Los_Angeles", decoded.agencyTimezone)
   }
 
   @Test
-  fun preservesQuotedCommasNewlinesAndCrlf() {
-    assertEquals("a,b,c\n1,\"2,x\",", padOmittedTrailingCsvFields("a,b,c\n1,\"2,x\""))
-    assertEquals("a,b\n\"x\ny\",", padOmittedTrailingCsvFields("a,b\n\"x\ny\""))
-    assertEquals("a,b\r\n1,", padOmittedTrailingCsvFields("a,b\r\n1"))
+  fun decodeSkipsLeadingUtf8Bom() {
+    val csv = // language=CSV
+      """
+      agency_id,agency_name,agency_url,agency_timezone
+      DTA,Demo Transit Authority,https://google.com,America/Los_Angeles
+      """
+        .trimIndent()
+
+    val decoded = GtfsCsv.decodeFromString<Agency>("\uFEFF$csv").single()
+    assertEquals("DTA", decoded.agencyId)
+    assertEquals("Demo Transit Authority", decoded.agencyName)
   }
 
   @Test
-  fun doesNotPadEmptyLinesOrLongRows() {
-    assertEquals("a,b\n\n1,", padOmittedTrailingCsvFields("a,b\n\n1"))
-    assertEquals("a,b\n1,2,3", padOmittedTrailingCsvFields("a,b\n1,2,3"))
+  fun decodeFromSourceSkipsLeadingUtf8Bom() {
+    val csv = // language=CSV
+      """
+      agency_id,agency_name,agency_url,agency_timezone
+      DTA,Demo Transit Authority,https://google.com,America/Los_Angeles
+      """
+        .trimIndent()
+
+    val source = Buffer().apply { writeString("\uFEFF$csv") }
+    val decoded = GtfsCsv.decodeFromSource<Agency>(source).single()
+    assertEquals("DTA", decoded.agencyId)
+    assertEquals("Demo Transit Authority", decoded.agencyName)
   }
 }

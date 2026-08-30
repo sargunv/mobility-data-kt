@@ -2,9 +2,12 @@ amends "package://github.com/jdx/hk/releases/download/v1.40.0/hk@1.40.0#/Config.
 
 import "package://github.com/jdx/hk/releases/download/v1.40.0/hk@1.40.0#/Builtins.pkl"
 
+// Git-LFS fixtures. dprint.json already skips them; keep hk from matching them via dprint's **/* glob.
+exclude = List("sample-data")
+
 local allSteps = new Mapping<String, Step> {
   // formatters
-  ["dprint"] = Builtins.dprint
+  ["dprint"] = (Builtins.dprint) { exclude = List("sample-data") }
 
   // linters
   ["detekt"] {

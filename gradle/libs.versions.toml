@@ -15,7 +15,7 @@ spatialk = "0.7.0"
 osm-opening-hours = "0.4.0"
 ktor = "3.5.2"
 joda-timezone = "2.25.2"
-kotlin-dsv = "0.4.0"
+kotlin-dsv = "0.5.0"
 gtfs-realtime-bindings = "0.2.0"
 
 [libraries]
