@@ -34,8 +34,9 @@ postinstall = ["hk install --mise"]
 # left untouched.
 #
 # Install LFS hooks in this repo's git-dir, not core.hooksPath. After pull,
-# renormalize the index so skip-smudge clones are clean without resetting
-# edited fixtures.
+# refresh index stats only on unstaged files whose cleaned content already
+# matches the index. A full renormalize plus restore --staged would drop
+# staged fixture edits.
 [deps.git-lfs]
 auto = true
 sources = ["sample-data/**/*"]
@@ -45,8 +46,12 @@ hooks_dir="$(git rev-parse --path-format=absolute --git-dir)/hooks"
 git lfs install --local --skip-repo
 git -c core.hooksPath="$hooks_dir" lfs install --local || true
 git lfs pull
-git add --renormalize -- sample-data
-git restore --staged -- sample-data
+git status --porcelain -z -- sample-data | while IFS= read -r -d '' entry; do
+  [ "${entry:0:2}" = " M" ] || continue
+  path="${entry:3}"
+  [ -z "$(git diff -- "$path")" ] || continue
+  git add --renormalize -- "$path"
+done
 """
 
 [tasks.build]
