@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.mdb.v1
 
+import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.suspendRunCatching
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
@@ -85,6 +86,162 @@ internal constructor(
    * @return The feed, or an error
    */
   public suspend fun getFeed(id: FeedId): Result<Feed> = catalogGet("v1", "feeds", id.value)
+
+  /**
+   * Lists GTFS feeds.
+   *
+   * @param query Limit, offset, and filters
+   * @return The page of GTFS feeds, or an error
+   */
+  public suspend fun getGtfsFeeds(
+    query: TypedFeedQuery = TypedFeedQuery()
+  ): Result<List<Feed.Gtfs>> = catalogGet("v1/gtfs_feeds") { appendTypedFeedQuery(query) }
+
+  /**
+   * Fetches one GTFS feed.
+   *
+   * @param id Catalog feed id
+   * @return The GTFS feed, or an error
+   */
+  public suspend fun getGtfsFeed(id: FeedId): Result<Feed.Gtfs> =
+    catalogGet("v1/gtfs_feeds/${id.value}")
+
+  /**
+   * Lists GTFS Realtime feeds.
+   *
+   * @param query Limit, offset, and filters
+   * @return The page of GTFS Realtime feeds, or an error
+   */
+  public suspend fun getGtfsRtFeeds(
+    query: TypedFeedQuery = TypedFeedQuery()
+  ): Result<List<Feed.GtfsRt>> = catalogGet("v1/gtfs_rt_feeds") { appendTypedFeedQuery(query) }
+
+  /**
+   * Fetches one GTFS Realtime feed.
+   *
+   * @param id Catalog feed id
+   * @return The GTFS Realtime feed, or an error
+   */
+  public suspend fun getGtfsRtFeed(id: FeedId): Result<Feed.GtfsRt> =
+    catalogGet("v1/gtfs_rt_feeds/${id.value}")
+
+  /**
+   * Lists GBFS feeds.
+   *
+   * @param query Limit, offset, and filters
+   * @return The page of GBFS feeds, or an error
+   */
+  public suspend fun getGbfsFeeds(
+    query: TypedFeedQuery = TypedFeedQuery()
+  ): Result<List<Feed.Gbfs>> = catalogGet("v1/gbfs_feeds") { appendTypedFeedQuery(query) }
+
+  /**
+   * Fetches one GBFS feed.
+   *
+   * @param id Catalog feed id
+   * @return The GBFS feed, or an error
+   */
+  public suspend fun getGbfsFeed(id: FeedId): Result<Feed.Gbfs> =
+    catalogGet("v1/gbfs_feeds/${id.value}")
+
+  /**
+   * Lists datasets for a GTFS feed, newest first.
+   *
+   * @param id Catalog feed id
+   * @param query Limit, offset, and latest-only
+   * @return The page of datasets, or an error
+   */
+  public suspend fun getGtfsFeedDatasets(
+    id: FeedId,
+    query: DatasetQuery = DatasetQuery(),
+  ): Result<List<GtfsDataset>> =
+    catalogGet("v1/gtfs_feeds/${id.value}/datasets") { appendDatasetQuery(query) }
+
+  /**
+   * Lists GTFS Realtime feeds related to a GTFS feed.
+   *
+   * @param id Catalog GTFS feed id
+   * @return Related GTFS Realtime feeds, or an error
+   */
+  public suspend fun getGtfsFeedGtfsRtFeeds(id: FeedId): Result<List<Feed.GtfsRt>> =
+    catalogGet("v1/gtfs_feeds/${id.value}/gtfs_rt_feeds")
+
+  /**
+   * Fetches one hosted GTFS dataset.
+   *
+   * @param id Dataset id
+   * @return The dataset, or an error
+   */
+  public suspend fun getDatasetGtfs(id: String): Result<GtfsDataset> =
+    catalogGet("v1/datasets/gtfs/$id")
+
+  /**
+   * Fetches API process metadata.
+   *
+   * @return The metadata, or an error
+   */
+  public suspend fun getMetadata(): Result<Metadata> = catalogGet("v1/metadata")
+
+  /**
+   * Full-text search over feeds.
+   *
+   * @param query Search text and filters
+   * @return Matching feeds with a total count, or an error
+   */
+  public suspend fun searchFeeds(
+    query: SearchFeedsQuery = SearchFeedsQuery()
+  ): Result<SearchFeedsResponse> = catalogGet("v1/search") { appendSearchFeedsQuery(query) }
+
+  /**
+   * Searches catalog locations.
+   *
+   * @param query Free-text query and filters
+   * @return Matching locations with a total count, or an error
+   */
+  public suspend fun getLocations(
+    query: LocationQuery = LocationQuery()
+  ): Result<LocationSearchResponse> = catalogGet("v1/locations") { appendLocationQuery(query) }
+
+  /**
+   * Lists licenses.
+   *
+   * @param query Limit and offset
+   * @return The page of licenses, or an error
+   */
+  public suspend fun getLicenses(query: LicenseQuery = LicenseQuery()): Result<List<License>> =
+    catalogGet("v1/licenses") { appendLicenseQuery(query) }
+
+  /**
+   * Fetches one license, including its rules.
+   *
+   * @param id License id, often an SPDX id
+   * @return The license, or an error
+   */
+  public suspend fun getLicense(id: String): Result<License> = catalogGet("v1/licenses/$id")
+
+  /**
+   * Returns historical availability checks for a GTFS feed.
+   *
+   * @param id Catalog GTFS feed id
+   * @param query Limit and offset
+   * @return Availability history, or an error
+   */
+  @ExperimentalMobilityDataApi
+  public suspend fun getGtfsFeedAvailability(
+    id: FeedId,
+    query: AvailabilityQuery = AvailabilityQuery(),
+  ): Result<GtfsFeedAvailabilityResponse> =
+    catalogGet("v1/gtfs_feeds/${id.value}/availability") { appendAvailabilityQuery(query) }
+
+  /**
+   * Returns the Seal of Reliability breakdown for a GTFS feed.
+   *
+   * @param id Catalog GTFS feed id
+   * @return The reliability report, or an error
+   */
+  @ExperimentalMobilityDataApi
+  public suspend fun getGtfsFeedReliability(id: FeedId): Result<FeedReliabilityReport> =
+    catalogGet("v1/gtfs_feeds/${id.value}/reliability")
 
   override fun close(): Unit = httpClient.close()
 
