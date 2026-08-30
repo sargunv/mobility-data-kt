@@ -15,8 +15,10 @@ public data class AccessTokenRequest(
 public data class AccessToken(
   /** Bearer token used to call catalog endpoints. */
   @SerialName("access_token") public val accessToken: String? = null,
+
   /** Instant when the access token expires, in UTC. */
   @SerialName("expiration_datetime_utc") public val expirationDatetimeUtc: IsoDateTime? = null,
+
   /** Token type. The catalog returns `Bearer`. */
   @SerialName("token_type") public val tokenType: String? = null,
 )

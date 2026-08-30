@@ -9,22 +9,31 @@ import kotlinx.serialization.Serializable
 public data class License(
   /** Unique license identifier, often an SPDX id. */
   public val id: String? = null,
+
   /** License category reported by the catalog. */
   public val type: String? = null,
+
   /** Whether [id] is an SPDX identifier. */
   @SerialName("is_spdx") public val isSpdx: Boolean? = null,
+
   /** User-facing license name. */
   public val name: String? = null,
+
   /** URL where the license text can be read. */
   public val url: String? = null,
+
   /** License description. */
   public val description: String? = null,
+
   /** Instant the license was added to the catalog. */
   @SerialName("created_at") public val createdAt: IsoDateTime? = null,
+
   /** Instant the license was last updated. */
   @SerialName("updated_at") public val updatedAt: IsoDateTime? = null,
+
   /** Taxonomy tags associated with the license. */
   @SerialName("license_tags") public val licenseTags: List<String>? = null,
+
   /** Permission, condition, and limitation rules. Absent on list responses. */
   @SerialName("license_rules") public val licenseRules: List<LicenseRule>? = null,
 )
@@ -34,10 +43,13 @@ public data class License(
 public data class LicenseRule(
   /** Machine-readable rule name. */
   public val name: String? = null,
+
   /** User-facing rule label. */
   public val label: String? = null,
+
   /** Rule description. */
   public val description: String? = null,
+
   /** Whether this rule is a permission, condition, or limitation. */
   public val type: LicenseRuleType? = null,
 )

@@ -56,28 +56,40 @@ public sealed class Feed {
     @SerialName("feed_contact_email") override val feedContactEmail: String? = null,
     @SerialName("source_info") override val sourceInfo: SourceInfo? = null,
     override val redirects: List<Redirect>? = null,
+
     /** Whether the feed is active, deprecated, inactive, in development, or future. */
     public val status: FeedStatus? = null,
+
     /** Whether the feed is provided by the agency or a trusted source. */
     public val official: Boolean? = null,
+
     /** Instant the official status was last updated. */
     @SerialName("official_updated_at") public val officialUpdatedAt: IsoDateTime? = null,
+
     /** Whether the feed only covers a recurring season. */
     public val seasonal: Boolean? = false,
+
     /** Optional description of the data feed. */
     @SerialName("feed_name") public val feedName: String? = null,
+
     /** Note that clarifies complex use cases. */
     public val note: String? = null,
+
     /** Related links for the feed. */
     @SerialName("related_links") public val relatedLinks: List<FeedRelatedLink>? = null,
+
     /** Locations served by the feed. */
     public val locations: List<Location>? = null,
+
     /** Latest hosted dataset. */
     @SerialName("latest_dataset") public val latestDataset: LatestDataset? = null,
+
     /** Bounding box of the feed. */
     @SerialName("bounding_box") public val boundingBox: BoundingBox? = null,
+
     /** Dataset id used to compute visualization files. */
     @SerialName("visualization_dataset_id") public val visualizationDatasetId: String? = null,
+
     /** Embedded Seal of Reliability summary. */
     @SerialName("reliability_seal") public val reliabilitySeal: FeedReliabilitySummary? = null,
   ) : Feed()
@@ -93,24 +105,34 @@ public sealed class Feed {
     @SerialName("feed_contact_email") override val feedContactEmail: String? = null,
     @SerialName("source_info") override val sourceInfo: SourceInfo? = null,
     override val redirects: List<Redirect>? = null,
+
     /** Whether the feed is active, deprecated, inactive, in development, or future. */
     public val status: FeedStatus? = null,
+
     /** Whether the feed is provided by the agency or a trusted source. */
     public val official: Boolean? = null,
+
     /** Instant the official status was last updated. */
     @SerialName("official_updated_at") public val officialUpdatedAt: IsoDateTime? = null,
+
     /** Whether the feed only covers a recurring season. */
     public val seasonal: Boolean? = false,
+
     /** Optional description of the data feed. */
     @SerialName("feed_name") public val feedName: String? = null,
+
     /** Note that clarifies complex use cases. */
     public val note: String? = null,
+
     /** Related links for the feed. */
     @SerialName("related_links") public val relatedLinks: List<FeedRelatedLink>? = null,
+
     /** Realtime entity types published by this feed. */
     @SerialName("entity_types") public val entityTypes: List<RealtimeEntityType>? = null,
+
     /** GTFS feed ids this realtime source is associated with. */
     @SerialName("feed_references") public val feedReferences: List<FeedId>? = null,
+
     /** Locations served by the feed. */
     public val locations: List<Location>? = null,
   ) : Feed()
@@ -126,16 +148,22 @@ public sealed class Feed {
     @SerialName("feed_contact_email") override val feedContactEmail: String? = null,
     @SerialName("source_info") override val sourceInfo: SourceInfo? = null,
     override val redirects: List<Redirect>? = null,
+
     /** Locations served by the feed. */
     public val locations: List<Location>? = null,
+
     /** GBFS system id. */
     @SerialName("system_id") public val systemId: String? = null,
+
     /** Provider website. */
     @SerialName("provider_url") public val providerUrl: String? = null,
+
     /** GBFS versions this feed supports. */
     public val versions: List<GbfsVersion>? = null,
+
     /** Bounding box of the feed. */
     @SerialName("bounding_box") public val boundingBox: BoundingBox? = null,
+
     /** Instant the bounding box was generated. */
     @SerialName("bounding_box_generated_at") public val boundingBoxGeneratedAt: IsoDateTime? = null,
   ) : Feed()
@@ -192,6 +220,7 @@ public value class RealtimeEntityType(
 public data class ExternalId(
   /** External identifier. */
   @SerialName("external_id") public val externalId: String? = null,
+
   /** Database that issued [externalId]. */
   public val source: String? = null,
 )
@@ -201,26 +230,35 @@ public data class ExternalId(
 public data class SourceInfo(
   /** URL where the producer hosts the dataset. */
   @SerialName("producer_url") public val producerUrl: String? = null,
+
   /** Whether [producerUrl] is known to change over time. */
   @SerialName("is_producer_url_unstable") public val isProducerUrlUnstable: Boolean? = null,
+
   /**
    * Authentication required to access [producerUrl].
    *
    * `0` means none, `1` means an API key query parameter, and `2` means an HTTP header.
    */
   @SerialName("authentication_type") public val authenticationType: Int? = null,
+
   /** Human-readable page describing how to authenticate. */
   @SerialName("authentication_info_url") public val authenticationInfoUrl: String? = null,
+
   /** Query parameter or header name that carries the API key. */
   @SerialName("api_key_parameter_name") public val apiKeyParameterName: String? = null,
+
   /** URL of the feed license. */
   @SerialName("license_url") public val licenseUrl: String? = null,
+
   /** License id that can be queried from the license endpoint. */
   @SerialName("license_id") public val licenseId: String? = null,
+
   /** Whether [licenseId] is an SPDX identifier. */
   @SerialName("license_is_spdx") public val licenseIsSpdx: Boolean? = null,
+
   /** Notes about the feed's license. */
   @SerialName("license_notes") public val licenseNotes: String? = null,
+
   /** Taxonomy tags associated with the feed's license. */
   @SerialName("license_tags") public val licenseTags: List<String>? = null,
 )
@@ -230,6 +268,7 @@ public data class SourceInfo(
 public data class Redirect(
   /** Feed id that replaces the current feed. */
   @SerialName("target_id") public val targetId: FeedId? = null,
+
   /** Explanation of the redirect. */
   public val comment: String? = null,
 )
@@ -239,10 +278,13 @@ public data class Redirect(
 public data class FeedRelatedLink(
   /** Short code that identifies the kind of link. */
   public val code: String? = null,
+
   /** Description of the link. */
   public val description: String? = null,
+
   /** Link URL. */
   public val url: String? = null,
+
   /** Instant the link was created. */
   @SerialName("created_at") public val createdAt: IsoDateTime? = null,
 )
@@ -252,14 +294,19 @@ public data class FeedRelatedLink(
 public data class GbfsVersion(
   /** GBFS version string. */
   public val version: String? = null,
+
   /** Instant this version row was saved. */
   @SerialName("created_at") public val createdAt: IsoDateTime? = null,
+
   /** Instant this version row was last updated. */
   @SerialName("last_updated_at") public val lastUpdatedAt: IsoDateTime? = null,
+
   /** Whether the version came from autodiscovery or `gbfs_versions`. */
   public val source: GbfsVersionSource? = null,
+
   /** Endpoints available in this version. */
   public val endpoints: List<GbfsEndpoint>? = null,
+
   /** Latest validation report for this version. */
   @SerialName("latest_validation_report")
   public val latestValidationReport: GbfsValidationReport? = null,
@@ -287,10 +334,13 @@ public value class GbfsVersionSource(
 public data class GbfsEndpoint(
   /** Endpoint name, such as `system_information`. */
   public val name: String? = null,
+
   /** Endpoint URL. */
   public val url: String? = null,
+
   /** Language of the endpoint, for GBFS 2.3 and earlier. */
   public val language: String? = null,
+
   /** Whether this endpoint is an optional GBFS feature. */
   @SerialName("is_feature") public val isFeature: Boolean? = null,
 )
@@ -300,10 +350,13 @@ public data class GbfsEndpoint(
 public data class GbfsValidationReport(
   /** Instant the feed was validated. */
   @SerialName("validated_at") public val validatedAt: IsoDateTime? = null,
+
   /** Total error count. */
   @SerialName("total_error") public val totalError: Int? = null,
+
   /** URL of the JSON validation summary. */
   @SerialName("report_summary_url") public val reportSummaryUrl: String? = null,
+
   /** Validator version. */
   @SerialName("validator_version") public val validatorVersion: String? = null,
 )
@@ -313,14 +366,19 @@ public data class GbfsValidationReport(
 public data class FeedReliabilitySummary(
   /** Whether the feed currently holds the seal. */
   @SerialName("has_seal") public val hasSeal: Boolean? = null,
+
   /** Instant the feed most recently earned the seal. */
   @SerialName("earned_at") public val earnedAt: IsoDateTime? = null,
+
   /** Instant the feed most recently lost the seal. */
   @SerialName("lost_at") public val lostAt: IsoDateTime? = null,
+
   /** Instant the criteria were last evaluated. */
   @SerialName("evaluated_at") public val evaluatedAt: IsoDateTime? = null,
+
   /** Whether at least one criterion is serving probation. */
   @SerialName("on_probation") public val onProbation: Boolean? = null,
+
   /** Earliest instant the feed could regain the seal. */
   @SerialName("probation_ends_at") public val probationEndsAt: IsoDateTime? = null,
 )
