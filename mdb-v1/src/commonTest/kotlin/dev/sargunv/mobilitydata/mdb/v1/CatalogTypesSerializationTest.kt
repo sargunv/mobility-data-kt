@@ -153,4 +153,11 @@ class CatalogTypesSerializationTest {
     assertEquals(expectedLicense, decoded)
     assertEquals(1, decoded.licenseRules?.size)
   }
+
+  @Test
+  fun decodeOmittedSearchSeasonalIsFalse() {
+    val json = """{"id":"mdb-1","data_type":"gtfs"}"""
+    val decoded = MdbJson.decodeFromString<SearchFeedItem>(json)
+    assertEquals(false, decoded.seasonal)
+  }
 }
