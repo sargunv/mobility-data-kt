@@ -126,7 +126,15 @@ def main() -> int:
         write("get_gtfs_feed.json", body, status, "Feed.Gtfs", manifest)
         status, datasets = get(f"/v1/gtfs_feeds/{gtfs_id}/datasets?limit=2")
         write("get_gtfs_feed_datasets.json", datasets, status, "List<GtfsDataset>", manifest)
-        status, body = get(f"/v1/gtfs_feeds/{gtfs_id}/gtfs_rt_feeds")
+        related_gtfs_id = None
+        if isinstance(gtfs_rt_feeds, list):
+            for item in gtfs_rt_feeds:
+                if isinstance(item, dict):
+                    refs = item.get("feed_references") or []
+                    if refs:
+                        related_gtfs_id = str(refs[0])
+                        break
+        status, body = get(f"/v1/gtfs_feeds/{related_gtfs_id or gtfs_id}/gtfs_rt_feeds")
         write("get_gtfs_feed_gtfs_rt_feeds.json", body, status, "List<Feed.GtfsRt>", manifest)
         status, body = get(f"/v1/gtfs_feeds/{gtfs_id}/availability?limit=5")
         write("get_gtfs_feed_availability.json", body, status, "GtfsFeedAvailabilityResponse", manifest)
@@ -153,7 +161,7 @@ def main() -> int:
     write("get_metadata.json", body, status, "Metadata", manifest)
     status, body = get("/v1/search?search_query=bus&limit=5")
     write("search_feeds.json", body, status, "SearchFeedsResponse", manifest)
-    status, body = get("/v1/locations?search_query=montreal&limit=5")
+    status, body = get("/v1/locations?limit=5")
     write("get_locations.json", body, status, "LocationSearchResponse", manifest)
     status, licenses = get("/v1/licenses?limit=5")
     write("get_licenses.json", licenses, status, "List<License>", manifest)
