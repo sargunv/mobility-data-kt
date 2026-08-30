@@ -32,13 +32,18 @@ postinstall = ["hk install --mise"]
 # `sample-data`, so a fresh checkout (where the files are still LFS pointers)
 # is detected as stale and materialized, while an already-materialized tree is
 # left untouched.
+#
+# Pin hooksPath so LFS writes hooks next to hk, not into another manager's
+# hook dir. Re-checkout after pull so skip-smudge pointer stats do not look
+# dirty to hk's pre-commit stash.
 [deps.git-lfs]
 auto = true
 sources = ["sample-data/**/*"]
 description = "Fetch the Git-LFS sample datasets used by tests"
 run = """
-git lfs install --local --skip-repo
+git -c core.hooksPath=.git/hooks lfs install --local
 git lfs pull
+GIT_LFS_SKIP_SMUDGE=0 git checkout -- sample-data
 """
 
 [tasks.build]
