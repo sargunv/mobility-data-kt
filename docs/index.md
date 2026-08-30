@@ -10,5 +10,6 @@ Kotlin. It supports all Kotlin Multiplatform targets, including JVM, Native, JS,
 - [GTFS Realtime](./gtfs-realtime.md): Protobuf support and HTTP client for GTFS Realtime feeds
 - [GBFS](./gbfs.md): A client library for the General Bikeshare Feed Specification (GBFS)
 - [GOFS](./gofs.md): A client library for the General On-Demand Feed Specification (GOFS)
+- [Mobility Database](./mdb.md): A client library for the Mobility Database Catalog API
 
 See the [API Reference](api/index.html) for detailed documentation.
