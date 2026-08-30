@@ -6,11 +6,15 @@ public sealed class CatalogAuth {
   public data class Refresh(
     /** Refresh token issued by MobilityData. */
     public val refreshToken: String
-  ) : CatalogAuth()
+  ) : CatalogAuth() {
+    override fun toString(): String = "CatalogAuth.Refresh"
+  }
 
   /** Call the catalog with an existing access token. */
   public data class Access(
     /** Bearer access token. */
     public val accessToken: String
-  ) : CatalogAuth()
+  ) : CatalogAuth() {
+    override fun toString(): String = "CatalogAuth.Access"
+  }
 }

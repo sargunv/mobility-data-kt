@@ -14,6 +14,12 @@ import kotlinx.coroutines.test.runTest
 
 class TokenRefreshTest {
   @Test
+  fun authToStringOmitsTokens() {
+    assertEquals("CatalogAuth.Refresh", CatalogAuth.Refresh("secret-refresh").toString())
+    assertEquals("CatalogAuth.Access", CatalogAuth.Access("secret-access").toString())
+  }
+
+  @Test
   fun refreshPostsBeforeListingFeeds() = runTest {
     val paths = mutableListOf<String>()
     val methods = mutableListOf<HttpMethod>()
