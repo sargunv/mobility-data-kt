@@ -5,7 +5,7 @@ import kotlin.jvm.JvmInline
 
 /** Query parameters for `GET /v1/feeds`. */
 public data class FeedQuery(
-  /** Maximum number of feeds to return. */
+  /** Maximum number of feeds to return. The catalog defaults to 3500. */
   public val limit: Int? = null,
 
   /** Offset of the first feed to return. */
@@ -33,7 +33,7 @@ internal fun URLBuilder.appendFeedQuery(query: FeedQuery) {
 
 /** Query parameters for `GET /v1/gtfs_feeds`. */
 public data class GtfsFeedQuery(
-  /** Maximum number of feeds to return. */
+  /** Maximum number of feeds to return. The catalog defaults to 2500. */
   public val limit: Int? = null,
 
   /** Offset of the first feed to return. */
@@ -113,7 +113,7 @@ public value class BoundingFilterMethod(
 
 /** Query parameters for `GET /v1/gtfs_rt_feeds`. */
 public data class GtfsRtFeedQuery(
-  /** Maximum number of feeds to return. */
+  /** Maximum number of feeds to return. The catalog defaults to 1000. */
   public val limit: Int? = null,
 
   /** Offset of the first feed to return. */
@@ -153,7 +153,7 @@ internal fun URLBuilder.appendGtfsRtFeedQuery(query: GtfsRtFeedQuery) {
 
 /** Query parameters for `GET /v1/gbfs_feeds`. */
 public data class GbfsFeedQuery(
-  /** Maximum number of feeds to return. */
+  /** Maximum number of feeds to return. The catalog defaults to 500. */
   public val limit: Int? = null,
 
   /** Offset of the first feed to return. */
@@ -191,7 +191,7 @@ internal fun URLBuilder.appendGbfsFeedQuery(query: GbfsFeedQuery) {
 
 /** Query parameters for `GET /v1/search`. */
 public data class SearchFeedsQuery(
-  /** Maximum number of hits to return. */
+  /** Maximum number of hits to return. The catalog defaults to 3500. */
   public val limit: Int? = null,
 
   /** Offset of the first hit to return. */
@@ -255,7 +255,7 @@ internal fun URLBuilder.appendSearchFeedsQuery(query: SearchFeedsQuery) {
 
 /** Query parameters for `GET /v1/locations`. */
 public data class LocationQuery(
-  /** Maximum number of locations to return. */
+  /** Maximum number of locations to return. The catalog defaults to 100. */
   public val limit: Int? = null,
 
   /** Offset of the first location to return. */
@@ -287,7 +287,7 @@ public data class DatasetQuery(
   /** When true, only the latest dataset. */
   public val latest: Boolean? = null,
 
-  /** Maximum number of datasets to return. */
+  /** Maximum number of datasets to return. The catalog defaults to 500. */
   public val limit: Int? = null,
 
   /** Offset of the first dataset to return. */
@@ -309,7 +309,7 @@ internal fun URLBuilder.appendDatasetQuery(query: DatasetQuery) {
 
 /** Query parameters for `GET /v1/licenses`. */
 public data class LicenseQuery(
-  /** Maximum number of licenses to return. */
+  /** Maximum number of licenses to return. The catalog defaults to 100. */
   public val limit: Int? = null,
 
   /** Offset of the first license to return. */
@@ -328,7 +328,7 @@ public data class AvailabilityQuery(
   /** Inclusive upper bound on `checked_at`. */
   public val to: IsoDateTime? = null,
 
-  /** Maximum number of checks to return. */
+  /** Maximum number of checks to return. The catalog defaults to 100. */
   public val limit: Int? = null,
 
   /** Offset of the first check to return. */
