@@ -63,7 +63,7 @@ public sealed class Feed {
     /** Instant the official status was last updated. */
     @SerialName("official_updated_at") public val officialUpdatedAt: IsoDateTime? = null,
     /** Whether the feed only covers a recurring season. */
-    public val seasonal: Boolean? = null,
+    public val seasonal: Boolean? = false,
     /** Optional description of the data feed. */
     @SerialName("feed_name") public val feedName: String? = null,
     /** Note that clarifies complex use cases. */
@@ -100,7 +100,7 @@ public sealed class Feed {
     /** Instant the official status was last updated. */
     @SerialName("official_updated_at") public val officialUpdatedAt: IsoDateTime? = null,
     /** Whether the feed only covers a recurring season. */
-    public val seasonal: Boolean? = null,
+    public val seasonal: Boolean? = false,
     /** Optional description of the data feed. */
     @SerialName("feed_name") public val feedName: String? = null,
     /** Note that clarifies complex use cases. */

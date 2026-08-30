@@ -132,7 +132,23 @@ class FeedSerializationTest {
       """
         .trimIndent()
     val decoded = MdbJson.decodeFromString<Feed>(json)
-    assertEquals(Feed.Gtfs(id = FeedId("mdb-1210"), provider = "LADOT"), decoded)
+    assertEquals(Feed.Gtfs(id = FeedId("mdb-1210"), provider = "LADOT", seasonal = false), decoded)
+  }
+
+  @Test
+  fun decodeOmittedSeasonalIsFalse() {
+    val json =
+      """
+      {
+        "id": "mdb-1",
+        "data_type": "gtfs",
+        "status": "active"
+      }
+      """
+        .trimIndent()
+    val decoded = MdbJson.decodeFromString<Feed>(json)
+    val gtfs = decoded as Feed.Gtfs
+    assertEquals(false, gtfs.seasonal)
   }
 
   @Test
