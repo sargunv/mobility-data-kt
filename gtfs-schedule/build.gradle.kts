@@ -7,7 +7,7 @@ kotlin {
         api(project(":utils"))
         api(libs.kotlinx.serialization.json)
         api(libs.kotlinx.datetime)
-        implementation(libs.kotlin.dsv)
+        api(libs.kotlin.dsv)
         implementation(libs.spatialk.geojson)
       }
     }
