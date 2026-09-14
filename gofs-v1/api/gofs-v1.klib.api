@@ -1016,6 +1016,32 @@ final class dev.sargunv.mobilitydata.gofs.v1/Zone { // dev.sargunv.mobilitydata.
     }
 }
 
+final class dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers { // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers|null[0]
+    constructor <init>(kotlin/String) // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.<init>|<init>(kotlin.String){}[0]
+
+    final val zoneId // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.zoneId|{}zoneId[0]
+        final fun <get-zoneId>(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.zoneId.<get-zoneId>|<get-zoneId>(){}[0]
+
+    final fun component1(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.component1|component1(){}[0]
+    final fun copy(kotlin/String = ...): dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.copy|copy(kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers> { // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.$serializer|null[0]
+        final val descriptor // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers) // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;dev.sargunv.mobilitydata.gofs.v1.ZoneForeignMembers){}[0]
+    }
+
+    final object Companion { // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers> // dev.sargunv.mobilitydata.gofs.v1/ZoneForeignMembers.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class dev.sargunv.mobilitydata.gofs.v1/Zones : dev.sargunv.mobilitydata.gofs.v1/GofsFeedData { // dev.sargunv.mobilitydata.gofs.v1/Zones|null[0]
     constructor <init>(org.maplibre.spatialk.geojson/FeatureCollection<org.maplibre.spatialk.geojson/Polygon, dev.sargunv.mobilitydata.gofs.v1/Zone>) // dev.sargunv.mobilitydata.gofs.v1/Zones.<init>|<init>(org.maplibre.spatialk.geojson.FeatureCollection<org.maplibre.spatialk.geojson.Polygon,dev.sargunv.mobilitydata.gofs.v1.Zone>){}[0]
 

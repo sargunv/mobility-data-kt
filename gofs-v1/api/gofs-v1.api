@@ -1423,6 +1423,33 @@ public final class dev/sargunv/mobilitydata/gofs/v1/Zone$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class dev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers {
+	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Ldev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers;
+	public static synthetic fun copy$default (Ldev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers;Ljava/lang/String;ILjava/lang/Object;)Ldev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getZoneId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class dev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/sargunv/mobilitydata/gofs/v1/ZoneForeignMembers$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class dev/sargunv/mobilitydata/gofs/v1/Zones : dev/sargunv/mobilitydata/gofs/v1/GofsFeedData {
 	public static final field Companion Ldev/sargunv/mobilitydata/gofs/v1/Zones$Companion;
 	public fun <init> (Lorg/maplibre/spatialk/geojson/FeatureCollection;)V
