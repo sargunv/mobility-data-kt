@@ -8,10 +8,12 @@ import kotlin.time.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
+import org.maplibre.spatialk.geojson.decodeForeignMembers
 import org.maplibre.spatialk.geojson.dsl.addFeature
 import org.maplibre.spatialk.geojson.dsl.addRing
 import org.maplibre.spatialk.geojson.dsl.buildFeatureCollection
 import org.maplibre.spatialk.geojson.dsl.buildPolygon
+import org.maplibre.spatialk.geojson.foreignMembersOf
 
 private val jsonContent = // language=JSON
   """
@@ -25,6 +27,7 @@ private val jsonContent = // language=JSON
         "features": [
           {
             "type": "Feature",
+            "zone_id": "zoneA",
             "properties": {
               "name": "Montréal Area"
             },
@@ -114,7 +117,9 @@ private val expectedResponse =
                   }
                 },
               properties = Zone(name = "Montréal Area"),
-            )
+            ) {
+              foreignMembers = foreignMembersOf(ZoneForeignMembers(zoneId = "zoneA"), GofsJson)
+            }
           }
       ),
   )
@@ -131,6 +136,12 @@ class ZonesTest {
   fun decode() {
     val decodedResponse = GofsJson.decodeFromString<GofsFeedResponse<Zones>>(jsonContent)
     assertEquals(expectedResponse, decodedResponse)
+    assertEquals(
+      ZoneForeignMembers(zoneId = "zoneA"),
+      decodedResponse.data.zones.features
+        .single()
+        .decodeForeignMembers<ZoneForeignMembers>(GofsJson),
+    )
   }
 
   @Test
@@ -147,6 +158,7 @@ class ZonesTest {
             "features": [
               {
                 "type": "Feature",
+                "zone_id": "zoneA",
                 "properties": {},
                 "geometry": {
                   "type": "Polygon",

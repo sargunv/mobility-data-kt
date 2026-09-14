@@ -11,7 +11,7 @@ dokka = "2.2.0"
 mkdocs-build = "4.0.1"
 # Still alpha; this is the release built against Kotlin 2.4.10.
 detekt = "2.0.0-alpha.6"
-spatialk = "0.7.0"
+spatialk = "0.8.0"
 osm-opening-hours = "0.4.0"
 ktor = "3.5.2"
 joda-timezone = "2.25.2"
