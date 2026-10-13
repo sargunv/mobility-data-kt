@@ -2,6 +2,8 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlinx.io.Buffer
+import kotlinx.io.writeString
 
 private val csvContent = // language=CSV
   """
@@ -77,6 +79,20 @@ private val expected =
   )
 
 class StopTest {
+  @Test
+  fun decodePaddedStopNameFromSource() {
+    val csv = // language=CSV
+      """
+      stop_id,stop_name
+      CTA," State & Harrison/Ida B Wells Drive "
+      """
+        .trimIndent()
+
+    val source = Buffer().apply { writeString(csv) }
+    val decoded = GtfsCsv.decodeFromSource<Stop>(source).single()
+    assertEquals("State & Harrison/Ida B Wells Drive", decoded.stopName)
+  }
+
   @Test
   fun decode() {
     val decoded = GtfsCsv.decodeFromString<Stop>(csvContent)

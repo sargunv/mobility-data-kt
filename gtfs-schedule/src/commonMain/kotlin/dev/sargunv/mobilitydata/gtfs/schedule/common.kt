@@ -2,6 +2,8 @@ package dev.sargunv.mobilitydata.gtfs.schedule
 
 import dev.sargunv.kotlindsv.Csv
 import dev.sargunv.kotlindsv.DsvFormat
+import dev.sargunv.kotlindsv.LongRowPolicy
+import dev.sargunv.kotlindsv.ShortRowPolicy
 import kotlin.jvm.JvmInline
 import kotlinx.io.Sink
 import kotlinx.io.Source
@@ -13,17 +15,23 @@ import kotlinx.serialization.serializer
 /**
  * Codec for GTFS `.txt` files.
  *
- * Feeds often omit trailing optional fields or ship a BOM. Decode accepts both. Extra cells past
- * the header are dropped.
+ * Decoding accepts omitted trailing optional fields and a BOM, ignores leading and trailing
+ * whitespace in field values, and drops extra cells past the header.
  */
 public object GtfsCsv {
   /** Serialization format for GTFS `.txt` files. */
   public val format: DsvFormat =
     DsvFormat(
-      scheme = Csv.scheme.copy(skipEmptyLines = true, allowJaggedRows = true),
+      scheme =
+        Csv.scheme.copy(
+          skipEmptyLines = true,
+          shortRowPolicy = ShortRowPolicy.Pad,
+          longRowPolicy = LongRowPolicy.Truncate,
+        ),
       ignoreUnknownKeys = true,
       writeEnumsByName = false,
       treatMissingColumnsAsNull = true,
+      trimFields = true,
     )
 
   /** Decodes records of [T] from [string]. */

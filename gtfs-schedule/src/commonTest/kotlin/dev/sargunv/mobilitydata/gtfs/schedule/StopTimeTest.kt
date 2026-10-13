@@ -241,6 +241,19 @@ private val expected =
 
 class StopTimeTest {
   @Test
+  fun decodeSpacedBlankDistanceAsNull() {
+    val csv = // language=CSV
+      """
+      trip_id,stop_id,stop_sequence,shape_dist_traveled
+      MUNI,S1,1," "
+      """
+        .trimIndent()
+
+    val decoded = GtfsCsv.decodeFromString<StopTime>(csv).single()
+    assertNull(decoded.shapeDistTraveled)
+  }
+
+  @Test
   fun decode() {
     val decoded = GtfsCsv.decodeFromString<StopTime>(csvContent)
     assertEquals(expected, decoded)

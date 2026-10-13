@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.schedule
 
+import dev.sargunv.mobilitydata.utils.RgbColor
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
@@ -55,6 +56,33 @@ private val expected =
   )
 
 class RouteTest {
+  @Test
+  fun decodePaddedColor() {
+    val csv = // language=CSV
+      """
+      route_id,route_type,route_color
+      MUNI,3," 005B95 "
+      """
+        .trimIndent()
+
+    val decoded = GtfsCsv.decodeFromString<Route>(csv).single()
+    assertEquals(RgbColor(0x005B95), decoded.routeColor)
+  }
+
+  @Test
+  fun decodePaddedEnum() {
+    val csv = // language=CSV
+      """
+      route_id,route_type,continuous_pickup
+      MUNI, 3 ," 2 "
+      """
+        .trimIndent()
+
+    val decoded = GtfsCsv.decodeFromString<Route>(csv).single()
+    assertEquals(RouteType.Bus, decoded.routeType)
+    assertEquals(ContinuousPickupDropOff.PhoneAgency, decoded.continuousPickup)
+  }
+
   @Test
   fun decode() {
     val decoded = GtfsCsv.decodeFromString<Route>(csvContent)
