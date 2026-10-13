@@ -19,10 +19,10 @@ public data class VehiclePosition(
   @ProtoNumber(3) public val currentStopSequence: Int? = null,
   /** GTFS `stop_id` of the current stop. */
   @ProtoNumber(7) public val stopId: String? = null,
-  /** Vehicle's relationship to the current stop. */
+  /** Vehicle's relationship to the current stop, or null if not reported. */
   @ProtoNumber(4)
   @Serializable(with = VehicleStopStatusSerializer::class)
-  public val currentStatus: VehicleStopStatus = VehicleStopStatus.InTransitTo,
+  public val currentStatus: VehicleStopStatus? = null,
   /** POSIX timestamp when this position was measured. */
   @ProtoNumber(5) public val timestamp: Long? = null,
   /** Traffic congestion affecting the vehicle. */

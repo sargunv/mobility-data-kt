@@ -145,10 +145,9 @@ internal object WheelchairBoardingSerializer :
   )
 
 internal object VehicleStopStatusSerializer :
-  KSerializer<VehiclePosition.VehicleStopStatus> by proto2EnumSerializer(
+  KSerializer<VehiclePosition.VehicleStopStatus?> by proto2NullableEnumSerializer(
     generated = VehiclePosition.VehicleStopStatus.serializer(),
     values = VehiclePosition.VehicleStopStatus.entries,
-    fallback = VehiclePosition.VehicleStopStatus.InTransitTo,
   )
 
 internal object NullableCongestionLevelSerializer :
