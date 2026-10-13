@@ -32,7 +32,8 @@ public value class RgbColor(
   public val blue: Byte
     get() = value.toByte()
 
-  public override fun toString(): String = "#${value.toHexString(HexFormat.UpperCase)}"
+  /** Formats this color as `#RRGGBB`: six uppercase hexadecimal digits, as GTFS writes colors. */
+  public override fun toString(): String = "#${value.toHexString(HexFormat.UpperCase).takeLast(6)}"
 }
 
 /**
