@@ -187,7 +187,17 @@ checksum = "sha256:f6f4a0f9a55a51d8b98ae9fc0e3dff704ec9b4b842d4978dd433e6158c7d5
 url = "https://github.com/jdx/hk/releases/download/v1.40.0/hk-aarch64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/jdx/hk/releases/assets/386396569"
 
+[tools."aqua:jdx/hk"."platforms.linux-arm64-musl"]
+checksum = "sha256:f6f4a0f9a55a51d8b98ae9fc0e3dff704ec9b4b842d4978dd433e6158c7d5d9f"
+url = "https://github.com/jdx/hk/releases/download/v1.40.0/hk-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/386396569"
+
 [tools."aqua:jdx/hk"."platforms.linux-x64"]
+checksum = "sha256:5feb9eab6b8539aba09ed73eb49d4e01b3a56471172c14212d0b649ed2c16142"
+url = "https://github.com/jdx/hk/releases/download/v1.40.0/hk-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/386396570"
+
+[tools."aqua:jdx/hk"."platforms.linux-x64-musl"]
 checksum = "sha256:5feb9eab6b8539aba09ed73eb49d4e01b3a56471172c14212d0b649ed2c16142"
 url = "https://github.com/jdx/hk/releases/download/v1.40.0/hk-x86_64-unknown-linux-gnu.tar.gz"
 url_api = "https://api.github.com/repos/jdx/hk/releases/assets/386396570"
@@ -203,12 +213,9 @@ url = "https://github.com/jdx/hk/releases/download/v1.40.0/hk-x86_64-pc-windows-
 url_api = "https://api.github.com/repos/jdx/hk/releases/assets/386396571"
 
 [[tools.java]]
-version = "21.0.2"
+version = "openjdk-21.0.2"
 backend = "core:java"
-specifiers = ["21.0.2"]
-
-[tools.java.options]
-shorthand_vendor = "openjdk"
+specifiers = ["openjdk-21.0.2"]
 
 [tools.java."platforms.linux-arm64"]
 checksum = "sha256:08db1392a48d4eb5ea5315cf8f18b89dbaf36cda663ba882cf03c704c9257ec2"
