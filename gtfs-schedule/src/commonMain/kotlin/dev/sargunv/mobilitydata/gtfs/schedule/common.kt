@@ -27,6 +27,7 @@ public object GtfsCsv {
           skipEmptyLines = true,
           shortRowPolicy = ShortRowPolicy.Pad,
           longRowPolicy = LongRowPolicy.Truncate,
+          skipInitialSpace = true,
         ),
       ignoreUnknownKeys = true,
       writeEnumsByName = false,

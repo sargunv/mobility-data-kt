@@ -70,6 +70,20 @@ class RouteTest {
   }
 
   @Test
+  fun decodeSpaceBeforeQuotedField() {
+    val csv = // language=CSV
+      """
+      route_id,agency_id,route_short_name,route_long_name,route_url,route_desc,route_type,route_color,route_text_color,route_sort_order
+      251,NFTA,251,Game Day Express,http://www.nfta.com/251, "Bills Game Day Service, to Highmark Stadium.",3,E12A40,FFFFFF,
+      """
+        .trimIndent()
+
+    val decoded = GtfsCsv.decodeFromString<Route>(csv).single()
+    assertEquals("Bills Game Day Service, to Highmark Stadium.", decoded.routeDesc)
+    assertEquals(RgbColor(0xE12A40), decoded.routeColor)
+  }
+
+  @Test
   fun decodePaddedEnum() {
     val csv = // language=CSV
       """
