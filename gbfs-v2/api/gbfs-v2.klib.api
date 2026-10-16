@@ -30,7 +30,7 @@ final class <#A: dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedData> dev.sargunv.mobi
     final fun hashCode(): kotlin/Int // dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedResponse.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedResponse.toString|toString(){}[0]
 
-    final class <#A1: kotlin/Any?> $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedResponse<#A1>> { // dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedResponse.$serializer|null[0]
+    final class <#A1: dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedData> $serializer : kotlinx.serialization.internal/GeneratedSerializer<dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedResponse<#A1>> { // dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedResponse.$serializer|null[0]
         constructor <init>(kotlinx.serialization/KSerializer<#A1>) // dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedResponse.$serializer.<init>|<init>(kotlinx.serialization.KSerializer<1:0>){}[0]
 
         final val descriptor // dev.sargunv.mobilitydata.gbfs.v2/GbfsFeedResponse.$serializer.descriptor|{}descriptor[0]
