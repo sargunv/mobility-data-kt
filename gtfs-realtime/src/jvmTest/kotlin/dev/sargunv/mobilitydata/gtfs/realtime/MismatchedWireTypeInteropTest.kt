@@ -40,4 +40,31 @@ class MismatchedWireTypeInteropTest {
     assertEquals("Red Line delays", decoded?.headerText?.translation?.single()?.text)
     assertEquals(Alert.SeverityLevel.Warning, decoded?.severityLevel)
   }
+
+  @Test
+  fun officialJavaSkipsGroupAndKotlinMatches() {
+    val bytes =
+      feedMessageBytes(
+        ProtoWire.concat(
+          ProtoWire.stringField(1, "alert"),
+          ProtoWire.messageField(
+            5,
+            ProtoWire.concat(
+              ProtoWire.tag(12, ProtoWire.START_GROUP),
+              ProtoWire.varintField(1, 4),
+              ProtoWire.tag(12, ProtoWire.END_GROUP),
+              ProtoWire.varintField(7, 4),
+            ),
+          ),
+        )
+      )
+
+    val official = GtfsRealtime.FeedMessage.parseFrom(bytes).getEntity(0).alert
+    assertFalse(official.hasTtsHeaderText())
+    assertEquals(GtfsRealtime.Alert.Effect.DETOUR, official.effect)
+
+    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes).entity.single().alert
+    assertNull(decoded?.ttsHeaderText)
+    assertEquals(Alert.Effect.Detour, decoded?.effect)
+  }
 }

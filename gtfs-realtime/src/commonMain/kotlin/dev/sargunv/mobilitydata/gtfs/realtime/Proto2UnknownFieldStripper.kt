@@ -15,6 +15,8 @@ import kotlinx.serialization.protobuf.ProtoType
 private const val VARINT = 0
 private const val FIXED64 = 1
 private const val LEN = 2
+private const val START_GROUP = 3
+private const val END_GROUP = 4
 private const val FIXED32 = 5
 
 internal class ProtoMessageSchema(val fields: Map<Int, ProtoFieldSchema>)
@@ -29,9 +31,9 @@ internal sealed class ProtoFieldSchema(val wireTypes: Set<Int>) {
 
 /**
  * Drops the field occurrences a conformant proto2 parser treats as unknown but kotlinx rejects:
- * unrecognized enum numbers, and known fields arriving with a wire type that doesn't match the
- * schema. Malformed input still fails with a [SerializationException]. The rewrite is local to the
- * byte array and shares no decode session.
+ * unrecognized enum numbers, known fields arriving with a wire type that doesn't match the schema,
+ * and groups, which no GTFS Realtime field uses. Malformed input still fails with a
+ * [SerializationException]. The rewrite is local to the byte array and shares no decode session.
  */
 internal object Proto2UnknownFieldStripper {
   fun strip(
@@ -71,13 +73,17 @@ internal object Proto2UnknownFieldStripper {
           reader.skip(if (wireType == FIXED64) 8 else 4)
           if (expected) reader.copySince(start, out)
         }
-        else -> malformed("Unsupported protobuf wire type $wireType")
+        START_GROUP -> reader.skipGroup(tag ushr 3)
+        else -> unexpectedWireType(wireType)
       }
     }
     return out.toByteArray()
   }
 
   private fun malformed(message: String): Nothing = throw SerializationException(message)
+
+  private fun unexpectedWireType(wireType: Int): Nothing =
+    malformed("Unexpected protobuf wire type $wireType")
 
   private class WireReader(private val bytes: ByteArray, start: Int, private val end: Int) {
     var position = start
@@ -113,6 +119,24 @@ internal object Proto2UnknownFieldStripper {
     fun skip(count: Int) {
       if (count > remaining) malformed("Truncated protobuf bytes")
       position += count
+    }
+
+    fun skipGroup(number: Long) {
+      val open = mutableListOf(number)
+      while (open.isNotEmpty()) {
+        val tag = readVarint()
+        when (val wireType = (tag and 7L).toInt()) {
+          VARINT -> readVarint()
+          FIXED64 -> skip(8)
+          LEN -> readLengthDelimited()
+          FIXED32 -> skip(4)
+          START_GROUP -> open.add(tag ushr 3)
+          END_GROUP ->
+            if (open.removeAt(open.lastIndex) != tag ushr 3)
+              malformed("Mismatched protobuf end group")
+          else -> unexpectedWireType(wireType)
+        }
+      }
     }
 
     fun copySince(start: Int, out: ByteSink) {

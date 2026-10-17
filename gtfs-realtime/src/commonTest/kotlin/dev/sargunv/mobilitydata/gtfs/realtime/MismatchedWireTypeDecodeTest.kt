@@ -135,8 +135,8 @@ class MismatchedWireTypeDecodeTest {
   fun mismatchedVehiclePositionFieldsAreSkipped() {
     val position =
       ProtoWire.concat(
-        ProtoWire.fixed32Field(1, 38.9f.toRawBits()),
-        ProtoWire.fixed32Field(2, (-77.0f).toRawBits()),
+        ProtoWire.fixed32Field(1, 38.5f.toRawBits()),
+        ProtoWire.fixed32Field(2, (-77.25f).toRawBits()),
         ProtoWire.varintField(3, 90),
         ProtoWire.varintField(4, 1),
       )
@@ -161,8 +161,8 @@ class MismatchedWireTypeDecodeTest {
 
     val decodedVehicle = decoded.entity.single().vehicle
     assertEquals("trip-1", decodedVehicle?.trip?.tripId)
-    assertEquals(38.9f, decodedVehicle?.position?.latitude)
-    assertEquals(-77.0f, decodedVehicle?.position?.longitude)
+    assertEquals(38.5f, decodedVehicle?.position?.latitude)
+    assertEquals(-77.25f, decodedVehicle?.position?.longitude)
     assertNull(decodedVehicle?.position?.bearing)
     assertNull(decodedVehicle?.position?.odometer)
     assertNull(decodedVehicle?.currentStopSequence)
@@ -171,6 +171,65 @@ class MismatchedWireTypeDecodeTest {
     assertNull(decodedVehicle?.timestamp)
     assertNull(decodedVehicle?.vehicle)
     assertEquals(emptyList(), decodedVehicle?.multiCarriageDetails)
+  }
+
+  @Test
+  fun groupsAreSkipped() {
+    val group =
+      ProtoWire.concat(
+        ProtoWire.tag(12, ProtoWire.START_GROUP),
+        ProtoWire.varintField(1, 4),
+        ProtoWire.tag(2, ProtoWire.START_GROUP),
+        ProtoWire.stringField(1, "nested"),
+        ProtoWire.tag(2, ProtoWire.END_GROUP),
+        ProtoWire.fixed32Field(3, 1),
+        ProtoWire.tag(12, ProtoWire.END_GROUP),
+      )
+
+    val decoded =
+      GtfsRealtimeProto.decodeFeedMessage(
+        feedMessageBytes(
+          alertEntity(
+            "alert",
+            group,
+            ProtoWire.messageField(10, translatedString("Header")),
+            ProtoWire.varintField(7, 4),
+          )
+        )
+      )
+
+    val alert = decoded.entity.single().alert
+    assertNull(alert?.ttsHeaderText)
+    assertEquals("Header", alert?.headerText?.translation?.single()?.text)
+    assertEquals(Alert.Effect.Detour, alert?.effect)
+  }
+
+  @Test
+  fun unterminatedGroupStillFails() {
+    assertMalformed(
+      feedMessageBytes(
+        alertEntity("alert", ProtoWire.tag(12, ProtoWire.START_GROUP), ProtoWire.varintField(1, 4)),
+        alertEntity("next", ProtoWire.varintField(7, 4)),
+      )
+    )
+  }
+
+  @Test
+  fun mismatchedEndGroupStillFails() {
+    assertMalformed(
+      feedMessageBytes(
+        alertEntity(
+          "alert",
+          ProtoWire.tag(12, ProtoWire.START_GROUP),
+          ProtoWire.tag(13, ProtoWire.END_GROUP),
+        )
+      )
+    )
+  }
+
+  @Test
+  fun strayEndGroupStillFails() {
+    assertMalformed(feedMessageBytes(alertEntity("alert", ProtoWire.tag(12, ProtoWire.END_GROUP))))
   }
 
   @Test

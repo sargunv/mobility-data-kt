@@ -14,6 +14,8 @@ internal object ProtoWire {
   const val VARINT = 0
   const val FIXED64 = 1
   const val LEN = 2
+  const val START_GROUP = 3
+  const val END_GROUP = 4
   const val FIXED32 = 5
 
   fun concat(vararg parts: ByteArray): ByteArray {
