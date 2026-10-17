@@ -9,10 +9,12 @@ internal fun assertFeedRoundTrips(feedMessage: FeedMessage) {
   assertEquals(feedMessage, decoded)
 }
 
-/** Minimal protobuf writer for constructing unknown-enum payloads in tests. */
+/** Minimal protobuf writer for constructing nonconforming and malformed payloads in tests. */
 internal object ProtoWire {
-  private const val VARINT = 0
-  private const val LEN = 2
+  const val VARINT = 0
+  const val FIXED64 = 1
+  const val LEN = 2
+  const val FIXED32 = 5
 
   fun concat(vararg parts: ByteArray): ByteArray {
     val out = ByteArray(parts.sumOf { it.size })
@@ -34,13 +36,21 @@ internal object ProtoWire {
   fun packedVarintField(field: Int, vararg values: Long): ByteArray =
     bytesField(field, concat(*values.map { varint(it) }.toTypedArray()))
 
+  fun fixed32Field(field: Int, value: Int): ByteArray =
+    concat(tag(field, FIXED32), littleEndian(value.toLong(), 4))
+
+  fun fixed64Field(field: Int, value: Long): ByteArray =
+    concat(tag(field, FIXED64), littleEndian(value, 8))
+
   private fun bytesField(field: Int, value: ByteArray): ByteArray =
     concat(tag(field, LEN), varint(value.size.toLong()), value)
 
-  private fun tag(field: Int, wireType: Int): ByteArray =
-    varint(((field shl 3) or wireType).toLong())
+  fun tag(field: Int, wireType: Int): ByteArray = varint(((field shl 3) or wireType).toLong())
 
-  private fun varint(value: Long): ByteArray {
+  private fun littleEndian(value: Long, size: Int): ByteArray =
+    ByteArray(size) { (value ushr (8 * it)).toByte() }
+
+  fun varint(value: Long): ByteArray {
     var remaining = value
     val bytes = mutableListOf<Byte>()
     while (remaining ushr 7 != 0L) {
