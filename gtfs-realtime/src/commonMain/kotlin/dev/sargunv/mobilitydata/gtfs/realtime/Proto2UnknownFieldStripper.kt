@@ -37,7 +37,7 @@ internal object Proto2UnknownFieldStripper {
   fun strip(
     bytes: ByteArray,
     schema: ProtoMessageSchema = GtfsRealtimeWireSchema.feedMessage,
-  ): ByteArray = copyMessage(WireReader(bytes), schema)
+  ): ByteArray = copyMessage(WireReader(bytes, 0, bytes.size), schema)
 
   private fun copyMessage(reader: WireReader, schema: ProtoMessageSchema): ByteArray {
     val out = ByteSink(reader.remaining)
@@ -51,25 +51,25 @@ internal object Proto2UnknownFieldStripper {
         VARINT -> {
           val value = reader.readVarint()
           if (expected && (field !is ProtoFieldSchema.Enum || value.toInt() in field.numbers)) {
-            out.write(reader.bytesSince(start))
+            reader.copySince(start, out)
           }
         }
         LEN -> {
-          val payload = reader.readBytes(reader.readLength())
+          val payload = reader.readLengthDelimited()
           when {
             field is ProtoFieldSchema.Message -> {
-              val rewritten = copyMessage(WireReader(payload), field.schema)
+              val rewritten = copyMessage(payload, field.schema)
               out.writeVarint(tag)
               out.writeVarint(rewritten.size.toLong())
-              out.write(rewritten)
+              out.write(rewritten, 0, rewritten.size)
             }
-            expected -> out.write(reader.bytesSince(start))
+            expected -> reader.copySince(start, out)
           }
         }
         FIXED64,
         FIXED32 -> {
-          reader.readBytes(if (wireType == FIXED64) 8 else 4)
-          if (expected) out.write(reader.bytesSince(start))
+          reader.skip(if (wireType == FIXED64) 8 else 4)
+          if (expected) reader.copySince(start, out)
         }
         else -> malformed("Unsupported protobuf wire type $wireType")
       }
@@ -79,21 +79,21 @@ internal object Proto2UnknownFieldStripper {
 
   private fun malformed(message: String): Nothing = throw SerializationException(message)
 
-  private class WireReader(private val bytes: ByteArray) {
-    var position = 0
+  private class WireReader(private val bytes: ByteArray, start: Int, private val end: Int) {
+    var position = start
       private set
 
     val hasMore: Boolean
-      get() = position < bytes.size
+      get() = position < end
 
     val remaining: Int
-      get() = bytes.size - position
+      get() = end - position
 
     fun readVarint(): Long {
       var result = 0L
       var shift = 0
       while (true) {
-        if (position >= bytes.size) malformed("Truncated protobuf varint")
+        if (position >= end) malformed("Truncated protobuf varint")
         val byte = bytes[position++].toInt() and 0xFF
         result = result or ((byte and 0x7F).toLong() shl shift)
         if (byte and 0x80 == 0) return result
@@ -102,28 +102,32 @@ internal object Proto2UnknownFieldStripper {
       }
     }
 
-    fun readLength(): Int {
+    fun readLengthDelimited(): WireReader {
       val length = readVarint()
       if (length !in 0..remaining.toLong()) malformed("Truncated protobuf bytes")
-      return length.toInt()
+      val start = position
+      skip(length.toInt())
+      return WireReader(bytes, start, position)
     }
 
-    fun readBytes(count: Int): ByteArray {
+    fun skip(count: Int) {
       if (count > remaining) malformed("Truncated protobuf bytes")
-      return bytes.copyOfRange(position, position + count).also { position += count }
+      position += count
     }
 
-    fun bytesSince(start: Int): ByteArray = bytes.copyOfRange(start, position)
+    fun copySince(start: Int, out: ByteSink) {
+      out.write(bytes, start, position)
+    }
   }
 
   private class ByteSink(initial: Int) {
     private var buf = ByteArray(initial.coerceAtLeast(16))
     private var size = 0
 
-    fun write(src: ByteArray) {
-      ensure(src.size)
-      src.copyInto(buf, size)
-      size += src.size
+    fun write(src: ByteArray, from: Int, to: Int) {
+      ensure(to - from)
+      src.copyInto(buf, size, from, to)
+      size += to - from
     }
 
     fun writeVarint(value: Long) {
