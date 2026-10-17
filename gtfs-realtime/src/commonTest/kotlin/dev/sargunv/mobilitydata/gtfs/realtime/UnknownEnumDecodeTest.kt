@@ -473,39 +473,37 @@ class UnknownEnumDecodeTest {
 
   @Test
   fun derivedSchemaIncludesEveryRealtimeEnumField() {
-    val feed = GtfsRealtimeEnumSchema.feedMessage
-    val header = feed.messages.getValue(1)
-    val entity = feed.messages.getValue(2)
-    val tripUpdate = entity.messages.getValue(3)
-    val vehicle = entity.messages.getValue(4)
-    val alert = entity.messages.getValue(5)
-    val stop = entity.messages.getValue(7)
-    val tripDescriptor = tripUpdate.messages.getValue(1)
-    val stopTimeUpdate = tripUpdate.messages.getValue(2)
-    val vehicleDescriptor = tripUpdate.messages.getValue(3)
-    val stopTimeProperties = stopTimeUpdate.messages.getValue(6)
-    val carriage = vehicle.messages.getValue(11)
-    val informedTrip = alert.messages.getValue(5).messages.getValue(4)
+    val feed = GtfsRealtimeWireSchema.feedMessage
+    val header = feed.message(1)
+    val entity = feed.message(2)
+    val tripUpdate = entity.message(3)
+    val vehicle = entity.message(4)
+    val alert = entity.message(5)
+    val stop = entity.message(7)
+    val tripDescriptor = tripUpdate.message(1)
+    val stopTimeUpdate = tripUpdate.message(2)
+    val vehicleDescriptor = tripUpdate.message(3)
+    val stopTimeProperties = stopTimeUpdate.message(6)
+    val carriage = vehicle.message(11)
+    val informedTrip = alert.message(5).message(4)
 
-    assertEquals(setOf(0, 1), header.enums.getValue(2))
-    assertTrue(4 in tripDescriptor.enums)
-    assertTrue(5 in stopTimeUpdate.enums)
-    assertTrue(7 in stopTimeUpdate.enums)
-    assertTrue(3 in stopTimeProperties.enums)
-    assertTrue(4 in stopTimeProperties.enums)
-    assertTrue(4 in vehicleDescriptor.enums)
-    assertTrue(4 in vehicle.enums)
-    assertTrue(6 in vehicle.enums)
-    assertTrue(9 in vehicle.enums)
-    assertTrue(3 in carriage.enums)
-    assertTrue(6 in alert.enums)
-    assertTrue(7 in alert.enums)
-    assertTrue(14 in alert.enums)
-    assertTrue(13 in stop.enums)
-    assertTrue(4 in informedTrip.enums)
-    assertTrue(4 in vehicle.messages.getValue(1).enums)
-    assertTrue(6 !in entity.messages)
-    assertTrue(8 !in entity.messages)
+    assertEquals(setOf(0, 1), header.enumNumbers(2))
+    assertIs<ProtoFieldSchema.Enum>(tripDescriptor.fields[4])
+    assertIs<ProtoFieldSchema.Enum>(stopTimeUpdate.fields[5])
+    assertIs<ProtoFieldSchema.Enum>(stopTimeUpdate.fields[7])
+    assertIs<ProtoFieldSchema.Enum>(stopTimeProperties.fields[3])
+    assertIs<ProtoFieldSchema.Enum>(stopTimeProperties.fields[4])
+    assertIs<ProtoFieldSchema.Enum>(vehicleDescriptor.fields[4])
+    assertIs<ProtoFieldSchema.Enum>(vehicle.fields[4])
+    assertIs<ProtoFieldSchema.Enum>(vehicle.fields[6])
+    assertIs<ProtoFieldSchema.Enum>(vehicle.fields[9])
+    assertIs<ProtoFieldSchema.Enum>(carriage.fields[3])
+    assertIs<ProtoFieldSchema.Enum>(alert.fields[6])
+    assertIs<ProtoFieldSchema.Enum>(alert.fields[7])
+    assertIs<ProtoFieldSchema.Enum>(alert.fields[14])
+    assertIs<ProtoFieldSchema.Enum>(stop.fields[13])
+    assertIs<ProtoFieldSchema.Enum>(informedTrip.fields[4])
+    assertIs<ProtoFieldSchema.Enum>(vehicle.message(1).fields[4])
   }
 
   @Test
@@ -550,3 +548,9 @@ private data class StrictAlert(@ProtoNumber(6) val cause: StrictCause = StrictCa
     @ProtoNumber(8) Weather,
   }
 }
+
+private fun ProtoMessageSchema.message(number: Int): ProtoMessageSchema =
+  assertIs<ProtoFieldSchema.Message>(fields[number]).schema
+
+private fun ProtoMessageSchema.enumNumbers(number: Int): Set<Int> =
+  assertIs<ProtoFieldSchema.Enum>(fields[number]).numbers
