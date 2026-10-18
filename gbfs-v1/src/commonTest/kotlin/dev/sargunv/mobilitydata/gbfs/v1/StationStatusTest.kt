@@ -77,7 +77,7 @@ private val expectedResponse =
               numBikesAvailable = 6,
               numBikesDisabled = 1,
             ),
-          )
+          ),
       ),
   )
 

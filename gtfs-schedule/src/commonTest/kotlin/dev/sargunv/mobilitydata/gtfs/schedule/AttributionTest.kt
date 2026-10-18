@@ -21,7 +21,7 @@ private val expected =
       attributionUrl = "https://example.com",
       attributionEmail = "contact@example.com",
       attributionPhone = "555-1234",
-    )
+    ),
   )
 
 class AttributionTest {

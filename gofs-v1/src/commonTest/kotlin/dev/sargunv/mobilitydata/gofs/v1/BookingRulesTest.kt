@@ -62,7 +62,7 @@ private val expectedResponse =
               priorNoticeStartDay = 2,
               priorNoticeLastTime = ServiceTime(17, 0, 0),
             ),
-          )
+          ),
       ),
   )
 

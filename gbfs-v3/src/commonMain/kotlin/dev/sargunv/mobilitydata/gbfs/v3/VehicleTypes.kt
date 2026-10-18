@@ -19,7 +19,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class VehicleTypes(
   /** Array that contains one object per vehicle type in the system. */
-  @SerialName("vehicle_types") public val vehicleTypes: List<VehicleType>
+  @SerialName("vehicle_types") public val vehicleTypes: List<VehicleType>,
 ) : GbfsFeedData, List<VehicleType> by vehicleTypes
 
 /** Information about a vehicle type available in the system. */
@@ -157,7 +157,7 @@ public data class VehicleType(
 @JvmInline
 public value class VehicleFormFactor(
   /** The string value representing the vehicle form factor. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined vehicle form factor constants. */
   public companion object {
@@ -189,7 +189,7 @@ public value class VehicleFormFactor(
 @JvmInline
 public value class VehiclePropulsionType(
   /** The string value representing the vehicle propulsion type. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined vehicle propulsion type constants. */
   public companion object {
@@ -241,7 +241,7 @@ public data class EcoLabel(
 @JvmInline
 public value class VehicleAccessory(
   /** The string value representing the vehicle accessory. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined vehicle accessory constants. */
   public companion object {
@@ -282,7 +282,7 @@ public value class VehicleAccessory(
 @JvmInline
 public value class VehicleReturnConstraint(
   /** The string value representing the vehicle return constraint. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined vehicle return constraint constants. */
   public companion object {

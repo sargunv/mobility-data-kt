@@ -13,7 +13,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class ServiceBrands(
   /** Array that contains one object per service brand. */
-  @SerialName("service_brands") public val serviceBrands: List<Brand>
+  @SerialName("service_brands") public val serviceBrands: List<Brand>,
 ) : GofsFeedData, List<Brand> by serviceBrands
 
 /** A service brand with its visual identity. */

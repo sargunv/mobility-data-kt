@@ -68,7 +68,7 @@ class FareProductTest {
     for ((amount, currency, expectedAmount) in cases) {
       val encoded =
         encodeAmountAndCurrency(
-          FareProduct(fareProductId = "p1", amount = amount, currency = currency)
+          FareProduct(fareProductId = "p1", amount = amount, currency = currency),
         )
       assertEquals(expectedAmount to currency, encoded, currency)
     }
@@ -78,7 +78,9 @@ class FareProductTest {
   fun encodeRejectsExcessPrecision() {
     assertFailsWith<SerializationException> {
       GtfsCsv.encodeToString(
-        listOf(FareProduct(fareProductId = "p1", amount = Decimal.parse("2.501"), currency = "USD"))
+        listOf(
+          FareProduct(fareProductId = "p1", amount = Decimal.parse("2.501"), currency = "USD"),
+        ),
       )
     }
   }
@@ -87,7 +89,7 @@ class FareProductTest {
   fun encodeRejectsUnknownCurrency() {
     assertFailsWith<SerializationException> {
       GtfsCsv.encodeToString(
-        listOf(FareProduct(fareProductId = "p1", amount = Decimal.of(1), currency = "ZZZ"))
+        listOf(FareProduct(fareProductId = "p1", amount = Decimal.of(1), currency = "ZZZ")),
       )
     }
   }

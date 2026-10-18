@@ -68,7 +68,7 @@ public data class ReliabilityCriterion(
 @JvmInline
 public value class ReliabilityCriterionId(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [ReliabilityCriterionId]. */
   public companion object {
@@ -97,7 +97,7 @@ public value class ReliabilityCriterionId(
 @JvmInline
 public value class ReliabilityCriterionStatus(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [ReliabilityCriterionStatus]. */
   public companion object {

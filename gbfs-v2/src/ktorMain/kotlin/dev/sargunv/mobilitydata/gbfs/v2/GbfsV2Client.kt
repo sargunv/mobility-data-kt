@@ -14,13 +14,13 @@ import io.ktor.serialization.kotlinx.json.json
 public class GbfsV2Client internal constructor(private val httpClient: HttpClient) : AutoCloseable {
 
   public constructor(
-    block: HttpClientConfig<*>.() -> Unit = {}
+    block: HttpClientConfig<*>.() -> Unit = {},
   ) : this(
     HttpClient {
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GbfsJson) }
-    }
+    },
   )
 
   public constructor(
@@ -31,11 +31,11 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GbfsJson) }
-    }
+    },
   )
 
   internal suspend inline fun <reified T : GbfsFeedData> getFeedResponse(
-    url: Url
+    url: Url,
   ): Result<GbfsFeedResponse<T>> = suspendRunCatching {
     httpClient.get(url).body<GbfsFeedResponse<T>>()
   }
@@ -49,7 +49,7 @@ public class GbfsV2Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping the manifest response containing available feeds, or an error
    */
   public suspend fun getSystemManifest(
-    discoveryUrl: Url
+    discoveryUrl: Url,
   ): Result<GbfsFeedResponse<SystemManifest>> = getFeedResponse(discoveryUrl)
 
   /**

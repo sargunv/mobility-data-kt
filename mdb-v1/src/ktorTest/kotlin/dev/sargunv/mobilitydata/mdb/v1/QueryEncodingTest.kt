@@ -31,7 +31,7 @@ class QueryEncodingTest {
               maximumLongitude = -118.0,
             ),
           boundingFilterMethod = BoundingFilterMethod.PartiallyEnclosed,
-        )
+        ),
       )
       .getOrThrow()
     assertEquals("5", seen["limit"])
@@ -54,7 +54,7 @@ class QueryEncodingTest {
         GtfsRtFeedQuery(
           entityTypes = listOf(RealtimeEntityType.VehiclePositions, RealtimeEntityType.TripUpdates),
           isOfficial = true,
-        )
+        ),
       )
       .getOrThrow()
     assertEquals("vp,tu", seen["entity_types"])
@@ -91,7 +91,7 @@ class QueryEncodingTest {
           licenseIds = listOf("0BSD", "MIT"),
           licenseIsSpdx = true,
           licenseTags = listOf("family:ODC"),
-        )
+        ),
       )
       .getOrThrow()
     assertEquals("dash", seen["search_query"])

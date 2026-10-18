@@ -12,7 +12,7 @@ import kotlinx.serialization.json.jsonPrimitive
 class AbbreviatedWeekdaySerializerTest {
   @Serializable
   private data class TestData(
-    @Serializable(with = AbbreviatedWeekdaySerializer::class) val day: DayOfWeek
+    @Serializable(with = AbbreviatedWeekdaySerializer::class) val day: DayOfWeek,
   )
 
   private val json = Json

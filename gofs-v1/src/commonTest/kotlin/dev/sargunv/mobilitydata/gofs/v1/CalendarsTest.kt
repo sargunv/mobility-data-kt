@@ -82,7 +82,7 @@ private val expectedResponse =
               startDate = LocalDate.parse("20210906", LocalDate.Formats.ISO_BASIC),
               endDate = LocalDate.parse("20210906", LocalDate.Formats.ISO_BASIC),
             ),
-          )
+          ),
       ),
   )
 

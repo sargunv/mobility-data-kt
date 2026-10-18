@@ -84,7 +84,7 @@ private val expectedResponse =
               availabilities =
                 listOf(VehicleAvailabilitySlot(from = Timestamp.parse("2024-12-24T08:45:00Z"))),
             ),
-          )
+          ),
       ),
   )
 

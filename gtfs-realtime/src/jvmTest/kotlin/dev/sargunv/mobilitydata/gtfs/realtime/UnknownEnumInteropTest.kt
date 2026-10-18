@@ -48,7 +48,7 @@ class UnknownEnumInteropTest {
             4,
             ProtoWire.concat(ProtoWire.varintField(4, 1), ProtoWire.varintField(9, 99)),
           ),
-        )
+        ),
       )
 
     val official = GtfsRealtime.FeedMessage.parseFrom(bytes)
@@ -80,7 +80,7 @@ class UnknownEnumInteropTest {
             5,
             ProtoWire.concat(ProtoWire.varintField(6, 8), ProtoWire.varintField(6, 99)),
           ),
-        )
+        ),
       )
 
     val official = GtfsRealtime.FeedMessage.parseFrom(bytes)
@@ -101,7 +101,7 @@ class UnknownEnumInteropTest {
             5,
             ProtoWire.concat(ProtoWire.varintField(6, 99), ProtoWire.varintField(6, 8)),
           ),
-        )
+        ),
       )
 
     val official = GtfsRealtime.FeedMessage.parseFrom(bytes)
@@ -122,7 +122,7 @@ class UnknownEnumInteropTest {
             5,
             ProtoWire.concat(ProtoWire.varintField(6, 8), ProtoWire.varintField(6, 99)),
           ),
-        )
+        ),
       )
     val constructionThenUnknown =
       feedMessageBytes(
@@ -132,7 +132,7 @@ class UnknownEnumInteropTest {
             5,
             ProtoWire.concat(ProtoWire.varintField(6, 10), ProtoWire.varintField(6, 99)),
           ),
-        )
+        ),
       )
 
     val errors = java.util.Collections.synchronizedList(mutableListOf<String>())
@@ -162,7 +162,7 @@ class UnknownEnumInteropTest {
         ProtoWire.concat(
           ProtoWire.stringField(1, "alert-packed-cause"),
           ProtoWire.messageField(5, ProtoWire.packedVarintField(6, 8, 99)),
-        )
+        ),
       )
 
     val official = GtfsRealtime.FeedMessage.parseFrom(bytes)
@@ -187,7 +187,7 @@ class UnknownEnumInteropTest {
               ProtoWire.messageField(11, ProtoWire.varintField(3, 99)),
             ),
           ),
-        )
+        ),
       )
 
     val official = GtfsRealtime.FeedMessage.parseFrom(bytes)

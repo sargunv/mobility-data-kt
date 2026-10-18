@@ -215,7 +215,7 @@ private val expectedResponse =
                 ),
               defaultPricingPlanId = "car_plan_1",
             ),
-          )
+          ),
       ),
   )
 

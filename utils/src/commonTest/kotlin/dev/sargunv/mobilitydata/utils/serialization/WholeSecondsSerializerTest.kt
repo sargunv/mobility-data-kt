@@ -13,7 +13,7 @@ import kotlinx.serialization.json.long
 class WholeSecondsSerializerTest {
   @Serializable
   private data class TestData(
-    @Serializable(with = WholeSecondsSerializer::class) val duration: Duration
+    @Serializable(with = WholeSecondsSerializer::class) val duration: Duration,
   )
 
   private val json = Json

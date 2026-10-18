@@ -70,7 +70,7 @@ private val expectedResponse =
               brandColor = RgbColorTriplet(0x1C7F49),
               brandTextColor = RgbColorTriplet(0xFFFFFF),
             ),
-          )
+          ),
       ),
   )
 

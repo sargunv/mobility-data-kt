@@ -140,7 +140,7 @@ private val expectedResponse =
                   CountBySingleVehicleType(vehicleTypeId = "def456", count = 4),
                 ),
             ),
-          )
+          ),
       ),
   )
 

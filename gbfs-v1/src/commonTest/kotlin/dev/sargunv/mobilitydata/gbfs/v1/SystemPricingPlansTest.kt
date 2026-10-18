@@ -49,8 +49,8 @@ private val expectedResponse =
               price = Decimal.parse("2.1"),
               isTaxable = false,
               description = "Includes 10km, overage fees apply after 10km.",
-            )
-          )
+            ),
+          ),
       ),
   )
 

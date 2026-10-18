@@ -17,7 +17,7 @@ import kotlinx.serialization.Serializable
 @JvmInline
 @Serializable
 public value class SystemManifest(
-  @SerialName("feeds") private val services: Map<LanguageCode, Service>
+  @SerialName("feeds") private val services: Map<LanguageCode, Service>,
 ) : GofsFeedData, Map<LanguageCode, Service> by services {
   public constructor(vararg entries: Pair<LanguageCode, Service>) : this(mapOf(*entries))
 
@@ -50,7 +50,7 @@ public data class Service(
    * An array of all of the feeds that are published by this auto-discovery file. Maps feed types to
    * their URLs.
    */
-  @Serializable(with = FeedDiscoverySerializer::class) val feeds: Map<FeedType, Url>
+  @Serializable(with = FeedDiscoverySerializer::class) val feeds: Map<FeedType, Url>,
 ) : Map<FeedType, Url> by feeds {
   public constructor(vararg entries: Pair<FeedType, Url>) : this(mapOf(*entries))
 }
@@ -65,7 +65,7 @@ public data class Service(
 @JvmInline
 public value class FeedType(
   /** The string value representing the feed type. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined feed type constants. */
   public companion object {

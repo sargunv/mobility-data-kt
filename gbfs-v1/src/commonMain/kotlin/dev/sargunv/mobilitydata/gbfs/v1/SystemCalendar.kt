@@ -13,7 +13,7 @@ public data class SystemCalendar(
    * A minimum of one calendar object is REQUIRED. If start/end year are omitted, then assume the
    * start and end months do not change from year to year
    */
-  public val calendars: List<SystemCalendarEntry>
+  public val calendars: List<SystemCalendarEntry>,
 ) : GbfsFeedData
 
 /** A calendar entry defining an operating period for the system. */

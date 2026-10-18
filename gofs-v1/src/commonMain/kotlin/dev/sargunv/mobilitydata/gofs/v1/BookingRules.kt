@@ -16,7 +16,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class BookingRules(
   /** Array that contains one object per booking rule. */
-  @SerialName("booking_rules") public val bookingRules: List<BookingRule>
+  @SerialName("booking_rules") public val bookingRules: List<BookingRule>,
 ) : GofsFeedData, List<BookingRule> by bookingRules
 
 /** A single booking rule defining how to book a ride for specific zones. */
@@ -108,7 +108,7 @@ public data class BookingRule(
 @JvmInline
 public value class BookingType(
   /** The numeric value used in the GOFS feed for this booking type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined booking type constants. */
   public companion object {

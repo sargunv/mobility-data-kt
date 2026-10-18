@@ -68,7 +68,7 @@ public data class Stop(
 public value class LocationType
 private constructor(
   /** The integer value representing the location type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined location type constants. */
   public companion object {
@@ -97,7 +97,7 @@ private constructor(
 public value class StopAccess
 private constructor(
   /** The integer value representing the stop access type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined stop access constants. */
   public companion object {

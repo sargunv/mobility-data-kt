@@ -71,8 +71,8 @@ private val physicalExpectedResponse =
               isChargingStation = true,
               vehicleDocksCapacity =
                 listOf(CountByMultipleVehicleTypes(vehicleTypeIds = listOf("abc123"), count = 7)),
-            )
-          )
+            ),
+          ),
       ),
   )
 
@@ -158,9 +158,9 @@ private val virtualExpectedResponse =
                           Position(-122.655705, 45.516495),
                           Position(-122.655775, 45.516495),
                           Position(-122.655775, 45.516445),
-                        )
-                      )
-                    )
+                        ),
+                      ),
+                    ),
                 ),
               capacity = 16,
               vehicleTypeCapacity =
@@ -171,8 +171,8 @@ private val virtualExpectedResponse =
                   ),
                   CountByMultipleVehicleTypes(vehicleTypeIds = listOf("def456"), count = 1),
                 ),
-            )
-          )
+            ),
+          ),
       ),
   )
 
@@ -218,8 +218,8 @@ private val cityExpectedResponse =
               lat = 45.516445,
               lon = -122.655775,
               city = "Portland",
-            )
-          )
+            ),
+          ),
       ),
   )
 

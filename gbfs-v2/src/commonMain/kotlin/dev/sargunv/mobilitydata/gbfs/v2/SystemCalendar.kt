@@ -18,7 +18,7 @@ public data class SystemCalendar(
    * A minimum of one calendar object is REQUIRED. If start and end dates are the same every year,
    * then start_year and end_year SHOULD be omitted.
    */
-  public val calendars: List<SystemCalendarEntry>
+  public val calendars: List<SystemCalendarEntry>,
 ) : GbfsFeedData
 
 /** A calendar entry defining an operating period for the system. */

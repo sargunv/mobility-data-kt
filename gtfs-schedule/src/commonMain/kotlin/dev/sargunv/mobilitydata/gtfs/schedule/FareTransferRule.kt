@@ -41,7 +41,7 @@ public data class FareTransferRule(
 public value class DurationLimitType
 private constructor(
   /** The integer value representing the duration limit type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined duration limit type constants. */
   public companion object {
@@ -65,7 +65,7 @@ private constructor(
 public value class FareTransferType
 private constructor(
   /** The integer value representing the fare transfer type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined fare transfer type constants. */
   public companion object {

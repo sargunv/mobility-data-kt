@@ -19,7 +19,7 @@ private val expected =
       agencyName = "Demo Transit Authority",
       agencyUrl = "https://google.com",
       agencyTimezone = "America/Los_Angeles",
-    )
+    ),
   )
 
 class AgencyTest {

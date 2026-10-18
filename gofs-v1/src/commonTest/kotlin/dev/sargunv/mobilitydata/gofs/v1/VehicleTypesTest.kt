@@ -42,8 +42,8 @@ private val expectedResponse =
               vehicleTypeId = "large_van",
               maxCapacity = 7,
               wheelchairBoarding = WheelchairBoarding.Accessible,
-            )
-          )
+            ),
+          ),
       ),
   )
 

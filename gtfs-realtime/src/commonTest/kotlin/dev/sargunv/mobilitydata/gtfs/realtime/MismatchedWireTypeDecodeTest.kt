@@ -60,8 +60,8 @@ class MismatchedWireTypeDecodeTest {
       val decoded =
         GtfsRealtimeProto.decodeFeedMessage(
           feedMessageBytes(
-            alertEntity("alert", field, ProtoWire.messageField(10, translatedString("Header")))
-          )
+            alertEntity("alert", field, ProtoWire.messageField(10, translatedString("Header"))),
+          ),
         )
 
       val alert = decoded.entity.single().alert
@@ -79,8 +79,8 @@ class MismatchedWireTypeDecodeTest {
             "alert",
             ProtoWire.varintField(12, 4),
             ProtoWire.messageField(12, translatedString("Spoken header")),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals(
@@ -100,7 +100,7 @@ class MismatchedWireTypeDecodeTest {
             ProtoWire.stringField(3, "1700000000"),
             ProtoWire.varintField(4, 7),
           ),
-        )
+        ),
       )
 
     assertEquals("2.0", decoded.header.gtfsRealtimeVersion)
@@ -119,8 +119,8 @@ class MismatchedWireTypeDecodeTest {
             ProtoWire.varintField(4, 1),
             ProtoWire.fixed32Field(3, 1),
             ProtoWire.messageField(5, ProtoWire.varintField(7, 4)),
-          )
-        )
+          ),
+        ),
       )
 
     val entity = decoded.entity.single()
@@ -155,8 +155,8 @@ class MismatchedWireTypeDecodeTest {
     val decoded =
       GtfsRealtimeProto.decodeFeedMessage(
         feedMessageBytes(
-          ProtoWire.concat(ProtoWire.stringField(1, "vehicle"), ProtoWire.messageField(4, vehicle))
-        )
+          ProtoWire.concat(ProtoWire.stringField(1, "vehicle"), ProtoWire.messageField(4, vehicle)),
+        ),
       )
 
     val decodedVehicle = decoded.entity.single().vehicle
@@ -194,8 +194,8 @@ class MismatchedWireTypeDecodeTest {
             group,
             ProtoWire.messageField(10, translatedString("Header")),
             ProtoWire.varintField(7, 4),
-          )
-        )
+          ),
+        ),
       )
 
     val alert = decoded.entity.single().alert
@@ -210,7 +210,7 @@ class MismatchedWireTypeDecodeTest {
       feedMessageBytes(
         alertEntity("alert", ProtoWire.tag(12, ProtoWire.START_GROUP), ProtoWire.varintField(1, 4)),
         alertEntity("next", ProtoWire.varintField(7, 4)),
-      )
+      ),
     )
   }
 
@@ -222,8 +222,8 @@ class MismatchedWireTypeDecodeTest {
           "alert",
           ProtoWire.tag(12, ProtoWire.START_GROUP),
           ProtoWire.tag(13, ProtoWire.END_GROUP),
-        )
-      )
+        ),
+      ),
     )
   }
 
@@ -236,8 +236,11 @@ class MismatchedWireTypeDecodeTest {
   fun truncatedVarintStillFails() {
     assertMalformed(
       feedMessageBytes(
-        alertEntity("alert", ProtoWire.concat(ProtoWire.tag(12, ProtoWire.VARINT), byteArrayOf(-1)))
-      )
+        alertEntity(
+          "alert",
+          ProtoWire.concat(ProtoWire.tag(12, ProtoWire.VARINT), byteArrayOf(-1)),
+        ),
+      ),
     )
   }
 
@@ -248,8 +251,8 @@ class MismatchedWireTypeDecodeTest {
         alertEntity(
           "alert",
           ProtoWire.concat(ProtoWire.tag(12, ProtoWire.FIXED64), byteArrayOf(1, 2, 3)),
-        )
-      )
+        ),
+      ),
     )
   }
 
@@ -264,8 +267,8 @@ class MismatchedWireTypeDecodeTest {
             ProtoWire.varint(50),
             translatedString("Header"),
           ),
-        )
-      )
+        ),
+      ),
     )
   }
 
@@ -282,8 +285,8 @@ class MismatchedWireTypeDecodeTest {
               ProtoWire.concat(ProtoWire.tag(1, ProtoWire.LEN), ProtoWire.varint(9)),
             ),
           ),
-        )
-      )
+        ),
+      ),
     )
   }
 
@@ -291,14 +294,14 @@ class MismatchedWireTypeDecodeTest {
   fun invalidWireTypesStillFail() {
     for (wireType in listOf(6, 7)) {
       assertMalformed(
-        feedMessageBytes(alertEntity("alert", ProtoWire.tag(12, wireType), ProtoWire.varint(4)))
+        feedMessageBytes(alertEntity("alert", ProtoWire.tag(12, wireType), ProtoWire.varint(4))),
       )
       assertMalformed(
         ProtoWire.concat(
           ProtoWire.messageField(1, feedHeaderBytes()),
           ProtoWire.tag(2, wireType),
           ProtoWire.varint(4),
-        )
+        ),
       )
     }
   }

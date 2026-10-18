@@ -17,7 +17,7 @@ private val expected =
       serviceId = "FULLW",
       date = LocalDate(2007, 6, 4),
       overrideType = OverrideType.ServiceRemoved,
-    )
+    ),
   )
 
 class ServiceCalendarOverrideTest {

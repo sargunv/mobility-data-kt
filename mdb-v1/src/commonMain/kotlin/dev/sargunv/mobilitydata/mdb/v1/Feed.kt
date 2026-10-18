@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 @JvmInline
 public value class FeedId(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 )
 
 /**
@@ -195,7 +195,7 @@ public sealed class Feed {
 @JvmInline
 public value class FeedStatus(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [FeedStatus]. */
   public companion object {
@@ -221,7 +221,7 @@ public value class FeedStatus(
 @JvmInline
 public value class RealtimeEntityType(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [RealtimeEntityType]. */
   public companion object {
@@ -338,7 +338,7 @@ public data class GbfsVersion(
 @JvmInline
 public value class GbfsVersionSource(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [GbfsVersionSource]. */
   public companion object {

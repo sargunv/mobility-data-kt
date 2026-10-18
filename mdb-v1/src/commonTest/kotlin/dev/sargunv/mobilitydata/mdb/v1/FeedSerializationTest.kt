@@ -217,7 +217,7 @@ class FeedSerializationTest {
           "id": "mdb-1"
         }
         """
-          .trimIndent()
+          .trimIndent(),
       )
     val encoded =
       MdbJson.encodeToJsonElement<Feed>(Feed.Unknown(dataType = "neptunian", id = FeedId("mdb-1")))

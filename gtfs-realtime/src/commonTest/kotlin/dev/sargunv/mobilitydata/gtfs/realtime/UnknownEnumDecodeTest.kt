@@ -149,8 +149,8 @@ class UnknownEnumDecodeTest {
               5,
               ProtoWire.concat(ProtoWire.varintField(6, 8), ProtoWire.varintField(6, 99)),
             ),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals(Alert.Cause.Weather, decoded.entity.single().alert?.cause)
@@ -167,8 +167,8 @@ class UnknownEnumDecodeTest {
               5,
               ProtoWire.concat(ProtoWire.varintField(6, 99), ProtoWire.varintField(6, 8)),
             ),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals(Alert.Cause.Weather, decoded.entity.single().alert?.cause)
@@ -234,8 +234,8 @@ class UnknownEnumDecodeTest {
           ProtoWire.messageField(
             1,
             ProtoWire.concat(ProtoWire.stringField(1, "2.0"), ProtoWire.varintField(2, 99)),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals("2.0", decoded.header.gtfsRealtimeVersion)
@@ -298,8 +298,8 @@ class UnknownEnumDecodeTest {
           ProtoWire.concat(
             ProtoWire.stringField(1, "alert-packed-cause"),
             ProtoWire.messageField(5, ProtoWire.packedVarintField(6, 8, 99)),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals("alert-packed-cause", decoded.entity.single().id)
@@ -329,8 +329,8 @@ class UnknownEnumDecodeTest {
                 ProtoWire.varintField(7, 4),
               ),
             ),
-          )
-        )
+          ),
+        ),
       )
 
     val selector = decoded.entity.single().alert?.informedEntity?.single()
@@ -351,8 +351,8 @@ class UnknownEnumDecodeTest {
               ProtoWire.varintField(2, 1),
               ProtoWire.varintField(2, 99),
             ),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals(FeedHeader.Incrementality.Differential, decoded.header.incrementality)
@@ -369,8 +369,8 @@ class UnknownEnumDecodeTest {
               7,
               ProtoWire.concat(ProtoWire.stringField(1, "stop-1"), ProtoWire.varintField(13, 99)),
             ),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals("stop-1", decoded.entity.single().stop?.stopId)
@@ -391,8 +391,8 @@ class UnknownEnumDecodeTest {
                 ProtoWire.concat(ProtoWire.varintField(4, 2), ProtoWire.varintField(4, 99)),
               ),
             ),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals(
@@ -412,8 +412,8 @@ class UnknownEnumDecodeTest {
               4,
               ProtoWire.concat(ProtoWire.varintField(9, 5), ProtoWire.varintField(9, 99)),
             ),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals(
@@ -439,8 +439,8 @@ class UnknownEnumDecodeTest {
                 ),
               ),
             ),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals(
@@ -460,8 +460,8 @@ class UnknownEnumDecodeTest {
               4,
               ProtoWire.concat(ProtoWire.varintField(4, 1), ProtoWire.varintField(6, 99)),
             ),
-          )
-        )
+          ),
+        ),
       )
 
     assertEquals(
@@ -532,9 +532,9 @@ class UnknownEnumDecodeTest {
                   occupancyStatus = VehiclePosition.OccupancyStatus.Full,
                   currentStatus = VehiclePosition.VehicleStopStatus.StoppedAt,
                 ),
-            )
+            ),
           ),
-      )
+      ),
     )
   }
 }

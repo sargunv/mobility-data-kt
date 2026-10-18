@@ -19,7 +19,7 @@ import kotlinx.serialization.json.jsonPrimitive
 class OsmOpeningHoursSerializerTest {
   @Serializable
   private data class TestData(
-    @Serializable(with = OsmOpeningHoursSerializer::class) val hours: OpeningHours
+    @Serializable(with = OsmOpeningHoursSerializer::class) val hours: OpeningHours,
   )
 
   private val json = Json

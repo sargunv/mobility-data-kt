@@ -77,7 +77,7 @@ public data class Route(
 public value class RouteType
 private constructor(
   /** The integer value representing the route type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined route type constants. */
   public companion object {
@@ -125,7 +125,7 @@ private constructor(
 public value class ContinuousPickupDropOff
 private constructor(
   /** The integer value representing the continuous pickup/drop off type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined continuous pickup/drop off constants. */
   public companion object {

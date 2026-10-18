@@ -85,7 +85,7 @@ public object GtfsCsv {
 @JvmInline
 public value class TriState(
   /** The integer value representing the tri-state status. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined tri-state constants. */
   public companion object Companion {

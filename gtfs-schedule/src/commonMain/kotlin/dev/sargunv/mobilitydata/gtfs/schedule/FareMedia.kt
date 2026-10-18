@@ -27,7 +27,7 @@ public data class FareMedia(
 public value class FareMediaType
 private constructor(
   /** The integer value representing the fare media type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined fare media type constants. */
   public companion object {

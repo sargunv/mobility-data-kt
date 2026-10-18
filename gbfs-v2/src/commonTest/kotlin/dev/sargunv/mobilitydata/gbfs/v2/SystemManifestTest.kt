@@ -102,7 +102,7 @@ private val gbfsFeedNameResponse =
           Service(
             FeedType.SystemManifest to "https://www.example.com/gbfs/1/en/gbfs",
             FeedType.SystemInformation to "https://www.example.com/gbfs/1/en/system_information",
-          )
+          ),
       ),
   )
 

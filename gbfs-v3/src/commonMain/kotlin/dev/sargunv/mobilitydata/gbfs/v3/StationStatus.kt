@@ -14,7 +14,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class StationStatus(
   /** Array that contains one object per station in the system. */
-  public val stations: List<StationStatusEntry>
+  public val stations: List<StationStatusEntry>,
 ) : GbfsFeedData, List<StationStatusEntry> by stations
 
 /** Real-time status information for a single station. */

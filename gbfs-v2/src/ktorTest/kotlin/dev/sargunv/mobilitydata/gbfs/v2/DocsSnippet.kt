@@ -11,7 +11,7 @@ class DocsSnippet {
       val manifest =
         gbfs
           .getSystemManifest( // (2)!
-            discoveryUrl = "https://mds.bird.co/gbfs/v2/public/seattle-washington/gbfs.json"
+            discoveryUrl = "https://mds.bird.co/gbfs/v2/public/seattle-washington/gbfs.json",
           )
           .getOrThrow()
           .data

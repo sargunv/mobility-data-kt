@@ -15,7 +15,7 @@ public data class VersionManifest(
    *
    * The array MUST be sorted by increasing MAJOR and MINOR version number.
    */
-  public val versions: List<VersionInfo>
+  public val versions: List<VersionInfo>,
 ) : GbfsFeedData, List<VersionInfo> by versions
 
 /** Information about a specific version of a GBFS feed. */

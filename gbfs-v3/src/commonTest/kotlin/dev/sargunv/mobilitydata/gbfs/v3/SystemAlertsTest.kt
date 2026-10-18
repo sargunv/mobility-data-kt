@@ -72,18 +72,18 @@ private val expectedResponse =
                   AlertTime(
                     start = Timestamp.parse("2020-11-04T00:00:00+02:00"),
                     end = Timestamp.parse("2020-11-06T15:00:00+02:00"),
-                  )
+                  ),
                 ),
               url = mapOf("en" to "https://example.com/more-info"),
               summary = mapOf("en" to "Disruption of Service"),
               description =
                 mapOf(
                   "en" to
-                    "The three stations on Broadway will be out of service from 12:00am Nov 3 to 3:00pm Nov 6th to accommodate road work"
+                    "The three stations on Broadway will be out of service from 12:00am Nov 3 to 3:00pm Nov 6th to accommodate road work",
                 ),
               lastUpdated = Timestamp.parse("2020-11-01T06:35:00+02:00"),
-            )
-          )
+            ),
+          ),
       ),
   )
 

@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 @JvmInline
 public value class FeedDataType(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [FeedDataType]. */
   public companion object {

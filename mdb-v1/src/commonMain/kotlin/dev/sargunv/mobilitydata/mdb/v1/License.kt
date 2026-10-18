@@ -89,7 +89,7 @@ public data class LicenseRule(
 @Serializable
 public data class LicenseMatchRequest(
   /** License URL to resolve against the catalog. */
-  @SerialName("license_url") public val licenseUrl: String
+  @SerialName("license_url") public val licenseUrl: String,
 )
 
 /** One catalog license that matched a submitted URL. */
@@ -134,7 +134,7 @@ public data class MatchingLicense(
 @JvmInline
 public value class LicenseMatchType(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [LicenseMatchType]. */
   public companion object {
@@ -154,7 +154,7 @@ public value class LicenseMatchType(
 @JvmInline
 public value class LicenseRuleType(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [LicenseRuleType]. */
   public companion object {

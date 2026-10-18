@@ -45,7 +45,7 @@ public data class FareAttribute(
 public value class PaymentMethod
 private constructor(
   /** The integer value representing the payment method. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined payment method constants. */
   public companion object {

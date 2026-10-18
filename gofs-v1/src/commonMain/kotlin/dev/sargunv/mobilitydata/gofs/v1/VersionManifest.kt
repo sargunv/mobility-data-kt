@@ -15,7 +15,7 @@ public data class VersionManifest(
    * Contains one object for each of the available versions of a feed. The array must be sorted by
    * increasing version numbers.
    */
-  public val versions: List<VersionInfo>
+  public val versions: List<VersionInfo>,
 ) : GofsFeedData, List<VersionInfo> by versions
 
 /** Information about a specific version of a GOFS feed. */

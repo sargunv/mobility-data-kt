@@ -21,7 +21,7 @@ public data class RealtimeBookings(
    * An array that contains one object per brand_id. Should be empty if no realtime booking is
    * available for the requested location.
    */
-  @SerialName("realtime_booking") public val realtimeBookings: List<RealtimeBooking>
+  @SerialName("realtime_booking") public val realtimeBookings: List<RealtimeBooking>,
 ) : GofsFeedData, List<RealtimeBooking> by realtimeBookings
 
 /** Real-time booking information for a specific service brand. */

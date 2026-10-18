@@ -22,14 +22,14 @@ class ExperimentalEntitiesTest {
                   stopCode =
                     TranslatedString(
                       translation =
-                        listOf(TranslatedString.Translation(text = "TMP1", language = "en"))
+                        listOf(TranslatedString.Translation(text = "TMP1", language = "en")),
                     ),
                   stopName =
                     TranslatedString(
                       translation =
                         listOf(
-                          TranslatedString.Translation(text = "Temporary Main St", language = "en")
-                        )
+                          TranslatedString.Translation(text = "Temporary Main St", language = "en"),
+                        ),
                     ),
                   ttsStopName =
                     TranslatedString(
@@ -38,8 +38,8 @@ class ExperimentalEntitiesTest {
                           TranslatedString.Translation(
                             text = "Temporary Main Street",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   stopDesc =
                     TranslatedString(
@@ -48,8 +48,8 @@ class ExperimentalEntitiesTest {
                           TranslatedString.Translation(
                             text = "Temporary stop during street closure",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   stopLat = 47.625F,
                   stopLon = -122.375F,
@@ -61,8 +61,8 @@ class ExperimentalEntitiesTest {
                           TranslatedString.Translation(
                             text = "https://agency.example/stops/tmp1",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   parentStation = "station-central",
                   stopTimezone = "America/Los_Angeles",
@@ -71,7 +71,7 @@ class ExperimentalEntitiesTest {
                   platformCode =
                     TranslatedString(
                       translation =
-                        listOf(TranslatedString.Translation(text = "4", language = "en"))
+                        listOf(TranslatedString.Translation(text = "4", language = "en")),
                     ),
                 ),
             ),
@@ -84,7 +84,7 @@ class ExperimentalEntitiesTest {
                       TripModifications.SelectedTrips(
                         tripIds = listOf("trip-100", "trip-101"),
                         shapeId = "shape-detour-1",
-                      )
+                      ),
                     ),
                   startTimes = listOf("08:00:00", "09:00:00"),
                   serviceDates = listOf("20260416", "20260417"),
@@ -101,7 +101,7 @@ class ExperimentalEntitiesTest {
                           ),
                         serviceAlertId = "alert-advanced",
                         lastModifiedTime = 1_744_730_000,
-                      )
+                      ),
                     ),
                 ),
             ),

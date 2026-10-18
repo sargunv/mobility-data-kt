@@ -13,7 +13,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Fares(
   /** Array that contains one object per fare definition. */
-  public val fares: List<Fare>
+  public val fares: List<Fare>,
 ) : GofsFeedData, List<Fare> by fares
 
 /** A fare definition with pricing rules. */

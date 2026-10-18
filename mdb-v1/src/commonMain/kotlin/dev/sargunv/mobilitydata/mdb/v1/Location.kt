@@ -72,7 +72,7 @@ public data class LocationSearchResult(
 @JvmInline
 public value class LocationType(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [LocationType]. */
   public companion object {

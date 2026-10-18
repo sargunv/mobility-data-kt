@@ -140,7 +140,7 @@ public data class TripDescriptor(
   public enum class ScheduleRelationship {
     @ProtoNumber(0) Scheduled,
     @Deprecated(
-      "Use Duplicated for extras of an existing scheduled trip, or New for unrelated extras"
+      "Use Duplicated for extras of an existing scheduled trip, or New for unrelated extras",
     )
     @ProtoNumber(1)
     Added,

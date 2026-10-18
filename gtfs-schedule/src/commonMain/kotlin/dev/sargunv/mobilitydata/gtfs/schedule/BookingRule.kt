@@ -66,7 +66,7 @@ public data class BookingRule(
 public value class BookingType
 private constructor(
   /** The integer value representing the booking type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined booking type constants. */
   public companion object {

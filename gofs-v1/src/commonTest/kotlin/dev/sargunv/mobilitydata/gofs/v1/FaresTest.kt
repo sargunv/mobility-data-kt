@@ -71,8 +71,8 @@ private val expectedResponse =
                 ),
               rider = listOf(FareEntry(amount = Decimal.parse("2.5"))),
               luggage = listOf(FareEntry(start = 3, amount = Decimal.parse("5.1"))),
-            )
-          )
+            ),
+          ),
       ),
   )
 

@@ -92,7 +92,7 @@ private val expectedResponse =
                   phoneNumber = "+18005551234",
                 ),
             ),
-          )
+          ),
       ),
   )
 

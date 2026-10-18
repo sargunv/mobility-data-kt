@@ -11,7 +11,7 @@ class DocsSnippet {
       val manifest =
         gbfs
           .getSystemManifest( // (2)!
-            discoveryUrl = "https://data.lime.bike/api/partners/v1/gbfs/seattle/gbfs.json"
+            discoveryUrl = "https://data.lime.bike/api/partners/v1/gbfs/seattle/gbfs.json",
           )
           .getOrThrow()
           .data

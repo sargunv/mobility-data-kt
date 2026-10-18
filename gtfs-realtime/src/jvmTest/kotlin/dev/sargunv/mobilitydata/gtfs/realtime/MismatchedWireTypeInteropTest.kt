@@ -25,7 +25,7 @@ class MismatchedWireTypeInteropTest {
               ProtoWire.varintField(14, 3),
             ),
           ),
-        )
+        ),
       )
 
     val official = GtfsRealtime.FeedMessage.parseFrom(bytes).getEntity(0).alert
@@ -56,7 +56,7 @@ class MismatchedWireTypeInteropTest {
               ProtoWire.varintField(7, 4),
             ),
           ),
-        )
+        ),
       )
 
     val official = GtfsRealtime.FeedMessage.parseFrom(bytes).getEntity(0).alert

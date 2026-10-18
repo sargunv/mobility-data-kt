@@ -43,7 +43,7 @@ private val expectedResponse =
           listOf(
             VersionInfo(version = "1.0", url = "https://www.example.com/gofs/2/gofs"),
             VersionInfo(version = "X.Y", url = "https://www.example.com/gofs/3/gofs"),
-          )
+          ),
       ),
   )
 

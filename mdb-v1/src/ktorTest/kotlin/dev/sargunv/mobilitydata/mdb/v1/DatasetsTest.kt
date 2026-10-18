@@ -110,7 +110,7 @@ class DatasetsTest {
     val matches =
       client
         .getMatchingLicenses(
-          LicenseMatchRequest("https://creativecommons.org/licenses/by/4.0/deed.nl")
+          LicenseMatchRequest("https://creativecommons.org/licenses/by/4.0/deed.nl"),
         )
         .getOrThrow()
     assertEquals("POST", method)

@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class AccessTokenRequest(
   /** Long-lived refresh token exchanged for a short-lived access token. */
-  @SerialName("refresh_token") public val refreshToken: String
+  @SerialName("refresh_token") public val refreshToken: String,
 )
 
 /** Access token returned by `POST /v1/tokens/access`. */

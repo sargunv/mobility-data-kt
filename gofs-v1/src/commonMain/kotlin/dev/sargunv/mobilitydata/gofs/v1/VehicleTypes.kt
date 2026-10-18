@@ -12,7 +12,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class VehicleTypes(
   /** Array that contains one object per vehicle type. */
-  @SerialName("vehicle_types") public val vehicleTypes: List<VehicleType>
+  @SerialName("vehicle_types") public val vehicleTypes: List<VehicleType>,
 ) : GofsFeedData, List<VehicleType> by vehicleTypes
 
 /** Information about a specific vehicle type used in on-demand services. */
@@ -31,7 +31,7 @@ public data class VehicleType(
 @JvmInline
 public value class WheelchairBoarding(
   /** The string value representing the wheelchair boarding option. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined wheelchair boarding constants. */
   public companion object {

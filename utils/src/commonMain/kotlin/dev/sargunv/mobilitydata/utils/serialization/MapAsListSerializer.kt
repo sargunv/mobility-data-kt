@@ -19,7 +19,7 @@ import kotlinx.serialization.encoding.Encoder
  * @param delegateSerializer The serializer for the delegate entry type
  */
 public abstract class MapAsListSerializer<Delegate : Map.Entry<Key, Value>, Key, Value>(
-  delegateSerializer: KSerializer<Delegate>
+  delegateSerializer: KSerializer<Delegate>,
 ) : KSerializer<Map<Key, Value>> {
   private val delegate = ListSerializer(delegateSerializer)
 

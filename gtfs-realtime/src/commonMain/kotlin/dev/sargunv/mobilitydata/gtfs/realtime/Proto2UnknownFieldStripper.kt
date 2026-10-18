@@ -190,7 +190,11 @@ internal object GtfsRealtimeWireSchema {
       val field =
         fieldSchema(
           unwrap(descriptor.getElementDescriptor(index)),
-          descriptor.getElementAnnotations(index).filterIsInstance<ProtoType>().singleOrNull()?.type,
+          descriptor
+            .getElementAnnotations(index)
+            .filterIsInstance<ProtoType>()
+            .singleOrNull()
+            ?.type,
         ) ?: continue
       fields[number] = field
     }

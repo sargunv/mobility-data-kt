@@ -120,7 +120,7 @@ private val expectedResponse =
             ) {
               foreignMembers = foreignMembersOf(ZoneForeignMembers(zoneId = "zoneA"), GofsJson)
             }
-          }
+          },
       ),
   )
 

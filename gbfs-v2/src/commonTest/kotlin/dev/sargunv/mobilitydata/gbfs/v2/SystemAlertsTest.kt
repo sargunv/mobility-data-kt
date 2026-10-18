@@ -57,15 +57,15 @@ private val expectedResponse =
                   AlertTime(
                     start = Instant.fromEpochSeconds(1604448000),
                     end = Instant.fromEpochSeconds(1604674800),
-                  )
+                  ),
                 ),
               url = "https://example.com/more-info",
               summary = "Disruption of Service",
               description =
                 "The three stations on Broadway will be out of service from 12:00am Nov 3 to 3:00pm Nov 6th to accommodate road work",
               lastUpdated = Instant.fromEpochSeconds(1604198100),
-            )
-          )
+            ),
+          ),
       ),
   )
 

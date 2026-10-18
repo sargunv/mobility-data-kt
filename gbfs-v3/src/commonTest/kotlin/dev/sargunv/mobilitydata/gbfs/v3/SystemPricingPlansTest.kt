@@ -95,8 +95,8 @@ private val expectedResponse1 =
                     end = null,
                   ),
                 ),
-            )
-          )
+            ),
+          ),
       ),
   )
 
@@ -166,14 +166,19 @@ private val expectedResponse2 =
                 mapOf("en" to "$3 unlock fee, $0.25 per kilometer and 0.50 per minute."),
               perKmPricing =
                 listOf(
-                  PricingInterval(start = 0, rate = Decimal.parse("0.25"), interval = 1, end = null)
+                  PricingInterval(
+                    start = 0,
+                    rate = Decimal.parse("0.25"),
+                    interval = 1,
+                    end = null,
+                  ),
                 ),
               perMinPricing =
                 listOf(
-                  PricingInterval(start = 0, rate = Decimal.parse("0.5"), interval = 1, end = null)
+                  PricingInterval(start = 0, rate = Decimal.parse("0.5"), interval = 1, end = null),
                 ),
-            )
-          )
+            ),
+          ),
       ),
   )
 
@@ -228,8 +233,8 @@ private val expectedResponseReservation =
               reservationPricePerMin = Decimal.parse("0.15"),
               isTaxable = false,
               description = mapOf("en" to "Includes 10km, overage fees apply after 10km."),
-            )
-          )
+            ),
+          ),
       ),
   )
 
@@ -288,8 +293,8 @@ private val expectedResponseFareCapping =
               description =
                 mapOf("en" to "$3 unlock fee, $0.25 per kilometer and 0.50 per minute."),
               fareCapping = FareCapping(duration = 720.minutes, price = Decimal.parse("15")),
-            )
-          )
+            ),
+          ),
       ),
   )
 

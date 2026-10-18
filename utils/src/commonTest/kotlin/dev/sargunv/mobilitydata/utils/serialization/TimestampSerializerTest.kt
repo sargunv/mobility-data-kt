@@ -15,7 +15,7 @@ import kotlinx.serialization.json.jsonPrimitive
 class TimestampSerializerTest {
   @Serializable
   private data class TestData(
-    @Serializable(with = TimestampSerializer::class) val timestamp: Timestamp
+    @Serializable(with = TimestampSerializer::class) val timestamp: Timestamp,
   )
 
   private val json = Json

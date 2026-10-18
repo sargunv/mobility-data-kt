@@ -193,7 +193,7 @@ private val expectedResponse =
               description =
                 mapOf(
                   "en" to
-                    "Extra comfortable seat with additional suspension.\n\nPlease be aware of the cargo box lock: you need to press it down before pulling it up again!"
+                    "Extra comfortable seat with additional suspension.\n\nPlease be aware of the cargo box lock: you need to press it down before pulling it up again!",
                 ),
               wheelCount = 3,
               defaultReserveTime = 30.minutes,
@@ -257,7 +257,7 @@ private val expectedResponse =
                 ),
               defaultPricingPlanId = "car_plan_1",
             ),
-          )
+          ),
       ),
   )
 
@@ -296,8 +296,8 @@ private val minAgeExpectedResponse =
               formFactor = VehicleFormFactor.Bicycle,
               propulsionType = VehiclePropulsionType.Human,
               minAge = 16,
-            )
-          )
+            ),
+          ),
       ),
   )
 

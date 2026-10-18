@@ -14,7 +14,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class OperatingRules(
   /** Array that contains one object per operating rule. */
-  @SerialName("operating_rules") public val operatingRules: List<OperatingRule>
+  @SerialName("operating_rules") public val operatingRules: List<OperatingRule>,
 ) : GofsFeedData, List<OperatingRule> by operatingRules
 
 /** A single operating rule defining when and where on-demand services are available. */

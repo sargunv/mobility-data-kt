@@ -111,7 +111,7 @@ internal constructor(
    * @return The page of GTFS Realtime feeds, or an error
    */
   public suspend fun getGtfsRtFeeds(
-    query: GtfsRtFeedQuery = GtfsRtFeedQuery()
+    query: GtfsRtFeedQuery = GtfsRtFeedQuery(),
   ): Result<List<Feed.GtfsRt>> = catalogGet("v1", "gtfs_rt_feeds") { appendGtfsRtFeedQuery(query) }
 
   /**
@@ -186,7 +186,7 @@ internal constructor(
    * @return Matching feeds with a total count, or an error
    */
   public suspend fun searchFeeds(
-    query: SearchFeedsQuery = SearchFeedsQuery()
+    query: SearchFeedsQuery = SearchFeedsQuery(),
   ): Result<SearchFeedsResponse> = catalogGet("v1", "search") { appendSearchFeedsQuery(query) }
 
   /**
@@ -196,7 +196,7 @@ internal constructor(
    * @return Matching locations with a total count, or an error
    */
   public suspend fun getLocations(
-    query: LocationQuery = LocationQuery()
+    query: LocationQuery = LocationQuery(),
   ): Result<LocationSearchResponse> = catalogGet("v1", "locations") { appendLocationQuery(query) }
 
   /**
@@ -224,7 +224,7 @@ internal constructor(
    * @return Matching licenses, or an error
    */
   public suspend fun getMatchingLicenses(
-    request: LicenseMatchRequest
+    request: LicenseMatchRequest,
   ): Result<List<MatchingLicense>> = catalogPost("v1", "licenses:match", body = request)
 
   /**
@@ -264,7 +264,7 @@ internal constructor(
   ): Result<T> = withCatalogAuth { postOnce<T, B>(pathSegments, body) }
 
   private suspend inline fun <reified T> withCatalogAuth(
-    crossinline call: suspend () -> T
+    crossinline call: suspend () -> T,
   ): Result<T> = suspendRunCatching {
     val tokenAtStart = ensureAccessToken()
     try {
