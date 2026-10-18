@@ -14,7 +14,7 @@ import kotlinx.serialization.Serializable
 @JvmInline
 public value class RgbColor(
   /** The 24-bit integer representation of this color (0x000000 to 0xFFFFFF). */
-  public val value: Int
+  public val value: Int,
 ) {
   init {
     require(value in 0x000000..0xFFFFFF) { "Color value must be a 6-digit hexadecimal number." }

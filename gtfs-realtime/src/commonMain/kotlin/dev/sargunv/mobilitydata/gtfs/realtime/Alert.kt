@@ -139,7 +139,7 @@ public data class EntitySelector(
 @Serializable
 public data class TranslatedString(
   /** Localized text variants; at least one is required. */
-  @ProtoNumber(1) public val translation: List<Translation> = emptyList()
+  @ProtoNumber(1) public val translation: List<Translation> = emptyList(),
 ) {
   /** A localized text variant. */
   @Serializable
@@ -155,7 +155,7 @@ public data class TranslatedString(
 @Serializable
 public data class TranslatedImage(
   /** Localized image variants; at least one is required. */
-  @ProtoNumber(1) public val localizedImage: List<LocalizedImage> = emptyList()
+  @ProtoNumber(1) public val localizedImage: List<LocalizedImage> = emptyList(),
 ) {
   /** A localized image variant. */
   @Serializable

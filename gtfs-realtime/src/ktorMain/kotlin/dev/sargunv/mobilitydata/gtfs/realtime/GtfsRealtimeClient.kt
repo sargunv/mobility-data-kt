@@ -18,12 +18,12 @@ public class GtfsRealtimeClient internal constructor(private val httpClient: Htt
   AutoCloseable {
 
   public constructor(
-    block: HttpClientConfig<*>.() -> Unit = {}
+    block: HttpClientConfig<*>.() -> Unit = {},
   ) : this(
     HttpClient {
       block()
       expectSuccess = true
-    }
+    },
   )
 
   public constructor(
@@ -33,7 +33,7 @@ public class GtfsRealtimeClient internal constructor(private val httpClient: Htt
     HttpClient(engine) {
       block()
       expectSuccess = true
-    }
+    },
   )
 
   /**

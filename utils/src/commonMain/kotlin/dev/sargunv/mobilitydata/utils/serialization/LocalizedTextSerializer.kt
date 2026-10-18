@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
  */
 public object LocalizedTextSerializer :
   MapAsListSerializer<LocalizedTextSerializer.LocalizedTextEntry, LanguageCode, String>(
-    LocalizedTextEntry.serializer()
+    LocalizedTextEntry.serializer(),
   ) {
 
   override fun Map.Entry<LanguageCode, String>.toDelegate(): LocalizedTextEntry =

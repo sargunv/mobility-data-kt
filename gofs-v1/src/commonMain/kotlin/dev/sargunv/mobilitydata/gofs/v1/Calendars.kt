@@ -13,7 +13,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class Calendars(
   /** Array that contains one object per calendar. */
-  public val calendars: List<Calendar>
+  public val calendars: List<Calendar>,
 ) : GofsFeedData, List<Calendar> by calendars
 
 /** A calendar defining when on-demand services are available. */

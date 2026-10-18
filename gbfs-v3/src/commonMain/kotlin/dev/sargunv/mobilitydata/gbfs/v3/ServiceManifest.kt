@@ -15,7 +15,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class ServiceManifest(
   /** Map of feed types to their corresponding URLs. */
-  @Serializable(with = FeedDiscoverySerializer::class) val feeds: Map<FeedType, Url>
+  @Serializable(with = FeedDiscoverySerializer::class) val feeds: Map<FeedType, Url>,
 ) : GbfsFeedData, Map<FeedType, Url> by feeds {
   public constructor(vararg entries: Pair<FeedType, Url>) : this(mapOf(*entries))
 }
@@ -29,7 +29,7 @@ public data class ServiceManifest(
 @JvmInline
 public value class FeedType(
   /** The string value representing the feed type. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined feed type constants. */
   public companion object {

@@ -14,7 +14,7 @@ import kotlinx.serialization.json.long
 class EpochSecondsSerializerTest {
   @Serializable
   private data class TestData(
-    @Serializable(with = EpochSecondsSerializer::class) val timestamp: Instant
+    @Serializable(with = EpochSecondsSerializer::class) val timestamp: Instant,
   )
 
   private val json = Json

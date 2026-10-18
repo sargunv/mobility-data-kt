@@ -137,7 +137,7 @@ private val expectedResponse =
                   VehicleTypeAvailability(vehicleTypeId = "def456", count = 4),
                 ),
             ),
-          )
+          ),
       ),
   )
 

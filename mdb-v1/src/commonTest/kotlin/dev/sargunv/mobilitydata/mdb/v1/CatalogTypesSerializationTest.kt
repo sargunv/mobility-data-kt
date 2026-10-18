@@ -95,7 +95,7 @@ private val expectedLicenseWithRules =
           name = "commercial-use",
           label = "Commercial use",
           type = LicenseRuleType.Permission,
-        )
+        ),
       ),
   )
 
@@ -146,7 +146,7 @@ class CatalogTypesSerializationTest {
   fun encodeLicenseOmitsRules() {
     val expected =
       Json.decodeFromString<JsonElement>(
-        """{"id":"0BSD","name":"BSD Zero Clause License","is_spdx":true}"""
+        """{"id":"0BSD","name":"BSD Zero Clause License","is_spdx":true}""",
       )
     val encoded = MdbJson.encodeToJsonElement(expectedLicense)
     assertEquals(expected, encoded)

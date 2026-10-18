@@ -55,8 +55,8 @@ private val expectedResponse =
               brandId = "large_ride",
               vehicleTypeIds = listOf("large_van"),
               fareId = "RegularPrice",
-            )
-          )
+            ),
+          ),
       ),
   )
 

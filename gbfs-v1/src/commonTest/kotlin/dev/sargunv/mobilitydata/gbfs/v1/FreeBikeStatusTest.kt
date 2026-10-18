@@ -46,8 +46,8 @@ private val expectedResponse =
               lon = 56.789012,
               isReserved = false,
               isDisabled = false,
-            )
-          )
+            ),
+          ),
       ),
   )
 

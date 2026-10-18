@@ -5,7 +5,7 @@ public sealed class CatalogAuth {
   /** Exchange a long-lived refresh token for a one-hour access token. */
   public data class Refresh(
     /** Refresh token issued by MobilityData. */
-    public val refreshToken: String
+    public val refreshToken: String,
   ) : CatalogAuth() {
     override fun toString(): String = "CatalogAuth.Refresh"
   }
@@ -13,7 +13,7 @@ public sealed class CatalogAuth {
   /** Call the catalog with an existing access token. */
   public data class Access(
     /** Bearer access token. */
-    public val accessToken: String
+    public val accessToken: String,
   ) : CatalogAuth() {
     override fun toString(): String = "CatalogAuth.Access"
   }

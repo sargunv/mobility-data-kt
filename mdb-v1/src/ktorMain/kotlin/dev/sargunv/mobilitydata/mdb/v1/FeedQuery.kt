@@ -95,7 +95,7 @@ public data class DatasetBboxFilter(
 @JvmInline
 public value class BoundingFilterMethod(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [BoundingFilterMethod]. */
   public companion object {
@@ -349,7 +349,7 @@ internal fun URLBuilder.appendAvailabilityQuery(query: AvailabilityQuery) {
 @JvmInline
 public value class AvailabilitySort(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [AvailabilitySort]. */
   public companion object {

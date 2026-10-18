@@ -25,7 +25,7 @@ internal val sampleFeedMessage =
                     stopId = "stop-3",
                     arrival = TripUpdate.StopTimeEvent(delay = 45, time = 1_744_470_445),
                     departure = TripUpdate.StopTimeEvent(delay = 60, time = 1_744_470_460),
-                  )
+                  ),
                 ),
               timestamp = 1_744_470_400,
               delay = 45,
@@ -56,8 +56,8 @@ internal val sampleFeedMessage =
                 TranslatedString(
                   translation =
                     listOf(
-                      TranslatedString.Translation(text = "Detour on Route A", language = "en")
-                    )
+                      TranslatedString.Translation(text = "Detour on Route A", language = "en"),
+                    ),
                 ),
               severityLevel = Alert.SeverityLevel.Warning,
             ),
@@ -86,7 +86,7 @@ class FeedMessageTest {
             incrementality = FeedHeader.Incrementality.Differential,
           ),
         entity = listOf(FeedEntity(id = "deleted-1", isDeleted = true)),
-      )
+      ),
     )
   }
 
@@ -110,7 +110,7 @@ class FeedMessageTest {
               alert = Alert(informedEntity = listOf(EntitySelector(routeId = "route-x"))),
             ),
           ),
-      )
+      ),
     )
   }
 

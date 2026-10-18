@@ -16,7 +16,7 @@ public data class WaitTimes(
    * An array that contains one object per brand_id. Should be empty if no wait time is available
    * for the requested location.
    */
-  @SerialName("wait_times") public val waitTimes: List<WaitTime>
+  @SerialName("wait_times") public val waitTimes: List<WaitTime>,
 ) : GofsFeedData, List<WaitTime> by waitTimes
 
 /** Wait time information for a specific service brand. */

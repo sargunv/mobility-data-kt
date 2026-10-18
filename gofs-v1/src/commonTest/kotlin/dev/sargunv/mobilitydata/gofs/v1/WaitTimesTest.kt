@@ -43,7 +43,7 @@ private val expectedResponse =
           listOf(
             WaitTime(brandId = "regular_ride", waitTime = 300.seconds),
             WaitTime(brandId = "large_ride", waitTime = 600.seconds),
-          )
+          ),
       ),
   )
 

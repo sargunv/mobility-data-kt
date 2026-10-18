@@ -31,7 +31,7 @@ tasks.withType<MkdocsTask>().configureEach {
         "project_version" to project.version.toString(),
         "ktor_version" to libs.versions.ktor.get(),
       )
-    }
+    },
   )
 }
 

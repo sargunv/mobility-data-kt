@@ -21,7 +21,12 @@ private val expected =
       endTime = GtfsLocalTime(9, 0, 0),
       serviceId = "weekday",
     ),
-    Timeframe(timeframeGroupId = "offpeak", startTime = null, endTime = null, serviceId = "weekend"),
+    Timeframe(
+      timeframeGroupId = "offpeak",
+      startTime = null,
+      endTime = null,
+      serviceId = "weekend",
+    ),
   )
 
 class TimeframeTest {

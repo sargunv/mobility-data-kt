@@ -66,7 +66,7 @@ public data class Transfer(
 public value class TransferType
 private constructor(
   /** The integer value representing the transfer type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined transfer type constants. */
   public companion object {

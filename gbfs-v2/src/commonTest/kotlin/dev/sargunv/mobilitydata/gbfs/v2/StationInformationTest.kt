@@ -60,8 +60,8 @@ private val physicalExpectedResponse =
               contactPhone = "+33109874321",
               isChargingStation = true,
               vehicleTypeCapacity = mapOf("abc123" to 7, "def456" to 9),
-            )
-          )
+            ),
+          ),
       ),
   )
 
@@ -137,14 +137,14 @@ private val virtualExpectedResponse =
                           Position(-122.655705, 45.516495),
                           Position(-122.655775, 45.516495),
                           Position(-122.655775, 45.516445),
-                        )
-                      )
-                    )
+                        ),
+                      ),
+                    ),
                 ),
               capacity = 16,
               vehicleCapacity = mapOf("abc123" to 8, "def456" to 8, "ghi789" to 16),
-            )
-          )
+            ),
+          ),
       ),
   )
 

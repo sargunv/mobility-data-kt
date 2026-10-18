@@ -61,7 +61,7 @@ public data class Trip(
 public value class DirectionId
 private constructor(
   /** The integer value representing the direction. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined direction constants. */
   public companion object {

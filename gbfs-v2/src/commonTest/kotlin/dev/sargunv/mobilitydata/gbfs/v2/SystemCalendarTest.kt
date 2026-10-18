@@ -49,8 +49,8 @@ private val expectedResponse =
               endMonth = Month.NOVEMBER,
               endDay = 5,
               endYear = 2020,
-            )
-          )
+            ),
+          ),
       ),
   )
 

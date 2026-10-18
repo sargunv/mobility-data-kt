@@ -50,7 +50,7 @@ public data class GtfsFeedAvailabilityCheck(
 @JvmInline
 public value class AvailabilityRequestMethod(
   /** Wire value. */
-  public val value: String
+  public val value: String,
 ) {
   /** Named constants for [AvailabilityRequestMethod]. */
   public companion object {

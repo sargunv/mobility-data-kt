@@ -94,7 +94,7 @@ public data class StopTime(
 public value class PickupDropoff
 private constructor(
   /** The integer value representing the pickup/drop off type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined pickup/drop off type constants. */
   public companion object Companion {
@@ -118,7 +118,7 @@ private constructor(
 public value class Timepoint
 private constructor(
   /** The integer value representing the timepoint status. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined timepoint constants. */
   public companion object {

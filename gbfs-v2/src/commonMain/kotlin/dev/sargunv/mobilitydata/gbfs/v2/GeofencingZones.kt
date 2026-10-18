@@ -21,7 +21,7 @@ public data class GeofencingZones(
    * the array of features.
    */
   @SerialName("geofencing_zones")
-  public val geofencingZones: FeatureCollection<MultiPolygon, GeofencingZone>
+  public val geofencingZones: FeatureCollection<MultiPolygon, GeofencingZone>,
 ) : GbfsFeedData
 
 /** Properties describing travel allowances and limitations for a geofencing zone. */

@@ -78,7 +78,7 @@ private val expectedResponse =
               startTime = ServiceTime(0, 0, 0),
               endTime = ServiceTime(23, 59, 59),
             ),
-          )
+          ),
       ),
   )
 

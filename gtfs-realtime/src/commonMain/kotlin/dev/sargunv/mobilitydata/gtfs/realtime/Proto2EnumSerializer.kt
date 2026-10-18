@@ -116,7 +116,7 @@ internal object StopTimeScheduleRelationshipSerializer :
 
 internal object PickupTypeSerializer :
   KSerializer<
-    TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?
+    TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?,
   > by proto2NullableEnumSerializer(
     generated = TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.serializer(),
     values = TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.entries,
@@ -124,7 +124,7 @@ internal object PickupTypeSerializer :
 
 internal object DropOffTypeSerializer :
   KSerializer<
-    TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?
+    TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType?,
   > by proto2NullableEnumSerializer(
     generated = TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.serializer(),
     values = TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType.entries,

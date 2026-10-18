@@ -53,7 +53,7 @@ private val expectedResponse =
             Region(regionId = "4", name = "East"),
             Region(regionId = "5", name = "South"),
             Region(regionId = "6", name = "West"),
-          )
+          ),
       ),
   )
 

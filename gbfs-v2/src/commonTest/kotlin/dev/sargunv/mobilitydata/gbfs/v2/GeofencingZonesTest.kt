@@ -116,11 +116,11 @@ private val expectedResponse =
                         rideThroughAllowed = true,
                         maximumSpeedKph = 10,
                         stationParking = true,
-                      )
+                      ),
                     ),
                 ),
             )
-          }
+          },
       ),
   )
 

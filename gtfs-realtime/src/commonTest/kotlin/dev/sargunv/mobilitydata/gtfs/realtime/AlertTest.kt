@@ -32,7 +32,7 @@ class AlertTest {
                           ),
                         stopId = "stop-30",
                         directionId = 0,
-                      )
+                      ),
                     ),
                   cause = Alert.Cause.Construction,
                   effect = Alert.Effect.StopMoved,
@@ -43,8 +43,8 @@ class AlertTest {
                           TranslatedString.Translation(
                             text = "https://agency.example/alerts/123",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   headerText =
                     TranslatedString(
@@ -53,8 +53,8 @@ class AlertTest {
                           TranslatedString.Translation(
                             text = "Platform change at Central",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   descriptionText =
                     TranslatedString(
@@ -63,8 +63,8 @@ class AlertTest {
                           TranslatedString.Translation(
                             text = "Use platform 4 instead of platform 2.",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   ttsHeaderText =
                     TranslatedString(
@@ -73,8 +73,8 @@ class AlertTest {
                           TranslatedString.Translation(
                             text = "Platform change at Central Station",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   ttsDescriptionText =
                     TranslatedString(
@@ -83,8 +83,8 @@ class AlertTest {
                           TranslatedString.Translation(
                             text = "Use platform 4 instead of platform 2",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   severityLevel = Alert.SeverityLevel.Severe,
                   image =
@@ -95,8 +95,8 @@ class AlertTest {
                             url = "https://agency.example/images/platform-change.png",
                             mediaType = "image/png",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   imageAlternativeText =
                     TranslatedString(
@@ -105,15 +105,15 @@ class AlertTest {
                           TranslatedString.Translation(
                             text = "Map showing the temporary boarding location",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                   causeDetail =
                     TranslatedString(
                       translation =
                         listOf(
-                          TranslatedString.Translation(text = "Track maintenance", language = "en")
-                        )
+                          TranslatedString.Translation(text = "Track maintenance", language = "en"),
+                        ),
                     ),
                   effectDetail =
                     TranslatedString(
@@ -122,11 +122,11 @@ class AlertTest {
                           TranslatedString.Translation(
                             text = "Boarding moved to platform 4",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                 ),
-            )
+            ),
           ),
       )
 
@@ -155,11 +155,11 @@ class AlertTest {
                           TranslatedString.Translation(
                             text = "Track work on Route D",
                             language = "en",
-                          )
-                        )
+                          ),
+                        ),
                     ),
                 ),
-            )
+            ),
           ),
       )
 
@@ -202,7 +202,7 @@ class AlertTest {
         header = FeedHeader(gtfsRealtimeVersion = "2.0"),
         entity =
           listOf(FeedEntity(id = "special-event", alert = Alert(cause = Alert.Cause.SpecialEvent))),
-      )
+      ),
     )
   }
 }

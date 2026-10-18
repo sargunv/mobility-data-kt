@@ -15,13 +15,13 @@ import io.ktor.serialization.kotlinx.json.json
 public class GbfsV3Client internal constructor(private val httpClient: HttpClient) : AutoCloseable {
 
   public constructor(
-    block: HttpClientConfig<*>.() -> Unit = {}
+    block: HttpClientConfig<*>.() -> Unit = {},
   ) : this(
     HttpClient {
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GbfsJson) }
-    }
+    },
   )
 
   public constructor(
@@ -32,11 +32,11 @@ public class GbfsV3Client internal constructor(private val httpClient: HttpClien
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GbfsJson) }
-    }
+    },
   )
 
   internal suspend inline fun <reified T : GbfsFeedData> getFeedResponse(
-    url: Url
+    url: Url,
   ): Result<GbfsFeedResponse<T>> = suspendRunCatching {
     httpClient.get(url).body<GbfsFeedResponse<T>>()
   }
@@ -51,7 +51,7 @@ public class GbfsV3Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping the manifest response containing dataset information, or an error
    */
   public suspend fun getDatasetManifest(
-    manifestUrl: Url
+    manifestUrl: Url,
   ): Result<GbfsFeedResponse<DatasetManifest>> = getFeedResponse(manifestUrl)
 
   /**
@@ -63,7 +63,7 @@ public class GbfsV3Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping the manifest response containing available feeds, or an error
    */
   public suspend fun getServiceManifest(
-    discoveryUrl: Url
+    discoveryUrl: Url,
   ): Result<GbfsFeedResponse<ServiceManifest>> = getFeedResponse(discoveryUrl)
 
   /**

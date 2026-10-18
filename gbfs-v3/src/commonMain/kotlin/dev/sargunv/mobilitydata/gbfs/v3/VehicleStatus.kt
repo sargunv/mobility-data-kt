@@ -17,7 +17,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class VehicleStatus(
   /** Array that contains one object per vehicle that is currently not part of an active rental. */
-  public val vehicles: List<Vehicle>
+  public val vehicles: List<Vehicle>,
 ) : GbfsFeedData, List<Vehicle> by vehicles
 
 /** Represents a vehicle that is currently not part of an active rental. */
@@ -151,7 +151,7 @@ public data class Vehicle(
 @JvmInline
 public value class VehicleEquipment(
   /** The string value representing the vehicle equipment. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined vehicle equipment constants. */
   public companion object {

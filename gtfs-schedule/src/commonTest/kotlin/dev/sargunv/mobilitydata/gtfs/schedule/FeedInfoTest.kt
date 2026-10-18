@@ -21,7 +21,7 @@ private val expected =
       feedEndDate = LocalDate(2025, 12, 13),
       feedVersion = "Fall 2025, 2025-10-21T21:42:31+00:00, version D",
       feedContactEmail = "developer@mbta.com",
-    )
+    ),
   )
 
 class FeedInfoTest {

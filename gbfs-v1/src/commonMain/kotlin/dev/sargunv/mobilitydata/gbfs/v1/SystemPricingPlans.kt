@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class SystemPricingPlans(
   /** Array of pricing plans available in the system. */
-  public val plans: List<PricingPlan>
+  public val plans: List<PricingPlan>,
 ) : GbfsFeedData, List<PricingPlan> by plans
 
 /** A pricing plan for renting vehicles. */

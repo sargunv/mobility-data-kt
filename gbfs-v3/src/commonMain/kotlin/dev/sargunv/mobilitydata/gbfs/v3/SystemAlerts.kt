@@ -20,7 +20,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class SystemAlerts(
   /** Array of objects each indicating a system alert. */
-  public val alerts: List<Alert>
+  public val alerts: List<Alert>,
 ) : GbfsFeedData, List<Alert> by alerts
 
 /** An alert about changes to the system. */
@@ -73,7 +73,7 @@ public data class Alert(
 @JvmInline
 public value class AlertType(
   /** The string value representing the alert type. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined alert type constants. */
   public companion object {

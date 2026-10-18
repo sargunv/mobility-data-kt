@@ -141,7 +141,7 @@ class DecimalOracleTest {
             1 -> Long.MIN_VALUE
             2 -> Long.MAX_VALUE - random.nextLong(0L, 1_000L)
             else -> Long.MIN_VALUE + random.nextLong(0L, 1_000L)
-          }
+          },
         )
       else -> Decimal.fromScaled(random.nextLong())
     }

@@ -18,7 +18,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class FreeBikeStatus(
   /** Array that contains one object per vehicle that is currently not part of an active rental. */
-  public val bikes: List<Bike>
+  public val bikes: List<Bike>,
 ) : GbfsFeedData, List<Bike> by bikes
 
 /** Represents a vehicle that is currently not part of an active rental. */
@@ -152,7 +152,7 @@ public data class Bike(
 @JvmInline
 public value class VehicleEquipment(
   /** The string value representing the vehicle equipment. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined vehicle equipment constants. */
   public companion object {

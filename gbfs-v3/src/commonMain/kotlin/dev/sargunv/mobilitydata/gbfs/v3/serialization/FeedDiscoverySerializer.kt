@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 
 internal object FeedDiscoverySerializer :
   MapAsListSerializer<FeedDiscoverySerializer.FeedDiscoveryEntry, FeedType, Url>(
-    FeedDiscoveryEntry.serializer()
+    FeedDiscoveryEntry.serializer(),
   ) {
 
   override fun Map.Entry<FeedType, Url>.toDelegate(): FeedDiscoveryEntry =

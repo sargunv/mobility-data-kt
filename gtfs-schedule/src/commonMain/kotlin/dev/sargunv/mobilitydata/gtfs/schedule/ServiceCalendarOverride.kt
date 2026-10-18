@@ -28,7 +28,7 @@ public data class ServiceCalendarOverride(
 public value class OverrideType
 private constructor(
   /** The integer value representing the exception type. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined exception type constants. */
   public companion object Companion {

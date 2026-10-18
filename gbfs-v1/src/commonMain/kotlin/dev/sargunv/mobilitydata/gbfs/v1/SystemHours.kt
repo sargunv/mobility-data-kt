@@ -15,7 +15,7 @@ public data class SystemHours(
    * The array MUST contain a minimum of one object identifying hours for every day of the week or a
    * maximum of two for each day of the week (one for each user type).
    */
-  @SerialName("rental_hours") public val rentalHours: List<SystemHoursEntry>
+  @SerialName("rental_hours") public val rentalHours: List<SystemHoursEntry>,
 ) : GbfsFeedData, List<SystemHoursEntry> by rentalHours
 
 /** Hours of operation for specific user types and days of the week. */
@@ -54,7 +54,7 @@ public data class SystemHoursEntry(
 @JvmInline
 public value class UserType(
   /** The string value representing the user type. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined user type constants. */
   public companion object {

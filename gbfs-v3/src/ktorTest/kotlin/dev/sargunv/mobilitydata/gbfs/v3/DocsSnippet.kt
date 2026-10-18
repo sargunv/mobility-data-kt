@@ -12,7 +12,7 @@ class DocsSnippet {
       val service =
         gbfs
           .getServiceManifest( // (2)!
-            discoveryUrl = "https://locomotion.app/api/gbfs/3.0/montreal/gbfs"
+            discoveryUrl = "https://locomotion.app/api/gbfs/3.0/montreal/gbfs",
           )
           .getOrThrow()
           .data

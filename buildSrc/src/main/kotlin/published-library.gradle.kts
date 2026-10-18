@@ -18,7 +18,7 @@ kotlin {
   compilerOptions {
     freeCompilerArgs.add(
       // Will be the default soon: https://youtrack.jetbrains.com/issue/KT-11914
-      "-Xconsistent-data-class-copy-visibility"
+      "-Xconsistent-data-class-copy-visibility",
     )
   }
   @OptIn(ExperimentalAbiValidation::class) abiValidation()
@@ -47,7 +47,7 @@ dokka {
         create("osm-opening-hours") {
           url("https://westnordost.github.io/osm-opening-hours/")
           packageListUrl(
-            "https://westnordost.github.io/osm-opening-hours/-o-s-m%20-opening%20-hours/package-list"
+            "https://westnordost.github.io/osm-opening-hours/-o-s-m%20-opening%20-hours/package-list",
           )
         }
       }

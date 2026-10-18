@@ -78,7 +78,7 @@ private val expectedResponse30 =
                   VersionInfo(version = "3.0", url = "https://paris.example.com/gbfs/3/gbfs"),
                 ),
             ),
-          )
+          ),
       ),
   )
 
@@ -137,7 +137,7 @@ private val expectedResponse31 =
                   VersionInfo(
                     version = "3.1-RC",
                     url = "https://berlin.example.com/gbfs/3.1-RC/gbfs",
-                  )
+                  ),
                 ),
               area =
                 MultiPolygon(
@@ -150,13 +150,13 @@ private val expectedResponse31 =
                           Position(13.48451, 52.43458),
                           Position(13.08165, 52.38793),
                           Position(13.10821, 52.58563),
-                        )
-                      )
-                    )
+                        ),
+                      ),
+                    ),
                 ),
               countryCode = "DE",
-            )
-          )
+            ),
+          ),
       ),
   )
 

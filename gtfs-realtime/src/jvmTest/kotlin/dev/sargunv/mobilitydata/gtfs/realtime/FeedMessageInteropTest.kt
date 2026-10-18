@@ -14,7 +14,7 @@ class FeedMessageInteropTest {
             .setGtfsRealtimeVersion("2.0")
             .setTimestamp(1_744_470_400)
             .setIncrementality(GtfsRealtime.FeedHeader.Incrementality.FULL_DATASET)
-            .build()
+            .build(),
         )
         .addEntity(
           GtfsRealtime.FeedEntity.newBuilder()
@@ -26,13 +26,13 @@ class FeedMessageInteropTest {
                     .setTripId("trip-1")
                     .setRouteId("route-a")
                     .setStartDate("20260412")
-                    .build()
+                    .build(),
                 )
                 .setVehicle(
                   GtfsRealtime.VehicleDescriptor.newBuilder()
                     .setId("vehicle-7")
                     .setLabel("Train 7")
-                    .build()
+                    .build(),
                 )
                 .addStopTimeUpdate(
                   GtfsRealtime.TripUpdate.StopTimeUpdate.newBuilder()
@@ -42,24 +42,24 @@ class FeedMessageInteropTest {
                       GtfsRealtime.TripUpdate.StopTimeEvent.newBuilder()
                         .setDelay(45)
                         .setTime(1_744_470_445)
-                        .build()
+                        .build(),
                     )
                     .setDeparture(
                       GtfsRealtime.TripUpdate.StopTimeEvent.newBuilder()
                         .setDelay(60)
                         .setTime(1_744_470_460)
-                        .build()
+                        .build(),
                     )
                     .setScheduleRelationship(
-                      GtfsRealtime.TripUpdate.StopTimeUpdate.ScheduleRelationship.SCHEDULED
+                      GtfsRealtime.TripUpdate.StopTimeUpdate.ScheduleRelationship.SCHEDULED,
                     )
-                    .build()
+                    .build(),
                 )
                 .setTimestamp(1_744_470_400)
                 .setDelay(45)
-                .build()
+                .build(),
             )
-            .build()
+            .build(),
         )
         .addEntity(
           GtfsRealtime.FeedEntity.newBuilder()
@@ -70,29 +70,29 @@ class FeedMessageInteropTest {
                   GtfsRealtime.TripDescriptor.newBuilder()
                     .setTripId("trip-1")
                     .setRouteId("route-a")
-                    .build()
+                    .build(),
                 )
                 .setVehicle(
                   GtfsRealtime.VehicleDescriptor.newBuilder()
                     .setId("vehicle-7")
                     .setLabel("Train 7")
-                    .build()
+                    .build(),
                 )
                 .setPosition(
                   GtfsRealtime.Position.newBuilder()
                     .setLatitude(47.6097F)
                     .setLongitude(-122.3331F)
                     .setSpeed(11.5F)
-                    .build()
+                    .build(),
                 )
                 .setCurrentStopSequence(3)
                 .setStopId("stop-3")
                 .setCurrentStatus(GtfsRealtime.VehiclePosition.VehicleStopStatus.STOPPED_AT)
                 .setTimestamp(1_744_470_405)
                 .setOccupancyStatus(GtfsRealtime.VehiclePosition.OccupancyStatus.FULL)
-                .build()
+                .build(),
             )
-            .build()
+            .build(),
         )
         .addEntity(
           GtfsRealtime.FeedEntity.newBuilder()
@@ -100,7 +100,7 @@ class FeedMessageInteropTest {
             .setAlert(
               GtfsRealtime.Alert.newBuilder()
                 .addInformedEntity(
-                  GtfsRealtime.EntitySelector.newBuilder().setRouteId("route-a").build()
+                  GtfsRealtime.EntitySelector.newBuilder().setRouteId("route-a").build(),
                 )
                 .setCause(GtfsRealtime.Alert.Cause.WEATHER)
                 .setEffect(GtfsRealtime.Alert.Effect.DETOUR)
@@ -110,14 +110,14 @@ class FeedMessageInteropTest {
                       GtfsRealtime.TranslatedString.Translation.newBuilder()
                         .setText("Detour on Route A")
                         .setLanguage("en")
-                        .build()
+                        .build(),
                     )
-                    .build()
+                    .build(),
                 )
                 .setSeverityLevel(GtfsRealtime.Alert.SeverityLevel.WARNING)
-                .build()
+                .build(),
             )
-            .build()
+            .build(),
         )
         .build()
 

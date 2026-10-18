@@ -59,7 +59,7 @@ public data class Pathway(
 public value class PathwayMode
 private constructor(
   /** The integer value representing the pathway mode. */
-  public val value: Int
+  public val value: Int,
 ) {
   /** Companion object containing predefined pathway mode constants. */
   public companion object {

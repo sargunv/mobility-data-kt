@@ -11,7 +11,7 @@ class DocsSnippet {
       val manifest =
         gofs
           .getSystemManifest( // (2)!
-            discoveryUrl = "<discovery url>"
+            discoveryUrl = "<discovery url>",
           )
           .getOrThrow()
           .data

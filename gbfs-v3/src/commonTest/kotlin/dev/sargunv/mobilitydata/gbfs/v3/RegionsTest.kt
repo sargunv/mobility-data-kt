@@ -73,7 +73,7 @@ private val expectedResponse =
             Region(regionId = "4", name = mapOf("en" to "East")),
             Region(regionId = "5", name = mapOf("en" to "South")),
             Region(regionId = "6", name = mapOf("en" to "West")),
-          )
+          ),
       ),
   )
 

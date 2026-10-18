@@ -18,7 +18,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class VehicleAvailability(
   /** Array that contains one object per vehicle. */
-  public val vehicles: List<VehicleAvailabilityEntry>
+  public val vehicles: List<VehicleAvailabilityEntry>,
 ) : GbfsFeedData, List<VehicleAvailabilityEntry> by vehicles
 
 /** A vehicle and the time slots during which it is available. */

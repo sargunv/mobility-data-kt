@@ -15,20 +15,20 @@ class EnumInteropTest {
       GtfsRealtime.FeedMessage.newBuilder()
         .setHeader(GtfsRealtime.FeedHeader.newBuilder().setGtfsRealtimeVersion("2.0").build())
         .addEntity(
-          GtfsRealtime.FeedEntity.newBuilder().setId("e1").setTripUpdate(builder.build()).build()
+          GtfsRealtime.FeedEntity.newBuilder().setId("e1").setTripUpdate(builder.build()).build(),
         )
         .build()
     return GtfsRealtimeProto.decodeFeedMessage(feed.toByteArray()).entity.single().tripUpdate!!
   }
 
   private fun decodeVehiclePosition(
-    builder: GtfsRealtime.VehiclePosition.Builder
+    builder: GtfsRealtime.VehiclePosition.Builder,
   ): VehiclePosition {
     val feed =
       GtfsRealtime.FeedMessage.newBuilder()
         .setHeader(GtfsRealtime.FeedHeader.newBuilder().setGtfsRealtimeVersion("2.0").build())
         .addEntity(
-          GtfsRealtime.FeedEntity.newBuilder().setId("e1").setVehicle(builder.build()).build()
+          GtfsRealtime.FeedEntity.newBuilder().setId("e1").setVehicle(builder.build()).build(),
         )
         .build()
     return GtfsRealtimeProto.decodeFeedMessage(feed.toByteArray()).entity.single().vehicle!!
@@ -39,7 +39,7 @@ class EnumInteropTest {
       GtfsRealtime.FeedMessage.newBuilder()
         .setHeader(GtfsRealtime.FeedHeader.newBuilder().setGtfsRealtimeVersion("2.0").build())
         .addEntity(
-          GtfsRealtime.FeedEntity.newBuilder().setId("e1").setAlert(builder.build()).build()
+          GtfsRealtime.FeedEntity.newBuilder().setId("e1").setAlert(builder.build()).build(),
         )
         .build()
     return GtfsRealtimeProto.decodeFeedMessage(feed.toByteArray()).entity.single().alert!!
@@ -64,8 +64,8 @@ class EnumInteropTest {
         decodeTripUpdate(
           GtfsRealtime.TripUpdate.newBuilder()
             .setTrip(
-              GtfsRealtime.TripDescriptor.newBuilder().setScheduleRelationship(official).build()
-            )
+              GtfsRealtime.TripDescriptor.newBuilder().setScheduleRelationship(official).build(),
+            ),
         )
       assertEquals(expected, tripUpdate.trip.scheduleRelationship, "Mismatch for $official")
     }
@@ -76,7 +76,7 @@ class EnumInteropTest {
     val absent =
       decodeTripUpdate(
         GtfsRealtime.TripUpdate.newBuilder()
-          .setTrip(GtfsRealtime.TripDescriptor.newBuilder().setTripId("t1").build())
+          .setTrip(GtfsRealtime.TripDescriptor.newBuilder().setTripId("t1").build()),
       )
     assertEquals(null, absent.trip.scheduleRelationship)
 
@@ -87,8 +87,8 @@ class EnumInteropTest {
             GtfsRealtime.TripDescriptor.newBuilder()
               .setTripId("t1")
               .setScheduleRelationship(GtfsRealtime.TripDescriptor.ScheduleRelationship.SCHEDULED)
-              .build()
-          )
+              .build(),
+          ),
       )
     assertEquals(
       TripDescriptor.ScheduleRelationship.Scheduled,
@@ -118,7 +118,7 @@ class EnumInteropTest {
         TripDescriptor(
           tripId = "t1",
           scheduleRelationship = TripDescriptor.ScheduleRelationship.Scheduled,
-        )
+        ),
       )
     assertEquals(true, scheduled.hasScheduleRelationship())
     assertEquals(
@@ -149,8 +149,8 @@ class EnumInteropTest {
             .addStopTimeUpdate(
               GtfsRealtime.TripUpdate.StopTimeUpdate.newBuilder()
                 .setScheduleRelationship(official)
-                .build()
-            )
+                .build(),
+            ),
         )
       assertEquals(
         expected,
@@ -198,7 +198,7 @@ class EnumInteropTest {
     mapping.forEach { (official, expected) ->
       val vp =
         decodeVehiclePosition(
-          GtfsRealtime.VehiclePosition.newBuilder().setCongestionLevel(official)
+          GtfsRealtime.VehiclePosition.newBuilder().setCongestionLevel(official),
         )
       assertEquals(expected, vp.congestionLevel, "Mismatch for $official")
     }
@@ -229,7 +229,7 @@ class EnumInteropTest {
     mapping.forEach { (official, expected) ->
       val vp =
         decodeVehiclePosition(
-          GtfsRealtime.VehiclePosition.newBuilder().setOccupancyStatus(official)
+          GtfsRealtime.VehiclePosition.newBuilder().setOccupancyStatus(official),
         )
       assertEquals(expected, vp.occupancyStatus, "Mismatch for $official")
     }
@@ -316,7 +316,7 @@ class EnumInteropTest {
             GtfsRealtime.FeedHeader.newBuilder()
               .setGtfsRealtimeVersion("2.0")
               .setIncrementality(official)
-              .build()
+              .build(),
           )
           .build()
       val decoded = GtfsRealtimeProto.decodeFeedMessage(feed.toByteArray())

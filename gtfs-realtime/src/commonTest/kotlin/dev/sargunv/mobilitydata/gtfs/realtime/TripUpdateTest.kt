@@ -67,7 +67,7 @@ class TripUpdateTest {
                               TripUpdate.StopTimeUpdate.StopTimeProperties.DropOffPickupType
                                 .CoordinateWithDriver,
                           ),
-                      )
+                      ),
                     ),
                   timestamp = 1_744_556_700,
                   delay = -30,
@@ -81,7 +81,7 @@ class TripUpdateTest {
                       tripShortName = "DX",
                     ),
                 ),
-            )
+            ),
           ),
       )
 
@@ -98,7 +98,7 @@ class TripUpdateTest {
             FeedEntity(
               id = "absent",
               tripUpdate = TripUpdate(trip = TripDescriptor(tripId = "trip-absent")),
-            )
+            ),
           ),
       )
     assertFeedRoundTrips(absentFeed)
@@ -117,9 +117,9 @@ class TripUpdateTest {
                     TripDescriptor(
                       tripId = "trip-scheduled",
                       scheduleRelationship = TripDescriptor.ScheduleRelationship.Scheduled,
-                    )
+                    ),
                 ),
-            )
+            ),
           ),
       )
     assertFeedRoundTrips(scheduledFeed)

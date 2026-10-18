@@ -12,7 +12,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class FreeBikeStatus(
   /** Array that contains one object per vehicle that is currently not part of an active rental. */
-  public val bikes: List<Bike>
+  public val bikes: List<Bike>,
 ) : GbfsFeedData, List<Bike> by bikes
 
 /** Represents a vehicle that is currently not part of an active rental. */

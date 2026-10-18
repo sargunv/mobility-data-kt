@@ -16,13 +16,13 @@ import io.ktor.serialization.kotlinx.json.json
 public class GofsV1Client internal constructor(private val httpClient: HttpClient) : AutoCloseable {
 
   public constructor(
-    block: HttpClientConfig<*>.() -> Unit = {}
+    block: HttpClientConfig<*>.() -> Unit = {},
   ) : this(
     HttpClient {
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GofsJson) }
-    }
+    },
   )
 
   public constructor(
@@ -33,17 +33,17 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
       block()
       expectSuccess = true
       install(ContentNegotiation) { json(GofsJson) }
-    }
+    },
   )
 
   internal suspend inline fun <reified T : GofsFeedData> getFeedResponse(
-    url: Url
+    url: Url,
   ): Result<GofsFeedResponse<T>> = suspendRunCatching {
     httpClient.get(url).body<GofsFeedResponse<T>>()
   }
 
   internal suspend inline fun <reified T : GofsFeedData> getFeedResponse(
-    url: KtorUrl
+    url: KtorUrl,
   ): Result<GofsFeedResponse<T>> = suspendRunCatching {
     httpClient.get(url).body<GofsFeedResponse<T>>()
   }
@@ -57,7 +57,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
    * @return Result wrapping the manifest response containing available feeds, or an error
    */
   public suspend fun getSystemManifest(
-    discoveryUrl: Url
+    discoveryUrl: Url,
   ): Result<GofsFeedResponse<SystemManifest>> = getFeedResponse(discoveryUrl)
 
   /**
@@ -177,7 +177,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
     brandIds: List<String> = emptyList(),
   ): Result<GofsFeedResponse<WaitTimes>> {
     require(
-      dropOffLat == null && dropOffLon == null || (dropOffLat != null && dropOffLon != null)
+      dropOffLat == null && dropOffLon == null || (dropOffLat != null && dropOffLon != null),
     ) {
       "Both dropOffLat and dropOffLon must be provided together"
     }
@@ -243,7 +243,7 @@ public class GofsV1Client internal constructor(private val httpClient: HttpClien
     dropOffAddress: String? = null,
   ): Result<GofsFeedResponse<RealtimeBookings>> {
     require(
-      dropOffLat == null && dropOffLon == null || (dropOffLat != null && dropOffLon != null)
+      dropOffLat == null && dropOffLon == null || (dropOffLat != null && dropOffLon != null),
     ) {
       "Both dropOffLat and dropOffLon must be provided together"
     }

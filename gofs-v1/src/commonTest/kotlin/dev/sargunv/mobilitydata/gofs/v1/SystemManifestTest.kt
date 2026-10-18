@@ -118,7 +118,7 @@ class SystemManifestTest {
         version = "1.0",
         data =
           SystemManifest(
-            "en" to Service(FeedType.WaitTimes to "https://www.example.com/gofs/1/en/wait_time")
+            "en" to Service(FeedType.WaitTimes to "https://www.example.com/gofs/1/en/wait_time"),
           ),
       )
 
@@ -143,7 +143,7 @@ class SystemManifestTest {
           }
         }
         """
-          .trimIndent()
+          .trimIndent(),
       )
     assertEquals(expected, encoded)
   }

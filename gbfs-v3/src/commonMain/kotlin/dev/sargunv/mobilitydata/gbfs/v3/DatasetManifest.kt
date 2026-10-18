@@ -14,7 +14,7 @@ import org.maplibre.spatialk.geojson.MultiPolygon
 @Serializable
 public data class DatasetManifest(
   /** An array of datasets produced by a publisher. */
-  public val datasets: List<Dataset>
+  public val datasets: List<Dataset>,
 ) : GbfsFeedData, List<Dataset> by datasets
 
 /**

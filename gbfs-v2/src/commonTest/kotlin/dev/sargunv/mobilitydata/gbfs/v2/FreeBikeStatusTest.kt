@@ -86,7 +86,7 @@ private val carshareExpectedResponse =
               homeStationId = "146",
               vehicleEquipment = listOf(VehicleEquipment.ChildSeatA),
             ),
-          )
+          ),
       ),
   )
 
@@ -163,7 +163,7 @@ private val micromobilityExpectedResponse =
               stationId = "86",
               pricingPlanId = "plan3",
             ),
-          )
+          ),
       ),
   )
 

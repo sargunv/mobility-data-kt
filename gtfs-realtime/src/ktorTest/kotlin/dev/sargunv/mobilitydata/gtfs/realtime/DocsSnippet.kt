@@ -12,7 +12,7 @@ class DocsSnippet {
       val feed =
         gtfsRt
           .getFeedMessage( // (2)!
-            feedUrl = "https://gtfsr.tri-rail.com/download.aspx?file=trip_updates.pb"
+            feedUrl = "https://gtfsr.tri-rail.com/download.aspx?file=trip_updates.pb",
           )
           .getOrThrow()
 

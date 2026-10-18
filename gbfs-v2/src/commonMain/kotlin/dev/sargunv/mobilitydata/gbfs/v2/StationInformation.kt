@@ -17,7 +17,7 @@ import org.maplibre.spatialk.geojson.MultiPolygon
 @Serializable
 public data class StationInformation(
   /** Array that contains one object per station. */
-  public val stations: List<Station>
+  public val stations: List<Station>,
 ) : GbfsFeedData, List<Station> by stations
 
 /** Information about a single station. */
@@ -162,7 +162,7 @@ public data class Station(
 @JvmInline
 public value class RentalMethod(
   /** The string value representing the rental method. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined rental method constants. */
   public companion object {
@@ -197,7 +197,7 @@ public value class RentalMethod(
 @JvmInline
 public value class ParkingType(
   /** The string value representing the parking type. */
-  public val value: String
+  public val value: String,
 ) {
   /** Companion object containing predefined parking type constants. */
   public companion object {

@@ -39,8 +39,8 @@ private val expectedResponse =
       StationInformation(
         stations =
           listOf(
-            Station(stationId = "pga", name = "Parking garage A", lat = 12.345678, lon = 45.678901)
-          )
+            Station(stationId = "pga", name = "Parking garage A", lat = 12.345678, lon = 45.678901),
+          ),
       ),
   )
 

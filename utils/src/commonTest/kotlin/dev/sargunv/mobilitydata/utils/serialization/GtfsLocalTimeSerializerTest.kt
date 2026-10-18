@@ -12,7 +12,7 @@ import kotlinx.serialization.json.jsonPrimitive
 class GtfsLocalTimeSerializerTest {
   @Serializable
   private data class TestData(
-    @Serializable(with = GtfsLocalTimeSerializer::class) val time: GtfsLocalTime
+    @Serializable(with = GtfsLocalTimeSerializer::class) val time: GtfsLocalTime,
   )
 
   private val json = Json
