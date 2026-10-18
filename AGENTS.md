@@ -18,8 +18,8 @@ GBFS, and GOFS). Each module is a distinct library published to Maven Central.
 
 Tooling is managed by [mise](https://mise.jdx.dev). Install mise, then run `mise install` to install
 the pinned tools (Java, dprint, hk, ktfmt, git-lfs) and set up the git hooks. The Git-LFS sample
-datasets used by tests are fetched automatically by a `mise deps` provider before the first
-`mise run`/`mise exec`; run `mise deps` to fetch them on demand.
+datasets used by tests are fetched automatically by a `mise deps` provider before the first `mise
+run`/`mise exec`; run `mise deps` to fetch them on demand.
 
 ```bash
 # Install/refresh all tools and git hooks
