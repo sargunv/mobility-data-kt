@@ -21,7 +21,7 @@ postinstall = ["hk install --mise"]
 
 # For tooling outside Gradle (also provides npm for the npm: backend below);
 # Kotlin/JS brings its own Node via Gradle.
-"core:node" = "24.22.0"
+"core:node" = "26.12.0"
 "npm:actions-up" = "1.21.0"
 
 # The CLI only; Xcode itself is installed via the xcode:* tasks. macOS-only.
