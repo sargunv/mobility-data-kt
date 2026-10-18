@@ -1,6 +1,7 @@
 .idea
 .gradle
 .kotlin
+.mise/locks
 /local.properties
 **/build
 
