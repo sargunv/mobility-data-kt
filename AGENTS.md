@@ -52,8 +52,9 @@ mise run docs
 ```
 
 Formatters and linters run automatically on pre-commit via [hk](https://hk.jdx.dev); you usually
-don't need to run them manually. The environment is managed by mise, so run any tool that isn't
-already a mise task with `mise exec -- <command>`.
+don't need to run them manually. `hk fix [FILES...]` targets specific files; add `--stage` to stage
+the fixes. The environment is managed by mise, so run any tool that isn't already a mise task with
+`mise exec -- <command>`.
 
 ## Project invariants
 
