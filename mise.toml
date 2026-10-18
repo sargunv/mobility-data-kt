@@ -14,7 +14,6 @@ postinstall = ["hk install --mise"]
 "core:java" = "openjdk-25.0.2"
 "aqua:dprint/dprint" = "0.63.0"
 "aqua:jdx/hk" = "2.6.0"
-"aqua:apple/pkl" = "0.32.1"
 "aqua:facebook/ktfmt" = "0.65"
 "core:python" = "3.15"
 "aqua:git-lfs/git-lfs" = "3.8.0"

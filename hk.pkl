@@ -5,7 +5,8 @@ import "package://github.com/jdx/hk/releases/download/v2.6.0/hk@2.6.0#/Builtins.
 // Git-LFS fixtures. dprint.json already skips them; keep hk from matching them via dprint's **/* glob.
 exclude = List("sample-data")
 
-local allSteps = new Mapping<String, Step> {
+// Shared by the pre-commit, check, and fix hooks hk derives from this map.
+steps {
   // formatters
   ["dprint"] = (Builtins.dprint) { exclude = List("sample-data") }
 
@@ -28,26 +29,5 @@ local allSteps = new Mapping<String, Step> {
     check = "./gradlew checkKotlinAbi"
     fix = "./gradlew updateKotlinAbi"
     exclusive = true
-  }
-}
-
-hooks {
-  ["pre-commit"] {
-    fix = true
-    stash = "git"
-    steps {
-      ...allSteps
-    }
-  }
-  ["check"] {
-    steps {
-      ...allSteps
-    }
-  }
-  ["fix"] {
-    fix = true
-    steps {
-      ...allSteps
-    }
   }
 }
