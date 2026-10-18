@@ -25,7 +25,7 @@ postinstall = ["hk install --mise"]
 "npm:actions-up" = "1.18.0"
 
 # The CLI only; Xcode itself is installed via the xcode:* tasks. macOS-only.
-"aqua:XcodesOrg/xcodes" = { version = "1.6.2", os = ["macos"] }
+"aqua:XcodesOrg/xcodes" = { version = "2.1.0", os = ["macos"] }
 
 [deps.git-lfs]
 auto = true

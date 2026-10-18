@@ -3,19 +3,19 @@
 lockfile_version = 1
 
 [[tools."aqua:XcodesOrg/xcodes"]]
-version = "1.6.2"
+version = "2.1.0"
 backend = "aqua:XcodesOrg/xcodes"
-specifiers = ["1.6.2"]
+specifiers = ["2.1.0"]
 
 [tools."aqua:XcodesOrg/xcodes"."platforms.macos-arm64"]
-checksum = "sha256:32819bc113e7c9bd8f80be7763d91238b199d589c777a0e88652d7fb9d30e707"
-url = "https://github.com/XcodesOrg/xcodes/releases/download/1.6.2/xcodes.zip"
-url_api = "https://api.github.com/repos/XcodesOrg/xcodes/releases/assets/262805225"
+checksum = "sha256:f1519afe934a513e85dd9b32fc872394becbbb6a41db15d9ac3926a09a891888"
+url = "https://github.com/XcodesOrg/xcodes/releases/download/2.1.0/xcodes.zip"
+url_api = "https://api.github.com/repos/XcodesOrg/xcodes/releases/assets/563562943"
 
 [tools."aqua:XcodesOrg/xcodes"."platforms.macos-x64"]
-checksum = "sha256:32819bc113e7c9bd8f80be7763d91238b199d589c777a0e88652d7fb9d30e707"
-url = "https://github.com/XcodesOrg/xcodes/releases/download/1.6.2/xcodes.zip"
-url_api = "https://api.github.com/repos/XcodesOrg/xcodes/releases/assets/262805225"
+checksum = "sha256:f1519afe934a513e85dd9b32fc872394becbbb6a41db15d9ac3926a09a891888"
+url = "https://github.com/XcodesOrg/xcodes/releases/download/2.1.0/xcodes.zip"
+url_api = "https://api.github.com/repos/XcodesOrg/xcodes/releases/assets/563562943"
 
 [[tools."aqua:apple/pkl"]]
 version = "0.30.2"
