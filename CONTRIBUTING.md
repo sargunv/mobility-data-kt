@@ -7,8 +7,8 @@ the repo root install all required tools:
 mise install
 ```
 
-This installs the pinned versions of Java, dprint, hk, pkl, ktfmt, and Git-LFS, and runs
-`hk install --mise` to set up the pre-commit hook.
+This installs the pinned versions of Java, dprint, hk, pkl, ktfmt, and Git-LFS, and runs `hk install
+--mise` to set up the pre-commit hook.
 
 ## Git-LFS
 
