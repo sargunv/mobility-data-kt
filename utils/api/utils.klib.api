@@ -206,7 +206,9 @@ final object dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer :
     final fun serialize(kotlinx.serialization.encoding/Encoder, kotlin/Boolean) // dev.sargunv.mobilitydata.utils.serialization/IntBooleanSerializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;kotlin.Boolean){}[0]
 }
 
-final object dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer : kotlinx.datetime.serializers/FormattedLocalDateSerializer // dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer|null[0]
+final object dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer : kotlinx.datetime.serializers/FormattedLocalDateSerializer { // dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer|null[0]
+    final fun deserialize(kotlinx.serialization.encoding/Decoder): kotlinx.datetime/LocalDate // dev.sargunv.mobilitydata.utils.serialization/IsoBasicLocalDateSerializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+}
 
 final object dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer : dev.sargunv.mobilitydata.utils.serialization/MapAsListSerializer<dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry, kotlin/String, kotlin/String> { // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer|null[0]
     final class LocalizedTextEntry : kotlin.collections/Map.Entry<kotlin/String, kotlin/String> { // dev.sargunv.mobilitydata.utils.serialization/LocalizedTextSerializer.LocalizedTextEntry|null[0]
