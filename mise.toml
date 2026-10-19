@@ -97,7 +97,9 @@ run = '.mise/bin/version-args "$usage_mode"'
 [tasks."update:gtfs-realtime:fixtures"]
 description = "Refresh checked-in GTFS Realtime protobuf fixtures from public feeds"
 run = """
-mkdir -p sample-data/gtfs-realtime/sound-transit sample-data/gtfs-realtime/tri-rail
+mkdir -p sample-data/gtfs-realtime/sound-transit sample-data/gtfs-realtime/tri-rail \
+  sample-data/gtfs-realtime/mbta sample-data/gtfs-realtime/king-county-metro \
+  sample-data/gtfs-realtime/nyct
 
 curl -fsSL https://s3.amazonaws.com/st-service-alerts-prod/alerts.pb \
   -o sample-data/gtfs-realtime/sound-transit/alerts.pb
@@ -108,7 +110,26 @@ curl -fsSL 'https://gtfsr.tri-rail.com/download.aspx?file=position_updates.pb' \
   -o sample-data/gtfs-realtime/tri-rail/vehicle_positions.pb
 curl -fsSL 'https://gtfsr.tri-rail.com/download.aspx?file=alerts.pb' \
   -o sample-data/gtfs-realtime/tri-rail/alerts.pb
+
+curl -fsSL https://cdn.mbta.com/realtime/TripUpdates.pb \
+  -o sample-data/gtfs-realtime/mbta/trip_updates.pb
+curl -fsSL https://cdn.mbta.com/realtime/VehiclePositions.pb \
+  -o sample-data/gtfs-realtime/mbta/vehicle_positions.pb
+curl -fsSL https://cdn.mbta.com/realtime/Alerts.pb \
+  -o sample-data/gtfs-realtime/mbta/alerts.pb
+
+curl -fsSL https://s3.amazonaws.com/kcm-alerts-realtime-prod/tripupdates.pb \
+  -o sample-data/gtfs-realtime/king-county-metro/trip_updates.pb
+curl -fsSL https://s3.amazonaws.com/kcm-alerts-realtime-prod/vehiclepositions.pb \
+  -o sample-data/gtfs-realtime/king-county-metro/vehicle_positions.pb
+
+curl -fsSL 'https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-ace' \
+  -o sample-data/gtfs-realtime/nyct/ace.pb
 """
+
+[tasks.bench]
+description = "Run JMH benchmarks; arguments go to JMH, e.g. `mise run bench -prof gc Realtime`"
+run = "./gradlew :benchmarks:jmhJar && java -jar benchmarks/build/libs/benchmarks-jmh.jar"
 
 [tasks.actions-up]
 description = "Update and pin GitHub Actions steps."

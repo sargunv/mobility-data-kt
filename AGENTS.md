@@ -11,7 +11,8 @@ GBFS, and GOFS). Each module is a distinct library published to Maven Central.
 - `gtfs-schedule` — GTFS Schedule (static) support
 - `gtfs-realtime` — GTFS Realtime protobuf types (see invariants below)
 - `mdb-v1` — Mobility Database Catalog API client (pinned OpenAPI in `mdb-v1/specs`)
-- `sample-data` — Git-LFS-tracked feed fixtures used by tests
+- `sample-data` — Git-LFS-tracked feed fixtures used by tests and benchmarks
+- `benchmarks` — JMH benchmarks over `sample-data` (not published)
 - `docs` — MkDocs documentation site
 
 ## Dev tool commands
@@ -46,6 +47,9 @@ mise run fix
 
 # Run a single test
 mise exec -- ./gradlew :module:jvmTest --tests "*SomeTest*"
+
+# Run JMH benchmarks (arguments go to JMH, e.g. `-prof gc GtfsRealtime`)
+mise run bench
 
 # Serve the documentation site locally
 mise run docs

@@ -17,6 +17,8 @@ ktor = "3.6.0"
 joda-timezone = "2.25.2"
 kotlin-dsv = "0.7.0"
 gtfs-realtime-bindings = "0.2.0"
+jmh = "1.37"
+champeau-jmh = "0.7.3"
 
 [libraries]
 kotlin-dsv = { module = "dev.sargunv.kotlin-dsv:kotlin-dsv", version.ref = "kotlin-dsv" }
@@ -45,4 +47,5 @@ gradle-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref
 gradle-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "vanniktech-publish" }
 gradle-kover = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version.ref = "kotlinx-kover" }
 gradle-mkdocs-build = { module = "ru.vyarus.mkdocs-build:ru.vyarus.mkdocs-build.gradle.plugin", version.ref = "mkdocs-build" }
+gradle-jmh = { module = "me.champeau.jmh:jmh-gradle-plugin", version.ref = "champeau-jmh" }
 gradle-detekt = { module = "dev.detekt:dev.detekt.gradle.plugin", version.ref = "detekt" }

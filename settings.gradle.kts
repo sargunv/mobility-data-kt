@@ -18,4 +18,5 @@ include(
   ":gtfs-schedule",
   ":gtfs-realtime",
   ":mdb-v1",
+  ":benchmarks",
 )
