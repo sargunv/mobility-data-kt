@@ -19,12 +19,30 @@ private const val START_GROUP = 3
 private const val END_GROUP = 4
 private const val FIXED32 = 5
 
-internal class ProtoMessageSchema(val fields: Map<Int, ProtoFieldSchema>)
+internal class ProtoMessageSchema(val fields: Map<Int, ProtoFieldSchema>) {
+  private val byNumber =
+    arrayOfNulls<ProtoFieldSchema>((fields.keys.maxOrNull() ?: -1) + 1).also {
+      for ((number, field) in fields) it[number] = field
+    }
+
+  fun field(number: Int): ProtoFieldSchema? = byNumber.getOrNull(number)
+}
 
 internal sealed class ProtoFieldSchema(val wireTypes: Set<Int>) {
+  private val wireTypeMask = wireTypes.fold(0) { mask, wireType -> mask or (1 shl wireType) }
+
+  fun accepts(wireType: Int): Boolean = wireTypeMask and (1 shl wireType) != 0
+
   class Scalar(wireTypes: Set<Int>) : ProtoFieldSchema(wireTypes)
 
-  class Enum(val numbers: Set<Int>) : ProtoFieldSchema(setOf(VARINT))
+  class Enum(val numbers: Set<Int>) : ProtoFieldSchema(setOf(VARINT)) {
+    private val known =
+      BooleanArray((numbers.maxOrNull() ?: -1) + 1).also {
+        for (number in numbers) it[number] = true
+      }
+
+    fun isKnown(number: Int): Boolean = known.getOrElse(number) { false }
+  }
 
   class Message(val schema: ProtoMessageSchema) : ProtoFieldSchema(setOf(LEN))
 }
@@ -34,25 +52,65 @@ internal sealed class ProtoFieldSchema(val wireTypes: Set<Int>) {
  * unrecognized enum numbers, known fields arriving with a wire type that doesn't match the schema,
  * and groups, which no GTFS Realtime field uses. Malformed input still fails with a
  * [SerializationException]. The rewrite is local to the byte array and shares no decode session.
+ *
+ * Most feeds have nothing to drop, so a first pass checks for that without allocating and returns
+ * [bytes] itself when it finds nothing.
  */
 internal object Proto2UnknownFieldStripper {
   fun strip(
     bytes: ByteArray,
     schema: ProtoMessageSchema = GtfsRealtimeWireSchema.feedMessage,
-  ): ByteArray = copyMessage(WireReader(bytes, 0, bytes.size), schema)
+  ): ByteArray {
+    if (keepsEverything(WireReader(bytes, 0, bytes.size), bytes.size, schema)) return bytes
+    return copyMessage(WireReader(bytes, 0, bytes.size), schema)
+  }
+
+  /**
+   * Whether [copyMessage] would keep every field occurrence up to [end]. Returns false at the first
+   * occurrence it would drop, and at malformed input the reader doesn't reject itself, so that
+   * [copyMessage] reports it.
+   */
+  private fun keepsEverything(reader: WireReader, end: Int, schema: ProtoMessageSchema): Boolean {
+    while (reader.position < end) {
+      val tag = reader.readVarint()
+      val field = schema.field((tag ushr 3).toInt())
+      val wireType = (tag and 7L).toInt()
+      if (field != null && !field.accepts(wireType)) return false
+      when (wireType) {
+        VARINT -> {
+          val value = reader.readVarint()
+          if (field is ProtoFieldSchema.Enum && !field.isKnown(value.toInt())) return false
+        }
+        LEN -> {
+          val length = reader.readVarint()
+          if (length !in 0..(end - reader.position).toLong()) return false
+          val payloadEnd = reader.position + length.toInt()
+          if (field is ProtoFieldSchema.Message) {
+            if (!keepsEverything(reader, payloadEnd, field.schema)) return false
+          } else {
+            reader.skip(length.toInt())
+          }
+        }
+        FIXED64 -> reader.skip(8)
+        FIXED32 -> reader.skip(4)
+        else -> return false
+      }
+    }
+    return reader.position == end
+  }
 
   private fun copyMessage(reader: WireReader, schema: ProtoMessageSchema): ByteArray {
     val out = ByteSink(reader.remaining)
     while (reader.hasMore) {
       val start = reader.position
       val tag = reader.readVarint()
-      val field = schema.fields[(tag ushr 3).toInt()]
+      val field = schema.field((tag ushr 3).toInt())
       val wireType = (tag and 7L).toInt()
-      val expected = field == null || wireType in field.wireTypes
+      val expected = field == null || field.accepts(wireType)
       when (wireType) {
         VARINT -> {
           val value = reader.readVarint()
-          if (expected && (field !is ProtoFieldSchema.Enum || value.toInt() in field.numbers)) {
+          if (expected && (field !is ProtoFieldSchema.Enum || field.isKnown(value.toInt()))) {
             reader.copySince(start, out)
           }
         }
