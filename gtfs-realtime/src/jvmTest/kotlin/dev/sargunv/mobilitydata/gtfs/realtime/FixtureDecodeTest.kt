@@ -1,5 +1,6 @@
 package dev.sargunv.mobilitydata.gtfs.realtime
 
+import com.google.transit.realtime.GtfsRealtime
 import io.ktor.client.engine.mock.MockEngine
 import io.ktor.client.engine.mock.respond
 import io.ktor.http.HttpHeaders
@@ -7,6 +8,7 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertSame
 import kotlin.test.assertTrue
 import kotlinx.coroutines.test.runTest
 
@@ -61,6 +63,27 @@ class FixtureDecodeTest {
       entityCheck = { it.alert != null },
       entityLabel = "alert",
     )
+
+  @Test
+  fun everyFixtureDecodesLikeTheOfficialBindings() {
+    val fixtures = realtimeFixtures()
+    assertTrue(fixtures.size >= 10, "Expected the realtime fixtures, found $fixtures")
+    for (fixture in fixtures) {
+      val bytes = readFixtureBytes(*fixture.split("/").toTypedArray())
+      val feed = GtfsRealtimeProto.decodeFeedMessage(bytes)
+      val official = GtfsRealtime.FeedMessage.parseFrom(bytes)
+      assertEquals(official.entityList.map { it.id }, feed.entity.map { it.id }, fixture)
+      assertEquals(official.header.timestamp, feed.header.timestamp, fixture)
+    }
+  }
+
+  @Test
+  fun fixturesWithNothingToStripAreNotCopied() {
+    for (fixture in realtimeFixtures()) {
+      val bytes = readFixtureBytes(*fixture.split("/").toTypedArray())
+      assertSame(bytes, Proto2UnknownFieldStripper.strip(bytes), fixture)
+    }
+  }
 
   @Test
   fun clientDecodesFixturePayload() = runTest {
