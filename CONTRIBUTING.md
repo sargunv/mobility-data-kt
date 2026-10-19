@@ -68,6 +68,20 @@ Run a full build and check all targets:
 mise run build
 ```
 
+## Benchmarks
+
+The `benchmarks` module holds [JMH](https://github.com/openjdk/jmh) benchmarks that decode the feeds
+in `sample-data`. Arguments go straight to JMH, so you can filter by regex, pick parameters, and add
+profilers:
+
+```sh
+mise run bench                                  # everything
+mise run bench -prof gc GtfsRealtime            # one class, with allocation per op
+mise run bench -p feed=mbta/trip_updates.pb 'GtfsRealtimeBenchmark.decode$'
+```
+
+To compare a change, run the same command before and after it.
+
 ## Documentation
 
 Serve the documentation site locally:
