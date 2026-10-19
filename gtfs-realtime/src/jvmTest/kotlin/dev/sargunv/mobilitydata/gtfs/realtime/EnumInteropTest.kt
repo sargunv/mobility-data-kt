@@ -18,7 +18,7 @@ class EnumInteropTest {
           GtfsRealtime.FeedEntity.newBuilder().setId("e1").setTripUpdate(builder.build()).build(),
         )
         .build()
-    return GtfsRealtimeProto.decodeFeedMessage(feed.toByteArray()).entity.single().tripUpdate!!
+    return decodeMatchingOracle(feed.toByteArray()).entity.single().tripUpdate!!
   }
 
   private fun decodeVehiclePosition(
@@ -31,7 +31,7 @@ class EnumInteropTest {
           GtfsRealtime.FeedEntity.newBuilder().setId("e1").setVehicle(builder.build()).build(),
         )
         .build()
-    return GtfsRealtimeProto.decodeFeedMessage(feed.toByteArray()).entity.single().vehicle!!
+    return decodeMatchingOracle(feed.toByteArray()).entity.single().vehicle!!
   }
 
   private fun decodeAlert(builder: GtfsRealtime.Alert.Builder): Alert {
@@ -42,7 +42,7 @@ class EnumInteropTest {
           GtfsRealtime.FeedEntity.newBuilder().setId("e1").setAlert(builder.build()).build(),
         )
         .build()
-    return GtfsRealtimeProto.decodeFeedMessage(feed.toByteArray()).entity.single().alert!!
+    return decodeMatchingOracle(feed.toByteArray()).entity.single().alert!!
   }
 
   @Test
@@ -319,7 +319,7 @@ class EnumInteropTest {
               .build(),
           )
           .build()
-      val decoded = GtfsRealtimeProto.decodeFeedMessage(feed.toByteArray())
+      val decoded = decodeMatchingOracle(feed.toByteArray())
       assertEquals(expected, decoded.header.incrementality, "Mismatch for $official")
     }
   }

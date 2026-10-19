@@ -55,6 +55,9 @@ internal sealed class ProtoFieldSchema(val wireTypes: Set<Int>) {
  *
  * Most feeds have nothing to drop, so a first pass checks for that without allocating and returns
  * [bytes] itself when it finds nothing.
+ *
+ * This was the production decode path before [GtfsRealtimeDecoder]. It now backs [oracleDecode],
+ * which the tests compare that decoder against.
  */
 internal object Proto2UnknownFieldStripper {
   fun strip(
@@ -73,7 +76,7 @@ internal object Proto2UnknownFieldStripper {
   private fun keepsEverything(reader: WireReader, end: Int, schema: ProtoMessageSchema): Boolean {
     while (reader.position < end) {
       val tag = reader.readVarint()
-      val field = schema.field((tag ushr 3).toInt())
+      val field = schema.field(fieldNumber(tag))
       val wireType = (tag and 7L).toInt()
       if (field != null && !field.accepts(wireType)) return false
       when (wireType) {
@@ -104,7 +107,7 @@ internal object Proto2UnknownFieldStripper {
     while (reader.hasMore) {
       val start = reader.position
       val tag = reader.readVarint()
-      val field = schema.field((tag ushr 3).toInt())
+      val field = schema.field(fieldNumber(tag))
       val wireType = (tag and 7L).toInt()
       val expected = field == null || field.accepts(wireType)
       when (wireType) {
@@ -131,12 +134,19 @@ internal object Proto2UnknownFieldStripper {
           reader.skip(if (wireType == FIXED64) 8 else 4)
           if (expected) reader.copySince(start, out)
         }
-        START_GROUP -> reader.skipGroup(tag ushr 3)
+        START_GROUP -> reader.skipGroup(fieldNumber(tag))
         else -> unexpectedWireType(wireType)
       }
     }
     return out.toByteArray()
   }
+
+  /**
+   * Like kotlinx and protobuf-java, only the low 32 bits of an overlong tag varint count. This used
+   * to read bits 3 to 34, so a tag above 32 bits could be kept as unknown here and then decoded by
+   * kotlinx as a known field, without the stripping above.
+   */
+  private fun fieldNumber(tag: Long): Int = tag.toInt() ushr 3
 
   private fun malformed(message: String): Nothing = throw SerializationException(message)
 
@@ -179,7 +189,7 @@ internal object Proto2UnknownFieldStripper {
       position += count
     }
 
-    fun skipGroup(number: Long) {
+    fun skipGroup(number: Int) {
       val open = mutableListOf(number)
       while (open.isNotEmpty()) {
         val tag = readVarint()
@@ -188,9 +198,9 @@ internal object Proto2UnknownFieldStripper {
           FIXED64 -> skip(8)
           LEN -> readLengthDelimited()
           FIXED32 -> skip(4)
-          START_GROUP -> open.add(tag ushr 3)
+          START_GROUP -> open.add(fieldNumber(tag))
           END_GROUP ->
-            if (open.removeAt(open.lastIndex) != tag ushr 3)
+            if (open.removeAt(open.lastIndex) != fieldNumber(tag))
               malformed("Mismatched protobuf end group")
           else -> unexpectedWireType(wireType)
         }

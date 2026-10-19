@@ -67,4 +67,5 @@ the fixes. The environment is managed by mise, so run any tool that isn't alread
 - The Kotlin data classes in `gtfs-realtime` are handwritten to match the
   [official GTFS Realtime protobuf schema](https://github.com/google/transit/blob/master/gtfs-realtime/proto/gtfs-realtime.proto).
   They are not generated from the `.proto` file. When the upstream spec changes, update the data
-  classes and `@ProtoNumber` annotations manually.
+  classes and `@ProtoNumber` annotations manually, and update the hand-written decoder in
+  `GtfsRealtimeDecoder.kt` to match. `DecoderDriftTest` fails if a descriptor field isn't decoded.

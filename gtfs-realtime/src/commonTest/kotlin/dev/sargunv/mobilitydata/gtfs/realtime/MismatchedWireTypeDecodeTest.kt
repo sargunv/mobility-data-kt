@@ -31,7 +31,7 @@ class MismatchedWireTypeDecodeTest {
       )
     val otherAlert = alertEntity("other-alert", ProtoWire.varintField(7, 1))
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(wmataAlert, otherAlert))
+    val decoded = decodeMatchingOracle(feedMessageBytes(wmataAlert, otherAlert))
 
     assertEquals(listOf("wmata-alert", "other-alert"), decoded.entity.map { it.id })
     val alert = decoded.entity[0].alert
@@ -58,7 +58,7 @@ class MismatchedWireTypeDecodeTest {
       )
     for (field in mismatched) {
       val decoded =
-        GtfsRealtimeProto.decodeFeedMessage(
+        decodeMatchingOracle(
           feedMessageBytes(
             alertEntity("alert", field, ProtoWire.messageField(10, translatedString("Header"))),
           ),
@@ -73,7 +73,7 @@ class MismatchedWireTypeDecodeTest {
   @Test
   fun wellTypedOccurrenceSurvivesAMismatchedOne() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           alertEntity(
             "alert",
@@ -92,7 +92,7 @@ class MismatchedWireTypeDecodeTest {
   @Test
   fun mismatchedFeedHeaderFieldIsSkipped() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         ProtoWire.messageField(
           1,
           ProtoWire.concat(
@@ -111,7 +111,7 @@ class MismatchedWireTypeDecodeTest {
   @Test
   fun mismatchedFeedEntityFieldsAreSkipped() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "entity"),
@@ -153,7 +153,7 @@ class MismatchedWireTypeDecodeTest {
       )
 
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(ProtoWire.stringField(1, "vehicle"), ProtoWire.messageField(4, vehicle)),
         ),
@@ -187,7 +187,7 @@ class MismatchedWireTypeDecodeTest {
       )
 
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           alertEntity(
             "alert",
@@ -307,6 +307,6 @@ class MismatchedWireTypeDecodeTest {
   }
 
   private fun assertMalformed(bytes: ByteArray) {
-    assertFailsWith<SerializationException> { GtfsRealtimeProto.decodeFeedMessage(bytes) }
+    assertFailsWith<SerializationException> { decodeMatchingOracle(bytes) }
   }
 }

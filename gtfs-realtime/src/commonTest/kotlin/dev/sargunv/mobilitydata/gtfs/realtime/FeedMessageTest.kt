@@ -116,13 +116,13 @@ class FeedMessageTest {
 
   @Test
   fun decodingEmptyBytesThrows() {
-    val result = runCatching { GtfsRealtimeProto.decodeFeedMessage(ByteArray(0)) }
+    val result = runCatching { decodeMatchingOracle(ByteArray(0)) }
     kotlin.test.assertTrue(result.isFailure, "Expected failure for empty bytes")
   }
 
   @Test
   fun decodingGarbageBytesThrows() {
-    val result = runCatching { GtfsRealtimeProto.decodeFeedMessage(byteArrayOf(0, 1, 2, 3, 4, 5)) }
+    val result = runCatching { decodeMatchingOracle(byteArrayOf(0, 1, 2, 3, 4, 5)) }
     kotlin.test.assertTrue(result.isFailure, "Expected failure for garbage bytes")
   }
 }

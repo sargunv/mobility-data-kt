@@ -9,7 +9,7 @@ vehicle positions, and service alerts. It uses Protocol Buffers as its wire form
 
 ## Features
 
-- Protobuf encoding and decoding with kotlinx-serialization
+- Protobuf decoding with a hand-written proto2 decoder, and encoding with kotlinx-serialization
 - HTTP client for fetching feeds using Ktor
 - Strong type safety with Kotlin data classes and enums
 - Kotlin Multiplatform support (JVM, Native, JS, WASM)

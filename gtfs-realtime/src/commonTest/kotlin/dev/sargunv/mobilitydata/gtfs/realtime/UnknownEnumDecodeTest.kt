@@ -48,7 +48,7 @@ class UnknownEnumDecodeTest {
         ),
       )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(tripEntity, alertEntity))
+    val decoded = decodeMatchingOracle(feedMessageBytes(tripEntity, alertEntity))
 
     assertEquals("2.0", decoded.header.gtfsRealtimeVersion)
     assertEquals(2, decoded.entity.size)
@@ -87,7 +87,7 @@ class UnknownEnumDecodeTest {
         ProtoWire.messageField(5, ProtoWire.varintField(7, 1)),
       )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(vehicleEntity, alertEntity))
+    val decoded = decodeMatchingOracle(feedMessageBytes(vehicleEntity, alertEntity))
 
     assertEquals(2, decoded.entity.size)
     assertEquals("vehicle-unknown-occupancy", decoded.entity[0].id)
@@ -118,7 +118,7 @@ class UnknownEnumDecodeTest {
         ),
       )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(tripEntity))
+    val decoded = decodeMatchingOracle(feedMessageBytes(tripEntity))
 
     val tripUpdate = decoded.entity.single().tripUpdate
     assertEquals("trip-unknown-relationship", decoded.entity.single().id)
@@ -141,7 +141,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun knownCauseFollowedByUnknownKeepsRecognizedValue() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "alert-known-then-unknown"),
@@ -159,7 +159,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun unknownCauseFollowedByKnownKeepsRecognizedValue() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "alert-unknown-then-known"),
@@ -187,7 +187,7 @@ class UnknownEnumDecodeTest {
         ProtoWire.messageField(5, ProtoWire.varintField(6, 99)),
       )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(weatherAlert, unknownAlert))
+    val decoded = decodeMatchingOracle(feedMessageBytes(weatherAlert, unknownAlert))
 
     assertEquals(Alert.Cause.Weather, decoded.entity[0].alert?.cause)
     assertEquals(Alert.Cause.UnknownCause, decoded.entity[1].alert?.cause)
@@ -215,7 +215,7 @@ class UnknownEnumDecodeTest {
         ),
       )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(tripEntity))
+    val decoded = decodeMatchingOracle(feedMessageBytes(tripEntity))
     val properties =
       decoded.entity.single().tripUpdate?.stopTimeUpdate?.single()?.stopTimeProperties
 
@@ -229,7 +229,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun unknownIncrementalityDoesNotAbortFeed() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         ProtoWire.concat(
           ProtoWire.messageField(
             1,
@@ -257,7 +257,7 @@ class UnknownEnumDecodeTest {
         ),
       )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(vehicleEntity))
+    val decoded = decodeMatchingOracle(feedMessageBytes(vehicleEntity))
     val carriages = decoded.entity.single().vehicle?.multiCarriageDetails.orEmpty()
 
     assertEquals(2, carriages.size)
@@ -279,7 +279,7 @@ class UnknownEnumDecodeTest {
         ),
       )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(feedMessageBytes(vehicleEntity))
+    val decoded = decodeMatchingOracle(feedMessageBytes(vehicleEntity))
     assertEquals(
       VehiclePosition.VehicleStopStatus.StoppedAt,
       decoded.entity.single().vehicle?.currentStatus,
@@ -293,7 +293,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun packedCauseWrongWireTypeDoesNotAbortFeed() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "alert-packed-cause"),
@@ -309,7 +309,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun unknownNestedTripScheduleRelationshipDoesNotAbortFeed() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "alert-nested-trip"),
@@ -342,7 +342,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun knownThenUnknownIncrementalityKeepsRecognizedValue() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         ProtoWire.concat(
           ProtoWire.messageField(
             1,
@@ -361,7 +361,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun unknownStopWheelchairBoardingDoesNotAbortFeed() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "stop-unknown-wheelchair"),
@@ -380,7 +380,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun knownThenUnknownWheelchairAccessibleKeepsRecognizedValue() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "vehicle-wheelchair"),
@@ -404,7 +404,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun knownThenUnknownOccupancyKeepsRecognizedValue() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "vehicle-occupancy"),
@@ -425,7 +425,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun knownThenUnknownStopTimeScheduleKeepsRecognizedValue() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "trip-stop-schedule"),
@@ -452,7 +452,7 @@ class UnknownEnumDecodeTest {
   @Test
   fun unknownCongestionDoesNotAbortFeed() {
     val decoded =
-      GtfsRealtimeProto.decodeFeedMessage(
+      decodeMatchingOracle(
         feedMessageBytes(
           ProtoWire.concat(
             ProtoWire.stringField(1, "vehicle-congestion"),

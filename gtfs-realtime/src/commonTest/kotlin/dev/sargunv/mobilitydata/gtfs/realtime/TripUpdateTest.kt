@@ -132,21 +132,11 @@ class TripUpdateTest {
     val encodedScheduled = GtfsRealtimeProto.encodeFeedMessage(scheduledFeed)
     assertEquals(
       null,
-      GtfsRealtimeProto.decodeFeedMessage(encodedAbsent)
-        .entity
-        .single()
-        .tripUpdate
-        ?.trip
-        ?.scheduleRelationship,
+      decodeMatchingOracle(encodedAbsent).entity.single().tripUpdate?.trip?.scheduleRelationship,
     )
     assertEquals(
       TripDescriptor.ScheduleRelationship.Scheduled,
-      GtfsRealtimeProto.decodeFeedMessage(encodedScheduled)
-        .entity
-        .single()
-        .tripUpdate
-        ?.trip
-        ?.scheduleRelationship,
+      decodeMatchingOracle(encodedScheduled).entity.single().tripUpdate?.trip?.scheduleRelationship,
     )
   }
 }
