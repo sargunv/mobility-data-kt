@@ -24,13 +24,6 @@ public object ServiceTimeSerializer : KSerializer<ServiceTime> {
     encoder.encodeString("$hh:$mm:$ss")
   }
 
-  override fun deserialize(decoder: Decoder): ServiceTime {
-    val value = decoder.decodeString()
-    val parts = value.split(":")
-    require(parts.size == 3) { "ServiceTime must be in the format HH:MM:SS, but was $value." }
-    val hours = parts[0].toInt()
-    val minutes = parts[1].toInt()
-    val seconds = parts[2].toInt()
-    return ServiceTime(hours, minutes, seconds)
-  }
+  override fun deserialize(decoder: Decoder): ServiceTime =
+    parseHms(decoder.decodeString(), "ServiceTime", ::ServiceTime)
 }
