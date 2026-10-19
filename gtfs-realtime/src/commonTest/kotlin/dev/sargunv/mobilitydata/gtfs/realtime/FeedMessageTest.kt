@@ -1,6 +1,8 @@
 package dev.sargunv.mobilitydata.gtfs.realtime
 
 import kotlin.test.Test
+import kotlin.test.assertFailsWith
+import kotlinx.serialization.SerializationException
 
 internal val sampleFeedMessage =
   FeedMessage(
@@ -116,13 +118,11 @@ class FeedMessageTest {
 
   @Test
   fun decodingEmptyBytesThrows() {
-    val result = runCatching { decodeMatchingOracle(ByteArray(0)) }
-    kotlin.test.assertTrue(result.isFailure, "Expected failure for empty bytes")
+    assertFailsWith<SerializationException> { decodeMatchingOracle(ByteArray(0)) }
   }
 
   @Test
   fun decodingGarbageBytesThrows() {
-    val result = runCatching { decodeMatchingOracle(byteArrayOf(0, 1, 2, 3, 4, 5)) }
-    kotlin.test.assertTrue(result.isFailure, "Expected failure for garbage bytes")
+    assertFailsWith<SerializationException> { decodeMatchingOracle(byteArrayOf(0, 1, 2, 3, 4, 5)) }
   }
 }
