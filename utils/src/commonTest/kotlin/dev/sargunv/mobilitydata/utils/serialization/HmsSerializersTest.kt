@@ -4,8 +4,11 @@ import dev.sargunv.mobilitydata.utils.GtfsLocalTime
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonPrimitive
 
-class HmsParsingTest {
+class HmsSerializersTest {
   private val inputs =
     listOf(
       "00:00:00",
@@ -52,6 +55,9 @@ class HmsParsingTest {
     return create(parts[0].toInt(), parts[1].toInt(), parts[2].toInt())
   }
 
+  private fun <T> decode(serializer: KSerializer<T>, value: String): T =
+    Json.decodeFromJsonElement(serializer, JsonPrimitive(value))
+
   private fun outcome(block: () -> Any): String =
     try {
       "ok: ${block()}"
@@ -64,7 +70,7 @@ class HmsParsingTest {
     for (input in inputs) {
       assertEquals(
         outcome { reference(input, "ServiceTime", ::ServiceTime) },
-        outcome { parseHms(input, "ServiceTime", ::ServiceTime) },
+        outcome { decode(ServiceTimeSerializer, input) },
         "input '$input'",
       )
     }
@@ -75,7 +81,7 @@ class HmsParsingTest {
     for (input in inputs) {
       assertEquals(
         outcome { reference(input, "GtfsLocalTime", ::GtfsLocalTime) },
-        outcome { parseHms(input, "GtfsLocalTime", ::GtfsLocalTime) },
+        outcome { decode(GtfsLocalTimeSerializer, input) },
         "input '$input'",
       )
     }
@@ -83,9 +89,9 @@ class HmsParsingTest {
 
   @Test
   fun parsesCommonShapes() {
-    assertEquals(ServiceTime(7, 30, 0), parseHms("07:30:00", "ServiceTime", ::ServiceTime))
-    assertEquals(ServiceTime(7, 5, 9), parseHms("7:5:9", "ServiceTime", ::ServiceTime))
-    assertEquals(ServiceTime(25, 35, 0), parseHms("25:35:00", "ServiceTime", ::ServiceTime))
-    assertEquals(ServiceTime(7, 30, 0), parseHms("007:30:00", "ServiceTime", ::ServiceTime))
+    assertEquals(ServiceTime(7, 30, 0), decode(ServiceTimeSerializer, "07:30:00"))
+    assertEquals(ServiceTime(7, 5, 9), decode(ServiceTimeSerializer, "7:5:9"))
+    assertEquals(ServiceTime(25, 35, 0), decode(ServiceTimeSerializer, "25:35:00"))
+    assertEquals(ServiceTime(7, 30, 0), decode(ServiceTimeSerializer, "007:30:00"))
   }
 }
