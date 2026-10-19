@@ -19,7 +19,7 @@ class IsoBasicLocalDateSerializerTest {
   private fun assertMatchesFormat(value: String) {
     assertEquals(
       outcome { format.parse(value) },
-      outcome { parseIsoBasicDate(value, format) },
+      outcome { Json.decodeFromJsonElement(IsoBasicLocalDateSerializer, JsonPrimitive(value)) },
       "input '$value'",
     )
   }

@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.utils.serialization
 
 import kotlinx.datetime.LocalDate
-import kotlinx.datetime.format.DateTimeFormat
 import kotlinx.datetime.serializers.FormattedLocalDateSerializer
 import kotlinx.serialization.encoding.Decoder
 
@@ -15,8 +14,7 @@ public object IsoBasicLocalDateSerializer :
     name = "dev.sargunv.mobilitydata.utils.serialization.IsoBasicLocalDateSerializer",
     format = LocalDate.Formats.ISO_BASIC,
   ) {
-  override fun deserialize(decoder: Decoder): LocalDate =
-    parseIsoBasicDate(decoder.decodeString(), LocalDate.Formats.ISO_BASIC)
+  override fun deserialize(decoder: Decoder): LocalDate = parseIsoBasicDate(decoder.decodeString())
 }
 
 private const val BASIC_DATE_LENGTH = 8
@@ -25,10 +23,10 @@ private const val DAY_START = 6
 
 /**
  * Parses [value] as `YYYYMMDD`, reading the common shape (eight ASCII digits forming a valid date)
- * directly and leaving every other input to [format], so the result and any error are the ones
- * [format] gives.
+ * directly and leaving every other input to [LocalDate.Formats.ISO_BASIC], so the result and any
+ * error are the ones it gives.
  */
-internal fun parseIsoBasicDate(value: String, format: DateTimeFormat<LocalDate>): LocalDate {
+private fun parseIsoBasicDate(value: String): LocalDate {
   if (value.length == BASIC_DATE_LENGTH && value.all { it in '0'..'9' }) {
     val date =
       try {
@@ -42,7 +40,7 @@ internal fun parseIsoBasicDate(value: String, format: DateTimeFormat<LocalDate>)
       }
     if (date != null) return date
   }
-  return format.parse(value)
+  return LocalDate.Formats.ISO_BASIC.parse(value)
 }
 
 private fun parseDateDigits(value: String, start: Int, end: Int): Int {
