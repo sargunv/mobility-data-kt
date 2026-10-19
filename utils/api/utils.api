@@ -205,6 +205,8 @@ public final class dev/sargunv/mobilitydata/utils/serialization/IntBooleanSerial
 
 public final class dev/sargunv/mobilitydata/utils/serialization/IsoBasicLocalDateSerializer : kotlinx/datetime/serializers/FormattedLocalDateSerializer {
 	public static final field INSTANCE Ldev/sargunv/mobilitydata/utils/serialization/IsoBasicLocalDateSerializer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lkotlinx/datetime/LocalDate;
 }
 
 public final class dev/sargunv/mobilitydata/utils/serialization/LocalizedTextSerializer : dev/sargunv/mobilitydata/utils/serialization/MapAsListSerializer {
