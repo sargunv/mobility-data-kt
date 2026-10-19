@@ -121,7 +121,7 @@ class FeedMessageInteropTest {
         )
         .build()
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(officialFeed.toByteArray())
+    val decoded = decodeMatchingOracle(officialFeed.toByteArray())
 
     assertEquals("2.0", decoded.header.gtfsRealtimeVersion)
     assertEquals(3, decoded.entity.size)
@@ -169,7 +169,7 @@ class FeedMessageInteropTest {
       )
 
     fixtures.forEach { bytes ->
-      val kotlinFeed = GtfsRealtimeProto.decodeFeedMessage(bytes)
+      val kotlinFeed = decodeMatchingOracle(bytes)
       val officialFeed = GtfsRealtime.FeedMessage.parseFrom(bytes)
 
       assertEquals(officialFeed.entityCount, kotlinFeed.entity.size)

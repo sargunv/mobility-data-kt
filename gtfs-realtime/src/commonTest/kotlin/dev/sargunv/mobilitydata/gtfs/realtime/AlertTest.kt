@@ -191,7 +191,7 @@ class AlertTest {
         0x0D,
       )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(payload)
+    val decoded = decodeMatchingOracle(payload)
     assertEquals(Alert.Cause.SpecialEvent, decoded.entity.single().alert!!.cause)
   }
 

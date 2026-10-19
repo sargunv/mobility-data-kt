@@ -32,7 +32,7 @@ class UnknownEnumInteropTest {
     assertEquals(GtfsRealtime.Alert.Cause.UNKNOWN_CAUSE, official.getEntity(1).alert.cause)
     assertEquals(GtfsRealtime.Alert.Effect.DETOUR, official.getEntity(1).alert.effect)
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes)
+    val decoded = decodeMatchingOracle(bytes)
     assertEquals("trip-1", decoded.entity[0].tripUpdate?.trip?.tripId)
     assertEquals(Alert.Cause.UnknownCause, decoded.entity[1].alert?.cause)
     assertEquals(Alert.Effect.Detour, decoded.entity[1].alert?.effect)
@@ -62,7 +62,7 @@ class UnknownEnumInteropTest {
       official.getEntity(0).vehicle.currentStatus,
     )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes)
+    val decoded = decodeMatchingOracle(bytes)
     assertNull(decoded.entity.single().vehicle?.occupancyStatus)
     assertEquals(
       VehiclePosition.VehicleStopStatus.StoppedAt,
@@ -87,7 +87,7 @@ class UnknownEnumInteropTest {
     assertTrue(official.getEntity(0).alert.hasCause())
     assertEquals(GtfsRealtime.Alert.Cause.WEATHER, official.getEntity(0).alert.cause)
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes)
+    val decoded = decodeMatchingOracle(bytes)
     assertEquals(Alert.Cause.Weather, decoded.entity.single().alert?.cause)
   }
 
@@ -108,7 +108,7 @@ class UnknownEnumInteropTest {
     assertTrue(official.getEntity(0).alert.hasCause())
     assertEquals(GtfsRealtime.Alert.Cause.WEATHER, official.getEntity(0).alert.cause)
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes)
+    val decoded = decodeMatchingOracle(bytes)
     assertEquals(Alert.Cause.Weather, decoded.entity.single().alert?.cause)
   }
 
@@ -142,7 +142,7 @@ class UnknownEnumInteropTest {
           val bytes = if (index % 2 == 0) weatherThenUnknown else constructionThenUnknown
           val expected = if (index % 2 == 0) Alert.Cause.Weather else Alert.Cause.Construction
           repeat(80) {
-            val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes)
+            val decoded = decodeMatchingOracle(bytes)
             val cause = decoded.entity.single().alert?.cause
             if (cause != expected) {
               errors += "thread $index expected $expected but was $cause"
@@ -169,7 +169,7 @@ class UnknownEnumInteropTest {
     assertFalse(official.getEntity(0).alert.hasCause())
     assertEquals(GtfsRealtime.Alert.Cause.UNKNOWN_CAUSE, official.getEntity(0).alert.cause)
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes)
+    val decoded = decodeMatchingOracle(bytes)
     assertEquals(Alert.Cause.UnknownCause, decoded.entity.single().alert?.cause)
   }
 
@@ -202,7 +202,7 @@ class UnknownEnumInteropTest {
       official.getEntity(0).vehicle.getMultiCarriageDetails(1).occupancyStatus,
     )
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes)
+    val decoded = decodeMatchingOracle(bytes)
     val carriages = decoded.entity.single().vehicle?.multiCarriageDetails.orEmpty()
     assertEquals(VehiclePosition.OccupancyStatus.Full, carriages[0].occupancyStatus)
     assertEquals(VehiclePosition.OccupancyStatus.NoDataAvailable, carriages[1].occupancyStatus)

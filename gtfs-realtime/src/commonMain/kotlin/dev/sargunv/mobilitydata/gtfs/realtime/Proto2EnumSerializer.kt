@@ -10,10 +10,11 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.protobuf.ProtoNumber
 
 /**
- * Fallback for proto2 enums that reach kotlinx after unknown occurrences are stripped.
+ * Fallback for proto2 enums decoded with kotlinx directly. [GtfsRealtimeProto] decodes with
+ * [GtfsRealtimeDecoder] instead, which keeps the last recognized value.
  *
- * Unknown numbers become [fallback] or null. There is no shared decode session; last-recognized
- * preservation happens by dropping unknown varints from the wire before decode.
+ * Unknown numbers become [fallback] or null. There is no shared decode session, so an unknown
+ * number replaces an earlier recognized one.
  */
 internal fun <T : Enum<T>> proto2EnumSerializer(
   generated: KSerializer<T>,
@@ -54,7 +55,7 @@ internal fun <T : Enum<T>> proto2NullableEnumSerializer(
   }
 }
 
-private fun <T : Enum<T>> protoNumberMap(generated: KSerializer<T>, values: List<T>): Map<Int, T> {
+internal fun <T : Enum<T>> protoNumberMap(generated: KSerializer<T>, values: List<T>): Map<Int, T> {
   val descriptor = generated.descriptor
   val byName = values.associateBy { it.name }
   return buildMap {

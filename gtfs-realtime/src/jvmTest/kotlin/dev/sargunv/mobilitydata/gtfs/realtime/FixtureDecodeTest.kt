@@ -18,7 +18,7 @@ class FixtureDecodeTest {
     entityLabel: String,
   ) {
     val bytes = readFixtureBytes(*path)
-    val feed = GtfsRealtimeProto.decodeFeedMessage(bytes)
+    val feed = decodeMatchingOracle(bytes)
     assertTrue(feed.entity.isNotEmpty(), "Expected at least one realtime entity")
     assertTrue(feed.entity.any(entityCheck), "Expected $entityLabel entities")
   }
@@ -69,7 +69,7 @@ class FixtureDecodeTest {
     assertTrue(fixtures.size >= 10, "Expected the realtime fixtures, found $fixtures")
     for (fixture in fixtures) {
       val bytes = readFixtureBytes(*fixture.split("/").toTypedArray())
-      val feed = GtfsRealtimeProto.decodeFeedMessage(bytes)
+      val feed = decodeMatchingOracle(bytes, fixture)
       val official = GtfsRealtime.FeedMessage.parseFrom(bytes)
       assertEquals(official.entityList.map { it.id }, feed.entity.map { it.id }, fixture)
       assertEquals(official.header.timestamp, feed.header.timestamp, fixture)
@@ -91,6 +91,6 @@ class FixtureDecodeTest {
     val result = client.getFeedMessage("https://example.com/trip_updates.pb").getOrThrow()
 
     assertTrue(result.entity.any { it.tripUpdate != null }, "Expected trip update entities")
-    assertEquals(result, GtfsRealtimeProto.decodeFeedMessage(bytes))
+    assertEquals(result, decodeMatchingOracle(bytes))
   }
 }

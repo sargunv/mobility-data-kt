@@ -34,7 +34,7 @@ class MismatchedWireTypeInteropTest {
     assertEquals("Red Line delays", official.headerText.getTranslation(0).text)
     assertEquals(GtfsRealtime.Alert.SeverityLevel.WARNING, official.severityLevel)
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes).entity.single().alert
+    val decoded = decodeMatchingOracle(bytes).entity.single().alert
     assertNull(decoded?.ttsHeaderText)
     assertEquals(Alert.Effect.SignificantDelays, decoded?.effect)
     assertEquals("Red Line delays", decoded?.headerText?.translation?.single()?.text)
@@ -63,7 +63,7 @@ class MismatchedWireTypeInteropTest {
     assertFalse(official.hasTtsHeaderText())
     assertEquals(GtfsRealtime.Alert.Effect.DETOUR, official.effect)
 
-    val decoded = GtfsRealtimeProto.decodeFeedMessage(bytes).entity.single().alert
+    val decoded = decodeMatchingOracle(bytes).entity.single().alert
     assertNull(decoded?.ttsHeaderText)
     assertEquals(Alert.Effect.Detour, decoded?.effect)
   }
