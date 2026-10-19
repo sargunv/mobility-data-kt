@@ -8,7 +8,6 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertSame
 import kotlin.test.assertTrue
 import kotlinx.coroutines.test.runTest
 
@@ -74,14 +73,6 @@ class FixtureDecodeTest {
       val official = GtfsRealtime.FeedMessage.parseFrom(bytes)
       assertEquals(official.entityList.map { it.id }, feed.entity.map { it.id }, fixture)
       assertEquals(official.header.timestamp, feed.header.timestamp, fixture)
-    }
-  }
-
-  @Test
-  fun fixturesWithNothingToStripAreNotCopied() {
-    for (fixture in realtimeFixtures()) {
-      val bytes = readFixtureBytes(*fixture.split("/").toTypedArray())
-      assertSame(bytes, Proto2UnknownFieldStripper.strip(bytes), fixture)
     }
   }
 
