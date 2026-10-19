@@ -21,7 +21,8 @@ public object RgbColorCodeSerializer : KSerializer<RgbColor> {
 
   override fun deserialize(decoder: Decoder): RgbColor {
     val str = delegate.deserialize(decoder)
-    require(str.matches(Regex("#[0-9a-fA-F]{6}"))) { "Invalid RGB color code: $str" }
-    return RgbColor(str.substring(1).toInt(16))
+    val value = if (str.startsWith('#')) parseRgbHex(str, start = 1) else -1
+    require(value >= 0) { "Invalid RGB color code: $str" }
+    return RgbColor(value)
   }
 }
