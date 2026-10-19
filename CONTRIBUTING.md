@@ -80,7 +80,8 @@ mise run bench -prof gc GtfsRealtime            # one class, with allocation per
 mise run bench -p feed=mbta/trip_updates.pb 'GtfsRealtimeBenchmark.decode$'
 ```
 
-To compare a change, run the same command before and after it.
+To compare a change, run the same command before and after it. Allocation per op can differ between
+forks with identical code, so add `-f 2` or more when the difference matters.
 
 ## Documentation
 

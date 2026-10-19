@@ -1,6 +1,8 @@
 package dev.sargunv.mobilitydata.benchmarks
 
 import dev.sargunv.mobilitydata.gtfs.schedule.GtfsCsv
+import dev.sargunv.mobilitydata.gtfs.schedule.Route
+import dev.sargunv.mobilitydata.gtfs.schedule.ServiceCalendarOverride
 import dev.sargunv.mobilitydata.gtfs.schedule.Shape
 import dev.sargunv.mobilitydata.gtfs.schedule.Stop
 import dev.sargunv.mobilitydata.gtfs.schedule.StopTime
@@ -29,7 +31,8 @@ import org.openjdk.jmh.infra.Blackhole
 @Warmup(iterations = 3, time = 2)
 @Measurement(iterations = 5, time = 2)
 open class GtfsScheduleBenchmark {
-  @Param("stop_times", "trips", "shapes", "stops") lateinit var table: String
+  @Param("stop_times", "trips", "shapes", "stops", "routes", "calendar_dates")
+  lateinit var table: String
 
   private lateinit var bytes: ByteArray
   private lateinit var deserializer: DeserializationStrategy<*>
@@ -47,6 +50,8 @@ open class GtfsScheduleBenchmark {
         "trips" -> Trip.serializer()
         "shapes" -> Shape.serializer()
         "stops" -> Stop.serializer()
+        "routes" -> Route.serializer()
+        "calendar_dates" -> ServiceCalendarOverride.serializer()
         else -> error("Unknown table $table")
       }
   }
