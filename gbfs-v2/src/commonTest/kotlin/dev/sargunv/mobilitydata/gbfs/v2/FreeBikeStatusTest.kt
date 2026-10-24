@@ -4,7 +4,6 @@ import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -50,7 +49,6 @@ private val carsharingJsonContent = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val carshareExpectedResponse =
   GbfsFeedResponse(
     lastUpdated = Instant.fromEpochSeconds(1640887163),
@@ -127,7 +125,6 @@ private val micromobilityJsonContent = // language=json
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val micromobilityExpectedResponse =
   GbfsFeedResponse(
     lastUpdated = Instant.fromEpochSeconds(1640887163),

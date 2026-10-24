@@ -3,7 +3,6 @@ package dev.sargunv.mobilitydata.gbfs.v2
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -38,7 +37,6 @@ private val jsonContent = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val expectedResponse =
   GbfsFeedResponse(
     lastUpdated = Instant.fromEpochSeconds(1604519393),

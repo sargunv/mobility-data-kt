@@ -4,7 +4,6 @@ import dev.sargunv.mobilitydata.utils.EpochSeconds
 import dev.sargunv.mobilitydata.utils.Timestamp
 import dev.sargunv.mobilitydata.utils.serialization.DatetimeSerializer
 import kotlin.jvm.JvmInline
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -22,7 +21,6 @@ public data class FreeBikeStatus(
 ) : GbfsFeedData, List<Bike> by bikes
 
 /** Represents a vehicle that is currently not part of an active rental. */
-@OptIn(ExperimentalTime::class)
 @Serializable
 public data class Bike(
 

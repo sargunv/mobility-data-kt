@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.gbfs.v1
 
 import dev.sargunv.mobilitydata.utils.IntBoolean
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -16,7 +15,6 @@ public data class FreeBikeStatus(
 ) : GbfsFeedData, List<Bike> by bikes
 
 /** Represents a vehicle that is currently not part of an active rental. */
-@OptIn(ExperimentalTime::class)
 @Serializable
 public data class Bike(
 
