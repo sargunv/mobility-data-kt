@@ -18,50 +18,50 @@ url = "https://github.com/XcodesOrg/xcodes/releases/download/2.1.0/xcodes.zip"
 url_api = "https://api.github.com/repos/XcodesOrg/xcodes/releases/assets/563562943"
 
 [[tools."aqua:dprint/dprint"]]
-version = "0.63.0"
+version = "0.64.1"
 backend = "aqua:dprint/dprint"
-specifiers = ["0.63.0"]
+specifiers = ["0.64.1"]
 
 [tools."aqua:dprint/dprint"."platforms.linux-arm64"]
-checksum = "sha256:8dfbf17fc4be97020e51bd47e1370acdb019301295ed539840016671cab33e89"
-url = "https://github.com/dprint/dprint/releases/download/0.63.0/dprint-aarch64-unknown-linux-gnu.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/632125300"
+checksum = "sha256:5d83774c7546bd7a223f243a17e7851a75b8315899d2a42268e40ebbae66c69b"
+url = "https://github.com/dprint/dprint/releases/download/0.64.1/dprint-aarch64-unknown-linux-gnu.zip"
+url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/660288128"
 provenance = "github-attestations"
 
 [tools."aqua:dprint/dprint"."platforms.linux-arm64-musl"]
-checksum = "sha256:26df4a1534db02bb1c1f614e91f02fcee786357de80094a1fd5dcce27dec803e"
-url = "https://github.com/dprint/dprint/releases/download/0.63.0/dprint-aarch64-unknown-linux-musl.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/632125308"
+checksum = "sha256:c8826c0b72fc0e1655404bf91fc29f821c01436e53152788e417df13a40d0671"
+url = "https://github.com/dprint/dprint/releases/download/0.64.1/dprint-aarch64-unknown-linux-musl.zip"
+url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/660288141"
 provenance = "github-attestations"
 
 [tools."aqua:dprint/dprint"."platforms.linux-x64"]
-checksum = "sha256:f58b5d7c13ccd613cfa264f1ae82d4e5db1373f8fe20462bc1126051d111b0ce"
-url = "https://github.com/dprint/dprint/releases/download/0.63.0/dprint-x86_64-unknown-linux-gnu.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/632125303"
+checksum = "sha256:9c2e00cd256dfa2c03a7f568ff08d8277abc5788c7f39fcd9ef325c4642cb4b4"
+url = "https://github.com/dprint/dprint/releases/download/0.64.1/dprint-x86_64-unknown-linux-gnu.zip"
+url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/660288131"
 provenance = "github-attestations"
 
 [tools."aqua:dprint/dprint"."platforms.linux-x64-musl"]
-checksum = "sha256:8914a940bdf4b9ba438de9ccfb4317105a8501eaf9d5593784c9f41387243475"
-url = "https://github.com/dprint/dprint/releases/download/0.63.0/dprint-x86_64-unknown-linux-musl.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/632125319"
+checksum = "sha256:aad2ee102014c563112dcdad65e131dbcfe123355ef948ae91d806e833cdbf40"
+url = "https://github.com/dprint/dprint/releases/download/0.64.1/dprint-x86_64-unknown-linux-musl.zip"
+url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/660288129"
 provenance = "github-attestations"
 
 [tools."aqua:dprint/dprint"."platforms.macos-arm64"]
-checksum = "sha256:5c0a4a695f9a17754eec0039f28435aedb61e1e1a6b5f448eb098a64e039c857"
-url = "https://github.com/dprint/dprint/releases/download/0.63.0/dprint-aarch64-apple-darwin.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/632125306"
+checksum = "sha256:d2a6e67e6aa308ed13d09627e8a8e8fe2cd3f62aeb406fe653d59bcec2c25c47"
+url = "https://github.com/dprint/dprint/releases/download/0.64.1/dprint-aarch64-apple-darwin.zip"
+url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/660288134"
 provenance = "github-attestations"
 
 [tools."aqua:dprint/dprint"."platforms.macos-x64"]
-checksum = "sha256:17081627eea67c016ba665379d8e721fd8aeaf13348f8757a605d0a9aad66260"
-url = "https://github.com/dprint/dprint/releases/download/0.63.0/dprint-x86_64-apple-darwin.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/632125297"
+checksum = "sha256:8a6f9d9e75e0379fb1b7fbc4a4528d33f72e050075bba7b20445be975a6d3273"
+url = "https://github.com/dprint/dprint/releases/download/0.64.1/dprint-x86_64-apple-darwin.zip"
+url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/660288130"
 provenance = "github-attestations"
 
 [tools."aqua:dprint/dprint"."platforms.windows-x64"]
-checksum = "sha256:a9f6d1146bd2a01585f845086df248297d0e958ede700557c13a5b49ec11f552"
-url = "https://github.com/dprint/dprint/releases/download/0.63.0/dprint-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/632125309"
+checksum = "sha256:52f59def557bdab65744d2b0cd23585843b8158d2427f7a671c35bdd080b38d0"
+url = "https://github.com/dprint/dprint/releases/download/0.64.1/dprint-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/dprint/dprint/releases/assets/660288139"
 provenance = "github-attestations"
 
 [[tools."aqua:facebook/ktfmt"]]
@@ -145,39 +145,39 @@ url = "https://github.com/git-lfs/git-lfs/releases/download/v3.8.0/git-lfs-windo
 url_api = "https://api.github.com/repos/git-lfs/git-lfs/releases/assets/532993969"
 
 [[tools."aqua:jdx/hk"]]
-version = "2.6.0"
+version = "2.8.0"
 backend = "aqua:jdx/hk"
-specifiers = ["2.6.0"]
+specifiers = ["2.8.0"]
 
 [tools."aqua:jdx/hk"."platforms.linux-arm64"]
-checksum = "sha256:bcccd60f962a784bcf602b3a1ee6aac4dc53c76b298bffe38c4f9101725d2fb0"
-url = "https://github.com/jdx/hk/releases/download/v2.6.0/hk-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/633469630"
+checksum = "sha256:d6802a66213972561f9e4aa4d3274decf3725b1fe513da762c0922274c18955b"
+url = "https://github.com/jdx/hk/releases/download/v2.8.0/hk-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/660247240"
 
 [tools."aqua:jdx/hk"."platforms.linux-arm64-musl"]
-checksum = "sha256:5f6585ebc8deb8ae581c0127693982da6dca6b4eaf52dfd55f882d5bbca398ae"
-url = "https://github.com/jdx/hk/releases/download/v2.6.0/hk-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/633469627"
+checksum = "sha256:d6802a66213972561f9e4aa4d3274decf3725b1fe513da762c0922274c18955b"
+url = "https://github.com/jdx/hk/releases/download/v2.8.0/hk-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/660247240"
 
 [tools."aqua:jdx/hk"."platforms.linux-x64"]
-checksum = "sha256:dfc2e1140a114c28f42fa6d1b958fac7008de3b96b19bbf74d693c0f86bcff60"
-url = "https://github.com/jdx/hk/releases/download/v2.6.0/hk-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/633469655"
+checksum = "sha256:5b5d7021625d12825b3d44496b466ad65697e02651c8b9fe00117f5c25c73d0a"
+url = "https://github.com/jdx/hk/releases/download/v2.8.0/hk-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/660247306"
 
 [tools."aqua:jdx/hk"."platforms.linux-x64-musl"]
-checksum = "sha256:cd7d76e014e709f8cac760e3cb6500305ba106915fc3b4764d88aa69a0c3a92d"
-url = "https://github.com/jdx/hk/releases/download/v2.6.0/hk-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/633469661"
+checksum = "sha256:5b5d7021625d12825b3d44496b466ad65697e02651c8b9fe00117f5c25c73d0a"
+url = "https://github.com/jdx/hk/releases/download/v2.8.0/hk-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/660247306"
 
 [tools."aqua:jdx/hk"."platforms.macos-arm64"]
-checksum = "sha256:40a336e793397d5940b284aae674477d430b24dc86167be92e080120d80e42f2"
-url = "https://github.com/jdx/hk/releases/download/v2.6.0/hk-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/633469634"
+checksum = "sha256:9f0290ff3cbfa9f6baff640c846bf07f78dd29e2023b0c230d3d5226c23385ca"
+url = "https://github.com/jdx/hk/releases/download/v2.8.0/hk-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/660247238"
 
 [tools."aqua:jdx/hk"."platforms.windows-x64"]
-checksum = "sha256:5afd28127f09f6b5a5d246413611b4494ad38d30930dd0cd009a8d6aff0f4c3d"
-url = "https://github.com/jdx/hk/releases/download/v2.6.0/hk-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/633469628"
+checksum = "sha256:391d61bb4a3bb612464142277f4d934d3b1aee6068cf18175d1c2406aeda29e3"
+url = "https://github.com/jdx/hk/releases/download/v2.8.0/hk-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/660247237"
 
 [[tools.java]]
 version = "openjdk-25.0.2"
@@ -205,43 +205,43 @@ checksum = "sha256:74784a0c07258f32d36e9224dd79187c566d831c30d47dc06888d42120873
 url = "https://download.java.net/java/GA/jdk25.0.2/b1e0dfa218384cb9959bdcb897162d4e/10/GPL/openjdk-25.0.2_windows-x64_bin.zip"
 
 [[tools.node]]
-version = "26.12.0"
+version = "26.12.1"
 backend = "core:node"
-specifiers = ["26.12.0"]
+specifiers = ["26.12.1"]
 
 [tools.node."platforms.linux-arm64"]
-checksum = "sha256:ec53c915c3fdd8786c5685abd25ae3fe9fba0692307f9811d7caaadea1bcaf03"
-url = "https://nodejs.org/dist/v26.12.0/node-v26.12.0-linux-arm64.tar.gz"
+checksum = "sha256:a6c01af459dd8972ab3fb08ee5da81244d26ba8c4944a62d5bbba8c597ae154f"
+url = "https://nodejs.org/dist/v26.12.1/node-v26.12.1-linux-arm64.tar.gz"
 
 [tools.node."platforms.linux-arm64-musl"]
-checksum = "sha256:2e70b6d5adbae94546c4d7e01de7b64c50bf8d3dbfaad2bb0774942e9da902b8"
-url = "https://unofficial-builds.nodejs.org/download/release/v26.12.0/node-v26.12.0-linux-arm64-musl.tar.gz"
+checksum = "sha256:c3694551f6cb888fe0befb4cb2e13ffe45b0bb2528ec141e7c3a29a7d7974d13"
+url = "https://unofficial-builds.nodejs.org/download/release/v26.12.1/node-v26.12.1-linux-arm64-musl.tar.gz"
 
 [tools.node."platforms.linux-x64"]
-checksum = "sha256:d9f88af72ad34f7ddf8e67289829f1698f54b6254f7d4f54b7453117ff1a3d2c"
-url = "https://nodejs.org/dist/v26.12.0/node-v26.12.0-linux-x64.tar.gz"
+checksum = "sha256:0fd1eb7770598f52a21995edf6ed35fc690400fa437c2386af329519e9143132"
+url = "https://nodejs.org/dist/v26.12.1/node-v26.12.1-linux-x64.tar.gz"
 
 [tools.node."platforms.linux-x64-musl"]
-checksum = "sha256:48ba1cdf21e684f13f38b6295f43bfea951f1ffd008b4cf93361c966b33f6938"
-url = "https://unofficial-builds.nodejs.org/download/release/v26.12.0/node-v26.12.0-linux-x64-musl.tar.gz"
+checksum = "sha256:8bf9cc0e7f8e3c7ec5368dca19242cad651b6b09d35bcdcf290ac3f80925e8dd"
+url = "https://unofficial-builds.nodejs.org/download/release/v26.12.1/node-v26.12.1-linux-x64-musl.tar.gz"
 
 [tools.node."platforms.macos-arm64"]
-checksum = "sha256:2a154d4a5458930e0a2d6a1ecf64eddf5a2b3e1c13636b609c2ecb042e8c4553"
-url = "https://nodejs.org/dist/v26.12.0/node-v26.12.0-darwin-arm64.tar.gz"
+checksum = "sha256:1901d539912c02afa10d1cc126943a8855a7eedebe830119463470db5e6c59e8"
+url = "https://nodejs.org/dist/v26.12.1/node-v26.12.1-darwin-arm64.tar.gz"
 
 [tools.node."platforms.macos-x64"]
-checksum = "sha256:878ecede191c7abc1bff01d3fb81f7ed81aa1161040dba18776b8ff8593614b1"
-url = "https://nodejs.org/dist/v26.12.0/node-v26.12.0-darwin-x64.tar.gz"
+checksum = "sha256:b85c2ea4420ad0bc4abf2dc6cf1f55130ed681f1cabf60cf3f526e4c9e2712ff"
+url = "https://nodejs.org/dist/v26.12.1/node-v26.12.1-darwin-x64.tar.gz"
 
 [tools.node."platforms.windows-x64"]
-checksum = "sha256:50efaf01a08c520b4bbe499c09a8c5a5c370002c419c0d9da2c6815d3066a453"
-url = "https://nodejs.org/dist/v26.12.0/node-v26.12.0-win-x64.zip"
+checksum = "sha256:b3efd5c70cba3308ed46e7e699a9b8aac075bbc6b027fcb39c84c31acc25e2b4"
+url = "https://nodejs.org/dist/v26.12.1/node-v26.12.1-win-x64.zip"
 
 [[tools."npm:actions-up"]]
-version = "1.21.0"
-aube = { path = ".mise/locks/npm-actions-up/1.21.0", digest = "sha256:e2076fec05607492ea9894c5910264c5c1e6185cf0d070be68ce1a9ba5b9c84f" }
+version = "2.0.0"
+aube = { path = ".mise/locks/npm-actions-up/2.0.0", digest = "sha256:debc0664a498eb73cc24c8660ded6b54a2367dc206e995b6d3295f61e5083e65" }
 backend = "npm:actions-up"
-specifiers = ["1.21.0"]
+specifiers = ["2.0.0"]
 
 [[tools.python]]
 version = "3.15.0"
