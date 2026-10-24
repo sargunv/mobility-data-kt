@@ -2,7 +2,6 @@ package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.LocalizedText
 import dev.sargunv.mobilitydata.utils.Timestamp
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import org.maplibre.spatialk.geojson.FeatureCollection
@@ -32,7 +31,6 @@ public data class GeofencingZones(
 ) : GbfsFeedData
 
 /** Properties describing travel allowances and limitations for a geofencing zone. */
-@OptIn(ExperimentalTime::class)
 @Serializable
 public data class GeofencingZone(
 

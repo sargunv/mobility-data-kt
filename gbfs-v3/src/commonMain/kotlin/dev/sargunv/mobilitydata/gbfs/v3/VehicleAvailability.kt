@@ -3,7 +3,6 @@ package dev.sargunv.mobilitydata.gbfs.v3
 import dev.sargunv.mobilitydata.utils.ExperimentalMobilityDataApi
 import dev.sargunv.mobilitydata.utils.Timestamp
 import dev.sargunv.mobilitydata.utils.serialization.DatetimeSerializer
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -73,7 +72,6 @@ public data class VehicleAvailabilityEntry(
 
 /** A time slot during which a vehicle is available. */
 @ExperimentalMobilityDataApi
-@OptIn(ExperimentalTime::class)
 @Serializable
 public data class VehicleAvailabilitySlot(
   /** Start date and time of the available time slot. */

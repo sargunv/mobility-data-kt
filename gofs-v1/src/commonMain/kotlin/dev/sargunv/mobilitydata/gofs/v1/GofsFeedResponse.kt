@@ -2,7 +2,6 @@ package dev.sargunv.mobilitydata.gofs.v1
 
 import dev.sargunv.mobilitydata.utils.EpochSeconds
 import dev.sargunv.mobilitydata.utils.WholeSeconds
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -13,7 +12,6 @@ import kotlinx.serialization.Serializable
  * response object.
  */
 @Serializable
-@OptIn(ExperimentalTime::class)
 public data class GofsFeedResponse<T : GofsFeedData>(
   /**
    * Indicates the last time data in the feed was updated. This timestamp represents the publisher's

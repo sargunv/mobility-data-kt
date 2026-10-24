@@ -2,7 +2,6 @@ package dev.sargunv.mobilitydata.gbfs.v1
 
 import dev.sargunv.mobilitydata.utils.EpochSeconds
 import dev.sargunv.mobilitydata.utils.IntBoolean
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -14,7 +13,6 @@ public data class StationStatus(
 ) : GbfsFeedData, List<StationStatusEntry> by stations
 
 /** Real-time status information for a single station. */
-@OptIn(ExperimentalTime::class)
 @Serializable
 public data class StationStatusEntry(
   /** Identifier of a station. See station_information.json. */

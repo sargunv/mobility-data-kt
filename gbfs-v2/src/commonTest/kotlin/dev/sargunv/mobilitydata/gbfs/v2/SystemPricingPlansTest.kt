@@ -4,7 +4,6 @@ import dev.sargunv.mobilitydata.utils.Decimal
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -50,7 +49,6 @@ private val jsonContent1 = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val expectedResponse1 =
   GbfsFeedResponse(
     lastUpdated = Instant.fromEpochSeconds(1640887163),
@@ -124,7 +122,6 @@ private val jsonContent2 = // language=json
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val expectedResponse2 =
   GbfsFeedResponse(
     lastUpdated = Instant.fromEpochSeconds(1640887163),

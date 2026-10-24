@@ -5,7 +5,6 @@ import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -52,7 +51,6 @@ private val jsonContent30 = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val expectedResponse30 =
   GbfsFeedResponse(
     lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
@@ -120,7 +118,7 @@ private val jsonContent31 = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalMobilityDataApi::class, ExperimentalTime::class)
+@OptIn(ExperimentalMobilityDataApi::class)
 private val expectedResponse31 =
   GbfsFeedResponse(
     lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),

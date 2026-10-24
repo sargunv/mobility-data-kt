@@ -3,7 +3,6 @@ package dev.sargunv.mobilitydata.gbfs.v3
 import dev.sargunv.mobilitydata.utils.Timestamp
 import dev.sargunv.mobilitydata.utils.serialization.DatetimeSerializer
 import kotlin.jvm.JvmInline
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -21,7 +20,6 @@ public data class VehicleStatus(
 ) : GbfsFeedData, List<Vehicle> by vehicles
 
 /** Represents a vehicle that is currently not part of an active rental. */
-@OptIn(ExperimentalTime::class)
 @Serializable
 public data class Vehicle(
 

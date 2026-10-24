@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.mdb.v1
 
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
@@ -19,7 +18,6 @@ public val MdbJson: Json = Json {
 }
 
 /** Instant encoded as an ISO-8601 date-time string. */
-@OptIn(ExperimentalTime::class)
 public typealias IsoDateTime = @Serializable(with = IsoDateTimeSerializer::class) Instant
 
 /**
@@ -27,7 +25,6 @@ public typealias IsoDateTime = @Serializable(with = IsoDateTimeSerializer::class
  *
  * The catalog sometimes omits the offset. Those values are UTC.
  */
-@OptIn(ExperimentalTime::class)
 public object IsoDateTimeSerializer : KSerializer<Instant> {
   private val delegate = String.serializer()
 

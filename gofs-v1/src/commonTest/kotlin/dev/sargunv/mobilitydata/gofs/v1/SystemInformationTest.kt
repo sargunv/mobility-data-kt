@@ -3,7 +3,6 @@ package dev.sargunv.mobilitydata.gofs.v1
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.json.Json
@@ -33,7 +32,6 @@ private val jsonContent = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val expectedResponse =
   GofsFeedResponse(
     lastUpdated = Instant.fromEpochSeconds(1611598155),

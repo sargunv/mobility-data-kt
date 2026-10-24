@@ -3,7 +3,6 @@ package dev.sargunv.mobilitydata.gbfs.v2
 import dev.sargunv.mobilitydata.utils.EpochSeconds
 import dev.sargunv.mobilitydata.utils.Url
 import kotlin.jvm.JvmInline
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -23,7 +22,6 @@ public data class SystemAlerts(
 ) : GbfsFeedData, List<Alert> by alerts
 
 /** An alert about changes to the system. */
-@OptIn(ExperimentalTime::class)
 @Serializable
 public data class Alert(
   /** Identifier for this alert. */
@@ -91,7 +89,6 @@ public value class AlertType(
 }
 
 /** Time period when an alert is in effect. */
-@OptIn(ExperimentalTime::class)
 @Serializable
 public data class AlertTime(
   /** Start time of the alert. REQUIRED if times array is defined. */

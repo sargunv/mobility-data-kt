@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.utils.serialization
 
 import dev.sargunv.mobilitydata.utils.Timestamp
-import kotlin.time.ExperimentalTime
 import kotlinx.datetime.format
 import kotlinx.datetime.format.DateTimeComponents
 import kotlinx.datetime.format.DateTimeComponents.Formats.ISO_DATE_TIME_OFFSET
@@ -19,7 +18,6 @@ import kotlinx.serialization.encoding.Encoder
  * This serializer converts between [Timestamp] objects and their string representation in RFC3339
  * format, preserving both the instant and UTC offset information.
  */
-@OptIn(ExperimentalTime::class)
 public object TimestampSerializer : KSerializer<Timestamp> {
   private val delegate = String.serializer()
 
