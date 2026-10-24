@@ -12,16 +12,16 @@ postinstall = ["hk install --mise"]
 
 [tools]
 "core:java" = "openjdk-25.0.2"
-"aqua:dprint/dprint" = "0.63.0"
-"aqua:jdx/hk" = "2.6.0"
+"aqua:dprint/dprint" = "0.64.1"
+"aqua:jdx/hk" = "2.8.0"
 "aqua:facebook/ktfmt" = "0.65"
 "core:python" = "3.15"
 "aqua:git-lfs/git-lfs" = "3.8.0"
 
 # For tooling outside Gradle (also provides npm for the npm: backend below);
 # Kotlin/JS brings its own Node via Gradle.
-"core:node" = "26.12.0"
-"npm:actions-up" = "1.21.0"
+"core:node" = "26.12.1"
+"npm:actions-up" = "2.0.0"
 
 # The CLI only; Xcode itself is installed via the xcode:* tasks. macOS-only.
 "aqua:XcodesOrg/xcodes" = { version = "2.1.0", os = ["macos"] }
