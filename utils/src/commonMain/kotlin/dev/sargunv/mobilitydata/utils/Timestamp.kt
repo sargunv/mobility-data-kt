@@ -1,7 +1,6 @@
 package dev.sargunv.mobilitydata.utils
 
 import dev.sargunv.mobilitydata.utils.serialization.TimestampSerializer
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.UtcOffset
 import kotlinx.datetime.format.DateTimeComponents
@@ -17,7 +16,6 @@ import kotlinx.serialization.Serializable
  * This type combines an instant in time with its UTC offset, allowing for proper serialization and
  * deserialization of timestamp values that include timezone information.
  */
-@ExperimentalTime
 @Serializable(with = TimestampSerializer::class)
 public data class Timestamp
 internal constructor(

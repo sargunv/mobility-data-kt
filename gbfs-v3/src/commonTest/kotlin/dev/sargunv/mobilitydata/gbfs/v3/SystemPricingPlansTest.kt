@@ -7,7 +7,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -62,7 +61,6 @@ private val jsonContent1 = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val expectedResponse1 =
   GbfsFeedResponse(
     lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
@@ -146,7 +144,6 @@ private val jsonContent2 = // language=json
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val expectedResponse2 =
   GbfsFeedResponse(
     lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
@@ -215,7 +212,7 @@ private val jsonContentReservation = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalMobilityDataApi::class, ExperimentalTime::class)
+@OptIn(ExperimentalMobilityDataApi::class)
 private val expectedResponseReservation =
   GbfsFeedResponse(
     lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
@@ -274,7 +271,7 @@ private val jsonContentFareCapping = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalMobilityDataApi::class, ExperimentalTime::class)
+@OptIn(ExperimentalMobilityDataApi::class)
 private val expectedResponseFareCapping =
   GbfsFeedResponse(
     lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),

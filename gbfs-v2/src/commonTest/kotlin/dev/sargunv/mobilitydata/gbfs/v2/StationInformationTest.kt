@@ -4,7 +4,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFails
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -40,7 +39,6 @@ private val physicalJsonContent = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val physicalExpectedResponse =
   GbfsFeedResponse(
     lastUpdated = Instant.fromEpochSeconds(1640887163),
@@ -108,7 +106,6 @@ private val virtualJsonContent = // language=json
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val virtualExpectedResponse =
   GbfsFeedResponse(
     lastUpdated = Instant.fromEpochSeconds(1640887163),

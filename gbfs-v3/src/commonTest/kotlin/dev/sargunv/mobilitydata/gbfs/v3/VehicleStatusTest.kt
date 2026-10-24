@@ -5,7 +5,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -57,7 +56,6 @@ private val carsharingJsonContent = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val carshareExpectedResponse =
   GbfsFeedResponse(
     lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
@@ -134,7 +132,6 @@ private val micromobilityJsonContent = // language=json
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val micromobilityExpectedResponse =
   GbfsFeedResponse(
     lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),
@@ -204,7 +201,6 @@ class VehicleStatusTest {
   }
 
   @Test
-  @OptIn(ExperimentalTime::class)
   fun encodePreservesTimestampFractionsAndDropsDatetimeFractions() {
     val vehicle =
       Vehicle(

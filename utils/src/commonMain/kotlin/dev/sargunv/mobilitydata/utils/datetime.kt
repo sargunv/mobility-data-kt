@@ -8,7 +8,6 @@ import dev.sargunv.mobilitydata.utils.serialization.SecondsSerializer
 import dev.sargunv.mobilitydata.utils.serialization.WholeMinutesSerializer
 import dev.sargunv.mobilitydata.utils.serialization.WholeSecondsSerializer
 import kotlin.time.Duration
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.DayOfWeek
 import kotlinx.datetime.IllegalTimeZoneException
@@ -24,7 +23,6 @@ import kotlinx.serialization.Serializable
  * An integer representing the number of seconds that have elapsed since 00:00:00 UTC on 1 January
  * 1970 (Unix epoch).
  */
-@OptIn(ExperimentalTime::class)
 public typealias EpochSeconds = @Serializable(with = EpochSecondsSerializer::class) Instant
 
 /** [LocalDate] in the ISO 8601 basic format (YYYYMMDD). */

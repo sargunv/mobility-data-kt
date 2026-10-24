@@ -6,7 +6,6 @@ import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -84,7 +83,6 @@ private val jsonContent = // language=JSON
   """
     .trimIndent()
 
-@OptIn(ExperimentalTime::class)
 private val expectedResponse =
   GbfsFeedResponse(
     lastUpdated = Timestamp.parse("2023-07-17T13:34:13+02:00"),

@@ -2,7 +2,6 @@ package dev.sargunv.mobilitydata.utils.serialization
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -10,7 +9,6 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.long
 
-@OptIn(ExperimentalTime::class)
 class EpochSecondsSerializerTest {
   @Serializable
   private data class TestData(

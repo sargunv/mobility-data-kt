@@ -3,7 +3,6 @@ package dev.sargunv.mobilitydata.utils.serialization
 import dev.sargunv.mobilitydata.utils.Timestamp
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.UtcOffset
 import kotlinx.serialization.Serializable
@@ -11,7 +10,6 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 
-@OptIn(ExperimentalTime::class)
 class DatetimeSerializerTest {
   @Serializable
   private data class TestData(

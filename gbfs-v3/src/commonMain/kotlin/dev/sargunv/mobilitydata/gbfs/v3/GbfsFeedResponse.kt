@@ -2,7 +2,6 @@ package dev.sargunv.mobilitydata.gbfs.v3
 
 import dev.sargunv.mobilitydata.utils.Timestamp
 import dev.sargunv.mobilitydata.utils.WholeSeconds
-import kotlin.time.ExperimentalTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,7 +11,6 @@ import kotlinx.serialization.Serializable
  * All GBFS feeds are wrapped in this structure that provides metadata about the feed.
  */
 @Serializable
-@OptIn(ExperimentalTime::class)
 public data class GbfsFeedResponse<T : GbfsFeedData>(
   /** Timestamp indicating the last time the data in this feed was updated. */
   @SerialName("last_updated") public val lastUpdated: Timestamp,

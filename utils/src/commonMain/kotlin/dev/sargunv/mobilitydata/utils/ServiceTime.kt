@@ -4,7 +4,6 @@ import dev.sargunv.mobilitydata.utils.serialization.ServiceTimeSerializer
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
-import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
@@ -44,7 +43,6 @@ public data class ServiceTime(
    * @param timezone The timezone in which to interpret the service time
    * @return The corresponding instant in time
    */
-  @OptIn(ExperimentalTime::class)
   public fun toInstant(serviceDate: LocalDate, timezone: TimeZone): Instant {
     val noonOnServiceDate = serviceDate.atTime(LocalTime(hour = 12, minute = 0)).toInstant(timezone)
     return noonOnServiceDate - 12.hours + hours.hours + minutes.minutes + seconds.seconds
