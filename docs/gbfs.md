@@ -25,15 +25,15 @@ and other shared mobility services.
 
 ## Installation
 
-Add the dependency to your `build.gradle.kts`. The client functionality requires Ktor, so also add a
-Ktor engine:
+Add the dependency to your `build.gradle.kts`. The client functionality requires Ktor, so also add
+Ktor's default engines:
 
 === "GBFS v3.0"
 
     ```kotlin
     dependencies {
         implementation("dev.sargunv.mobility-data:gbfs-v3:{{ gradle.project_version }}")
-        implementation("io.ktor:ktor-client-cio:{{ gradle.ktor_version }}") // or another engine
+        implementation("io.ktor:ktor-client-engine-defaults:{{ gradle.ktor_version }}")
     }
     ```
 
@@ -42,7 +42,7 @@ Ktor engine:
     ```kotlin
     dependencies {
         implementation("dev.sargunv.mobility-data:gbfs-v2:{{ gradle.project_version }}")
-        implementation("io.ktor:ktor-client-cio:{{ gradle.ktor_version }}") // or another engine
+        implementation("io.ktor:ktor-client-engine-defaults:{{ gradle.ktor_version }}")
     }
     ```
 
@@ -51,7 +51,7 @@ Ktor engine:
     ```kotlin
     dependencies {
         implementation("dev.sargunv.mobility-data:gbfs-v1:{{ gradle.project_version }}")
-        implementation("io.ktor:ktor-client-cio:{{ gradle.ktor_version }}") // or another engine
+        implementation("io.ktor:ktor-client-engine-defaults:{{ gradle.ktor_version }}")
     }
     ```
 

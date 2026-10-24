@@ -33,11 +33,7 @@ gtfs-realtime-bindings = { module = "org.mobilitydata:gtfs-realtime-bindings", v
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
-ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
-ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
-ktor-client-curl = { module = "io.ktor:ktor-client-curl", version.ref = "ktor" }
-ktor-client-winhttp = { module = "io.ktor:ktor-client-winhttp", version.ref = "ktor" }
-ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
+ktor-client-engine-defaults = { module = "io.ktor:ktor-client-engine-defaults", version.ref = "ktor" }
 ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
 spatialk-geojson = { module = "org.maplibre.spatialk:geojson", version.ref = "spatialk" }
 osm-opening-hours = { module = "de.westnordost:osm-opening-hours", version.ref = "osm-opening-hours" }
