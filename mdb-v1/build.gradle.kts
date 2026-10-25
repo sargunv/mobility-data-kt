@@ -26,15 +26,9 @@ kotlin {
         implementation(kotlin("test-annotations-common"))
         implementation(libs.kotlinx.coroutines.test)
         implementation(libs.kotlinx.io.core)
+        implementation(libs.ktor.client.engine.defaults)
       }
     }
-
-    jvmTest { dependencies { implementation(libs.ktor.client.okhttp) } }
-    appleTest { dependencies { implementation(libs.ktor.client.darwin) } }
-    linuxTest { dependencies { implementation(libs.ktor.client.curl) } }
-    mingwTest { dependencies { implementation(libs.ktor.client.winhttp) } }
-    jsTest { dependencies { implementation(libs.ktor.client.js) } }
-    wasmJsTest { dependencies { implementation(libs.ktor.client.js) } }
 
     create("ktorTest").apply {
       dependencies {

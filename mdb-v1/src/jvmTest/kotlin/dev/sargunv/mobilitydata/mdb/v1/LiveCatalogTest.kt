@@ -1,6 +1,5 @@
 package dev.sargunv.mobilitydata.mdb.v1
 
-import io.ktor.client.engine.okhttp.OkHttp
 import kotlin.test.Test
 import kotlin.test.assertTrue
 import kotlinx.coroutines.test.runTest
@@ -14,7 +13,7 @@ class LiveCatalogTest {
       return@runTest
     }
 
-    MdbV1Client(OkHttp.create(), CatalogAuth.Refresh(token)).use { client ->
+    MdbV1Client(auth = CatalogAuth.Refresh(token)).use { client ->
       val feeds = client.getFeeds(FeedQuery(limit = 1)).getOrThrow()
       assertTrue(feeds.isNotEmpty(), "catalog returned no feeds")
     }

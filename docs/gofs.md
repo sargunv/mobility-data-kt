@@ -21,13 +21,13 @@ services such as ride-hailing, taxi services, and other demand-responsive transp
 
 ## Installation
 
-Add the dependency to your `build.gradle.kts`. The client functionality requires Ktor, so also add a
-Ktor engine:
+Add the dependency to your `build.gradle.kts`. The client functionality requires Ktor, so also add
+Ktor's default engines:
 
 ```kotlin
 dependencies {
     implementation("dev.sargunv.mobility-data:gofs-v1:{{ gradle.project_version }}")
-    implementation("io.ktor:ktor-client-cio:{{ gradle.ktor_version }}") // or another engine
+    implementation("io.ktor:ktor-client-engine-defaults:{{ gradle.ktor_version }}")
 }
 ```
 

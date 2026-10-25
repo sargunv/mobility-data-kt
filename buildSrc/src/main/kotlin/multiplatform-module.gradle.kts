@@ -50,3 +50,10 @@ kotlin {
   watchosDeviceArm64()
   iosX64()
 }
+
+// ktor-client-engine-defaults has no wasmWasi variant.
+configurations
+  .matching { it.name.contains("wasmWasiTest") }
+  .configureEach {
+    exclude(group = "io.ktor", module = "ktor-client-engine-defaults")
+  }

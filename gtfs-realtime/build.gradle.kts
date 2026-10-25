@@ -15,7 +15,12 @@ kotlin {
       listOf(jvmMain, nativeMain, jsMain, wasmJsMain).forEach { it.get().dependsOn(this) }
     }
 
-    commonTest { dependencies { implementation(libs.kotlinx.coroutines.test) } }
+    commonTest {
+      dependencies {
+        implementation(libs.kotlinx.coroutines.test)
+        implementation(libs.ktor.client.engine.defaults)
+      }
+    }
 
     jvmTest { dependencies { implementation(libs.gtfs.realtime.bindings) } }
 
