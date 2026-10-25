@@ -1,0 +1,30 @@
+// https://dprint.dev
+// dprint owns formatter routing. Prefer plugins where available and exec
+// mise-installed formatters for languages without a dprint plugin.
+{
+  "$schema": "https://dprint.dev/schemas/v0.json",
+  "lineWidth": 100,
+  "indentWidth": 2,
+  "useTabs": false,
+  "newLineKind": "lf",
+  "excludes": [
+    "**/build",
+    "**/.gradle",
+    "kotlin-js-store",
+    "**/*.api",
+    "sample-data",
+    "mdb-v1/specs/*.yaml",
+    ".mise/locks",
+  ],
+  "oxc": {
+    "experimentalSortImports": { "newlinesBetween": true },
+    "lineWidth": 80,
+    "proseWrap": "always",
+    "sortPackageJson": false,
+  },
+  "ktfmt": { "style": "google", "lineWidth": 100 },
+  "plugins": [
+    "https://plugins.dprint.dev/sargunv/ktfmt-0.65.0.json@d355d4440dda00c0e315b5c39669f417bcfa76b64b68591fa1818f7a1f6b1005",
+    "npm:@dprint/oxc@0.47.0",
+  ],
+}
