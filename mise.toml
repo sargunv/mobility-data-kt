@@ -1,11 +1,10 @@
 # https://mise.jdx.dev
-min_version = "2026.7.15"
+min_version = "2026.10.17"
 
 [settings]
 experimental = true
 pin = true
 lockfile = true
-minimum_release_age = "3d"
 
 [hooks]
 postinstall = ["hk install --mise"]
@@ -14,7 +13,6 @@ postinstall = ["hk install --mise"]
 "core:java" = "openjdk-25.0.2"
 "aqua:dprint/dprint" = "0.64.1"
 "aqua:jdx/hk" = "2.8.0"
-"aqua:facebook/ktfmt" = "0.65"
 "core:python" = "3.15"
 "aqua:git-lfs/git-lfs" = "3.8.0"
 
@@ -187,8 +185,3 @@ run = "hk check --all"
 [tasks.fix]
 description = "Auto-fix formatting issues"
 run = "hk fix --all"
-
-[tasks._ktfmt]
-description = "Called by dprint.json"
-hide = true
-run = 'java -jar {{ tools["aqua:facebook/ktfmt"].path }}/ktfmt'
