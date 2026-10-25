@@ -8,8 +8,9 @@
 
 ## Introduction
 
-Mobility Data for Kotlin is a set of libraries for working with open transportation data formats in
-Kotlin. It supports all Kotlin Multiplatform targets, including JVM, Native, JS, and WASM.
+Mobility Data for Kotlin is a set of libraries for working with open
+transportation data formats in Kotlin. It supports all Kotlin Multiplatform
+targets, including JVM, Native, JS, and WASM.
 
 It implements clients for:
 
@@ -18,4 +19,5 @@ It implements clients for:
 - General On-Demand Feed Specification (GOFS)
 - Mobility Database Catalog API
 
-See the [project site](https://code.sargunv.dev/mobility-data-kt/) for more info.
+See the [project site](https://code.sargunv.dev/mobility-data-kt/) for more
+info.
