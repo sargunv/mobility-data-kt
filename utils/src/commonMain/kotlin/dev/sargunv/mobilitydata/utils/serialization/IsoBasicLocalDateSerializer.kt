@@ -26,7 +26,7 @@ private const val DAY_START = 6
  * directly and leaving every other input to [LocalDate.Formats.ISO_BASIC], so the result and any
  * error are the ones it gives.
  */
-private fun parseIsoBasicDate(value: String): LocalDate {
+internal fun parseIsoBasicDate(value: String): LocalDate {
   if (value.length == BASIC_DATE_LENGTH && value.all { it in '0'..'9' }) {
     val date =
       try {

@@ -19,10 +19,12 @@ public object RgbColorCodeSerializer : KSerializer<RgbColor> {
   override fun serialize(encoder: Encoder, value: RgbColor): Unit =
     delegate.serialize(encoder, "#${value.value.toHexString(HexFormat.UpperCase).takeLast(6)}")
 
-  override fun deserialize(decoder: Decoder): RgbColor {
-    val str = delegate.deserialize(decoder)
-    val value = if (str.startsWith('#')) parseRgbHex(str, start = 1) else -1
-    require(value >= 0) { "Invalid RGB color code: $str" }
-    return RgbColor(value)
-  }
+  override fun deserialize(decoder: Decoder): RgbColor =
+    parseRgbColorCode(delegate.deserialize(decoder))
+}
+
+internal fun parseRgbColorCode(str: String): RgbColor {
+  val value = if (str.startsWith('#')) parseRgbHex(str, start = 1) else -1
+  require(value >= 0) { "Invalid RGB color code: $str" }
+  return RgbColor(value)
 }
