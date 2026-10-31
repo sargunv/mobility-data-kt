@@ -1,24 +1,33 @@
 # https://mise.jdx.dev
-min_version = "2026.10.17"
+min_version = "2026.10.24"
 
 [settings]
 experimental = true
 pin = true
 lockfile = true
+lockfile_mode = "merge"
+lockfile_platforms = [
+  "linux-x64",
+  "linux-arm64",
+  "macos-arm64",
+  "windows-x64",
+  "windows-arm64",
+]
 
 [hooks]
 postinstall = ["hk install --mise"]
 
 [tools]
-"core:java" = "openjdk-25.0.2"
-"aqua:dprint/dprint" = "0.64.1"
-"aqua:jdx/hk" = "2.8.0"
-"core:python" = "3.15"
-"aqua:git-lfs/git-lfs" = "3.8.0"
+"core:java" = "zulu-25.38.109.0"
+"aqua:dprint/dprint" = "0.64.3"
+"aqua:jdx/hk" = "2.10.0"
+"aqua:jdx/jactionlint" = "2.4.0"
+"core:python" = "3.15.2"
+"aqua:git-lfs/git-lfs" = "3.8.1"
 
 # For tooling outside Gradle (also provides npm for the npm: backend below);
 # Kotlin/JS brings its own Node via Gradle.
-"core:node" = "26.12.1"
+"core:node" = "26.13.0"
 "npm:actions-up" = "2.0.0"
 
 # The CLI only; Xcode itself is installed via the xcode:* tasks. macOS-only.

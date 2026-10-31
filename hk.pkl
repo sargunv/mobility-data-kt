@@ -1,6 +1,6 @@
-amends "package://github.com/jdx/hk/releases/download/v2.8.0/hk@2.8.0#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v2.10.0/hk@2.10.0#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v2.8.0/hk@2.8.0#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.10.0/hk@2.10.0#/Builtins.pkl"
 
 // Git-LFS fixtures. dprint.jsonc already skips them; keep hk from matching them via dprint's **/* glob.
 exclude = List("sample-data")
@@ -11,6 +11,8 @@ steps {
   ["dprint"] = (Builtins.dprint) { exclude = List("sample-data") }
 
   // linters
+  ["jactionlint"] = Builtins.jactionlint
+
   ["detekt"] {
     glob = List("**/src/commonMain/kotlin/**/*.kt")
     check = "./gradlew detekt"
