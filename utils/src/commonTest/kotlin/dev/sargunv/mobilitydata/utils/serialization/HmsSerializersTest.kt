@@ -51,8 +51,13 @@ class HmsSerializersTest {
   /** The parser before the fast path was added. */
   private fun <T> reference(value: String, typeName: String, create: (Int, Int, Int) -> T): T {
     val parts = value.split(":")
-    require(parts.size == 3) { "$typeName must be in the format HH:MM:SS, but was $value." }
-    return create(parts[0].toInt(), parts[1].toInt(), parts[2].toInt())
+    val hours = parts.getOrNull(0)?.toIntOrNull()
+    val minutes = parts.getOrNull(1)?.toIntOrNull()
+    val seconds = parts.getOrNull(2)?.toIntOrNull()
+    require(parts.size == 3 && hours != null && minutes != null && seconds != null) {
+      "$typeName must be in the format HH:MM:SS, but was $value."
+    }
+    return create(hours, minutes, seconds)
   }
 
   private fun <T> decode(serializer: KSerializer<T>, value: String): T =
@@ -70,7 +75,7 @@ class HmsSerializersTest {
     for (input in inputs) {
       assertEquals(
         outcome { reference(input, "ServiceTime", ::ServiceTime) },
-        outcome { decode(ServiceTimeSerializer, input) },
+        outcome { parseHms(input, "ServiceTime", ::ServiceTime) },
         "input '$input'",
       )
     }
@@ -81,7 +86,7 @@ class HmsSerializersTest {
     for (input in inputs) {
       assertEquals(
         outcome { reference(input, "GtfsLocalTime", ::GtfsLocalTime) },
-        outcome { decode(GtfsLocalTimeSerializer, input) },
+        outcome { parseHms(input, "GtfsLocalTime", ::GtfsLocalTime) },
         "input '$input'",
       )
     }
@@ -93,5 +98,11 @@ class HmsSerializersTest {
     assertEquals(ServiceTime(7, 5, 9), decode(ServiceTimeSerializer, "7:5:9"))
     assertEquals(ServiceTime(25, 35, 0), decode(ServiceTimeSerializer, "25:35:00"))
     assertEquals(ServiceTime(7, 30, 0), decode(ServiceTimeSerializer, "007:30:00"))
+  }
+
+  @Test
+  fun jsonWrapsInvalidInput() {
+    assertJsonWrapsOriginalIae(ServiceTimeSerializer, "ab:cd:ef")
+    assertJsonWrapsOriginalIae(GtfsLocalTimeSerializer, "ab:cd:ef")
   }
 }

@@ -19,10 +19,12 @@ public object RgbColorTripletSerializer : KSerializer<RgbColor> {
   override fun serialize(encoder: Encoder, value: RgbColor): Unit =
     delegate.serialize(encoder, value.value.toHexString(HexFormat.UpperCase).takeLast(6))
 
-  override fun deserialize(decoder: Decoder): RgbColor {
-    val str = delegate.deserialize(decoder)
-    val value = parseRgbHex(str, start = 0)
-    require(value >= 0) { "Invalid RGB color code: $str" }
-    return RgbColor(value)
-  }
+  override fun deserialize(decoder: Decoder): RgbColor =
+    parseRgbColorTriplet(delegate.deserialize(decoder))
+}
+
+internal fun parseRgbColorTriplet(str: String): RgbColor {
+  val value = parseRgbHex(str, start = 0)
+  require(value >= 0) { "Invalid RGB color code: $str" }
+  return RgbColor(value)
 }
