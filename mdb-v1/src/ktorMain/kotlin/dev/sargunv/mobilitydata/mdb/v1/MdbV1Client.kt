@@ -251,6 +251,38 @@ internal constructor(
   public suspend fun getGtfsFeedReliability(id: FeedId): Result<FeedReliabilityReport> =
     catalogGet("v1", "gtfs_feeds", id.value, "reliability")
 
+  /**
+   * Returns continuous coverage history for a GTFS feed.
+   *
+   * @param id Catalog GTFS feed id
+   * @param query Download-date window and page
+   * @return Continuous coverage history, or an error
+   */
+  @ExperimentalMobilityDataApi
+  public suspend fun getGtfsFeedContinuousCoverage(
+    id: FeedId,
+    query: ContinuousCoverageQuery = ContinuousCoverageQuery(),
+  ): Result<GtfsFeedContinuousCoverageResponse> =
+    catalogGet("v1", "gtfs_feeds", id.value, "continuous_coverage") {
+      appendContinuousCoverageQuery(query)
+    }
+
+  /**
+   * Returns validation history for a GTFS feed.
+   *
+   * @param id Catalog GTFS feed id
+   * @param query Time window, notice filters, and page
+   * @return Validation history, or an error
+   */
+  @ExperimentalMobilityDataApi
+  public suspend fun getGtfsFeedValidationReports(
+    id: FeedId,
+    query: ValidationReportsQuery = ValidationReportsQuery(),
+  ): Result<GtfsFeedValidationReportsResponse> =
+    catalogGet("v1", "gtfs_feeds", id.value, "validation_reports") {
+      appendValidationReportsQuery(query)
+    }
+
   override fun close(): Unit = httpClient.close()
 
   private suspend inline fun <reified T> catalogGet(

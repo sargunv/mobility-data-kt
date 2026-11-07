@@ -13,6 +13,13 @@ public data class FeedReliabilityReport(
   /** Whether the feed currently holds the seal. */
   @SerialName("has_seal") public val hasSeal: Boolean? = null,
 
+  /**
+   * Descriptive seal status. [hasSeal] is true only when this is [SealStatus.Granted].
+   *
+   * Added in catalog v1.16.13.
+   */
+  @SerialName("seal_status") public val sealStatus: SealStatus? = null,
+
   /** Instant the feed most recently earned the seal. */
   @SerialName("earned_at") public val earnedAt: IsoDateTime? = null,
 
@@ -38,10 +45,20 @@ public data class ReliabilityCriterion(
   /** Which criterion this entry describes. */
   public val criterion: ReliabilityCriterionId? = null,
 
-  /** Verdict at the last evaluation, with no grace period applied. */
+  /**
+   * Debounced verdict that contributes to the seal, with the grace period already applied.
+   *
+   * As of catalog v1.16.13, a check still inside its grace period reads
+   * [ReliabilityCriterionStatus.Pass] with [inGracePeriod] true (the at-risk state).
+   * [ReliabilityCriterionStatus.Fail] means the failure is confirmed and withholds the seal.
+   */
   public val status: ReliabilityCriterionStatus? = null,
 
-  /** Whether a failing check is still inside the grace period. */
+  /**
+   * Whether the daily check is currently failing but still inside its grace period.
+   *
+   * Can only be true while [status] is [ReliabilityCriterionStatus.Pass].
+   */
   @SerialName("in_grace_period") public val inGracePeriod: Boolean? = null,
 
   /** Instant the grace period expires. */
@@ -101,13 +118,16 @@ public value class ReliabilityCriterionStatus(
 ) {
   /** Named constants for [ReliabilityCriterionStatus]. */
   public companion object {
-    /** The check passed. */
+    /** The criterion is not counting against the seal. */
     public val Pass: ReliabilityCriterionStatus = ReliabilityCriterionStatus("pass")
 
-    /** The check failed. */
+    /** The failure is confirmed and the criterion is withholding the seal. */
     public val Fail: ReliabilityCriterionStatus = ReliabilityCriterionStatus("fail")
 
-    /** Inputs were missing, so no verdict was reached. */
+    /**
+     * Not produced by a missing-input run; the last verdict is left untouched. Listed because the
+     * underlying column can hold it.
+     */
     public val Unknown: ReliabilityCriterionStatus = ReliabilityCriterionStatus("unknown")
 
     /** The criterion does not apply to this feed. */
@@ -117,5 +137,28 @@ public value class ReliabilityCriterionStatus(
     /** The criterion has produced no verdict yet. */
     public val NeverEvaluated: ReliabilityCriterionStatus =
       ReliabilityCriterionStatus("never_evaluated")
+  }
+}
+
+/** Descriptive status of a feed's Seal of Reliability. */
+@Serializable
+@JvmInline
+public value class SealStatus(
+  /** Wire value. */
+  public val value: String,
+) {
+  /** Named constants for [SealStatus]. */
+  public companion object {
+    /** The feed currently holds the seal. [FeedReliabilityReport.hasSeal] is true only then. */
+    public val Granted: SealStatus = SealStatus("granted")
+
+    /** At least one criterion is failing. */
+    public val NotGranted: SealStatus = SealStatus("not_granted")
+
+    /** None is failing, but not every criterion has been evaluated yet. */
+    public val Unknown: SealStatus = SealStatus("unknown")
+
+    /** None of the criteria has been evaluated yet. */
+    public val NeverEvaluated: SealStatus = SealStatus("never_evaluated")
   }
 }

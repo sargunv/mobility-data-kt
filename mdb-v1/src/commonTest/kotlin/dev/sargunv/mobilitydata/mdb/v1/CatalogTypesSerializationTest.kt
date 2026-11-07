@@ -4,6 +4,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertIs
 import kotlin.time.Instant
+import kotlinx.datetime.LocalDate
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.encodeToJsonElement
@@ -189,5 +190,81 @@ class CatalogTypesSerializationTest {
     val decoded = MdbJson.decodeFromString<SearchFeedItem>(json)
     assertEquals(false, decoded.seasonal)
     assertEquals(FeedDataType.Gtfs, decoded.dataType)
+  }
+
+  @Test
+  fun decodeReliabilityReportSealStatus() {
+    val json =
+      """{"feed_id":"mdb-1210","has_seal":true,"seal_status":"granted","on_probation":false,"criteria":[]}"""
+    val decoded = MdbJson.decodeFromString<FeedReliabilityReport>(json)
+    assertEquals(FeedId("mdb-1210"), decoded.feedId)
+    assertEquals(true, decoded.hasSeal)
+    assertEquals(SealStatus.Granted, decoded.sealStatus)
+    assertEquals(false, decoded.onProbation)
+  }
+
+  @Test
+  fun decodeContinuousCoverage() {
+    val json =
+      """
+      {
+        "feed_id": "mdb-123",
+        "latest_state": {
+          "newer": {
+            "dataset_id": "mdb-123-202604290029",
+            "is_latest": true,
+            "downloaded_at": "2026-06-28T00:29:00Z",
+            "coverage_window_source": "feed_info",
+            "coverage_window": {"start": "2026-09-16", "end": "2027-07-28", "days": 316},
+            "files": [{"name": "calendar.txt", "present": true}]
+          }
+        },
+        "total": 1,
+        "offset": 0,
+        "limit": 20,
+        "items": []
+      }
+      """
+        .trimIndent()
+    val decoded = MdbJson.decodeFromString<GtfsFeedContinuousCoverageResponse>(json)
+    assertEquals(FeedId("mdb-123"), decoded.feedId)
+    assertEquals("mdb-123-202604290029", decoded.latestState?.newer?.datasetId)
+    assertEquals(true, decoded.latestState?.newer?.isLatest)
+    assertEquals(CoverageWindowSource.FeedInfo, decoded.latestState?.newer?.coverageWindowSource)
+    assertEquals(LocalDate(2026, 9, 16), decoded.latestState?.newer?.coverageWindow?.start)
+    assertEquals(LocalDate(2027, 7, 28), decoded.latestState?.newer?.coverageWindow?.end)
+    assertEquals(316, decoded.latestState?.newer?.coverageWindow?.days)
+    assertEquals("calendar.txt", decoded.latestState?.newer?.files?.single()?.name)
+    assertEquals(true, decoded.latestState?.newer?.files?.single()?.present)
+    assertEquals(1, decoded.total)
+  }
+
+  @Test
+  fun decodeValidationReports() {
+    val json =
+      """
+      {
+        "feed_id": "mdb-123",
+        "latest": {
+          "dataset_id": "mdb-123-202604290029",
+          "is_latest": true,
+          "total_error": 10,
+          "notices": [{"code": "invalid_phone_number", "severity": "ERROR", "total": 10}]
+        },
+        "total": 1,
+        "offset": 0,
+        "limit": 20,
+        "items": []
+      }
+      """
+        .trimIndent()
+    val decoded = MdbJson.decodeFromString<GtfsFeedValidationReportsResponse>(json)
+    assertEquals(FeedId("mdb-123"), decoded.feedId)
+    assertEquals("mdb-123-202604290029", decoded.latest?.datasetId)
+    assertEquals(10, decoded.latest?.totalError)
+    val notice = decoded.latest?.notices?.single()
+    assertEquals("invalid_phone_number", notice?.code)
+    assertEquals(ValidationNoticeSeverity.Error, notice?.severity)
+    assertEquals(10, notice?.total)
   }
 }

@@ -302,6 +302,68 @@ paths:
           description: GTFS feed not found.
         '500':
           description: Internal server error.
+  /v1/gtfs_feeds/{id}/continuous_coverage:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_path_param'
+    get:
+      description: |
+        Returns the continuous coverage of a GTFS feed: `latest_state` and `latest_failure`, each carrying the two datasets it compares, plus the history, one entry per dataset ordered by `downloaded_at` from newest to oldest. Each entry carries the service window the dataset covers, the window declared in its `feed_info.txt`, whether the two agree, and how much that dataset overlaps the previous (older) one.
+      tags:
+        - feeds
+      operationId: getGtfsFeedContinuousCoverage
+      parameters:
+        - $ref: '#/components/parameters/continuous_coverage_downloaded_after'
+        - $ref: '#/components/parameters/continuous_coverage_downloaded_before'
+        - $ref: '#/components/parameters/limit_query_param_continuous_coverage_endpoint'
+        - $ref: '#/components/parameters/offset'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Continuous coverage history for the GTFS feed, ordered by downloaded_at (newest first).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsFeedContinuousCoverageResponse'
+        '400':
+          description: Invalid request parameters.
+        '404':
+          description: GTFS feed not found.
+        '500':
+          description: Internal server error.
+  /v1/gtfs_feeds/{id}/validation_reports:
+    parameters:
+      - $ref: '#/components/parameters/feed_id_path_param'
+    get:
+      description: |
+        Returns the validation history of a GTFS feed: one entry per dataset, carrying the counts of its most recent validation report and the notice codes behind them, ordered by `validated_at` from newest to oldest. `latest` is the entry for the feed's current dataset.
+      tags:
+        - feeds
+        - beta
+      operationId: getGtfsFeedValidationReports
+      parameters:
+        - $ref: '#/components/parameters/validation_validated_after'
+        - $ref: '#/components/parameters/validation_validated_before'
+        - $ref: '#/components/parameters/validation_min_errors'
+        - $ref: '#/components/parameters/validation_min_warnings'
+        - $ref: '#/components/parameters/validation_severity'
+        - $ref: '#/components/parameters/limit_query_param_validation_reports_endpoint'
+        - $ref: '#/components/parameters/offset'
+      security:
+        - Authentication: []
+      responses:
+        '200':
+          description: Validation history for the GTFS feed, ordered by validated_at (newest first).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GtfsFeedValidationReportsResponse'
+        '404':
+          description: GTFS feed not found.
+        '422':
+          description: Invalid request parameters.
+        '500':
+          description: Internal server error.
   /v1/datasets/gtfs/{id}:
     get:
       description: Get the specified dataset from the Mobility Database.
@@ -1026,6 +1088,16 @@ components:
           description: Whether the feed currently holds the Seal of Reliability.
           type: boolean
           example: false
+        seal_status:
+          description: |
+            Descriptive status of the feed's seal. `has_seal` is true only when this is `granted`. `not_granted`: at least one criterion is failing. `unknown`: none is failing, but not every criterion has been evaluated yet. `never_evaluated`: none of the criteria has  been evaluated yet.
+          type: string
+          enum:
+            - granted
+            - not_granted
+            - unknown
+            - never_evaluated
+          example: granted
         earned_at:
           description: When the feed most recently earned the seal, in ISO 8601 date-time format.
           type: string
@@ -1062,7 +1134,7 @@ components:
     ReliabilityCriterion:
       description: |
         One criterion's contribution to the Seal of Reliability.
-        `status` is the criterion's own check at the last evaluation, undebounced, so a criterion can read `fail` while the feed still holds the seal - that is the at-risk state, and `in_grace_period` distinguishes it from a confirmed failure. Conversely a criterion can read `pass` while `on_probation` is true, in which case it still does not count towards the seal. The three states a client renders are therefore: healthy (`pass`), at risk (`fail` with `in_grace_period`), and failing (`fail` without it) - with `on_probation` as an independent flag on top.
+        `status` is the criterion's debounced verdict - the one the seal is decided on, so a client can always explain the `has_seal` beside it. A criterion failing its daily check but still inside its grace period reads `pass` with `in_grace_period` true: grace is not a failing state, it is the warning before one. Conversely a criterion can read `pass` while `on_probation` is true, in which case it still does not count towards the seal. The three states a client renders are therefore: healthy (`pass`), at risk (`pass` with `in_grace_period`), and failing (`fail`) - with `on_probation` as an independent flag on top.
       type: object
       required:
         - criterion
@@ -1090,14 +1162,14 @@ components:
           example: compliant
         status:
           description: |
-            The criterion's verdict at the last evaluation, with no grace period applied.
-              * `pass` - the check passed.
-              * `fail` - the check failed. The seal is only withdrawn once the failure outlasts
-                the criterion's grace period, so check `in_grace_period` before presenting this
-                as a loss.
-              * `unknown` - the criterion was evaluated but its inputs were missing, so no verdict
-                could be reached this time. It is skipped when deciding the seal rather than counted
-                as a failure.
+            The criterion's debounced verdict: what it contributes to the seal, grace period already applied.
+              * `pass` - the criterion is not counting against the seal. Either its check passed,
+                or the check failed and the failure is still inside the criterion's grace period,
+                which `in_grace_period` tells apart.
+              * `fail` - the failure is confirmed and the criterion is withholding the seal.
+              * `unknown` - not produced. A run whose inputs were missing reaches no verdict and
+                leaves this value untouched, so the last verdict stands. Listed only because the
+                underlying column can hold it.
               * `not_applicable` - the criterion does not apply to this feed (for example a
                 coverage criterion on a seasonal feed) and is withdrawn from the seal entirely.
               * `never_evaluated` - the criterion has produced no verdict for this feed yet. It is
@@ -1112,7 +1184,7 @@ components:
           example: fail
         in_grace_period:
           description: |
-            Whether a failing check is still inside the criterion's grace period, and so is not yet counting against the seal. Can only be true while `status` is `fail`, and is always false while `on_probation` is true, since a failure during probation restarts probation outright rather than being absorbed.
+            Whether the criterion's daily check is currently failing but the failure is still inside its grace period, and so is not yet counting against the seal. This is the at-risk state, and the only thing in the response that reports the raw daily check. Can only be true while `status` is `pass`, and is always false while `on_probation` is true, since a failure during probation restarts probation outright rather than being absorbed.
           type: boolean
           example: true
         grace_period_ends_at:
@@ -1223,6 +1295,169 @@ components:
           nullable: true
           description: Machine-readable error category when the check failed.
           example: timeout
+    GtfsFeedContinuousCoverageResponse:
+      type: object
+      description: |
+        `latest_state` is the feed's latest dataset measured against the one before it; `latest_failure` is the same at the criterion's last observed failure. Each carries both datasets of the comparison, and either can be null.
+      required:
+        - feed_id
+        - items
+        - total
+        - offset
+        - limit
+      properties:
+        feed_id:
+          type: string
+          description: Unique identifier of the GTFS feed.
+          example: mdb-123
+        latest_state:
+          $ref: '#/components/schemas/GtfsFeedContinuousCoverageBoundary'
+        latest_failure:
+          $ref: '#/components/schemas/GtfsFeedContinuousCoverageBoundary'
+        total:
+          type: integer
+          description: Total number of matching datasets regardless of limit and offset.
+          example: 42
+        offset:
+          type: integer
+          description: Offset of the first returned item.
+          example: 0
+        limit:
+          type: integer
+          description: Maximum number of items returned.
+          example: 20
+        items:
+          type: array
+          description: |
+            One entry per dataset, ordered by downloaded_at from newest to oldest. The first entry of the unpaged list is the feed's current coverage; it is marked with `is_latest`.
+          items:
+            $ref: '#/components/schemas/GtfsFeedContinuousCoverage'
+    GtfsFeedContinuousCoverageBoundary:
+      type: object
+      description: |
+        Two successive datasets: `newer` and the one downloaded immediately before it. `older` is null when `newer` is the feed's first dataset.
+      required:
+        - newer
+      properties:
+        newer:
+          $ref: '#/components/schemas/GtfsFeedContinuousCoverage'
+        older:
+          $ref: '#/components/schemas/GtfsFeedContinuousCoverage'
+    GtfsFeedContinuousCoverage:
+      type: object
+      description: |
+        The coverage one dataset contributes, and how it lines up with the dataset downloaded just before it.
+
+        Three windows are reported. `service_window` is the service dates the validator derived from `calendar.txt` and `calendar_dates.txt`; `feed_info_window` is what the dataset's `feed_info.txt` declares; `coverage_window` is the one the criterion measures by - the declared window, falling back to the validated one - with `coverage_window_source` naming which of the two it came from. Any of them may be absent when the dataset did not supply the underlying files.
+      required:
+        - dataset_id
+        - is_latest
+        - files
+      properties:
+        dataset_id:
+          type: string
+          description: Stable identifier of the dataset this entry describes.
+          example: mdb-123-202604290029
+        is_latest:
+          type: boolean
+          description: |
+            Whether this is the feed's latest dataset. Exactly one entry in the unpaged list has this set, so a client can identify the headline entry without assuming it is on the current page.
+          example: true
+        downloaded_at:
+          type: string
+          format: date-time
+          nullable: true
+          description: Timestamp when the dataset was downloaded.
+          example: '2026-06-28T00:29:00Z'
+        coverage_window:
+          $ref: '#/components/schemas/ServiceDateWindow'
+        coverage_window_source:
+          type: string
+          nullable: true
+          description: |
+            Which input `coverage_window` was taken from.
+            * `feed_info` - the dates declared in `feed_info.txt`. * `service_dates` - the service dates derived by the validator from `calendar.txt` and
+              `calendar_dates.txt`, used when the dataset declares no range.
+          enum:
+            - service_dates
+            - feed_info
+          example: feed_info
+        within_max_coverage_window:
+          type: boolean
+          nullable: true
+          description: |
+            Whether `coverage_window` stays inside the maximum coverage window the seal allows (two years). Null when there is no coverage window to measure.
+          example: true
+        service_window:
+          $ref: '#/components/schemas/ServiceDateWindow'
+        feed_info_window:
+          $ref: '#/components/schemas/ServiceDateWindow'
+        feed_info_matches:
+          type: boolean
+          nullable: true
+          description: |
+            Whether `feed_info_window` agrees with `service_window` on both bounds. Null when either window is missing, which is not the same as a mismatch.
+          example: true
+        previous_dataset_id:
+          type: string
+          nullable: true
+          description: |
+            Stable identifier of the dataset downloaded immediately before this one. Null for the oldest dataset of the feed. Populated even when that dataset falls outside the requested page or date range, so overlap is never reported as absent merely because of paging.
+          example: mdb-123-202604290029
+        overlap_days:
+          type: integer
+          nullable: true
+          description: |
+            Days of overlap between this dataset's coverage window and that of the dataset immediately older than it. Zero means the windows meet exactly; a gap is reported as `gap_days` instead. Null when either window is missing or there is no older dataset.
+          example: 15
+        gap_days:
+          type: integer
+          nullable: true
+          description: |
+            Days of uncovered service between the end of the older dataset's window and the start of this one. Null when the windows overlap or meet, which is the passing case.
+          example: 3
+        files:
+          type: array
+          description: |
+            The files the calculation reads, and whether each was present in this dataset. Always returned in the same order with one entry per file, so a client can render a fixed row.
+          items:
+            $ref: '#/components/schemas/GtfsFeedContinuousCoverageFile'
+    GtfsFeedContinuousCoverageFile:
+      type: object
+      required:
+        - name
+        - present
+      properties:
+        name:
+          type: string
+          description: Name of the GTFS file.
+          example: calendar.txt
+        present:
+          type: boolean
+          description: Whether the file was present in the dataset.
+          example: true
+    ServiceDateWindow:
+      type: object
+      description: A closed range of service dates, with its length in days.
+      required:
+        - start
+        - end
+      properties:
+        start:
+          type: string
+          format: date
+          description: First date covered by the window.
+          example: '2026-09-16'
+        end:
+          type: string
+          format: date
+          description: Last date covered by the window.
+          example: '2027-07-28'
+        days:
+          type: integer
+          nullable: true
+          description: Length of the window in days, counting both bounds.
+          example: 316
     LatestDataset:
       type: object
       properties:
@@ -1605,6 +1840,126 @@ components:
         commit_hash:
           type: string
           example: 8635fdac4fbff025b4eaca6972fcc9504bc1552d
+    GtfsFeedValidationReportsResponse:
+      type: object
+      description: |
+        The feed's validation history, one entry per dataset. `latest` is the entry for the feed's current dataset, whatever page or filter was requested, and is null when the feed has no validated dataset.
+      required:
+        - feed_id
+        - items
+        - total
+        - offset
+        - limit
+      properties:
+        feed_id:
+          type: string
+          description: Unique identifier of the GTFS feed.
+          example: mdb-123
+        latest:
+          $ref: '#/components/schemas/GtfsFeedValidationReport'
+        total:
+          type: integer
+          description: Total number of matching datasets regardless of limit and offset.
+          example: 42
+        offset:
+          type: integer
+          description: Offset of the first returned item.
+          example: 0
+        limit:
+          type: integer
+          description: Maximum number of items returned.
+          example: 20
+        items:
+          type: array
+          description: One entry per dataset, ordered by validated_at from newest to oldest.
+          items:
+            $ref: '#/components/schemas/GtfsFeedValidationReport'
+    GtfsFeedValidationReport:
+      type: object
+      description: |
+        The most recent validation report of one dataset. `total_*` counts every notice raised; `unique_*` counts the distinct codes behind them.
+      required:
+        - dataset_id
+        - is_latest
+        - notices
+      properties:
+        dataset_id:
+          type: string
+          description: Stable identifier of the validated dataset.
+          example: mdb-123-202604290029
+        is_latest:
+          type: boolean
+          description: Whether this is the feed's latest dataset.
+          example: true
+        validated_at:
+          type: string
+          format: date-time
+          nullable: true
+          example: '2026-06-28T00:29:00Z'
+        validator_version:
+          type: string
+          nullable: true
+          example: 4.2.0
+        total_error:
+          type: integer
+          nullable: true
+          example: 10
+        total_warning:
+          type: integer
+          nullable: true
+          example: 20
+        total_info:
+          type: integer
+          nullable: true
+          example: 30
+        unique_error_count:
+          type: integer
+          nullable: true
+          example: 1
+        unique_warning_count:
+          type: integer
+          nullable: true
+          example: 2
+        unique_info_count:
+          type: integer
+          nullable: true
+          example: 3
+        url_json:
+          type: string
+          nullable: true
+          description: JSON validation report URL.
+        url_html:
+          type: string
+          nullable: true
+          description: HTML validation report URL.
+        notices:
+          type: array
+          description: |
+            The notice codes raised, newest report only, ordered by severity then by count. Filtered by the `severity` query parameter when one is given.
+          items:
+            $ref: '#/components/schemas/GtfsFeedValidationNotice'
+    GtfsFeedValidationNotice:
+      type: object
+      required:
+        - code
+        - severity
+        - total
+      properties:
+        code:
+          type: string
+          description: Validator notice code.
+          example: invalid_phone_number
+        severity:
+          type: string
+          enum:
+            - ERROR
+            - WARNING
+            - INFO
+          example: ERROR
+        total:
+          type: integer
+          description: How many times this code was raised.
+          example: 10
     ValidationReport:
       description: Validation report
       type: object
@@ -2190,12 +2545,12 @@ components:
     limit_query_param_availability_endpoint:
       name: limit
       in: query
-      description: The number of items to be returned. Maximum is 100.
+      description: The number of items to be returned. Maximum is 200.
       required: false
       schema:
         type: integer
         minimum: 0
-        maximum: 100
+        maximum: 200
         default: 100
         example: 10
     availability_from:
@@ -2216,6 +2571,100 @@ components:
         type: string
         format: date-time
         example: '2026-05-01T00:00:00Z'
+    limit_query_param_continuous_coverage_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned. Maximum is 100.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 100
+        default: 20
+        example: 2
+    continuous_coverage_downloaded_after:
+      name: downloaded_after
+      in: query
+      description: |
+        Only include datasets downloaded at or after this timestamp. Date should be in ISO 8601 date-time format. The dataset immediately older than the oldest included one is still used to compute its overlap.
+      required: false
+      schema:
+        type: string
+        format: date-time
+        example: '2026-02-24T00:00:00Z'
+    continuous_coverage_downloaded_before:
+      name: downloaded_before
+      in: query
+      description: |
+        Only include datasets downloaded at or before this timestamp. Date should be in ISO 8601 date-time format.
+      required: false
+      schema:
+        type: string
+        format: date-time
+        example: '2026-08-24T00:00:00Z'
+    validation_validated_after:
+      name: validated_after
+      in: query
+      description: Only include reports validated at or after this timestamp. Date should be in ISO 8601 date-time format.
+      required: false
+      schema:
+        type: string
+        format: date-time
+        example: '2026-02-24T00:00:00Z'
+    validation_validated_before:
+      name: validated_before
+      in: query
+      description: Only include reports validated at or before this timestamp. Date should be in ISO 8601 date-time format.
+      required: false
+      schema:
+        type: string
+        format: date-time
+        example: '2026-08-24T00:00:00Z'
+    validation_min_errors:
+      name: min_errors
+      in: query
+      description: Only include reports with at least this many errors. Use 1 to list only datasets that failed validation.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        example: 1
+    validation_min_warnings:
+      name: min_warnings
+      in: query
+      description: Only include reports with at least this many warnings.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        example: 1
+    validation_severity:
+      name: severity
+      in: query
+      description: |
+        Limit the `notices` of each entry to these severities. Repeat the parameter for more than one. The counts are unaffected.
+      required: false
+      schema:
+        type: array
+        items:
+          type: string
+          enum:
+            - ERROR
+            - WARNING
+            - INFO
+      example:
+        - ERROR
+    limit_query_param_validation_reports_endpoint:
+      name: limit
+      in: query
+      description: The number of items to be returned. Maximum is 100.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        maximum: 100
+        default: 20
+        example: 2
     availability_sort:
       name: sort
       in: query

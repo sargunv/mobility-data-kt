@@ -57,6 +57,10 @@ private fun decodeGolden(decodeAs: String, body: String) {
       MdbJson.decodeFromString(ListSerializer(MatchingLicense.serializer()), body)
     "GtfsFeedAvailabilityResponse" -> MdbJson.decodeFromString<GtfsFeedAvailabilityResponse>(body)
     "FeedReliabilityReport" -> MdbJson.decodeFromString<FeedReliabilityReport>(body)
+    "GtfsFeedContinuousCoverageResponse" ->
+      MdbJson.decodeFromString<GtfsFeedContinuousCoverageResponse>(body)
+    "GtfsFeedValidationReportsResponse" ->
+      MdbJson.decodeFromString<GtfsFeedValidationReportsResponse>(body)
     else -> error("unknown decode_as $decodeAs")
   }
 }

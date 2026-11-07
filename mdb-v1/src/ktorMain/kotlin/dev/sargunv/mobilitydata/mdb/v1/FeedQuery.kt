@@ -345,6 +345,60 @@ internal fun URLBuilder.appendAvailabilityQuery(query: AvailabilityQuery) {
   query.sort?.let { parameters.append("sort", it.value) }
 }
 
+/** Query parameters for `GET /v1/gtfs_feeds/{id}/continuous_coverage`. */
+public data class ContinuousCoverageQuery(
+  /** Inclusive lower bound on `downloaded_at`. */
+  public val downloadedAfter: IsoDateTime? = null,
+
+  /** Inclusive upper bound on `downloaded_at`. */
+  public val downloadedBefore: IsoDateTime? = null,
+
+  /** Maximum number of items to return. The catalog defaults to 20. */
+  public val limit: Int? = null,
+
+  /** Offset of the first item to return. */
+  public val offset: Int? = null,
+)
+
+internal fun URLBuilder.appendContinuousCoverageQuery(query: ContinuousCoverageQuery) {
+  query.downloadedAfter?.let { parameters.append("downloaded_after", it.toString()) }
+  query.downloadedBefore?.let { parameters.append("downloaded_before", it.toString()) }
+  appendPage(query.limit, query.offset)
+}
+
+/** Query parameters for `GET /v1/gtfs_feeds/{id}/validation_reports`. */
+public data class ValidationReportsQuery(
+  /** Inclusive lower bound on `validated_at`. */
+  public val validatedAfter: IsoDateTime? = null,
+
+  /** Inclusive upper bound on `validated_at`. */
+  public val validatedBefore: IsoDateTime? = null,
+
+  /** Only include reports with at least this many errors. */
+  public val minErrors: Int? = null,
+
+  /** Only include reports with at least this many warnings. */
+  public val minWarnings: Int? = null,
+
+  /** Limit the `notices` of each entry to these severities. Repeat the parameter. */
+  public val severity: List<ValidationNoticeSeverity>? = null,
+
+  /** Maximum number of items to return. The catalog defaults to 20. */
+  public val limit: Int? = null,
+
+  /** Offset of the first item to return. */
+  public val offset: Int? = null,
+)
+
+internal fun URLBuilder.appendValidationReportsQuery(query: ValidationReportsQuery) {
+  query.validatedAfter?.let { parameters.append("validated_after", it.toString()) }
+  query.validatedBefore?.let { parameters.append("validated_before", it.toString()) }
+  query.minErrors?.let { parameters.append("min_errors", it.toString()) }
+  query.minWarnings?.let { parameters.append("min_warnings", it.toString()) }
+  query.severity?.forEach { parameters.append("severity", it.value) }
+  appendPage(query.limit, query.offset)
+}
+
 /** Sort order for availability history. */
 @JvmInline
 public value class AvailabilitySort(
