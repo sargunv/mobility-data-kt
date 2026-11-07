@@ -22,7 +22,7 @@ jobs:
       - uses: nschloe/action-cached-lfs-checkout@385a8ecc719e50b8c71af6ab01a624b486b7c3bc # v1.2.5
       - uses: jdx/mise-action@6be3c7ed4c21d4f76b208d351d95aac273ebb76d # v5.2.4
         with:
-          version: 2026.10.24
+          version: 2026.11.3
       - run: ./gradlew build
 
   build-docs:
@@ -36,7 +36,7 @@ jobs:
           persist-credentials: false
       - uses: jdx/mise-action@6be3c7ed4c21d4f76b208d351d95aac273ebb76d # v5.2.4
         with:
-          version: 2026.10.24
+          version: 2026.11.3
       - run: mise run build:docs
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
@@ -51,7 +51,7 @@ jobs:
           persist-credentials: false
       - uses: jdx/mise-action@6be3c7ed4c21d4f76b208d351d95aac273ebb76d # v5.2.4
         with:
-          version: 2026.10.24
+          version: 2026.11.3
       - run: mise run check
 
   # Branch protection requires this job. always() still runs it after a needed

@@ -1,5 +1,5 @@
 # https://mise.jdx.dev
-min_version = "2026.10.24"
+min_version = "2026.11.3"
 
 [settings]
 experimental = true
@@ -20,8 +20,8 @@ postinstall = ["hk install --mise"]
 [tools]
 "core:java" = "zulu-25.38.109.0"
 "aqua:dprint/dprint" = "0.64.3"
-"aqua:jdx/hk" = "2.10.0"
-"aqua:jdx/jactionlint" = "2.4.0"
+"aqua:jdx/hk" = "2.11.1"
+"aqua:jdx/jactionlint" = "2.5.0"
 "core:python" = "3.15.2"
 "aqua:git-lfs/git-lfs" = "3.8.1"
 
