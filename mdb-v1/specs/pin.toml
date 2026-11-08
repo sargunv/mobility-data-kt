@@ -1,6 +1,6 @@
-release = "v1.16.2"
+release = "v1.16.13"
 repository = "MobilityData/mobility-feed-api"
 
 [files]
-"DatabaseCatalogAPI.yaml" = "a681af32dc60ceffc6ad36cf821ade42396abe6fb372556e3f5505190dc1a59f"
+"DatabaseCatalogAPI.yaml" = "8d404c031d62789cb83e7fb8a30ea78c5771d4f1bd41cbb559634716729232e7"
 "DatabaseCatalogTokenAPI.yaml" = "7cd93f54f043257182f6be53e37bf604ea5c82d0f653f9f53fe08598b48f7a27"

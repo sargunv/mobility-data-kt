@@ -25,9 +25,21 @@ class BetaEndpointsTest {
             HttpStatusCode.OK,
             headersOf(HttpHeaders.ContentType, "application/json"),
           )
+        request.url.encodedPath.endsWith("/reliability") ->
+          respond(
+            """{"feed_id":"mdb-1210","has_seal":false,"seal_status":"not_granted","on_probation":false,"criteria":[]}""",
+            HttpStatusCode.OK,
+            headersOf(HttpHeaders.ContentType, "application/json"),
+          )
+        request.url.encodedPath.endsWith("/continuous_coverage") ->
+          respond(
+            """{"feed_id":"mdb-1210","total":0,"offset":0,"limit":20,"items":[]}""",
+            HttpStatusCode.OK,
+            headersOf(HttpHeaders.ContentType, "application/json"),
+          )
         else ->
           respond(
-            """{"feed_id":"mdb-1210","has_seal":false,"on_probation":false,"criteria":[]}""",
+            """{"feed_id":"mdb-1210","total":0,"offset":0,"limit":20,"items":[]}""",
             HttpStatusCode.OK,
             headersOf(HttpHeaders.ContentType, "application/json"),
           )
@@ -36,12 +48,22 @@ class BetaEndpointsTest {
     val client = MdbV1Client(engine, CatalogAuth.Access("access-1"))
     val availability = client.getGtfsFeedAvailability(FeedId("mdb-1210")).getOrThrow()
     val reliability = client.getGtfsFeedReliability(FeedId("mdb-1210")).getOrThrow()
+    val coverage = client.getGtfsFeedContinuousCoverage(FeedId("mdb-1210")).getOrThrow()
+    val reports = client.getGtfsFeedValidationReports(FeedId("mdb-1210")).getOrThrow()
     assertEquals(
-      listOf("/v1/gtfs_feeds/mdb-1210/availability", "/v1/gtfs_feeds/mdb-1210/reliability"),
+      listOf(
+        "/v1/gtfs_feeds/mdb-1210/availability",
+        "/v1/gtfs_feeds/mdb-1210/reliability",
+        "/v1/gtfs_feeds/mdb-1210/continuous_coverage",
+        "/v1/gtfs_feeds/mdb-1210/validation_reports",
+      ),
       paths,
     )
     assertEquals(0, availability.total)
     assertEquals(false, reliability.hasSeal)
+    assertEquals(SealStatus.NotGranted, reliability.sealStatus)
+    assertEquals(0, coverage.total)
+    assertEquals(0, reports.total)
     client.close()
   }
 }
