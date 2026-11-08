@@ -3,9 +3,6 @@ package dev.sargunv.mobilitydata.utils.serialization
 import dev.sargunv.mobilitydata.utils.RgbColor
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlinx.serialization.KSerializer
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonPrimitive
 
 class RgbColorSerializerTest {
   private val triplets =
@@ -48,15 +45,12 @@ class RgbColorSerializerTest {
       "error: ${e::class.simpleName}: ${e.message}"
     }
 
-  private fun decode(serializer: KSerializer<RgbColor>, str: String): RgbColor =
-    Json.decodeFromJsonElement(serializer, JsonPrimitive(str))
-
   @Test
   fun tripletMatchesReference() {
     for (str in triplets) {
       assertEquals(
         outcome { referenceTriplet(str) },
-        outcome { decode(RgbColorTripletSerializer, str) },
+        outcome { parseRgbColorTriplet(str) },
         "input '$str'",
       )
     }
@@ -67,9 +61,15 @@ class RgbColorSerializerTest {
     for (str in triplets + triplets.map { "#$it" }) {
       assertEquals(
         outcome { referenceCode(str) },
-        outcome { decode(RgbColorCodeSerializer, str) },
+        outcome { parseRgbColorCode(str) },
         "input '$str'",
       )
     }
+  }
+
+  @Test
+  fun jsonWrapsInvalidInput() {
+    assertJsonWrapsOriginalIae(RgbColorTripletSerializer, "GGGGGG")
+    assertJsonWrapsOriginalIae(RgbColorCodeSerializer, "GGGGGG")
   }
 }

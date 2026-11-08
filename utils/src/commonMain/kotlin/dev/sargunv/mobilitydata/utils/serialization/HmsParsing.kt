@@ -4,13 +4,14 @@ private const val MAX_HOUR_DIGITS = 9
 private const val MAX_MINUTE_SECOND_DIGITS = 2
 
 /**
- * Parses an `HH:MM:SS` time, splitting [value] on `:` and converting each part with [String.toInt].
+ * Parses an `HH:MM:SS` time.
  *
  * The common shape (one to nine ASCII digits of hours, then one or two ASCII digits each of minutes
  * and seconds) is read in place without allocating. Any other input goes through the general
- * split-based path, so the accepted values and the thrown exceptions match it exactly.
+ * split-based path. Values that do not have three integer parts throw [IllegalArgumentException]
+ * with a format message; range checks stay on [create].
  *
- * @param typeName the type named in the error message for a value without three parts.
+ * @param typeName the type named in the error message for a malformed value.
  */
 internal inline fun <T> parseHms(
   value: String,
@@ -36,8 +37,13 @@ internal inline fun <T> parseHms(
   }
 
   val parts = value.split(":")
-  require(parts.size == 3) { "$typeName must be in the format HH:MM:SS, but was $value." }
-  return create(parts[0].toInt(), parts[1].toInt(), parts[2].toInt())
+  val hours = parts.getOrNull(0)?.toIntOrNull()
+  val minutes = parts.getOrNull(1)?.toIntOrNull()
+  val seconds = parts.getOrNull(2)?.toIntOrNull()
+  require(parts.size == 3 && hours != null && minutes != null && seconds != null) {
+    "$typeName must be in the format HH:MM:SS, but was $value."
+  }
+  return create(hours, minutes, seconds)
 }
 
 /** Returns the end of the run of at most [maxDigits] ASCII digits starting at [start]. */

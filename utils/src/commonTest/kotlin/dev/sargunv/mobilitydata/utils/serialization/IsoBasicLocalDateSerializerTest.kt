@@ -19,7 +19,7 @@ class IsoBasicLocalDateSerializerTest {
   private fun assertMatchesFormat(value: String) {
     assertEquals(
       outcome { format.parse(value) },
-      outcome { Json.decodeFromJsonElement(IsoBasicLocalDateSerializer, JsonPrimitive(value)) },
+      outcome { parseIsoBasicDate(value) },
       "input '$value'",
     )
   }
@@ -61,5 +61,10 @@ class IsoBasicLocalDateSerializerTest {
       LocalDate(2021, 11, 9),
       Json.decodeFromJsonElement(IsoBasicLocalDateSerializer, JsonPrimitive("20211109")),
     )
+  }
+
+  @Test
+  fun jsonWrapsInvalidInput() {
+    assertJsonWrapsOriginalIae(IsoBasicLocalDateSerializer, "not-a-date")
   }
 }
