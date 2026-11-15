@@ -7,7 +7,7 @@ kotlinx-datetime-zoneinfo = "2026c-spi.0.8.0"
 kotlinx-coroutines = "1.11.0"
 kotlinx-serialization = "1.11.0"
 vanniktech-publish = "0.37.0"
-dokka = "2.2.0"
+dokka = "2.3.0"
 mkdocs-build = "4.0.1"
 # Still alpha; this is the release built against Kotlin 2.4.10.
 detekt = "2.0.0-alpha.6"
