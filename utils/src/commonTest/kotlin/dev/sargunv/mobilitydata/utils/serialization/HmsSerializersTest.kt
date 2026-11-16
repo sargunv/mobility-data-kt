@@ -4,6 +4,7 @@ import dev.sargunv.mobilitydata.utils.GtfsLocalTime
 import dev.sargunv.mobilitydata.utils.ServiceTime
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonPrimitive
@@ -51,8 +52,13 @@ class HmsSerializersTest {
   /** The parser before the fast path was added. */
   private fun <T> reference(value: String, typeName: String, create: (Int, Int, Int) -> T): T {
     val parts = value.split(":")
-    require(parts.size == 3) { "$typeName must be in the format HH:MM:SS, but was $value." }
-    return create(parts[0].toInt(), parts[1].toInt(), parts[2].toInt())
+    val formatError = { "$typeName must be in the format HH:MM:SS, but was $value." }
+    require(parts.size == 3, formatError)
+    val hours = parts[0].toIntOrNull()
+    val minutes = parts[1].toIntOrNull()
+    val seconds = parts[2].toIntOrNull()
+    require(hours != null && minutes != null && seconds != null, formatError)
+    return create(hours, minutes, seconds)
   }
 
   private fun <T> decode(serializer: KSerializer<T>, value: String): T =
@@ -93,5 +99,18 @@ class HmsSerializersTest {
     assertEquals(ServiceTime(7, 5, 9), decode(ServiceTimeSerializer, "7:5:9"))
     assertEquals(ServiceTime(25, 35, 0), decode(ServiceTimeSerializer, "25:35:00"))
     assertEquals(ServiceTime(7, 30, 0), decode(ServiceTimeSerializer, "007:30:00"))
+  }
+
+  @Test
+  fun parseHmsRejectsNonNumericPartsWithFormatMessage() {
+    val exception =
+      assertFailsWith<IllegalArgumentException> {
+        parseHms("ab:cd:ef", "ServiceTime", ::ServiceTime)
+      }
+    assertEquals(IllegalArgumentException::class, exception::class)
+    assertEquals(
+      "ServiceTime must be in the format HH:MM:SS, but was ab:cd:ef.",
+      exception.message,
+    )
   }
 }
