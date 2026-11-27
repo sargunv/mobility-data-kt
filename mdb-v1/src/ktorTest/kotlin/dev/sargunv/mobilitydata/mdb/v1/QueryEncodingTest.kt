@@ -140,6 +140,53 @@ class QueryEncodingTest {
     client.close()
   }
 
+  @Test
+  fun continuousCoverageQuerySendsDownloadWindow() = runTest {
+    val seen = mutableMapOf<String, String>()
+    val client =
+      clientRecording(
+        seen,
+        """{"feed_id":"mdb-10","total":0,"offset":0,"limit":20,"items":[]}""",
+      )
+    val after = Instant.parse("2026-02-24T00:00:00Z")
+    val before = Instant.parse("2026-08-24T00:00:00Z")
+    client
+      .getGtfsFeedContinuousCoverage(
+        FeedId("mdb-10"),
+        ContinuousCoverageQuery(downloadedAfter = after, downloadedBefore = before, limit = 5),
+      )
+      .getOrThrow()
+    assertEquals(after.toString(), seen["downloaded_after"])
+    assertEquals(before.toString(), seen["downloaded_before"])
+    assertEquals("5", seen["limit"])
+    client.close()
+  }
+
+  @Test
+  fun validationReportsQueryRepeatsSeverity() = runTest {
+    val seen = mutableMapOf<String, String>()
+    val client =
+      clientRecording(
+        seen,
+        """{"feed_id":"mdb-10","total":0,"offset":0,"limit":20,"items":[]}""",
+      )
+    val after = Instant.parse("2026-02-24T00:00:00Z")
+    client
+      .getGtfsFeedValidationReports(
+        FeedId("mdb-10"),
+        ValidationReportsQuery(
+          validatedAfter = after,
+          minErrors = 1,
+          severity = listOf(ValidationNoticeSeverity.Error, ValidationNoticeSeverity.Warning),
+        ),
+      )
+      .getOrThrow()
+    assertEquals(after.toString(), seen["validated_after"])
+    assertEquals("1", seen["min_errors"])
+    assertEquals("ERROR,WARNING", seen["severity"])
+    client.close()
+  }
+
   private fun clientRecording(
     seen: MutableMap<String, String>,
     respondJson: String = "[]",
